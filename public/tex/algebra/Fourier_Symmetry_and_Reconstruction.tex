@@ -1,0 +1,2094 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array}
+\usepackage{xcolor}
+\definecolor{inkblue}{HTML}{174A62}
+\usepackage[colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,citecolor=inkblue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Fourier, Symmetry, and Reconstruction}}
+\fancyhead[R]{\small\textsc{Tensorgami}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\theoremstyle{remark}
+\newtheorem{remark}[proposition]{Remark}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\C}{\mathbb C}
+\newcommand{\A}{\mathbb A}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\et}{\mathrm{\acute et}}
+\title{\textbf{Fourier, Symmetry, and Reconstruction}\\[6pt]\large Cardano, Ferrari, and categorical Fourier duality}
+\author{Henry Shin\\\small Tensorgami}
+\date{\small Revised and expanded, October 2026}
+
+
+\setcounter{tocdepth}{1}
+\hypersetup{pdftitle={Fourier, Symmetry, and Reconstruction},pdfauthor={Henry Shin},pdfsubject={Galois reconstruction, geometry, motives, and higher Fourier duality}}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Starting with a polynomial's coefficients, we construct its root cover and the algebra of its functions. Character projectors decompose the distinguished root observable; multiplication, trace, and norm then produce Cardano's and Ferrari's substitutions and their compatibility equations. We follow this reconstruction mechanism through a family of solvable equations, symmetry-split integrals, and a completely explicit transform on a circle. These calculations prepare Fourier--Mukai reconstruction of vector bundles, including a rank-and-degree reduction, and character decompositions that determine point counts and periods. Motivic isomorphisms lift identities of character sums, while ramification and cohomological weights yield square-root cancellation. The final section develops the kernel formalism and its spectral and higher Galois extensions. Each enlargement is motivated by information needed in a concrete problem, with the deeper equivalence and comparison theorems identified where they enter.
+\end{abstract}
+
+\clearpage
+\begingroup
+\setlength{\parskip}{0pt}
+\fontsize{10}{12}\selectfont
+\tableofcontents
+\endgroup
+\clearpage
+
+
+\section{Reconstruction as the organizing problem}
+\label{sec:reconstruction}
+
+Why does Cardano look for a root in the form \(u+v\)? Why does Ferrari introduce a cubic in order to solve a quartic? A useful explanation should predict the substitutions, identify the information their auxiliary equations retain, and tell us how to recover the roots without making incompatible choices. Once it does this, it should also help us recognize other problems to which the same method applies.
+
+The coefficients of a polynomial remember its roots without remembering their order. Solving the polynomial lifts this invariant information back to individual roots. The method developed here is to isolate a manageable part of the symmetry, decompose the quantities on which it acts, and retain the operations that connect the components. For an abelian symmetry group, the decomposition is Fourier decomposition. Its elementary form uses character projectors; its more geometric forms use sheaves on a space of characters and transforms between categories.
+
+The operations matter as much as the components. If \(u\) and \(v\) have inverse characters, their product is invariant. If \(u\) has a character of order \(n\), its \(n\)-th power is invariant. These facts predict which auxiliary quantities can be expressed in the coefficients. Their actual values and their compatibility come from the multiplication of the original algebra. Cardano's quadratic and Ferrari's cubic then arise as equations for the remaining symmetry orbits.
+
+The companion exposition \href{https://tensorgami.com/notes/what-a-boundary-map-can-prove}{\emph{What a Boundary Map Can Prove}} follows an incidence complex through counting laws, geometric inequalities, and extension data.
+
+The exposition follows this mechanism through a sequence of enlargements:
+\[
+\begin{gathered}
+\text{roots and their multiplication}\\
+\downarrow\\
+\text{differentials, integrals, and symmetry quotients}\\
+\downarrow\\
+\text{monodromy, extensions, and spectral sheaves}\\
+\downarrow\\
+\text{categorical transforms, motives, and higher reconstruction}.
+\end{gathered}
+\]
+Each enlargement will answer a question that is visible before the new framework is introduced. The Klein four-group that organizes Ferrari also splits a family of genus-two integrals into elliptic integrals. Two matrices with identical eigenvalues force us to retain extension data. An elementary transform on a circle shows how a spectral sheaf preserves that data, and why a two-term complex can be essential. Fourier--Mukai theory then turns global bundle problems into local module calculations. Character sums determine an infinite sequence of point counts, while geometric Fourier transforms turn ramification into a cancellation bound. Finally, motivic and spectral theories promote numerical identities and reconstruction procedures to statements about richer objects.
+
+\subsection{What is being reconstructed?}
+
+Let \(K\) be a field of characteristic zero and introduce independent root coordinates \(r_1,\ldots,r_n\). The symmetric group acts on \(K[r_1,\ldots,r_n]\) by permuting them. The invariant ring is generated by the elementary symmetric functions \(e_1,\ldots,e_n\), and
+\[
+\prod_{i=1}^n(X-r_i)
+=X^n-e_1X^{n-1}+e_2X^{n-2}-\cdots+(-1)^ne_n.
+\]
+Thus coefficient space is the quotient of ordered-root space by the permutation action. The inverse problem is to lift a coefficient point through that quotient.
+
+Working with formal roots does not assume that the equation has already been solved. We construct identities on the universal root space, express their invariant parts in the coefficients, and solve the resulting reconstruction equations. The identities then specialize to particular polynomials, including ones with smaller Galois groups.
+
+Three operations must be distinguished. An invertible coordinate change retains all information. Passing to invariants forgets distinctions between points in the same orbit. A radical choice recovers part of what was forgotten. Centering changes neither the splitting field nor the Galois group; choosing a resolvent root can select an intermediate field. Later, passing to eigenvalues or to a Grothendieck group will forget different information, namely extensions. The appropriate reconstruction data change with the question.
+
+The universal groups for the cubic and quartic are \(S_3\) and \(S_4\). A particular separable polynomial has a Galois group acting through a subgroup, so some field degrees may drop. Roots of unity are adjoined when needed for character decomposition. Polynomial identities remain valid at repeated roots; the interpretation as unramified covers will be restricted to the distinct-root locus.
+
+\subsection{How the ascent is organized}
+
+Section~\ref{cover:section} starts with the coefficient-defined root algebra and constructs the covers that generate the substitutions. Sections~\ref{fourier:section}--\ref{dihedral:section} develop the algebraic mechanism and derive the classical formulas, an infinite dihedral family, and a finite-field inversion algorithm. The covering-space interpretation then identifies the meaning of each choice. Section~\ref{geometry:genus-two} applies the same projectors to differentials and gives a first geometric payoff: lower-genus integrals and a Jacobian decomposition up to isogeny.
+
+Section~\ref{circle:section} is a laboratory for the categorical transition. Its objects are invertible matrices, its spectral space is \(\C^\times\), and its transform is an explicit two-term complex. The complete calculation prepares the extension and derived-fibre phenomena used in Section~\ref{categorical:section}. There Fourier--Mukai theory reconstructs bundles from modules and carries out an analogue of the Euclidean algorithm on rank and degree.
+
+Sections~\ref{fermat:section} and~\ref{estimate:section} supply arithmetic and quantitative applications. A small Jacobi sum controls the points of a cubic over every finite extension; a motivic isomorphism explains a relation between character sums before taking Frobenius traces. For Kloosterman sums, a local ramification calculation produces the dimension behind the constant in the bound. Section~\ref{higher:section} then develops the shared kernel formalism, spectral Cartier and Tannaka duality, higher integration, and a higher Kummer theorem.
+
+The algebraic and small geometric calculations are proved in the text. The deeper equivalence, weight, and motivic theorems are identified at the steps where they do work. The different settings retain their own hypotheses and input data. Their coherence comes from a recurring practice: choose a representation of the problem in which the operations needed for reconstruction become accessible, and keep enough structure to transport the answer back.
+
+\section{Construct the cover before choosing the substitution}
+\label{cover:section}
+
+Starting from the coefficients, we construct a finite algebra, decompose its distinguished element by symmetry, and derive the substitutions from that decomposition. The roots appearing in this construction are universal coordinates. Introducing their coordinate ring is an algebraic construction performed on the given equation; it does not require knowing the values of its roots.
+
+\subsection{The equation already defines an object to reconstruct}
+
+Let \(k\) be a field of characteristic zero, and consider the universal monic polynomial
+\[
+f(T)=T^n+c_1T^{n-1}+\cdots+c_n.
+\]
+Write
+\[
+\mathcal C_n
+=\Spec k[c_1,\ldots,c_n,\Delta^{-1}],
+\qquad
+\mathcal E=\mathcal O_{\mathcal C_n}[T]/(f),
+\]
+where \(\Delta\) is the discriminant, and denote the class of \(T\) by \(\alpha\).
+The algebra \(\mathcal E\) is finite \'etale of rank \(n\). Its relative spectrum
+\(Z=\Spec_{\mathcal C_n}\mathcal E\) parametrizes a polynomial together with one of its roots. The element \(\alpha\) is its root observable: its value at such a point is precisely that chosen root.
+
+There is also a space \(P\) of ordered factorizations
+\[
+f(T)=(T-r_1)\cdots(T-r_n).
+\]
+Construct it by adjoining formal variables \(r_i\), imposing the coefficient identities in this equation, and inverting the discriminant. Equivalently, it is the space of ordered distinct \(n\)-tuples mapping to their elementary symmetric functions. The map
+\[
+P\longrightarrow \mathcal C_n
+\]
+is an \(S_n\)-torsor: every geometric fibre consists of the \(n!\) orderings, freely and transitively permuted by \(S_n\). A polynomial with a smaller arithmetic Galois group gives a possibly disconnected specialization of this torsor; the construction does not assume that its Galois group is the full symmetric group.
+
+Over \(\C\), this is a covering space. Following a loop in coefficient space permutes the roots. An intermediate quotient of \(P\) remembers only some of the labels and restricts which permutations remain possible. Algebraically, the same operation is finite \'etale descent.
+
+\subsection{Choose a cover on which Fourier decomposition applies}
+
+For three and four roots there is an especially useful normal abelian subgroup:
+\[
+A=C_3\triangleleft S_3,
+\qquad
+A=V_4\triangleleft S_4.
+\]
+Both act \emph{regularly} on the root labels: once a starting label is chosen, every other label is reached by exactly one element of \(A\). These groups therefore simultaneously give an abelian symmetry and account for every root. This is the reason for choosing them.
+
+Put \(Y=P/A\). The remaining map \(P\to Y\) is an \(A\)-torsor. The map \(Y\to \mathcal C_n\) has group \(S_n/A\): it remembers an orientation in the cubic case and an ordering of the three pairings in the quartic case. The respective degrees are \(2\) and \(6\). Choosing just one quartic pairing is a different, degree-three intermediate cover, used later for Ferrari's shorter calculation.
+
+Because \(A\) acts regularly on the root labels, pulling the root cover \(Z\) back to \(Y\) identifies it with \(P\to Y\), after fixing the starting label. Thus we have reached an algebra in which the original root observable itself is subject to an abelian action. Nothing has yet suggested a sum of radicals. That sum will be forced by decomposing this observable.
+
+\subsection{A reconstruction theorem for the torsor algebra}
+
+Assume that \(k\) contains the character values of \(A\); for \(C_3\), adjoin a primitive cube root of unity. Let
+\(\pi:P\to Y\) and \(\mathcal B=\pi_*\mathcal O_P\).
+
+\begin{proposition}[The cover as a character-graded algebra]
+\label{cover:first-reconstruction}
+There is a decomposition
+\[
+\mathcal B=\bigoplus_{\chi\in\widehat A}\mathcal L_\chi,
+\qquad
+e_\chi(b)=\frac1{|A|}\sum_{a\in A}\chi(a)^{-1}a(b),
+\]
+where every \(\mathcal L_\chi\) is a line bundle,
+\(\mathcal L_1=\mathcal O_Y\), and multiplication induces isomorphisms
+\[
+\mathcal L_\chi\otimes_{\mathcal O_Y}\mathcal L_\psi
+\overset{\sim}{\longrightarrow}\mathcal L_{\chi\psi}.
+\]
+The line bundles together with these multiplication maps reconstruct \(P\) as
+\(\Spec_Y\mathcal B\). Every root observable is reconstructed by summing its character projections.
+\end{proposition}
+
+\begin{proof}
+\'Etale locally on \(Y\), the torsor is the constant set \(A\), and
+\(\mathcal B\) is the algebra of functions on \(A\). Character orthogonality decomposes that algebra into the lines spanned by characters. The product of two character functions is their product character, so every displayed multiplication map is an isomorphism. These statements descend to \(Y\), since the projectors and multiplication are intrinsic. The formula
+\(\sum_\chi e_\chi=1\) reconstructs every section. Finally, the relative spectrum of a finite algebra recovers its finite cover.
+\end{proof}
+
+The multiplication is essential: the direct sum of the lines alone does not determine the cover. Its multiplication records the equations for invariant powers and mixed products, including the compatibility of radical choices. This is already a categorical construction with computational content: the symmetric monoidal Fourier equivalence transports a commutative algebra object to a character-graded commutative algebra. The next section proves the underlying projector identities in detail.
+
+\subsection{Why the root is a sum of two or three terms}
+
+First remove the invariant component of the root observable:
+\[
+r=\alpha-\frac1n\operatorname{Tr}_{\mathcal E/
+\mathcal O_{\mathcal C_n}}(\alpha).
+\]
+After pulling back to \(Y\), its trivial-character projection is zero. Indeed, averaging over \(A\) averages over all root labels, because the action is regular. Centering is therefore the projector onto the trace-zero part, before it is a substitution in a polynomial.
+
+For the cubic, precisely two character lines remain. Set
+\[
+u=e_\chi(r),\qquad v=e_{\chi^{-1}}(r),
+\]
+where \(\chi\) has order three. The identity resolution in
+Proposition~\ref{cover:first-reconstruction} gives
+\[
+\boxed{r=u+v.}
+\]
+This is the source of Cardano's substitution. It is not proposed and subsequently justified by a cancellation. It is the decomposition of the distinguished element of the root algebra after passing to the orientation cover. Multiplication now predicts the quantities available downstairs:
+\(u^3\), \(v^3\), and \(uv\). The remaining involution exchanges \(u\) and \(v\), so the unordered pair \(\{u^3,v^3\}\) must satisfy a quadratic over coefficient space. The coefficient calculation later identifies that quadratic and the mixed-product constraint.
+
+For the quartic, the three nontrivial characters of \(V_4\) remain. Write their projections as \(a,b,c\). Then
+\[
+r=a+b+c.
+\]
+With the conventional normalization \(u=2a\), \(v=2b\), \(w=2c\), this becomes
+\[
+\boxed{r=(u+v+w)/2.}
+\]
+The other roots arise by the three allowed double sign changes. The squares
+\(u^2,v^2,w^2\) are invariant under \(V_4\); the quotient \(S_3\) permutes them, predicting their cubic resolvent. Since the product of the three nontrivial characters is trivial, \(uvw\) is also invariant. It retains the sign compatibility that three independently extracted square roots would forget.
+
+Thus the group action determines the number and form of the summands, multiplication determines the invariant powers and their compatibility, and descent determines the degrees of the resolvents. The coefficients determine their numerical values. The following calculations make those values explicit.
+
+These classical examples occupy the ordinary algebraic level of the later categorical framework. Their higher analogues will require complexes, mapping spaces, and coherent descent when the objects carry that additional information. Here finite covers and their algebra objects already suffice. The topological interpretation explains the choices and their monodromy; the algebra of the cover performs the root calculation.
+
+\section{Fourier decomposition and reconstruction}
+\label{fourier:section}
+
+\subsection{Character projectors}
+
+Let \(A\) be a finite abelian group, and let \(k\) be a field of characteristic zero containing all roots of unity whose orders divide the exponent of \(A\). Write
+\[
+\widehat A=\operatorname{Hom}(A,k^\times)
+\]
+for its character group. These hypotheses ensure that \(\widehat A\) has \(|A|\) elements and that its characters separate the elements of \(A\). If \(A\) acts linearly on a vector space \(V\), define
+\[
+V_\chi=\{v\in V:a(v)=\chi(a)v\text{ for every }a\in A\},
+\qquad
+e_\chi(v)=\frac{1}{|A|}\sum_{a\in A}\chi(a)^{-1}a(v).
+\]
+The operator \(e_\chi\) extracts the part of \(v\) with transformation rule \(\chi\).
+
+\begin{proposition}
+\label{fourier:projectors}
+The operators \(e_\chi\) are mutually orthogonal projectors with sum the identity. Consequently
+\[
+V=\bigoplus_{\chi\in\widehat A}V_\chi,
+\qquad
+v=\sum_{\chi\in\widehat A}e_\chi(v).
+\]
+\end{proposition}
+
+\begin{proof}
+For a nontrivial character \(\eta\), choose \(b\in A\) with \(\eta(b)\ne1\). Multiplication by \(b\) permutes \(A\), so
+\[
+\sum_{a\in A}\eta(a)=\sum_{a\in A}\eta(ba)
+=\eta(b)\sum_{a\in A}\eta(a).
+\]
+The sum is therefore zero. For the trivial character it is \(|A|\). Reindexing the definition of \(e_\chi\) gives
+\(b(e_\chi(v))=\chi(b)e_\chi(v)\), so its image lies in \(V_\chi\). On \(V_\psi\), character orthogonality says that \(e_\chi\) is the identity if \(\chi=\psi\), and zero otherwise. Finally, applying the same summation argument on \(\widehat A\) gives
+\[
+\sum_{\chi\in\widehat A}\chi(a)^{-1}=|A|\delta_{a,1}.
+\]
+Thus \(\sum_\chi e_\chi=\operatorname{id}_V\), proving the claim.
+\end{proof}
+
+For \(A=C_n=\langle\sigma\rangle\), choose a primitive \(n\)-th root of unity \(\zeta\), and suppose that \(\sigma\) cyclically permutes quantities \(r_0,\ldots,r_{n-1}\). Their Fourier coordinates are
+\[
+u_j=\frac1n\sum_{i=0}^{n-1}\zeta^{-ij}r_i,
+\qquad
+r_i=\sum_{j=0}^{n-1}\zeta^{ij}u_j.
+\]
+Here \(\sigma(u_j)=\zeta^ju_j\). The coordinate \(u_0\) is the mean of the roots; centering removes it. The other coordinates isolate the remaining cyclic motions. The familiar sums of radicals will arise by applying this inverse transform after determining the \(u_j\).
+
+\subsection{The tensor rule behind Fourier coordinates}
+
+Character decomposition is compatible with every equivariant linear map. Allowing arbitrary-dimensional vector spaces in both categories, it therefore defines an equivalence
+\[
+\operatorname{Rep}_k(A)\simeq\operatorname{Vect}_k^{\widehat A},
+\qquad
+V\longmapsto(V_\chi)_{\chi\in\widehat A}.
+\]
+On the right are character-indexed families of vector spaces. The inverse takes their direct sum and lets \(a\in A\) act on the \(\chi\)-summand by \(\chi(a)\). For an arbitrary finite-dimensional representation, taking the trace of the projectors recovers the numerical Fourier formula
+\[
+\dim V_\chi
+=\frac1{|A|}\sum_{a\in A}\chi(a)^{-1}\operatorname{Tr}(a\mid V).
+\]
+Thus the character transform records the dimensions of spaces that already exist before taking traces.
+
+The tensor product carries the decisive additional information. A tensor \(v\otimes w\), with \(v\in V_\alpha\) and \(w\in W_\beta\), transforms by \(\alpha\beta\). Hence
+\[
+(V\otimes_k W)_\chi
+=\bigoplus_{\alpha\beta=\chi}V_\alpha\otimes_k W_\beta.
+\]
+The equivalence is therefore symmetric monoidal when the family side is equipped with convolution of its character indices. Its unit is \(k\) in the trivial-character component and zero elsewhere. Pointwise tensor product of the components would give a different operation and would lose the multiplication rule needed below. This is an elementary categorical form of Fourier theory: the transform retains spaces and maps, together with their tensor relations, rather than only numerical coefficients; see also Baez \cite{baez}.
+
+\subsection{An algebra is more than its representation}
+
+Suppose now that \(R\) is a commutative \(k\)-algebra and that \(A\) acts by algebra automorphisms. Its Fourier decomposition satisfies
+\[
+R=\bigoplus_{\chi\in\widehat A}R_\chi,
+\qquad
+R_\chi R_\psi\subseteq R_{\chi\psi},
+\qquad
+R_1=R^A.
+\]
+Equivalently, \(R\) is a commutative algebra object in \(\operatorname{Rep}_k(A)\), transported by the preceding equivalence to a character-graded algebra. Multiplication, its unit, and its associativity remain part of the data.
+
+This distinction has an immediate arithmetic meaning. The extensions \(\mathbb Q(\sqrt2)\) and \(\mathbb Q(\sqrt3)\), with their order-two Galois actions, have isomorphic underlying representations: each is the sum of the trivial and sign representations. Their multiplication differs. A generator of the sign line squares to \(2\) in one algebra and to \(3\) in the other. The representation identifies the line in which a radical belongs; its multiplication specifies which radical extension it defines.
+
+More generally, if \(u\) has character \(\chi\) of order \(n\), then \(u^n\) is invariant. If \(u\) and \(v\) have inverse characters, then \(uv\) is invariant. These statements predict the quantities to compute, but they do not prescribe their numerical values. Those values come from the original algebra, or from its coefficient functions. In Cardano's method this distinction becomes the difference between knowing that \(uv\) is invariant and determining that it equals a particular multiple of the cubic's linear coefficient.
+
+The coefficient functions supply a second grading: ordinary polynomial degree. The coefficient of \(X^{n-j}\) is, up to sign, a homogeneous symmetric polynomial of degree \(j\) in the roots. After changing to Fourier coordinates it is still homogeneous of degree \(j\), and every monomial that occurs must have trivial total character. Character and degree together can leave only a few possible monomials. This makes it possible to determine a coefficient by evaluating a small number of convenient configurations, instead of expanding a long product. The resulting numerical constants are normalization data for a structure already identified.
+
+Taking an invariant power forgets a root-of-unity phase. A mixed product can retain the relative phase between two coordinates. Consequently separate equations for the powers do not generally suffice for reconstruction: their solutions must also satisfy the mixed-product equations. These compatibility conditions are the multiplication maps of the original algebra expressed in chosen coordinates.
+
+When \(A\) is normal in a larger group \(G\), the quotient \(G/A\) acts on \(R^A\). It also reorganizes the character components: for \(g\in G\),
+\[
+g(R_\chi)=R_{g\cdot\chi},
+\qquad
+(g\cdot\chi)(a)=\chi(g^{-1}ag).
+\]
+Thus the remaining symmetry acts on the invariant quantities obtained by taking powers and compatible products. Resolvent equations describe this residual action. Their coefficients lie downstairs because they are symmetric expressions invariant under the remaining group.
+
+\subsection{From a cyclic Galois action to a radical}
+
+The reconstruction mechanism is particularly sharp for fields.
+
+\begin{proposition}
+\label{fourier:kummer}
+Let \(L/F\) be a cyclic Galois extension of degree \(n\), with generator \(\sigma\), and assume that \(F\) has characteristic zero and contains a primitive \(n\)-th root of unity \(\zeta\). There is a nonzero \(\theta\in L\) such that
+\[
+\sigma(\theta)=\zeta\theta,
+\qquad
+\theta^n=a\in F^\times,
+\qquad
+L=F(\theta).
+\]
+\end{proposition}
+
+\begin{proof}
+The independence of distinct field automorphisms implies that the operator
+\[
+e=\frac1n\sum_{j=0}^{n-1}\zeta^{-j}\sigma^j
+\]
+is nonzero. Choose \(b\in L\) with \(\theta=e(b)\ne0\). The projector calculation gives \(\sigma(\theta)=\zeta\theta\), whence \(\theta^n\in F\). The conjugates \(\theta,\zeta\theta,\ldots,\zeta^{n-1}\theta\) are distinct. Therefore \([F(\theta):F]=n\), so \(F(\theta)=L\).
+\end{proof}
+
+This is the Fourier mechanism in Kummer theory \cite{milne,stacks-kummer}. The same argument shows that, for a finite abelian Galois group \(A\) over a coefficient field \(F\) containing the character values, every character space \(L_\chi\) is a line over \(F\). Indeed, its projector is nonzero, and the ratio of two nonzero elements of \(L_\chi\) is invariant. Multiplication gives isomorphisms
+\[
+L_\chi\otimes_F L_\psi\simeq L_{\chi\psi}.
+\]
+Choosing a basis in each line expresses these maps as scalars. Associativity constrains those scalars and thereby constrains the choices of radicals. Changing bases changes their displayed values without changing the extension.
+
+The proposition is a structural existence proof. Its definition of \(\theta\) uses conjugates in \(L\), which are not initially known when solving an equation. An explicit solution must still express suitable powers and products of these Fourier coordinates using the given coefficients. The low-dimensional invariant calculations for the cubic and quartic perform exactly this task.
+
+\subsection{Solvable towers and the scope of the construction}
+
+Let a separable polynomial over a characteristic-zero field \(K\) have splitting field \(L\) and solvable Galois group \(G\). Adjoin enough roots of unity, for example those of order \(|G|\), and put
+\[
+K'=K(\mu_{|G|}),\qquad E=LK'.
+\]
+The preliminary extension \(K'/K\) is itself radical: a primitive \(|G|\)-th root of unity is a \(|G|\)-th root of \(1\). The group \(H=\operatorname{Gal}(E/K')\) is a solvable subgroup of \(G\). Choose a subnormal series with cyclic prime-order quotients,
+\[
+H=H_0\triangleright H_1\triangleright\cdots\triangleright H_m=1.
+\]
+Its fixed fields form a tower
+\[
+K'=E^{H_0}\subset E^{H_1}\subset\cdots\subset E^{H_m}=E,
+\]
+and each step is cyclic Galois. Applying Proposition~\ref{fourier:kummer} at each step realizes the tower by radicals. Normality is needed between consecutive groups; the individual \(H_i\) need not all be normal in \(H\). This is the structural reason solvable groups lead to radical solutions \cite{milne}.
+
+For explicit formulas, one usually chooses a larger abelian normal subgroup when its character coordinates make the invariant algebra simple. The choices of subgroup, ordering, primitive roots of unity, and bases of character lines are not unique. Fourier decomposition makes their roles precise; it does not remove coordinate choices or automatically minimize the size of a formula.
+
+Finally, two settings must remain distinct. In a universal calculation, roots are variable coordinates and one studies a polynomial ring, possibly modulo their sum, with a permutation action. Before inverting the discriminant, this root space includes ramification: its character components need not be line bundles over the invariant ring, and their multiplication maps need not be isomorphisms. On the finite \'etale torsor locus, Proposition~\ref{cover:first-reconstruction} proves that they are line bundles with isomorphic multiplication maps. In a particular Galois field extension, these become one-dimensional vector spaces with nonzero multiplication. Universal polynomial identities specialize to concrete equations even when roots coincide or the actual Galois group becomes smaller; statements about Galois degrees require the corresponding field hypotheses. The abstract group predicts possible intermediate symmetries. The algebra, its multiplication, and the given coefficients determine the equation being solved.
+
+\section{Centering: the first substitution is a projection}
+\label{sec:centering}
+
+Let
+\[
+f(X)=X^n+a_1X^{n-1}+\cdots+a_n
+\]
+have roots \(\alpha_1,\ldots,\alpha_n\), counted with multiplicity. Their mean is
+\[
+m=\frac{\alpha_1+\cdots+\alpha_n}{n}=-\frac{a_1}{n}.
+\]
+Writing \(X=Y+m\) replaces the roots by \(r_i=\alpha_i-m\), whose sum is zero. The coefficient of \(Y^{n-1}\) therefore vanishes.
+
+This is the projection associated with the decomposition
+\begin{equation}
+K^n=K(1,\ldots,1)\oplus W_n,
+\qquad
+W_n=\{(r_1,\ldots,r_n):r_1+\cdots+r_n=0\}.
+\label{eq:centering}
+\end{equation}
+The first summand records the common translation of all roots; the second records their configuration relative to their mean. Both are preserved by permutations. Thus depressing a polynomial removes the trivial representation and leaves the standard representation. This projection is equivariant and uses a scalar already in the coefficient field. The splitting field and Galois group are unchanged; only the coordinates have been simplified.
+
+There is also an intrinsic formulation. In the finite algebra \(E=K[X]/(f)\), let \(\alpha\) be the class of \(X\). The trace of multiplication by \(\alpha\) is \(-a_1\). Replacing \(\alpha\) by
+\[
+\alpha-\frac{\Tr_{E/K}(\alpha)}{n}\,1
+\]
+makes its trace zero. This description does not require choosing or ordering the roots.
+
+For later reference, the translations give
+\begin{align*}
+X^3+AX^2+BX+C&\longmapsto Y^3+pY+q, &X&=Y-A/3,\\
+p&=B-A^2/3, &q&=C-AB/3+2A^3/27;
+\end{align*}
+and
+\begin{align*}
+X^4+AX^3+BX^2+CX+D&\longmapsto Y^4+pY^2+qY+r,\qquad X=Y-A/4,\\
+p&=B-3A^2/8,\\
+q&=C-AB/2+A^3/8,\\
+r&=D-AC/4+A^2B/16-3A^4/256.
+\end{align*}
+
+\section{Cardano: descend, diagonalize, and reconstruct}
+\label{cardano:section}
+
+Start with the coefficient data
+\[
+g(Y)=Y^3+pY+q
+\]
+and first assume that its discriminant is nonzero. Work over \(k=K(\omega)\), where \(\omega\) is a primitive cube root of unity. The cover construction of Section~\ref{cover:section} supplies the space of orderings of the three roots. Quotienting by \(C_3=A_3\) remembers a cyclic orientation while forgetting a starting point. Above that orientation cover, the three-root cover is a \(C_3\)-torsor. Its algebra \(B\) has a tautological root \(r\), with
+\[
+\operatorname{Tr}_{B}(r)=0,
+\qquad
+g(Y)=\operatorname{Norm}_{B}(Y-r).
+\]
+Trace and norm here are relative to the orientation cover. They are the trace and determinant of multiplication in the rank-three algebra. We have constructed an object from the coefficients, with a distinguished element to reconstruct; no radical expression has been proposed.
+
+\subsection{Why the root must be a sum of two components}
+
+The character decomposition of this algebra has three summands:
+\[
+B=B_1\oplus B_\chi\oplus B_{\chi^{-1}},
+\qquad \chi(\sigma)=\omega.
+\]
+The projector onto \(B_1\) is normalized trace. Thus the trace-zero condition removes precisely that summand. Applying the identity decomposition to the actual element \(r\) gives
+\[
+r=(e_1+e_\chi+e_{\chi^{-1}})r
+  =e_\chi r+e_{\chi^{-1}}r.
+\]
+Define \(u=e_\chi r\) and \(v=e_{\chi^{-1}}r\). Then \(r=u+v\) follows before any polynomial expansion. The two terms are prescribed projections of the root observable, and their transformation rules are part of their definition. This is why this particular decomposition is useful: multiplication will turn \(uv\), \(u^3\), and \(v^3\) into invariant quantities.
+
+To calculate the projectors, label the conjugates \(r_j=\sigma^j r\), for \(j=0,1,2\). Proposition~\ref{fourier:projectors} gives
+\begin{equation}
+u=\frac{r_0+\omega^2r_1+\omega r_2}{3},
+\qquad
+v=\frac{r_0+\omega r_1+\omega^2r_2}{3}.
+\label{eq:cubic-fourier}
+\end{equation}
+These expressions are the calculated values of the projectors, rather than an independent choice of weighted sums. Their transformation rules are
+\[
+\sigma(u)=\omega u,\qquad \sigma(v)=\omega^{-1}v.
+\]
+Applying \(\sigma^j\) to the decomposition of \(r\) therefore gives
+\begin{equation}
+r_j=\omega^ju+\omega^{-j}v,\qquad j=0,1,2.
+\label{eq:cubic-inversion}
+\end{equation}
+This is the inverse Fourier transform, applied to the root observable. The group \(C_3\) has exactly two nontrivial characters, so centering leaves exactly two terms. Their orders are three, so their invariant powers will be cubes. Reversing the cyclic orientation interchanges the two characters, so their cubes will be an unordered pair satisfying a quadratic equation. The shape of Cardano's solution is already visible from the cover and its algebra.
+
+When the coefficients vary over \(\C\), this also describes analytic continuation. A loop on the orientation cover can rotate the three root sheets; its action on \(u,v\) is multiplication by opposite cube-root phases. Returning to the coefficient space permits orientation reversal and hence interchange of the two components. Cubes erase the rotation, and a mixed product preserves the relative phase needed for reconstruction. The topological monodromy is the same action used by the algebraic projectors.
+
+\subsection{Multiplication and trace determine the auxiliary equations}
+
+We now calculate the invariant data without substituting an ansatz into the cubic. In the character grading,
+\[
+uv\in B_1,\qquad u^3,v^3\in B_1,
+\qquad u^2,v^2,u^2v,uv^2\text{ have nontrivial characters}.
+\]
+Trace vanishes on every nontrivial component. Since the algebra has rank three, it multiplies an invariant scalar by three. Therefore
+\[
+\operatorname{Tr}_{B}(r^2)=6uv,
+\qquad
+\operatorname{Tr}_{B}(r^3)=3(u^3+v^3).
+\]
+The trace identities for the given characteristic polynomial \(g\) are
+\[
+\operatorname{Tr}_{B}(r^2)=-2p,
+\qquad
+\operatorname{Tr}_{B}(r^3)=-3q.
+\]
+For example, the first is Newton's identity with \(\operatorname{Tr}_{B}(r)=0\); the second also follows by taking the trace of \(r^3+pr+q=0\). Hence
+\begin{equation}
+uv=-\frac p3,\qquad u^3+v^3=-q.
+\label{eq:cardano-constraints}
+\end{equation}
+The coefficients enter through trace and norm, while the character grading determines which products survive. The familiar cancellation conditions have emerged as identities of the algebra we constructed.
+
+There is a useful global presentation of the same mechanism. In the universal centered root-coordinate ring, put
+\[
+s=uv,\qquad U=u^3,\qquad V=v^3.
+\]
+These are fixed by the cyclic action, and their multiplication retains the relation \(UV=s^3\).
+
+\begin{proposition}
+The invariant rings of the cyclic and full permutation actions are
+\begin{equation}
+k[u,v]^{C_3}=k[s,U,V]/(UV-s^3),
+\qquad
+k[u,v]^{S_3}=k[s,U+V].
+\label{eq:cubic-invariants}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+A monomial \(u^iv^j\) is fixed by the cyclic action precisely when \(i-j\) is divisible by \(3\). Removing a power of \(uv\) leaves a power of either \(u^3\) or \(v^3\). These monomials give the first presentation, with the single relation \(UV=s^3\). The remaining involution interchanges \(U,V\) and fixes \(s\). Its invariants are generated by \(s,U+V,UV\), and the relation eliminates \(UV\).
+\end{proof}
+
+Consequently the map from the cyclic quotient to the coefficient space is explicitly
+\[
+(s,U,V)\longmapsto(p,q)=(-3s,-U-V),
+\qquad UV=s^3.
+\]
+Recovering a point above \((p,q)\) requires separating the unordered pair \(U,V\), then lifting one cyclic character coordinate by a cube root. The invariant presentation extends as a polynomial identity across the discriminant locus; the torsor interpretation applies on the distinct-root locus.
+
+
+\subsection{The quadratic resolvent and compatible cube roots}
+
+The unordered pair \(\{U,V\}\) has sum \(-q\) and product \(-p^3/27\). Therefore its members are the roots of
+\begin{equation}
+T^2+qT-\frac{p^3}{27}=0.
+\label{eq:cubic-resolvent}
+\end{equation}
+Writing
+\[
+\delta=\frac{q^2}{4}+\frac{p^3}{27},
+\]
+we obtain
+\[
+U=-\frac q2+\sqrt\delta,\qquad
+V=-\frac q2-\sqrt\delta.
+\]
+Suppose first that \(U\ne0\). Choose a cube root \(u\) of \(U\), and then define
+\begin{equation}
+v=-\frac{p}{3u}.
+\label{eq:cubic-compatible}
+\end{equation}
+The product relation ensures \(v^3=V\). Formula \eqref{eq:cubic-inversion} now gives all three roots.
+
+The instruction in \eqref{eq:cubic-compatible} is essential. Independently chosen cube roots of \(U\) and \(V\) need not have product \(-p/3\). Once \(u\) is chosen, \(v\) is determined. Replacing \(u\) by \(\omega u\) replaces \(v\) by \(\omega^{-1}v\), cycling the three answers.
+
+If \(U=0\) but \(V\ne0\), interchange their roles. If both vanish, \(p=q=0\) and all three roots are zero. Thus the apparent division by \(u\) is a choice of coordinate chart, not a restriction on the method.
+
+For the original cubic, the result is
+\begin{equation}
+X_j=-\frac A3+\omega^ju+\omega^{-j}v,\qquad j=0,1,2,
+\label{eq:cardano-final}
+\end{equation}
+with \(p,q\) as in Section~\ref{sec:centering} and the radicals chosen compatibly.
+
+\subsection{A worked cubic}
+
+Take \(X^3+3X^2-6=0\). The translation \(Y=X+1\) gives
+\[
+Y^3-3Y-4=0.
+\]
+The invariant equations are \(uv=1\) and \(u^3+v^3=4\). Thus
+\[
+U,V=2\pm\sqrt3.
+\]
+Taking \(u=\sqrt[3]{2+\sqrt3}\) to be the positive real cube root and setting \(v=1/u\) produces
+\[
+X_0=-1+\sqrt[3]{2+\sqrt3}+\sqrt[3]{2-\sqrt3}.
+\]
+The other roots are \(-1+\omega u+\omega^2v\) and \(-1+\omega^2u+\omega v\). The reciprocal relation between the real cube roots is the numerical form of the invariant constraint \(uv=1\).
+
+\subsection{What the square root remembers}
+
+The discriminant is
+\[
+\Delta=-4p^3-27q^2=-27(U-V)^2.
+\]
+The alternating polynomial
+\[
+d=(r_0-r_1)(r_0-r_2)(r_1-r_2)
+\]
+satisfies
+\begin{equation}
+d=3(\omega-\omega^2)(U-V),\qquad d^2=\Delta.
+\label{eq:cubic-discriminant}
+\end{equation}
+Even permutations preserve \(d\), whereas odd permutations reverse its sign. A choice of square root of \(\Delta\) distinguishes the two cyclic orientations of the three roots. The remaining cube-root choice selects a starting point in the chosen cyclic order.
+
+There is a small but important field distinction. Cardano uses \(\sqrt\delta\), while the alternating invariant uses \(\sqrt\Delta\), and \(\delta=-\Delta/108\). Over \(k=K(\omega)\) these generate the same extension, because \(k\) contains \(\sqrt{-3}=\omega-\omega^2\). They need not generate the same extension over \(K\). For example, \(Y^3-2\) has \(\delta=1\) but discriminant \(-108\). The roots of unity are part of the Galois-theoretic construction.
+
+\section{Ferrari: reconstruct a root from three character lines}
+\label{ferrari:section}
+
+Apply the same construction to
+\[
+g(Y)=Y^4+pY^2+qY+r,
+\]
+first on the distinct-root locus. Here the regular normal abelian subgroup is \(V_4\). Pulling the root algebra back to \(P/V_4\) makes it the algebra of a \(V_4\)-torsor, with a distinguished trace-zero root observable. The quotient \(S_4/V_4\simeq S_3\) acts on three objects: the nontrivial characters, or equivalently the pairings
+\begin{equation}
+12\mid34,\qquad13\mid24,\qquad14\mid23.
+\label{eq:pairings}
+\end{equation}
+Thus the surjection
+\begin{equation}
+S_4\longrightarrow S_3
+\label{eq:quartic-quotient}
+\end{equation}
+predicts a cubic resolvent before any auxiliary polynomial is chosen. We now construct the quantities that it will govern.
+
+\subsection{The three summands are prescribed by the cover}
+
+Let \(r_1\) denote the root observable, and let \(\chi_1,\chi_2,\chi_3\) be the three nontrivial characters of \(V_4\). Normalized trace is the trivial-character projector, so
+\[
+r_1=e_{\chi_1}r_1+e_{\chi_2}r_1+e_{\chi_3}r_1.
+\]
+Define \(u=2e_{\chi_1}r_1\), \(v=2e_{\chi_2}r_1\), and \(w=2e_{\chi_3}r_1\). This normalization makes the coordinates sums of paired roots; the decomposition itself gives
+\[
+r_1=(u+v+w)/2.
+\]
+The three-term substitution has now been obtained from the root algebra. To calculate its coordinates, order the other root sheets by the regular \(V_4\)-action. The character projectors yield
+\begin{align}
+u&=\frac{r_1+r_2-r_3-r_4}{2}=r_1+r_2,\nonumber\\
+v&=\frac{r_1-r_2+r_3-r_4}{2}=r_1+r_3,\label{eq:quartic-fourier}\\
+w&=\frac{r_1-r_2-r_3+r_4}{2}=r_1+r_4.\nonumber
+\end{align}
+Their transformation rules are completely explicit:
+\[
+\begin{array}{c|ccc}
+ &u&v&w\\ \hline
+(12)(34)&u&-v&-w\\
+(13)(24)&-u&v&-w\\
+(14)(23)&-u&-v&w
+\end{array}
+\]
+Each nontrivial group element reverses exactly two signs. Applying these three group elements to the decomposition of the root observable gives
+\begin{equation}
+\begin{aligned}
+r_1&=(u+v+w)/2,&r_2&=(u-v-w)/2,\\
+r_3&=(-u+v-w)/2,&r_4&=(-u-v+w)/2.
+\end{aligned}
+\label{eq:quartic-inversion}
+\end{equation}
+Thus the eventual sums of square roots are already dictated by Fourier inversion. What remains is to find the squares and retain the correct relation among their signs.
+
+\subsection{The invariants, including the information squares forget}
+
+Put
+\[
+U=u^2,\qquad V=v^2,\qquad W=w^2,\qquad t=uvw.
+\]
+The squares are attached naturally to the pairings. For example,
+\[
+U=(r_1+r_2)^2=(r_3+r_4)^2,
+\]
+so \(U\) does not distinguish the two blocks of \(12\mid34\). The product \(t\), however, retains a compatibility condition that three unrelated squares would lose.
+
+\begin{proposition}
+For the Klein four action,
+\begin{equation}
+K[u,v,w]^{V_4}=K[U,V,W,t]/(t^2-UVW).
+\label{eq:quartic-invariants}
+\end{equation}
+The quotient \(S_4/V_4\) permutes \(U,V,W\) and fixes \(t\). If \(e_1,e_2,e_3\) denote the elementary symmetric polynomials in \(U,V,W\), then
+\begin{equation}
+K[u,v,w]^{S_4}=K[e_1,e_2,t],\qquad e_3=t^2.
+\label{eq:quartic-full-invariants}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+A monomial \(u^iv^jw^\ell\) survives all the double sign changes exactly when \(i,j,\ell\) have the same parity. If all are even, it is a monomial in \(U,V,W\); if all are odd, it is \(uvw\) times such a monomial. This proves \eqref{eq:quartic-invariants} and its single relation.
+
+The transpositions \((23),(34)\) interchange \(u,v\) and \(v,w\), respectively. The transposition \((12)\) sends \((u,v,w)\) to \((u,-w,-v)\). These generate \(S_4\), so \(t\) is fixed and the squares are permuted. Every \(V_4\)-invariant has a unique expression \(A(U,V,W)+tB(U,V,W)\); full invariance says that \(A,B\) are symmetric. Their dependence on \(e_3\) can be replaced by dependence on \(t^2\).
+\end{proof}
+
+The coefficient calculation again uses the multiplication and trace of the torsor algebra. Write \(e_1=U+V+W\) and \(e_2=UV+UW+VW\). A nontrivial character component has trace zero, whereas an invariant scalar has trace four times itself. In \(r_1=(u+v+w)/2\), this gives
+\[
+\operatorname{Tr}(r_1^2)=e_1,\qquad
+\operatorname{Tr}(r_1^3)=3t,\qquad
+\operatorname{Tr}(r_1^4)=\frac{e_1^2+4e_2}{4}.
+\]
+For example, in the cube only the mixed term \(uvw\) has trivial character. In the fourth power, the surviving terms are the pure fourth powers and the products of two squares. Their coefficients give the last formula. The known quartic gives Newton's identities
+\[
+\operatorname{Tr}(r_1^2)=-2p,\qquad
+\operatorname{Tr}(r_1^3)=-3q,\qquad
+\operatorname{Tr}(r_1^4)=2p^2-4r.
+\]
+Comparing the two descriptions yields
+\begin{equation}
+p=-\frac{e_1}{2},\qquad q=-t,\qquad
+r=\frac{e_1^2-4e_2}{16}.
+\label{eq:quartic-coefficients}
+\end{equation}
+Equivalently,
+\begin{equation}
+U+V+W=-2p,\quad UV+UW+VW=p^2-4r,\quad UVW=q^2,
+\quad uvw=-q.
+\label{eq:quartic-constraints}
+\end{equation}
+
+\subsection{The resolvent cubic and coherent square roots}
+
+The quotient has permuted the three character squares while retaining their product constraint. The first three identities in \eqref{eq:quartic-constraints} therefore say precisely that \(U,V,W\) are the roots of
+\begin{equation}
+R(Z)=Z^3+2pZ^2+(p^2-4r)Z-q^2.
+\label{eq:quartic-resolvent}
+\end{equation}
+This cubic is now available to Cardano's method. Once all three of its roots have been ordered, choose square roots \(u,v,w\) satisfying
+\begin{equation}
+u^2=U,\quad v^2=V,\quad w^2=W,\qquad uvw=-q.
+\label{eq:quartic-signs}
+\end{equation}
+Then \eqref{eq:quartic-inversion} gives the four roots of the quartic.
+
+For \(q\ne0\), all three squares are nonzero. One may choose \(u\) and \(v\) arbitrarily and set \(w=-q/(uv)\). The relation \(UVW=q^2\) gives \(w^2=W\). There are four compatible sign choices, corresponding exactly to \(V_4\). An arbitrary choice among the eight sign patterns would forget the cubic invariant \(uvw\) and might change the sign of the coefficient \(q\).
+
+For \(q=0\), the quartic is biquadratic:
+\[
+Y^4+pY^2+r=0.
+\]
+Solve \(Z^2+pZ+r=0\) and take both square roots of each answer. In the invariant description, at least one of \(u,v,w\) vanishes, and the product condition is automatically satisfied. No division by a vanishing coordinate is needed.
+
+The familiar alternative resolvent with roots
+\[
+\theta_1=r_1r_2+r_3r_4,\quad
+\theta_2=r_1r_3+r_2r_4,\quad
+\theta_3=r_1r_4+r_2r_3
+\]
+contains exactly the same information. Indeed \(\theta_1=p+U\), and similarly for the other two. Translating \eqref{eq:quartic-resolvent} by \(\theta=Z+p\) gives
+\begin{equation}
+\theta^3-p\theta^2-4r\theta+4pr-q^2=0.
+\label{eq:alternative-resolvent}
+\end{equation}
+This is the standard pairing resolvent used to study quartic Galois groups; see Milne's treatment in Chapter~4 of \cite{milne}.
+
+The resolvent also preserves the discriminant. For example,
+\[
+U-V=(r_2-r_3)(r_1-r_4),
+\]
+and the analogous identities for \(U-W\) and \(V-W\) together account for all six root differences. Squaring and multiplying gives
+\[
+\operatorname{disc}R=\operatorname{disc}g.
+\]
+In particular, distinct quartic roots give three distinct pairing invariants. The resolvent does not accidentally merge two pairings away from the discriminant locus.
+
+\section{Why Ferrari's perfect square appears}
+
+Ferrari's practical method chooses one pairing, rather than ordering all three of them. The corresponding cover already predicts a difference of squares. We first construct that operation and only then compute its coefficients.
+
+Let \(P\) be the space of ordered, centered, distinct quartic roots. The stabilizer of the pairing \(12\mid34\) is a dihedral group \(D_8\) of order eight. Its subgroup
+\[
+H=\langle(12),(34)\rangle\simeq S_2\times S_2
+\]
+preserves each block separately. Thus
+\[
+P/H\ \xrightarrow{\ 2\ }\ P/D_8\ \xrightarrow{\ 3\ }\ P/S_4
+\]
+has the following meaning: the right-hand map forgets which pairing was selected; the left-hand map forgets which of its two blocks was selected first. These are degrees of covers on the distinct-root locus. A specialized field extension can have smaller degree. Although \(H\) is abstractly a Klein four group, it is not the normal double-transposition subgroup \(V_4\) used in the preceding section.
+
+\subsection{The norm forces a difference of squares}
+
+The root cover above a selected pairing maps to the double cover that distinguishes its blocks: send a root to the block containing it. Each fibre of this map has two roots. Its rank-two algebra supplies a monic quadratic by taking the relative norm of \(Y-\alpha\). Taking the norm once more down the block cover recovers the original quartic, by transitivity of norms. Thus the two quadratic factors are constructed from the cover itself.
+
+In root coordinates, these two relative norms are the monic quadratic polynomials belonging to the blocks. On the cover that distinguishes the blocks, write them as
+\[
+Q_-(Y)=(Y-r_1)(Y-r_2),\qquad
+Q_+(Y)=(Y-r_3)(Y-r_4).
+\]
+The nontrivial symmetry \(\iota\) of this double cover exchanges \(Q_+\) and \(Q_-\). Their product is consequently a norm:
+\[
+g(Y)=Q_+(Y)\,\iota(Q_+(Y)).
+\]
+Here the norm simply means multiplying a quantity by its value on the other sheet. This operation returns a polynomial defined on the space where only the unordered pairing is remembered.
+
+Apply the two character projectors of this involution:
+\[
+A(Y)=\frac{Q_+(Y)+Q_-(Y)}{2},\qquad
+B(Y)=\frac{Q_+(Y)-Q_-(Y)}{2}.
+\]
+Then \(\iota(A)=A\), \(\iota(B)=-B\), and Fourier inversion gives \(Q_+=A+B\), \(Q_-=A-B\). Multiplying these two reconstructed components gives
+\begin{equation}
+g(Y)=A(Y)^2-B(Y)^2.
+\label{eq:quartic-block-norm}
+\end{equation}
+Thus the difference of squares is forced by the norm and the two characters of the block-exchange symmetry. It has appeared before any search for a convenient square to complete.
+
+Centering determines the shapes of the two components. Their average is monic with vanishing linear coefficient, whereas their difference has degree at most one. Hence
+\[
+A(Y)=Y^2+m,\qquad B(Y)=sY+d,
+\qquad s=r_1+r_2=-(r_3+r_4).
+\]
+The quantities \(s\) and \(d\) change sign together when the blocks are exchanged. In particular, \(z=s^2\) is attached to the unordered pairing: it is precisely one root of \(R\). Choosing a sign of \(s\) distinguishes the blocks whenever \(s\ne0\).
+
+\subsection{The coefficients determine the reconstruction data}
+
+Only now do we use the known coefficients \(p,q,r\). In the norm \((Y^2+m)^2-(sY+d)^2\), the coefficients of \(Y^2\), \(Y\), and \(1\) are respectively
+\[
+2m-s^2=p,\qquad -2sd=q,\qquad m^2-d^2=r.
+\]
+For \(q\ne0\), every resolvent root \(z\) is nonzero. The first two equations then give
+\[
+m=\frac{p+z}{2},\qquad d=-\frac{q}{2s}.
+\]
+The third is the remaining norm compatibility condition:
+\[
+z(p+z)^2-q^2=4rz,
+\]
+which is exactly \(R(z)=0\). The resolvent therefore certifies the descent of the quadratic norm to the prescribed quartic. Its degree three records the three possible pairings; the square root of its chosen root records the two possible block orders.
+
+The reconstructed factors are
+\[
+Q_-=A-B=Y^2-sY+b,\qquad
+Q_+=A+B=Y^2+sY+c,
+\]
+where
+\begin{equation}
+b=\frac{p+z+q/s}{2},\qquad
+c=\frac{p+z-q/s}{2}.
+\label{eq:quadratic-factors}
+\end{equation}
+Their roots are
+\begin{equation}
+\frac{s\pm\sqrt{-2p-z-2q/s}}{2},\qquad
+\frac{-s\pm\sqrt{-2p-z+2q/s}}{2}.
+\label{eq:ferrari-final}
+\end{equation}
+These last two square roots distinguish the roots within each block. Changing \(s\) to \(-s\) exchanges the two blocks, while changing either remaining sign exchanges the two roots of that block. Undoing the initial centering gives the roots of the original quartic.
+
+In Ferrari's familiar notation, the same norm reads
+\begin{equation}
+g(Y)=(Y^2+m)^2-\left(sY-\frac{q}{2s}\right)^2,
+\qquad m=\frac{p+z}{2}.
+\label{eq:ferrari-square}
+\end{equation}
+Eliminating \(z=s^2=2m-p\) gives the usual auxiliary equation
+\[
+q^2=4(2m-p)(m^2-r).
+\]
+The parameter \(m\) is the constant coefficient of the invariant projection \((Q_++Q_-)/2\). The linear square is the square of the anti-invariant projection \((Q_+-Q_-)/2\). Both substitutions have thus been constructed by the cover and its character projectors.
+
+If \(q=0\), the original quartic is biquadratic, and one solves \(Z^2+pZ+r=0\) before taking square roots. The block cover and its norm still exist for distinct roots, but \(s\) can vanish and no longer distinguish its sheets. The formulas involving \(1/s\) are a coordinate chart for the reconstruction, not a requirement that every quartic lie in that chart.
+
+\section{Two quartics worked through}
+
+\subsection{An example in which the signs are visible}
+
+Consider
+\[
+g(Y)=Y^4-10Y^2-4Y+8.
+\]
+Its resolvent is
+\[
+R(Z)=Z^3-20Z^2+68Z-16=(Z-4)(Z^2-16Z+4),
+\]
+so we may order the squares as
+\[
+U=4,\qquad V=8+2\sqrt{15},\qquad W=8-2\sqrt{15}.
+\]
+The choices
+\[
+u=2,\qquad v=\sqrt5+\sqrt3,\qquad w=\sqrt5-\sqrt3
+\]
+have the required squares and satisfy \(uvw=4=-q\). Formula \eqref{eq:quartic-inversion} gives
+\[
+1+\sqrt5,\quad 1-\sqrt5,\quad -1+\sqrt3,\quad -1-\sqrt3.
+\]
+Alternatively, selecting only \(z=4\) and \(s=2\) gives
+\[
+g(Y)=(Y^2-2Y-4)(Y^2+2Y-2).
+\]
+The two presentations show the same geometry at different resolutions: the first orders all three pairings and reconstructs the four roots; the second chooses a single pairing and solves its two blocks.
+
+\subsection{An example with the full symmetric Galois group}
+
+The preceding example has extra arithmetic simplifications. For a quartic with full \(S_4\) symmetry over \(\Q\), take
+\[
+g(Y)=Y^4-Y-1.
+\]
+Its resolvent is
+\[
+R(Z)=Z^3+4Z-1.
+\]
+Cardano gives its unique real root as
+\begin{equation}
+z=\sqrt[3]{\frac12+\sqrt{\frac{283}{108}}}
+ +\sqrt[3]{\frac12-\sqrt{\frac{283}{108}}},
+\label{eq:s4-example}
+\end{equation}
+where real cube roots are meant. Their product is \(-4/3\), as required. Since \(R(0)<0<R(1)\) and \(R'(Z)=3Z^2+4>0\) for real \(Z\), we have \(0<z<1\). Set \(s=\sqrt z>0\). Ferrari gives the real factorization
+\[
+Y^4-Y-1=
+\left(Y^2-sY+\frac{z-1/s}{2}\right)
+\left(Y^2+sY+\frac{z+1/s}{2}\right).
+\]
+Its four roots are
+\[
+\frac{s\pm\sqrt{-z+2/s}}{2},\qquad
+\frac{-s\pm i\sqrt{z+2/s}}{2}.
+\]
+This is a complete radical solution, with the choices specified rather than hidden in nested radical notation.
+
+For completeness, its Galois group can be checked with little computation. Modulo \(2\), the polynomial becomes \(Y^4+Y+1\). It has no linear factor, and it is not divisible by the only irreducible quadratic over \(\mathbb F_2\), namely \(Y^2+Y+1\); reduction by that quadratic leaves remainder \(1\). Hence the quartic is irreducible over \(\Q\). The resolvent has no rational root and has discriminant \(-283\), so its Galois group is \(S_3\).
+
+The quartic Galois group \(G\subseteq S_4\) is transitive and maps onto this \(S_3\). Thus \(|G|\) is divisible by both \(4\) and \(6\). The only possibilities are \(12\) and \(24\). The unique index-two subgroup of \(S_4\) is \(A_4\), whose image on pairings is only \(C_3\), so the order cannot be \(12\). Therefore \(G=S_4\). The calculation above genuinely traverses the nonabelian symmetry of a general quartic.
+
+\section{Cardano in every degree: the dihedral family}
+\label{dihedral:section}
+
+Cardano's calculation extends to an infinite family once its symmetry is made explicit. The relevant feature of the cubic is a pair of Fourier coordinates carrying inverse characters. Keep that representation, replace the third roots of unity by the \(n\)-th roots of unity, and ask what equation the quotient produces.
+
+\subsection{The invariant ring determines the family}
+
+Let \(n\geq3\), and let \(k\) have characteristic zero and contain a primitive \(n\)-th root of unity \(\zeta\). On \(k[u,v]\), consider
+\[
+\rho(u,v)=(\zeta u,\zeta^{-1}v),
+\qquad
+\tau(u,v)=(v,u).
+\]
+The relations \(\rho^n=\tau^2=1\) and \(\tau\rho\tau=\rho^{-1}\) identify the acting group as \(\mathrm{Dih}_n=C_n\rtimes C_2\), of order \(2n\). Put
+\[
+s=uv,\qquad U=u^n,\qquad V=v^n,\qquad t=U+V.
+\]
+The same invariant-monomial argument used for the cubic gives
+\begin{equation}
+k[u,v]^{C_n}=k[s,U,V]/(UV-s^n),
+\qquad
+k[u,v]^{\mathrm{Dih}_n}=k[s,t].
+\label{dihedral:invariants}
+\end{equation}
+Indeed, \(u^iv^j\) is rotation-invariant precisely when \(n\) divides \(i-j\). After factoring powers of \(uv\), it is a power of \(u^n\) or \(v^n\). The reflection exchanges \(U\) and \(V\), leaving their sum and product; the latter is already \(s^n\).
+
+The quotient by the reflection alone has coordinates \(x=u+v\) and \(s=uv\). Therefore \(u^n+v^n\) must be a polynomial in \(x,s\). Its formula is forced by
+\[
+(u+v)(u^{n-1}+v^{n-1})
+=u^n+v^n+uv(u^{n-2}+v^{n-2}).
+\]
+Define the Dickson polynomials by
+\begin{equation}
+D_0(X,a)=2,\quad D_1(X,a)=X,\quad
+D_n(X,a)=X D_{n-1}(X,a)-aD_{n-2}(X,a).
+\label{dihedral:recurrence}
+\end{equation}
+The recurrence proves
+\begin{equation}
+D_n(u+v,uv)=u^n+v^n.
+\label{dihedral:identity}
+\end{equation}
+For example,
+\begin{align*}
+D_3(X,a)&=X^3-3aX,\\
+D_4(X,a)&=X^4-4aX^2+2a^2,\\
+D_5(X,a)&=X^5-5aX^3+5a^2X.
+\end{align*}
+Thus the equation arises by fixing the invariant \(s=a\) and expressing the remaining invariant \(t\) on the reflection quotient. For \(a=1\), these polynomials satisfy \(D_n(X,1)=2T_n(X/2)\), where \(T_n\) is the Chebyshev polynomial. Their arithmetic applications are developed in \cite{bluher}.
+
+There are two complementary descriptions of the information retained. The coordinate \(x=u+v\), together with \(s\), remembers the unordered pair \(\{u,v\}\). The coordinates \(s,t\) remember its entire orbit under cyclic phase changes as well. Generically, the degree-\(n\) polynomial describes the \(n\) possible unordered pairs lying above a fixed dihedral orbit. Its degree therefore counts the remaining choices; its coefficients express the information common to every choice.
+
+\subsection{One quadratic and one radical in every degree}
+
+Fix \(a\ne0\). To solve \(D_n(X,a)=t\), the invariant equations require
+\[
+U+V=t,\qquad UV=a^n.
+\]
+Hence
+\[
+U,V=\frac{t\pm\sqrt{t^2-4a^n}}2.
+\]
+Choose \(u\) with \(u^n=U\), and set \(v=a/u\). The product constraint then ensures \(v^n=V\). Fourier reconstruction gives
+\begin{equation}
+X_j=\zeta^j u+\zeta^{-j}\frac a u,
+\qquad j=0,\ldots,n-1.
+\label{dihedral:roots}
+\end{equation}
+These are all the roots, counted with multiplicity. One way to see the multiplicities as well is to form the monic product of the \(X-X_j\): for independent \(u,v\), its \(n\) distinct roots satisfy \eqref{dihedral:identity}, so it equals \(D_n(X,uv)-(u^n+v^n)\). This polynomial identity remains valid after specialization.
+
+Cardano is exactly the case \(n=3\), with \(a=-p/3\) and \(t=-q\). The case \(a=0\), excluded only to allow division by \(u\), is simply \(X^n=t\).
+
+For every \(n\), the root vector in \eqref{dihedral:roots} has just two Fourier frequencies, \(+1\) and \(-1\). This is the structural restriction that makes high degree manageable. A general polynomial of degree \(n\) does not have this two-frequency form.
+
+The geometric Galois group is equally explicit. With \(z\) transcendental and \(a\in k^\times\) fixed, write
+\[
+x=z+a/z,\qquad t=z^n+a^n/z^n.
+\]
+The extension \(k(z)/k(t)\) has degree \(2n\). Its \(2n\) automorphisms are generated by \(z\mapsto\zeta z\) and \(z\mapsto a/z\), so its group is \(\mathrm{Dih}_n\). It is the splitting field of \(D_n(X,a)-t\): the roots are given by \eqref{dihedral:roots}, and the first two recover \(z\) by a linear equation. Solving the equation reverses this quotient construction. A quadratic distinguishes \(u^n\) from \(v^n\); an \(n\)-th root chooses a cyclic phase.
+
+The familiar trigonometric solution has the same source. Take \(a=1\) and \(t=2\cos\theta\), where \(0<\theta<\pi\). Then \(u^n=e^{i\theta}\) and \(v=u^{-1}\), so the roots are
+\[
+X_j=2\cos\!\left(\frac{\theta+2\pi j}{n}\right),
+\qquad j=0,\ldots,n-1.
+\]
+All are real and distinct. A point on the unit circle projects to twice its real part under \(z\mapsto z+z^{-1}\), while multiplication of angles upstairs becomes the Dickson polynomial downstairs. At \(n=3\), this is the trigonometric form of Cardano's method when all three roots are real. The radical and trigonometric formulas are two coordinate descriptions of the same covering construction. For higher \(n\), they continue to solve the same dihedral family without a new substitution.
+
+\subsection{An irreducible quintic with an explicit solution}
+
+Consider
+\[
+f(X)=X^5-5X^3+5X-3.
+\]
+Put
+\[
+u=\sqrt[5]{\frac{3+\sqrt5}{2}}>0,
+\qquad \zeta=e^{2\pi i/5}.
+\]
+All five roots are
+\[
+X_j=\zeta^j u+\zeta^{-j}u^{-1},\qquad j=0,\ldots,4.
+\]
+In particular, the real root is
+\[
+\sqrt[5]{\frac{3+\sqrt5}{2}}
++\sqrt[5]{\frac{3-\sqrt5}{2}}.
+\]
+This is an irreducible quintic: the translate
+\[
+f(X+3)=X^5+15X^4+85X^3+225X^2+275X+120
+\]
+is Eisenstein at \(5\).
+
+Here the arithmetic Galois group over \(\mathbb Q\) is \(C_5\rtimes C_4\), rather than the geometric group \(\mathrm{Dih}_5\). This distinction records the action on roots of unity. To verify it, let \(M=\mathbb Q(\zeta,u)\). Since \(\sqrt5\in\mathbb Q(\zeta)\), its degree is at most \(20\); irreducibility of \(f\) forces \([M:\mathbb Q(\zeta)]=5\), hence equality. The automorphisms
+\[
+\rho:\ (\zeta,u)\longmapsto(\zeta,\zeta u),
+\qquad
+\tau:\ (\zeta,u)\longmapsto(\zeta^2,u^{-1})
+\]
+act on root indices as \(j\mapsto j+1\) and \(j\mapsto3j\). The second is well-defined because \(\zeta\mapsto\zeta^2\) sends \(\sqrt5\) to \(-\sqrt5\). These generate \(20\) distinct automorphisms, acting faithfully on the roots, and therefore identify \(M\) as their splitting field with the asserted group. Its solvability explains the radical expression; the general quintic has a different Galois group \cite{milne}.
+
+\subsection{The same quotient in finite-field computation}
+
+The identity also gives an inversion algorithm for nonlinear maps. Work now over \(\mathbb F_q\), with \(a=1\). The polynomial identity
+\[
+D_m(D_n(X,1),1)=D_{mn}(X,1)
+\]
+follows by evaluating at \(X=z+z^{-1}\).
+
+For \(x\in\mathbb F_q\), choose a root \(z\) of \(Z^2-xZ+1\) in \(\mathbb F_{q^2}\). Frobenius either fixes \(z\) or exchanges it with \(z^{-1}\). Thus \(z^{q-1}=1\) or \(z^{q+1}=1\), and in either case \(z^{q^2-1}=1\). If
+\[
+\gcd(n,q^2-1)=1,
+\qquad mn\equiv1\pmod{q^2-1},
+\]
+then
+\[
+D_m(D_n(x,1),1)=z^{mn}+z^{-mn}=x.
+\]
+Consequently \(D_n\) permutes \(\mathbb F_q\), with inverse \(D_m\). For example, over \(\mathbb F_7\), the inverse of \(D_5(X,1)=X^5+2X^3+5X\) is \(D_{29}(X,1)\), since \(5\cdot29\equiv1\pmod{48}\). These are equalities of functions on the finite field. The full permutation criterion, including necessity, appears in \cite{bluher}.
+
+The calculation takes place in cyclic multiplicative groups, where inversion means inverting an exponent. Passing through \(z\mapsto z+z^{-1}\) transports that calculation to a polynomial map. The same environment that organizes Cardano's radicals therefore also organizes finite-field permutations.
+
+\section{Read the radical choices in the covering tower}
+
+The covers of Section~\ref{cover:section} produced the reconstruction calculations. We can now identify exactly which sheet each radical choice selects and which information each map forgets. Let \(W_n\) now denote the affine space of centered ordered roots, and let \(W_n^\circ\) be its open subset where no two roots coincide. Its quotient by \(S_n\) is the space of centered monic polynomials with distinct roots. A point of the quotient remembers the coefficients and forgets the ordering.
+
+Over the distinct-root locus, the maps below are finite \emph{\'{e}tale} covers: algebraic counterparts of covering spaces, with no branching. Over \(\C\), one can follow the roots continuously along paths in coefficient space. A loop can return the same polynomial while permuting its roots; this permutation is its monodromy.
+
+\subsection{The cubic tower}
+
+The cubic construction factors the ordered-root cover as
+\begin{equation}
+W_3^\circ\ \xrightarrow{\ C_3\ }\ W_3^\circ/C_3
+\ \xrightarrow{\ C_2\ }\ W_3^\circ/S_3.
+\label{eq:cubic-cover}
+\end{equation}
+The arrows forget information. The first forgets which root is the starting point in a cyclic ordering. The second forgets the cyclic orientation. Solving moves in the reverse direction: a square root chooses the orientation, and a cube root chooses the starting point. Before restricting to distinct roots, the intermediate quotient has the explicit equation \(UV=s^3\).
+
+For a particular separable cubic with splitting field \(L\) over \(k=K(\omega)\) and \(\Gal(L/k)=S_3\), the corresponding field tower is
+\[
+k\subset k(\sqrt\Delta)=L^{C_3}\subset L,
+\]
+with degrees \(2\) and \(3\). If the actual Galois group is smaller, these degrees can drop. The universal construction and its polynomial identities remain valid.
+
+\subsection{The quartic tower and a distinction worth keeping}
+
+The quartic has the tower
+\begin{equation}
+W_4^\circ\ \xrightarrow{\ V_4\ }\ W_4^\circ/V_4
+\ \xrightarrow{\ S_3\ }\ W_4^\circ/S_4.
+\label{eq:quartic-cover}
+\end{equation}
+The intermediate space remembers an ordering of the three pairings, together with the invariants already specified by the quartic. Its generic fiber over coefficient space has six points, one for each ordering of the three resolvent roots. Over it, the four remaining choices are the compatible sign patterns in \eqref{eq:quartic-signs}.
+
+If a quartic has splitting field \(L/K\) and Galois group \(S_4\), then
+\[
+K\subset L^{V_4}\subset L
+\]
+has degrees \(6\) and \(4\). The field \(L^{V_4}\) is the \emph{splitting field} of the resolvent cubic. It is generally not the degree-three field obtained by adjoining just one resolvent root.
+
+Indeed, one pairing is stabilized by a dihedral subgroup \(D_8\subset S_4\) of order eight. Selecting one resolvent root follows the degree-three cover associated with this stabilizer. Choosing \(s=\sqrt z\) then distinguishes its two blocks, and solving their two quadratics distinguishes the roots inside each block. Generically this route has successive degrees \(3,2,2,2\). Solving the whole resolvent first instead gives degrees \(6,2,2\). Both recover the same splitting field.
+
+The stabilizer chain for the one-pairing route is explicitly
+\[
+S_4\supset D_8\supset\langle(12),(34)\rangle
+\supset\langle(34)\rangle\supset\{1\}.
+\]
+The group \(\langle(12),(34)\rangle\) preserves each of the two blocks separately. Although it is abstractly a Klein four group, it is different from the normal double-transposition subgroup \(V_4\). Adjoining the difference \(r_1-r_2\) leaves only the swap \((34)\); adjoining \(r_3-r_4\) removes that last ambiguity.
+
+The distinction explains why the practical one-resolvent-root algorithm and the normal-subgroup tower organize their square roots differently. A choice of one pairing does not yet reduce the symmetry to \(V_4\); an ordering of all three pairings does.
+
+These degree lists describe intermediate fields inside the quartic splitting field. A literal implementation of Cardano may temporarily adjoin a cube root of unity outside that field. In particular, the degree-three step in the first list is not itself being identified with a pure cube-root adjunction.
+
+\subsection{Radical extraction as trivializing a torsor}
+
+There is a precise cohomological formulation of the remaining ambiguity. For a field \(F\) of characteristic not dividing \(m\), the Kummer sequence gives
+\begin{equation}
+H^1_{\et}(\Spec F,\mu_m)\simeq F^\times/(F^\times)^m.
+\label{eq:kummer}
+\end{equation}
+Here \(\mu_m\) is the group of \(m\)-th roots of unity. A nonzero equation \(z^m=a\) defines a \(\mu_m\)-torsor: over an algebraic closure its solutions form a set on which \(\mu_m\) acts freely and transitively. Its cohomology class is the class of \(a\) modulo \(m\)-th powers. Adjoining a solution makes the class trivial. See \cite{stacks-kummer,stacks-torsors} for the general statements.
+
+For Cardano, after choosing the orientation and adjoining \(\omega\), the remaining equation \(u^3=U\) represents the class \([U]\). The equation for \(v\) contributes no independent choice because \(UV=(-p/3)^3\). When \(p\ne0\), it follows that \([V]=[U]^{-1}\). Reversing the orientation interchanges these classes, matching the inversion action in \(S_3\simeq C_3\rtimes C_2\). If \(p=0\), one uses the nonzero coordinate instead of writing a class for zero.
+
+For Ferrari with \(q\ne0\), work over the splitting field \(F\) of the resolvent and order its roots. The classes \([U],[V],[W]\) in \(F^\times/(F^\times)^2\) satisfy
+\[
+[U][V][W]=[q^2]=1.
+\]
+At most two independent square classes remain. The equation \(uvw=-q\) fixes their compatibility. This is the cohomological expression of the four-element \(V_4\)-fiber.
+
+The torsor language identifies exactly what is being trivialized and why one radical is dependent on the others. The invariant equations supply explicit representatives of the classes, so the description remains computational.
+
+Repeated roots lie on the discriminant locus, where the covering maps branch. The polynomial identities and reconstruction formulas still hold, with multiplicities and the zero-coordinate cases handled as above; the unramified-cover interpretation is reserved for the complement of that locus.
+
+
+\subsection{Character lines in families}
+
+The field calculations can also vary with parameters. A character component over a field is a vector space, often a line. Over a parameter space, the corresponding component can vary as a line bundle. Multiplication between character components becomes multiplication between line bundles, and choosing a radical becomes a problem of choosing compatible local trivializations.
+
+For example, when \(n\) is invertible on a scheme \(S\), a \(\mu_n\)-torsor is equivalently described by a line bundle together with a trivialization of its \(n\)-th tensor power. Locally it has the form
+\[
+z^n=a,\qquad a\in\mathcal O_S^\times.
+\]
+Changing the local generator changes \(a\) by an \(n\)-th power. Thus the familiar ambiguity of a radical is the coordinate expression of descent data. The Kummer sequence records this construction cohomologically; over a field \(K\), it gives
+\[
+H^1_{\mathrm{\acute et}}(K,\mu_n)
+\simeq K^\times/(K^\times)^n.
+\]
+This is the geometric version of the eigenline whose \(n\)-th power is invariant. The line bundle and its multiplication retain information that disappears if one records only a local equation~\cite{stacks-kummer}.
+
+
+\section{The same Fourier projectors split an integral}
+\label{geometry:genus-two}
+
+Ferrari's calculation used the characters of the Klein four group to separate four root coordinates. The same operation can separate the differentials on a curve. In a suitable family, it turns a genus-two integration problem into two elliptic ones, and the resulting decomposition also controls point counts over finite fields.
+
+\subsection{Two quotient curves from one equation}
+
+Choose \(a,b\in\C\) such that
+\[
+ab(a-1)(b-1)(a-b)\ne0,
+\qquad f(u)=(u-1)(u-a)(u-b),
+\]
+and let \(C\) be the smooth projective curve with affine equation
+\begin{equation}
+C:\qquad y^2=f(x^2).
+\label{geometry:genus-two-equation}
+\end{equation}
+The map \(x:C\to\mathbb P^1\) has degree two and branches at the six distinct roots of \(f(x^2)\). It is unramified at infinity. Riemann--Hurwitz therefore gives
+\[
+2g(C)-2=2(-2)+6=2,
+\qquad g(C)=2.
+\]
+The involutions
+\[
+\sigma(x,y)=(-x,y),\qquad h(x,y)=(x,-y)
+\]
+commute and generate a Klein four group. The second is the hyperelliptic involution. The fixed rational functions for \(\sigma\) are generated by \(x^2,y\); those for \(\sigma h\) are generated by \(x^2,xy\). They give the quotient curves and maps
+\[
+E_+:\quad v^2=f(u),\qquad
+\pi_+(x,y)=(u,v)=(x^2,y),
+\]
+\[
+E_-:\quad w^2=u f(u),\qquad
+\pi_-(x,y)=(u,w)=(x^2,xy).
+\]
+Both maps have degree two and extend to the smooth projective models. The cubic defining \(E_+\) and the quartic defining \(E_-\) have distinct roots, so both curves have genus one. We take the point at infinity as origin on \(E_+\), and \((0,0)\) as origin on \(E_-\). These quotient constructions are the classical degree-two elliptic subcovers of an even sextic~\cite{shaska-split}.
+
+\subsection{The decomposition reduces the integrals}
+
+The two forms
+\[
+\omega_0=\frac{dx}{y},\qquad \omega_1=\frac{x\,dx}{y}
+\]
+are a basis of \(H^0(C,\Omega_C^1)\). At a finite branch point, \(y\) is a local parameter and the equation shows that \(dx/y\) is regular. At infinity put \(t=1/x\) and \(Y=t^3y\). Then
+\[
+Y^2=(1-t^2)(1-at^2)(1-bt^2),
+\qquad
+\omega_0=-\frac{t\,dt}{Y},\quad
+\omega_1=-\frac{dt}{Y}.
+\]
+Thus both forms are regular there as well. They are linearly independent, and the genus calculation shows that they exhaust the holomorphic differentials.
+
+Now \(\sigma^*\omega_0=-\omega_0\) and \(\sigma^*\omega_1=\omega_1\). The character projectors
+\[
+\frac{1-\sigma^*}{2},\qquad \frac{1+\sigma^*}{2}
+\]
+separate these two lines. More concretely, the quotient maps give
+\begin{equation}
+\pi_-^*\left(\frac{du}{w}\right)=2\omega_0,
+\qquad
+\pi_+^*\left(\frac{du}{v}\right)=2\omega_1.
+\label{geometry:differential-pullbacks}
+\end{equation}
+The factors of two come simply from \(d(x^2)=2x\,dx\). The equalities are first checked where the displayed coordinates are valid and then hold globally as identities of holomorphic forms.
+
+For any piecewise smooth path \(\gamma\) on \(C\), and any constants \(A,B\in\C\), it follows that
+\begin{equation}
+\boxed{
+\int_\gamma\frac{(A+Bx)\,dx}{y}
+=\frac A2\int_{\pi_-(\gamma)}\frac{du}{w}
++\frac B2\int_{\pi_+(\gamma)}\frac{du}{v}.}
+\label{geometry:integral-splitting}
+\end{equation}
+The integration problems on the right are elliptic. Specifying the paths on the curves also specifies the necessary continuation of the square roots. The decomposition works for every holomorphic differential in this family, including its periods around closed paths.
+
+This is the same reason for using Fourier coordinates as in Ferrari's formula: a symmetry separates a coupled problem into components with simpler reconstruction rules. Here the components live on quotient curves, so the gain is a reduction in geometric complexity.
+
+\subsection{What the periods reconstruct}
+
+The decomposition extends to rational cohomology:
+\begin{equation}
+H^1(C,\Q)
+=\pi_+^*H^1(E_+,\Q)\oplus\pi_-^*H^1(E_-,\Q).
+\label{geometry:h1-splitting}
+\end{equation}
+Indeed, the pullbacks are injective because their trace maps compose with them to give multiplication by two. Their images have opposite \(\sigma\)-eigenvalues and each has dimension two. Since \(\dim_\Q H^1(C,\Q)=4\), they account for the entire space. Equivalently, one can apply the preceding differential calculation to the holomorphic and antiholomorphic parts of cohomology.
+
+To retain the periods together with their lattice, consider the Jacobian
+\[
+J(C)=H^0(C,\Omega_C^1)^*/H_1(C,\mathbb Z),
+\]
+where a cycle acts on differentials by integration. This complex torus is also the algebraic variety \(\operatorname{Pic}^0(C)\) of degree-zero line bundles. A map of curves induces pullback on line bundles and a norm map in the other direction. For the present quotients, write
+\[
+T=(\pi_{+*},\pi_{-*}):J(C)\longrightarrow E_+\times E_- ,
+\qquad
+S(P,Q)=\pi_+^*P+\pi_-^*Q.
+\]
+Here \(\operatorname{Pic}^0(E_\pm)\) is identified with \(E_\pm\) using the chosen origins.
+
+\begin{proposition}
+The maps \(S\) and \(T\) are isogenies of degree four, and
+\[
+T\circ S=[2]\times[2].
+\]
+\end{proposition}
+\begin{proof}
+For each degree-two quotient, pullback followed by norm, \(\pi_{\pm*}\pi_\pm^*\), is multiplication by two. The off-diagonal maps vanish. For example, \(\pi_{+*}\) is unchanged by \(\sigma\), whereas \(\sigma\) acts on the image of \(\pi_-^*\) by negation: on \(E_-\) it sends \((u,w)\) to \((u,-w)\), which is \([-1]\) for the chosen origin. Hence \(\pi_{+*}\pi_-^*\) equals its own negative. Its image lies in a finite group of two-torsion points; a homomorphism from a connected elliptic curve to that group is zero. The other off-diagonal map is treated in the same way.
+
+Thus \(TS=[2]\times[2]\). This composition is an isogeny, so \(S\) and \(T\), between abelian surfaces of the same dimension, are themselves isogenies. Under the canonical principal polarizations of the Jacobians and the product polarization, norm and pullback are dual. Consequently \(S\) and \(T\) have equal degrees. Their product is the degree of \([2]\) on an abelian surface, namely \(2^4=16\), so each degree is four.
+\end{proof}
+
+An isogeny has finite kernel; it need not be an isomorphism. Thus the elliptic factors reconstruct the Jacobian up to finite information in the period lattice. The curve itself has not become a product. This distinction makes visible the information that the rational character projectors, with their denominators, do not retain integrally.
+
+\subsection{The same decomposition counts points}
+
+The equations and maps also make sense over an odd finite field \(\mathbb F_q\), provided that \(ab(a-1)(b-1)(a-b)\ne0\) there. They give the exact identity
+\begin{equation}
+\boxed{\#C(\mathbb F_q)=\#E_+(\mathbb F_q)+\#E_-(\mathbb F_q)-(q+1).}
+\label{geometry:point-count}
+\end{equation}
+One can check this directly, without a cohomological trace theorem. Let \(\chi\) be the quadratic character, extended by \(\chi(0)=0\). The number of solutions of \(x^2=u\) is \(1+\chi(u)\), so
+\[
+\sum_{x\in\mathbb F_q}\chi(f(x^2))
+=\sum_{u\in\mathbb F_q}\chi(f(u))
++\sum_{u\in\mathbb F_q}\chi(u f(u)).
+\]
+The affine point counts follow by adding \(q\). The smooth projective models of \(C\) and \(E_-\) each have two rational points at infinity, because their defining polynomials are monic of even degree; \(E_+\) has one. Adding these points proves~\eqref{geometry:point-count}.
+
+For example, take \(a=2\), \(b=3\) over \(\mathbb F_{13}\). The two character sums on the right are \(-6\) and \(1\), respectively. Hence
+\[
+\#E_+(\mathbb F_{13})=8,\qquad
+\#E_-(\mathbb F_{13})=16,\qquad
+\#C(\mathbb F_{13})=10=8+16-14.
+\]
+The cohomological explanation is that the decomposition of \(H^1\), now in \(\ell\)-adic cohomology for \(\ell\ne\operatorname{char}(\mathbb F_q)\), respects Frobenius. Therefore the numerator polynomials of the zeta functions factor as \(L_C(T)=L_{E_+}(T)L_{E_-}(T)\). The integral reduction and the point-count identity are two consequences of the same decomposition.
+
+The path toward Fourier--Mukai theory now has a concrete intermediate object. A Jacobian organizes integrals and line bundles on a curve; an elliptic curve is itself such a Jacobian. We can therefore ask what Fourier reconstruction should mean when the character parameters form an entire space of line bundles, and when families and extensions must be retained along with individual components. Before treating holomorphic bundles, the circle gives a model in which the required extension and specialization data can be calculated completely.
+
+\section{A circle: Fourier transformation beyond eigenvalues}
+\label{circle:section}
+
+Finite abelian symmetry gave us character spaces with multiplication. To see why a Fourier transform might need sheaves and complexes, it helps to change just one feature: allow monodromy around a circle to have a nontrivial Jordan block. The resulting transform will still be completely explicit. It will preserve information that eigenvalues, traces, and dimensions forget, and its cohomology will explain why derived fibres enter the geometric theory.
+
+\subsection{Monodromy as a module on the character space}
+
+Fix a base point and a positive orientation on \(S^1\). A finite-dimensional complex local system is a vector space \(V\) transported consistently along paths; transport around the positive loop is an invertible map \(T:V\to V\). Cutting the circle at the base point makes the transport trivial, and gluing its two ends by \(T\) reconstructs the local system. A morphism is a linear map commuting with monodromy. Thus the category \(\operatorname{Loc}_{\mathrm{fd}}(S^1,\C)\) is the category of such pairs \((V,T)\). Since \(\pi_1(S^1)=\mathbb Z\), no finite-order relation forces \(T\) to be diagonalizable.
+
+The rank-one characters are parametrized by \(\lambda\in\C^\times\), their monodromy eigenvalue. Put
+\[
+R=\C[z,z^{-1}],\qquad \mathbb G_m=\Spec R.
+\]
+An invertible operator on a finite-dimensional vector space defines an \(R\)-module by specifying the action of \(z\). Such modules are precisely the finite-length \(R\)-modules, or equivalently the coherent sheaves on \(\mathbb G_m\) with finite support. Here a sheaf is described completely by its module; no gluing calculation is hidden in the notation.
+
+For the Fourier convention used below, let \(\mathcal S(V,T)\) be \(V\) with \(z\) acting as \(T^{-1}\). This defines an exact equivalence
+\begin{equation}
+\mathcal S:\operatorname{Loc}_{\mathrm{fd}}(S^1,\C)
+\overset{\sim}{\longrightarrow}
+\operatorname{Coh}_{\mathrm{fin}}(\mathbb G_m).
+\label{circle:equivalence}
+\end{equation}
+The inverse takes multiplication by \(z^{-1}\) as monodromy. Both constructions keep all intertwining maps and exact sequences. A rank-one system with monodromy \(\lambda\) becomes the skyscraper module \(R/(z-\lambda^{-1})\): a point on the character space. The inverse appears because the transform pairs the input with a character, rather than its inverse.
+
+\subsection{The universal kernel and its two-term calculation}
+
+The module description is also obtained by an integral-transform construction. Let \(\mathcal U\) be the local system of free rank-one \(R\)-modules on \(S^1\) whose monodromy is multiplication by \(z\). It packages every rank-one character at once: specialization at \(z=a\) gives the character with monodromy \(a\). For a local system \(\mathcal L_T\), form
+\[
+\mathcal M(\mathcal L_T)
+=R\Gamma(S^1,\mathcal L_T\otimes_{\C}\mathcal U).
+\]
+This is the circle version of a Mellin transform: tensor with a universal character and then take cohomology. The corresponding construction on complex algebraic varieties, and its relation to Fourier--Mukai theory, is developed in \cite{liu-maxim-wang-mellin}.
+
+Use one vertex and one positively oriented edge for the circle. On its universal cover, the boundary of a lifted edge is its terminal vertex minus its initial vertex. For coefficients with monodromy \(zT\), the cellular cochain differential is therefore \(zT-I\). Consequently
+\begin{equation}
+\mathcal M(\mathcal L_T)
+\simeq C_T:=[R\otimes_{\C}V
+\xrightarrow{\ zT-I\ }R\otimes_{\C}V],
+\label{circle:complex}
+\end{equation}
+where the two terms have cohomological degrees \(0,1\).
+
+\begin{proposition}
+There is a natural isomorphism
+\[
+\mathcal M(\mathcal L_T)\simeq\mathcal S(V,T)[-1].
+\]
+Thus \(\mathcal M[1]\), restricted to finite-dimensional local systems, is the exact equivalence \eqref{circle:equivalence}.
+\end{proposition}
+
+\begin{proof}
+The determinant \(\det(zT-I)\) is a nonzero Laurent polynomial. Hence \(zT-I\) is invertible over \(\C(z)\), and is injective on the free \(R\)-module \(R\otimes V\). In its cokernel, the relation \(zTv=v\) says that \(z\) acts as \(T^{-1}\). Explicitly, the map
+\[
+R\otimes V\longrightarrow\mathcal S(V,T),
+\qquad \sum_j z^jv_j\longmapsto\sum_jT^{-j}v_j
+\]
+annihilates the image of \(zT-I\). Every class reduces uniquely to a constant vector, so it identifies the cokernel with \(\mathcal S(V,T)\). The complex has cohomology only in degree one, which accounts for the shift \([-1]\). These maps commute with every intertwiner.
+\end{proof}
+
+Here the categorical transform is an equivalence on the stated source and target, not an assertion about all constructible sheaves on all spaces. Its kernel, cohomology, and reconstruction can all be calculated from one matrix.
+
+\subsection{Thickened points record what a list of characters loses}
+
+Compare the monodromies
+\[
+T_0=\begin{pmatrix}1&0\\0&1\end{pmatrix},
+\qquad
+T_1=\begin{pmatrix}1&1\\0&1\end{pmatrix}.
+\]
+They have the same eigenvalues and the same trace of every integral power. Nevertheless,
+\[
+\dim H^0(S^1,\mathcal L_{T_0})=2,
+\qquad
+\dim H^0(S^1,\mathcal L_{T_1})=1,
+\]
+because a global flat section is precisely a vector fixed by monodromy. Their spectral modules are
+\[
+\mathcal S(V,T_0)\simeq k(1)\oplus k(1),
+\qquad
+\mathcal S(V,T_1)\simeq R/(z-1)^2,
+\]
+where \(k(1)=R/(z-1)\). The second is a length-two thickening of the point \(1\): multiplication by \(z-1\) is nonzero, but its square vanishes. That nilpotent action records the nonsplit extension between the two character lines. It changes an observable cohomology group even though every character trace agrees.
+
+\subsection{Tensor product becomes convolution}
+
+Let \(m:\mathbb G_m\times\mathbb G_m\to\mathbb G_m\) be multiplication. For finite-length modules, define convolution by
+\[
+M\star N=m_*(M\boxtimes N).
+\]
+Concretely, its underlying vector space is \(M\otimes_{\C}N\), and \(z\) acts as \(z_M\otimes z_N\). The supports are finite, so this operation stays within finite-length coherent sheaves and uses ordinary pushforward. Therefore
+\begin{equation}
+\mathcal S(V\otimes W,T\otimes U)
+\simeq\mathcal S(V,T)\star\mathcal S(W,U).
+\label{circle:convolution}
+\end{equation}
+The unit is the point module \(k(1)\). With these operations, \eqref{circle:equivalence} is an exact symmetric monoidal equivalence. It preserves extensions and multiplication, as the finite character decomposition did earlier.
+
+For unipotent monodromy, the logarithm \(N=\log T\) is a finite polynomial in \(T-I\). In the formal coordinate \(s=-\log z\) at \(1\), the spectral action is \(s=N\). Multiplication of spectral parameters becomes addition of these coordinates, so tensor product is governed by
+\[
+N_{V\otimes W}=N_V\otimes I+I\otimes N_W.
+\]
+For two nonsplit rank-two systems, the calculation becomes
+\[
+\C[x,y]/(x^2,y^2),\qquad s\cdot f=(x+y)f.
+\]
+There is a length-three chain \(1\mapsto x+y\mapsto2xy\mapsto0\), and the independent vector \(x-y\) is killed by \(s\). The tensor product therefore has unipotent Jordan blocks of sizes three and one. Below, Fourier--Mukai duality will turn this same calculation into a decomposition of vector bundles on an elliptic curve. The passage to a logarithmic coordinate uses characteristic zero.
+
+\subsection{Why taking a fibre must retain a complex}
+
+The trivial rank-one local system gives an especially small example:
+\begin{equation}
+\mathcal M(\mathcal L_I)
+=[R\xrightarrow{z-1}R]\simeq k(1)[-1].
+\label{circle:trivial}
+\end{equation}
+Specialize the free complex at \(z=a\). It becomes
+\[
+[\C\xrightarrow{a-1}\C].
+\]
+For \(a\ne1\), its cohomology vanishes. At \(a=1\), its differential is zero, so its \(H^0\) and \(H^1\) are both \(\C\), as required for the ordinary cohomology of a circle. This operation is the derived fibre
+\[
+\mathcal M(\mathcal L_I)\otimes_R^L k(a).
+\]
+The ordinary fibre of the single module \(k(1)[-1]\) would retain only degree one. The missing degree zero is supplied by
+\(\operatorname{Tor}_1^R(k(1),k(1))\simeq\C\), followed by the shift. Keeping a free resolution before specialization retains precisely the information needed at the exceptional character.
+
+The example supplies concrete reasons for the next enlargement. Sheaves record spectral support and its infinitesimal thickness; complexes make specialization compatible with cohomology; convolution transports tensor calculations. The holomorphic Fourier--Mukai transform implements related operations with a different source and a different character space. In particular, the rank-one complex local systems on an elliptic curve are parametrized by \((\C^\times)^2\), whereas its degree-zero holomorphic line bundles form \(\operatorname{Pic}^0(E)\), itself an elliptic curve. The geometric theorem concerns the latter space. The circle calculation prepares its mechanisms without identifying these distinct theories.
+
+\section{Fourier--Mukai: reconstructing global bundles}
+\label{categorical:section}
+
+The circle transform kept monodromy as a sheaf on its character space. We now seek a transform for holomorphic bundles on an elliptic curve, where the dual parameters are degree-zero line bundles. The genus-two example has already introduced this space through the Jacobian. Two concrete questions will guide the construction: how can we compute with nonsplit extensions, and how much data is needed to reconstruct a stable bundle of higher rank?
+
+
+\subsection{A question that requires extension data}
+
+Before constructing a transform, it is useful to see what the transformed data must distinguish. On a smooth complex elliptic curve \(E\), compare the split bundle \(\mathcal O_E\oplus\mathcal O_E\) with a nonsplit extension
+\begin{equation}
+0\longrightarrow\mathcal O_E\longrightarrow F_2
+\longrightarrow\mathcal O_E\longrightarrow0.
+\label{categorical:f2}
+\end{equation}
+Both have two trivial line bundles as successive quotients, and both have class \(2[\mathcal O_E]\) in the ordinary Grothendieck group \(K_0(E)\). Nevertheless, they have different numbers of global sections.
+
+The beginning of the cohomology exact sequence is
+\[
+0\longrightarrow\C\longrightarrow H^0(E,F_2)
+\longrightarrow\C\xrightarrow{\ \delta\ }\C
+\longrightarrow H^1(E,F_2)\longrightarrow\C\longrightarrow0.
+\]
+The connecting map \(\delta\) takes \(1\) to the extension class in
+\(\operatorname{Ext}^1(\mathcal O_E,\mathcal O_E)=H^1(E,\mathcal O_E)\simeq\C\).
+The extension is nonsplit, so \(\delta\) is a nonzero map between one-dimensional spaces and is therefore an isomorphism. Exactness gives
+\begin{equation}
+h^0(E,F_2)=h^1(E,F_2)=1,
+\qquad
+h^0(E,\mathcal O_E\oplus\mathcal O_E)=2.
+\label{categorical:extension-sections}
+\end{equation}
+Here \(h^i\) denotes the dimension of \(H^i\). A record of the two constituent line bundles cannot recover this elementary invariant. A useful Fourier transform must retain how the constituents are attached. The distinction will become a small piece of geometry on the dual curve: a doubled point with a nonzero nilpotent direction, rather than two independent copies of a point.
+
+\subsection{A character space carrying sheaves}
+
+The circle calculation replaced a list of eigenvalues by a sheaf that retained nilpotent structure. For holomorphic bundles, a geometric transform must likewise preserve extensions and their variation. Its dual parameter space will now consist of line bundles, and its kernel will be their universal family. Let \(E\) be a smooth complex elliptic curve with origin \(0\), and let
+\[
+\widehat E=\operatorname{Pic}^0(E)
+\]
+be its dual elliptic curve. A point of \(\widehat E\) specifies a degree-zero line bundle on \(E\). Tensor product supplies the group law on this parameter space, just as multiplication supplies the group law on ordinary characters.
+
+The universal family is the normalized Poincar\'e line bundle \(\mathcal P\) on \(E\times\widehat E\). It is the geometric kernel replacing the scalar pairing \(\chi(x)\). With \(p_E\) and \(p_{\widehat E}\) the two projections, define
+\begin{equation}
+\Phi_{\mathcal P}(F)
+=Rp_{\widehat E*}
+\bigl(Lp_E^*F\otimes^{L}\mathcal P\bigr).
+\label{categorical:fm}
+\end{equation}
+The construction has the same three operations as an integral transform: move the input to the product, multiply by the kernel, and integrate along the original variable. Here integration is derived pushforward, which retains all cohomological degrees rather than only ordinary sections.
+
+Mukai's theorem says that this functor is an equivalence
+\[
+D^b\operatorname{Coh}(E)
+\simeq D^b\operatorname{Coh}(\widehat E).
+\]
+After identifying the elliptic curve with its dual by the origin, and using the compatible normalized Poincar\'e kernel, its elementary transforms are
+\begin{equation}
+\Phi(k(x))\simeq\mathcal P_x,
+\qquad
+\Phi(\mathcal P_x)\simeq k(-x)[-1],
+\qquad
+\Phi^2\simeq(-1_E)^*[-1].
+\label{categorical:inversion}
+\end{equation}
+Here \(k(x)\) is the skyscraper sheaf at \(x\). A point mass becomes a character-like line bundle; applying the transform twice gives reflection, together with a cohomological shift. These are precise categorical counterparts of elementary Fourier identities~\cite{chen}.
+
+The shift matters. For instance, a nontrivial degree-zero line bundle \(L\) has no cohomology: a nonzero section would trivialize it, and Serre duality gives the same conclusion for \(H^1(E,L)\). The trivial bundle has both \(H^0\) and \(H^1\). Derived pushforward organizes this jump into the object \(k(0)[-1]\). Its derived fibre at the origin has cohomology in degrees zero and one: the skyscraper sheaf has a nonzero \(\operatorname{Tor}_1\) with itself. Replacing it by a list of ordinary fibre dimensions would lose the gluing and derived structure at the exceptional point.
+
+If \(m:E\times E\to E\) is addition, define convolution by
+\[
+F\star G=Rm_*(F\boxtimes^{L}G).
+\]
+The multiplicativity of the Poincar\'e kernel yields
+\begin{equation}
+\Phi(F\star G)\simeq
+\Phi(F)\otimes^{L}\Phi(G).
+\label{categorical:convolution}
+\end{equation}
+Thus convolution becomes tensor product as a functorial identity. It applies to objects and maps, including extension data, rather than merely to numerical functions~\cite{chen}.
+
+\subsection{A tensor-product calculation through infinitesimal spectral data}
+
+We can now answer a tensor-product question while retaining the extension data just identified. Call a vector bundle unipotent if it has a filtration whose successive quotients are \(\mathcal O_E\). The nonsplit bundle \(F_2\) of \eqref{categorical:f2} is the first nontrivial example.
+Since \(\operatorname{Ext}^1(\mathcal O_E,\mathcal O_E)\simeq\mathbb C\), all its nonzero extension classes give isomorphic middle bundles. The question is to decompose \(F_2\otimes F_2\) into indecomposable bundles.
+
+Set \(\Psi=\Phi[1]\) on unipotent bundles. The Fourier--Mukai theorem restricts to an equivalence of abelian categories
+\begin{equation}
+\Psi:\operatorname{Unip}(E)
+\overset{\sim}{\longrightarrow}
+\operatorname{Coh}_0(\widehat E),
+\qquad
+\Psi(F\otimes G)\simeq\Psi(F)\star\Psi(G),
+\label{categorical:unipotent}
+\end{equation}
+where the target consists of coherent sheaves supported at the origin. This is a categorical equivalence, not just an equality of classes in a ring. On the formal neighbourhood of the origin, its target is the category of finite-length \(\mathbb C[[t]]\)-modules, or equivalently finite-dimensional vector spaces with a nilpotent operator given by multiplication by \(t\). The indecomposables are \(\mathbb C[[t]]/(t^r)\). Their inverse transforms are the indecomposable unipotent bundles \(F_r\), with
+\begin{equation}
+\Psi(F_r)\simeq\mathbb C[[t]]/(t^r),
+\qquad F_1=\mathcal O_E.
+\label{categorical:fr}
+\end{equation}
+The equivalence and its compatibility with convolution are discussed explicitly by Schr\"oer~\cite{schroer}.
+
+Convolution remembers the group law of \(\widehat E\). Over \(\mathbb C\), a formal logarithm provides a coordinate in which that law is additive. In this coordinate the convolution of two finite-length modules is their tensor product over \(\mathbb C\), with \(t\) acting as \(t\otimes1+1\otimes t\). This coordinate choice uses characteristic zero; in positive characteristic the formal group law cannot in general be replaced by the additive law.
+
+Consequently the bundle calculation becomes a four-dimensional linear algebra problem:
+\[
+\Psi(F_2\otimes F_2)
+\simeq M:=\mathbb C[x,y]/(x^2,y^2),
+\qquad t\cdot f=(x+y)f.
+\]
+This is the same nilpotent calculation as in Section~\ref{circle:section}: multiplication by \(x+y\) has Jordan blocks of lengths three and one. The corresponding module decomposition is
+\[
+M\simeq\C[t]/(t^3)\oplus\C[t]/(t).
+\]
+Applying the inverse equivalence proves
+\begin{equation}
+\boxed{F_2\otimes F_2\simeq F_3\oplus\mathcal O_E.}
+\label{categorical:f2-product}
+\end{equation}
+The global geometry has supplied an environment in which the calculation is forced by a small local model.
+
+The same mechanism gives, in characteristic zero,
+\begin{equation}
+F_r\otimes F_s\simeq
+\bigoplus_{i=1}^{\min(r,s)}F_{r+s+1-2i}.
+\label{categorical:clebsch-gordan}
+\end{equation}
+One proof identifies multiplication by \(x\) on \(\mathbb C[x]/(x^r)\) with the raising operator in an irreducible \(\mathfrak{sl}_2\)-representation. On the tensor product the raising operator is multiplication by \(x+y\); the Clebsch--Gordan decomposition gives precisely these Jordan block sizes~\cite{chen}. Fourier geometry has connected a tensor product of bundles with the representation theory of another group.
+
+This example also identifies what a numerical shadow forgets. In ordinary \(K_0(E)\), the exact sequence \eqref{categorical:f2} imposes \([F_2]=2[\mathcal O_E]\). The category distinguishes the nonsplit bundle from the split one: their transforms are respectively \(\mathbb C[[t]]/(t^2)\) and \(k(0)\oplus k(0)\). An infinitesimally thickened point and two copies of a reduced point have the same length but different module structures. Categorification retains the difference and makes it usable in calculations.
+
+
+\subsection{A Euclidean algorithm for vector bundles}
+\label{categorical:euclidean-bundles}
+
+Fourier--Mukai reconstruction also simplifies bundles beyond the unipotent case. For a nonzero vector bundle \(V\), its slope is
+\[
+\mu(V)=\frac{\deg V}{\operatorname{rank}V}.
+\]
+It is called stable if every nonzero proper subbundle of smaller rank has strictly smaller slope. This condition controls how \(V\) can be assembled from lower-rank pieces.
+
+Let \(\Phi\) be the normalized elliptic Fourier--Mukai transform used above, with \(E\) identified with its dual. Its action on rank and degree is
+\begin{equation}
+(r,d)\longmapsto(d,-r).
+\label{categorical:rank-degree}
+\end{equation}
+There is a short way to derive the formula from the elementary transforms already computed. The numerical Grothendieck group of an elliptic curve is \(\mathbb Z^2\), recorded by rank and degree, with basis \([\mathcal O_E]\) and \([k(0)]\). This follows from Riemann--Roch for the Euler pairing \(\chi(U,V)=\sum_i(-1)^i\dim\operatorname{Ext}^i(U,V)\):
+\[
+\chi(U,V)=\operatorname{rank}(U)\deg(V)-\deg(U)\operatorname{rank}(V).
+\]
+The transform preserves this Euler pairing and so induces an automorphism of the numerical group. Since
+\[
+\Phi(\mathcal O_E)=k(0)[-1],\qquad
+\Phi(k(0))=\mathcal O_E,
+\]
+it sends the two basis vectors to \((0,-1)\) and \((1,0)\), respectively. This proves~\eqref{categorical:rank-degree}. For complexes, rank and degree mean the alternating sums of the ranks and degrees of their cohomology sheaves; the minus sign records the shift.
+
+A numerical formula alone does not show that a transformed object is again a vector bundle. The needed geometric theorem says that if \(V\) is stable of positive degree, then \(\Phi(V)\) is a stable vector bundle in cohomological degree zero. For stable bundles of negative degree, the sole nonzero cohomology sheaf is instead in degree one and is stable~\cite{ruiperez-tejero}. These are additional properties of the elliptic transform.
+
+The absence of higher cohomology in the positive-degree case can already be understood from slopes. For every degree-zero line bundle \(P\), Serre duality gives
+\[
+H^1(E,V\otimes P)\simeq
+\operatorname{Hom}(V\otimes P,\mathcal O_E)^*=0.
+\]
+The last equality follows because a stable bundle of positive slope has no nonzero map to the semistable bundle \(\mathcal O_E\) of slope zero. Riemann--Roch then gives \(h^0(E,V\otimes P)=d\). Cohomology and base change assemble these spaces into a vector bundle of rank \(d\) on the dual curve. The stability of that bundle is the further theorem just cited.
+
+Tensoring by a degree-\(m\) line bundle preserves stability and changes the numerical data by
+\[
+(r,d)\longmapsto(r,d+mr).
+\]
+These two operations act like the steps of the Euclidean algorithm, while remaining invertible operations on the objects themselves.
+
+For a fully explicit instance, let \(V\) be stable of rank five and degree two. Applying the transform and tensoring by the indicated line bundles produces
+\begin{align*}
+(5,2)&\xrightarrow{\ \Phi\ }(2,-5),\\
+(2,-5)&\xrightarrow{\ \otimes\mathcal O_E(3\cdot0)\ }(2,1),\\
+(2,1)&\xrightarrow{\ \Phi\ }(1,-2),\\
+(1,-2)&\xrightarrow{\ \otimes\mathcal O_E(2\cdot0)\ }(1,0).
+\end{align*}
+Both inputs to \(\Phi\) have positive degree. Every stage is therefore an actual stable vector bundle, and the final object is a degree-zero line bundle \(L\). With
+\[
+\mathcal T(V)
+=\Phi\bigl(\Phi(V)\otimes\mathcal O_E(3\cdot0)\bigr)
+\otimes\mathcal O_E(2\cdot0),
+\]
+the entire reduction reads \(\mathcal T(V)=L\).
+
+Every operation in \(\mathcal T\) is an equivalence, so \(L\) reconstructs \(V\), including its isomorphism class, by reversing those operations. Conversely, start with any \(L\in\operatorname{Pic}^0(E)\). Undoing the last twist gives a line bundle of degree \(-2\). The inverse transform takes it to a stable bundle of rank two and degree one; undoing the degree-three twist gives degree \(-5\), and the next inverse transform gives rank five and degree two. Indeed, the inversion formula gives \(\Phi^{-1}\simeq(-1_E)^*\Phi[1]\), and the negative-degree clause of the same theorem makes the shift cancel the degree-one cohomology of each transform. Thus this procedure gives a bijection between the isomorphism classes of stable bundles of rank five and degree two and the points of \(\operatorname{Pic}^0(E)\).
+
+The numerical Euclidean algorithm is only the visible record of the calculation. The equivalences carry the bundles and their morphisms through it. A classification problem for rank-five bundles has become a reconstruction problem from one line bundle on the dual elliptic curve.
+
+\section{Another cubic: from Fourier projectors to counting and periods}
+\label{fermat:section}
+
+The same projectors can do something quite different from extracting roots: they can count solutions. This opens a second geometric branch, in which the spectral operator is Frobenius and its traces count solutions over finite fields. We will begin with a five-term calculation, recover the number of points on a curve over every finite extension, and then identify a categorical statement whose numerical consequence is a character-sum identity.
+
+\subsection{A projector that counts cube roots}
+
+Consider the smooth projective cubic
+\[
+E:\quad X^3+Y^3=Z^3
+\]
+over \(\mathbb F_7\). It has genus one and a rational point. Let \(\omega=e^{2\pi i/3}\), choose the cubic character \(\chi:\mathbb F_7^\times\to\mu_3\) by \(\chi(3)=\omega\), and put \(\chi(0)=0\). The element \(3\) generates \(\mathbb F_7^\times\); in the order \(1,2,3,4,5,6\), the character values are
+\[
+1,\quad\omega^2,\quad\omega,\quad\omega,
+\quad\omega^2,\quad1.
+\]
+For every \(t\in\mathbb F_7\), including zero,
+\begin{equation}
+A(t):=\#\{x\in\mathbb F_7:x^3=t\}
+=1+\chi(t)+\chi(t)^2.
+\label{fermat:cube-projector}
+\end{equation}
+For nonzero \(t\), the right side is three when \(t\) is a cube and zero otherwise. At zero it is one. This is character orthogonality serving as an exact indicator, rather than as a change of coordinates.
+
+The affine point count is the convolution
+\[
+N_{\mathrm{aff}}=\sum_{t\in\mathbb F_7}A(t)A(1-t).
+\]
+Define the Jacobi sum
+\[
+J(\rho,\eta)=\sum_{t\in\mathbb F_7}\rho(t)\eta(1-t),
+\]
+where the nontrivial characters are extended by zero. The terms linear in a nontrivial character sum to zero. Also
+\[
+J(\chi,\chi^{-1})=-\chi(-1)=-1:
+\]
+indeed, \(t\mapsto t/(1-t)\) runs through all field elements except \(-1\), with the zero term contributing nothing. Writing \(J=J(\chi,\chi)\), expansion therefore gives
+\[
+N_{\mathrm{aff}}=7+J+\overline J-2.
+\]
+At infinity, \(Z=0\), there are three points: their ratios \(X/Y\) are the three cube roots of \(-1\). Thus
+\begin{equation}
+\#E(\mathbb F_7)=8+J+\overline J.
+\label{fermat:count-jacobi}
+\end{equation}
+The correction at infinity matters: a character sum initially counts points in an affine chart, not automatically on its projective completion.
+
+Only \(t=2,3,4,5,6\) contribute to \(J\). Their contributions are, respectively,
+\[
+\omega^2,\quad1,\quad\omega^2,\quad1,\quad\omega^2.
+\]
+Consequently
+\begin{equation}
+J=2+3\omega^2=-1-3\omega,
+\qquad J+\overline J=1,
+\qquad J\overline J=7.
+\label{fermat:jacobi-seven}
+\end{equation}
+Equation~\eqref{fermat:count-jacobi} gives nine points: six affine points and three at infinity.
+
+\subsection{Why this calculation controls every extension field}
+
+Fix a prime \(\ell\ne7\) and use \(\ell\)-adic cohomology with coefficients enlarged to contain the character values. Geometric Frobenius is normalized here to act by \(7\) on \(H^2(E_{\overline{\mathbb F}_7},\overline{\mathbb Q}_\ell)\). The trace formula and the cohomology of a smooth projective genus-one curve give
+\begin{equation}
+\#E(\mathbb F_{7^r})=1+7^r-\operatorname{Tr}
+\left(\operatorname{Fr}^r\mid H^1(E_{\overline{\mathbb F}_7},
+\overline{\mathbb Q}_\ell)\right).
+\label{fermat:trace}
+\end{equation}
+Here \(H^1\) is two-dimensional and the determinant of Frobenius on it is \(7\). Since the point count is nine, its trace is \(-1\). Its characteristic polynomial is therefore
+\[
+T^2+T+7.
+\]
+By \eqref{fermat:jacobi-seven}, the two roots are
+\begin{equation}
+\alpha=-J=1+3\omega,\qquad
+\beta=-\overline J=1+3\omega^2.
+\label{fermat:eigenvalues}
+\end{equation}
+The general Jacobi-sum description of Fermat curves explains this identification through the action
+\[
+(a,b)[X:Y:Z]=[aX:bY:Z],\qquad(a,b)\in\mu_3^2.
+\]
+Its two nonzero character components in \(H^1\) are lines. Frobenius preserves them, and the corresponding scalars are the two negatives of the Jacobi sums. The character-projector calculation has found the spectrum of a geometric operator~\cite{elkies-gauss}.
+
+Taking powers of this one operator now gives
+\begin{equation}
+\boxed{\#E(\mathbb F_{7^r})=7^r+1-\alpha^r-\beta^r.}
+\label{fermat:all-counts}
+\end{equation}
+No diagonalization choices are needed for computation. Put \(s_r=\alpha^r+\beta^r\). Then
+\[
+s_0=2,\qquad s_1=-1,\qquad
+s_r=-s_{r-1}-7s_{r-2}\quad(r\ge2).
+\]
+This gives \(s_2=-13\), \(s_3=20\), and \(s_4=71\), hence
+\[
+\#E(\mathbb F_7)=9,\quad
+\#E(\mathbb F_{49})=63,\quad
+\#E(\mathbb F_{343})=324,\quad
+\#E(\mathbb F_{2401})=2331.
+\]
+Direct finite-field enumeration confirms these four values. The recurrence itself determines infinitely many further counts. Equivalently, the zeta function is
+\begin{equation}
+Z(E,T):=\exp\left(\sum_{r\ge1}
+\#E(\mathbb F_{7^r})\frac{T^r}{r}\right)
+=\frac{1+T+7T^2}{(1-T)(1-7T)}.
+\label{fermat:zeta}
+\end{equation}
+Moreover \(|\alpha|=|\beta|=\sqrt7\), so
+\begin{equation}
+\left|\#E(\mathbb F_{7^r})-(7^r+1)\right|
+\le2\,7^{r/2}.
+\label{fermat:bound}
+\end{equation}
+For this special curve the norm identity is already visible in the five-term sum. Cohomology explains why the same two numbers govern all extension fields, and places the calculation inside a theory that applies to curves without this convenient character formula.
+
+\subsection{The same symmetry selects a period}
+
+Now consider the same equation over \(\mathbb C\). In the chart \(Z=1\), the differential
+\[
+\nu=\frac{dx}{y^2},\qquad x^3+y^3=1,
+\]
+extends to a holomorphic differential on \(E\). For example, near \(y=0\) the relation \(x^2dx+y^2dy=0\) rewrites it as \(-dy/x^2\). Under \((x,y)\mapsto(ax,by)\), with \(a^3=b^3=1\), it satisfies
+\[
+(a,b)^*\nu=ab\,\nu.
+\]
+Thus this differential belongs to a definite character line, just as a Fourier coordinate does.
+
+Let \(\gamma\) be the real arc from \((0,1)\) to \((1,0)\). Substituting \(t=x^3\) gives the explicit integral
+\begin{equation}
+\int_\gamma\nu
+=\int_0^1\frac{dx}{(1-x^3)^{2/3}}
+=\frac13\int_0^1t^{-2/3}(1-t)^{-2/3}\,dt
+=\frac13B\!\left(\frac13,\frac13\right).
+\label{fermat:beta}
+\end{equation}
+Both endpoint singularities in the last integral are integrable. To obtain a closed cycle, let \(\sigma(x,y)=(\omega x,y)\) and \(\tau(x,y)=(x,\omega y)\), and set
+\[
+\delta=(1-\sigma_*)(1-\tau_*)\gamma.
+\]
+Its boundary vanishes: \(\tau\) fixes \((1,0)\) and \(\sigma\) fixes \((0,1)\). Since \(\sigma^*\nu=\tau^*\nu=\omega\nu\), its period is
+\begin{equation}
+\int_\delta\nu
+=\frac{(1-\omega)^2}{3}
+B\!\left(\frac13,\frac13\right).
+\label{fermat:closed-period}
+\end{equation}
+The same algebraic family has therefore supplied a character sum in finite characteristic and a special-function integral over \(\mathbb C\). These are different realizations of its symmetry, with different additional structures: Frobenius on one side, and the comparison between algebraic differential forms and topological cycles on the other.
+
+\subsection{An identity that lifts to an isomorphism}
+
+Before enlarging the objects, we can see the numerical operation explicitly. Over \(\mathbb F_q\), choose a nontrivial additive character \(\psi\), and for a nontrivial multiplicative character \(\rho\) put
+\[
+G_\psi(\rho)=\sum_{u\ne0}\rho(u)\psi(u).
+\]
+Use the same definition of \(J\), now summing over \(\mathbb F_q\). If \(\rho,\eta,\rho\eta\) are nontrivial, then
+\begin{equation}
+G_\psi(\rho)G_\psi(\eta)
+=J(\rho,\eta)G_\psi(\rho\eta).
+\label{fermat:gauss-jacobi}
+\end{equation}
+To prove it, expand the product and partition by \(s=u+v\). The contribution at \(s=0\) vanishes because \(\rho\eta\) is nontrivial. For \(s\ne0\), set \(u=st\), \(v=s(1-t)\): the inner sum becomes \((\rho\eta)(s)J(\rho,\eta)\), leaving exactly the Gauss sum on the right. This is a concrete convolution-to-product calculation.
+
+There is an actual categorical lift. We state the two-character case of a theorem of Otsubo and Yamazaki~\cite{otsubo-yamazaki}. Let \(q=p^f\), let \(d\mid q-1\), and work in the tensor category of Chow motives in the covariant convention over \(\mathbb F_q\), with coefficient field \(\Lambda=\mathbb Q(\zeta_{pd})\). For the objects needed here, a motive is specified by a smooth projective variety together with an idempotent algebraic correspondence. A finite group \(H\) acting on \(X\) supplies such a correspondence:
+\[
+e_\vartheta^X=\frac1{|H|}\sum_{h\in H}
+\vartheta(h)^{-1}[\Gamma_h].
+\]
+The graph \(\Gamma_h\subset X\times X\) plays the role of the linear operator \(h\). The image \(h(X)^\vartheta\) is its character summand. This is the same projector formula, applied to geometry before taking a cohomology realization.
+
+Let \(A_d\) be the smooth projective model of
+\[
+u^q-u=v^d,
+\]
+on which \(\mathbb F_q\times\mu_d\) acts by \((c,a)(u,v)=(u+c,av)\). Let \(F_d\) be the smooth projective curve \(U^d+V^d=W^d\), with the coordinatewise \(\mu_d^2\)-action. For characters \(\theta,\theta_1,\theta_2\) of \(\mu_d\), set
+\[
+M_{\psi,\theta}=h(A_d)^{(\psi,\theta)},\qquad
+N_{\theta_1,\theta_2}=h(F_d)^{(\theta_1,\theta_2)},
+\]
+extending coefficients to \(\Lambda\) throughout.
+
+\begin{theorem}[Otsubo--Yamazaki, two-character case]
+If \(\psi\), \(\theta_1\), \(\theta_2\), and \(\theta_1\theta_2\) are nontrivial, then these character summands are invertible motives and there is an isomorphism
+\begin{equation}
+M_{\psi,\theta_1}\otimes M_{\psi,\theta_2}
+\simeq
+M_{\psi,\theta_1\theta_2}\otimes N_{\theta_1,\theta_2}.
+\label{fermat:motivic-identity}
+\end{equation}
+\end{theorem}
+
+Here invertible means invertible for tensor product. Such an object's endomorphisms are scalars in \(\Lambda\). To compare conventions, write
+\[
+\rho_i(u)=\theta_i\!\left(u^{(q-1)/d}\right).
+\]
+The Frobenius endomorphisms of the displayed factors are, respectively,
+\[
+-G_\psi(\rho_1),\quad -G_\psi(\rho_2),\quad
+-G_\psi(\rho_1\rho_2),\quad -J(\rho_1,\rho_2).
+\]
+The authors use signed Gauss and Jacobi sums, \(-G\) and \(-J\), which are the Frobenius scalars on these degree-one summands. Frobenius commutes with the motivic isomorphism, so equality of its scalar actions gives
+\[
+(-G_\psi(\rho_1))(-G_\psi(\rho_2))
+=(-G_\psi(\rho_1\rho_2))(-J(\rho_1,\rho_2)),
+\]
+recovering \eqref{fermat:gauss-jacobi}. For our example take \(q=7\), \(d=3\), \(\psi(u)=e^{2\pi iu/7}\), and choose \(\theta\) so that \(\theta(u^2)=\chi(u)\). Then \(\theta_1=\theta_2=\theta\) satisfies every hypothesis.
+
+The elementary identity has a short proof; the categorical theorem asserts more than that identity. It constructs an isomorphism before extracting Frobenius scalars, so the relation is retained under cohomological realizations. Related motivic constructions also organize identities between Fermat periods; their period consequences require keeping track of algebraic factors. This is a concrete reason to preserve objects and maps: a numerical equality becomes the consequence of a relation that can be transported and used in other settings. Fourier--Mukai theory retains another kind of information, namely how transformed objects vary and how their extensions fit together. These are complementary reasons to enlarge the objects on which Fourier reconstruction acts.
+
+\section{A quantitative shadow: where the square-root bound comes from}
+\label{estimate:section}
+
+The Fermat cubic supplied a cancellation estimate through two explicitly computed eigenvalues. Geometric Fourier theory can produce such estimates when an elementary evaluation of the sum is unavailable. We will also see how local information determines the number of eigenvalues, and hence the constant in the estimate.
+
+Let \(\mathbb F_q\) have characteristic \(p\), let \(\psi:\mathbb F_q\to\mathbb C^\times\) be a nontrivial additive character, and take \(a\in\mathbb F_q^\times\). The Kloosterman sum is
+\begin{equation}
+K(a)=\sum_{x\in\mathbb F_q^\times}
+\psi\!\left(x+\frac ax\right).
+\label{estimate:kloosterman}
+\end{equation}
+It has \(q-1\) summands of absolute value one. The geometric result is
+\begin{equation}
+\boxed{|K(a)|\le2\sqrt q.}
+\label{estimate:bound}
+\end{equation}
+For example, over \(\mathbb F_5\) with \(\psi(u)=e^{2\pi iu/5}\), direct evaluation at \(a=2\) gives
+\[
+K(2)=2e^{4\pi i/5}+2e^{6\pi i/5}=-1-\sqrt5.
+\]
+The objective is a uniform bound for every \(q\) and every nonzero \(a\), without evaluating each sum separately.
+
+\subsection{The transform retains a family of cohomology groups}
+
+The first Fourier step is elementary. Define \(g(0)=0\) and \(g(t)=\psi(1/t)\) for \(t\ne0\). For the unnormalized transform
+\[
+\widehat g(a)=\sum_{t\in\mathbb F_q}g(t)\psi(at),
+\]
+the substitution \(x=at\) gives \(\widehat g(a)=K(a)\) when \(a\ne0\).
+
+Choose \(\ell\ne p\), realize the character values in \(\overline{\mathbb Q}_\ell\), and fix an embedding into \(\mathbb C\) for absolute values. Use the Artin--Schreier sheaf \(\mathcal L_\psi\) normalized so that geometric Frobenius has trace \(\psi(u)\) at \(u\in\mathbb F_q\). Let \(j:\mathbb G_m\hookrightarrow\mathbb A^1_t\) and put
+\[
+\mathcal G=j_!\mathcal L_\psi(1/t),
+\]
+an ordinary sheaf placed in cohomological degree zero. Its trace function is \(g\). The Fourier--Deligne transform on constructible derived categories is
+\begin{equation}
+\operatorname{FT}_\psi(\mathcal G)
+=Rp_{a!}\bigl(p_t^*\mathcal G\otimes
+\mathcal L_\psi(at)\bigr)[1],
+\label{estimate:fourier-deligne}
+\end{equation}
+where \(p_t,p_a\) project from \(\mathbb A^1_t\times\mathbb A^1_a\). Tensoring multiplies the trace functions; compactly supported pushforward sums them along the \(t\)-line. The shift \([1]\) changes the sign of the alternating trace. Thus the transformed object's trace at \(a\) is \(-K(a)\)~\cite{laumon}.
+
+More precisely, for \(a\ne0\), its derived stalk is
+\begin{equation}
+R\Gamma_c\!\left(\mathbb G_{m,\overline{\mathbb F}_q},
+\mathcal F_a\right)[1],
+\qquad
+\mathcal F_a=\mathcal L_\psi(x+a/x).
+\label{estimate:stalk}
+\end{equation}
+We will show that the unshifted compactly supported cohomology occurs only in degree one and has dimension two. The shift then places this vector space in degree zero. As \(a\) varies through \(\mathbb G_m\), these spaces form the rank-two Kloosterman sheaf~\cite{katz}. Its fibers retain Frobenius actions and monodromy, not merely the single number \(K(a)\).
+
+\subsection{Two poles explain the dimension two}
+
+We compute on the \(x\)-line, with \(a\ne0\) fixed. The rank-one sheaf \(\mathcal F_a\) has nontrivial wild ramification at both missing points \(0\) and \(\infty\). A simple pole of an Artin--Schreier phase has Swan conductor one. Since \(x+a/x\) has exactly these two simple poles,
+\[
+\operatorname{Swan}_0(\mathcal F_a)
+=\operatorname{Swan}_\infty(\mathcal F_a)=1.
+\]
+The Grothendieck--Ogg--Shafarevich formula gives
+\begin{align*}
+\chi_c(\mathbb G_m,\mathcal F_a)
+&=\operatorname{rank}(\mathcal F_a)\,
+\chi_c(\mathbb G_m,\overline{\mathbb Q}_\ell)
+-\operatorname{Swan}_0(\mathcal F_a)
+-\operatorname{Swan}_\infty(\mathcal F_a)\\
+&=1\cdot0-1-1=-2.
+\end{align*}
+The Euler characteristic of the constant sheaf on \(\mathbb G_m\) is zero: removing two points from \(\mathbb P^1\) subtracts two from its Euler characteristic two.
+
+There are no nonzero compactly supported global sections of a lisse sheaf on this connected nonproper curve, so \(H_c^0=0\). Poincar\'e duality identifies \(H_c^2\) with geometric coinvariants, with a Tate twist. These vanish because the rank-one local system has nontrivial geometric monodromy. Consequently
+\begin{equation}
+\dim H_c^1(\mathbb G_m,\mathcal F_a)=2.
+\label{estimate:rank-two}
+\end{equation}
+These are the local-to-global dimension calculations behind the constant in \eqref{estimate:bound}; see \cite{michel-applied}, Section~4.
+
+The two Swan conductors above belong to the input sheaf \(\mathcal F_a\) on the \(x\)-line. The transformed rank-two sheaf on the \(a\)-line has different local behavior: it is tame at zero and has Swan conductor one at infinity. The transform changes the geometric object, not just its notation.
+
+\subsection{Weights explain the square root}
+
+The values of the rank-one Artin--Schreier sheaf have absolute value one over every finite extension: \(\mathcal F_a\) is pure of weight zero. Deligne's theorem on weights bounds the absolute values of the eigenvalues on \(H_c^1\) by \(\sqrt q\). Together with \eqref{estimate:rank-two}, this is already enough to prove the desired inequality.
+
+In this case one has the stronger statement of purity in weight one. At both boundary points the rank-one wild inertia character is nontrivial, so there is no boundary contribution and
+\[
+H_c^1(\mathbb G_m,\mathcal F_a)
+\overset{\sim}{\longrightarrow}
+H^1(\mathbb G_m,\mathcal F_a).
+\]
+Compactly supported cohomology has weights at most one; ordinary cohomology has weights at least one, by duality and the corresponding upper bound for the dual sheaf. Hence both Frobenius eigenvalues \(\alpha_a,\beta_a\) have absolute value exactly \(\sqrt q\). The trace formula gives
+\[
+K(a)=-(\alpha_a+\beta_a),\qquad
+|K(a)|\le|\alpha_a|+|\beta_a|=2\sqrt q.
+\]
+The substantive inputs are the ramification calculation, the cohomological formulas, and the theorem on weights. The last step is an elementary inequality.
+
+The mechanism also persists under extension of the base field. For \(a\in\mathbb F_q^\times\), set
+\[
+K_r(a)=\sum_{x\in\mathbb F_{q^r}^\times}
+\psi\!\left(\operatorname{Tr}_{\mathbb F_{q^r}/\mathbb F_q}
+(x+a/x)\right).
+\]
+The same fiber gives
+\begin{equation}
+K_r(a)=-(\alpha_a^r+\beta_a^r),\qquad
+|K_r(a)|\le2q^{r/2}.
+\label{estimate:extensions}
+\end{equation}
+As with the Fermat curve, an entire sequence of sums is governed by one finite-dimensional operator. Here Fourier transformation constructs those operators uniformly as a geometric family. Its rank, ramification, and weights make quantitative predictions that are unavailable from the list of summands alone.
+
+\section{Higher Fourier theory and Galois reconstruction}
+\label{higher:section}
+
+The preceding calculations give a reason to continue the ascent. The multiplication of character lines determined compatible radicals. Nilpotent structure distinguished local systems with the same eigenvalues. Derived fibres recovered cohomology lost by ordinary specialization. Motives retained geometric correspondences whose Frobenius actions produced numerical identities. Higher algebra continues this practice when the coefficients and the symmetry themselves carry homotopy.
+
+\subsection{The kernel formalism and the composition of explanations}
+
+The familiar Fourier kernel \(\chi(a)\), the universal circle local system, the Poincar\'e bundle, and the Artin--Schreier sheaf all couple an original variable to a dual parameter. In a sheaf theory with the relevant pullbacks, tensor products, and pushforwards, a kernel \(\mathcal K\) on \(X\times Y\) defines
+\[
+\Phi_{\mathcal K}(F)
+=Rp_{Y*}\bigl(Lp_X^*F\otimes^L\mathcal K\bigr).
+\]
+Compact support replaces \(*\) by \(!\) in the exponential-sum setting. The choice of pushforward is part of the construction: an ordinary sum, compactly supported cohomology, and coherent cohomology answer different questions.
+
+There is a useful calculus behind these formulas. For example, take smooth proper varieties over a field and perfect coherent kernels \(\mathcal K\) on \(X\times Y\) and \(\mathcal L\) on \(Y\times Z\). Derived base change and the projection formula give
+\[
+\Phi_{\mathcal L}\circ\Phi_{\mathcal K}
+\simeq\Phi_{\mathcal L\circ\mathcal K},
+\qquad
+\mathcal L\circ\mathcal K
+=Rp_{13*}\bigl(Lp_{12}^*\mathcal K\otimes^L Lp_{23}^*\mathcal L\bigr).
+\]
+The projections here are from \(X\times Y\times Z\). The formula follows by substituting the two transforms, pulling them to the triple product, and using base change to combine the integrations. Thus an inversion theorem can be proved by computing one composite kernel. In this coherent-sheaf setting, \(\mathcal O_\Delta\) is the identity kernel. For the elliptic transform, the composite is the structure sheaf of the graph of inversion, shifted by \([-1]\); this recovers \(\Phi^2\simeq(-1_E)^*[-1]\). The functorial statement simultaneously controls every bundle and every morphism on which the functor acts~\cite{chen}.
+
+This gives precise content to the idea of a mathematical environment doing a calculation. Once kernel composition, base change, and inversion have been proved, an application can use them without rebuilding each coordinate identity. The substantive work is concentrated in reusable theorems, while the input and the required compatibility data remain explicit.
+
+\subsection{From derived categories to stable infinity categories}
+
+A derived category has already retained more than a list of cohomology groups. It remembers complexes and extensions, and it supplies derived tensor products and pushforwards. A stable infinity category also retains the spaces of maps and the homotopies relating their compositions. This extra structure is relevant when a construction must vary functorially and when several ways of composing it must agree coherently.
+
+For example, convolution is associative because both parenthesizations integrate the same external tensor product along the addition map from a triple product. For four or more factors, these identifications must themselves agree. A symmetric monoidal infinity category organizes this entire system, including the unit and symmetry constraints. The local algebra calculations remain visible: over an ordinary ring, derived tensor products still have Tor groups. With a ring spectrum as coefficients, modules can also carry stable homotopy information that an ordinary complex over a discrete ring does not encode.
+
+This distinction matters for reconstruction. Replacing a character space by its dimension forgets its maps and multiplication. A Grothendieck class forgets a nonsplit extension. Passing to a homotopy category forgets higher information about mapping spaces. Each passage can be useful, but a reconstruction theorem must be formulated before the particular information it needs has been discarded.
+
+\subsection{Spectral Cartier duality constructs the dual space}
+
+Let \(R\) be a connective commutative ring spectrum and \(X\) a spectral abelian variety over \(R\). Tensor product and the group law give \(\operatorname{QCoh}(X)\) a Hopf-algebra structure among stable \(R\)-linear categories. Its categorical dual has convolution as its multiplication. A biextension on \(X\times Y\) defines a symmetric monoidal transform from convolution on \(X\) to tensor product on \(Y\).
+
+Categorified Cartier duality specifies the candidate category, and Tannaka duality gives the criterion for recovering a geometric dual from it. Existence still needs geometry. Lurie constructs the functor of multiplicative line bundles \(\operatorname{Pic}^m_X\), proves its spectral representability using Artin's theorem, and proves that its universal biextension is perfect. Perfectness is equivalent to the associated Fourier--Mukai functor being an equivalence. The identity component of the spectral Picard space need not even be flat, so cannot simply substitute for this construction~\cite{lurie-elliptic}, Sections~4.7 and~5, especially Proposition~5.5.1 and Theorem~5.6.4.
+
+Here the categorical formulation has become part of the construction of the parameter space itself. The circle example began with a visible space of characters, and the elliptic example began with \(\operatorname{Pic}^0(E)\). The spectral construction can determine the dual through the category it must support.
+
+\subsection{Integration when the symmetry has higher homotopy}
+
+The finite Fourier projector averages over group elements. A higher symmetry has objects, automorphisms, and potentially automorphisms between automorphisms. Even the first step changes the counting rule. A finite groupoid has cardinality
+\[
+|\mathcal G|=\sum_{[x]\in\pi_0\mathcal G}
+\frac{1}{|\operatorname{Aut}(x)|}.
+\]
+In particular, \(|BG|=1/|G|\) for a finite group \(G\): a single isomorphism class can still have nontrivial symmetry. For a connected space with only finitely many nonzero homotopy groups, all finite, the corresponding homotopy cardinality is
+\[
+|X|=\prod_{i\geq1}|\pi_i(X)|^{(-1)^i}.
+\]
+These formulas describe rational numerical counting. A higher Fourier transform requires a version of integration inside the coefficient category itself.
+
+The relevant condition is ambidexterity: suitably finite indexing spaces admit a compatible identification of the colimit and limit operations. For a finite set, this starts with the identification of a finite direct sum and product in an additive category. For a finite group action in a stable category, it involves the norm from homotopy orbits to homotopy fixed points. An equivalence of that norm permits a form of averaging; it is an additional property, not a formal consequence of writing down a group action. Higher semiadditivity extends this compatibility to appropriate spaces with finite homotopy data.
+
+This is why replacing sets by spaces in a Fourier formula is a mathematical theorem rather than a change of notation. The integration must interact correctly with products, pullbacks, and composition of fibres. Once those properties hold, the kernel calculus has a higher counterpart.
+
+\subsection{A higher Kummer theorem}
+
+Barthel, Carmeli, Schlank, and Yanovski construct higher semiadditive Fourier transforms, including the classical finite transform at height zero and chromatic transforms at positive heights~\cite{chromatic}. One application returns to the radical-reconstruction theme in a genuinely higher setting.
+
+Fix a prime \(p\) and \(n,r\geq1\). Let \(R\) be a \(T(n)\)-local commutative ring spectrum, and write \(R^\times=\operatorname{gl}_1(R)\) for its connective spectrum of units. Choose a primitive higher \(p^r\)-th root of unity of height \(n\): this is a map of spectra
+\[
+\omega:\Sigma^n H(\mathbb Z/p^r)\longrightarrow R^\times
+\]
+satisfying the primitivity condition of \cite{chromatic}, Section~6.2. Here \(H\) denotes the Eilenberg--Mac~Lane spectrum. In this chromatic setting, primitivity makes the associated Fourier transforms invertible; \(\omega\) is higher coherent data, not merely an element of \(\pi_0R\).
+
+Let \(M\) be a connected \(n\)-finite \(H(\mathbb Z/p^r)\)-module spectrum: \(\pi_iM\) is finite for \(1\leq i\leq n\) and zero otherwise. Its Pontryagin dual is the spectrum
+\[
+M^*=\operatorname{RHom}_{\mathbb Z}(M,\mathbb Q/\mathbb Z),
+\qquad
+\pi_iM^*\simeq\operatorname{Hom}_{\mathbb Z}(\pi_{-i}M,\mathbb Q/\mathbb Z).
+\]
+The notation uses the underlying complex of abelian groups. Put \(G=\Omega\Omega^\infty M\), the loop space of the underlying infinite loop space. Their higher Kummer theorem identifies the space of extensions as
+\begin{equation}
+\left\{G\text{-Galois extensions of }R\right\}
+\simeq
+\operatorname{Map}_{\mathrm{Sp}}\bigl(\Sigma^n M^*,R^\times\bigr).
+\label{higher:kummer}
+\end{equation}
+The right-hand side is a mapping space of spectra, and the left-hand side is the space of \(G\)-Galois extensions in the \(T(n)\)-local category. The finiteness, localization, and higher-root hypotheses specify where the classification holds. The source is Theorem~C of~\cite{chromatic}, a connected case of Theorem~7.34.
+
+Compare the role of the inputs. For a cyclic field extension, roots of unity make the character lines available, and their multiplication gives a radical class. Here the symmetry is \(G\), the coefficients form a ring spectrum, and a mapping space into units records the extension together with its higher automorphisms. Retaining the mapping space is part of the strength of the classification: its connected components record equivalence classes, while its higher homotopy retains the symmetries of the reconstruction data.
+
+The same work also constructs categorical Fourier equivalences for suitable local systems of chromatic modules. These results enlarge both sides of the elementary equivalence between representations and character-graded vector spaces. They provide an algebraic-topological setting in which duality, descent, and Galois reconstruction can continue beyond ordinary fields and varieties.
+
+\subsection{What the examples establish together}
+
+The arguments have taken place in objects that retain the operations needed for reconstruction. Multiplication in the root algebra forces compatible radicals. Character projectors split differentials and cohomology. Spectral modules retain nonsplit extensions, and derived fibres preserve exceptional cohomology. Fourier--Mukai equivalences carry bundle calculations into modules. A tensor isomorphism of motives yields the Gauss--Jacobi identity through Frobenius, while ramification and weights supply the Kloosterman bound. Higher Fourier theory continues the construction with coherent homotopy and new coefficient theories.
+
+The companion \href{https://tensorgami.com/notes/what-a-boundary-map-can-prove}{\emph{What a Boundary Map Can Prove}} develops the same inquiry through gluing. Exact triangles and determinant lines produce counting laws; Hodge theory constrains chromatic coefficients; an attachment motive carries a computed symmetry group. There an explicit pair of nodal curves has the same graph and graded cohomology but motivic Galois groups of dimensions four and six. Here two monodromies have the same eigenvalues but different spaces of global sections. In both examples, retaining an extension reveals behavior that the simpler invariant conceals.
+
+\section*{Further reading}
+
+For Lagrange resolvents and the classical formulas, see Beukers~\cite{beukers}, Sections~9.2--9.3. Milne~\cite{milne}, Chapters~4--5, develops the quartic pairing resolvent, cyclic extensions, Kummer theory, and solvability; Chapter~8 relates finite \'etale algebras to covers. Bluher~\cite{bluher} treats Dickson and Chebyshev identities and their finite-field permutation properties. Baez~\cite{baez}, Section~6.1, gives the categorical character decomposition. The Stacks Project~\cite{stacks-kummer,stacks-torsors} supplies the torsor and Kummer formulations.
+
+Shaska~\cite{shaska-split}, Sections~3.1 and~5, studies genus-two elliptic subcovers and split Jacobians. Liu, Maxim, and Wang~\cite{liu-maxim-wang-mellin} develop Mellin transformations using universal local systems. The circle calculation here is a small model of that construction. Schr\"oer~\cite{schroer} relates unipotent bundles to formal-group convolution; Chen~\cite{chen} explains elliptic Fourier--Mukai calculations. Hern\'andez Ruip\'erez and Tejero Prieto~\cite{ruiperez-tejero}, Section~2, supply the transform and stability statements used in the rank-and-degree reduction.
+
+Elkies~\cite{elkies-gauss}, especially Exercise~12, connects Jacobi sums to Fermat curves. Otsubo and Yamazaki~\cite{otsubo-yamazaki} construct the motivic lifts of Gauss--Jacobi identities; the tensor isomorphism is Theorem~1.1, and the Frobenius and period comparisons are discussed in Theorem~1.2 and Remarks~7.4--7.5. For the quantitative application, Michel~\cite{michel-applied}, Section~4, introduces the cohomological estimates, Katz~\cite{katz} develops Kloosterman sheaves and monodromy, and Laumon~\cite{laumon} supplies geometric Fourier theory.
+
+For the higher endpoint, Lurie~\cite{lurie-elliptic}, Sections~3--5, develops categorical Cartier duality, biextensions, Tannaka reconstruction, and spectral Fourier--Mukai duality. Barthel, Carmeli, Schlank, and Yanovski~\cite{chromatic}, especially Sections~3--5 and~7, develop higher semiadditive Fourier theory, categorical extensions, and the higher Kummer classification. These references continue the passage from explicit spectral calculations to environments that construct and control their own reconstruction data.
+
+
+\begin{thebibliography}{99}
+\small\raggedright
+\bibitem{beukers}
+Frits Beukers, \emph{Notes on Galois Theory}, Sections~9.2 and 9.3.
+\url{https://www.staff.science.uu.nl/~beuke106/ringengalois/dicgal.pdf}.
+
+\bibitem{milne}
+J. S. Milne, \emph{Fields and Galois Theory}, version 5.10, 2022.
+\url{https://www.jmilne.org/math/CourseNotes/FT.pdf}.
+
+\bibitem{bluher}
+Antonia W. Bluher, \emph{Permutation properties of Dickson and Chebyshev polynomials and connections to number theory}, Finite Fields and Their Applications 76 (2021), 101899.
+\url{https://arxiv.org/abs/1707.06877}.
+
+\bibitem{baez}
+John C. Baez, \emph{Higher-Dimensional Algebra II: 2-Hilbert Spaces}, Advances in Mathematics 127 (1997), 125--189, Section~6.1.
+\url{https://arxiv.org/abs/q-alg/9609018}.
+
+\bibitem{stacks-kummer}
+The Stacks Project Authors, \emph{The Stacks Project}, Section~59.28, ``Kummer theory,'' Tag 03PK.
+\url{https://stacks.math.columbia.edu/tag/03PK}.
+
+\bibitem{stacks-torsors}
+The Stacks Project Authors, \emph{The Stacks Project}, Section~21.4, ``First cohomology and torsors,'' Tag 03AG.
+\url{https://stacks.math.columbia.edu/tag/03AG}.
+
+\bibitem{schroer}
+Stefan Schr\"oer, \emph{On the ring of unipotent vector bundles on elliptic curves in positive characteristics}, 2009.
+\url{https://arxiv.org/abs/0908.3743}.
+
+\bibitem{chen}
+Kaiyi Chen, \emph{Fourier--Mukai Transforms and Vector Bundles on Elliptic Curves}, lecture slides, 2025.
+\url{https://www.math.pku.edu.cn/puremath/docs/2025-05/20250530155446773636.pdf}.
+
+\bibitem{katz}
+Nicholas M. Katz, \emph{Gauss Sums, Kloosterman Sums, and Monodromy Groups}, Annals of Mathematics Studies 116, Princeton University Press, 1988.
+\url{https://web.math.princeton.edu/~nmk/Katz-GKM.pdf}.
+
+\bibitem{laumon}
+G\'erard Laumon, \emph{Transformation de Fourier, constantes d'\'equations fonctionnelles et conjecture de Weil}, Publications Math\'ematiques de l'IH\'ES 65 (1987), 131--210.
+\url{https://numdam.org/item/PMIHES_1987__65__131_0/}.
+
+\bibitem{lurie-elliptic}
+Jacob Lurie, \emph{Elliptic Cohomology I: Spectral Abelian Varieties}, 2018.
+\url{https://people.math.harvard.edu/~lurie/papers/Elliptic-I.pdf}.
+
+\bibitem{chromatic}
+Tobias Barthel, Shachar Carmeli, Tomer M. Schlank, and Lior Yanovski, \emph{The Chromatic Fourier Transform}, 2022.
+\url{https://arxiv.org/abs/2210.12822}.
+
+\bibitem{shaska-split}
+Tony Shaska, \emph{Genus two curves covering elliptic curves: a computational approach}, 2012, especially Sections~3.1 and~5.
+\url{https://arxiv.org/abs/1209.3187}.
+
+\bibitem{ruiperez-tejero}
+Daniel Hern\'andez Ruip\'erez and Carlos Tejero Prieto, \emph{Fourier--Mukai transforms for coherent systems on elliptic curves}, 2006, revised 2007, especially Section~2.
+\url{https://arxiv.org/abs/math/0603249}.
+
+\bibitem{liu-maxim-wang-mellin}
+Yongqiang Liu, Lauren\c{t}iu Maxim, and Botong Wang,
+\emph{Non-abelian Mellin transformations and applications},
+Forum of Mathematics, Sigma 10 (2022), e100.
+\url{https://doi.org/10.1017/fms.2022.91}.
+
+\bibitem{elkies-gauss}
+Noam D. Elkies, \emph{\(L(s,\chi)\) as an entire function; Gauss sums}, Math 229: Introduction to Analytic Number Theory, Harvard University, 2019, especially Exercise~12.
+\url{https://people.math.harvard.edu/~elkies/M229.19/lsx.pdf}.
+
+\bibitem{otsubo-yamazaki}
+Noriyuki Otsubo and Takao Yamazaki, \emph{Motivic Gauss and Jacobi sums}, Annales de la Facult\'e des Sciences de Toulouse, S\'erie~6, \textbf{35} (2026), no.~1, 95--135; especially Theorems~1.1--1.2 and Remarks~7.4--7.5.
+\url{https://doi.org/10.5802/afst.1842}.
+\url{https://arxiv.org/abs/2402.06072}.
+
+\bibitem{michel-applied}
+Philippe Michel, \emph{Lectures on applied \(\ell\)-adic cohomology}, notes from the 2016 Arizona Winter School, 2017, Section~4.
+\url{https://arxiv.org/abs/1712.03173}.
+\url{https://swc-math.github.io/aws/2016/2016MichelNotes.pdf}.
+
+\end{thebibliography}
+
+\end{document}

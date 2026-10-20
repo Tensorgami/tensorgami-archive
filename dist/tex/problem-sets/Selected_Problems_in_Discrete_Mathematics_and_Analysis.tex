@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb}
+
+\title{Selected Problems in Discrete Mathematics and Analysis}
+\author{Henry Shin}
+\date{\small Revised September 22, 2026 (Problems 2, 5, and 6)}
+
+\begin{document}
+
+\maketitle
+
+\section*{Problems}
+
+\begin{enumerate}
+
+    \item For positive integers \(1 \leq k \leq n\), show that the number of nondecreasing sequences \(a_1 \leq a_2 \leq \cdots \leq a_k\) where \(a_1, a_2, \ldots, a_k\) are chosen from \(\{1, 2, \ldots, n\}\) is exactly \(\binom{n+k-1}{k}\).
+
+    \item \textbf{Partitioning the integers by progressions.} For integers \(a>1\) and \(b\), let \(P_{a,b}=\{an+b:n\in\mathbb{Z}\}\). Can \(\mathbb{Z}\) be partitioned into finitely many pairwise disjoint progressions \(P_{a_i,b_i}\), with pairwise distinct common differences \(a_i>1\), so that \(\mathbb{Z}=\bigsqcup_{i=1}^{r}P_{a_i,b_i}\)?
+
+    \item Given a finite set \( S = \{1, 2, \ldots, n\} \) and a positive integer \( k \), determine the number of \( k \)-tuples \( (i_1, i_2, \ldots, i_k) \) such that \( \{i_1, i_2, \ldots, i_k\} \) is a subset of \( S \) and satisfies \( i_1 < i_2 < \cdots < i_k \) with the additional condition that \( i_2 \geq i_1 + 2 \), \( i_3 \geq i_2 + 2 \), \(\ldots\), \( i_k \geq i_{k-1} + 2 \).
+
+    \item Determine the number of binary strings of length \( n \), where \( n \) is a positive integer, that do not contain the substring \( 1011 \).
+
+    \item Determine the real value \( s \) such that the series
+\[
+\sum_{n=1}^{\infty} \left[(n+s)\log\left(1 + \frac{1}{n}\right) - 1\right]
+\]
+converges absolutely. Additionally, analyze the rate of convergence and investigate the limit to which the series converges. Bonus points if you can show that the series equals exactly \( 1 - \frac{1}{2} \log(2\pi) \) for the particular value of \( s\).
+
+    \item \textbf{One round, three outcomes.} In an idealized testing puzzle, there are 5000 bottles of wine, exactly one of which is poisoned. Determine the minimum number of prisoners needed to identify that bottle with certainty under the following rules.
+
+    \begin{itemize}
+        \item There is one simultaneous round of testing, at time zero. For each prisoner and each bottle, choose an amount of \(0\), \(5\), or \(10\) mg. Samples may be mixed, and there is no limit on the total volume consumed.
+        \item Exactly one hour later, each prisoner's recorded outcome depends only on the amount received from the poisoned bottle: \(0\) mg means healthy; \(5\) mg means sick but alive; \(10\) mg means dead. All other wine has no effect in this model.
+        \item These three outcomes are the only observations available. No onset times or other measurements can be used, and no further testing round is allowed.
+    \end{itemize}
+    Give both a strategy and a proof that fewer prisoners cannot suffice.
+
+
+    \newpage
+    \noindent\textbf{Timing variant.} Keep the same 5000 bottles and exactly one poisoned bottle, but replace the testing and observation rules by the following.
+    \begin{itemize}
+        \item Each bottle is tested exactly once: assign it to a prisoner and administer exactly \(5\) mg at a chosen time within the first ten minutes. A prisoner may receive samples from many bottles, with no limit on the total volume consumed. All unpoisoned wine has no effect.
+        \item The prisoner who receives the poisoned sample becomes sick exactly sixty minutes after receiving that sample, and not earlier. The onset time is observed exactly. Sample times may be arbitrary real numbers, with no minimum spacing.
+        \item All sample times and assignments are chosen before testing starts. The poisoned bottle must be identified with certainty by seventy minutes after the start.
+    \end{itemize}
+    Determine the minimum number of prisoners in this model, giving a strategy and a matching lower bound. Compare the two models and explain why the bound of at most \(3^r\) outcome vectors for \(r\) prisoners does not apply to the timing variant.
+\end{enumerate}
+\end{document}

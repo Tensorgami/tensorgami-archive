@@ -1,0 +1,116 @@
+<article class="problem" id="problem-1">
+            <p class="note-meta">
+              <span>Problem 1</span>
+              <span aria-hidden="true">/</span>
+              <span>Counting</span>
+            </p>
+            <h3>Nondecreasing sequences</h3>
+            <p>
+              For positive integers <span class="math">1 &le; k &le; n</span>,
+              show that the number of nondecreasing sequences
+              <span class="math">a<sub>1</sub> &le; a<sub>2</sub> &le; &ctdot; &le; a<sub>k</sub></span>,
+              where <span class="math">a<sub>1</sub>, a<sub>2</sub>, &hellip;, a<sub>k</sub></span>
+              are chosen from <span class="math">{1, 2, &hellip;, n}</span>, is exactly
+              <span class="math binom-wrap">
+                <span class="binom" aria-label="n plus k minus 1 choose k">
+                  <span>n+k&minus;1</span>
+                  <span>k</span>
+                </span>
+              </span>.
+            </p>
+          </article>
+<article class="problem" id="problem-2">
+            <p class="note-meta">
+              <span>Problem 2</span>
+              <span aria-hidden="true">/</span>
+              <span>Arithmetic structure</span>
+            </p>
+            <h3>Partitioning the integers by progressions</h3>
+            <p>
+              For integers <span class="math">a &gt; 1</span> and
+              <span class="math">b</span>, let
+              <span class="math">P<sub>a,b</sub> = { an + b : n &isin; &Zopf; }</span>.
+              Can <span class="math">&Zopf;</span> be partitioned into finitely many
+              pairwise disjoint progressions <span class="math">P<sub>a&#7522;,b&#7522;</sub></span>,
+              with pairwise distinct common differences <span class="math">a<sub>i</sub> &gt; 1</span>, so that
+              <span class="math" aria-label="the integers equal the disjoint union from i equals 1 to r of P sub a i comma b i">&Zopf; = &#x2A06;<sub>i=1</sub><sup>r</sup> P<sub>a&#7522;,b&#7522;</sub></span>?
+            </p>
+          </article>
+<article class="problem" id="problem-3">
+            <p class="note-meta">
+              <span>Problem 3</span>
+              <span aria-hidden="true">/</span>
+              <span>Counting</span>
+            </p>
+            <h3>Separated k-tuples</h3>
+            <p>
+              Given a finite set <span class="math">S = {1, 2, &hellip;, n}</span>
+              and a positive integer <span class="math">k</span>, determine the
+              number of <span class="math">k</span>-tuples
+              <span class="math">(i<sub>1</sub>, i<sub>2</sub>, &hellip;, i<sub>k</sub>)</span>
+              such that <span class="math">{i<sub>1</sub>, i<sub>2</sub>, &hellip;, i<sub>k</sub>} &subseteq; S</span>
+              and
+              <span class="math">i<sub>1</sub> &lt; i<sub>2</sub> &lt; &ctdot; &lt; i<sub>k</sub></span>,
+              with the additional separation condition
+              <span class="math">i<sub>2</sub> &ge; i<sub>1</sub> + 2</span>,
+              <span class="math">i<sub>3</sub> &ge; i<sub>2</sub> + 2</span>,
+              <span class="math">&hellip;</span>,
+              <span class="math">i<sub>k</sub> &ge; i<sub>k-1</sub> + 2</span>.
+            </p>
+          </article>
+<article class="problem" id="problem-4">
+            <p class="note-meta">
+              <span>Problem 4</span>
+              <span aria-hidden="true">/</span>
+              <span>Recurrences</span>
+            </p>
+            <h3>Binary strings avoiding 1011</h3>
+            <p>
+              Determine the number of binary strings of length
+              <span class="math">n</span>, where <span class="math">n</span> is a
+              positive integer, that do not contain the substring
+              <span class="math">1011</span>.
+            </p>
+          </article>
+<article class="problem" id="problem-5">
+            <p class="note-meta">
+              <span>Problem 5</span>
+              <span aria-hidden="true">/</span>
+              <span>Asymptotic analysis</span>
+            </p>
+            <h3>A logarithmic series</h3>
+            <p>
+              Determine the real value <span class="math">s</span> such that
+              the series
+            </p>
+            <div class="math-display" aria-label="sum from n equals 1 to infinity of open bracket n plus s times log of one plus one over n minus 1 close bracket">
+              <span class="sum-symbol">&sum;</span><sub>n=1</sub><sup>&infin;</sup>
+              <span class="math-bracket">[(n+s) log(1 + 1/n) &minus; 1]</span>
+            </div>
+            <p>
+              converges absolutely. Additionally, analyze the rate of
+              convergence and investigate the limit to which the series
+              converges. Bonus points if you can show that, for the particular
+              value of <span class="math">s</span>, the series equals exactly
+              <span class="math">1 &minus; <sup>1</sup>&frasl;<sub>2</sub> log(2&pi;)</span>.
+            </p>
+          </article>
+<article class="problem" id="problem-6">
+  <p class="note-meta"><span>Problem 6</span> <span aria-hidden="true">/</span> <span>Information and observation</span></p>
+  <h3>One round, three outcomes</h3>
+  <p>In an idealized testing puzzle, there are 5000 bottles of wine, exactly one of which is poisoned. Determine the minimum number of prisoners needed to identify that bottle with certainty under the following rules.</p>
+  <ul class="problem-conditions">
+    <li>There is one simultaneous round of testing, at time zero. For each prisoner and each bottle, choose an amount of <span class="math">0</span>, <span class="math">5</span>, or <span class="math">10</span> mg. Samples may be mixed, and there is no limit on the total volume consumed.</li>
+    <li>Exactly one hour later, each prisoner's recorded outcome depends only on the amount received from the poisoned bottle: <span class="math">0</span> mg means healthy; <span class="math">5</span> mg means sick but alive; <span class="math">10</span> mg means dead. All other wine has no effect in this model.</li>
+    <li>These three outcomes are the only observations available. No onset times or other measurements can be used, and no further testing round is allowed.</li>
+  </ul>
+  <p>Give both a strategy and a proof that fewer prisoners cannot suffice.</p>
+  <h4>Timing variant</h4>
+  <p>Keep the same 5000 bottles and exactly one poisoned bottle, but replace the testing and observation rules by the following.</p>
+  <ul class="problem-conditions">
+    <li>Each bottle is tested exactly once: assign it to a prisoner and administer exactly <span class="math">5</span> mg at a chosen time within the first ten minutes. A prisoner may receive samples from many bottles, with no limit on the total volume consumed. All unpoisoned wine has no effect.</li>
+    <li>The prisoner who receives the poisoned sample becomes sick exactly sixty minutes after receiving that sample, and not earlier. The onset time is observed exactly. Sample times may be arbitrary real numbers, with no minimum spacing.</li>
+    <li>All sample times and assignments are chosen before testing starts. The poisoned bottle must be identified with certainty by seventy minutes after the start.</li>
+  </ul>
+  <p>Determine the minimum number of prisoners in this model, giving a strategy and a matching lower bound. Compare the two models and explain why the bound of at most <span class="math">3<sup>r</sup></span> outcome vectors for <span class="math">r</span> prisoners does not apply to the timing variant.</p>
+</article>

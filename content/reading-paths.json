@@ -1,0 +1,41 @@
+[
+  {
+    "id": "symmetry-and-reconstruction",
+    "title": "Symmetry and reconstruction",
+    "description": "Root algebras, graph complexes, and infinitesimal probes give independent entries into reconstruction. The shared guide connects their operations and examples.",
+    "notes": [
+      "fourier-symmetry-and-reconstruction",
+      "what-a-boundary-map-can-prove",
+      "what-a-derivative-retains"
+    ],
+    "companionPath": "polynomial-structure"
+  },
+  {
+    "id": "polynomial-structure",
+    "title": "Two views of a polynomial composition law",
+    "description": "Follow one criterion through two proofs: a direct module argument, then a Galois-theoretic and Frobenius-descent approach.",
+    "notes": [
+      "separated-polynomial-divisibility",
+      "galois-frobenius-composition-law"
+    ]
+  },
+  {
+    "id": "exact-arithmetic",
+    "title": "Turning arithmetic conditions into constructions",
+    "description": "Two independent examples of making arithmetic tests explicit: algebraic traces and recurrences for a rounding problem, then factorial congruences for a prime selector.",
+    "notes": [
+      "ibm-ponder-this-2010",
+      "extracting-first-prime"
+    ]
+  },
+  {
+    "id": "controlling-exceptional-sets",
+    "title": "Local control in analysis",
+    "description": "Begin with a product oscillation estimate and Darboux sums, then read about compactness in Lebesgue's criterion. The weighting argument extends the theme to exceptional sets and convergence in measure.",
+    "notes": [
+      "products-preserve-riemann-integrability",
+      "lebesgue-riemann-integrability",
+      "pointwise-weighting-convergence-in-measure"
+    ]
+  }
+]

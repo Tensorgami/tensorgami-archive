@@ -1,0 +1,21 @@
+{
+  "title": "What a Derivative Retains",
+  "edition": "October 2026",
+  "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
+  "pages": 39,
+  "pdf_sha256": "c3c09bd7652cddb05717d95d57ff0dfd0a0b160cfb51a799e39606d42da97671",
+  "article_source_sha256": "ce07e30477131001969b42b05e3d5b4425a73f465ebb1a2afc592df6d7787975",
+  "manuscript_sha256": "45249381a32b0ba351ce236d559904c1fde1bec1bed36910bff05353540a4721",
+  "math_expressions": 876,
+  "display_formulas": 156,
+  "figures": 9,
+  "source_notes": 20,
+  "text_units": 322,
+  "text_segments": 867,
+  "source_files": [
+    "main.tex",
+    "figures.tex"
+  ],
+  "static_adaptations": "Published defaults are labelled; all four arithmetic prime choices and probe orders 1, 2, 3 are shown as static comparisons. Original captions and body prose are preserved.",
+  "compiler": "XeLaTeX with Georgia prose, Latin Modern and AMS mathematics, TikZ vector figures; all fonts embedded."
+}

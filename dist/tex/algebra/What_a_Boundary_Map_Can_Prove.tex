@@ -1,0 +1,2598 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,xcolor}
+\definecolor{inkblue}{HTML}{174A62}
+\usepackage[colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,citecolor=inkblue]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textsc{What a Boundary Map Can Prove}}
+\fancyhead[R]{\small\textsc{Tensorgami}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\A}{\mathbb A}
+\newcommand{\Gm}{\mathbb G_m}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Tor}{Tor}
+\title{\textbf{What a Boundary Map Can Prove}\\[6pt]\large Derived gluing, torsion, Hodge inequalities, and motives}
+\author{Henry Shin\\\small Tensorgami}
+\date{\small October 2026}
+\setcounter{tocdepth}{2}
+\hypersetup{pdftitle={What a Boundary Map Can Prove},pdfauthor={Henry Shin},pdfsubject={Graph cohomology, spanning trees, higher trees, nodal curves, and graph motives}}
+\begin{document}
+\maketitle\thispagestyle{empty}
+\begin{abstract}
+A graph's incidence complex is a derived gluing object. Starting from the tree criterion, we compute derived global sections by a projective resolution. For enumeration, we retain the integral lattices and specified cells of its boundary presentation. Determinant-line multiplicativity proves arithmetic deletion--contraction for the squared-volume weights, including the square factor contributed by a nonprimitive cell attachment. Derived duality identifies the paired finite groups behind those weights. With an inner product, squared boundary volumes define a probability law, and exterior contraction gives its joint-inclusion probabilities. The graph and cellular transfer-current laws and sharp marked-edge inequalities follow from this metric construction; the complete simplex's Koszul complex yields Kalai's count. For colorings, a Gysin triangle and Hodge weights identify chromatic coefficients with Tate-cohomology dimensions, while Hodge--Riemann positivity constrains them. Normalization gives a motivic descent triangle for a nodal curve; Cartier duality recovers the generalized Jacobian from its attachment 1-motive. Tensor reconstruction then proves that a nontorsion elliptic attachment creates a two-dimensional unipotent radical in its motivic Galois group, invisible in the dual graph and graded cohomology. Nearby cycles place graph cohomology and homology at the two ends of a weight filtration, and the determinant of the graph monodromy pairing is the graph polynomial. The graph hypersurface and its integration boundary define a relative motive carrying the period pairing. Concrete examples follow the realizations through counts, torsion groups, extension classes, and periods.
+\end{abstract}
+\clearpage
+\begingroup\setlength{\parskip}{0pt}\fontsize{10}{12}\selectfont\tableofcontents\endgroup
+\clearpage
+
+
+\section{The starting complex}
+\label{sec:tree}
+
+A connected graph with one fewer edge than vertices is a tree. Viewed through its cochain complex, this familiar criterion says that every edge assignment integrates to a vertex potential. The map expressing those differences will lead us to tree counts, electrical currents, and inequalities for graph colorings.
+
+Let \(G=(V,E)\) be a finite connected undirected graph, with \(n\ge1\) vertices and \(m\) edges. Loops and parallel edges are allowed here; a loop is a cycle, and two parallel edges form a cycle of length two. Choose edge orientations and a field \(k\). The cochain complex is
+\[
+ C^0(G;k)=k^V\xrightarrow{d}C^1(G;k)=k^E,
+ \qquad (df)(e)=f(t(e))-f(s(e)).
+\]
+Its kernel consists of constants, since zero differences along a path force equal vertex values. There are no higher cochains, so rank--nullity gives
+\begin{equation}\label{eq:cycle-rank}
+ \dim H^1(G;k)=\dim\bigl(k^E/\operatorname{im}d\bigr)=m-n+1.
+\end{equation}
+
+\begin{lemma}[The tree criterion]\label{thm:tree}
+If \(m=n-1\), then \(G\) is a tree. Equivalently, every edge assignment integrates to a vertex potential, unique up to a constant.
+\end{lemma}
+\begin{proof}
+The dimension formula makes \(d\) surjective. A cycle would define a nonzero functional on edge assignments by summing around it, with traversal signs. This functional annihilates \(df\) by telescoping, contradicting surjectivity. Thus \(G\) has no cycles. Conversely, on a tree, integrate edge values along the unique paths from a root; this gives a potential, unique up to a constant. The argument works in every characteristic, including two. For \(n=1,m=0\), it gives the single vertex.
+\end{proof}
+
+For the path \(1\to2\to3\), edge values \(a,b\) integrate to \((0,a,a+b)\). Adding an edge \(3\to1\) with value \(c\) introduces the obstruction \(a+b+c\). We now keep this complex and ask questions it can answer beyond recognizing a tree.
+
+This is a companion route to \href{https://tensorgami.com/notes/fourier-symmetry-and-reconstruction}{\emph{Fourier, Symmetry, and Reconstruction}}. There a polynomial's coefficient data lead to a root cover; here incidence data lead to a gluing complex. In each case, we retain the object, its symmetries, and the operations relating its parts before extracting a formula or count. Here we retain the integral lattices and specified cells of the boundary presentation.
+
+We now study the operations that produce this complex. Global gluing is a derived functor; removing an edge gives an exact triangle, whose connecting map is the missing compatibility condition. Over the integers, a determinant functor measures finite cohomology, and derived duality supplies its character dual. These operations will prove an arithmetic deletion--contraction theorem: contracting a column that is $q$ times a primitive lattice vector contributes $q^2$. Ordinary graphs have $q=1$; higher cell attachments can retain the extra integer.
+
+An inner product supplies the boundary volumes. The squared coordinates of a unit boundary volume define a probability law, and exterior contraction gives all its joint-inclusion probabilities. Spanning-tree counts, electrical currents, and sharp inequalities for trees using a prescribed set of marked edges follow from this construction. Integral homology supplies the higher-dimensional weights; a six-vertex example shows torsion weighting removing a positive correlation. The complete simplex's Koszul resolution yields Kalai's formula in every dimension.
+
+For graph colorings, we will build an actual algebraic variety: vertex coordinates subject to the edge inequalities $z_u\ne z_v$. Localization and Hodge weights identify the chromatic coefficients as the multiplicities of its Tate cohomology. A compactification then supplies the intersection pairing whose Hodge--Riemann signature forces log-concavity. The coefficient inequality becomes a constraint on a geometric realization.
+
+The same gluing pattern continues into tensor reconstruction and motives. A normalization triangle lifts the incidence differential to maps from attachment points into component curves. Multiplicative descent gives the generalized Jacobian as an extension of the component Jacobians by the graph torus. Keeping the extension in a tensor category lets us compute its motivic Galois group: an elliptic attachment can create additive symmetries while leaving the graph and graded cohomology fixed. The monodromy pairing of a nodal degeneration has a determinant equal to the graph polynomial. That polynomial also defines the hypersurface used in the relative period construction.
+
+
+\section{A graph as a derived gluing problem}
+\label{sec:derived-gluing}
+
+The incidence map is the first instance of a general operation: take local data, ask whether it glues, and retain the obstruction together with the space of solutions. The derived global-section functor does this without choosing in advance which cohomology group will matter. We can construct it explicitly on a graph, then carry the same operation into integral complexes, arrangements, and algebraic curves.
+
+\subsection{A projective resolution computes the incidence complex}
+
+Form the incidence category of $G$: its objects are vertices and edges, and each endpoint incidence gives an arrow $v\to e$. A loop has two such arrows from its vertex. A cellular sheaf $\mathcal F$ assigns vector spaces $\mathcal F_v,\mathcal F_e$ and linear maps $\rho_{v,e}:\mathcal F_v\to\mathcal F_e$ to these arrows. Its global sections are compatible choices of local values. An orientation records compatibility as
+\[
+ \Gamma(G,\mathcal F)=\ker\!\left(
+ \bigoplus_v\mathcal F_v\xrightarrow{d_{\mathcal F}}
+ \bigoplus_e\mathcal F_e\right),
+ \qquad
+ (d_{\mathcal F}s)_e=\rho_{t(e),e}s_{t(e)}-\rho_{s(e),e}s_{s(e)}.
+\]
+For a loop the two restriction maps are distinguished. The constant sheaf $\underline k$ gives the original coboundary. A local system is the case in which all restriction maps are isomorphisms; it retains transport along paths.
+
+The category $\mathcal A_G$ of these diagrams is abelian: kernels and cokernels are taken at each cell. Global sections are left exact, since taking compatible values commutes with kernels. A surjection of diagrams need not give a surjection of compatible values. Its missing information is precisely what the derived functor records.
+
+For a cell $\sigma$, let $P_\sigma$ be the diagram whose value at $\tau$ is the vector space freely generated by arrows $\sigma\to\tau$. Then
+\[
+ \operatorname{Hom}_{\mathcal A_G}(P_\sigma,\mathcal F)=\mathcal F_\sigma.
+\]
+Evaluation is exact, so $P_\sigma$ is projective. There is a projective resolution
+\begin{equation}\label{eq:derived-projective-resolution}
+ 0\longrightarrow\bigoplus_e P_e
+ \longrightarrow\bigoplus_v P_v
+ \longrightarrow\underline k\longrightarrow0.
+\end{equation}
+At a vertex, the last nonzero map is $k\to k$, the identity. At an edge, it is $k^2\to k$, addition; its kernel is the difference of the endpoint generators. This verifies exactness cell by cell, including loops. Applying $\operatorname{Hom}(-,\mathcal F)$ computes the derived functor:
+\begin{equation}\label{eq:derived-graph-global-sections}
+ \operatorname{R\Gamma}(G,\mathcal F)
+ =\operatorname{RHom}_{\mathcal A_G}(\underline k,\mathcal F)
+ \simeq\left[\bigoplus_v\mathcal F_v
+ \xrightarrow{d_{\mathcal F}}\bigoplus_e\mathcal F_e\right].
+\end{equation}
+The bracketed complex has degrees zero and one. The usual incidence formula has appeared as a derived-functor calculation, valid for arbitrary coefficient diagrams. Cellular sheaf cohomology and its derived constructions are developed in \cite{derivedCurry}.
+
+We work in the derived category, where a quasi-isomorphism---a map inducing isomorphisms on every cohomology group---is invertible. Thus a resolution can be replaced by the object it resolves, while its functorial maps remain available. A short exact sequence of complexes gives an exact triangle
+\[
+ A\longrightarrow B\longrightarrow C\longrightarrow A[1].
+\]
+Here $A[1]^i=A^{i+1}$, with the usual change of sign in the differential. Taking cohomology turns the triangle into a long exact sequence. Keeping the final arrow is useful: it records the obstruction to lifting a class, rather than only the dimensions of the groups.
+
+\subsection{Removing an edge produces an obstruction map}
+
+Let $H=G\setminus e$, retaining every vertex, and restrict $\mathcal F$ to $H$. Dropping the edge component is a surjection of the two-term complexes in \eqref{eq:derived-graph-global-sections}; its kernel is $\mathcal F_e$ in degree one. Hence there is an exact triangle
+\begin{equation}\label{eq:derived-edge-triangle}
+ \mathcal F_e[-1]\longrightarrow\operatorname{R\Gamma}(G,\mathcal F)
+ \longrightarrow\operatorname{R\Gamma}(H,\mathcal F|_H)
+ \xrightarrow{\delta_e}\mathcal F_e.
+\end{equation}
+Its cohomology sequence is
+\[
+ \begin{aligned}
+ 0&\longrightarrow H^0(G,\mathcal F)\longrightarrow H^0(H,\mathcal F)
+ \xrightarrow{\delta_e}\mathcal F_e\\
+ &\longrightarrow H^1(G,\mathcal F)\longrightarrow H^1(H,\mathcal F)
+ \longrightarrow0.
+ \end{aligned}
+\]
+The connecting map evaluates the discrepancy between the two endpoint values. All effects of the extra edge on global gluing are concentrated in this one morphism.
+
+For constant coefficients, an edge joining two different components of $H$ makes $\delta_e$ surjective: their two independent constants can have any prescribed difference. It removes one component and introduces no first cohomology. If the endpoints already lie in the same component, $\delta_e=0$ and the edge introduces one first-cohomology class. Components and cycles are the two outcomes of the same exact triangle.
+
+For a local system, contracting a nonloop edge transports its endpoint fibers into one fiber. This gives a quasi-isomorphism on derived global sections. One way to see it is to choose that transport as an identification: the difference of the two endpoint values and the edge value form an acyclic two-term summand, which can be cancelled. Contracting a spanning tree therefore leaves one fiber $W$ and $r=m-n+1$ loop transports $T_1,\ldots,T_r$.
+
+\begin{proposition}[Derived gluing with holonomy]\label{prop:derived-holonomy}
+For a rank-$a$ local system on a connected graph,
+\[
+ \operatorname{R\Gamma}(G,\mathcal L)
+ \simeq\left[W\xrightarrow{\Delta}W^{\oplus r}\right],
+ \qquad\Delta(w)=((T_i-I)w)_{i=1}^r.
+\]
+Consequently
+\[
+ H^0(G,\mathcal L)=\bigcap_i\ker(T_i-I),\qquad
+ \dim H^1(G,\mathcal L)=(r-1)a+\dim H^0(G,\mathcal L),
+\]
+and $H^j(G,\mathcal L)=0$ for $j\ge2$. On a tree, evaluation at any chosen root gives $\operatorname{R\Gamma}(G,\mathcal L)\simeq W[0]$.
+\end{proposition}
+\begin{proof}
+The preceding acyclic cancellations identify the complex with the displayed loop complex. Its kernel is the common invariant subspace, and its Euler characteristic is $a-ra$. The projective resolution \eqref{eq:derived-projective-resolution} has length one, so there are no higher derived global sections. For $r=0$ the remaining complex is just $W$ in degree zero.
+\end{proof}
+
+\begin{example}[A cycle can disappear in a realization]
+Take a rank-one local system on a triangle with total holonomy $\lambda\in k^\times$. Removing one edge leaves a tree, so \eqref{eq:derived-edge-triangle} reduces to the two-term complex
+\[
+ [k\xrightarrow{\lambda-1}k].
+\]
+For $\lambda=1$ both cohomology groups are $k$. For $\lambda\ne1$ the complex is acyclic. The underlying cycle persists, while the chosen transport makes its gluing discrepancy invertible. The twisted determinant in Section~\ref{sec:graph-linear} will measure exactly this change.
+\end{example}
+
+We now keep integral coefficients. A rational quasi-isomorphism can erase finite gluing obstructions; derived duality and the determinant functor recover their arithmetic contribution.
+
+
+\subsection{Determinant lines turn exactness into arithmetic}
+\label{sec:derived-determinant}
+
+An exact triangle describes how complexes fit together. A determinant
+functor turns that gluing into a multiplication of one-dimensional
+lines. Over \(\Z\), these lines also measure the finite groups that
+disappear after passage to \(\Q\).
+
+For a bounded complex \(P^\bullet\) of finite free abelian groups, put
+\[
+ \det P^\bullet=
+ \bigotimes_i\bigl(\textstyle\bigwedge^{\operatorname{rank}P^i}P^i
+                   \bigr)^{(-1)^i}.
+\]
+An exponent \(-1\) means the dual line. The determinant construction
+passes to perfect complexes and sends an exact triangle
+\(P'\to P\to P''\to P'[1]\) to
+\[
+ \det P\cong\det P'\otimes\det P''.
+\]
+The usual parity convention handles orientation signs; we will take
+absolute values. This is the determinant functor of
+Knudsen--Mumford~\cite{derived-knudsen-mumford}; its two-term construction
+is given explicitly in~\cite{derived-stacks-determinants}.
+
+If \(P\otimes\Q\) is acyclic, cancellation of boundaries gives a
+canonical rational trivialization
+\(\phi_P:\det P\otimes\Q\xrightarrow{\sim}\Q\).
+For an integral generator \(\ell_P\), define
+\[
+ \mathfrak t(P)=|\phi_P(\ell_P)|^{-1}.
+\]
+This is the absolute Reidemeister torsion with the convention that
+\([\Z\xrightarrow{q}\Z]\), in degrees \(-1,0\), has torsion \(|q|\).
+
+\begin{proposition}[Arithmetic torsion and exact triangles]
+\label{prop:derived-arithmetic-torsion}
+If all cohomology groups of \(P\) are finite, then
+\begin{equation}\label{eq:derived-torsion-product}
+ \mathfrak t(P)=\prod_i|H^i(P)|^{(-1)^i}.
+\end{equation}
+For an exact triangle of such complexes,
+\(\mathfrak t(P)=\mathfrak t(P')\mathfrak t(P'')\).
+\end{proposition}
+\begin{proof}
+Write \(Z^i=\ker d^i\) and \(B^i=\operatorname{im}d^{i-1}\).
+The sequence \(0\to Z^i\to P^i\to B^{i+1}\to0\) splits over \(\Z\),
+since \(B^{i+1}\) is free. The inclusion \(B^i\subset Z^i\) has index
+\(|H^i(P)|\). In the determinant line, the boundary factors in adjacent
+degrees cancel. Replacing an integral volume of \(Z^i\) by one of
+\(B^i\) contributes \(|H^i(P)|^{(-1)^{i+1}}\) to
+\(\phi_P(\ell_P)\). This proves the formula. Determinant multiplicativity
+and the compatible rational trivializations prove the assertion for
+triangles. Equivalently, the alternating product of orders in their
+finite long exact cohomology sequence is one.
+\end{proof}
+
+Here is the dual information carried by a finite group. Let
+\(A:U\to L\) be a map of free abelian groups of equal finite rank \(r\), invertible
+over \(\Q\), and put \(F=L/AU\). The complex
+\(K=[U\xrightarrow{A}L]\), in degrees \(-1,0\), is a free resolution
+of \(F\). Its determinant section \(\delta_A=\bigwedge^r A\) belongs
+to \(\det K\), and \(\phi_K(\delta_A)=1\). Its coefficient in an
+integral generator therefore has absolute value
+\(\mathfrak t(K)=|F|\). The shifted derived dual is represented by
+\[
+ R\operatorname{Hom}_{\Z}(K,\Z)[1]
+ \simeq[L^*\xrightarrow{A^*}U^*],
+\]
+where a change of differential sign gives the displayed representative.
+The dual has its sole cohomology in degree zero:
+\begin{equation}\label{eq:derived-finite-dual}
+ \operatorname{coker}A^*
+ \cong\operatorname{Ext}^1_{\Z}(F,\Z)
+ \cong F^\vee:=\operatorname{Hom}(F,\Q/\Z).
+\end{equation}
+Indeed, applying \(R\operatorname{Hom}(F,-)\) to the coefficient
+triangle \(\Z\to\Q\to\Q/\Z\to\Z[1]\) gives the last isomorphism:
+\(\Q\) is injective and has no nonzero homomorphisms from \(F\).
+This is the finite part of the universal coefficient theorem
+\cite{derived-hatcher-uct}.
+
+The resulting pairing is concrete and canonical:
+\[
+ (L/AU)\times(U^*/A^*L^*)\longrightarrow\Q/\Z,
+ \qquad ([x],[y])\longmapsto y(A_{\Q}^{-1}x)\pmod\Z.
+\]
+Changing either lift changes the value by an integer. If it vanishes
+against every \(y\), then \(A_{\Q}^{-1}x\in U\), so \([x]=0\);
+the same argument on the other side proves perfection. Thus
+\(|F^\vee|=|F|\), and the determinant contributions of the resolution
+and its shifted dual multiply to
+\begin{equation}\label{eq:derived-torsion-square}
+ \mathfrak t(K)\,
+ \mathfrak t\bigl(R\operatorname{Hom}_{\Z}(K,\Z)[1]\bigr)
+   =|F|\,|F^\vee|=|F|^2.
+\end{equation}
+This arithmetic square will be the weight of a higher tree.
+
+The integral lattice and the cell coordinates remain part of the
+enumeration. For example, the reduced integral complexes of \(C_3\)
+and \(C_4\) are quasi-isomorphic: each has a single \(\Z\) in degree
+\(-1\). Their tree counts are \(3\) and \(4\). The determinant functor
+organizes exactness and torsion; the metric and the specified cells
+supply the volumes and the choices being counted. Multiplicativity of
+Reidemeister torsion and its determinant-line interpretation are
+developed in~\cite{derived-mnev-torsions}.
+
+\subsection{An exact triangle proves arithmetic deletion--contraction}
+\label{sec:derived-arithmetic-contraction}
+
+Let \(L\) be free abelian of rank \(r\), and let
+\(A:\Z^E\to L\) have full rational rank \(r\).
+For each \(r\)-element set \(S\) whose columns span \(L\otimes\Q\), put
+\(F_S=L/A\Z^S\), and define
+\[
+ \mathcal P_L(A;w)=\sum_S |F_S|^2\prod_{s\in S}w_s.
+\]
+The sum is zero when no such set exists, and is one in rank zero.
+Choose a nonzero column \(a_e=q u\), where \(u\in L\) is primitive and
+\(q>0\). Write \(\bar L=L/\Z u\), and let \(\bar A\) be the remaining
+columns in this free quotient. This is contraction by the saturated
+rank-one lattice generated by \(a_e\).
+
+\begin{theorem}[Arithmetic deletion--contraction]
+\label{thm:derived-arithmetic-contraction}
+With these integral normalizations,
+\begin{equation}\label{eq:derived-arithmetic-contraction}
+ \mathcal P_L(A;w)=
+ \mathcal P_L(A\setminus e;w)
+       +q^2w_e\,\mathcal P_{\bar L}(\bar A;w).
+\end{equation}
+For a zero column only the deletion term occurs.
+\end{theorem}
+\begin{proof}
+Separate the sets according to whether they contain \(e\). For
+\(S=\{e\}\cup R\), the full-rank condition is precisely that the
+columns indexed by \(R\) form a rational basis of \(\bar L\).
+There is a short exact sequence of two-term free complexes
+\[
+ 0\longrightarrow[\Z e\xrightarrow{q}\Z u]
+ \longrightarrow[\Z^S\xrightarrow{A_S}L]
+ \longrightarrow[\Z^R\xrightarrow{\bar A_R}\bar L]
+ \longrightarrow0.
+\]
+It gives an exact triangle of perfect complexes. All three are
+rationally acyclic, so Proposition~\ref{prop:derived-arithmetic-torsion}
+gives \(|F_S|=q|\bar L/\bar A\Z^R|\). Its finite cohomology sequence is
+the extension
+\[
+ 0\longrightarrow\Z/q\Z\longrightarrow F_S
+ \longrightarrow\bar L/\bar A\Z^R\longrightarrow0.
+\]
+The shifted dual contributes the same factor \(q\). Multiplying the
+two torsions, and then summing the monomials, proves the recurrence.
+A zero column cannot belong to a rational basis.
+\end{proof}
+
+For graphs take \(L=\Z^V_0\), the zero-sum vertex lattice. Every
+non-loop incidence column is primitive, so \(q=1\); identifying its
+endpoints identifies \(\bar L\) with the zero-sum lattice of \(G/e\).
+Integral path integration gives \(F_S=0\) for a tree. Thus the theorem
+gives
+\[
+ \tau(G;w)=\tau(G\setminus e;w)+w_e\tau(G/e;w),
+\]
+with value zero for a disconnected deletion. The exact triangle
+explains why contraction has coefficient one in graphs and an
+arithmetic coefficient in higher dimension.
+
+For instance, attach two \(2\)-cells to a circle by maps of degrees
+\(2\) and \(3\). The top boundary is \([2\ \ 3]\). Its two rational
+trees have first homology \(\Z/2\Z\) and \(\Z/3\Z\), with duals in
+top cohomology. Their polynomial is \(4w_1+9w_2\). Contracting the
+first column leaves a rank-zero quotient and gives
+\(9w_2+2^2w_1\); the extra factor records the finite cohomology of
+the rank-one complex being removed.
+
+\subsection{The determinant line carries a probability law}
+\label{sec:derived-exterior-probability}
+
+The preceding arithmetic coefficients become probabilities through the metric on the determinant line. This operation applies to any subspace with a specified orthonormal coordinate system. Its graph and cellular instances will follow by choosing a boundary map.
+
+Let $V\subset\R^E$ have dimension $r$. Its determinant line $\det V=\bigwedge^rV$ sits inside $\bigwedge^r\R^E$. Choose a unit generator
+\[
+ \xi\in\det V,\qquad
+ \xi=\sum_{|T|=r}\xi_T e_T,
+ \qquad\sum_T\xi_T^2=1,
+\]
+where $e_T$ is the ordered wedge of coordinate vectors. Orientation changes signs, while $\xi_T^2$ is unchanged. Give an $r$-element set $T$ probability $\xi_T^2$, and let $P$ be orthogonal projection onto $V$.
+
+\begin{theorem}[Exterior-power inclusion law]\label{thm:derived-exterior-law}
+For every coordinate set $S\subseteq E$,
+\[
+ \Pr(S\subseteq T)
+ =\left\|\iota_{e_S}\xi\right\|^2
+ =\det\bigl(\langle Pe_i,Pe_j\rangle\bigr)_{i,j\in S}
+ =\det P_S.
+\]
+Here $\iota_{e_S}$ is successive interior multiplication by the vectors indexed by $S$, in a fixed order. Sets larger than $r$ have zero probability, and the empty-set determinant is one.
+\end{theorem}
+\begin{proof}
+In the coordinate expansion of $\xi$, contraction by $e_S$ keeps precisely those terms whose index contains $S$. The remaining coordinate wedges are distinct and orthonormal, so its squared norm is the sum of $\xi_T^2$ over these terms.
+
+Since $\xi$ lies in $\bigwedge^rV$, contraction by $e_i$ equals contraction by $Pe_i$. The metric and the unit volume $\xi$ give the Hodge-star isometry on $V$. Successive contraction of its top volume is, up to sign, the Hodge star of the wedge of the contracted vectors. Thus
+\[
+ \left\|\iota_{e_S}\xi\right\|^2
+ =\left\|\bigwedge_{i\in S}Pe_i\right\|^2
+ =\det\bigl(\langle Pe_i,Pe_j\rangle\bigr)_{i,j\in S}.
+\]
+The last equality is the exterior metric: a wedge's squared volume is its Gram determinant. Because $P$ is self-adjoint and idempotent, $\langle Pe_i,Pe_j\rangle=\langle e_i,Pe_j\rangle$. These are the entries of $P_S$.
+\end{proof}
+
+Let $A$ be an integral $r\times|E|$ boundary matrix of full row rank, with weights $w_e>0$, and put $Y=A\operatorname{diag}(\sqrt{w_e})$. Take $V=\operatorname{im}Y^{\mathsf T}$. Pulling an integral volume through $\bigwedge^rY^{\mathsf T}$ and normalizing gives
+\begin{equation}\label{eq:derived-exterior-coordinates}
+ \begin{aligned}
+ \xi_T^2=
+ \frac{(\det A_T)^2\prod_{e\in T}w_e}
+      {\det(YY^{\mathsf T})},\qquad
+ P=Y^{\mathsf T}(YY^{\mathsf T})^{-1}Y.
+ \end{aligned}
+\end{equation}
+The integral resolution identifies $|\det A_T|$ with the order of the finite homology group; its derived dual identifies the matching cohomology factor. The inclusion law is then an exterior contraction of that same determinant line. Torsion weights and random-tree correlations arise from the arithmetic and metric realizations of one boundary presentation.
+
+
+\section{The same boundary map counts, conducts, and correlates}
+\label{sec:graph-linear}
+
+The coboundary records components in its kernel and cycles in its cokernel. With an inner product, it also gives a Laplacian: its determinants count trees, its inverse measures electrical resistance, and its orthogonal projection gives random-tree correlations.
+
+Throughout this section, $G=(V,E)$ is a finite connected undirected loopless graph, possibly with parallel edges. Put $N=|V|$ and $M=|E|$, orient each edge arbitrarily, and let
+\[
+ B:\R^E\longrightarrow\R^V,
+ \qquad Be=\mathbf e_{t(e)}-\mathbf e_{s(e)}
+\]
+be its incidence matrix. Here $\mathbf e_v$ is the coordinate vector at $v$. Give each edge a positive conductance $c_e$, write $W=\operatorname{diag}(c_e)$, and set
+\[
+ A=BW^{1/2},\qquad d_c=A^{\mathsf T},\qquad
+ L=AA^{\mathsf T}=BWB^{\mathsf T}.
+\]
+The operator $d_c$ is the usual coboundary after rescaling edge coordinates: $(d_cf)_e=\sqrt{c_e}\bigl(f(t(e))-f(s(e))\bigr)$. The weights change the geometry of the spaces, while the cohomology remains that of the graph. Except where explicitly stated, all conductances in the examples are $1$.
+
+\subsection{A finite Hodge theorem}
+
+For every vertex function $f$,
+\begin{equation}\label{eq:glin-energy}
+ f^{\mathsf T}Lf=\|d_cf\|^2
+ =\sum_{e\in E}c_e\bigl(f(t(e))-f(s(e))\bigr)^2.
+\end{equation}
+Consequently $L$ is positive semidefinite and, by connectedness, its kernel consists exactly of constants. Let $L^+$ act as the inverse of $L$ on the orthogonal complement $\mathbf1^\perp$, and as zero on constants. This is its Moore--Penrose pseudoinverse; no choice of root enters its definition.
+
+\begin{proposition}[Hodge decomposition and projection]\label{prop:glin-hodge}
+There is an orthogonal decomposition
+\[
+ \R^E=\operatorname{im}d_c\;\mathbin\oplus\;\ker A.
+\]
+The second summand has dimension $M-N+1$ and represents $H^1(G;\R)$ in the rescaled coordinates. The orthogonal projection onto the first summand is
+\begin{equation}\label{eq:glin-projection}
+ K=A^{\mathsf T}L^+A.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The Green operator supplies a chain homotopy for the two-term derived global-section complex. Put
+\[
+ h=L^+A:C^1\longrightarrow C^0,
+ \qquad \Pi_0=\frac1N\mathbf1\mathbf1^{\mathsf T},
+ \qquad \Pi_1=I-A^{\mathsf T}L^+A.
+\]
+The spectral definition of $L^+$ gives
+\[
+ hd_c=I-\Pi_0,\qquad d_ch=I-\Pi_1.
+\]
+Thus $dh+hd=I-\Pi$ on the complex. Moreover $A\Pi_1=0$, and $\Pi_1$ acts as the identity on $\ker A$. It is self-adjoint, so it is the orthogonal projection onto that kernel. The complex deformation retracts onto its harmonic cohomology, with zero differential: constants in degree zero and $\ker A$ in degree one. Its complementary degree-one projection is $K=d_ch$, and the Euler characteristic gives the stated dimension. The orthogonal decomposition is the metric realization of this deformation retract.
+\end{proof}
+
+There are no $2$-cochains here. Thus a harmonic $1$-cochain means a cochain annihilated by the adjoint of $d_c$; the corresponding edge Laplacian is $d_cd_c^{\mathsf T}$. If $G$ is a tree, the harmonic summand vanishes and $K=I_M$. Every edge assignment is a gradient. If $G$ is a coherently oriented triangle with conductances $a,b,c$, its harmonic line is generated by
+\[
+ z=(a^{-1/2},b^{-1/2},c^{-1/2})^{\mathsf T},\qquad
+ K=I_3-\frac{zz^{\mathsf T}}{a^{-1}+b^{-1}+c^{-1}}.
+\]
+The obstruction to integration is literally one line in a three-dimensional space.
+
+Cohomology supplies the obstruction space; Hodge theory uses the inner product to choose harmonic representatives and a projection. This projection will give the tree probabilities.
+
+\subsection{A determinant that lists all spanning trees}
+
+Define the weighted tree polynomial
+\[
+ \tau(G;c)=\sum_{T\text{ spanning tree of }G}\prod_{e\in T}c_e.
+\]
+For a one-vertex graph we use $\tau=1$, the contribution of the empty tree. Choose a root $r$, delete its row from $B$ to obtain $\widehat B$, and delete its row and column from $L$ to obtain
+\[
+ \widehat L=\widehat B W\widehat B^{\mathsf T}.
+\]
+
+\begin{theorem}[Weighted matrix-tree theorem]\label{thm:glin-matrix-tree}
+For every root,
+\begin{equation}\label{eq:glin-matrix-tree}
+ \tau(G;c)=\det\widehat L.
+\end{equation}
+If $\lambda_1,\ldots,\lambda_{N-1}$ are the nonzero eigenvalues of $L$, then
+\begin{equation}\label{eq:glin-spectral-tree}
+ \tau(G;c)=\frac1N\prod_{j=1}^{N-1}\lambda_j.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Use the zero-sum vertex lattice $L_0=\Z^V_0$ and its integral basis $\mathbf e_v-\mathbf e_r$, $v\ne r$. In these coordinates the boundary is $\widehat B$. A rational boundary basis gives a two-term resolution whose degree-zero cohomology is reduced $H_0$ of the chosen subgraph. This group is torsion-free; when finite it is trivial. The boundary bases are therefore exactly the spanning trees, and their arithmetic determinant factors are one.
+
+Pull the integral volume through the weighted boundary $Y=\widehat B W^{1/2}$. In the determinant-line construction of Section~\ref{sec:derived-exterior-probability}, its cellular coordinates have squared norms
+\[
+ (\det\widehat B_T)^2\prod_{e\in T}c_e
+ =\prod_{e\in T}c_e.
+\]
+All other coordinates vanish. The squared Gram volume is $\det(YY^{\mathsf T})=\det\widehat L$, proving the first assertion.
+
+The Hodge splitting of $\R^V$ into constants and their orthogonal complement gives
+\[
+ \operatorname{adj}(L)=
+ \left(\prod_{j=1}^{N-1}\lambda_j\right)\Pi_0,
+ \qquad \Pi_0=\frac1N\mathbf1\mathbf1^{\mathsf T}.
+\]
+Its diagonal entries are the grounded determinants just computed. This gives the spectral formula. For $N=1$, the determinant line and the empty tree have volume one, as do the empty determinant and product.
+\end{proof}
+
+This is the graph specialization of the integral determinant-line construction; its cellular versions are discussed in \cite{glinDKM2016}. The following examples evaluate its metric realization using symmetry.
+
+\subsection{Symmetry turns eigenvalues into concrete counts}
+
+\begin{example}[Complete and complete bipartite graphs]\label{ex:glin-complete}
+For $K_N$, $L=NI-J$, where $J$ is the all-ones matrix. Its nonzero eigenvalue is $N$ with multiplicity $N-1$, so for $N\ge2$
+\[
+ \tau(K_N)=N^{N-2}.
+\]
+In particular $K_4$ has $16$ trees and $K_5$ has $125$.
+
+For $K_{p,q}$ with $p,q\ge1$, the vectors supported on the $p$-vertex part and summing to zero have eigenvalue $q$, with multiplicity $p-1$. The analogous subspace on the other part has eigenvalue $p$, with multiplicity $q-1$. On functions constant on each part, the remaining eigenvalues are $0$ and $p+q$. Hence
+\[
+ \tau(K_{p,q})=p^{q-1}q^{p-1}.
+\]
+For instance $K_{2,3}$ has $12$ trees, $K_{3,3}$ has $81$, and the star $K_{1,q}$ has exactly one. All these counts follow from four invariant subspaces rather than a list of trees.
+\end{example}
+
+\begin{example}[A weighted family behind Cayley's formula]\label{ex:glin-weighted-cayley}
+Choose positive numbers $x_1,\ldots,x_N$ and assign conductance $x_ix_j$ to the edge $ij$ of $K_N$. If $S=\sum_i x_i$ and $x=(x_i)$, then
+\[
+ L=S\operatorname{diag}(x_i)-xx^{\mathsf T}.
+\]
+Deleting vertex $r$ and applying the rank-one determinant identity to its diagonal part gives, for $N\ge2$,
+\begin{align*}
+ \det\widehat L
+ &=S^{N-1}\prod_{i\ne r}x_i
+ \left(1-\frac{\sum_{i\ne r}x_i}{S}\right)\\
+ &=\left(\prod_i x_i\right)S^{N-2}.
+\end{align*}
+Thus an entire polynomial identity sits above the numerical count:
+\[
+ \sum_T\prod_i x_i^{\deg_T(i)}
+ =\left(\prod_i x_i\right)(x_1+\cdots+x_N)^{N-2}.
+\]
+For $N=3$ and $(x_1,x_2,x_3)=(1,2,3)$, the edge conductances are $2,3,6$. The three tree weights are $6,12,18$, totaling $36$, exactly $1\cdot2\cdot3\cdot6$. Setting every $x_i$ to $1$ projects this weighted identity to Cayley's formula; keeping the variables preserves degree information.
+\end{example}
+
+\begin{example}[The hypercube and its characters]\label{ex:glin-cube}
+For $d\ge1$, the $d$-cube $Q_d$ has vertex set $(\Z/2)^d$ and joins vertices differing in one coordinate. For $S\subseteq\{1,\ldots,d\}$, the character
+\[
+ \chi_S(x)=(-1)^{\sum_{i\in S}x_i}
+\]
+is an eigenfunction: flipping a coordinate in $S$ changes its sign, and flipping any other coordinate leaves it fixed. Therefore
+\[
+ L\chi_S=2|S|\chi_S.
+\]
+These $2^d$ characters form an orthogonal basis, giving
+\[
+ \tau(Q_d)=\frac1{2^d}\prod_{k=1}^d(2k)^{\binom dk}.
+\]
+Thus $Q_2$ has $4$ trees, the ordinary cube $Q_3$ has
+\[
+ \frac{2^3\,4^3\,6}{8}=384,
+\]
+and $Q_4$ has
+\[
+ \frac{2^4\,4^6\,6^4\,8}{16}=42\,467\,328.
+\]
+There is a direct group-theoretic reason for the eigenbasis: the graph is a Cayley graph of $(\Z/2)^d$, and its translation-invariant Laplacian is diagonal in the characters of that group.
+\end{example}
+
+\begin{example}[Cycles and periodic grids]\label{ex:glin-periodic}
+The cycle $C_q$, $q\ge3$, is a Cayley graph of $\Z/q$. Its Fourier characters have Laplacian eigenvalues $2-2\cos(2\pi j/q)$. With $\zeta=e^{2\pi i/q}$,
+\[
+ \prod_{j=1}^{q-1}(2-\zeta^j-\zeta^{-j})
+ =\left|\prod_{j=1}^{q-1}(1-\zeta^j)\right|^2=q^2.
+\]
+The last equality follows by evaluating $(x^q-1)/(x-1)$ at $x=1$. The spectral formula therefore gives $\tau(C_q)=q$. With arbitrary conductances, a tree is obtained by omitting exactly one cycle edge, so the refined identity is
+\[
+ \tau(C_q;c)=\left(\prod_e c_e\right)\sum_e\frac1{c_e}.
+\]
+
+The same Fourier calculation extends to a two-dimensional periodic grid. For $p,q\ge3$, the Cartesian product $C_p\mathbin\square C_q$ has $pq$ vertices, and its Laplacian is the sum of the two factor Laplacians. Product characters give
+\[
+ \tau(C_p\mathbin\square C_q)=\frac1{pq}
+ \prod_{\substack{0\le a<p,\;0\le b<q\\(a,b)\ne(0,0)}}
+ \left(4-2\cos\frac{2\pi a}{p}-2\cos\frac{2\pi b}{q}\right).
+\]
+For $p=q=3$, the nonzero eigenvalues are $3$ with multiplicity four and $6$ with multiplicity four. Its tree count is $3^4 6^4/9=11\,664$. More generally, a Cartesian product of any connected graphs has eigenvalues given by all sums of factor eigenvalues: apply $L_X\otimes I+I\otimes L_Y$ to tensor products of eigenvectors. One spectral decomposition therefore supplies a family of exact enumeration formulas.
+\end{example}
+
+\begin{example}[The Petersen graph]\label{ex:glin-petersen}
+Realize its ten vertices as the $2$-element subsets of $\{1,2,3,4,5\}$, with adjacency meaning disjointness. Every vertex has three neighbors. Adjacent vertices have no common neighbor; distinct nonadjacent vertices have one. If $P$ is its adjacency matrix, counting length-two walks gives
+\[
+ P^2=2I-P+J.
+\]
+Constants have eigenvalue $3$. On their orthogonal complement, the remaining eigenvalues solve $x^2+x-2=0$, hence are $1$ and $-2$. Their multiplicities $a,b$ satisfy $a+b=9$ and $3+a-2b=0$, because $\operatorname{tr}P=0$. Thus $a=5,b=4$. The Laplacian $3I-P$ has spectrum
+\[
+ 0,\quad 2\text{ with multiplicity }5,\quad
+ 5\text{ with multiplicity }4,
+\]
+and
+\[
+ \tau(\text{Petersen})=\frac{2^5 5^4}{10}=2000.
+\]
+The count is an explicit consequence of the graph's uniform intersection patterns.
+\end{example}
+
+\subsection{The inverse measures resistance}
+
+For distinct vertices $u,v$, put $b=\mathbf e_u-\mathbf e_v$. Injecting one unit of current at $u$ and removing it at $v$ means solving
+\[
+ L\phi=b.
+\]
+The mean-zero solution is $\phi=L^+b$. The voltage drop is the effective resistance
+\begin{equation}\label{eq:glin-resistance}
+ R_{uv}=b^{\mathsf T}L^+b.
+\end{equation}
+This definition agrees with minimizing dissipated energy. Indeed, the current $q=W B^{\mathsf T}\phi$ satisfies $Bq=b$, and any other such current has the form $q+h$ with $Bh=0$. Expanding its energy gives
+\[
+ (q+h)^{\mathsf T}W^{-1}(q+h)
+ =q^{\mathsf T}W^{-1}q+h^{\mathsf T}W^{-1}h,
+\]
+because the cross term is $2\phi^{\mathsf T}Bh=0$. The minimum is $\phi^{\mathsf T}L\phi=R_{uv}$. These electrical and tree interpretations are developed systematically in \cite{glinLyonsPeres2016}.
+
+\begin{proposition}[Adding one edge]\label{prop:glin-add-edge}
+Add a new edge from $u$ to $v$ of conductance $s>0$, allowing a parallel edge if one already exists. Then
+\begin{equation}\label{eq:glin-edge-add}
+ \tau(G+e;c,s)=\tau(G;c)(1+sR_{uv}),
+ \qquad
+ \Pr(e\in T)=\frac{sR_{uv}}{1+sR_{uv}}
+\end{equation}
+under the weighted tree distribution of the enlarged graph.
+\end{proposition}
+\begin{proof}
+Ground a root and remove its coordinate from $b$, obtaining $\widehat b$. The new reduced Laplacian is $\widehat L+s\widehat b\widehat b^{\mathsf T}$. The rank-one determinant identity gives
+\[
+ \det(\widehat L+s\widehat b\widehat b^{\mathsf T})
+ =\det\widehat L\bigl(1+s\widehat b^{\mathsf T}\widehat L^{-1}\widehat b\bigr).
+\]
+Grounded and mean-zero solutions differ only by a constant, so the quadratic form is $R_{uv}$. The term independent of $s$ counts trees avoiding the new edge; the coefficient of $s$, multiplied by $s$, counts those containing it. Divide by the total weight.
+\end{proof}
+
+For a tree, the unique unit flow follows the path from $u$ to $v$, so $R_{uv}$ is the sum of $1/c_e$ along that path. With unit conductances and path length $\ell$, adding a unit edge creates $1+\ell$ spanning trees. For a unit square, opposite vertices are joined by two length-two branches in parallel, so $R=1$. Adding a diagonal therefore changes its tree count from $4$ to $8$; the new diagonal appears with probability $1/2$. These are instances of one formula, which also applies when the existing network has many intertwined cycles.
+
+Increasing a conductance can only decrease every effective resistance. This follows from the energy minimum, or directly by differentiating the inverse on $\mathbf1^\perp$:
+\[
+ \frac{\partial R_{uv}}{\partial c_e}
+ =-\bigl(b_e^{\mathsf T}L^+b\bigr)^2\le0.
+\]
+The right side also measures the sensitivity. If the endpoints of $e$ have equal potential under this unit-current experiment, increasing that conductance has zero first-order effect. For an edge added directly between $u$ and $v$, the rank-one inverse identity gives the exact new resistance $R_{uv}/(1+sR_{uv})$. Enumeration and electrical response are controlled by the same matrix perturbation.
+
+\subsection{The Hodge projection becomes a probability kernel}
+
+Choose a random spanning tree with
+\[
+ \Pr(T)=\frac{\prod_{e\in T}c_e}{\tau(G;c)}.
+\]
+For an edge $e$, let $b_e$ denote its incidence column. The matrix from \eqref{eq:glin-projection} has entries
+\[
+ K_{ef}=\sqrt{c_ec_f}\,b_e^{\mathsf T}L^+b_f.
+\]
+Changing an edge orientation changes its row and column signs together; principal determinants are unaffected.
+
+\begin{theorem}[Transfer-current determinantal law]\label{thm:glin-transfer-current}
+For every set $S$ of distinct edges,
+\begin{equation}\label{eq:glin-dpp}
+ \Pr(S\subseteq T)=\det K_S.
+\end{equation}
+In particular, $\Pr(e\in T)=c_eR_{s(e)t(e)}$.
+\end{theorem}
+\begin{proof}
+Take $Y=\widehat B W^{1/2}$. The rooted boundary resolution and its metric give a unit generator of $\det(\operatorname{im}Y^{\mathsf T})$. Formula~\eqref{eq:derived-exterior-coordinates} and the matrix-tree theorem identify its squared cellular coordinates with
+\[
+ \xi_T^2=\frac{\prod_{e\in T}c_e}{\tau(G;c)}.
+\]
+Its subspace is also $\operatorname{im}A^{\mathsf T}$: deleting one vertex row removes the unique linear relation among the rows of $A$. Its orthogonal projection is therefore the Hodge projection $K$. The exterior-power inclusion law, Theorem~\ref{thm:derived-exterior-law}, gives $\Pr(S\subseteq T)=\det K_S$. The one-edge contraction gives $K_{ee}=c_eR_{s(e)t(e)}$.
+\end{proof}
+
+The determinantal law is associated with Burton and Pemantle \cite{glinBurtonPemantle1993}. Each random tree selects a basis of the incidence columns, and the projection minors give the probabilities of joint selection.
+
+Since $K$ is a projection of rank $N-1$,
+\begin{equation}\label{eq:glin-foster}
+ \sum_e c_eR_{s(e)t(e)}=\operatorname{tr}K=N-1.
+\end{equation}
+For a unit-conductance edge-transitive graph, all edge probabilities are $(N-1)/M$. They are $2/N$ for $K_N$, $(p+q-1)/(pq)$ for $K_{p,q}$, $7/12$ for the ordinary cube, and $3/5$ for Petersen. For a weighted triangle,
+\[
+ \tau=ab+ac+bc,\qquad
+ \Pr(e_a\in T)=\frac{a(b+c)}{ab+ac+bc},
+\]
+which is exactly the diagonal entry obtained from its harmonic-line projection.
+
+For distinct edges, the $2\times2$ determinant gives
+\begin{equation}\label{eq:glin-negative-correlation}
+ \operatorname{Cov}\bigl(\mathbf1_{e\in T},\mathbf1_{f\in T}\bigr)
+ =-K_{ef}^2\le0.
+\end{equation}
+This proves pairwise negative correlation. Hadamard's inequality also gives $\Pr(S\subseteq T)\le\prod_{e\in S}\Pr(e\in T)$. If $S$ contains a cycle, its incidence columns are dependent and the determinant vanishes, as required for a tree.
+
+The tree polynomial also records exact deletion effects. If $p_e=\Pr(e\in T)$, then
+\[
+ \tau(G\setminus e;c)=\tau(G;c)(1-p_e).
+\]
+A bridge has $p_e=1$; deleting it gives zero spanning-tree weight. For a unit cycle, each edge has $p_e=(q-1)/q$, and deleting one leaves the unique path tree. An edge with inclusion probability near one accounts for most of the tree weight, so deleting it removes most of that weight.
+
+For any specified edge set $S$, there is also a compact law for its random occupancy $D_S=|T\cap S|$:
+\[
+ \mathbb E z^{D_S}=\det(I_S+(z-1)K_S).
+\]
+As a principal submatrix of a projection, $K_S$ has eigenvalues $\eta_i\in[0,1]$, so this factors as $\prod_i(1-\eta_i+\eta_i z)$. Therefore $D_S$ has the distribution of a sum of independent Bernoulli variables with parameters $\eta_i$. These variables describe the total count; the selected edges themselves generally remain dependent.
+
+\begin{example}[Adjacent and opposite edges in $K_4$]\label{ex:glin-k4}
+Here $L=4I-J$ and $L^+=\tfrac14(I-\tfrac14J)$. Thus $K_{ee}=1/2$. For edges sharing a vertex, $|b_e^{\mathsf T}b_f|=1$, so $|K_{ef}|=1/4$; disjoint edges give $K_{ef}=0$. Therefore
+\[
+ \Pr(e,f\in T)=
+ \begin{cases}
+ 3/16,&e,f\text{ share a vertex},\\
+ 1/4,&e,f\text{ are disjoint}.
+ \end{cases}
+\]
+Among the $16$ trees, three contain a prescribed adjacent pair and four contain a prescribed opposite pair. Conditioning on one edge lowers an adjacent edge's probability from $1/2$ to $3/8$, while an opposite edge remains at $1/2$.
+
+There is a further small surprise. Orient the three edges at a chosen vertex consistently. Their principal kernel is $\tfrac14(I_3+J_3)$, with eigenvalues $1,1/4,1/4$. If $D$ is that vertex's degree in $T$, the same generating identity gives
+\[
+ \mathbb E z^D=\det(I_3+(z-1)K_S)
+ =z\left(\frac{3+z}{4}\right)^2.
+\]
+Hence $\Pr(D=1)=9/16$, $\Pr(D=2)=6/16$, and $\Pr(D=3)=1/16$. The full degree distribution comes from a three-dimensional projection calculation.
+\end{example}
+
+\subsection{A sharp inequality for every marked set of edges}
+\label{sec:marked-tree-inequality}
+
+Mark any set of edges, and sort the trees by how many marked edges they use.
+The Hodge projection forces the generating polynomial's roots to be real,
+giving a sharp inequality for these counts even when the graph has no symmetry.
+
+\begin{theorem}[Sharp marked-edge inequalities]
+\label{thm:marked-tree-inequality}
+Let $G=(V,E)$ be a finite connected loopless graph, possibly with parallel
+edges, with positive edge weights $c_e$.  Fix $S\subseteq E$, and let $a_k$
+be the sum of $\prod_{e\in T}c_e$ over spanning trees with $|T\cap S|=k$.
+Write $c(V,F)$ for the number of components of $(V,F)$, including isolated
+vertices, and put
+\[
+ \ell=c(V,E\setminus S)-1,\qquad d=|V|-c(V,S),\qquad h=d-\ell.
+\]
+Then $a_k>0$ exactly for $\ell\le k\le d$.  The polynomial
+$z^{-\ell}\sum_k a_kz^k$ has degree $h$ and only strictly negative real
+roots.  For every $\ell<k<d$,
+\begin{equation}\label{eq:marked-tree-newton}
+ a_k^2\ge
+ \frac{(k-\ell+1)(d-k+1)}{(k-\ell)(d-k)}\,a_{k-1}a_{k+1}.
+\end{equation}
+Equivalently, the sequence $a_{\ell+j}/\binom hj$, $0\le j\le h$, is
+log-concave.  The constants are sharp, even for unweighted simple graphs.
+\end{theorem}
+
+\begin{proof}
+Retain $A=BW^{1/2}$, $L=AA^{\mathsf T}$, and the Hodge projection
+$K=A^{\mathsf T}L^+A$.  Giving marked edges the extra weight $z$, the
+matrix-tree theorem and the determinant identity already used for the
+transfer-current law give
+\[
+ F(z):=\sum_k a_kz^k
+ =\tau(G;c)\det(I+(z-1)K_S)
+ =\tau(G;c)\prod_i(1-\eta_i+\eta_i z),
+ \qquad 0\le\eta_i\le1.
+\]
+For completeness, delete one vertex row from $A$.  The changed reduced
+Laplacian is $\widehat L+(z-1)\widehat A_S\widehat A_S^{\mathsf T}$;
+factoring $\widehat L$ and using $\det(I+UV)=\det(I+VU)$ gives the first
+determinant.  The rooted expression for its kernel is the same orthogonal
+projection $K$.
+
+Since $L^+$ is positive definite on $\mathbf1^\perp$,
+\[\operatorname{rank}K_S=\operatorname{rank}A_S=|V|-c(V,S)=d.\]
+An eigenvector of $K_S$ with eigenvalue $1$, extended by zero outside $S$,
+lies in $\operatorname{im}A^{\mathsf T}$: equality in the contraction
+inequality for an orthogonal projection forces the extended vector into
+its image.  Such gradients are exactly those coming from vertex functions
+constant on every component of $(V,E\setminus S)$.  Modulo global constants
+their dimension is $\ell$.  Conversely every such gradient gives an
+eigenvector with eigenvalue $1$.  Thus the product has $\ell$ factors $z$,
+$h$ factors with $0<\eta_i<1$, and constant factors from the zero
+eigenvalues.  This proves the root and support assertions.
+
+We now derive the coefficient inequality.  Write
+$Q(z)=z^{-\ell}F(z)=\sum_{j=0}^h b_jz^j$.  Fix $1\le j<h$ and set
+$f=Q^{(j-1)}$, of degree $n=h-j+1$.  Rolle's theorem, with root
+multiplicities retained, shows that all roots of $f$ are negative.  Hence
+$f(z)=C\prod_{i=1}^n(1+t_i z)$ with $C,t_i>0$.  If its first three
+coefficients are $C,B,D$, Cauchy--Schwarz gives
+$B^2\ge 2nCD/(n-1)$, because
+$(\sum_i t_i)^2\le n\sum_i t_i^2$ and
+$2\sum_{i<q}t_it_q=(\sum_i t_i)^2-\sum_i t_i^2$.
+Substitute $C=(j-1)!b_{j-1}$, $B=j!b_j$, and
+$D=(j+1)!b_{j+1}/2$ to obtain
+\[b_j^2\ge (j+1)(h-j+1)b_{j-1}b_{j+1}/(j(h-j)),\]
+which is
+\eqref{eq:marked-tree-newton}.  Sharpness follows from the next example.
+\end{proof}
+
+\begin{example}[An infinite equality family and a strict case]
+For $K_N$, $N\ge2$, mark all edges incident to one vertex and orient them
+outward.  Then $K_S=(I+J)/N$, where $J$ is the $(N-1)\times(N-1)$
+all-ones matrix.  Its eigenvalues are $1$ and $1/N$, the latter repeated
+$N-2$ times.  Consequently
+\[
+ F(z)=z(N-1+z)^{N-2},\qquad
+ a_{1+j}=\binom{N-2}{j}(N-1)^{N-2-j}.
+\]
+The normalized coefficients form a geometric progression, so every
+interior inequality is an equality.  For $K_4$, the counts are $9,6,1$:
+the sharp factor is $4$, and $6^2=4\cdot9\cdot1$.
+Instead mark the three edges of a Hamilton path in $K_4$.  The marked and
+unmarked edges each form a path, and their kernel has eigenvalues
+$1/2,(2-\sqrt2)/4,(2+\sqrt2)/4$.  Thus
+$F(z)=1+7z+7z^2+z^3$, and the sharp inequality gives
+$49\ge3\cdot1\cdot7$ at both interior indices.
+\end{example}
+
+This is Newton's inequality realized by a graph's Hodge projection.
+It applies to every marked edge set and every choice of positive weights.
+The chromatic-polynomial theorem later requires a richer intersection
+ring and its deep Hodge--Riemann theorem; the argument here closes using
+the operators we have already constructed.
+
+
+\subsection{A determinant sensitive to holonomy}
+
+A twisted version replaces scalar differences by parallel transport. Assign $\rho_e\in U(1)$ to each oriented edge, with $\rho_{\bar e}=\rho_e^{-1}$, and define
+\[
+ (d_\rho f)(e)=f(t(e))-\rho_e f(s(e)),\qquad
+ L_\rho=d_\rho^*W d_\rho.
+\]
+Vertex changes of unitary basis conjugate this Laplacian and preserve the holonomy $w_\gamma=\prod_{e\in\gamma}\rho_e^{\pm1}$ around every oriented cycle. Forman's theorem, reproved by Kenyon \cite{glinKenyon2011}, states
+\begin{equation}\label{eq:glin-crsf}
+ \det L_\rho=
+ \sum_{F\text{ cycle-rooted spanning forest}}
+ \left(\prod_{e\in F}c_e\right)
+ \prod_{\gamma\text{ cycle of }F}|1-w_\gamma|^2.
+\end{equation}
+Each component contains exactly one cycle. Its weight combines edge conductances with cycle holonomy. The next calculation proves the formula directly for a single cycle.
+
+For a cycle with $N\ge3$ vertices, orient the edges coherently and put $w=\rho_1\cdots\rho_N$. The square matrix $d_\rho$ has only two nonzero terms in its determinant expansion: choosing all forward vertex entries, or choosing all source entries. Their signed difference gives
+\[
+ |\det d_\rho|^2=|1-w|^2,
+ \qquad
+ \det L_\rho=\left(\prod_i c_i\right)|1-w|^2.
+\]
+With unit conductances and $w=e^{i\theta}$, a gauge makes every edge transport $e^{i\theta/N}$. The ordinary Fourier modes then give eigenvalues
+\[
+ 2-2\cos\left(\frac{2\pi j-\theta}{N}\right),
+ \qquad j=0,\ldots,N-1,
+\]
+whose product is $2-2\cos\theta$. Trivial holonomy restores the constant section and the zero eigenvalue. Nontrivial holonomy removes that section. This is a concrete instance in which keeping monodromy turns a degeneracy into a measurable determinant.
+
+The incidence map has given us counts, resistances, and correlations. Keeping its integral lattices will reveal a further invariant: the finite graph Jacobian.
+
+
+% Module only. Requires amsmath/amssymb and theorem, proposition, lemma,
+% corollary, example, remark environments; macros \Q, \Z, \R, \C.
+% Cite keys and source/proof boundaries are in graph-integral-higher-evidence.txt.
+
+\section{The integral structure: trees, lattices, and a finite Jacobian}
+\label{sec:gih-integral}
+
+Working over a field reveals the number of independent cycles. Working over
+\(\Z\) also reveals lattice indices: do the boundary columns generate the
+whole lattice of possible boundaries, or a sublattice of finite index?
+For graphs the index is one. In higher dimensions it can carry torsion.
+
+Let \(G=(V,E)\) be a finite connected undirected graph, with an orientation
+chosen for each edge, and let \(B:\Z^E\to\Z^V\) be its incidence map.
+A loop has zero column.  Write
+\[
+ \Z^V_0=\left\{(a_v)_{v\in V}:\sum_{v\in V}a_v=0\right\}.
+\]
+If \(r\) is a fixed vertex, a path from \(r\) to \(v\), with signs adjusted
+to the chosen orientations, has boundary \(v-r\).  These differences form
+an integral basis of \(\Z^V_0\).  Thus connectedness gives integral
+surjectivity, and hence surjectivity after tensoring with \(\Q\):
+\begin{equation}
+ 0\longrightarrow H_1(G;\Z)\longrightarrow\Z^E
+ \xrightarrow{B}\Z^V\xrightarrow{\sum}\Z\longrightarrow0.
+ \label{eq:gih-integral-sequence}
+\end{equation}
+There are no two-cells, so the kernel really is \(H_1\).  Consequently it
+is free of rank \(|E|-|V|+1\).  If \(|E|=|V|-1\), the map
+\(B:\Z^E\to\Z^V_0\) is an isomorphism.  Deleting the row of \(r\)
+therefore gives a square matrix of determinant \(\pm1\).  A tree solves
+every integral conservation equation uniquely, with integral edge values.
+
+\begin{lemma}[The incidence matrix is totally unimodular]
+Every square minor of \(B\) belongs to \(\{0,1,-1\}\).
+\end{lemma}
+\begin{proof}
+Consider a square submatrix.  If a column has at most one nonzero entry,
+expansion along that column reduces the assertion to a smaller minor.
+Otherwise every column has its two entries \(+1,-1\), and the sum of the
+rows is zero, so the determinant vanishes.  Starting with the empty minor
+of determinant one proves the assertion.
+\end{proof}
+
+This elementary argument explains why graph boundary bases have no hidden
+integral index.  It also explains a familiar computational advantage:
+incidence constraints often preserve integrality in optimization problems.
+Higher cellular boundary matrices need not be totally unimodular.
+
+\subsection{A group whose order counts spanning trees}
+
+Put \(L=BB^{\mathsf T}\), and delete the row and column of \(r\) to obtain
+\(L_r=B_rB_r^{\mathsf T}\).  The finite graph Jacobian, also called the
+critical or sandpile group, is
+\[
+ \operatorname{Jac}(G)=\Z^V_0/L\Z^V
+       \cong\Z^{V\setminus\{r\}}/L_r\Z^{V\setminus\{r\}}.
+\]
+Indeed, the sum of the columns of \(L\) is zero, so its non-root columns
+generate its image.  Projection off the root identifies \(\Z^V_0\) with
+\(\Z^{V\setminus\{r\}}\) and sends these generators to the columns of
+\(L_r\).  This also makes the independence of the root transparent.
+The terminology connects linear equivalence of vertex divisors with
+chip-firing: firing a vertex changes a divisor by a Laplacian column
+\cite{gih-levine-tree}.
+
+\begin{proposition}[Integral refinement of the matrix-tree theorem]
+For a connected graph,
+\[
+ |\operatorname{Jac}(G)|=\det L_r=\tau(G),
+\]
+where \(\tau(G)\) is its number of spanning trees.  For the one-vertex
+graph the reduced matrix is empty and its determinant is one.
+\end{proposition}
+\begin{proof}
+Loops have zero incidence columns and belong to no spanning tree, so
+removing them preserves both $L_r$ and $\tau(G)$.
+The quadratic form $x^{\mathsf T}L_rx=\|B_r^{\mathsf T}x\|^2$ is positive
+definite: extend $x$ by zero at the root, and connectedness forces a
+function with zero edge differences to vanish. Thus
+$[\Z^{V\setminus\{r\}}\xrightarrow{L_r}\Z^{V\setminus\{r\}}]$, in degrees
+$-1,0$, is a perfect free resolution of $\operatorname{Jac}(G)$.
+Proposition~\ref{prop:derived-arithmetic-torsion} identifies its arithmetic
+torsion with $|\operatorname{Jac}(G)|$, while its determinant section has
+coefficient $\det L_r$. The unit-conductance case of
+Theorem~\ref{thm:glin-matrix-tree} gives $\det L_r=\tau(G)$.
+For one vertex the free complex is empty and its torsion is one.
+\end{proof}
+
+The determinant remembers only the order.  Smith normal form remembers
+the group: if unimodular row and column operations give
+\(\operatorname{diag}(d_1,\ldots,d_{n-1})\), with positive
+\(d_i\mid d_{i+1}\), then
+\[
+ \operatorname{Jac}(G)\cong\bigoplus_i\Z/d_i\Z.
+\]
+
+\begin{example}[Cycles and complete graphs]
+For a cycle \(C_m\), \(m\ge3\),
+\(\operatorname{Jac}(C_m)\cong\Z/m\Z\).  To see the group directly,
+number the vertices cyclically and write \(x_i=[v_i-v_0]\), with
+\(x_0=x_m=0\).  The Laplacian relations say
+\(2x_i=x_{i-1}+x_{i+1}\), hence \(x_i=ix_1\) and \(mx_1=0\).
+Conversely these substitutions satisfy every relation, including the
+relation at the root.  The reduced Smith form is therefore
+\(\operatorname{diag}(1,\ldots,1,m)\).
+
+For \(K_n\), \(n\ge2\), the reduced matrix is
+\(nI_{n-1}-J_{n-1}\), where \(J\) is the all-ones matrix.  Its
+presentation has generators \(e_1,\ldots,e_k\), \(k=n-1\), and relations
+\(ne_i-s=0\), where \(s=\sum e_j\).  Change the integral basis to
+\(d_i=e_i-e_k\), \(i<k\), and \(e_k\).  Subtracting the last relation
+from the others gives \(nd_i=0\), while the last relation becomes
+\(e_k-\sum_{i<k}d_i=0\).  Eliminate \(e_k\) to obtain
+\[
+ \operatorname{Jac}(K_n)\cong(\Z/n\Z)^{n-2},
+ \qquad \operatorname{SNF}(L_r)=\operatorname{diag}(1,n,\ldots,n).
+\]
+Thus \(K_4\) has sixteen spanning trees and Jacobian
+\(\Z/4\Z\oplus\Z/4\Z\).  It has the same tree count as \(C_{16}\),
+whose Jacobian is cyclic of order sixteen.  Even the finite group sees
+more than the determinant.  The case \(K_1\) has trivial Jacobian.
+\end{example}
+
+\subsection{The same group between cycles and cuts}
+
+Equip \(\Z^E\) with the standard edge inner product and define
+\[
+ F=\ker B,\qquad C=\operatorname{im}B^{\mathsf T}.
+\]
+These are the integral cycle and cut lattices.  Over \(\R\) they are
+orthogonal complements.  Each is primitive in \(\Z^E\): this is immediate
+for a kernel, while an integral real gradient has an integral potential
+after its root value is normalized to zero, by integration along paths.
+For an integral lattice \(\Lambda\), let
+\[
+ \Lambda^\#=\{x\in\Lambda\otimes\R:
+                 \langle x,\Lambda\rangle\subseteq\Z\}.
+\]
+
+\begin{proposition}[A finite integral gluing obstruction]
+There are isomorphisms of finite abelian groups
+\[
+ \operatorname{Jac}(G)\cong C^\#/C
+ \cong\Z^E/(C+F)\cong F^\#/F.
+\]
+In particular the determinant of either lattice is \(\tau(G)\).
+\end{proposition}
+\begin{proof}
+The vectors \(B^{\mathsf T}v\), for non-root vertex basis vectors \(v\),
+form a basis of \(C\) with Gram matrix \(L_r\); its discriminant group
+is the cokernel of that matrix.  Orthogonal projection
+\(p_C:\Z^E\to C\otimes\R\) has image \(C^\#\).  For the nontrivial
+inclusion, a homomorphism \(C\to\Z\) extends to \(\Z^E\to\Z\), since
+\(C\) is primitive and hence a direct summand as an abelian group.
+An integral vector represents the extended functional, and its projection
+represents the original one.  The kernel of \(p_C\) is \(F\), and the
+preimage of \(C\) is \(C+F\).  Interchanging \(C\) and \(F\) completes
+the proof.  The order of a discriminant group is its Gram determinant.
+\end{proof}
+
+This is the lattice description developed by Bacher, de la Harpe, and
+Nagnibeda \cite{gih-bacher-lattices}.  The real orthogonal decomposition
+always splits, but its integral version can fail to split; the Jacobian
+measures that failure.  For \(C_m\), a cycle generator has squared norm
+\(m\), so its rank-one discriminant group is visibly \(\Z/m\Z\).
+For a tree, \(F=0\) and \(C=\Z^E\), so the obstruction disappears.
+
+\section{Higher trees: the same exactness, with new arithmetic}
+\label{sec:gih-higher}
+
+Let \(X\) be a finite cell complex of dimension \(d\ge1\).  Use the
+augmented integral cellular chain complex, with
+\(\partial_0:C_0(X;\Z)\to\Z\) the sum of coefficients.  Thus degree
+zero homology below means \emph{reduced} homology.  Suppose
+\(\widetilde H_{d-1}(X;\Q)=0\).  A spanning \(d\)-tree is a subcomplex
+\(T\) containing the entire \((d-1)\)-skeleton and satisfying
+\[
+ H_d(T;\Q)=0,\qquad\widetilde H_{d-1}(T;\Q)=0.
+\]
+For \(d=1\) these are ordinary spanning trees. For \(d>1\),
+the definition constrains the top two homology groups. When all lower
+reduced rational homology of \(X\) also vanishes, the trees are rationally acyclic.
+
+Put \(Z_{d-1}=\ker\partial_{d-1}\), a free integral lattice of rank
+\(r\).  A tree has exactly \(r\) top cells: its boundary columns are a
+basis over \(\Q\) of \(Z_{d-1}\otimes\Q\).  Equivalently, any two of
+the following conditions imply the third: top-degree acyclicity,
+codimension-one rational vanishing, and the count \(r\).  This is the
+exact linear-algebraic continuation of the connected graph theorem.
+The boundary columns also define a representable matroid; its bases are
+the spanning trees under the stated vanishing assumption
+\cite{gih-dkm-trees}.
+
+\subsection{Why torsion is squared in the count}
+
+For a spanning \(d\)-tree \(T\), truncate its augmented chain complex
+to the top two homological degrees and reindex it as the perfect complex
+\[
+ K_T=[C_d(T;\Z)\xrightarrow{\partial_d}Z_{d-1}],
+ \qquad \deg K_T=(-1,0).
+\]
+Its kernel is zero and its cokernel is the finite group
+\(F_T=\widetilde H_{d-1}(T;\Z)\). The determinant line therefore has
+arithmetic torsion \(|F_T|\). Its shifted derived dual has cokernel
+\(F_T^\vee\); the universal coefficient theorem identifies this group
+with \(H^d(T;\Z)\). Consequently
+\[
+ |\widetilde H_{d-1}(T;\Z)|\,|H^d(T;\Z)|=|F_T|^2.
+\]
+This is the homology--cohomology square in
+\eqref{eq:derived-torsion-square}.
+
+Choose an integral basis of \(Z_{d-1}\) and express the full top
+boundary in it as \(A:\Z^{f_d}\to\Z^r\). A nonsingular \(r\)-column
+submatrix defines exactly a spanning tree, and its determinant section
+has coefficient \(\det A_T\), whose absolute value is \(|F_T|\).
+To assemble these sections, put
+\(Y=A\operatorname{diag}(\sqrt{w_\sigma})\), with positive cell
+weights, and let \(\omega\) be the unit integral volume form of
+\(Z_{d-1}\). Then
+\[
+ \Omega=\bigwedge^rY^*(\omega)
+   =\sum_{|S|=r}\det A_S
+                \prod_{\sigma\in S}\sqrt{w_\sigma}\,e_S^*.
+\]
+The cellular wedge vectors \(e_S^*\) are orthonormal. The squared norm of
+\(\Omega\) is \(\det(YY^{\mathsf T})\), so
+\begin{equation}\label{eq:gih-higher-cb}
+ \det\bigl(A\operatorname{diag}(w_\sigma)A^{\mathsf T}\bigr)
+   =\sum_T |\widetilde H_{d-1}(T;\Z)|^2
+                   \prod_{\sigma\in T_d}w_\sigma.
+\end{equation}
+Cauchy--Binet is the coordinate expression of this exterior norm.
+Derived duality identifies its arithmetic coefficients, and exact
+triangles give their contraction law. For graphs, finite reduced
+\(H_0\) is trivial, so every tree has weight one.
+
+The integral cycle basis fixes the volume normalization. Using the
+cellular metric on \(C_{d-1}\) instead introduces the covolume and
+torsion corrections of the general matrix-tree theorem
+\cite{gih-dkm-matrix,derived-catanzaro-chernyak-klein}. The broader
+torsion--tree theorem expresses Reidemeister torsion through alternating
+products of such enumerations~\cite{derived-catanzaro-chernyak-klein}.
+
+\subsection{Cayley's formula in every dimension}
+
+Let \(K_{n,d}\) be the complete \(d\)-skeleton on \(n\) labelled
+vertices, where \(1\le d\le n-1\).  Its spanning trees retain every
+face of dimension less than \(d\), and have \(\binom{n-1}{d}\)
+\(d\)-faces.  Kalai's theorem is
+\begin{equation}
+ \boxed{\displaystyle
+ \sum_{\substack{T\subseteq K_{n,d}\\
+             T\text{ a spanning }d\text{-tree}}}
+ |\widetilde H_{d-1}(T;\Z)|^2
+       =n^{\binom{n-2}{d}}.}
+ \label{eq:gih-kalai}
+\end{equation}
+The binomial coefficient is zero if \(d=n-1\).  The formula includes
+Cayley's count for \(d=1\), but in higher dimensions it is a
+torsion-weighted count \cite{gih-kalai}.
+
+The complete simplex gives a split Koszul resolution. Its contracting homotopy will determine the determinant-line volume and the power of $n$.  Distinguish one root vertex.  The cycles
+\(z_I=\partial[\text{root},I]\), indexed by \(d\)-element subsets
+\(I\) of the other vertices, form an integral basis of
+\(Z_{d-1}\).  Independence follows from the unique non-root face
+\([I]\) in each cycle; generation follows from the cone contraction
+\(c=\partial(\text{root}*c)\) for a cycle \(c\).  The top boundary
+matrix in that basis is
+\(A=[I\mid D]\): root-containing top faces give the identity, and
+\(D\) is the simplex boundary matrix on the remaining \(n-1\) vertices.
+
+Identify its chain groups with exterior powers of \(\R^{n-1}\).
+Writing $u=(1,\ldots,1)$, the boundary operator is contraction
+$\iota_u$, and its adjoint is exterior multiplication
+$\varepsilon_u$. The Koszul relation
+\[
+ \iota_u\varepsilon_u+\varepsilon_u\iota_u=\|u\|^2I
+\]
+gives a contracting homotopy $\varepsilon_u/\|u\|^2$ for the full augmented simplex complex. It also controls the metric on each exterior degree. Thus
+\[
+ AA^{\mathsf T}=I+\iota_u\varepsilon_u
+                  \quad\text{on }\bigwedge^d\R^{n-1}.
+\]
+Decompose \(\R^{n-1}=\R u\oplus u^\perp\).  On
+\(\bigwedge^d u^\perp\), the operator \(\iota_u\varepsilon_u\)
+is multiplication by \(\|u\|^2=n-1\); on
+\(u\wedge\bigwedge^{d-1}u^\perp\), it is zero.  Hence the eigenvalues
+of \(AA^{\mathsf T}\) are \(n\), with multiplicity
+\(\binom{n-2}{d}\), and \(1\), with multiplicity
+\(\binom{n-2}{d-1}\).  Taking the determinant in
+\eqref{eq:gih-higher-cb} proves \eqref{eq:gih-kalai}.
+The full simplex's permutation symmetry and its exterior algebra have
+organized an entire family of tree enumerations.
+
+\begin{example}[Four higher trees on four vertices]
+For \(n=4,d=2\), there are four triangular faces.  Every tree has three
+of them: remove any one face from the tetrahedron's boundary.  The
+result is a triangulated disk, so its homology has no torsion.  Formula
+\eqref{eq:gih-kalai} gives \(4^{\binom22}=4\), the ordinary count in
+this small case.
+\end{example}
+
+\begin{example}[A higher tree that remembers the number two]
+On vertices \(1,\ldots,6\), take all fifteen edges and the ten faces
+\[
+ 123,\ 124,\ 135,\ 146,\ 156,\
+ 236,\ 245,\ 256,\ 345,\ 346.
+\]
+Each edge belongs to two faces and every vertex link is a five-cycle.
+Thus this is a connected closed triangulated surface with Euler
+characteristic \(6-15+10=1\), namely \(\R P^2\).
+
+The torsion is visible without appealing to the surface classification.
+Use the integral cycle basis
+\(z_{ij}=\partial[1,i,j]\), \(2\le i<j\le6\), for the complete
+one-skeleton.  The first five faces kill
+\(z_{23},z_{24},z_{35},z_{46},z_{56}\).  The other five impose
+\[
+ z_{36}=z_{26},\quad z_{45}=z_{25},\quad z_{25}=z_{26},
+ \quad z_{34}=-z_{45},\quad z_{34}=z_{36}.
+\]
+All remaining generators reduce to one \(a\) with \(2a=0\), and
+mapping \(a\) to \(1\in\Z/2\Z\) respects every relation.  Therefore
+\[
+ H_1(T;\Z)\cong\Z/2\Z,
+ \qquad \operatorname{SNF}(A_T)
+        =\operatorname{diag}(1,1,1,1,1,1,1,1,1,2).
+\]
+The square boundary map has full rank, so \(H_2(T;\Z)=0\).
+This is a spanning two-tree of \(K_{6,2}\), but it contributes four
+to the weighted count, not one.  The complete count is \(6^6=46656\);
+it is a count with arithmetic multiplicity.
+
+The distinction can be made completely numerical. Exhaustive exact enumeration of the $\binom{20}{10}=184756$ possible ten-face sets gives 46608 integral-acyclic trees and twelve trees with first homology $\Z/2\Z$. The latter are all relabellings of the projective-plane triangulation above. Their automorphism group is $A_5$, of order $60$, so orbit--stabilizer explains their number as $6!/60=12$. Hence the ordinary number of rational two-trees is $46620$, whereas the determinant counts
+\[
+ 46608+12\cdot 2^2=46656=6^6.
+\]
+These counts can be reproduced by forming the twenty boundary columns in the ten cone-cycle coordinates and computing every ten-column minor with exact integer elimination.
+\end{example}
+
+\subsection{Acyclicity is not contractibility}
+
+The projective-plane example already distinguishes rational acyclicity
+from contractibility.  Even \emph{integral} acyclicity can miss a
+nontrivial fundamental group.  Form the two-dimensional presentation
+complex of
+\[
+ P=\langle s,t\mid(st)^2=s^3=t^5\rangle.
+\]
+It has one vertex, two one-cells, and two two-cells.  The exponent sums
+of the two attaching words \((st)^2s^{-3}\) and \(s^3t^{-5}\) give
+\[
+ \partial_2=
+ \begin{pmatrix}-1&3\\2&-5\end{pmatrix},
+ \qquad \det\partial_2=-1.
+\]
+Its positive-degree integral homology vanishes.  Nevertheless \(P\)
+is the binary icosahedral group of order 120
+\cite{gih-brini-icosahedral}; the complex is not contractible.
+
+For a graph, the fundamental group is free, and its abelianization
+detects its rank. Two-cells introduce relations, so a nontrivial perfect
+group can survive with trivial abelianization. Higher trees extend the
+boundary-map argument while exposing this distinction between homology
+and homotopy.
+
+
+% Standalone integration module; relies on the surrounding theorem environments
+% and on the macros \Q, \Z, \R, \C. No new macros are introduced.
+\section{A probability law that survives in every dimension}
+\label{hte-section}
+
+The higher-tree determinant also gives a probability law. Its weights are
+the squared orders of finite integral homology groups.
+Lyons~\cite{hte-lyons-determinantal,hte-lyons-complexes} developed this
+probabilistic theory; the finite argument below allows arbitrary positive cell weights.
+
+Keep a finite nonempty CW-complex $X$ of dimension $d\geq1$ satisfying
+\[
+\widetilde H_{d-1}(X;\Q)=0.
+\]
+Use the augmented integral chains of Section~\ref{sec:gih-higher}, so
+degree-zero homology is reduced. Choose an integral basis of the cycle
+lattice $Z_{d-1}=\ker\partial_{d-1}$, write $r$ for its rank, and let $f$
+be the number of $d$-cells. In this basis the top boundary is
+\[
+A:C_d(X;\Z)\longrightarrow Z_{d-1}\cong\Z^r,
+\qquad A\in\Z^{r\times f},
+\]
+and the homology hypothesis gives it full row rank. By the spanning-tree
+criterion in Section~\ref{sec:gih-higher}, its nonsingular $r$-column
+submatrices are exactly the spanning $d$-trees. For each such tree,
+\begin{equation}
+\label{hte-torsion-index}
+\widetilde H_{d-1}(T;\Z)\cong\Z^r/A_T\Z^r,
+\qquad
+t(T):=\bigl|\widetilde H_{d-1}(T;\Z)\bigr|=|\det A_T|.
+\end{equation}
+The group is finite, and the trivial group has order one.
+
+\begin{theorem}[Torsion-weighted cellular transfer-current law]
+\label{hte-general-theorem}
+Assign a positive real weight $w_\sigma$ to each $d$-cell. Put
+\[
+W=\operatorname{diag}(w_\sigma),\qquad
+Y=AW^{1/2},\qquad M=AWA^t=YY^t.
+\]
+Then the partition function is
+\begin{equation}
+\label{hte-partition}
+\mathcal Z_X(w)
+=\sum_{T}t(T)^2\prod_{\sigma\in T}w_\sigma
+=\det M.
+\end{equation}
+Give spanning $d$-trees the probability distribution
+\[
+\Pr_w(T)=\frac{t(T)^2\prod_{\sigma\in T}w_\sigma}{\mathcal Z_X(w)}.
+\]
+The matrix
+\begin{equation}
+\label{hte-kernel}
+K=Y^tM^{-1}Y
+=W^{1/2}A^t(AWA^t)^{-1}AW^{1/2}
+\end{equation}
+is the orthogonal projection onto the row space of $Y$. For every set $S$
+of $d$-cells,
+\begin{equation}
+\label{hte-joint-law}
+\Pr_w(S\subseteq T)=\det K_S,
+\end{equation}
+where $K_S$ is the principal submatrix indexed by $S$. In particular, for
+distinct cells $\sigma,\tau$,
+\begin{equation}\label{hte-marginal}
+\Pr_w(\sigma\in T)=K_{\sigma\sigma}.
+\end{equation}
+\begin{equation}\label{hte-covariance}
+\operatorname{Cov}_w\bigl(\mathbf1_{\sigma\in T},\mathbf1_{\tau\in T}\bigr)
+=-K_{\sigma\tau}^{\,2}\leq0.
+\end{equation}
+The partition function, probability distribution, and kernel are unchanged
+by changing the integral basis of $Z_{d-1}$.
+\end{theorem}
+
+\begin{proof}
+The top boundary complex of a tree is a rationally acyclic resolution of its finite homology $F_T$. Its shifted derived dual resolves $F_T^\vee$. The torsion product in \eqref{eq:derived-torsion-square} identifies the squared arithmetic coefficient as $t(T)^2$. Applying the exterior norm in \eqref{eq:gih-higher-cb} gives the partition function; positive weights and full row rank make $M$ positive definite.
+
+Normalize the boundary volume to a unit generator of $\det(\operatorname{im}Y^t)$. Its squared cellular coordinates are exactly $\Pr_w(T)$, by \eqref{eq:derived-exterior-coordinates}. The orthogonal projection onto this image is $K=Y^tM^{-1}Y$. Theorem~\ref{thm:derived-exterior-law} therefore gives every joint-inclusion probability. Single and double exterior contractions yield the marginal and covariance formulas; the latter is the two-vector Gram determinant.
+
+Changing the integral cycle basis transports the determinant section by a unit in $\Z$, whose absolute value is one. It changes neither its normalized line nor the coordinate probabilities. The row subspace, hence its orthogonal projection, is likewise unchanged. In rank zero the determinant line is $\R$, its unit generator is $1$, and the only selected set is empty. This gives the stated conventions.
+\end{proof}
+
+Changing the orientation of a top cell conjugates $K$ by a diagonal sign
+matrix, so principal determinants are unchanged. The ensemble depends on
+the cellular decomposition: subdivision changes its ground set and trees.
+The integral cycle basis fixes the normalization of $M$ and
+\eqref{hte-partition}, as described above.
+
+For $d=1$, the hypothesis says that the graph is connected. Every spanning
+tree has trivial reduced $H_0$, so $t(T)=1$. The theorem becomes the
+weighted graph matrix-tree and transfer-current laws. For $d\geq2$,
+finite homology can be nontrivial; the same projection law naturally
+selects a different measure.
+
+\begin{corollary}[Adding a cell and measuring its influence]
+\label{hte-cell-addition}
+Attach an additional $d$-cell to $X$, keeping the lower skeleton fixed,
+and let its cellular boundary have cycle-coordinate vector $a\in\Z^r$.
+Give it weight $s>0$. If $q=a^tM^{-1}a$, then
+\[
+\mathcal Z_{X\cup\sigma}(w,s)=\mathcal Z_X(w)(1+sq),
+\qquad
+\Pr_{w,s}(\sigma\in T)=\frac{sq}{1+sq}.
+\]
+For an existing cell,
+\[
+\frac{\partial\log\mathcal Z_X}{\partial\log w_\sigma}
+=\Pr_w(\sigma\in T).
+\]
+\end{corollary}
+
+\begin{proof}
+The new matrix is $M+saa^t$. The matrix determinant lemma gives the first
+identity. Trees avoiding the new cell retain total weight
+$\mathcal Z_X(w)$, so their complement gives the probability stated.
+Differentiating the finite sum in \eqref{hte-partition} proves the final
+identity.
+\end{proof}
+
+In the graph case $a$ is the difference of the two endpoint vectors and
+$q$ is their effective resistance in the original weighted network.
+The same insertion formula measures how a new cell boundary changes the
+torsion-weighted family.
+
+\subsection{An explicit correlation formula in every dimension}
+
+Let $X_{n,d}$ be the complete $d$-dimensional simplicial complex on $n$
+labelled vertices, with $1\leq d\leq n-1$, and give its top faces unit
+weights. Write $D$ for the ordinary boundary matrix from oriented
+$d$-faces to oriented $(d-1)$-faces. Its rows use cellular coordinates. Its row space is the same as that of
+$A$: writing the cycle-basis embedding as $B$ gives $D=BA$ with $B$ injective.
+
+\begin{corollary}[Complete-complex transfer-current formula]
+\label{hte-complete-complex}
+For a torsion-weighted random spanning $d$-tree of $X_{n,d}$,
+\[
+K=\frac1nD^tD,
+\qquad
+\Pr(\sigma\in T)=\frac{d+1}{n}.
+\]
+For distinct $d$-faces $\sigma,\tau$,
+\[
+\Pr(\sigma,\tau\in T)=
+\begin{cases}
+\displaystyle\frac{d(d+2)}{n^2},
+ &\text{if $\sigma,\tau$ share a $(d-1)$-face},\\[4pt]
+\displaystyle\frac{(d+1)^2}{n^2},
+ &\text{otherwise}.
+\end{cases}
+\]
+The number of top faces in every such tree is $\binom{n-1}{d}$.
+\end{corollary}
+
+\begin{proof}
+Identify the oriented simplicial chain spaces with exterior powers of
+$\R^n$. For $u=e_1+\cdots+e_n$, the boundary is contraction
+$D=\iota_u$ and its adjoint is exterior multiplication
+$D^t=\varepsilon_u$, where $\varepsilon_u(v)=u\wedge v$. The identities
+\[
+\iota_u^2=\varepsilon_u^2=0,
+\qquad
+\iota_u\varepsilon_u+\varepsilon_u\iota_u=nI
+\]
+give $(D^tD)^2=nD^tD$. Thus $D^tD/n$ is the orthogonal projection onto
+the row space of $D$, which equals the row space of $A$ and hence is the
+kernel in \eqref{hte-kernel}.
+
+Each boundary column has $d+1$ entries equal to $\pm1$, so the diagonal
+entries of $K$ are $(d+1)/n$. Two distinct top faces have one common
+boundary face exactly when they share $d$ vertices. In that case the
+corresponding off-diagonal entry is $\pm1/n$; in every other case it is
+zero. The two-cell determinant proves the formula. Finally, splitting
+$\R^n=\R u\oplus u^\perp$ shows that contraction maps
+$u\wedge\Lambda^d u^\perp$ isomorphically onto
+$\Lambda^d u^\perp$ and annihilates $\Lambda^{d+1}u^\perp$.
+Its rank is therefore $\binom{n-1}{d}$.
+\end{proof}
+
+Cells with no common boundary face are pairwise independent. For a larger
+collection, the joint law is the principal determinant \eqref{hte-joint-law}.
+The familiar complete-graph edge probability $2/n$ belongs to the family
+$(d+1)/n$ in all dimensions.
+
+\subsection{Six vertices: torsion removes a positive correlation}
+
+For $X_{6,2}$ there are $20$ triangles and every spanning two-tree has
+$10$ triangles. The complete-complex kernel is
+\[
+K=\frac16D^tD.
+\]
+Every triangle has inclusion probability $1/2$. Two triangles sharing an
+edge have joint probability $2/9$ and covariance $-1/36$. Triangles
+sharing just a vertex, or having disjoint vertex sets, have joint
+probability $1/4$ and covariance zero.
+
+The projective-plane example gave $46608$ integral-acyclic trees and
+twelve trees with first homology $\Z/2\Z$. The ordinary and
+torsion-weighted counts are therefore
+\[
+\#\{\text{rational two-trees}\}=46620,
+\qquad
+\sum_Tt(T)^2=46608+4\cdot12=46656=6^6.
+\]
+We now compare the corresponding probability measures. Under the uniform measure
+each of the $46620$ trees has equal weight. Under the determinant measure
+each projective-plane triangulation has weight four. The probability of
+obtaining one of those twelve triangulations is therefore
+\[
+\Pr_{\mathrm{unif}}(\R P^2)=\frac1{3885},
+\qquad
+\Pr_{\mathrm{torsion}}(\R P^2)=\frac1{972}.
+\]
+
+The effect reaches beyond the probability of torsion itself. Exact
+inclusion counts give the following comparison; both measures have
+one-triangle marginal $1/2$.
+\[
+\begin{array}{lcc}
+\text{Triangle relation}&\text{Uniform covariance}&\text{Torsion covariance}\\
+\text{Share an edge}&-431/15540&-1/36\\
+\text{Share one vertex}&-1/15540&0\\
+\text{Disjoint vertices}&1/5180&0
+\end{array}
+\]
+In particular, the complementary triangles $123$ and $456$ occur
+together in $11664$ uniformly counted trees. Thus
+\[
+\Pr_{\mathrm{unif}}(123,456\in T)
+=\frac{11664}{46620}
+=\frac{324}{1295},
+\qquad
+\operatorname{Cov}_{\mathrm{unif}}
+ (\mathbf1_{123\in T},\mathbf1_{456\in T})
+=\frac1{5180}>0.
+\]
+Uniform rational higher trees can have positively correlated faces.
+Weighting by squared torsion orders gives the projection law, with zero
+covariance for this pair.
+
+For reproducibility, the enumeration uses the cycle basis
+$c_{ij}=\partial[1ij]$, $2\leq i<j\leq6$, of the complete graph.
+The ten triangle columns containing vertex $1$ are unit vectors;
+for $2\leq i<j<k\leq6$, the remaining columns are
+\[
+\partial[ijk]=c_{jk}-c_{ik}+c_{ij}.
+\]
+One runs through all ten-column subsets, evaluates their determinants
+by checked fraction-free elimination, and accumulates either weight
+$1$ or weight $(\det A_T)^2$ for each nonsingular subset. For each fixed
+pair, the resulting raw and weighted counts are respectively
+$10362,10368$ when the triangles share an edge;
+$11652,11664$ when they share one vertex; and $11664,11664$ when they
+are complementary. All pairs in a given class have the same counts.
+The weighted counts also follow independently from the projection
+formula. The computation verifies the finite counts and homology orders.
+
+
+\section{When higher intersection theory proves a graph inequality}
+\label{sec:graph-matroid-hodge}
+
+The boundary presentation also records the graph's edge dependencies. We first realize its chromatic coefficients as Tate cohomology, using localization and Hodge weights. An intersection pairing in a compactification will then constrain those dimensions: consecutive coefficients satisfy $a_k^2\ge a_{k-1}a_{k+1}$. Huh proved this graph inequality using algebraic geometry \cite{gmhHuh2012}; Adiprasito, Huh, and Katz established the underlying Hodge theory for arbitrary matroids \cite{gmhAHK2018}. The proof below follows the two geometric realizations and their coefficient identity.
+
+% Proposed insertion at the start of the present matroid-Hodge section.
+% Framework inputs: Deligne's functorial mixed Hodge theory and Gysin purity;
+% Voevodsky's motivic Gysin triangle. All arrangement and graph deductions below are supplied.
+\subsection{Deletion--contraction as a derived triangle}
+\label{sec:dag-coloring-space}
+
+The chromatic coefficients can be realized as dimensions of cohomology spaces.
+Give each vertex a complex coordinate, and regard an edge as a forbidden
+equality. The resulting \emph{coloring space} is the smooth variety
+\[
+ \mathcal C_G=\{(z_v)\in\A^V:\ z_u\ne z_v\text{ for every edge }uv\}.
+\]
+Its defining equations have rational coefficients. A point over a finite
+field is a proper coloring by elements of that field. Over $\C$, the same
+equations give a hyperplane-arrangement complement. Write
+$P_G(t)=\sum_k\dim_\Q H^k(\mathcal C_G,\Q)t^k$.
+Parallel edges repeat a constraint and change neither the space nor the
+chromatic polynomial. A loop makes both the coloring space empty and
+the chromatic polynomial zero. We therefore work with the simple graph
+obtained by removing repeated parallel constraints.
+
+\begin{theorem}[Chromatic coefficients as Tate cohomology]
+\label{thm:dag-chromatic-tate}
+For a finite simple graph on $n\ge1$ vertices, if
+$\chi_G(q)=\sum_{k=0}^n(-1)^k b_kq^{n-k}$, then
+\[
+ H^k(\mathcal C_G,\Q)\cong\Q(-k)^{b_k},\qquad
+ P_G(t)=(-t)^n\chi_G(-1/t).
+\]
+For each edge $e$, there is a natural short exact sequence of mixed Hodge
+structures
+\begin{equation}\label{eq:dag-deletion-restriction}
+ 0\longrightarrow H^k(\mathcal C_{G\setminus e},\Q)
+ \longrightarrow H^k(\mathcal C_G,\Q)
+ \xrightarrow{\operatorname{Res}_e}
+ H^{k-1}(\mathcal C_{G/e},\Q)(-1)\longrightarrow0.
+\end{equation}
+Parallel edges in $G/e$ impose the same equality and are discarded.
+\end{theorem}
+
+The shift in degree and the Tate twist arise together from codimension one.
+We use the following framework input. If $D$ is a smooth closed divisor in
+a smooth complex algebraic variety $X$, and $U=X\setminus D$, localization
+and purity give
+\begin{equation}\label{eq:dag-gysin-realization}
+ R\Gamma(D,\Q)(-1)[-2]\longrightarrow R\Gamma(X,\Q)
+ \longrightarrow R\Gamma(U,\Q)
+ \longrightarrow R\Gamma(D,\Q)(-1)[-1].
+\end{equation}
+Here derived global sections retain the cochain complex and its maps;
+$[-2]$ places the divisor's contribution two cohomological degrees later.
+This is the localization triangle with support on $D$, together with the
+purity identification of that support complex. Its cohomology sequence is
+exact in mixed Hodge structures. Deligne supplies this structure and the
+strictness of its maps \cite[\S2.3, \S3]{dagDeligneHodgeII}; the corresponding
+arrangement argument is treated by Shapiro \cite{dagShapiro1993}.
+Our convention is that $\Q(-1)$ has type $(1,1)$ and weight $2$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:dag-chromatic-tate}]
+We first prove a slightly broader assertion: for the complement $U$ of
+any finite arrangement of distinct affine hyperplanes, $H^k(U,\Q)$ is
+pure of type $(k,k)$ and vanishes above the ambient dimension.
+Induct on the number of hyperplanes, simultaneously
+in every ambient dimension. With no hyperplanes, affine space has only
+$H^0=\Q(0)$.
+
+Delete one hyperplane $H$. Let $X$ be the complement of the remaining
+hyperplanes and $D=H\cap X$. Then $D$ is a closed smooth divisor in $X$,
+and is itself a hyperplane-arrangement complement in $H$: omit empty
+intersections and identify repeated ones. Both $X$ and $D$ have fewer
+hyperplanes, so induction applies. The relevant part of
+\eqref{eq:dag-gysin-realization} is
+\[
+ H^{k-2}(D)(-1)\xrightarrow{i_*}H^k(X)
+ \longrightarrow H^k(U)\longrightarrow H^{k-1}(D)(-1)
+ \xrightarrow{i_*}H^{k+1}(X).
+\]
+The first Gysin map goes from weight $2k-2$ to weight $2k$; the last goes
+from weight $2k$ to weight $2k+2$. A morphism between pure Hodge structures
+of different weights is zero. Thus both maps vanish, giving
+\[
+ 0\longrightarrow H^k(X)\longrightarrow H^k(U)
+ \longrightarrow H^{k-1}(D)(-1)\longrightarrow0.
+\]
+Both ends are pure of type $(k,k)$. Exactness and strictness imply that the
+middle has the same type and weight. The sequence also proves the asserted
+vanishing, since $D$ has one lower dimension. A rational Hodge structure
+of this type is a direct sum of $\Q(-k)$, proving the induction. The sequence is
+natural; a direct-sum decomposition requires a choice of splitting.
+
+For a graph edge $e=uv$, take $H=\{z_u=z_v\}$.
+Then $X=\mathcal C_{G\setminus e}$, while identifying the two equal
+coordinates identifies $D$ with $\mathcal C_{G/e}$. Hence the sequence
+above is \eqref{eq:dag-deletion-restriction}, and
+\begin{equation}\label{eq:dag-poincare-recurrence}
+ P_G(t)=P_{G\setminus e}(t)+tP_{G/e}(t).
+\end{equation}
+Put $R_G(q)=q^nP_G(-1/q)$. Since contraction reduces the number of vertices
+by one, \eqref{eq:dag-poincare-recurrence} becomes
+$R_G=R_{G\setminus e}-R_{G/e}$.
+The chromatic polynomial satisfies the same recurrence: colorings of
+$G\setminus e$ with equal colors at $u,v$ are exactly colorings of $G/e$.
+For an edgeless graph both polynomials are $q^n$. Induction therefore gives
+$R_G=\chi_G$. Comparing coefficients proves the theorem.
+\end{proof}
+
+The numerical deletion--contraction identity has become an exact sequence
+of cohomology spaces. The decisive step was the vanishing forced by their
+weights. The Betti-number formula is also a consequence of the
+Orlik--Solomon description of arrangement cohomology
+\cite[Theorem 5.2 and formula (1.4)]{dagOrlikSolomon1980}; the argument here
+exhibits the derived triangle that produces it.
+
+\begin{example}[The triangle's two cohomology degrees]
+For $K_3$, quotient by simultaneous translation and put
+$a=z_1-z_3$, $b=z_2-z_3$. The forbidden lines are $a=0$, $b=0$, and $a=b$.
+Deleting the edge $12$ gives
+$\mathcal C_{K_3\setminus12}\cong\A^1\times\Gm^2$;
+on its divisor $a=b$, the restriction is $\A^1\times\Gm$.
+Consequently
+\[
+ P_{K_3}(t)=(1+t)^2+t(1+t)=1+3t+2t^2,
+\]
+so $H^1=\Q(-1)^3$, $H^2=\Q(-2)^2$, and
+$\chi_{K_3}(q)=q^3-3q^2+2q$.
+The residue of $(2\pi i)^{-1}d\log(a-b)$ is $1$ on the divisor.
+Wedge it with $(2\pi i)^{-1}d\log a$ to obtain a class whose residue
+generates the divisor's first cohomology. Thus the extra degree-one and
+degree-two classes are visible in the residue maps themselves.
+For a tree, the edge differences and one root coordinate instead give
+$\mathcal C_G\cong\A^1\times\Gm^{n-1}$, hence $P_G=(1+t)^{n-1}$.
+\end{example}
+
+\subsection{Reduced coefficients and the motivic lift}
+\label{sec:dag-reduced-motivic}
+
+Suppose now that $G$ is connected and loopless, with $n\ge2$.
+Quotient the coordinate space by
+simultaneous translation and let $V$ be the resulting $(n-1)$-dimensional
+vector space. Its arrangement complement $\mathcal U_G$ satisfies
+$\mathcal C_G\cong\A^1\times\mathcal U_G$.
+Let $\overline{\mathcal U}_G$ be the complement of the projectivized
+arrangement in $\mathbb P(V)$. Choose an edge form $f_e=z_u-z_v$.
+It never vanishes on $\mathcal U_G$, so the unique representative with
+$f_e=1$ supplies an algebraic isomorphism
+\[
+ \mathcal U_G\cong\Gm\times\overline{\mathcal U}_G.
+\]
+The projective complement is thus also an affine arrangement complement.
+Künneth gives $P_G(t)=(1+t)P_{\overline{\mathcal U}_G}(t)$, and the theorem
+gives
+\[
+ \frac{\chi_G(q)}{q(q-1)}
+ =q^{n-2}P_{\overline{\mathcal U}_G}(-1/q).
+\]
+The positive reduced characteristic coefficients $\mu_k$ are therefore
+\begin{equation}\label{eq:dag-reduced-betti}
+ \mu_k=\dim_\Q H^k(\overline{\mathcal U}_G,\Q),\qquad
+ H^k(\overline{\mathcal U}_G,\Q)\cong\Q(-k)^{\mu_k}.
+\end{equation}
+For the square, $P_G=1+4t+6t^2+3t^3$ and
+$P_{\overline{\mathcal U}_G}=1+3t+3t^2$.
+The three Betti numbers $(1,3,3)$ will reappear as the mixed intersection
+numbers in its wonderful compactification. The coefficient identity links
+these two realizations; Hodge--Riemann positivity in the compactification
+will then constrain the ranks of the open complement's Tate cohomology.
+
+There is a motivic triangle behind the same deletion. For varieties over
+$\Q$, Voevodsky's Gysin theorem supplies
+\begin{equation}\label{eq:dag-motivic-deletion}
+ M(\mathcal C_G)\longrightarrow M(\mathcal C_{G\setminus e})
+ \longrightarrow M(\mathcal C_{G/e})(1)[2]
+ \longrightarrow M(\mathcal C_G)[1]
+\end{equation}
+in $DM_{\mathrm{gm}}(\Q;\Q)$
+\cite[Proposition 3.5.4]{dagVoevodsky2000}.
+Here a mixed Tate motive means an object in the thick triangulated
+subcategory generated by the Tate objects $\Q(j)$.
+Affine space has motive $\Q(0)$, and this subcategory is closed under
+twists, shifts, and cones. Induction on the hyperplanes in the triangle
+therefore proves that every coloring-space motive is mixed Tate.
+The triangle retains the maps that produced the recurrence, while the
+Hodge realization identifies each cohomology degree as a pure Tate space.
+This supplies both an object and a realization for the chromatic
+coefficients before we impose their intersection-theoretic inequality.
+
+
+\subsection{From edges to a graded intersection ring}
+
+In this section let $G$ be connected and loopless, with at least two vertices. A graph with a loop has identically zero chromatic polynomial and can be handled separately. The graphic matroid $\mathcal M(G)$ retains which edge sets are forests. Its rank function is
+\[
+ \operatorname{rk}(S)=|V|-c(V,S),
+\]
+where $c(V,S)$ counts components, including isolated vertices. This is also the rank of the incidence columns indexed by $S$. Thus a connected graph has matroid rank $r=|V|-1$. A matroid abstracts this independence structure; it need not come from a graph or a configuration of vectors.
+
+A \emph{flat} is a subset $F$ such that adding any outside element increases its rank. For a graphic matroid, $F$ contains every graph edge whose endpoints are already connected in $(V,F)$. The flats organize which dependencies have already been generated.
+
+For a loopless matroid on a nonempty ground set $E$, introduce a degree-one variable $x_F$ for each nonempty proper flat. Its real Chow ring is
+\[
+ A^*(\mathcal M)=\R[x_F]/(I+J),
+\]
+where $I$ is generated by $x_Fx_H$ for incomparable flats, and $J$ by
+\[
+ \sum_{F\ni i}x_F-\sum_{F\ni j}x_F,
+ \qquad i,j\in E.
+\]
+Put $d=r-1$. The top degree is $d$, with a degree map normalized by
+\[
+ \deg(x_{F_1}\cdots x_{F_d})=1
+ \quad\text{for }F_1\subsetneq\cdots\subsetneq F_d.
+\]
+This ring turns flags of dependencies into products whose degrees are intersection numbers.
+
+The arrangement of Section~\ref{sec:dag-reduced-motivic} realizes this graphic matroid: intersections of edge hyperplanes impose equality within the components of an edge set, so their codimensions equal the matroid ranks. A wonderful compactification of its projective complement produces the intersection ring above. This geometric realization is discussed in Section 5 of \cite{gmhAHK2018}.
+
+In this geometric realization, $x_F$ is a divisor class, of codimension one, and multiplication records intersections of divisors. Chow degree one therefore corresponds to cohomological degree two. For a connected graph on $N$ vertices, the top intersection degree is $N-2$. This grading belongs to the arrangement compactification, rather than the ordinary cohomology of the graph. The Adiprasito--Huh--Katz theorem establishes the corresponding intersection theory even for matroids without an arrangement realization.
+
+Two distinguished classes are
+\[
+ \alpha=\sum_{F\ni i}x_F,
+ \qquad \beta=\sum_{F\not\ni i}x_F.
+\]
+Their classes are independent of $i$: the first assertion is a defining linear relation, and the second follows because $\alpha+\beta=\sum_Fx_F$.
+
+The positive classes needed for Hodge theory come from strictly submodular functions $c$ on subsets, with $c_\varnothing=c_E=0$:
+\[
+ c(S)+c(T)>c(S\cap T)+c(S\cup T)
+ \quad\text{if }S,T\text{ are incomparable}.
+\]
+They give $\ell(c)=\sum_Fc(F)x_F$. For example $c(S)=|S||E\setminus S|$ works. The resulting ample cone is nonempty; a class in its closure is called nef. The classes $\alpha,\beta$ are nef. One can see this directly by averaging their representatives over $i\in E$: their coefficients become $|F|/|E|$ and $1-|F|/|E|$. The corresponding functions on nonempty proper subsets, extended by zero at $\varnothing,E$, are weakly submodular. Adding $\varepsilon|S||E\setminus S|$ makes either function strictly submodular, and taking $\varepsilon\to0$ exhibits the nef limits.
+
+\subsection{The deep theorem and its short numerical consequence}
+
+\begin{theorem}[Adiprasito--Huh--Katz, cited input]\label{thm:gmh-hodge}
+For an ample class $\ell$, multiplication by $\ell^{d-2j}$ gives
+\[
+ A^j(\mathcal M)\longrightarrow A^{d-j}(\mathcal M)
+\]
+as an isomorphism for $0\le j\le d/2$. The form
+\[
+ (-1)^j\deg(a\,b\,\ell^{d-2j})
+\]
+is positive definite on the primitive subspace
+\[
+ \ker\bigl(\ell^{d-2j+1}:A^j\longrightarrow A^{d-j+1}\bigr).
+\]
+These are hard Lefschetz and the Hodge--Riemann relations.
+\end{theorem}
+
+For $d\ge2$, the useful sign in degree one is that $Q_\ell(a,b)=\deg(ab\ell^{d-2})$ is negative definite perpendicular to the positive direction $\ell$.
+
+\begin{proposition}[The numerical inequality]\label{prop:gmh-hodge-index}
+For $d\ge2$, any $a\in A^1$, and any nef $b\in A^1$,
+\[
+ \deg(a^2b^{d-2})\deg(b^d)
+ \le\deg(ab^{d-1})^2.
+\]
+\end{proposition}
+\begin{proof}
+First take $b$ ample. Write $a=tb+p$, where $\deg(pb^{d-1})=0$. Hard Lefschetz and Hodge--Riemann give $\deg(b^d)>0$ and $Q_b(p,p)\le0$. Consequently
+\[
+ Q_b(a,a)Q_b(b,b)
+ =t^2Q_b(b,b)^2+Q_b(p,p)Q_b(b,b)
+ \le Q_b(a,b)^2.
+\]
+For nef $b$, choose an ample $h$ and use the inequality for $b+\varepsilon h$, $\varepsilon>0$. Letting $\varepsilon\to0$ proves the assertion by continuity.
+\end{proof}
+
+This is a reversed Cauchy--Schwarz inequality, caused by the single positive direction of an intersection form. The connection to enumeration is another precise theorem: if
+\[
+ \overline\chi_{\mathcal M}(q)
+ =\frac{\chi_{\mathcal M}(q)}{q-1}
+ =\sum_{k=0}^d(-1)^k\mu_kq^{d-k},
+\]
+then its positive integer coefficients satisfy
+\begin{equation}\label{eq:gmh-coefficient-intersections}
+ \mu_k=\deg(\alpha^{d-k}\beta^k).
+\end{equation}
+This coefficient identity is Proposition 9.5 of \cite{gmhAHK2018}. Applying the numerical inequality with $a=\alpha,b=\beta$ gives
+\[
+ \mu_{d-2}\mu_d\le\mu_{d-1}^2.
+\]
+All other indices follow by truncation. Truncating a rank-$r$ matroid to rank $r-1$ keeps the independent sets of size at most $r-1$. Its characteristic polynomial has the same leading coefficients through rank $r-2$, and its reduced coefficients are $\mu_0,\ldots,\mu_{d-1}$. To check this preservation, use the subset formula for $\chi_{\mathcal M}$ displayed below: a subset of rank at most $r-2$ retains its rank, while larger ranks only affect the last coefficient after truncation. Dividing by $q-1$ recovers each reduced coefficient successively from the leading coefficients. Applying induction to this matroid supplies the inequalities at the earlier indices. The ranks with $d\le1$ have no interior inequality. Thus every reduced characteristic coefficient sequence is log-concave.
+
+For a positive log-concave sequence $u_0,\ldots,u_d$, put $v_i=u_i+u_{i-1}$, using zero outside the range, and write $r_i=u_i/u_{i-1}$. For $2\le i\le d$, the ratio $v_i/v_{i-1}$ is a weighted average of $r_i$ and $r_{i-1}$, so lies between them. The first ratio is $r_1+1\ge r_1$, and the last is $r_d/(1+r_d)\le r_d$. Since the $r_i$ decrease, all consecutive ratios of $v$ decrease as well; $d=0$ is immediate. Thus convolution with $(1,1)$ preserves log-concavity. For the graphic arrangement, this convolution is precisely the Künneth decomposition of $\mathbb G_m\times\overline{\mathcal U}_G$.
+
+\subsection{Returning to graph colorings}
+
+Inclusion--exclusion over monochromatic edges gives
+\[
+ \chi_G(q)=\sum_{S\subseteq E}(-1)^{|S|}q^{c(V,S)}.
+\]
+The matroid characteristic polynomial is
+\[
+ \chi_{\mathcal M(G)}(q)=
+ \sum_{S\subseteq E}(-1)^{|S|}q^{r-\operatorname{rk}(S)}.
+\]
+For connected $G$, $r-\operatorname{rk}(S)=c(V,S)-1$. Hence
+\[
+ \chi_G(q)=q\,\chi_{\mathcal M(G)}(q).
+\]
+Multiplication by $q$ only appends a zero coefficient. The intersection inequality therefore proves log-concavity of the absolute chromatic coefficients. A one-vertex graph without loops has $\chi_G(q)=q$ and is immediate.
+
+\begin{example}[The square, calculated inside the Chow ring]\label{ex:gmh-c4}
+Label the four cycle edges $0,1,2,3$. Every proper edge subset is independent, so the matroid is the rank-three uniform matroid $U_{3,4}$. Its nonempty proper flats are the singletons and pairs. Write their variables as $x_i,x_{ij}$. The degree normalization and relations give
+\[
+ \deg(x_ix_{ij})=1,
+ \quad\deg(x_{ij}^2)=-1,
+ \quad\deg(x_i^2)=-2.
+\]
+To see the square identities, multiply $\alpha_i-\alpha_k=0$ by $x_{ij}$ for $k\notin\{i,j\}$, or multiply $\alpha_i-\alpha_j=0$ by $x_i$. Incomparability kills the other products.
+
+Now
+\[
+ \alpha=x_0+x_{01}+x_{02}+x_{03},
+ \quad
+ \beta=x_1+x_2+x_3+x_{12}+x_{13}+x_{23}.
+\]
+Expanding gives
+\[
+ \deg\alpha^2=-2-3+6=1,
+ \quad\deg\alpha\beta=3,
+ \quad\deg\beta^2=-6-3+12=3.
+\]
+Thus $\overline\chi(q)=q^2-3q+3$, and the Hodge inequality reads $3^2\ge1\cdot3$. Multiplying by $q(q-1)$ yields
+\[
+ \chi_{C_4}(q)=q^4-4q^3+6q^2-3q.
+\]
+The sequence $(1,4,6,3)$ is log-concave. For comparison, $K_4$ has reduced matroid polynomial $(q-2)(q-3)=q^2-5q+6$, corresponding to intersection numbers $(1,5,6)$, and chromatic coefficients $(1,6,11,6)$.
+\end{example}
+
+The square makes the coefficient identity concrete. The same Hodge signature proves log-concavity for every graphic matroid and, more generally, for arbitrary matroids.
+
+
+\section{Transport and reconstructed symmetry}
+\label{sec:transport}
+
+Section~\ref{sec:derived-gluing} computed the gluing complex of a local system; Section~\ref{sec:graph-linear} measured rank-one holonomy through a twisted Laplacian. Retaining all linear transports and their tensor products now leads to a reconstruction problem: which group represents the compatible symmetries of their fibers?
+
+Discrete integration also survives when addition is replaced by multiplication in an arbitrary group \(H\). Assign \(a_e\in H\) to an oriented edge, with \(a_{\bar e}=a_e^{-1}\). A change of basis \(h_v\in H\) at each vertex changes the labels by
+\[
+ a_e\longmapsto h_{t(e)}a_eh_{s(e)}^{-1}.
+\]
+On a tree, choose \(h_r=1\) at a root and successively set
+\(h_{t(e)}=h_{s(e)}a_e^{-1}\) along outward-oriented edges. Every transformed label is then \(1\). The unique path makes these choices consistent, even though the labels need not commute. The root normalization makes the trivialization unique.
+
+For a general connected graph, choose a spanning tree and trivialize its labels. The remaining \(r=m-n+1\) edges carry independent holonomies. A further gauge transformation preserving the tree labels is constant on all vertices, so it conjugates these \(r\) labels simultaneously. Consequently the groupoid of edge transports and gauge transformations is equivalent to
+\[
+ [H^r/H],
+\]
+where the brackets retain automorphisms, as well as the set of simultaneous conjugacy classes. These are precisely representations of the free group \(F_r\) in \(H\), with changes of basis. A spanning tree exists by repeatedly removing an edge from a cycle, which preserves connectedness, until no cycle remains.
+
+Topologically, collapsing a spanning tree turns \(G\) into a wedge of \(r\) circles. Thus \(\pi_1(G)\cong F_r\), its universal cover is a tree, and
+\(H_1(G;\Z)\cong F_r^{\mathrm{ab}}\cong\Z^r\). This supplies a second explanation of the original theorem: for a graph, vanishing first integral homology forces the free fundamental group itself to be trivial \cite{rootHatcher}. In higher dimensions, a perfect group can defeat that conclusion.
+
+Take \(H=\operatorname{GL}(W)\). Edge transport defines a local system of vector spaces, and evaluating at a root gives a fiber functor \(\omega\). With tensor products retained,
+\[
+ \operatorname{Loc}_k(G)\simeq\operatorname{Rep}^{\mathrm{fd}}_k(F_r),
+ \qquad
+ \operatorname{Aut}^{\otimes}(\omega)\cong F_r^{\mathrm{alg}}.
+\]
+The proalgebraic completion \(F_r^{\mathrm{alg}}\) is the affine group scheme whose finite-dimensional algebraic representations recover the finite-dimensional \(k\)-linear representations of \(F_r\). The category and root fiber functor therefore reconstruct the graph's transport symmetry \cite{rootMilne,rootDeninger}. For a tree this category is equivalent to vector spaces, so the group is trivial. Motivic Galois theory uses the same construction for a specified neutral Tannakian category of motives and a chosen fiber functor.
+
+A path and a star are both contractible, although their vertex degrees differ. Their local systems therefore have the same transport symmetry. Tree counts and currents depend on the incidence presentation and its edge coordinates; integral indices depend on the lattice. The curve construction also retains component curves and attachment points. We will see an attachment point force new motivic Galois symmetries even when the graph and its graded cohomology stay fixed. Each question determines which data we keep.
+
+
+\section{Normalization, motivic symmetry, and nearby cycles}
+
+A nodal curve turns the graph's gluing problem into a geometric one. Its
+components carry cohomology; its nodes prescribe descent maps. Keeping
+those maps in the motivic or mixed Hodge derived category retains both the obstruction to gluing
+and the extension that joins the resulting cohomology groups.
+
+\subsection{The normalization triangle}
+\label{sec:graph-inside-curve}
+
+Let $C$ be a connected projective nodal curve over an algebraically closed
+field $k$, with normalization
+\[
+ \nu:C^\nu=\coprod_{v\in V(\Gamma)}C_v\longrightarrow C.
+\]
+The dual graph has a vertex for each smooth normalized component and an
+edge for each node. Self-nodes give loops; repeated attachments give
+parallel edges. Write $n=|V|$, $m=|E|$ and $r=m-n+1$, and choose branch
+points $s_e,t_e$ according to an orientation. Every finite connected graph
+occurs: choose distinct points for its half-edges on smooth projective
+components and identify the prescribed pairs.
+
+\begin{theorem}[Normalization is a derived descent diagram]
+\label{thm:derived-normalization}
+Over $\C$ there is a distinguished triangle of mixed Hodge complexes
+\begin{equation}\label{eq:derived-normalization-triangle}
+ R\Gamma(C,\Q)\longrightarrow
+ \bigoplus_v R\Gamma(C_v,\Q)
+ \xrightarrow{\ t^*-s^*\ }\Q^E
+ \longrightarrow R\Gamma(C,\Q)[1].
+\end{equation}
+In particular, $R\Gamma(C,\Q)$ is the homotopy fiber of the branch-value
+map. Over an algebraically closed field of characteristic zero, its motivic counterpart is
+\begin{equation}\label{eq:derived-normalization-motive}
+ \Q^E\xrightarrow{\ t_*-s_*\ }M(C^\nu)
+ \longrightarrow M(C)\longrightarrow\Q^E[1]
+ \quad\text{in }DM_{\mathrm{gm}}(k;\Q).
+\end{equation}
+Here $M$ denotes the geometric motive and $\Q=M(\operatorname{Spec}k)$.
+\end{theorem}
+
+\begin{proof}
+Let $S$ be the nodes and $\widetilde S=\nu^{-1}(S)$ their two branches.
+The square with upper row $\widetilde S\to C^\nu$ and lower row $S\to C$
+is an abstract blow-up square: $\nu$ is proper and is an isomorphism away
+from $S$. Motivic descent gives
+\[
+ M(\widetilde S)\longrightarrow M(C^\nu)\oplus M(S)
+ \longrightarrow M(C)\longrightarrow M(\widetilde S)[1].
+\]
+There are two copies of $\Q$ over each node. One maps isomorphically to
+the node's copy in $M(S)$; cancelling it leaves the difference of the two
+point maps. This gives \eqref{eq:derived-normalization-motive}. The
+framework input is the abstract blow-up triangle
+\cite[Proposition 4.1.3]{dagVoevodsky2000}.
+
+Applying the contravariant Betti cochain realization gives
+\eqref{eq:derived-normalization-triangle}. Directly, the same triangle
+comes from $0\to\Q_C\to\nu_*\Q_{C^\nu}\to\bigoplus_e\Q_e\to0$:
+a locally constant function descends exactly when its two branch values
+agree. Mixed Hodge realization equips this descent triangle with its
+filtrations. The point maps, rather than only their dimensions, remain
+part of the construction.
+\end{proof}
+
+Taking degree one gives the extension
+\begin{equation}\label{eq:nodal-hodge-extension}
+ 0\longrightarrow H^1(\Gamma,\Q)\longrightarrow H^1(C,\Q)
+ \longrightarrow H^1(C^\nu,\Q)\longrightarrow0.
+\end{equation}
+Its outer terms are pure of weights $0$ and $1$, respectively. Thus
+$\operatorname{Gr}^W_0H^1(C,\Q)=H^1(\Gamma,\Q)$, while
+$\operatorname{Gr}^W_1H^1(C,\Q)=\bigoplus_vH^1(C_v,\Q)$.
+Taking the weight-zero part leaves the incidence complex
+$\Q^V\xrightarrow{\delta}\Q^E$, with
+$(\delta a)_e=a_{t(e)}-a_{s(e)}$. The full triangle retains the
+attachment maps that this graded piece discards.
+
+The coherent version is the homotopy fiber of
+$R\Gamma(C^\nu,\mathcal O)\to k^E$, obtained from the branch-difference
+sequence for regular functions. Its degree-one sequence gives
+\[
+ p_a(C)=\sum_v g(C_v)+r.
+\]
+The genus formula and the weight-zero formula are two cohomological
+consequences of the same normalization diagram.
+
+\subsection{Multiplicative descent and derived Cartier duality}
+\label{sec:graph-generalized-jacobian}
+
+For line bundles, branch values are replaced by identifications of
+one-dimensional fibers. We use gluing maps from the fiber at $t_e$ to
+the fiber at $s_e$, and branch ratios $h\mapsto h(s_e)/h(t_e)$.
+The exact sequence of \emph{\'{e}tale} sheaves
+$1\to\mathbb G_{m,C}\to\nu_*\mathbb G_{m,C^\nu}
+\to\bigoplus_e i_{e*}\mathbb G_{m,k}\to1$ uses this ratio map.
+Finite pushforward is exact on abelian \'{e}tale sheaves
+\cite[Proposition 59.55.2]{StacksFiniteEtale}; hence it yields a triangle
+\[
+ R\Gamma(C,\mathbb G_m)\longrightarrow
+ R\Gamma(C^\nu,\mathbb G_m)
+ \xrightarrow{\ (s_e^*/t_e^*)_e\ }(k^\times)^E
+ \longrightarrow R\Gamma(C,\mathbb G_m)[1].
+\]
+Its degree-zero and degree-one terms compute units and Picard groups.
+Descent in families gives the corresponding Picard-functor sequence.
+With $A=\operatorname{Pic}^0(C^\nu)$ and $L=H_1(\Gamma,\Z)$, it reads
+\begin{equation}\label{eq:derived-picard-extension}
+ 1\longrightarrow T_\Gamma\longrightarrow J(C)
+ \xrightarrow{\nu^*}A\longrightarrow0,
+ \qquad T_\Gamma=\operatorname{Hom}(L,\mathbb G_m).
+\end{equation}
+Indeed, component rescalings act on gluing parameters by
+$\lambda_e\mapsto a_{s(e)}\lambda_e a_{t(e)}^{-1}$. Characters of their
+quotient are the integral edge vectors annihilating the incidence map:
+precisely $L$. Here $J(C)=\operatorname{Pic}^0(C)$ consists of line bundles
+of degree zero on every component.
+
+An extension of $A$ by this torus is classified by a homomorphism
+$c_C:L\to A^\vee$: push out along each torus character and use
+$\operatorname{Ext}^1(A,\mathbb G_m)=A^\vee$. The product principal
+polarization $\lambda_A:A\to A^\vee$ gives the explicit formula
+\begin{equation}\label{eq:derived-attachment-map}
+ c_C(z)=\lambda_A\left[\sum_e z_e(t_e-s_e)\right],\qquad z\in L.
+\end{equation}
+The cycle condition makes the divisor have degree zero on each component.
+
+\begin{theorem}[The gluing extension is the derived dual of its attachment map]
+\label{thm:derived-picard-duality}
+Put $M_C=[L\xrightarrow{c_C}A^\vee]$, with $L$ in degree $-1$.
+In the derived category of abelian fppf sheaves over $k$,
+\begin{equation}\label{eq:derived-ext-jacobian}
+ J(C)\cong\mathcal H^1R\mathcal Hom(M_C,\mathbb G_m).
+\end{equation}
+Equivalently, this Deligne $1$-motive is Cartier dual to $[0\to J(C)]$.
+Its homological realizations recover the dual of the curve's first
+cohomology; over $\C$,
+$T_H(M_C)\otimes\Q\cong H^1(C,\Q)^\vee$.
+\end{theorem}
+
+\begin{proof}
+Choose rigidified universal Poincar\'{e} bundles on the normalized
+components. Over a point of $A$, the gluing parameter at $e$ is a nonzero
+element of $\mathcal P_{s_e}\otimes\mathcal P_{t_e}^{-1}$.
+Abel--Jacobi pullback is minus the inverse of the usual principal
+polarization \cite[Lemma 6.9 and Summary 6.11]{MilneJacobianVarieties}.
+Pushing out by the character $z$ tensors these lines with powers $z_e$;
+the cycle condition cancels the rigidifying basepoints. Its class is
+therefore the image under $\lambda_A$ of the divisor in
+\eqref{eq:derived-attachment-map}. This proves the classifying
+formula, including its attachment dependence
+\cite[\S3.0--3.1.1]{CaporasoVivianiStableTorelli}.
+
+The complex $M_C$ lies in a triangle
+$A^\vee\to M_C\to L[1]\to A^\vee[1]$.
+Apply $R\mathcal Hom(-,\mathbb G_m)$. Since $L$ is locally free,
+$R\mathcal Hom(L,\mathbb G_m)=T_\Gamma$ in degree zero. Also
+$\mathcal Hom(A^\vee,\mathbb G_m)=0$ and
+$\mathcal Ext^1(A^\vee,\mathbb G_m)=A$. The degree-one sequence is
+therefore $0\to T_\Gamma\to\mathcal Ext^1(M_C,\mathbb G_m)\to A\to0$.
+Its points are extensions of $A^\vee$ by $\mathbb G_m$, together with a
+trivialization after pullback along $c_C$. Poincar\'{e} duality identifies
+its classifying map with $c_C$, so this is \eqref{eq:derived-picard-extension}.
+Representability and the compatible realizations are Deligne's duality
+construction \cite[\S10.2.10--10.2.13, \S10.3]{DeligneHodgeIII}.
+\end{proof}
+
+The Hodge realization is concrete. If $\exp:\operatorname{Lie}(A^\vee)
+\to A^\vee(\C)$ is the exponential map, its integral lattice is
+\[
+ T_\Z(M_C)=\{(z,u):z\in L,\ u\in\operatorname{Lie}(A^\vee),\quad
+                         \exp(u)=c_C(z)\}.
+\]
+It fits into $0\to H_1(A^\vee,\Z)\to T_\Z(M_C)\to L\to0$:
+a lift of a graph circuit includes paths between its attachment points,
+and changing those paths adds a component cycle. Dualizing recovers
+\eqref{eq:nodal-hodge-extension}, with weights $0$ and $1$.
+For the $\ell$-adic realization one uses derived torsion,
+\[
+ M_C[\ell^a]=\mathcal H^{-1}(M_C\otimes^L\Z/\ell^a),\qquad
+ T_\ell(M_C)=\varprojlim_a M_C[\ell^a].
+\]
+Over a number field $K$, the resulting comparison
+$T_\ell(M_C)\otimes\Q_\ell\cong
+H^1_{\mathrm{\acute et}}(C_{\overline K},\Q_\ell)^\vee$
+is Galois compatible. The de Rham realization uses the universal vector
+extension and is compared over $\C$ with $T_\Z(M_C)\otimes\C$.
+When Galois permutes components or exchanges branches, it acts on $L$;
+the torus with this character lattice can be nonsplit.
+
+\begin{example}[Two elliptic components, two nodes]
+Glue $Q\in E_1$ to $R\in E_2$, and $P\in E_1$ to $S\in E_2$, with
+distinct attachment points on each elliptic curve. Orient both edges from
+$E_1$ to $E_2$. For $z=e_1-e_2$, under the principal polarizations,
+\[
+ c_C(z)=(P-Q,R-S),\qquad
+ M_C=[\Z\xrightarrow{\ 1\mapsto(P-Q,R-S)\ }E_1\times E_2].
+\]
+Thus $p_a(C)=3$, $\dim H^1(C,\Q)=5$, and
+$1\to\mathbb G_m\to J(C)\to E_1\times E_2\to0$ is the extension
+represented by this point. Moving $P$ changes its class with the two
+end groups fixed. A nontorsion attachment class remains nontrivial after
+passing to $1$-motives up to isogeny. The graph records its rank; the
+derived dual records the point that defines the extension.
+\end{example}
+
+For a tree, $L=0$: the Jacobian is $A$, the first cohomology is pure of
+weight $1$, and the genus is the sum of the component genera. Every node
+is separating. At the other extreme, a rational nodal cubic has $A=0$,
+$M_C=[\Z\to0]$, $J(C)=\mathbb G_m$ and $H^1(C,\Q)=\Q(0)$.
+A separating node contributes no cycle divisor. In particular, gluing
+two fixed nonisomorphic curves of genus at least two at varying point
+pairs keeps their product Jacobian fixed; their finite automorphism
+groups leave many different nodal curves with that same Jacobian.
+
+\subsection{The attachment point changes the motivic symmetry group}
+\label{sec:galois-attachment}
+
+The attachment map gives a concrete object to reconstruct by the tensor
+method of Section~\ref{sec:transport}. Consider an elliptic curve $E$
+with origin $O$ and identify $O$ with a distinct point $Q$ to form a
+nodal curve $C_Q$. Its dual graph has one vertex and one loop.
+The normalization formulas give
+\[
+ p_a(C_Q)=2,\qquad
+ \operatorname{Gr}^W_0H^1(C_Q)=\Q(0),\qquad
+ \operatorname{Gr}^W_1H^1(C_Q)=H^1(E).
+\]
+These dimensions are independent of $Q$. The attachment map retains the
+difference between a torsion point and a point of infinite order.
+
+To make the motivic symmetry group precise, work over an algebraically
+closed field $k\subset\C$, with $E$ and $Q$ defined over $k$. Let
+\[
+ M_Q=[\Z\xrightarrow{\ 1\mapsto\lambda_E[Q-O]\ }E^\vee],
+ \qquad H_Q=T_H(M_Q)\otimes\Q,\qquad V=H_1(E^\vee,\Q).
+\]
+Here $\lambda_E$ is the principal polarization, with the gluing convention
+fixed above. Let $\mathcal M_Q=\langle M_Q\rangle^\otimes$ be the full
+Tannakian subcategory of rational Nori motives generated by $M_Q$:
+we allow tensor products, duals, finite direct sums and subquotients.
+Its Betti fiber functor $\omega_B$ defines
+\[
+ G_Q=\operatorname{Aut}^\otimes(\omega_B|_{\mathcal M_Q}).
+\]
+Andr\'e's comparison theorem identifies this category, through Hodge
+realization, with the tensor category generated by $H_Q$ inside rational
+mixed Hodge structures. Thus $G_Q$ is also the Mumford--Tate group of
+$H_Q$ \cite[Theorem 1.2.1]{galoisAndreOneMotives}. This is the deep input
+that gives the following Hodge calculation its motivic meaning.
+
+\begin{theorem}[Torsion and the unipotent symmetry of gluing]
+\label{thm:galois-attachment}
+Put $G_E=\operatorname{MT}(V)$. There is an exact sequence of algebraic
+$\Q$-groups
+\[
+ 1\longrightarrow U_Q\longrightarrow G_Q\longrightarrow G_E
+ \longrightarrow1,
+ \qquad
+ U_Q=
+ \begin{cases}
+  0,&Q\text{ is torsion},\\
+  \mathbf V,&Q\text{ has infinite order},
+ \end{cases}
+\]
+where $\mathbf V$ is the additive vector group of the two-dimensional
+space $V$. The group $U_Q$ is the unipotent radical of $G_Q$.
+If $E$ has no complex multiplication, then
+\[
+ G_Q\cong
+ \begin{cases}
+  \operatorname{GL}_2,&Q\text{ is torsion},\\
+  \mathbb G_a^2\rtimes\operatorname{GL}_2,&Q\text{ has infinite order},
+ \end{cases}
+ \qquad
+ \dim G_Q=
+ \begin{cases}4,&Q\text{ is torsion},\\6,&Q\text{ has infinite order}.\end{cases}
+\]
+The semidirect-product description uses a choice of splitting on the
+underlying rational vector space; the exact sequence and its radical
+are intrinsic.
+\end{theorem}
+
+\begin{proof}
+The realization lattice from the preceding subsection gives an exact
+sequence of mixed Hodge structures
+\[
+ 0\longrightarrow V\longrightarrow H_Q\longrightarrow\Q(0)
+ \longrightarrow0.
+\]
+First, this sequence splits over $\Q$ exactly when $Q$ is torsion.
+Deligne's full faithfulness for $1$-motives transfers a Hodge section to
+a section of $[\Z\to E^\vee]\to[\Z\to0]$ up to isogeny
+\cite[\S10.1]{DeligneHodgeIII}.
+After clearing denominators, such a section has a nonzero integer $m$
+as its lattice map and zero as its map from the trivial group to
+$E^\vee$. Commutativity requires
+$m\lambda_E[Q-O]=0$. Conversely, if this relation holds, the lattice
+map $m$, divided by $m$ in the category up to isogeny, supplies a section.
+
+Tannakian reconstruction identifies $\mathcal M_Q$ with representations
+of $G_Q$, and the subcategory generated by $V$ gives the surjection
+$G_Q\to G_E$. Choose a rational vector-space splitting
+$H_Q\cong V\oplus\Q$. Every group element then has the form
+\[
+ \begin{pmatrix}a&b\\0&1\end{pmatrix},
+ \qquad a\in G_E,\quad b\in V.
+\]
+Consequently the kernel $K$ is an algebraic subgroup of the additive
+vector group $\mathbf V$. In characteristic zero such a subgroup is a
+linear subspace. Conjugation makes it a $G_E$-submodule of $V$.
+
+The pure polarizable Hodge structure $V$ is simple. Indeed, its Hodge
+types are $(-1,0)$ and $(0,-1)$, so complex conjugation rules out a
+one-dimensional rational Hodge substructure. Hence $V$ is an irreducible
+$G_E$-module and $K$ is either zero or all of $\mathbf V$.
+Pure polarizable Hodge structures form a semisimple tensor category;
+therefore $G_E$ is reductive
+\cite[\S6, Corollary 6.5]{galoisMilneHodgeGroups}.
+The kernel is connected and unipotent, and every normal unipotent
+subgroup of $G_Q$ maps trivially to this reductive quotient. Thus $K$ is
+the unipotent radical.
+
+If $K=0$, then $G_Q\cong G_E$ is reductive. Its representations are
+semisimple, so the displayed extension of $\Q(0)$ by $V$ splits.
+For a point of infinite order this is impossible; hence $K=\mathbf V$.
+For a torsion point the splitting gives
+$\langle H_Q\rangle^\otimes=\langle V\rangle^\otimes$, and $K=0$.
+
+Finally, the usual pure elliptic calculation gives
+$G_E=\operatorname{GL}(V)$ when $E$ has no complex multiplication
+\cite[Example 5.11]{galoisBertolinPhilippon}.
+In the nonsplit case the kernel contains every translation and the
+quotient contains every $a\in\operatorname{GL}(V)$. Thus the block
+matrices above form the entire group, with group law
+$(a,b)(a',b')=(aa',ab'+b)$. In the split case a Hodge section gives the
+block-diagonal copy of $\operatorname{GL}(V)$. This proves both dimensions.
+\end{proof}
+
+\begin{example}[The same loop, with symmetry dimensions four and six]
+\label{ex:galois-elliptic-gluing}
+Take
+\[
+ E:\ y^2=x^3-x+1,\qquad P=(0,1).
+\]
+The tangent slope at $P$ is $-1/2$, so
+$2P=(1/4,-7/8)$. Rational torsion points on this integral short
+Weierstrass equation have integral coordinates by the Lutz--Nagell
+theorem \cite[II, Theorem 5.1]{galoisMilneElliptic}.
+Thus $P$ has infinite order. Moreover,
+\[
+ j(E)=1728\,\frac{4(-1)^3}{4(-1)^3+27}
+      =-\frac{6912}{23}.
+\]
+A CM elliptic curve has an algebraic-integer $j$-invariant
+\cite[Corollaries 12.15--12.16]{galoisMilneModular};
+this rational noninteger shows that $E$ has no complex multiplication.
+
+Let $\alpha$ be a root of $x^3-x+1$ and put $T=(\alpha,0)$.
+Over $\overline{\Q}\subset\C$, the point $T$ is a nonzero point of order
+two. The curves $C_T=E/(O\sim T)$ and $C_P=E/(O\sim P)$ have the same
+normalization, the same one-loop dual graph, arithmetic genus two, and weight-graded
+first cohomology of dimensions $(1,2)$. Their associated motivic groups
+nevertheless have dimensions
+\[
+ \dim G_T=4,\qquad \dim G_P=6.
+\]
+On $H_P$, component-homology translations act transitively on the lifts
+of the graph circuit; equivalently, $H_P^{U_P}=V$.
+Passing to the weight-graded object gives the same pure symmetry group.
+Keeping the attachment extension forces, in the second case, every
+translation of the elliptic homology space.
+\end{example}
+
+The graph supplied one circuit. The attachment point determined whether
+the extension split up to isogeny, and tensor-compatible symmetry turned
+that distinction into a computed unipotent radical. Nearby cycles add
+a different structure to the same circuit: its monodromy pairing.
+
+\subsection{Nearby cycles put the graph at both ends of the weight filtration}
+\label{sec:graph-hodge-weights}
+
+Let $f:\mathcal C\to\Delta$ be a projective semistable smoothing over a
+complex disk, with smooth total space, reduced nodal central fiber $C$,
+and smooth fibers away from $0$. Locally at a node, $f$ has equation
+$xy=t$. Nearby cycles form a complex on $C$ whose first hypercohomology
+is the limiting cohomology $H^1_{\mathrm{lim}}$. Its Hodge filtration comes
+from the relative logarithmic de Rham complex
+$\Omega^\bullet_{\mathcal C/\Delta}(\log C)|_C$.
+
+\begin{theorem}[Weights and invariant cycles for a semistable curve]
+\label{thm:derived-curve-monodromy}
+Put $H=H^1_{\mathrm{lim}}$ and $L_\Q=L\otimes\Q$. Then
+\[
+ \operatorname{Gr}^W_0H=L_\Q^\vee,\qquad
+ \operatorname{Gr}^W_1H=H^1(C^\nu,\Q),\qquad
+ \operatorname{Gr}^W_2H=L_\Q(-1).
+\]
+Specialization identifies $H^1(C,\Q)$ with $W_1H=\ker N$, where
+$N:H\to H(-1)$ is the logarithm of monodromy. The induced map
+$\operatorname{Gr}^W_2H\to\operatorname{Gr}^W_0H(-1)$ is the
+nondegenerate cycle pairing $q(z,z')=\sum_ez_ez'_e$.
+Consequently $N^2=0$, $\operatorname{rank}N=r$, and $N=0$ exactly when
+$\Gamma$ is a tree.
+\end{theorem}
+
+\begin{proof}
+The framework input is the nearby-cycle mixed Hodge complex and its
+weight spectral sequence. For curves its relevant rows are
+\[
+ \begin{array}{c|ccc}
+ q\backslash p&-1&0&1\\ \hline
+ 2&\Q^E(-1)&\xrightarrow{\partial}\Q^V(-1)&0\\
+ 1&0&H^1(C^\nu,\Q)&0\\
+ 0&0&\Q^V\xrightarrow{\delta}&\Q^E .
+ \end{array}
+\]
+Restriction gives $\delta$; the signed Gysin maps from node points to
+components give $\partial$. The three terms of total degree $1$ on the
+second page are therefore $\ker\partial$, $H^1(C^\nu)$ and
+$\operatorname{coker}\delta$, with the displayed twists. Their weights
+are respectively $2,1,0$. Higher differentials vanish because they would
+map between pure Hodge structures of different weights. This computes
+the three graded pieces. Steenbrink's complex and its curve case are
+described in \cite[\S1, \S4]{ConsaniLocalMonodromy}.
+
+The nearby--vanishing-cycle triangle is
+$\Q_C\to R\psi_f\Q\to\bigoplus_e\Q_e(-1)[-1]\to\Q_C[1]$.
+Its cohomology boundary is the same $\partial$, so it gives
+$0\to H^1(C)\xrightarrow{\mathrm{sp}}H\to L_\Q(-1)\to0$.
+Picard--Lefschetz identifies $N$ on the two graph pieces with the map
+$\ker\partial\hookrightarrow\Q^E\to\operatorname{coker}\delta$
+induced by the edge pairing; the normalization part is killed
+\cite[\S6.1, (25)--(29)]{DCHMSupportHitchin}.
+The edge pairing restricts to a positive definite form on the real cycle
+space. Hence its map $L_\Q\to L_\Q^\vee$ is an isomorphism.
+It follows that $\ker N=\mathrm{sp}(H^1(C))=W_1H$ and that $N$ has rank
+$r$ and square zero. This also proves the degree-one invariant-cycle
+statement and the asserted monodromy-weight isomorphism.
+\end{proof}
+
+In the two-elliptic-component example, $\dim H=6$ and its weight dimensions
+are $1,4,1$. The central fiber contributes the five invariant dimensions;
+one further nearby class maps under $N$ to the graph class. On
+$z=e_1-e_2$, the pairing is $q(z,z)=2$.
+
+\begin{corollary}[The graph polynomial is the determinant of a monodromy pairing]
+\label{cor:derived-monodromy-determinant}
+For a smoothing with local node equations $xy=t^{\ell_e}$, where
+$\ell_e\ge1$, the graph pairing is
+$q_\ell(z,z')=\sum_e\ell_ez_ez'_e$. In an integral cycle basis with edge
+matrix $Z$, its determinant is
+\[
+ \det(q_\ell)=\det\bigl(Z\operatorname{diag}(\ell_e)Z^{\mathsf T}\bigr)
+             =\Psi_\Gamma(\ell).
+\]
+\end{corollary}
+\begin{proof}
+A loop in the smoothing disk circles the node's deformation parameter
+$\ell_e$ times, so $N=\sum_e\ell_eN_e$. The Picard--Lefschetz edge maps
+in the preceding proof give $q_\ell$. Restricting the diagonal edge form
+to the cycle lattice gives the displayed matrix. The total space may be
+singular for $\ell_e>1$; the claim concerns its nearby monodromy.
+\end{proof}
+This is a geometric route to the graph polynomial of the next section:
+its variables are the weights of a form on the cycle lattice.
+
+\section{The tree determinant becomes a graph hypersurface}
+\label{sec:graph-hypersurface}
+
+A different construction retains how the cycle lattice sits in the edge
+lattice.  For a finite connected graph $G$, choose an integral cycle
+basis and write its edge coefficients as the rows of an $r\times m$
+matrix $Z$.  Introduce variables $\alpha_e$ and restrict the diagonal
+quadratic form $\sum_e\alpha_e x_e^2$ to the cycle space.  Its determinant
+is
+\[
+  \Psi_G(\alpha)=\det\bigl(Z\operatorname{diag}(\alpha_e)Z^{\mathsf T}\bigr).
+\]
+An integral basis change multiplies this determinant by the square of a
+determinant $\pm1$, so the polynomial is independent of the cycle basis.
+It is homogeneous of degree $r$.  This construction is developed in
+\cite[\S1--2]{BEKGraphPolynomials}.
+
+\begin{proposition}[The complementary spanning-tree formula]
+\[
+  \Psi_G(\alpha)=\sum_{T\text{ spanning tree of }G}
+       \prod_{e\notin T}\alpha_e.
+\]
+\end{proposition}
+
+\begin{proof}
+Cauchy--Binet expands the determinant as
+\[
+  \sum_{\substack{S\subseteq E\\|S|=r}}
+       \det(Z_S)^2\prod_{e\in S}\alpha_e.
+\]
+The matrix $Z_S$ represents projection of the cycle lattice to its
+coordinates on $S$.  Its kernel is the cycle lattice of the spanning
+subgraph $T=E\setminus S$.  Since $T$ has $n-1$ edges, this projection
+is nonsingular exactly when $T$ is a tree.  For such a tree, each edge
+$s\in S$ closes a unique circuit with the path in $T$ between its
+endpoints.  Those fundamental circuits form an integral cycle basis
+whose coordinates on $S$ form the identity matrix.  Thus
+$\det(Z_S)=\pm1$ for a tree and $0$ otherwise.  Substitution gives the
+formula.
+\end{proof}
+
+This gives an exact bridge back to Section~\ref{sec:graph-linear}:
+\[
+ \Psi_G(\alpha)=\left(\prod_{e\in E}\alpha_e\right)
+                  \tau(G;\alpha^{-1}).
+\]
+For nonzero edge parameters, substitute $c_e=\alpha_e^{-1}$ into the weighted tree polynomial. Each tree's product cancels its own edge factors, and the resulting identity extends polynomially. Thus the enumeration polynomial also defines an algebraic hypersurface, whose geometry will lead to period pairings.
+
+This is the first Symanzik graph polynomial.  Some authors use
+``Kirchhoff polynomial'' for a spanning-tree product over edges
+\emph{in} the tree.  Our convention takes the product over edges
+\emph{outside} it, so its degree is the cycle rank.
+
+\begin{example}[Three small cases]
+For a tree, $r=0$ and the empty determinant is $1$.  The sole spanning
+tree is $G$ itself, whose complementary product is also $1$.
+For a triangle,
+\[
+  \Psi_G=\alpha_1+\alpha_2+\alpha_3.
+\]
+For the graph with two vertices and three parallel edges, take cycles
+$e_1-e_3,e_2-e_3$.  The quadratic-form matrix is
+\[
+  \begin{pmatrix}\alpha_1+\alpha_3&\alpha_3\\
+                  \alpha_3&\alpha_2+\alpha_3\end{pmatrix},
+\]
+so
+\[
+  \Psi_G=\alpha_1\alpha_2+\alpha_1\alpha_3+\alpha_2\alpha_3.
+\]
+Its projective zero locus is a smooth conic over $\Q$, with a rational
+point and hence isomorphic to $\mathbb P^1$.  These equations come
+directly from the cycle lattice and its edge-coordinate functionals.
+\end{example}
+
+Because $\Psi_G$ has integral coefficients, its affine zero locus
+$X_G\subset\mathbb A^m$ and complement $U_G$ are algebraic varieties
+over $\Q$.  They carry Betti, de Rham and $\ell$-adic cohomology and
+motivic structures.  For a tree, $X_G$ is empty and
+$U_G=\mathbb A^m$, including $m=0$.  For a triangle,
+\[
+  U_G\cong\mathbb A^2\times\mathbb G_m.
+\]
+Its first cohomology is $\Q(-1)$, of weight $2$.  This differs from the
+weight-$0$ graph contribution inside a nodal curve: the two constructions
+attach different algebraic objects to the same graph.
+
+\subsection{Deletion--contraction before taking classes}
+\label{sec:derived-graph-localization}
+
+Take an edge $e$ that is neither a loop nor a bridge. Partitioning the
+spanning trees according to whether they contain $e$ gives
+$\Psi_G=\alpha_eF+H$, with $F=\Psi_{G\setminus e}$ and $H=\Psi_{G/e}$.
+Inside $\A^{m-1}$ put
+\[
+ O=\{F\ne0\}=U_{G\setminus e},\qquad
+ Z_0=\{F=0,H\ne0\},\qquad
+ B=\A^{m-1}\setminus(V(F)\cap V(H)).
+\]
+Thus $O$ is open in $B$ and $Z_0$ is its closed complement.
+
+\begin{theorem}[Motivic deletion--contraction localization]
+\label{thm:derived-graph-localization}
+Over $\Q$, in $DM_{\mathrm{gm}}(\Q;\Q)$, there is a distinguished triangle
+\begin{equation}\label{eq:derived-graph-localization}
+ M^c(Z_0)(1)[2]\longrightarrow M^c(U_G)
+ \longrightarrow M^c(O)\otimes M^c(\mathbb G_m)
+ \longrightarrow M^c(Z_0)(1)[3].
+\end{equation}
+Here $M^c$ denotes the motive with compact support. If $M^c(O)$ and
+$M^c(Z_0)$ are mixed Tate, then so is $M^c(U_G)$.
+\end{theorem}
+
+\begin{proof}
+Projection to the variables other than $\alpha_e$ lands in $B$. Over
+$O$, the coordinate $u=\alpha_e+H/F$ gives an isomorphism with
+$O\times\mathbb G_m$. Over $Z_0$, every $\alpha_e$ is allowed, giving
+$Z_0\times\A^1$. The latter is a closed subvariety of $U_G$.
+The compact-support localization triangle for this closed subvariety,
+and $M^c(X\times\A^1)=M^c(X)(1)[2]$, give
+\eqref{eq:derived-graph-localization}
+\cite[Propositions 4.1.5--4.1.7, Corollary 4.1.8]{dagVoevodsky2000}.
+Localization of $\{0\}\subset\A^1$ makes $M^c(\mathbb G_m)$ mixed Tate.
+The mixed Tate subcategory is the thick tensor subcategory generated by
+the Tate objects $\Q(a)$, so the assertion follows from the triangle.
+\end{proof}
+
+Taking scissor classes gives
+\[
+ [U_G]=\mathbb L[Z_0]+(\mathbb L-1)[O]
+      =\mathbb L[B]-[U_{G\setminus e}],\qquad\mathbb L=[\A^1].
+\]
+This is the deletion--contraction identity in the Grothendieck ring of
+varieties \cite[Theorem 3.8]{AluffiMarcolliDeletionContraction}.
+The triangle retains the connecting morphism and induces localization
+sequences in its realizations. The common zero locus supplies geometric
+data beyond the separate deleted and contracted graphs. Mixed Tate
+arguments must also control this stratum.
+
+\section{Period pairings and arithmetic families}
+\label{sec:graph-period-families}
+
+Graph hypersurfaces also support period integrals. Suppose $r\ge1$, $m=2r$, and every nonempty proper edge subgraph $\gamma$ satisfies $|E(\gamma)|>2b_1(\gamma)$. These primitive logarithmic-divergence conditions give a convergent projective period
+\[
+  P(G)=\int_{\sigma}\frac{\Omega}{\Psi_G^2},\qquad
+  \Omega=\sum_{i=1}^{m}(-1)^{i-1}\alpha_i\,
+     d\alpha_1\wedge\cdots\wedge\widehat{d\alpha_i}
+     \wedge\cdots\wedge d\alpha_m,
+\]
+where $\sigma$ is the positive projective simplex and its orientation
+makes the integrand positive.  Equivalently, fix $\alpha_m=1$ and
+integrate over the positive orthant in the other variables.  These
+conditions and the relative-cohomology construction are given in
+\cite[\S5, \S7]{BEKGraphPolynomials}.
+
+\subsection{The period is a pairing attached to a relative motive}
+\label{sec:derived-relative-period}
+
+The simplex boundary can meet the graph hypersurface. The blowups in
+\cite[\S7]{BEKGraphPolynomials} produce a smooth space $P$, the strict
+transform $Y$ of the projective hypersurface, and a boundary divisor $D$.
+Put $V=P\setminus Y$ and $B_D=D\setminus(D\cap Y)$. The relative
+homological motive and its Betti cochain realization are
+\[
+ M(V,B_D)=\operatorname{Cone}\bigl(M(B_D)\to M(V)\bigr),\qquad
+ K_B(V,B_D)=\operatorname{Cone}\bigl(R\Gamma(V,\Q)
+                         \to R\Gamma(B_D,\Q)\bigr)[-1].
+\]
+The shift comes from dualizing relative chains. In degree $m-1$ the
+algebraic de Rham realization gives the relative cohomology used by the
+integral. Comparison over $\C$ carries the pulled-back class
+$[\Omega/\Psi_G^2]_{\mathrm{dR}}$ to Betti cohomology; the transformed
+simplex is a class $[\widetilde\sigma]_B$ in relative Betti homology.
+Their evaluation is
+\[
+ P(G)=\left\langle
+       \operatorname{comp}_{\mathrm{dR},B}
+          [\Omega/\Psi_G^2]_{\mathrm{dR}},
+       [\widetilde\sigma]_B\right\rangle.
+\]
+The relative cone keeps the boundary condition as part of the object.
+Blow-up and localization triangles carry this object through the change
+of geometry: for a smooth center $Z$ of codimension $c$,
+$M(\operatorname{Bl}_ZP)\cong M(P)\oplus
+\bigoplus_{i=1}^{c-1}M(Z)(i)[2i]$
+\cite[Proposition 3.5.3]{dagVoevodsky2000}.
+The graph hypersurface and its intersections with the boundary then enter
+through localization. This relative object carries the period and its
+boundary data. The evaluations and arithmetic results below require
+further theorems, which we cite.
+
+For the wheel $W_r$ with $r\ge3$ spokes, $m=2r$ and this normalization
+gives the established evaluation
+\[
+  P(W_r)=\binom{2r-2}{r-1}\zeta(2r-3).
+\]
+The three- and four-spoke wheels give $6\zeta(3)$ and $20\zeta(5)$. This normalization is Definition 61 and Theorem 62 with $k=1$ of \cite{BrownSchnetzWheelClasses}; those Feynman periods are distinct from the paper's canonical trace-form integrals.
+
+Brown's theorem applies to an infinite family. For an ordering of the edges, count the vertices incident both to an initial segment and to the remaining edges. The vertex-width is the minimum, over all orderings, of the largest such count. Brown proves that graphs of vertex-width at most $3$ admit a linear-reduction structure: the graph motives in his construction are mixed Tate, and convergent primitive periods are rational linear combinations of multiple zeta values. The proof organizes successive integrations through linear fibrations and the moduli spaces $M_{0,N}$, where monodromy can be controlled uniformly \cite[Introduction, Theorems 1--3]{BrownFeynmanPeriods}.
+
+Brown and Schnetz construct an eight-loop $\phi^4$ graph whose hypersurface point counts detect a modular form arising from a singular K3 surface \cite{BrownSchnetzKThree}. This establishes non-Tate graph-hypersurface arithmetic. Whether the numerical period belongs to the algebra of multiple zeta values also involves the part of cohomology selected by the integral; the point counts alone do not settle that question.
+
+The elementary number $m-n+1$ persists through these constructions.  It
+is the cycle-space dimension, the extra genus of a nodal curve, the rank
+of a Jacobian's torus, a Hodge weight's dimension, and the degree of a
+graph polynomial.  Each richer object also preserves additional data:
+attachment divisors, extension classes, quadratic forms, algebraic
+singularities and period pairings.  That additional data is what makes
+the larger theorems possible.
+
+
+\section{What the framework has proved}
+\label{sec:conclusion}
+
+The first boundary map has become a derived global-section object. Its projective resolution handles arbitrary local coefficients, and its edge-removal triangle places components, cycles, and holonomy in one exact sequence. Over the integers, the determinant functor and derived duality measure a finite gluing obstruction together with its character dual. Determinant-line multiplicativity proves the arithmetic deletion--contraction theorem and explains its $q^2$ factor.
+
+The metric realization of that determinant line gives tree counts and joint probabilities. A Hodge deformation retract supplies the projection; exterior contraction supplies its principal minors. The graph and cellular transfer-current laws are specializations of the same construction. The marked-edge inequalities and the complete-simplex count follow by reading the metric and Koszul realizations. The six-vertex example makes the integral arithmetic visible in a changed correlation.
+
+The coloring-space theorem takes a different realization of edge dependence. Its Gysin triangle carries both a degree shift and a Tate twist. Hodge weights force the adjacent maps to vanish, so deletion--contraction becomes a short exact sequence of cohomology groups. Chromatic coefficients are their dimensions. After removing the translation and scaling factors, the reduced coefficients are mixed intersection numbers in a compactification. Hodge--Riemann positivity gives their log-concavity; the Künneth factor $1+t$ then transfers it to the full chromatic coefficients.
+
+Normalization then lifts gluing from vertex values to component curves. Its motivic triangle retains the attachment-point maps; the graph cohomology is the weight-zero realization, and the Picard extension remembers the attachment divisors. Derived duality organizes the associated 1-motive. Tensor reconstruction computes its motivic Galois group: a torsion elliptic attachment has no unipotent radical, while a nontorsion attachment forces the full additive group of component homology. The explicit pair of self-nodal curves has the same graph and graded cohomology, but symmetry groups of dimensions four and six. Nearby-cycle monodromy gives the cycle lattice a pairing whose determinant is the graph polynomial. That polynomial also defines the hypersurface used in the relative period construction.
+
+This is the attraction of the motivic and Galois viewpoint, and the shared inquiry with \href{https://tensorgami.com/notes/fourier-symmetry-and-reconstruction}{\emph{Fourier, Symmetry, and Reconstruction}}. Root formulas arise there from the multiplication and character decomposition of a covering algebra; tree counts arise here from determinant lines, and the elliptic symmetry theorem from an extension in a tensor category. The equal-eigenvalue monodromies in that study and the equal-graph nodal curves here show why the retained extension matters. Exact triangles, duals, tensor products, and realization functors keep relationships that a count or a Betti number records only partially. Following them keeps the constructions available for further proofs: a familiar numerical answer becomes an entrance to arithmetic recurrences, geometric inequalities, reconstruction, and periods.
+
+
+\begin{thebibliography}{99}
+\bibitem{rootHatcher} Allen Hatcher, \emph{Algebraic Topology}, Chapter 1, graph fundamental groups. \url{https://pi.math.cornell.edu/~hatcher/AT/AT.pdf}.
+\bibitem{rootMilne} Pierre Deligne and James S. Milne, \emph{Tannakian Categories}, corrected and updated edition, 2022. \url{https://www.jmilne.org/math/xnotes/tc.html}.
+\bibitem{rootDeninger} Christopher Deninger, \emph{A pro-algebraic fundamental group for topological spaces}, 2023. \url{https://arxiv.org/abs/2005.13893}.
+\bibitem{glinDKM2016} Art M. Duval, Caroline J. Klivans, and Jeremy L. Martin, \emph{Simplicial and Cellular Trees}, 2016. \url{https://arxiv.org/abs/1506.06819}.
+\bibitem{glinLyonsPeres2016} Russell Lyons and Yuval Peres, \emph{Probability on Trees and Networks}, 2016. \url{https://rdlyons.pages.iu.edu/prbtree/}.
+\bibitem{glinBurtonPemantle1993} Robert Burton and Robin Pemantle, \emph{Local characteristics, entropy and limit theorems for spanning trees and domino tilings via transfer-impedances}, 1993. \url{https://arxiv.org/abs/math/0404048}.
+\bibitem{glinKenyon2011} Richard Kenyon, \emph{Spanning forests and the vector bundle Laplacian}, 2011. \url{https://arxiv.org/abs/1001.4028}.
+\bibitem{gih-levine-tree} Lionel Levine, \emph{The sandpile group of a tree}, 2009, Section 2. \url{https://lionellevine.github.io/sandpiletree.pdf}.
+\bibitem{gih-bacher-lattices} Roland Bacher, Pierre de la Harpe, and Tatiana Nagnibeda, \emph{The lattice of integral flows and the lattice of integral cuts on a finite graph}, 1997. \url{https://www.numdam.org/item/BSMF_1997__125_2_167_0/}.
+\bibitem{gih-dkm-trees} Duval, Klivans, and Martin, \emph{Simplicial and Cellular Trees}, definitions and examples. \url{https://www.dam.brown.edu/people/cklivans/chapter.pdf}.
+\bibitem{gih-dkm-matrix} Duval, Klivans, and Martin, \emph{Simplicial Matrix-Tree Theorems}, 2009. \url{https://arxiv.org/abs/0802.2576}.
+\bibitem{gih-kalai} Gil Kalai, \emph{Enumeration of Q-acyclic simplicial complexes}, 1983. \url{https://doi.org/10.1007/BF02804017}.
+\bibitem{gih-brini-icosahedral} Andrea Brini, \emph{E8 spectral curves}, 2020, Appendix B.2. \url{https://eprints.whiterose.ac.uk/152157/8/plms.12331.pdf}.
+\bibitem{CaporasoVivianiStableTorelli} Lucia Caporaso and Filippo Viviani, \emph{Torelli theorem for stable curves}, 2011, Sections 3.0--3.1. \url{https://ems.press/content/serial-article-files/31791}.
+\bibitem{MilneJacobianVarieties} James S. Milne, \emph{Jacobian Varieties}, revised notes, 2021, Lemma 6.9 and Summary 6.11. \url{https://www.jmilne.org/math/xnotes/JVs.pdf}.
+\bibitem{DeligneHodgeIII} Pierre Deligne, \emph{Th\'eorie de Hodge: III}, 1974, Section 10. \url{https://www.numdam.org/item/PMIHES_1974__44__5_0.pdf}.
+\bibitem{DCHMSupportHitchin} Mark Andrea A. de Cataldo, Jochen Heinloth, and Luca Migliorini, \emph{A support theorem for the Hitchin fibration: the case of GL\(_n\) and K\(_C\)}, 2021, Section 6.1. \url{https://arxiv.org/abs/1906.09582}.
+\bibitem{BEKGraphPolynomials} Spencer Bloch, H\'el\`ene Esnault, and Dirk Kreimer, \emph{On motives associated to graph polynomials}, 2006. \url{https://arxiv.org/abs/math/0510011}.
+\bibitem{AluffiMarcolliDeletionContraction} Paolo Aluffi and Matilde Marcolli, \emph{Feynman motives and deletion-contraction relations}, 2011. \url{https://arxiv.org/abs/0907.3225}.
+\bibitem{BrownSchnetzWheelClasses} Francis Brown and Oliver Schnetz, \emph{The wheel classes in the locally finite homology of GL\(_n(\Z)\), canonical integrals and zeta values}, 2025, Definition 61 and Theorem 62. \url{https://arxiv.org/abs/2402.06757}.
+\bibitem{BrownFeynmanPeriods} Francis Brown, \emph{On the periods of some Feynman integrals}, 2010. \url{https://arxiv.org/abs/0910.0114}.
+\bibitem{BrownSchnetzKThree} Francis Brown and Oliver Schnetz, \emph{A K3 in phi4}, 2012. \url{https://arxiv.org/abs/1006.4064}.
+\bibitem{gmhAHK2018} Karim Adiprasito, June Huh, and Eric Katz, \emph{Hodge theory for combinatorial geometries}, 2018. \url{https://arxiv.org/abs/1511.02888}.
+\bibitem{gmhHuh2012} June Huh, \emph{Milnor numbers of projective hypersurfaces and the chromatic polynomial of graphs}, 2012. \url{https://arxiv.org/abs/1008.4749}.
+\bibitem{hte-lyons-determinantal} Russell Lyons, \emph{Determinantal probability measures}, 2003. \url{https://arxiv.org/abs/math/0204325}.
+\bibitem{hte-lyons-complexes} Russell Lyons, \emph{Random complexes and \(\ell^2\)-Betti numbers}, 2009. \url{https://arxiv.org/abs/0811.2933}.
+\bibitem{derivedCurry} Justin Curry, \emph{Dualities between cellular sheaves and cosheaves}, Journal of Pure and Applied Algebra 222 (2018), 966--993, Sections 5--6. \url{https://arxiv.org/abs/1607.06942}.
+\bibitem{derived-knudsen-mumford} Finn Knudsen and David Mumford, \emph{The projectivity of the moduli space of stable curves. I: Preliminaries on `det' and `Div'}, Mathematica Scandinavica 39 (1976), 19--55. \url{https://www.mscand.dk/article/view/11642}.
+\bibitem{derived-stacks-determinants} The Stacks Project Authors, \emph{Determinants of complexes}, Section 15.124, Tag 0FJI. \url{https://stacks.math.columbia.edu/tag/0FJI}.
+\bibitem{derived-mnev-torsions} Pavel Mnev, \emph{Lecture notes on torsions}, 2014, Sections 3.4--3.6. \url{https://arxiv.org/abs/1406.3705}.
+\bibitem{derived-hatcher-uct} Allen Hatcher, \emph{Algebraic Topology}, Cambridge University Press, 2002, Theorem 3.2. \url{https://pi.math.cornell.edu/~hatcher/AT/ATch3.pdf}.
+\bibitem{derived-catanzaro-chernyak-klein} Michael J. Catanzaro, Vladimir Y. Chernyak, and John R. Klein, \emph{Kirchhoff's theorems in higher dimensions and Reidemeister torsion}, Homology, Homotopy and Applications 17 (2015), 165--189. \url{https://arxiv.org/abs/1206.6783}.
+\bibitem{dagDeligneHodgeII} Pierre Deligne, \emph{Th\'eorie de Hodge: II}, 1971, Sections 2.3 and 3. \url{https://www.numdam.org/item/PMIHES_1971__40__5_0.pdf}.
+\bibitem{dagShapiro1993} B. Z. Shapiro, \emph{The mixed Hodge structure of the complement to an arbitrary arrangement of affine complex hyperplanes is pure}, 1993, pp. 931--933. \url{https://staff.math.su.se/shapiro/Articles/Mixed.pdf}.
+\bibitem{dagOrlikSolomon1980} Peter Orlik and Louis Solomon, \emph{Combinatorics and topology of complements of hyperplanes}, 1980, Theorem 5.2. \url{https://sites.math.washington.edu/~billey/classes/561.fall.2019/past.articles/orlik.solomon.1980.pdf}.
+\bibitem{dagVoevodsky2000} Vladimir Voevodsky, \emph{Triangulated categories of motives over a field}, 2000, Propositions 3.5.3--3.5.4 and 4.1.3--4.1.8. \url{https://www.math.ias.edu/Voevodsky/files/files-original/Dropbox/Published_papers/Motives/Collection/s5.pdf}.
+\bibitem{StacksFiniteEtale} The Stacks Project Authors, \emph{\'{E}tale Cohomology}, Proposition 59.55.2 (finite pushforward), Tag 03QP. \url{https://stacks.math.columbia.edu/tag/03QP}.
+\bibitem{ConsaniLocalMonodromy} Caterina Consani, with an appendix by Spencer Bloch, \emph{The local monodromy as a generalized algebraic correspondence}, Documenta Mathematica 4 (1999), 65--108, Sections 1 and 4. \url{https://math.jhu.edu/~kc/papers/Documenta.pdf}.
+\bibitem{galoisAndreOneMotives} Yves Andr\'e, \emph{A note on 1-motives}, 2018, Theorem 1.2.1. \url{https://arxiv.org/abs/1807.09121}.
+
+\bibitem{galoisMilneHodgeGroups} James S. Milne, \emph{Shimura varieties and moduli}, 2013, Section 6, Corollary 6.5. \url{https://www.jmilne.org/math/xnotes/svhIP.pdf}.
+
+\bibitem{galoisBertolinPhilippon} Cristiana Bertolin and Patrice Philippon, \emph{Mumford-Tate groups of 1-motives and Weil pairing}, 2024, Example 5.11 in the arXiv version. \url{https://arxiv.org/abs/2210.16301}.
+
+\bibitem{galoisMilneElliptic} James S. Milne, \emph{Elliptic Curves}, second edition, 2021, Chapter II, Theorem 5.1. \url{https://www.jmilne.org/math/Books/EC2.pdf}.
+
+\bibitem{galoisMilneModular} James S. Milne, \emph{Modular functions and modular forms}, Corollaries 12.15--12.16. \url{https://www.jmilne.org/math/CourseNotes/MF.pdf}.
+\end{thebibliography}
+
+\end{document}

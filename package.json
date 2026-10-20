@@ -1,0 +1,13 @@
+{
+  "name": "tensorgami",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/render.mjs",
+    "check": "node scripts/check.mjs",
+    "test:analytics": "node --test scripts/test-analytics.mjs",
+    "preview": "node scripts/preview.mjs",
+    "check:pdf-pages": "node scripts/check-pdf-pages.mjs",
+    "test:reading-entry": "node --test scripts/test-reading-entry.mjs"
+  }
+}

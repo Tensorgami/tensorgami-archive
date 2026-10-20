@@ -1,0 +1,54 @@
+{
+  "papers": [
+    "2607.01716",
+    "2609.01690"
+  ],
+  "featuredExpositions": [
+    "fourier-symmetry-and-reconstruction",
+    "what-a-boundary-map-can-prove",
+    "what-a-derivative-retains"
+  ],
+  "expositions": [
+    "fourier-symmetry-and-reconstruction",
+    "ibm-ponder-this-2010",
+    "pointwise-weighting-convergence-in-measure",
+    "hartshorne-ii-5-14-18"
+  ],
+  "paperSections": [
+    {
+      "id": "published",
+      "title": "Published work",
+      "label": "Published",
+      "description": "Earlier work in geometric analysis, with its correction linked alongside the article.",
+      "status": "Published",
+      "papers": [
+        "1903.09181"
+      ]
+    },
+    {
+      "id": "algebra-combinatorics",
+      "title": "Further algebra & combinatorics",
+      "label": "Algebra & combinatorics",
+      "description": "Preprints in algebraic and extremal combinatorics, number theory, and arithmetic geometry.",
+      "status": "Preprint",
+      "papers": [
+        "2606.14877",
+        "2606.12230",
+        "2605.25291",
+        "2605.21939",
+        "2605.12903"
+      ]
+    },
+    {
+      "id": "geometry-analysis",
+      "title": "Geometry & analysis",
+      "label": "Geometry & analysis",
+      "description": "Further preprints on Ricci flow and partial differential equations.",
+      "status": "Preprint",
+      "papers": [
+        "2608.08533",
+        "2606.15218"
+      ]
+    }
+  ]
+}

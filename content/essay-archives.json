@@ -1,0 +1,664 @@
+[
+  {
+    "slug": "mathematical-understanding-in-the-age-of-ai",
+    "title": "Mathematical Understanding in the Age of AI",
+    "page": "/essays/mathematical-understanding-in-the-age-of-ai.html",
+    "target": "/essays/mathematical-life-in-the-age-of-ai.html",
+    "archivedDate": "2026-10-12",
+    "edition": "Version 75",
+    "sourceMetadata": {
+      "slug": "mathematical-understanding-in-the-age-of-ai",
+      "published": true,
+      "title": "Mathematical Understanding in the Age of AI",
+      "subtitle": "Intellectual life, shared inquiry, and the case for motives",
+      "summary": "How AI can make sustained mathematical inquiry more widely available, and why learning, shared understanding, and the choice of an intellectual direction matter alongside new results.",
+      "date": "2026-10-07",
+      "manuscript": "content/essays/mathematical-understanding-in-the-age-of-ai.md",
+      "body": "content/essays/mathematical-understanding-in-the-age-of-ai.html",
+      "page": "/essays/mathematical-understanding-in-the-age-of-ai.html",
+      "staticMath": true,
+      "sections": [
+        {
+          "id": "understanding-as-a-purpose",
+          "title": "Understanding as a purpose"
+        },
+        {
+          "id": "from-a-compact-insight-to-an-inquiry",
+          "title": "From a compact insight to an inquiry"
+        },
+        {
+          "id": "institutions-and-the-means-of-inquiry",
+          "title": "Institutions and the means of inquiry"
+        },
+        {
+          "id": "journals-and-the-authority-to-judge",
+          "title": "Journals and the authority to judge"
+        },
+        {
+          "id": "competition-and-mathematical-life",
+          "title": "Competition and mathematical life"
+        },
+        {
+          "id": "the-conditions-of-intellectual-self-government",
+          "title": "The conditions of intellectual self-government"
+        },
+        {
+          "id": "grothendieck-and-the-cost-of-winning",
+          "title": "Grothendieck and the cost of winning"
+        },
+        {
+          "id": "why-motives",
+          "title": "Why motives"
+        },
+        {
+          "id": "motivic-inquiry-with-capable-ai",
+          "title": "Motivic inquiry with capable AI"
+        },
+        {
+          "id": "learning-and-participation",
+          "title": "Learning and participation"
+        }
+      ],
+      "subject": "Mathematics and intellectual life",
+      "related": [
+        {
+          "slug": "the-culture-of-mathematical-judgment",
+          "description": "Who receives a hearing, how standards are applied, and how mathematical authority becomes answerable through correction, credit, and supported review."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "How different proofs of the same theorem reveal distinct mechanisms, quantitative information, and connections that further inquiry can develop."
+        },
+        {
+          "slug": "the-authority-of-a-vision",
+          "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+        }
+      ]
+    },
+    "sectionLinks": [
+      {
+        "id": "understanding-as-a-purpose",
+        "title": "Understanding as a purpose",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#understanding-as-a-purpose"
+      },
+      {
+        "id": "from-a-compact-insight-to-an-inquiry",
+        "title": "From a compact insight to an inquiry",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+      },
+      {
+        "id": "institutions-and-the-means-of-inquiry",
+        "title": "Institutions and the means of inquiry",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#the-means-to-continue"
+      },
+      {
+        "id": "journals-and-the-authority-to-judge",
+        "title": "Journals and the authority to judge",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict"
+      },
+      {
+        "id": "competition-and-mathematical-life",
+        "title": "Competition and mathematical life",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#understanding-as-a-purpose"
+      },
+      {
+        "id": "the-conditions-of-intellectual-self-government",
+        "title": "The conditions of intellectual self-government",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#the-means-to-continue"
+      },
+      {
+        "id": "grothendieck-and-the-cost-of-winning",
+        "title": "Grothendieck and the cost of winning",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#what-performed-mastery-costs"
+      },
+      {
+        "id": "why-motives",
+        "title": "Why motives",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-comparison-worth-understanding"
+      },
+      {
+        "id": "motivic-inquiry-with-capable-ai",
+        "title": "Motivic inquiry with capable AI",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#an-inquiry-with-somewhere-to-go"
+      },
+      {
+        "id": "learning-and-participation",
+        "title": "Learning and participation",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+      }
+    ],
+    "noteLinks": [],
+    "extraLinks": [],
+    "requiredAnchors": [
+      "understanding-as-a-purpose",
+      "from-a-compact-insight-to-an-inquiry",
+      "institutions-and-the-means-of-inquiry",
+      "journals-and-the-authority-to-judge",
+      "competition-and-mathematical-life",
+      "the-conditions-of-intellectual-self-government",
+      "grothendieck-and-the-cost-of-winning",
+      "why-motives",
+      "motivic-inquiry-with-capable-ai",
+      "learning-and-participation"
+    ],
+    "downloads": [
+      {
+        "href": "/assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+        "label": "Archived Markdown source",
+        "sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a"
+      }
+    ]
+  },
+  {
+    "slug": "the-culture-of-mathematical-judgment",
+    "title": "The Culture of Mathematical Judgment",
+    "page": "/essays/the-culture-of-mathematical-judgment.html",
+    "target": "/essays/mathematical-life-in-the-age-of-ai.html",
+    "archivedDate": "2026-10-12",
+    "edition": "Version 75",
+    "sourceMetadata": {
+      "slug": "the-culture-of-mathematical-judgment",
+      "published": true,
+      "title": "The Culture of Mathematical Judgment",
+      "subtitle": "Status, scrutiny, and the terms of participation in the age of AI",
+      "subject": "Mathematics and institutions",
+      "summary": "How status shapes whose mathematics receives a hearing, how contributions are judged and credited, and how AI can change the obligations and organization of scrutiny.",
+      "date": "2026-10-12",
+      "manuscript": "content/essays/the-culture-of-mathematical-judgment.md",
+      "body": "content/essays/the-culture-of-mathematical-judgment.html",
+      "page": "/essays/the-culture-of-mathematical-judgment.html",
+      "pdf": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
+      "source": "/assets/essays/the-culture-of-mathematical-judgment.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "a-hearing-before-a-verdict",
+          "title": "A hearing before a verdict",
+          "number": "1"
+        },
+        {
+          "id": "the-small-vanities-of-powerful-people",
+          "title": "The small vanities of powerful people",
+          "number": "2"
+        },
+        {
+          "id": "depth-boundaries-and-belonging",
+          "title": "Depth, boundaries, and belonging",
+          "number": "3"
+        },
+        {
+          "id": "credit-as-an-intellectual-record",
+          "title": "Credit as an intellectual record",
+          "number": "4"
+        },
+        {
+          "id": "what-ai-changes-in-the-justification-for-authority",
+          "title": "What AI changes in the justification for authority",
+          "number": "5"
+        },
+        {
+          "id": "building-a-more-answerable-culture",
+          "title": "Building a more answerable culture",
+          "number": "6"
+        },
+        {
+          "id": "authority-that-enlarges-the-field",
+          "title": "Authority that enlarges the field",
+          "number": "7"
+        }
+      ],
+      "related": [
+        {
+          "slug": "mathematical-understanding-in-the-age-of-ai",
+          "description": "The purposes of mathematical inquiry, the assistance that sustains it, and the freedom to choose an intellectual direction."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "What different arguments reveal and enable, beyond establishing the same conclusion."
+        }
+      ]
+    },
+    "sectionLinks": [
+      {
+        "id": "a-hearing-before-a-verdict",
+        "title": "A hearing before a verdict",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict"
+      },
+      {
+        "id": "the-small-vanities-of-powerful-people",
+        "title": "The small vanities of powerful people",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#what-performed-mastery-costs"
+      },
+      {
+        "id": "depth-boundaries-and-belonging",
+        "title": "Depth, boundaries, and belonging",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+      },
+      {
+        "id": "credit-as-an-intellectual-record",
+        "title": "Credit as an intellectual record",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#credit-as-an-intellectual-record"
+      },
+      {
+        "id": "what-ai-changes-in-the-justification-for-authority",
+        "title": "What AI changes in the justification for authority",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#when-the-grounds-for-a-judgment-change"
+      },
+      {
+        "id": "building-a-more-answerable-culture",
+        "title": "Building a more answerable culture",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#making-participation-substantial"
+      },
+      {
+        "id": "authority-that-enlarges-the-field",
+        "title": "Authority that enlarges the field",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#making-participation-substantial"
+      }
+    ],
+    "noteLinks": [
+      {
+        "ids": [
+          "citation-1-1",
+          "note-1"
+        ],
+        "title": "Former note 1",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-18"
+      },
+      {
+        "ids": [
+          "citation-2-1",
+          "note-2"
+        ],
+        "title": "Former note 2: publication history",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#publication-history"
+      },
+      {
+        "ids": [
+          "citation-3-1",
+          "note-3"
+        ],
+        "title": "Former note 3",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-19"
+      },
+      {
+        "ids": [
+          "citation-4-1",
+          "note-4"
+        ],
+        "title": "Former note 4",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-23"
+      },
+      {
+        "ids": [
+          "citation-5-1",
+          "citation-5-2",
+          "note-5"
+        ],
+        "title": "Former note 5",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-24"
+      },
+      {
+        "ids": [
+          "citation-6-1",
+          "note-6"
+        ],
+        "title": "Former note 6",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-25"
+      },
+      {
+        "ids": [
+          "citation-7-1",
+          "note-7"
+        ],
+        "title": "Former note 7",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-27"
+      },
+      {
+        "ids": [
+          "citation-8-1",
+          "note-8"
+        ],
+        "title": "Former note 8",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-28"
+      },
+      {
+        "ids": [
+          "citation-9-1",
+          "note-9"
+        ],
+        "title": "Former note 9",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-29"
+      },
+      {
+        "ids": [
+          "citation-10-1",
+          "citation-10-2",
+          "note-10"
+        ],
+        "title": "Former note 10",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-30"
+      },
+      {
+        "ids": [
+          "citation-11-1",
+          "note-11"
+        ],
+        "title": "Former note 11",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-31"
+      },
+      {
+        "ids": [
+          "citation-12-1",
+          "note-12"
+        ],
+        "title": "Former note 12",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-33"
+      },
+      {
+        "ids": [
+          "citation-13-1",
+          "note-13"
+        ],
+        "title": "Former note 13",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-34"
+      },
+      {
+        "ids": [
+          "citation-14-1",
+          "note-14"
+        ],
+        "title": "Former note 14",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-32"
+      },
+      {
+        "ids": [
+          "citation-15-1",
+          "note-15"
+        ],
+        "title": "Former note 15",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-35"
+      },
+      {
+        "ids": [
+          "citation-16-1",
+          "note-16"
+        ],
+        "title": "Former note 16",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-40"
+      },
+      {
+        "ids": [
+          "citation-17-1",
+          "note-17"
+        ],
+        "title": "Former note 17",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-17"
+      },
+      {
+        "ids": [
+          "citation-18-1",
+          "note-18"
+        ],
+        "title": "Former note 18",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-38"
+      },
+      {
+        "ids": [
+          "citation-19-1",
+          "note-19"
+        ],
+        "title": "Former note 19",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-41"
+      },
+      {
+        "ids": [
+          "citation-20-1",
+          "note-20"
+        ],
+        "title": "Former note 20",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-52"
+      },
+      {
+        "ids": [
+          "citation-21-1",
+          "note-21"
+        ],
+        "title": "Former note 21",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-53"
+      },
+      {
+        "ids": [
+          "citation-22-1",
+          "note-22"
+        ],
+        "title": "Former note 22",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-55"
+      },
+      {
+        "ids": [
+          "citation-23-1",
+          "note-23"
+        ],
+        "title": "Former note 23",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-58"
+      },
+      {
+        "ids": [
+          "citation-24-1",
+          "note-24"
+        ],
+        "title": "Former note 24",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-44"
+      },
+      {
+        "ids": [
+          "citation-25-1",
+          "note-25"
+        ],
+        "title": "Former note 25",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-49"
+      },
+      {
+        "ids": [
+          "citation-26-1",
+          "note-26"
+        ],
+        "title": "Former note 26",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-50"
+      },
+      {
+        "ids": [
+          "citation-27-1",
+          "note-27"
+        ],
+        "title": "Former note 27",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-51"
+      },
+      {
+        "ids": [
+          "citation-28-1",
+          "note-28"
+        ],
+        "title": "Former note 28",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-54"
+      },
+      {
+        "ids": [
+          "citation-29-1",
+          "note-29"
+        ],
+        "title": "Former note 29",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-62"
+      },
+      {
+        "ids": [
+          "citation-30-1",
+          "note-30"
+        ],
+        "title": "Former note 30",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-63"
+      },
+      {
+        "ids": [
+          "citation-31-1",
+          "note-31"
+        ],
+        "title": "Former note 31",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-56"
+      },
+      {
+        "ids": [
+          "citation-32-1",
+          "note-32"
+        ],
+        "title": "Former note 32",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-57"
+      },
+      {
+        "ids": [
+          "citation-33-1",
+          "note-33"
+        ],
+        "title": "Former note 33",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-59"
+      },
+      {
+        "ids": [
+          "citation-34-1",
+          "note-34"
+        ],
+        "title": "Former note 34",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-64"
+      },
+      {
+        "ids": [
+          "citation-35-1",
+          "note-35"
+        ],
+        "title": "Former note 35",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-65"
+      },
+      {
+        "ids": [
+          "citation-36-1",
+          "note-36"
+        ],
+        "title": "Former note 36",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-66"
+      },
+      {
+        "ids": [
+          "citation-37-1",
+          "note-37"
+        ],
+        "title": "Former note 37",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-67"
+      }
+    ],
+    "extraLinks": [
+      {
+        "id": "notes-and-sources",
+        "title": "Notes and sources",
+        "target": "/essays/mathematical-life-in-the-age-of-ai.html#notes-and-sources"
+      }
+    ],
+    "requiredAnchors": [
+      "citation-1-1",
+      "citation-2-1",
+      "a-hearing-before-a-verdict",
+      "citation-3-1",
+      "citation-4-1",
+      "citation-5-1",
+      "citation-6-1",
+      "citation-7-1",
+      "citation-8-1",
+      "citation-9-1",
+      "citation-10-1",
+      "the-small-vanities-of-powerful-people",
+      "citation-11-1",
+      "citation-12-1",
+      "citation-13-1",
+      "citation-14-1",
+      "citation-15-1",
+      "depth-boundaries-and-belonging",
+      "citation-16-1",
+      "citation-17-1",
+      "citation-10-2",
+      "citation-18-1",
+      "citation-19-1",
+      "credit-as-an-intellectual-record",
+      "citation-20-1",
+      "citation-21-1",
+      "citation-22-1",
+      "citation-23-1",
+      "what-ai-changes-in-the-justification-for-authority",
+      "citation-24-1",
+      "citation-25-1",
+      "citation-26-1",
+      "citation-27-1",
+      "citation-28-1",
+      "building-a-more-answerable-culture",
+      "citation-29-1",
+      "citation-30-1",
+      "citation-31-1",
+      "citation-32-1",
+      "citation-33-1",
+      "citation-34-1",
+      "citation-5-2",
+      "citation-35-1",
+      "citation-36-1",
+      "citation-37-1",
+      "authority-that-enlarges-the-field",
+      "notes-and-sources",
+      "note-1",
+      "note-2",
+      "note-3",
+      "note-4",
+      "note-5",
+      "note-6",
+      "note-7",
+      "note-8",
+      "note-9",
+      "note-10",
+      "note-11",
+      "note-12",
+      "note-13",
+      "note-14",
+      "note-15",
+      "note-16",
+      "note-17",
+      "note-18",
+      "note-19",
+      "note-20",
+      "note-21",
+      "note-22",
+      "note-23",
+      "note-24",
+      "note-25",
+      "note-26",
+      "note-27",
+      "note-28",
+      "note-29",
+      "note-30",
+      "note-31",
+      "note-32",
+      "note-33",
+      "note-34",
+      "note-35",
+      "note-36",
+      "note-37"
+    ],
+    "downloads": [
+      {
+        "href": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
+        "label": "Archived PDF",
+        "sha256": "0cae59099bbdb259dc3a346c0259ec20c7b5ed05a6a8d71f62c638d34f4698bc"
+      },
+      {
+        "href": "/assets/essays/the-culture-of-mathematical-judgment.md",
+        "label": "Archived Markdown source",
+        "sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685"
+      }
+    ]
+  }
+]

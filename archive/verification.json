@@ -1,0 +1,1318 @@
+{
+  "verified_at_utc": "2026-10-20T07:57:44.007Z",
+  "source_build": {
+    "at": "2026-10-20T07:57:38.254Z",
+    "buildExitCode": 0,
+    "checkExitCode": 0,
+    "baselineFiles": 138,
+    "rebuiltFiles": 138,
+    "byteIdentical": true,
+    "differences": [],
+    "sourceFiles": 286,
+    "sourceBytes": 78932320,
+    "patternScan": {
+      "patterns": [
+        "userLocalPath",
+        "privatePaths",
+        "privateAssets",
+        "privateNarrative",
+        "credential"
+      ],
+      "findings": []
+    },
+    "allOriginalPublicBytesPreserved": true
+  },
+  "public_files": 136,
+  "raw_byte_matches": 99,
+  "html_files": 37,
+  "html_method": "Raw remote hashes are retained. Only the one observed 938-byte Cloudflare script immediately preceding the closing body/html suffix is removed for a second comparison; no content normalization or whitespace change is performed.",
+  "build_placeholders": 2,
+  "linked_route_variants": 4,
+  "unexplained_content_differences": 0,
+  "same_site_link_occurrences": 1158,
+  "missing_same_site_files": [],
+  "checks": [
+    {
+      "url": "https://tensorgami.com/",
+      "path": "index.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "d36352d6d07ea0b3381ba5f8f69173bd6070ff8f565dc10c81147404a124d644",
+      "injectedBytes": 938,
+      "injectedSha256": "ae3771d61ea13180ef733ea9d8744cf81a033804fb7ce612adab84668423206c",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "1aba5502ff667b2f6dbe42a303bbeeaa94eaa0d4b13ad6dac9fae6ddfce073ee",
+      "localSha256": "1aba5502ff667b2f6dbe42a303bbeeaa94eaa0d4b13ad6dac9fae6ddfce073ee"
+    },
+    {
+      "url": "https://tensorgami.com/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
+      "path": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "f0a540c19c223ceef23ab785a555eecdceb575e1629f6f768d7cef4dc769c2b0",
+      "injectedBytes": 938,
+      "injectedSha256": "809d84776aaba4dea509d630ee3133ad49016cced83db944f2a3fda7345646f4",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b",
+      "localSha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b"
+    },
+    {
+      "url": "https://tensorgami.com/404.html",
+      "path": "404.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "8690e41a4330d18a6f4d1241bd491c7cac786f7b5065f437f98b165d0915998d",
+      "injectedBytes": 938,
+      "injectedSha256": "56ceabf07356b47912ac5e34dd308c6e96b1261b68778b166b6e343532f222a0",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "5c31a03d206f96a242f4d3a99922194b6c46084e5cb32e4acfb79a80919742a3",
+      "localSha256": "5c31a03d206f96a242f4d3a99922194b6c46084e5cb32e4acfb79a80919742a3"
+    },
+    {
+      "url": "https://tensorgami.com/about.html",
+      "path": "about.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "e35c9fe7e0ce7f6b369bb87fc4827cca0d419d0c387717edd77014235a442cf7",
+      "injectedBytes": 938,
+      "injectedSha256": "ed8bd72f9fcfc09b59da2ec58dde577f99f5f4ea52301eaed62108636835aeb8",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "2896a97d5ff6a91e270c49a85c2c80d7cc8a0413679cfaf6f1e90821bf1b44dd",
+      "localSha256": "2896a97d5ff6a91e270c49a85c2c80d7cc8a0413679cfaf6f1e90821bf1b44dd"
+    },
+    {
+      "url": "https://tensorgami.com/about/index.html",
+      "path": "about/index.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "f5543c27855c8c372f2ac5a05e54f21ae26de221f62a18012b813a420f811b67",
+      "injectedBytes": 938,
+      "injectedSha256": "6474e9998cce75bad8f916c60f8b962cdc7472c819e5711703ab06281ff79bb0",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7",
+      "localSha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7"
+    },
+    {
+      "url": "https://tensorgami.com/assets/analytics.js",
+      "path": "assets/analytics.js",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/derivative-exposition.css",
+      "path": "assets/derivative-exposition.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/derivative-exposition.js",
+      "path": "assets/derivative-exposition.js",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "path": "assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "path": "assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+      "path": "assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.md",
+      "path": "assets/essays/the-culture-of-mathematical-judgment.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.pdf",
+      "path": "assets/essays/the-culture-of-mathematical-judgment.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/the-performance-of-depth.md",
+      "path": "assets/essays/the-performance-of-depth.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/when-a-description-becomes-a-verdict.md",
+      "path": "assets/essays/when-a-description-becomes-a-verdict.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.md",
+      "path": "assets/essays/when-accountability-stops-being-reciprocal.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "path": "assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/expositions.css",
+      "path": "assets/expositions.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/expositions/what-a-derivative-retains.md",
+      "path": "assets/expositions/what-a-derivative-retains.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/gaming/overwatch-2-diamond-5-support.jpg",
+      "path": "assets/gaming/overwatch-2-diamond-5-support.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/gaming/overwatch-riemannroch-master-3508.jpg",
+      "path": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/interests.css",
+      "path": "assets/interests.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/math-typeset.css",
+      "path": "assets/math-typeset.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/mathjax-LICENSE.txt",
+      "path": "assets/mathjax-LICENSE.txt",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/personal.css",
+      "path": "assets/personal.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/privacy-controls.js",
+      "path": "assets/privacy-controls.js",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-hearts.jpg",
+      "path": "assets/puzzles/cube-hearts.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figure-held.jpg",
+      "path": "assets/puzzles/cube-pixel-figure-held.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figures-alternate.jpg",
+      "path": "assets/puzzles/cube-pixel-figures-alternate.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figures-front-top.jpg",
+      "path": "assets/puzzles/cube-pixel-figures-front-top.jpg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/reading-entry.js",
+      "path": "assets/reading-entry.js",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/assets/styles.css",
+      "path": "assets/styles.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/essays.html",
+      "path": "essays.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "9e4bf1def7296af838f292eb50eba9839aa1f77d7a4599f3c653f6bd8e5d9fbd",
+      "injectedBytes": 938,
+      "injectedSha256": "67553f76d820e09984aad12290ead14b6ea21cdfccd14acb83801cd9e1fadfee",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "f91d17822c6e8d6afc8692c3e41221873ed2f800b890f8fba2759461c5c08461",
+      "localSha256": "f91d17822c6e8d6afc8692c3e41221873ed2f800b890f8fba2759461c5c08461"
+    },
+    {
+      "url": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html",
+      "path": "essays/mathematical-life-in-the-age-of-ai.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "d6fbd5e225c88b2584f7dfb403f093fc10e7a87ed86bc33b0e8801263eb9cbf9",
+      "injectedBytes": 938,
+      "injectedSha256": "f0ce8ff6d48fec3a8c119279597a7b33bbce6c4e3317ddd9afab076109eb64ff",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "9b08b5b7674842ebb618ec9c44e25bb98c7e1fc6ee2015751b8963f110dd27ca",
+      "localSha256": "9b08b5b7674842ebb618ec9c44e25bb98c7e1fc6ee2015751b8963f110dd27ca"
+    },
+    {
+      "url": "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai",
+      "path": "essays/mathematical-understanding-in-the-age-of-ai.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "615a27eaf00b057c6579b3798c26a265314f1fd619d24e8b04f5c14b0b902b0d",
+      "injectedBytes": 938,
+      "injectedSha256": "3f2998b6bf35c23b22ecb12f6ef9c4b33ca443d601de93d38c06ede6c32958ea",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "079fdd1044774669e4acd4afe8d591645d4b8b34a22c82918937bc265e54472c",
+      "localSha256": "079fdd1044774669e4acd4afe8d591645d4b8b34a22c82918937bc265e54472c"
+    },
+    {
+      "url": "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai.html",
+      "path": "essays/mathematical-understanding-in-the-age-of-ai.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "9b5f0d3da84097f26bff0122c10952a61699480faaa51ea9c89aab1a2438f3cf",
+      "injectedBytes": 938,
+      "injectedSha256": "d86454b7956558ff5c8bbe82fef7c259a26c690730c4927ce5bb707488e8598d",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "079fdd1044774669e4acd4afe8d591645d4b8b34a22c82918937bc265e54472c",
+      "localSha256": "079fdd1044774669e4acd4afe8d591645d4b8b34a22c82918937bc265e54472c"
+    },
+    {
+      "url": "https://tensorgami.com/essays/the-authority-of-a-vision.html",
+      "path": "essays/the-authority-of-a-vision.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "243e51a0a805c57f2009b0b81b386b1148876d04c5c2e4fbbc3c01ecf956261d",
+      "injectedBytes": 938,
+      "injectedSha256": "7cff3b21a035b9b823a5c390884b47d47aa3089cf3de9df019e6f94f973e8bd0",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "55c3e5bef8189b549ef3d8e934d2fcca62c045139c10e1075a945083546391d1",
+      "localSha256": "55c3e5bef8189b549ef3d8e934d2fcca62c045139c10e1075a945083546391d1"
+    },
+    {
+      "url": "https://tensorgami.com/essays/the-culture-of-mathematical-judgment.html",
+      "path": "essays/the-culture-of-mathematical-judgment.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "a91bc16f9d25c401cab154ff0228a1de35c615a9f7370153e8f3078715ef6074",
+      "injectedBytes": 938,
+      "injectedSha256": "6e6fbcde740bf00ab27b03476ba014b954f7f589da6922ad0c487afdc30d727d",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "810b21cd96b71703b215a6fd335d6c91a3a0a8295bb243ea0369ec8549d5d1a0",
+      "localSha256": "810b21cd96b71703b215a6fd335d6c91a3a0a8295bb243ea0369ec8549d5d1a0"
+    },
+    {
+      "url": "https://tensorgami.com/essays/the-performance-of-depth.html",
+      "path": "essays/the-performance-of-depth.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "7464998c5494af053010fc5524313e342878dcb7e0fe200bae91d07898e99ef9",
+      "injectedBytes": 938,
+      "injectedSha256": "a11b93ba7699147bb3d0473130b60cac1f7bcdc902365aa16afeba69d6e52149",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "62e71a3c30c45b44aaa6fed305c756f0ac27d1fa03b73863fa39485c85a097d9",
+      "localSha256": "62e71a3c30c45b44aaa6fed305c756f0ac27d1fa03b73863fa39485c85a097d9"
+    },
+    {
+      "url": "https://tensorgami.com/essays/what-a-new-proof-makes-possible.html",
+      "path": "essays/what-a-new-proof-makes-possible.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "833cddee892dde0f3b8166f3e9065cca5edc27fba2e0573158b468c5bbd8abc4",
+      "injectedBytes": 938,
+      "injectedSha256": "990c6e72b16b133da6427cd20cf1a425f283d6e787d03f5d8809b15b64329ada",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "b6a16d2a26b7ef137081c22c27da86470b3ef216662471b42fb6a9c793aca166",
+      "localSha256": "b6a16d2a26b7ef137081c22c27da86470b3ef216662471b42fb6a9c793aca166"
+    },
+    {
+      "url": "https://tensorgami.com/essays/when-a-description-becomes-a-verdict.html",
+      "path": "essays/when-a-description-becomes-a-verdict.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "dec68bd2c0edc65f7ecc3e058ee8fc738d1a0d7b56fbd09131457a1a1aa2f3d8",
+      "injectedBytes": 938,
+      "injectedSha256": "f6047769119eb033915b2c1e1cac8abbedb367e5b83344c98d39167f28d7f5ec",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "049e69b9d15576523616d643c8b6e1736dedb5df7234f97b8cab3b608e4632d3",
+      "localSha256": "049e69b9d15576523616d643c8b6e1736dedb5df7234f97b8cab3b608e4632d3"
+    },
+    {
+      "url": "https://tensorgami.com/essays/when-accountability-stops-being-reciprocal.html",
+      "path": "essays/when-accountability-stops-being-reciprocal.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "0ed6191b72830571611320e8a560ae9037ecde55a2cb5d0010ad4f2af6da8bb3",
+      "injectedBytes": 938,
+      "injectedSha256": "60455373942dfdf9b3555994e1940fbc80e5827f207a58f17164765399d8a6e5",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "eac91effdaaca189b191ba48aa1e0359aff01d35db9fb12e8401e953bd20f8c5",
+      "localSha256": "eac91effdaaca189b191ba48aa1e0359aff01d35db9fb12e8401e953bd20f8c5"
+    },
+    {
+      "url": "https://tensorgami.com/expositions.html",
+      "path": "expositions.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "c220615b888908e52ad62ea677ce9b207dbb6e5c96546dd66d990f2923e64537",
+      "injectedBytes": 938,
+      "injectedSha256": "b4acc54cdf19e73a1338d8e6b929ad53514fd911dddcefce4203b49a450bdc15",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "c8754e405d18e6ea2cbdd8c693b2ddfb020b3c59173ad47306b68bf3dbd95401",
+      "localSha256": "c8754e405d18e6ea2cbdd8c693b2ddfb020b3c59173ad47306b68bf3dbd95401"
+    },
+    {
+      "url": "https://tensorgami.com/favicon.svg",
+      "path": "favicon.svg",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "path": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lake-manifest.json",
+      "path": "formalizations/disjoint-decomposition/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lakefile.toml",
+      "path": "formalizations/disjoint-decomposition/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lean-toolchain",
+      "path": "formalizations/disjoint-decomposition/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/README.md",
+      "path": "formalizations/disjoint-decomposition/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "path": "formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/lake-manifest.json",
+      "path": "formalizations/extracting-first-prime/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/lakefile.toml",
+      "path": "formalizations/extracting-first-prime/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/lean-toolchain",
+      "path": "formalizations/extracting-first-prime/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/README.md",
+      "path": "formalizations/extracting-first-prime/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "path": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lake-manifest.json",
+      "path": "formalizations/galois-frobenius-composition-law/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lakefile.toml",
+      "path": "formalizations/galois-frobenius-composition-law/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "path": "formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/README.md",
+      "path": "formalizations/galois-frobenius-composition-law/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
+      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
+      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lake-manifest.json",
+      "path": "formalizations/ibm-ponder-this-2010/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "path": "formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "path": "formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/README.md",
+      "path": "formalizations/ibm-ponder-this-2010/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/disjoint-decomposition.zip",
+      "path": "formalizations/packages/disjoint-decomposition.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/extracting-first-prime.zip",
+      "path": "formalizations/packages/extracting-first-prime.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/galois-frobenius-composition-law.zip",
+      "path": "formalizations/packages/galois-frobenius-composition-law.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/ibm-ponder-this-2010.zip",
+      "path": "formalizations/packages/ibm-ponder-this-2010.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/pointwise-weighting.zip",
+      "path": "formalizations/packages/pointwise-weighting.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/separated-polynomial-differences.zip",
+      "path": "formalizations/packages/separated-polynomial-differences.zip",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lake-manifest.json",
+      "path": "formalizations/pointwise-weighting/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lakefile.toml",
+      "path": "formalizations/pointwise-weighting/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lean-toolchain",
+      "path": "formalizations/pointwise-weighting/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "path": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "path": "formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/README.md",
+      "path": "formalizations/pointwise-weighting/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/README.md",
+      "path": "formalizations/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lake-manifest.json",
+      "path": "formalizations/separated-polynomial-differences/lake-manifest.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lakefile.toml",
+      "path": "formalizations/separated-polynomial-differences/lakefile.toml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lean-toolchain",
+      "path": "formalizations/separated-polynomial-differences/lean-toolchain",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/README.md",
+      "path": "formalizations/separated-polynomial-differences/README.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "path": "formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/index.html",
+      "path": "index.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "fd59ea855132c096e03ebbeb583cdb0f78a4204af9ff28ff5356a2ac617d65a9",
+      "injectedBytes": 938,
+      "injectedSha256": "095a79394a33f86b9a7f49a646decad9f6b099e53768ce9325effa4cca41a766",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "1aba5502ff667b2f6dbe42a303bbeeaa94eaa0d4b13ad6dac9fae6ddfce073ee",
+      "localSha256": "1aba5502ff667b2f6dbe42a303bbeeaa94eaa0d4b13ad6dac9fae6ddfce073ee"
+    },
+    {
+      "url": "https://tensorgami.com/interests.html",
+      "path": "interests.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "4dfd90ad8abaeaae342b08bbd58a0a42092c9a0bfdfb43b4a958b88ad173779e",
+      "injectedBytes": 938,
+      "injectedSha256": "c1cf3dc99da853113f05ac12dd250cb4e40792f368b17414bff5a88378b607eb",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "f4ea4a9a2540a9af497d249ebdb8e134767f409c1fd11d375340c1bc22bd4fed",
+      "localSha256": "f4ea4a9a2540a9af497d249ebdb8e134767f409c1fd11d375340c1bc22bd4fed"
+    },
+    {
+      "url": "https://tensorgami.com/license.html",
+      "path": "license.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "afcee9d6bd011f4593dd73d23cd9b36b28c5a650d5152e9a11b36e6c7707e99f",
+      "injectedBytes": 938,
+      "injectedSha256": "bf867b6494aad28031fd5e7a875d28c47edc6c067302797e441f6a48b09c612c",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "1f060afe943ebe8b0242b4446a9d724309ae542552189b625d985fb392ee513d",
+      "localSha256": "1f060afe943ebe8b0242b4446a9d724309ae542552189b625d985fb392ee513d"
+    },
+    {
+      "url": "https://tensorgami.com/LICENSE.md",
+      "path": "LICENSE.md",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/llms.txt",
+      "path": "llms.txt",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/mechanisms.html",
+      "path": "mechanisms.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "498fd8f9982ae384a0b9eceae2efa7c772ccfbd965b61e32d29dafbe823e769a",
+      "injectedBytes": 938,
+      "injectedSha256": "2b7535646ff823f32afe768abc0c2fa7a23d62af0d025f9d2556399da763a61c",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "bb7c294ae80ebbfa06cb627a5eb691fad4d0b80f4c4bb738fe2acff8b8c048db",
+      "localSha256": "bb7c294ae80ebbfa06cb627a5eb691fad4d0b80f4c4bb738fe2acff8b8c048db"
+    },
+    {
+      "url": "https://tensorgami.com/notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "path": "notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "2f3eb78ec090855125216b020f4a3852af180f597601add66437c6ad2ddf56ad",
+      "injectedBytes": 938,
+      "injectedSha256": "4db7384c346c5e6be70b94393c3c1e92dff7060f0e736c94a4302e6cb05bbf65",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5",
+      "localSha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5"
+    },
+    {
+      "url": "https://tensorgami.com/notes/disjoint-decompositions.html",
+      "path": "notes/disjoint-decompositions.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "e8c6193b2cd44c0b5c41a29f48c12099ec99fc061b1d21f07c64edf68d35cf41",
+      "injectedBytes": 938,
+      "injectedSha256": "f06ded6a955cdcdadf9d9c400a1dd89e46b599c37236f6cd832d54f756c10877",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "b785573615d6933816fe5cea327c6a385b6dc77ab59b922bdd864854ab6c33ae",
+      "localSha256": "b785573615d6933816fe5cea327c6a385b6dc77ab59b922bdd864854ab6c33ae"
+    },
+    {
+      "url": "https://tensorgami.com/notes/extracting-first-prime.html",
+      "path": "notes/extracting-first-prime.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "2e4eb21c025f86eed7f94a87aee98e11ad6d096f017c196c6e65bae0baeeaf32",
+      "injectedBytes": 938,
+      "injectedSha256": "9a6555fd4268e8e72adf9c3d93ea4d137c4e461969601c91fafc4869988737c7",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "af5770dc42558968f0a9bef2afbc21b0499eff1d65c506e50546c51fcd56d882",
+      "localSha256": "af5770dc42558968f0a9bef2afbc21b0499eff1d65c506e50546c51fcd56d882"
+    },
+    {
+      "url": "https://tensorgami.com/notes/fourier-symmetry-and-reconstruction",
+      "path": "notes/fourier-symmetry-and-reconstruction.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "3a42993aa2a68ed9fa886070aec71896ef563a178f9c3a5a3391ebab56099f01",
+      "injectedBytes": 938,
+      "injectedSha256": "3179f00673ad24c2c4bb1523cb943ab947a6e11ba3be053d2c0836758203afbf",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "e8f7c4bec8c987ee6dd304528b31ba9c4622f5ad624fae896eb64f87cee5ecec",
+      "localSha256": "e8f7c4bec8c987ee6dd304528b31ba9c4622f5ad624fae896eb64f87cee5ecec"
+    },
+    {
+      "url": "https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html",
+      "path": "notes/fourier-symmetry-and-reconstruction.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "e87fe137da697f2d8077dedae4d81e637aa28d8985322aedd3207a1aad0aa6e0",
+      "injectedBytes": 938,
+      "injectedSha256": "404ae4f5827478933652442d598d7a3b919edd83930f70566eff99f28739fe65",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "e8f7c4bec8c987ee6dd304528b31ba9c4622f5ad624fae896eb64f87cee5ecec",
+      "localSha256": "e8f7c4bec8c987ee6dd304528b31ba9c4622f5ad624fae896eb64f87cee5ecec"
+    },
+    {
+      "url": "https://tensorgami.com/notes/galois-frobenius-composition-law.html",
+      "path": "notes/galois-frobenius-composition-law.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "9169963936b6e25218b5cfa951a960f6b4b46afbfe14aaca1dd91bed917a0ef2",
+      "injectedBytes": 938,
+      "injectedSha256": "b402493720d01a11908f6e4f0142ab10a103a44d6df74350c919df1fca93411e",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "80f1342816f840aac05a2cf3c9ad2d87cef93ba0330020fc0dcacc6ffa7d8af9",
+      "localSha256": "80f1342816f840aac05a2cf3c9ad2d87cef93ba0330020fc0dcacc6ffa7d8af9"
+    },
+    {
+      "url": "https://tensorgami.com/notes/hartshorne-ii-5-14-18.html",
+      "path": "notes/hartshorne-ii-5-14-18.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "b8d3f21902c0c3de111c50223ac90fe77d580c726a3e129fe1052ddf6d0b74e9",
+      "injectedBytes": 938,
+      "injectedSha256": "1d3f61b33e69019ad17aabd4af3076bf3a6493d6398d0c4cca24c8d90ce297e8",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "23abfa811347dae015666cd9dcfb0af3f7f1aa82bf1217b4a2c36b2a036e82b2",
+      "localSha256": "23abfa811347dae015666cd9dcfb0af3f7f1aa82bf1217b4a2c36b2a036e82b2"
+    },
+    {
+      "url": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
+      "path": "notes/ibm-ponder-this-2010.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "7081381ee99af93aa3653b407062729341e8039ff4e3bc105487f29bb1b34dd2",
+      "injectedBytes": 938,
+      "injectedSha256": "52dcaf6ee10e6af2e0f3e3fb9115370bc2c242c5dbdadfe1a46538391835ee2b",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "60f3e472aeb835545fd2d52027e846c71aa3cd920281a19ea10774f6ac6ab3c8",
+      "localSha256": "60f3e472aeb835545fd2d52027e846c71aa3cd920281a19ea10774f6ac6ab3c8"
+    },
+    {
+      "url": "https://tensorgami.com/notes/lebesgue-riemann-integrability.html",
+      "path": "notes/lebesgue-riemann-integrability.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "9326191d245274746a94d2c0414bbdcd522c371aea4d0c65ef736fc740508f59",
+      "injectedBytes": 938,
+      "injectedSha256": "6f3fa13b9b08cd16dad61b87424de0af6f95ca1f986a346030b4c31117102893",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "2fd3369844b1ee997332ca0757aa99e420272691b70cc9406f0699704dbb2348",
+      "localSha256": "2fd3369844b1ee997332ca0757aa99e420272691b70cc9406f0699704dbb2348"
+    },
+    {
+      "url": "https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html",
+      "path": "notes/pointwise-weighting-convergence-in-measure.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "56cc71330e75c741cd238fa46d644a180f6013db1a9be45bd45b0bca930c99d1",
+      "injectedBytes": 938,
+      "injectedSha256": "986545574c2dddbcfa8d39524a02e92043c81061f57c5d6140f380013a7c2103",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "07003e48d87960bd5bb108a8a3113fd846f38d6e8b215a09f0b0113d68213026",
+      "localSha256": "07003e48d87960bd5bb108a8a3113fd846f38d6e8b215a09f0b0113d68213026"
+    },
+    {
+      "url": "https://tensorgami.com/notes/products-preserve-riemann-integrability.html",
+      "path": "notes/products-preserve-riemann-integrability.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "3e55469762df3f9320ce6948cdd8d03fd1b5d59ced3b9d42f0124a29a668dc53",
+      "injectedBytes": 938,
+      "injectedSha256": "93bdfae8671927a8f194810b28913d37318299b10db3abae73f48704736a63b2",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "450e33066dda26b9625cad70fb934d90ed893a317901127e2c6fc436a390d61d",
+      "localSha256": "450e33066dda26b9625cad70fb934d90ed893a317901127e2c6fc436a390d61d"
+    },
+    {
+      "url": "https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html",
+      "path": "notes/selected-problems-discrete-mathematics-analysis.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "7dc7d9b1281d3848e4aa30332ea3a5ca9cd9adedf6ec828e2ed54b92451917de",
+      "injectedBytes": 938,
+      "injectedSha256": "c6528a244273d1814d2c778d01a513a50242976a9c9de0c2483e469e1990b230",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "7bf3f2fc5663fe336813a2ef5aa024b6196dac8069dd141d354e00faa775fae1",
+      "localSha256": "7bf3f2fc5663fe336813a2ef5aa024b6196dac8069dd141d354e00faa775fae1"
+    },
+    {
+      "url": "https://tensorgami.com/notes/separated-polynomial-divisibility.html",
+      "path": "notes/separated-polynomial-divisibility.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "aea76463bb313c894d9440ce7e5e204b1d9560ccf50c8b2fe5308cbc2bbd5070",
+      "injectedBytes": 938,
+      "injectedSha256": "ca00b36a56c719844e9ba04f9dcc85433bcfd34234453a65fcc6057a2f362eee",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "5234df02b9fb7e29a37f0ef361d145154cb30d7ceb5baff387588d028d1564b5",
+      "localSha256": "5234df02b9fb7e29a37f0ef361d145154cb30d7ceb5baff387588d028d1564b5"
+    },
+    {
+      "url": "https://tensorgami.com/notes/what-a-boundary-map-can-prove",
+      "path": "notes/what-a-boundary-map-can-prove.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "e59e4d1f2dd43adcc7ddf48d8b1f034c63c7bd280df8cb7fcd456d9572bc732c",
+      "injectedBytes": 938,
+      "injectedSha256": "bb2c53c87bdc0ea188b30ee657a114e5b65d38be111e1c7db7f2b8d01e37879f",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "b8e057bbb139d10717c1c74930c63cf20b6e86600b539426712b89f3494004d0",
+      "localSha256": "b8e057bbb139d10717c1c74930c63cf20b6e86600b539426712b89f3494004d0"
+    },
+    {
+      "url": "https://tensorgami.com/notes/what-a-boundary-map-can-prove.html",
+      "path": "notes/what-a-boundary-map-can-prove.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "7d2874bdd0b0ac2aa69cfa0537b302a4becb672b6967932374453360c62c3840",
+      "injectedBytes": 938,
+      "injectedSha256": "706cc90a03cc15c7b96ebc38fffd804fd57f1ef9d26f4f608af168368b35ab69",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "b8e057bbb139d10717c1c74930c63cf20b6e86600b539426712b89f3494004d0",
+      "localSha256": "b8e057bbb139d10717c1c74930c63cf20b6e86600b539426712b89f3494004d0"
+    },
+    {
+      "url": "https://tensorgami.com/notes/what-a-derivative-retains.html",
+      "path": "notes/what-a-derivative-retains.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "38d2ee30f9fc58804907d1d158f0469bcafdb98986c93adf965b26a5d300f8d7",
+      "injectedBytes": 938,
+      "injectedSha256": "b07f85cb4991822be8fa93da2c841d53c92d812ee003166da7ef337752e6200f",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "2a2dd3e55767e49ab9411ae7bd28ef7dbb219b8b1dfb4eebbfbc27a8d9a6c5f1",
+      "localSha256": "2a2dd3e55767e49ab9411ae7bd28ef7dbb219b8b1dfb4eebbfbc27a8d9a6c5f1"
+    },
+    {
+      "url": "https://tensorgami.com/papers.html",
+      "path": "papers.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "6b1a25c92a20cb5c0240ea20c43accb8ec9b9f2da858cac2e5e8da8944685989",
+      "injectedBytes": 938,
+      "injectedSha256": "c1ca23cc60a72c6d8d558e702e3261825903f8e25fc11c43cc37df399267069c",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "07865b7b205f9a126136b2646c0d36b4e18ee4a0e58b0f93eb4093b42f24e940",
+      "localSha256": "07865b7b205f9a126136b2646c0d36b4e18ee4a0e58b0f93eb4093b42f24e940"
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "path": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "path": "pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "path": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+      "path": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "path": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/.gitkeep",
+      "path": "pdfs/analysis/.gitkeep",
+      "classification": "zero-byte-build-placeholder-not-public-content",
+      "rawByteMatch": false,
+      "status": 404
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "path": "pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "path": "pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "path": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "path": "pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/combinatorics/.gitkeep",
+      "path": "pdfs/combinatorics/.gitkeep",
+      "classification": "zero-byte-build-placeholder-not-public-content",
+      "rawByteMatch": false,
+      "status": 404
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "path": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "path": "pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "path": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/play.html",
+      "path": "play.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "9fb90c63358b206c854871029fd3b805ded92de0bb3a5d49aa8ee0d8e36cf8f8",
+      "injectedBytes": 938,
+      "injectedSha256": "e8599d277ff9c2d3dfefbd3a07cba81148bf3d3b34657400adf1e82192715733",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793",
+      "localSha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793"
+    },
+    {
+      "url": "https://tensorgami.com/play/cube-patterns.html",
+      "path": "play/cube-patterns.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "505b8fad2341c4405db70c5469c99141f0dbaf55f18a8058a59faa862a8c2189",
+      "injectedBytes": 938,
+      "injectedSha256": "67371866665deece5ee58bfb8e8f4d29989213c132bf9341d622be4ba8650774",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "64c9bd2e1fa616e9abf128acb0102cc0c261188f488aa6a846ee52df52e1599f",
+      "localSha256": "64c9bd2e1fa616e9abf128acb0102cc0c261188f488aa6a846ee52df52e1599f"
+    },
+    {
+      "url": "https://tensorgami.com/portfolio.json",
+      "path": "portfolio.json",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/privacy.html",
+      "path": "privacy.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "b0f3be0b10211053aca14131a87c73983e8b564814afaa4edcbffe8cf9d8666f",
+      "injectedBytes": 938,
+      "injectedSha256": "4f56f6c07032e380ff06770e352bd3e440e4cf99d750cb62bf86d14ceaee487e",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "e3cc82defaf725ae26ca80e3d3800b84e81979293b01225e74f5c8346ad2e575",
+      "localSha256": "e3cc82defaf725ae26ca80e3d3800b84e81979293b01225e74f5c8346ad2e575"
+    },
+    {
+      "url": "https://tensorgami.com/robots.txt",
+      "path": "robots.txt",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/sitemap.xml",
+      "path": "sitemap.xml",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/styles.css",
+      "path": "styles.css",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "path": "tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
+      "path": "tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+      "path": "tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "path": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "path": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "path": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "path": "tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "path": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "path": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "path": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "classification": "verified",
+      "rawByteMatch": true,
+      "status": 200
+    },
+    {
+      "url": "https://tensorgami.com/verification.html",
+      "path": "verification.html",
+      "classification": "exact-authored-bytes-plus-host-injected-script",
+      "rawByteMatch": false,
+      "rawRemoteSha256": "36fbb6ea14104b8cf17836bf8d63e09865c642ee82e35936d81b23ceb6d87697",
+      "injectedBytes": 938,
+      "injectedSha256": "2800b682ee66fccd7871846155aa6c803963efc9710af0d8f8e6d211aa716b5b",
+      "injectedMarker": "Cloudflare challenge-platform script",
+      "recognized": true,
+      "exactAfterRemoval": true,
+      "reconstructedSha256": "ff9dc494d4929db49ebd7897c2596d5b5e1226b69fab914111fd0059a50e8fe0",
+      "localSha256": "ff9dc494d4929db49ebd7897c2596d5b5e1226b69fab914111fd0059a50e8fe0"
+    }
+  ],
+  "scope_limit": "Preservation and build checks, not theorem-by-theorem mathematical certification."
+}

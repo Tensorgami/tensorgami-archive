@@ -1,0 +1,84 @@
+/* Personal interests use the same quiet typography as the mathematical library. */
+.interests-section { margin:0 0 3rem }
+.interests-section h2[id] { scroll-margin-top:2rem }
+.interests-index { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:3.5rem }
+.interests-reading { max-width:42rem }
+.interests-reading .interests-index { display:block }
+.interests-reading .interest-entry { padding:0 }
+.interests-reading .interest-entry>p:not(.eyebrow) { max-width:none }
+.interests-reading .interest-entry h2 { font:normal 1.65rem/1.3 var(--serif); margin:0 0 1.3rem }
+.interests-reading .interest-entry h2 a { color:var(--ink); text-decoration:none }
+.interests-reading .interest-entry h2 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.interest-entry { min-width:0; padding:1rem 0 1.8rem }
+.interest-entry .eyebrow { font-size:.69rem; margin:0 0 .7rem }
+.interest-entry h3 { font:normal 2.1rem/1.2 var(--serif); letter-spacing:-.025em; margin:0 0 1rem }
+.interest-entry h3 a { color:var(--ink); text-decoration:none }
+.interest-entry h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.interest-entry>p:not(.eyebrow) { color:var(--muted); max-width:31rem; margin:.8rem 0 }
+.interest-entry .inline-link { margin-top:.7rem }
+.interest-note { max-width:42rem; padding-top:1.4rem; margin:0 0 3rem; border-top:1px solid var(--line) }
+.interest-note h2 { font:normal 1.65rem/1.3 var(--serif); margin:0 0 .8rem }
+.interest-note p { color:var(--muted); margin:0; line-height:1.8 }
+.interest-note p+p { margin-top:.8rem }
+.interest-screenshots { margin-top:1rem }
+.interest-screenshots summary { width:fit-content; color:var(--blue); cursor:pointer; font-size:.9rem }
+.interest-evidence { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; align-items:start; margin-top:1rem }
+.interest-evidence figure { min-width:0; margin:0 }
+.interest-evidence figure>a { display:block; background:var(--wash) }
+.interest-evidence img { display:block; width:100%; height:auto; max-height:22rem; object-fit:contain; image-orientation:from-image }
+.interest-evidence figcaption { color:var(--muted); font-size:.82rem; line-height:1.6; padding-top:.65rem }
+.interest-photo { display:block; margin:0 0 1.6rem; background:var(--wash) }
+.interest-photo img { display:block; width:100%; height:auto; max-height:23rem; object-fit:contain; image-orientation:from-image }
+.interest-style { display:flex; flex-direction:column; align-items:flex-start }
+.wardrobe-preview { width:100%; padding:1.6rem 0 1.3rem; margin:auto 0 }
+.wardrobe-label { color:var(--muted); font:.8rem/1.6 var(--sans); margin:0 0 .5rem }
+.wardrobe-preview ul { list-style:none; padding:0; margin:0 }
+.wardrobe-preview li { border-bottom:1px solid var(--line); padding:.75rem 0; font:normal 1.65rem/1.4 var(--serif) }
+.wardrobe-preview li:last-child { border-bottom:0 }
+.style-layout { display:grid; grid-template-columns:minmax(12rem,1fr) minmax(0,2fr); gap:4rem; align-items:start; margin:0 0 3rem }
+.wardrobe-notes { border-top:1px solid var(--line); padding-top:1.3rem }
+.wardrobe-notes h2 { font:normal 1.6rem/1.3 var(--serif); margin:0 0 1rem }
+.wardrobe-notes>p { color:var(--muted); font-size:.9rem; margin:0 0 .8rem }
+.wardrobe-notes ul { padding:0; list-style:none; margin:0 }
+.wardrobe-notes li { border-top:1px solid var(--line); padding:.95rem 0; font:normal 1.25rem/1.5 var(--serif) }
+.style-experiences { min-width:0 }
+.style-experiences>h2 { border-top:1px solid var(--line); padding-top:1.3rem; font:normal 1.6rem/1.3 var(--serif); margin:0 0 1.8rem }
+.style-note { padding:0 0 1.8rem; margin:0 0 1.8rem; border-bottom:1px solid var(--line) }
+.style-note h3 { font:normal 1.8rem/1.3 var(--serif); margin:0 0 .35rem }
+.style-note .style-location { color:var(--muted); font:.8rem/1.6 var(--sans); margin:0 0 1.1rem }
+.style-note .prose { font-size:1.12rem; line-height:1.8 }
+.style-note .prose p:last-child { margin-bottom:0 }
+.style-reviews { color:var(--muted); font:.88rem/1.75 var(--sans); max-width:36rem; margin:0 }
+.car-gallery { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:2rem; margin:0 0 2rem; align-items:start }
+.car-gallery figure { min-width:0; margin:0 }
+.car-gallery figure>a { display:block; background:var(--wash) }
+.car-gallery img { display:block; width:100%; height:auto; max-height:42rem; object-fit:contain; image-orientation:from-image }
+.car-gallery figcaption { padding:1rem 0; color:var(--muted); font:.84rem/1.7 var(--sans) }
+.car-gallery figcaption a { white-space:nowrap }
+.interests-back { margin:2.5rem 0 4rem; font-size:.9rem }
+@media(max-width:1000px) {
+  .interests-index { column-gap:2.5rem }
+  .style-layout { gap:2.5rem; grid-template-columns:minmax(12rem,1fr) minmax(0,1.8fr) }
+}
+@media(max-width:760px) {
+  .interest-evidence { grid-template-columns:1fr }
+  .interests-index { grid-template-columns:1fr }
+  .interests-section { margin-bottom:2.2rem }
+  .interest-entry { padding:1rem 0 2.1rem }
+  .interest-entry+.interest-entry { border-top:1px solid var(--line); padding-top:1.8rem }
+  .interest-entry h3 { font-size:1.9rem }
+  .interest-photo img { max-height:28rem }
+  .wardrobe-preview { padding:1.2rem 0 .7rem }
+  .wardrobe-preview li { font-size:1.45rem }
+  .style-layout { grid-template-columns:1fr; gap:2.5rem }
+  .wardrobe-notes li { font-size:1.2rem }
+  .style-note h3 { font-size:1.65rem }
+  .car-gallery { grid-template-columns:1fr; gap:1rem }
+  .car-gallery img { max-height:none }
+}
+@media print {
+  .interests-index,.style-layout,.car-gallery { display:block }
+  .interest-entry,.style-note,.car-gallery figure { break-inside:avoid }
+  .interest-photo img,.car-gallery img { max-height:6in; width:auto; max-width:100% }
+  .interests-back { display:none }
+}

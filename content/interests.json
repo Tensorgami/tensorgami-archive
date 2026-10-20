@@ -1,0 +1,23 @@
+{
+  "overwatch": {
+    "published": true,
+    "title": "Overwatch",
+    "body": "I’ve also played Overwatch as RiemannRoch. In the original game I reached Master, mainly playing Zarya and other tanks; in Overwatch 2 I reached Diamond 5 while learning Support. I queued on my own for both.\n\nWith a different mix of teammates each match, part of the challenge was reading the team as we played: when to push together, what help to expect, and how to coordinate without having practiced together.",
+    "images": [
+      {
+        "src": "/assets/gaming/overwatch-riemannroch-master-3508.jpg",
+        "alt": "Overwatch profile for RIEMANNROCH showing Master at 3508 SR for both current rank and season high, with Zarya leading the hero playtime chart.",
+        "caption": "RiemannRoch at 3508 SR in the original Overwatch.",
+        "width": 3024,
+        "height": 4032
+      },
+      {
+        "src": "/assets/gaming/overwatch-2-diamond-5-support.jpg",
+        "alt": "Overwatch 2 rank-progression screen showing Diamond 5 in Support after a victory, with Kiriko visible on the right.",
+        "caption": "Diamond 5 in Support in Overwatch 2.",
+        "width": 1024,
+        "height": 640
+      }
+    ]
+  }
+}

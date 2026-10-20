@@ -1,0 +1,689 @@
+{
+  "edition": "2026-10-20.1",
+  "counts": {
+    "currentEssays": 6,
+    "currentExpositions": 12,
+    "problemSets": 1,
+    "archivedEssays": 2,
+    "archivedExpositions": 1,
+    "researchRecords": 10,
+    "formalizationProjects": 6
+  },
+  "works": [
+    {
+      "type": "essay",
+      "slug": "mathematical-life-in-the-age-of-ai",
+      "title": "Mathematical Life in the Age of AI",
+      "page": "/essays/mathematical-life-in-the-age-of-ai.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-12"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/essays/mathematical-life-in-the-age-of-ai.html",
+        "content/essays/mathematical-life-in-the-age-of-ai.md"
+      ]
+    },
+    {
+      "type": "essay",
+      "slug": "when-accountability-stops-being-reciprocal",
+      "title": "When Accountability Stops Being Reciprocal",
+      "page": "/essays/when-accountability-stops-being-reciprocal.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-19"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/assets/essays/when-accountability-stops-being-reciprocal.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/essays/when-accountability-stops-being-reciprocal.html",
+        "content/essays/when-accountability-stops-being-reciprocal.md"
+      ]
+    },
+    {
+      "type": "essay",
+      "slug": "the-performance-of-depth",
+      "title": "The Performance of Depth",
+      "page": "/essays/the-performance-of-depth.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-19"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "source",
+          "path": "/assets/essays/the-performance-of-depth.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/essays/the-performance-of-depth.html",
+        "content/essays/the-performance-of-depth.md"
+      ]
+    },
+    {
+      "type": "essay",
+      "slug": "what-a-new-proof-makes-possible",
+      "title": "What a New Proof Makes Possible",
+      "page": "/essays/what-a-new-proof-makes-possible.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-08"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [],
+      "sourceFiles": [
+        "content/essays/what-a-new-proof-makes-possible.html",
+        "content/essays/what-a-new-proof-makes-possible.md"
+      ]
+    },
+    {
+      "type": "essay",
+      "slug": "when-a-description-becomes-a-verdict",
+      "title": "When a Description Becomes a Verdict",
+      "page": "/essays/when-a-description-becomes-a-verdict.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-17"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "source",
+          "path": "/assets/essays/when-a-description-becomes-a-verdict.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/essays/when-a-description-becomes-a-verdict.html",
+        "content/essays/when-a-description-becomes-a-verdict.md"
+      ]
+    },
+    {
+      "type": "essay",
+      "slug": "the-authority-of-a-vision",
+      "title": "The Authority of a Vision",
+      "page": "/essays/the-authority-of-a-vision.html",
+      "status": "current public work",
+      "declaredDates": {
+        "date": "2026-10-07"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [],
+      "sourceFiles": [
+        "content/essays/the-authority-of-a-vision.html",
+        "content/essays/the-authority-of-a-vision.md"
+      ]
+    },
+    {
+      "type": "exposition",
+      "slug": "fourier-symmetry-and-reconstruction",
+      "title": "Fourier, Symmetry, and Reconstruction",
+      "page": "/notes/fourier-symmetry-and-reconstruction.html",
+      "status": "current public work",
+      "declaredDates": {
+        "edition": "Revised and expanded, October 2026",
+        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree."
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/expositions/fourier-symmetry-and-reconstruction.html",
+        "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex"
+      ]
+    },
+    {
+      "type": "exposition",
+      "slug": "what-a-boundary-map-can-prove",
+      "title": "What a Boundary Map Can Prove",
+      "page": "/notes/what-a-boundary-map-can-prove.html",
+      "status": "current public work",
+      "declaredDates": {
+        "edition": "October 2026 · revised",
+        "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree."
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/expositions/what-a-boundary-map-can-prove.html",
+        "public/tex/algebra/What_a_Boundary_Map_Can_Prove.tex"
+      ]
+    },
+    {
+      "type": "exposition",
+      "slug": "what-a-derivative-retains",
+      "title": "What a Derivative Retains",
+      "page": "/notes/what-a-derivative-retains.html",
+      "status": "current public work",
+      "declaredDates": {
+        "edition": "October 2026",
+        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition.",
+        "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "manuscript",
+          "path": "/assets/expositions/what-a-derivative-retains.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/expositions/what-a-derivative-retains.html",
+        "assets/expositions/what-a-derivative-retains.md",
+        "content/expositions/what-a-derivative-retains-pdf/"
+      ]
+    },
+    {
+      "type": "exposition",
+      "slug": "pointwise-weighting-convergence-in-measure",
+      "title": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
+      "page": "/notes/pointwise-weighting-convergence-in-measure.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope. The PDF and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "ibm-ponder-this-2010",
+      "title": "IBM Ponder This July 2010",
+      "page": "/notes/ibm-ponder-this-2010.html",
+      "status": "current public work",
+      "declaredDates": {},
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "separated-polynomial-divisibility",
+      "title": "Divisibility of Separated Polynomials",
+      "page": "/notes/separated-polynomial-divisibility.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged. The PDF and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "galois-frobenius-composition-law",
+      "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
+      "page": "/notes/galois-frobenius-composition-law.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged. The PDF and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "hartshorne-ii-5-14-18",
+      "title": "Normality, Coherent Extension, Tensor Operations, and Affineness",
+      "page": "/notes/hartshorne-ii-5-14-18.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections. The PDF and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "extracting-first-prime",
+      "title": "Extracting the First Prime Greater than m",
+      "page": "/notes/extracting-first-prime.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
+        "revisionDates": [
+          "2026-10-07"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "disjoint-decompositions",
+      "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
+      "page": "/notes/disjoint-decompositions.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: explicitly established that the closed remainder is nonempty before applying the Baire category theorem.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "lebesgue-riemann-integrability",
+      "title": "Lebesgue's Criterion for Riemann Integrability",
+      "page": "/notes/lebesgue-riemann-integrability.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: rebuilt the editable source, clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples. The PDF and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22",
+          "2026-10-07"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "exposition",
+      "slug": "products-preserve-riemann-integrability",
+      "title": "Products Preserve Riemann Integrability",
+      "page": "/notes/products-preserve-riemann-integrability.html",
+      "status": "current public work",
+      "declaredDates": {
+        "originalPublishedAt": "2026-04-29T02:18:00Z",
+        "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit, and the opening proof outline has been reflowed. The PDF and TeX source agree. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
+        "revisionDates": [
+          "2026-09-22",
+          "2026-10-07"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/excerpts/products-preserve-riemann-integrability.html",
+        "content/excerpts/products-preserve-riemann-integrability.md"
+      ]
+    },
+    {
+      "type": "problem-set",
+      "slug": "selected-problems-discrete-mathematics-analysis",
+      "title": "Selected Problems in Discrete Mathematics and Analysis",
+      "page": "/notes/selected-problems-discrete-mathematics-analysis.html",
+      "status": "current public work",
+      "declaredDates": {
+        "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant. The web edition, PDF, and TeX source agree.",
+        "revisionDates": [
+          "2026-09-22"
+        ]
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": []
+    },
+    {
+      "type": "archived-essay",
+      "slug": "mathematical-understanding-in-the-age-of-ai",
+      "title": "Mathematical Understanding in the Age of AI",
+      "page": "/essays/mathematical-understanding-in-the-age-of-ai.html",
+      "status": "superseded public predecessor",
+      "declaredDates": {
+        "date": "2026-10-07",
+        "archivedDate": "2026-10-12",
+        "edition": "Version 75"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [],
+      "sourceFiles": [
+        "content/essays/mathematical-understanding-in-the-age-of-ai.html",
+        "content/essays/mathematical-understanding-in-the-age-of-ai.md"
+      ]
+    },
+    {
+      "type": "archived-essay",
+      "slug": "the-culture-of-mathematical-judgment",
+      "title": "The Culture of Mathematical Judgment",
+      "page": "/essays/the-culture-of-mathematical-judgment.html",
+      "status": "superseded public predecessor",
+      "declaredDates": {
+        "date": "2026-10-12",
+        "archivedDate": "2026-10-12",
+        "edition": "Version 75"
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "source",
+          "path": "/assets/essays/the-culture-of-mathematical-judgment.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/essays/the-culture-of-mathematical-judgment.html",
+        "content/essays/the-culture-of-mathematical-judgment.md"
+      ]
+    },
+    {
+      "type": "archived-exposition",
+      "slug": "a-tree-is-a-discrete-poincare-lemma",
+      "title": "A Tree Is a Discrete Poincare Lemma",
+      "page": "/notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "status": "Predecessor route redirects to What a Boundary Map Can Prove; retained public PDF/TeX preserved",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/expositions/a-tree-is-a-discrete-poincare-lemma.html"
+      ],
+      "declaredDates": {
+        "texTitlePage": "October 2026"
+      },
+      "dateEvidenceScope": "Transcribed from retained TeX title page; not independently authenticated."
+    },
+    {
+      "type": "research-record",
+      "id": "1903.09181",
+      "title": "Curvature growth of some 4-dimensional gradient Ricci soliton singularity models",
+      "authors": "Bennett Chow, Michael Freedman, Henry Shin, Yongjia Zhang",
+      "status": "Published",
+      "page": "/papers.html#arxiv-1903.09181",
+      "arxiv": "https://arxiv.org/abs/1903.09181",
+      "doi": "https://doi.org/10.1016/j.aim.2020.107303"
+    },
+    {
+      "type": "research-record",
+      "id": "2609.01690",
+      "title": "Iterated-sumset spectra: The complete exponent law and its rank geometry",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2609.01690",
+      "arxiv": "https://arxiv.org/abs/2609.01690",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2608.08533",
+      "title": "Open full-metric formation and local marked first-order asymptotic moduli of FIK blowdown singularities",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2608.08533",
+      "arxiv": "https://arxiv.org/abs/2608.08533",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2607.01716",
+      "title": "A global girth obstruction for Garg–Mineyev taiko product structures",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2607.01716",
+      "arxiv": "https://arxiv.org/abs/2607.01716",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2606.15218",
+      "title": "From rough local mass to logarithmic spectral ladders for damped waves",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2606.15218",
+      "arxiv": "https://arxiv.org/abs/2606.15218",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2606.14877",
+      "title": "Exchange identities and symmetric slices of the valley Delta conjecture",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2606.14877",
+      "arxiv": "https://arxiv.org/abs/2606.14877",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2606.12230",
+      "title": "One extra edge forces Berge pancyclicity",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2606.12230",
+      "arxiv": "https://arxiv.org/abs/2606.12230",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2605.25291",
+      "title": "Hilbert-90 quotient maps, torsion defects, and symmetric monodromy",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2605.25291",
+      "arxiv": "https://arxiv.org/abs/2605.25291",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2605.21939",
+      "title": "Coset-refined trace statistics, nodal characters, and affine branches in cubic norm tori",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2605.21939",
+      "arxiv": "https://arxiv.org/abs/2605.21939",
+      "doi": null
+    },
+    {
+      "type": "research-record",
+      "id": "2605.12903",
+      "title": "Logarithmic source curves in polynomial fiber products",
+      "authors": "Henry Shin",
+      "status": "Preprint",
+      "page": "/papers.html#arxiv-2605.12903",
+      "arxiv": "https://arxiv.org/abs/2605.12903",
+      "doi": null
+    }
+  ]
+}

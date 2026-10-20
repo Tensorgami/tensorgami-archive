@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "cube-patterns",
+    "page": "/play/cube-patterns.html",
+    "title": "Cube patterns",
+    "summary": "Hearts and pixel figures on a cube, made for fun with my own move sequences.",
+    "galleryIntro": "Hearts and little pixel figures, made with move sequences I worked out on large twisty cubes.",
+    "body": "I work out my own move sequences on large twisty cubes, using commutators to rearrange small groups of pieces, then combining the sequences to make hearts and little pixel figures. The puzzle is to build up the picture without undoing the parts already in place. Finding the moves is part of the enjoyment.",
+    "images": [
+      {
+        "src": "/assets/puzzles/cube-hearts.jpg",
+        "alt": "A cube on a desk with a red heart on its white front face and a white heart on its red top face.",
+        "caption": "Hearts in red and white.",
+        "width": 3072,
+        "height": 4080
+      },
+      {
+        "src": "/assets/puzzles/cube-pixel-figures-front-top.jpg",
+        "alt": "A cube with a green pixel figure on its orange front face and an orange pixel figure on its green top face, both with white details.",
+        "caption": "Pixel figures on the front and top faces.",
+        "width": 3072,
+        "height": 4080
+      },
+      {
+        "src": "/assets/puzzles/cube-pixel-figure-held.jpg",
+        "alt": "A hand holding the cube to show a green and white pixel figure on the orange front face, with a yellow side and blue underside visible.",
+        "caption": "The front pattern, viewed with the yellow side and blue underside.",
+        "width": 3072,
+        "height": 4080
+      },
+      {
+        "src": "/assets/puzzles/cube-pixel-figures-alternate.jpg",
+        "alt": "Another view of the cube on a desk, showing the green pixel figure on the orange front face and the orange pixel figure on the green top face.",
+        "caption": "Another view of the pixel figures.",
+        "width": 3072,
+        "height": 4080
+      }
+    ]
+  }
+]

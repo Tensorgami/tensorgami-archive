@@ -1,0 +1,24 @@
+# Tensorgami — Henry Shin
+
+A developing inquiry into motivic mathematics through study, explicit calculation, and exposition. Current interests include Tannakian and motivic Galois theory, cohomology, periods, transport, descent, and reconstruction. The site also contains a wider library of expositions in algebra, geometry, number theory, and analysis, and essays on understanding, independent inquiry, and the scope of authority. Papers from earlier lines of research are collected in the research archive, with dates, publication status, and corrections stated individually.
+
+## Selected expositions
+
+- [Fourier, Symmetry, and Reconstruction](https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html) — How root covers and their algebras produce Cardano's and Ferrari's substitutions, then lead to Fourier–Mukai duality, motives, and higher Galois reconstruction.
+- [What a Boundary Map Can Prove](https://tensorgami.com/notes/what-a-boundary-map-can-prove.html) — Determinant lines govern tree counts, Hodge theory constrains chromatic coefficients, and an elliptic attachment reveals motivic Galois symmetries invisible in the graph.
+- [What a Derivative Retains](https://tensorgami.com/notes/what-a-derivative-retains.html) — The rectangle product rule and oriented boundaries lead to Kähler differentials, cotangent complexes, higher brackets, spectral derivatives, and Goodwillie calculus, through explicit calculations.
+- [IBM Ponder This July 2010](https://tensorgami.com/notes/ibm-ponder-this-2010.html) — A rounding problem becomes a congruence problem through algebraic traces, recurrences, and a companion matrix.
+- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html) — How a positive measurable weight turns almost-everywhere convergence into convergence in measure, with an Egorov construction and a shorter dominated-convergence proof.
+- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://tensorgami.com/notes/hartshorne-ii-5-14-18.html) — Solutions to Hartshorne II.5.14–18 connecting projective normality, coherent sheaves, affine morphisms, and vector bundles.
+
+## Explore
+
+- [Current inquiry](https://tensorgami.com/)
+- [Expositions](https://tensorgami.com/expositions.html)
+- [Reading paths](https://tensorgami.com/mechanisms.html)
+- [Essays](https://tensorgami.com/essays.html)
+- [Mathematical Life in the Age of AI](https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html)
+- [About Henry Shin](https://tensorgami.com/about.html)
+- [Interests](https://tensorgami.com/interests.html)
+- [Research archive](https://tensorgami.com/papers.html)
+- [Supplementary sources](https://tensorgami.com/verification.html)

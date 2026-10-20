@@ -1,0 +1,1003 @@
+{
+  "person": {
+    "name": "Henry Shin",
+    "website": "https://tensorgami.com",
+    "email": "hkshin@alumni.harvard.edu",
+    "orcid": "https://orcid.org/0009-0000-6453-6865",
+    "interests": [
+      "Motivic mathematics",
+      "Tannakian and motivic Galois theory",
+      "Cohomology",
+      "Periods"
+    ],
+    "currentMathematicalFocus": [
+      "Motivic mathematics",
+      "Transport",
+      "Descent",
+      "Reconstruction"
+    ],
+    "mathematicalPractice": [
+      "Study",
+      "Explicit calculation",
+      "Exposition"
+    ],
+    "researchBackground": [
+      "Group theory",
+      "Algebra",
+      "Additive combinatorics",
+      "Geometric analysis"
+    ],
+    "researchArchive": "https://tensorgami.com/papers.html"
+  },
+  "selection": {
+    "papers": [
+      "2607.01716",
+      "2609.01690"
+    ],
+    "featuredExpositions": [
+      "fourier-symmetry-and-reconstruction",
+      "what-a-boundary-map-can-prove",
+      "what-a-derivative-retains"
+    ],
+    "expositions": [
+      "fourier-symmetry-and-reconstruction",
+      "ibm-ponder-this-2010",
+      "pointwise-weighting-convergence-in-measure",
+      "hartshorne-ii-5-14-18"
+    ],
+    "paperSections": [
+      {
+        "id": "published",
+        "title": "Published work",
+        "label": "Published",
+        "description": "Earlier work in geometric analysis, with its correction linked alongside the article.",
+        "status": "Published",
+        "papers": [
+          "1903.09181"
+        ]
+      },
+      {
+        "id": "algebra-combinatorics",
+        "title": "Further algebra & combinatorics",
+        "label": "Algebra & combinatorics",
+        "description": "Preprints in algebraic and extremal combinatorics, number theory, and arithmetic geometry.",
+        "status": "Preprint",
+        "papers": [
+          "2606.14877",
+          "2606.12230",
+          "2605.25291",
+          "2605.21939",
+          "2605.12903"
+        ]
+      },
+      {
+        "id": "geometry-analysis",
+        "title": "Geometry & analysis",
+        "label": "Geometry & analysis",
+        "description": "Further preprints on Ricci flow and partial differential equations.",
+        "status": "Preprint",
+        "papers": [
+          "2608.08533",
+          "2606.15218"
+        ]
+      }
+    ]
+  },
+  "readingPaths": [
+    {
+      "id": "symmetry-and-reconstruction",
+      "title": "Symmetry and reconstruction",
+      "description": "Root algebras, graph complexes, and infinitesimal probes give independent entries into reconstruction. The shared guide connects their operations and examples.",
+      "notes": [
+        "fourier-symmetry-and-reconstruction",
+        "what-a-boundary-map-can-prove",
+        "what-a-derivative-retains"
+      ],
+      "companionPath": "polynomial-structure"
+    },
+    {
+      "id": "polynomial-structure",
+      "title": "Two views of a polynomial composition law",
+      "description": "Follow one criterion through two proofs: a direct module argument, then a Galois-theoretic and Frobenius-descent approach.",
+      "notes": [
+        "separated-polynomial-divisibility",
+        "galois-frobenius-composition-law"
+      ]
+    },
+    {
+      "id": "exact-arithmetic",
+      "title": "Turning arithmetic conditions into constructions",
+      "description": "Two independent examples of making arithmetic tests explicit: algebraic traces and recurrences for a rounding problem, then factorial congruences for a prime selector.",
+      "notes": [
+        "ibm-ponder-this-2010",
+        "extracting-first-prime"
+      ]
+    },
+    {
+      "id": "controlling-exceptional-sets",
+      "title": "Local control in analysis",
+      "description": "Begin with a product oscillation estimate and Darboux sums, then read about compactness in Lebesgue's criterion. The weighting argument extends the theme to exceptional sets and convergence in measure.",
+      "notes": [
+        "products-preserve-riemann-integrability",
+        "lebesgue-riemann-integrability",
+        "pointwise-weighting-convergence-in-measure"
+      ]
+    }
+  ],
+  "expositions": [
+    {
+      "slug": "fourier-symmetry-and-reconstruction",
+      "title": "Fourier, Symmetry, and Reconstruction",
+      "subtitle": "Cardano, Ferrari, and categorical Fourier duality",
+      "topic": "Galois theory · Fourier duality",
+      "group": "algebra-geometry",
+      "summary": "How root covers and their algebras produce Cardano's and Ferrari's substitutions, then lead to Fourier–Mukai duality, motives, and higher Galois reconstruction.",
+      "body": "Starting with coefficient data, the exposition constructs root covers and uses their character decompositions, traces, and norms to derive the classical substitutions. Worked examples then connect roots to elliptic integrals, monodromy, vector bundles, point counts, and cancellation bounds, leading to motivic and spectral forms of Fourier duality.",
+      "background": "The polynomial calculations use linear algebra, polynomial rings, finite group actions, and basic Galois theory. Section 2 introduces finite étale covers and torsors; the reading routes below offer a way through the calculations before returning to this geometry. Later sections use modules, sheaves, cohomology, and derived categories, with deeper theorems identified where they enter.",
+      "readingBody": "content/expositions/fourier-symmetry-and-reconstruction.html",
+      "edition": "Revised and expanded, October 2026",
+      "pageCount": 47,
+      "tex": "/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "source": null,
+      "pdf": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "page": "/notes/fourier-symmetry-and-reconstruction.html",
+      "kind": "Exposition",
+      "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree.",
+      "catalogueBackground": "Polynomial route: linear algebra, polynomial rings, finite group actions, and basic Galois theory. Later routes use further geometric and cohomological background.",
+      "readingGuide": "/mechanisms.html#fourier-routes-title",
+      "entryLabel": "Explore the Fourier exposition",
+      "featureDetail": "Concrete applications include reducing genus-two integrals to elliptic integrals, reconstructing vector bundles, counting points over finite fields, and bounding exponential sums.",
+      "readingSource": "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex"
+    },
+    {
+      "slug": "what-a-boundary-map-can-prove",
+      "title": "What a Boundary Map Can Prove",
+      "subtitle": "Derived gluing, torsion, Hodge inequalities, and motives",
+      "topic": "Graph theory · Homological algebra · Motives",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "Determinant lines govern tree counts, Hodge theory constrains chromatic coefficients, and an elliptic attachment reveals motivic Galois symmetries invisible in the graph.",
+      "body": "A tree criterion opens a progression through derived global sections, determinant lines, and integral duality. These constructions yield arithmetic deletion–contraction and probability laws for trees and higher cells. Gysin triangles recover graph coloring cohomology; Hodge theory gives chromatic inequalities. Normalization retains attachment points, and tensor reconstruction proves that torsion and nontorsion elliptic attachments have different motivic Galois groups despite the same graph and graded cohomology. Nearby cycles lead onward to graph polynomials and periods.",
+      "background": "Begin with graphs and linear algebra. Complexes, exact triangles, and derived duality are introduced through concrete constructions. The later routes use Hodge theory and motives; the geometric foundations and comparison theorems are stated where they enter the proofs.",
+      "readingBody": "content/expositions/what-a-boundary-map-can-prove.html",
+      "readingSource": "public/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "edition": "October 2026 · revised",
+      "pageCount": 46,
+      "tex": "/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "source": null,
+      "pdf": "/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+      "page": "/notes/what-a-boundary-map-can-prove.html",
+      "catalogueBackground": "Begin with graphs and linear algebra. Complexes, exact triangles, and derived duality enter through concrete constructions; the later routes introduce their Hodge and motivic foundations.",
+      "readingGuide": "/mechanisms.html#boundary-map-routes-title",
+      "entryLabel": "Explore the graph exposition",
+      "featureDetail": "Worked examples show how torsion weighting removes a positive correlation, and how two nodal curves with the same graph can have different motivic Galois groups.",
+      "legacyPages": [
+        "/notes/a-tree-is-a-discrete-poincare-lemma.html"
+      ],
+      "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree."
+    },
+    {
+      "slug": "what-a-derivative-retains",
+      "title": "What a Derivative Retains",
+      "subtitle": "From side strips and oriented boundaries to infinitesimal geometry",
+      "topic": "Differentials · Derived geometry · Homotopy theory",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "The rectangle product rule and oriented boundaries lead to Kähler differentials, cotangent complexes, higher brackets, spectral derivatives, and Goodwillie calculus, through explicit calculations.",
+      "body": "Starting with side strips and a corner term, the exposition follows what successive derivatives retain. Tangent probes, ramification, Frobenius, nodal lifting obstructions and derived intersections lead to higher deformation operations, the cotangent spectra of MU and KU, and the multilinear layers of Goodwillie calculus.",
+      "background": "Begin with the product rule, rectangles, and oriented boundaries. Polynomial rings and modules enter with Kähler differentials; complexes and homology enter with constraints and derived intersections. Later sections state the characteristic, grading, and comparison hypotheses needed for deformation theory, spectra, and Goodwillie calculus.",
+      "catalogueBackground": "Begin with calculus, polynomial rings, and oriented boundaries. Later sections introduce complexes and homology, then use formal deformation theory, spectra, and homotopy functors.",
+      "featureDetail": "Worked examples distinguish an invisible Frobenius direction, a node’s lifting obstruction, derived self-intersection, and the K-theory and rational data retained by spectral derivatives.",
+      "readingBody": "content/expositions/what-a-derivative-retains.html",
+      "readingSource": "assets/expositions/what-a-derivative-retains.md",
+      "manuscript": "/assets/expositions/what-a-derivative-retains.md",
+      "manuscriptSha256": "45249381a32b0ba351ce236d559904c1fde1bec1bed36910bff05353540a4721",
+      "edition": "October 2026",
+      "page": "/notes/what-a-derivative-retains.html",
+      "source": null,
+      "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition.",
+      "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "pageCount": 39,
+      "pdfSha256": "c3c09bd7652cddb05717d95d57ff0dfd0a0b160cfb51a799e39606d42da97671",
+      "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/",
+      "readingGuide": "/mechanisms.html#derivative-routes-title"
+    },
+    {
+      "slug": "pointwise-weighting-convergence-in-measure",
+      "title": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
+      "topic": "Measure theory",
+      "group": "analysis",
+      "summary": "How a positive measurable weight turns almost-everywhere convergence into convergence in measure, with an Egorov construction and a shorter dominated-convergence proof.",
+      "body": "The note follows a simple idea: control a sequence by changing its scale at each point. It develops both a countable-decomposition argument and a proof through dominated convergence.",
+      "background": "Measure theory and convergence of measurable functions.",
+      "tex": "/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "source": "/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "pdf": "/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "page": "/notes/pointwise-weighting-convergence-in-measure.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope. The PDF and TeX source agree.",
+      "pageCount": 9,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "ibm-ponder-this-2010",
+      "title": "IBM Ponder This July 2010",
+      "topic": "Algebraic number theory",
+      "group": "number-theory",
+      "summary": "A rounding problem becomes a congruence problem through algebraic traces, recurrences, and a companion matrix.",
+      "body": "This solution to the July 2010 IBM Ponder This challenge moves between algebraic numbers and finite arithmetic. Traces provide an integer recurrence, and a companion matrix organizes the modular calculation.",
+      "background": "Algebraic numbers, polynomial roots, and modular arithmetic.",
+      "tex": null,
+      "source": "/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "pdf": "/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "page": "/notes/ibm-ponder-this-2010.html",
+      "kind": "Exposition",
+      "references": [
+        {
+          "label": "IBM: the original challenge and solution",
+          "url": "https://research.ibm.com/blog/ponder-this-july-2010",
+          "description": "IBM's July 2010 page includes Henry Shin in its list of solvers."
+        }
+      ],
+      "pageCount": 10
+    },
+    {
+      "slug": "separated-polynomial-divisibility",
+      "title": "Divisibility of Separated Polynomials",
+      "topic": "Algebra",
+      "group": "algebra-geometry",
+      "summary": "A criterion explaining when divisibility of two-variable polynomial differences forces composition with a common one-variable polynomial.",
+      "body": "The argument uses a residue expansion in a free module, followed by a reduction along the diagonal. A companion exposition revisits the same criterion through Galois theory and Frobenius descent.",
+      "background": "Polynomial rings and basic field theory.",
+      "tex": "/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "source": "/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "pdf": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "page": "/notes/separated-polynomial-divisibility.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged. The PDF and TeX source agree.",
+      "pageCount": 15,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "galois-frobenius-composition-law",
+      "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
+      "topic": "Algebra · Galois theory",
+      "group": "algebra-geometry",
+      "summary": "A second approach to the separated-polynomial composition criterion, using Galois theory and reduction in positive characteristic.",
+      "body": "Generic fibers and descent give another way to understand the composition law. The positive-characteristic part isolates the role of Frobenius. Read this alongside Divisibility of Separated Polynomials.",
+      "background": "Galois theory and polynomials in positive characteristic.",
+      "tex": "/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
+      "source": "/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "pdf": "/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "page": "/notes/galois-frobenius-composition-law.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged. The PDF and TeX source agree.",
+      "pageCount": 11,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "hartshorne-ii-5-14-18",
+      "title": "Normality, Coherent Extension, Tensor Operations, and Affineness",
+      "topic": "Algebraic geometry",
+      "group": "algebra-geometry",
+      "summary": "Solutions to Hartshorne II.5.14–18 connecting projective normality, coherent sheaves, affine morphisms, and vector bundles.",
+      "body": "These notes bring together exercises 14 through 18 in Chapter II, Section 5 of Hartshorne’s Algebraic Geometry. The emphasis is on the relationships between the constructions: normalization and section rings, coherent extension, tensor operations, relative Spec, and vector bundles.",
+      "background": "Schemes, coherent sheaves, and the material of Hartshorne II.5.",
+      "tex": "/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "source": null,
+      "pdf": "/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "page": "/notes/hartshorne-ii-5-14-18.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections. The PDF and TeX source agree.",
+      "pageCount": 13,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "extracting-first-prime",
+      "title": "Extracting the First Prime Greater than m",
+      "topic": "Number theory",
+      "group": "number-theory",
+      "summary": "An explicit finite formula selects the smallest prime above a given integer using factorial congruences, greatest common divisors, and valuations.",
+      "body": "The construction turns tests for primality into a formula that isolates the first prime beyond a prescribed integer. The point is the exact arithmetic mechanism, rather than a practical prime-search algorithm.",
+      "background": "Elementary number theory, factorials, and divisibility.",
+      "tex": null,
+      "source": "/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "pdf": "/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "page": "/notes/extracting-first-prime.html",
+      "kind": "Exposition",
+      "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
+      "pageCount": 7,
+      "revisionDates": [
+        "2026-10-07"
+      ]
+    },
+    {
+      "slug": "disjoint-decompositions",
+      "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
+      "topic": "Topology · Analysis",
+      "group": "analysis",
+      "summary": "A proof that a half-open interval cannot be partitioned into countably many sets closed in the real line.",
+      "body": "The distinction between being closed in the real line and relatively closed in an interval matters here. The note develops the obstruction using point-set topology and Baire category.",
+      "background": "Closed sets and the Baire category theorem.",
+      "tex": null,
+      "source": "/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "pdf": "/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "page": "/notes/disjoint-decompositions.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: explicitly established that the closed remainder is nonempty before applying the Baire category theorem.",
+      "pageCount": 3,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "lebesgue-riemann-integrability",
+      "title": "Lebesgue's Criterion for Riemann Integrability",
+      "topic": "Real analysis",
+      "group": "analysis",
+      "summary": "A compactness proof that a bounded function is Riemann integrable when its discontinuities form a set of measure zero.",
+      "body": "The argument connects a local condition on discontinuities with the upper and lower sums of Riemann integration. Compactness supplies the finite control needed to finish the proof.",
+      "background": "Riemann integration, compactness, and sets of measure zero.",
+      "tex": "/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "source": null,
+      "pdf": "/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "page": "/notes/lebesgue-riemann-integrability.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: rebuilt the editable source, clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples. The PDF and TeX source agree.",
+      "pageCount": 4,
+      "revisionDates": [
+        "2026-09-22",
+        "2026-10-07"
+      ]
+    },
+    {
+      "slug": "products-preserve-riemann-integrability",
+      "title": "Products Preserve Riemann Integrability",
+      "topic": "Real analysis",
+      "group": "analysis",
+      "summary": "A local oscillation estimate turns the product-difference identity into a Darboux proof that products of Riemann integrable functions are integrable.",
+      "body": "The note compares two values of a product on a small interval, bounds their difference using the oscillations of the factors, and sums over a common refinement. Diagrams illustrate the estimate and the passage from local variation to a global integrability criterion.",
+      "background": "Bounded functions, upper and lower Darboux sums, and partition refinement.",
+      "tex": "/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "source": null,
+      "pdf": "/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "page": "/notes/products-preserve-riemann-integrability.html",
+      "kind": "Exposition",
+      "originalPublishedAt": "2026-04-29T02:18:00Z",
+      "legacyPages": [
+        "/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/"
+      ],
+      "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit, and the opening proof outline has been reflowed. The PDF and TeX source agree. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
+      "pageCount": 6,
+      "revisionDates": [
+        "2026-09-22",
+        "2026-10-07"
+      ],
+      "readingExcerpt": {
+        "manuscript": "content/excerpts/products-preserve-riemann-integrability.md",
+        "body": "content/excerpts/products-preserve-riemann-integrability.html"
+      }
+    },
+    {
+      "slug": "selected-problems-discrete-mathematics-analysis",
+      "title": "Selected Problems in Discrete Mathematics and Analysis",
+      "topic": "Combinatorics · Analysis",
+      "group": "problems",
+      "summary": "Six problems on counting, arithmetic progressions, recurrences, infinite series, and the information supplied by different observation rules.",
+      "body": "A collection of six problem statements, presented without solutions. They range from finite counting arguments to the asymptotic behavior of an infinite series.",
+      "background": "Background varies by problem.",
+      "tex": "/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "source": null,
+      "pdf": "/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "page": "/notes/selected-problems-discrete-mathematics-analysis.html",
+      "kind": "Problem set",
+      "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant. The web edition, PDF, and TeX source agree.",
+      "pageCount": 3,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    }
+  ],
+  "papers": [
+    {
+      "id": "1903.09181",
+      "year": 2020,
+      "status": "Published",
+      "title": "Curvature growth of some 4-dimensional gradient Ricci soliton singularity models",
+      "authors": "Bennett Chow, Michael Freedman, Henry Shin, Yongjia Zhang",
+      "journal": "Advances in Mathematics 372 (2020), 107303",
+      "doi": "10.1016/j.aim.2020.107303",
+      "description": "Curvature estimates for four-dimensional gradient Ricci soliton singularity models, using geometric analysis and topological arguments.",
+      "correction": "2505.03823"
+    },
+    {
+      "id": "2609.01690",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Iterated-sumset spectra: The complete exponent law and its rank geometry",
+      "authors": "Henry Shin",
+      "topic": "Additive combinatorics",
+      "description": "Determines the growth exponent of the number of possible h-fold sumset sizes for fixed-size integer sets, together with sharp bounds for integer models preserving finite additive relations. Also proves the formula conjectured in OEIS A227589 for minimal labelings of identical four-sided dice that maximize the number of distinct sums.",
+      "oeis": "A227589"
+    },
+    {
+      "id": "2608.08533",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Open full-metric formation and local marked first-order asymptotic moduli of FIK blowdown singularities",
+      "authors": "Henry Shin",
+      "topic": "Geometric analysis",
+      "description": "Formation of FIK singularities under Ricci flow and the local parameters governing their first-order asymptotic behavior."
+    },
+    {
+      "id": "2607.01716",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "A global girth obstruction for Garg–Mineyev taiko product structures",
+      "authors": "Henry Shin",
+      "topic": "Combinatorial group theory",
+      "description": "A global obstruction to the Garg–Mineyev triple-girth route to zero-divisor and unit counterexamples in group rings over F₂, proved through incidence geometry."
+    },
+    {
+      "id": "2606.15218",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "From rough local mass to logarithmic spectral ladders for damped waves",
+      "authors": "Henry Shin",
+      "topic": "Analysis · Partial differential equations",
+      "description": "Local damping mass, resolvent bounds, and decay, including spectral asymptotics near logarithmic damping wells."
+    },
+    {
+      "id": "2606.14877",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Exchange identities and symmetric slices of the valley Delta conjecture",
+      "authors": "Henry Shin",
+      "topic": "Algebraic combinatorics",
+      "description": "Exchange identities and symmetry for the area-zero and area-one slices of the valley Delta generating function."
+    },
+    {
+      "id": "2606.12230",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "One extra edge forces Berge pancyclicity",
+      "authors": "Henry Shin",
+      "topic": "Extremal combinatorics",
+      "description": "Berge cycles of every length from a Hamiltonian Berge cycle and one additional edge, in the stated large-order uniformity regime."
+    },
+    {
+      "id": "2605.25291",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Hilbert-90 quotient maps, torsion defects, and symmetric monodromy",
+      "authors": "Henry Shin",
+      "topic": "Algebra · Arithmetic geometry",
+      "description": "Rational maps from Hilbert-90 descent: cancellation, torsion, and characteristic-zero monodromy."
+    },
+    {
+      "id": "2605.21939",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Coset-refined trace statistics, nodal characters, and affine branches in cubic norm tori",
+      "authors": "Henry Shin",
+      "topic": "Number theory · Algebraic geometry",
+      "description": "Trace distributions on cosets in cubic norm-one tori, including singular fibers and local branch geometry."
+    },
+    {
+      "id": "2605.12903",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Logarithmic source curves in polynomial fiber products",
+      "authors": "Henry Shin",
+      "topic": "Arithmetic geometry",
+      "description": "Geometry at infinity of polynomial fiber products, rational lifts, and their arithmetic counting behavior."
+    }
+  ],
+  "essays": [
+    {
+      "slug": "mathematical-life-in-the-age-of-ai",
+      "published": true,
+      "title": "Mathematical Life in the Age of AI",
+      "subtitle": "Understanding, judgment, and the freedom to inquire",
+      "subject": "Mathematics and intellectual life",
+      "summary": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities.",
+      "date": "2026-10-12",
+      "manuscript": "content/essays/mathematical-life-in-the-age-of-ai.md",
+      "body": "content/essays/mathematical-life-in-the-age-of-ai.html",
+      "page": "/essays/mathematical-life-in-the-age-of-ai.html",
+      "staticMath": true,
+      "pdf": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "source": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "sourceLabel": "Markdown source",
+      "parts": [
+        {
+          "id": "part-i",
+          "number": "I",
+          "title": "What understanding makes possible"
+        },
+        {
+          "id": "part-ii",
+          "number": "II",
+          "title": "How support becomes authority"
+        },
+        {
+          "id": "part-iii",
+          "number": "III",
+          "title": "Giving greater capacity a shared purpose"
+        }
+      ],
+      "sections": [
+        {
+          "id": "understanding-as-a-purpose",
+          "number": "1",
+          "title": "Understanding as a purpose",
+          "part": "part-i"
+        },
+        {
+          "id": "a-comparison-worth-understanding",
+          "number": "2",
+          "title": "A comparison worth understanding",
+          "part": "part-i"
+        },
+        {
+          "id": "becoming-capable",
+          "number": "3",
+          "title": "Becoming capable",
+          "part": "part-i"
+        },
+        {
+          "id": "a-hearing-before-a-verdict",
+          "number": "4",
+          "title": "A hearing before a verdict",
+          "part": "part-ii"
+        },
+        {
+          "id": "what-performed-mastery-costs",
+          "number": "5",
+          "title": "What performed mastery costs",
+          "part": "part-ii"
+        },
+        {
+          "id": "the-means-to-continue",
+          "number": "6",
+          "title": "The means to continue",
+          "part": "part-ii"
+        },
+        {
+          "id": "when-the-grounds-for-a-judgment-change",
+          "number": "7",
+          "title": "When the grounds for a judgment change",
+          "part": "part-iii"
+        },
+        {
+          "id": "credit-as-an-intellectual-record",
+          "number": "8",
+          "title": "Credit as an intellectual record",
+          "part": "part-iii"
+        },
+        {
+          "id": "making-participation-substantial",
+          "number": "9",
+          "title": "Making participation substantial",
+          "part": "part-iii"
+        },
+        {
+          "id": "an-inquiry-with-somewhere-to-go",
+          "number": "10",
+          "title": "An inquiry with somewhere to go",
+          "part": "part-iii"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "A test for what a description determines, and a worked distinction between recovering groups and recovering their induced maps."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "How different arguments reveal mechanisms, quantitative information, and connections beyond establishing the same conclusion."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "How institutions can keep moral judgments open to scrutiny, correction, and proportionate review."
+        },
+        {
+          "slug": "the-authority-of-a-vision",
+          "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-boundary-map-can-prove",
+          "anchor": "the-attachment-point-changes-the-motivic-symmetry-group",
+          "description": "An optional advanced comparison with §10’s relative logarithm: an elliptic attachment changes reconstructed symmetry. The extensions have different pure pieces; this calculation adds elliptic geometry and its stated motivic comparison hypotheses."
+        },
+        {
+          "slug": "the-performance-of-depth",
+          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+        }
+      ],
+      "group": "mathematics-and-intellectual-life",
+      "order": 3
+    },
+    {
+      "slug": "when-accountability-stops-being-reciprocal",
+      "published": true,
+      "title": "When Accountability Stops Being Reciprocal",
+      "subtitle": "Moral authority and the permanent defendant",
+      "subject": "Institutions and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 4,
+      "summary": "How accusations acquire institutional force, why scrutiny can become costly, and what makes consequential judgments open to challenge and correction.",
+      "date": "2026-10-19",
+      "manuscript": "content/essays/when-accountability-stops-being-reciprocal.md",
+      "body": "content/essays/when-accountability-stops-being-reciprocal.html",
+      "page": "/essays/when-accountability-stops-being-reciprocal.html",
+      "pdf": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "source": "/assets/essays/when-accountability-stops-being-reciprocal.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "how-an-accusation-protects-itself",
+          "title": "How an accusation protects itself"
+        },
+        {
+          "id": "when-an-institution-adopts-the-judgment",
+          "title": "When an institution adopts the judgment"
+        },
+        {
+          "id": "what-the-institution-loses",
+          "title": "What the institution loses"
+        },
+        {
+          "id": "why-the-pattern-can-persist",
+          "title": "Why the pattern can persist"
+        },
+        {
+          "id": "making-judgment-answerable",
+          "title": "Making judgment answerable"
+        },
+        {
+          "id": "notes-and-sources",
+          "title": "Sources and notes"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What a description or comparison must preserve to support a judgment about a contribution."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How understanding, assistance, judgment, credit, and participation sustain an inquiry."
+        },
+        {
+          "slug": "the-performance-of-depth",
+          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+        }
+      ]
+    },
+    {
+      "slug": "the-performance-of-depth",
+      "published": true,
+      "title": "The Performance of Depth",
+      "subtitle": "Prestige, incentives, and the reproduction of intellectual conformity",
+      "subject": "Institutions and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 5,
+      "summary": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment.",
+      "date": "2026-10-19",
+      "manuscript": "content/essays/the-performance-of-depth.md",
+      "body": "content/essays/the-performance-of-depth.html",
+      "page": "/essays/the-performance-of-depth.html",
+      "source": "/assets/essays/the-performance-of-depth.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "a-century-of-certification",
+          "title": "A century of certification"
+        },
+        {
+          "id": "how-recognition-reproduces-itself",
+          "title": "How recognition reproduces itself"
+        },
+        {
+          "id": "the-cost-of-an-independent-agenda",
+          "title": "The cost of an independent agenda"
+        },
+        {
+          "id": "what-becomes-dominant",
+          "title": "What becomes dominant"
+        },
+        {
+          "id": "where-inquiry-can-continue",
+          "title": "Where inquiry can continue"
+        },
+        {
+          "id": "authority-beyond-the-record",
+          "title": "Authority beyond the record"
+        },
+        {
+          "id": "notes-and-sources",
+          "title": "Sources and notes"
+        }
+      ],
+      "related": [
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How understanding and the means to pursue it develop through assistance, recognition, credit, and shared work."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "How consequential institutional judgments remain open to challenge, review, and correction."
+        },
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What an abbreviated description establishes, and where a further judgment needs substantive comparison."
+        }
+      ]
+    },
+    {
+      "slug": "what-a-new-proof-makes-possible",
+      "published": true,
+      "title": "What a New Proof Makes Possible",
+      "subtitle": "Old theorems and the changing means of understanding",
+      "subject": "Proof and understanding",
+      "summary": "How new proofs of familiar theorems expose mechanisms, improve estimates, and connect mathematical subjects. Comparing the arguments reveals why their constructions work, where they generalize, and what further questions they open.",
+      "date": "2026-10-08",
+      "manuscript": "content/essays/what-a-new-proof-makes-possible.md",
+      "body": "content/essays/what-a-new-proof-makes-possible.html",
+      "page": "/essays/what-a-new-proof-makes-possible.html",
+      "staticMath": true,
+      "sections": [
+        {
+          "id": "the-structure-inside-an-old-conclusion",
+          "title": "The structure inside an old conclusion"
+        },
+        {
+          "id": "when-a-method-branches-and-returns",
+          "title": "When a method branches and returns"
+        },
+        {
+          "id": "generalization-in-different-directions",
+          "title": "Generalization in different directions"
+        },
+        {
+          "id": "from-existence-to-a-procedure",
+          "title": "From existence to a procedure"
+        },
+        {
+          "id": "what-the-connection-between-proofs-reveals",
+          "title": "What the connection between proofs reveals"
+        },
+        {
+          "id": "economy-across-a-body-of-mathematics",
+          "title": "Economy across a body of mathematics"
+        },
+        {
+          "id": "when-proofs-become-more-abundant",
+          "title": "When proofs become more abundant"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What a comparison must preserve before familiar ingredients or known conclusions can support a verdict about a contribution."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+        },
+        {
+          "kind": "exposition",
+          "slug": "fourier-symmetry-and-reconstruction",
+          "description": "Follow root algebras and their character decompositions through the classical cubic and quartic formulas into geometry and arithmetic."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-boundary-map-can-prove",
+          "description": "Follow a boundary presentation through determinant laws, geometric inequalities, and the symmetries of an elliptic attachment."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-derivative-retains",
+          "anchor": "rectangle",
+          "description": "Follow the rectangle product rule through infinitesimal probes and Kähler differentials. Sections 1–5 give an elementary route; later sections retain equations and lifting obstructions."
+        }
+      ],
+      "group": "mathematics-and-intellectual-life",
+      "order": 1
+    },
+    {
+      "slug": "when-a-description-becomes-a-verdict",
+      "published": true,
+      "title": "When a Description Becomes a Verdict",
+      "subtitle": "Expertise, explanation, and the scope of judgment",
+      "subject": "Mathematics and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 2,
+      "summary": "How to test whether a description retains what a conclusion needs, through eigenvalues, naturality, and the scope of judgment.",
+      "date": "2026-10-17",
+      "manuscript": "content/essays/when-a-description-becomes-a-verdict.md",
+      "body": "content/essays/when-a-description-becomes-a-verdict.html",
+      "page": "/essays/when-a-description-becomes-a-verdict.html",
+      "staticMath": true,
+      "source": "/assets/essays/when-a-description-becomes-a-verdict.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "the-extra-conclusion",
+          "number": "1",
+          "title": "The extra conclusion"
+        },
+        {
+          "id": "enough-for-which-question",
+          "number": "2",
+          "title": "Enough for which question?"
+        },
+        {
+          "id": "what-the-arrangement-does",
+          "number": "3",
+          "title": "What the arrangement does"
+        },
+        {
+          "id": "what-recognition-knows",
+          "number": "4",
+          "title": "What recognition knows"
+        },
+        {
+          "id": "reasons-for-stopping",
+          "number": "5",
+          "title": "Reasons for stopping"
+        },
+        {
+          "id": "keeping-the-boundary-visible",
+          "number": "6",
+          "title": "Keeping the boundary visible"
+        }
+      ],
+      "related": [
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "How different arguments reveal mechanisms and connections beyond establishing the same conclusion."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How judgments about understanding shape attention, support, credit, and the means to continue an inquiry."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "From what warrants a judgment to how people can challenge its consequential use."
+        },
+        {
+          "kind": "exposition",
+          "slug": "fourier-symmetry-and-reconstruction",
+          "anchor": "section-12-3",
+          "description": "Continue the identity-and-shear example into the circle transform, where a thickened spectral point records the nilpotent action concealed by equal eigenvalues."
+        }
+      ]
+    },
+    {
+      "slug": "the-authority-of-a-vision",
+      "published": true,
+      "title": "The Authority of a Vision",
+      "subtitle": "Knowledge, Belief, and Freedom in Villeneuve’s Dune",
+      "subject": "Film and interpretation",
+      "summary": "How learned competence, extraordinary knowledge, and collective hope become claims to command in Villeneuve’s Dune.",
+      "date": "2026-10-07",
+      "manuscript": "content/essays/the-authority-of-a-vision.md",
+      "body": "content/essays/the-authority-of-a-vision.html",
+      "page": "/essays/the-authority-of-a-vision.html",
+      "contentNote": "An essay on Dune (2021) and Dune: Part Two (2024). Contains spoilers for both films.",
+      "related": [
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+        }
+      ],
+      "sections": [
+        {
+          "id": "the-limits-of-revelation",
+          "title": "1. The limits of revelation"
+        },
+        {
+          "id": "knowledge-learned-from-a-world",
+          "title": "2. Knowledge learned from a world"
+        },
+        {
+          "id": "from-belief-to-allegiance",
+          "title": "3. From belief to allegiance"
+        },
+        {
+          "id": "the-production-of-confirmation",
+          "title": "4. The production of confirmation"
+        },
+        {
+          "id": "destiny-and-the-scope-of-choice",
+          "title": "5. Destiny and the scope of choice"
+        },
+        {
+          "id": "the-authority-of-spectacle",
+          "title": "6. The authority of spectacle"
+        },
+        {
+          "id": "a-person-beyond-the-prophecy",
+          "title": "7. A person beyond the prophecy"
+        }
+      ],
+      "group": "film-and-interpretation",
+      "order": 1
+    }
+  ],
+  "gaming": [],
+  "puzzles": [
+    {
+      "slug": "cube-patterns",
+      "page": "/play/cube-patterns.html",
+      "title": "Cube patterns",
+      "summary": "Hearts and pixel figures on a cube, made for fun with my own move sequences.",
+      "galleryIntro": "Hearts and little pixel figures, made with move sequences I worked out on large twisty cubes.",
+      "body": "I work out my own move sequences on large twisty cubes, using commutators to rearrange small groups of pieces, then combining the sequences to make hearts and little pixel figures. The puzzle is to build up the picture without undoing the parts already in place. Finding the moves is part of the enjoyment.",
+      "images": [
+        {
+          "src": "/assets/puzzles/cube-hearts.jpg",
+          "alt": "A cube on a desk with a red heart on its white front face and a white heart on its red top face.",
+          "caption": "Hearts in red and white.",
+          "width": 3072,
+          "height": 4080
+        },
+        {
+          "src": "/assets/puzzles/cube-pixel-figures-front-top.jpg",
+          "alt": "A cube with a green pixel figure on its orange front face and an orange pixel figure on its green top face, both with white details.",
+          "caption": "Pixel figures on the front and top faces.",
+          "width": 3072,
+          "height": 4080
+        },
+        {
+          "src": "/assets/puzzles/cube-pixel-figure-held.jpg",
+          "alt": "A hand holding the cube to show a green and white pixel figure on the orange front face, with a yellow side and blue underside visible.",
+          "caption": "The front pattern, viewed with the yellow side and blue underside.",
+          "width": 3072,
+          "height": 4080
+        },
+        {
+          "src": "/assets/puzzles/cube-pixel-figures-alternate.jpg",
+          "alt": "Another view of the cube on a desk, showing the green pixel figure on the orange front face and the orange pixel figure on the green top face.",
+          "caption": "Another view of the pixel figures.",
+          "width": 3072,
+          "height": 4080
+        }
+      ]
+    }
+  ],
+  "personalInterests": {
+    "overwatch": {
+      "published": true,
+      "title": "Overwatch",
+      "body": "I’ve also played Overwatch as RiemannRoch. In the original game I reached Master, mainly playing Zarya and other tanks; in Overwatch 2 I reached Diamond 5 while learning Support. I queued on my own for both.\n\nWith a different mix of teammates each match, part of the challenge was reading the team as we played: when to push together, what help to expect, and how to coordinate without having practiced together.",
+      "images": [
+        {
+          "src": "/assets/gaming/overwatch-riemannroch-master-3508.jpg",
+          "alt": "Overwatch profile for RIEMANNROCH showing Master at 3508 SR for both current rank and season high, with Zarya leading the hero playtime chart.",
+          "caption": "RiemannRoch at 3508 SR in the original Overwatch.",
+          "width": 3024,
+          "height": 4032
+        },
+        {
+          "src": "/assets/gaming/overwatch-2-diamond-5-support.jpg",
+          "alt": "Overwatch 2 rank-progression screen showing Diamond 5 in Support after a victory, with Kiriko visible on the right.",
+          "caption": "Diamond 5 in Support in Overwatch 2.",
+          "width": 1024,
+          "height": 640
+        }
+      ]
+    }
+  }
+}

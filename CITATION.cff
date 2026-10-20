@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "For the whole corpus cite this snapshot; use archive/works.json for individual works."
+type: dataset
+title: "Tensorgami: complete public corpus snapshot"
+authors:
+  - family-names: Shin
+    given-names: Henry
+    orcid: "https://orcid.org/0009-0000-6453-6865"
+version: "2026-10-20.1"
+date-released: 2026-10-20
+url: "https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-20.1"
+repository-code: "https://github.com/Tensorgami/tensorgami-archive"
+license: "LicenseRef-All-Rights-Reserved"

@@ -1,0 +1,239 @@
+/* Essays and personal interests share the typography and rhythm of the library. */
+.intro-aside .entry-description { display:block; color:var(--muted); font-size:.8rem; margin:.2rem 0 1rem }
+.intro-aside p:not(.label) { display:block; margin:.6rem 0 }
+.collection-nav { display:flex; flex-wrap:wrap; gap:.6rem 1.6rem; margin:0 0 2.5rem; font-size:.88rem }
+.collection-description { color:var(--muted); max-width:46rem; margin:.5rem 0 1rem; font-size:.94rem }
+.paper-section[id],.reading-path[id] { scroll-margin-top:1.5rem }
+.reading-path { border-top:1px solid var(--line); padding:1.3rem 0 2rem }
+.reading-path h2 { font:normal 1.8rem/1.3 var(--serif); margin:0 0 1rem }
+.reading-path p { color:var(--muted); margin:0 0 1rem }
+.reading-path ol { padding-left:1.3rem; margin:0 }
+.reading-path li { padding-left:.3rem; margin:.75rem 0 }
+.related-reading { margin-top:2.5rem; border-top:1px solid var(--line) }
+.related-reading h2 { font-size:1.4rem; margin-top:1.5rem }
+.related-reading p { color:var(--muted); font-size:.94rem }
+.related-reading ul { padding-left:1.2rem }
+.library-tools { border-top:1px solid var(--line); margin-top:1.7rem }
+.published-feature h3 a { color:var(--ink); text-decoration:none }
+.published-feature h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.research-preview.research-first { margin:0 0 3.5rem }
+.research-features { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3.5rem }
+.research-feature { padding:1.3rem 0 2rem }
+.research-feature .meta { font-size:.77rem; color:var(--muted); margin:0 0 .6rem }
+.research-feature .research-topic { color:var(--blue); font:500 .78rem/1.5 var(--sans); margin:0 0 1rem }
+.research-feature h3 { font:normal 1.85rem/1.3 var(--serif); letter-spacing:-.02em; margin:0 0 1rem }
+.research-feature h3 a { color:var(--ink); text-decoration:none }
+.research-feature h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.research-feature>p:not(.meta):not(.research-topic) { color:var(--muted); font-size:1rem; margin:.7rem 0 }
+.publication-record { border-top:1px solid var(--line); margin-top:.5rem }
+.publication-record h3 { font-size:1.4rem }
+.expositions-preview { margin-bottom:3.5rem }
+#current-direction { scroll-margin-top:1.5rem }
+.personal-preview { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); gap:4rem; margin:0 0 4.5rem }
+.personal-preview.interests-only { grid-template-columns:minmax(0,1fr); max-width:48rem }
+.essay-card { padding:1.5rem 0 2.2rem }
+.essay-card .meta,.byline { color:var(--muted); font: .82rem/1.6 var(--sans) }
+.essay-card .meta { margin:0 0 .8rem }
+.essay-card h2,.essay-card h3 { font:normal 2.1rem/1.23 var(--serif); letter-spacing:-.025em; margin:0 0 .8rem }
+.essay-card h2 a,.essay-card h3 a { color:var(--ink); text-decoration:none }
+.essay-card h2 a:hover,.essay-card h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.essay-card p { color:var(--muted); max-width:42rem }
+.essay-card .essay-subtitle { font:italic 1.15rem/1.5 var(--serif); margin:.5rem 0 1.2rem }
+.essay-card .inline-link { margin-top:.5rem }
+.essay-companion { max-width:44rem; border-top:1px solid var(--line); margin-top:1.8rem; padding-top:1.4rem }
+.essay-companion .meta { margin:0 0 .6rem; color:var(--muted); font:.875rem/1.6 var(--sans) }
+.essay-companion h3 { font:normal 1.55rem/1.3 var(--serif); letter-spacing:-.015em; margin:0 0 .6rem }
+.essay-companion h3 a { color:var(--ink); text-decoration:none }
+.essay-companion h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.essay-companion p:last-child { color:var(--muted); margin:0 }
+.home-essay-copy { min-width:0 }
+.home-essay-copy .essay-feature-label { margin:0 0 .55rem }
+.essay-companions { margin-top:1.2rem }
+.essay-companions>.eyebrow { margin:0 0 1.1rem }
+.essay-companions .essay-companion:first-of-type { margin-top:0 }
+.essay-companion-film { margin-top:2.5rem }
+.play-preview { align-self:start; padding:1.8rem 2rem; background:var(--wash); border-top:1px solid var(--line) }
+.play-preview h2 { font:normal 2rem/1.3 var(--serif); margin:0 0 .8rem }
+.play-preview>p:not(.eyebrow) { font-size:.95rem; color:var(--muted) }
+.play-preview .eyebrow { font-size:.67rem; margin-bottom:.8rem }
+.handle { color:var(--ink); font-style:italic }
+.play-preview .inline-link { font-size:.86rem; margin-top:.6rem }
+.play-library { margin:0 0 4rem }
+.play-entry { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:4rem; align-items:center; border-top:1px solid var(--line); padding:2.5rem 0 }
+.play-image { display:block; background:var(--wash) }
+.play-image img { display:block; width:100%; height:auto; max-height:31rem; object-fit:contain; image-orientation:from-image }
+.play-entry-copy { max-width:30rem }
+.play-entry h2 { font:normal 2.5rem/1.2 var(--serif); letter-spacing:-.03em; margin:0 0 1rem }
+.play-entry h2 a { color:var(--ink); text-decoration:none }
+.play-entry h2 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.play-entry-copy>p:not(.eyebrow) { color:var(--muted); max-width:28rem }
+.play-entry .play-milestones { font-size:.87rem; line-height:1.8; border-left:1px solid var(--line); padding-left:1rem; margin-top:1.5rem }
+.puzzle-intro { max-width:45rem; margin:0 0 2.5rem }
+.puzzle-gallery { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:2rem }
+.puzzle-gallery figure { margin:0 }
+.puzzle-gallery figure>a { display:block; background:var(--wash) }
+.puzzle-gallery img { display:block; width:100%; height:auto; image-orientation:from-image }
+.puzzle-gallery figcaption { color:var(--muted); font:.83rem/1.65 var(--sans); padding:1rem 0 }
+.puzzle-gallery figcaption a { white-space:nowrap }
+.puzzle-angles { margin:1.5rem 0 0 }
+.puzzle-angles[open] { padding-bottom:1rem }
+.play-back { font-size:.9rem; margin:2.5rem 0 4rem; display:flex; flex-wrap:wrap; gap:.8rem }
+.essay-library { max-width:49rem; margin-bottom:4rem; border-top:1px solid var(--line) }
+.essay-library .essay-card { padding:2rem 0; border-bottom:1px solid var(--line) }
+.essay-library .essay-card h2,.essay-library .essay-card h3 { font-size:2.4rem }
+.essay-group { padding-top:1.8rem }
+.essay-group + .essay-group { margin-top:1.6rem }
+.essay-group-label { font:500 .75rem/1.6 var(--sans); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:0 }
+.essay-heading { margin-left:17rem; max-width:45rem; padding-bottom:2.7rem }
+.essay-heading h1 { max-width:43rem }
+.essay-deck { color:var(--muted); font:italic 1.4rem/1.5 var(--serif); margin:0 0 1.2rem }
+.essay-heading .byline { margin:0 }
+.essay-heading .essay-notice { font:.875rem/1.65 var(--sans); color:var(--muted); margin:1.2rem 0 0 }
+.essay-heading .text-links { font-size:.82rem; margin-top:.75rem }
+.essay-layout { display:grid; grid-template-columns:14rem minmax(0,44rem); gap:3rem; margin-bottom:4rem; align-items:start }
+.essay-sidebar { position:sticky; top:2rem; max-height:calc(100vh - 4rem); overflow-y:auto; padding-right:1rem; font-size:.8rem }
+.essay-sidebar h2 { font:500 .75rem var(--sans); letter-spacing:.1em; text-transform:uppercase; margin:0 0 1.2rem; color:var(--muted) }
+.essay-sidebar ol,.mobile-contents ol { margin:0 0 1.5rem; padding:0; list-style:none; counter-reset:contents }
+.essay-sidebar li,.mobile-contents li { margin:0 0 .9rem; line-height:1.45 }
+.essay-sidebar a { color:var(--muted); text-decoration:none }
+.essay-sidebar a:hover { color:var(--blue); text-decoration:underline }
+.essay-sidebar .back-link { display:block; border-top:1px solid var(--line); padding-top:1rem }
+.essay-main { min-width:0 }
+.essay-body { font-size:1.19rem; line-height:1.85; overflow-wrap:break-word }
+.essay-body>p:first-of-type::first-letter { float:left; font:normal 3.55rem/.9 var(--serif); padding:.15rem .35rem 0 0; color:var(--ink) }
+.essay-body p { margin:0 0 1.3em }
+.essay-body .math-display { background:transparent; margin:1.4rem 0; padding:.35rem 0; overflow-x:auto; overflow-y:hidden; text-align:center }
+.essay-body .math-display mjx-container { min-width:min-content }
+.essay-body h2 { font:normal 1.9rem/1.3 var(--serif); letter-spacing:-.02em; margin:2.8rem 0 1.25rem; padding-top:1.2rem; border-top:1px solid var(--line) }
+.essay-body .section-number { font-size:1.25rem; color:var(--muted); margin-right:.2rem }
+.essay-body [id] { scroll-margin-top:2rem }
+/* Section destination cues are shared in styles.css. */
+.essay-body sup { font:.68em var(--sans); vertical-align:super; line-height:0 }
+.essay-body sup a { text-decoration:none; padding-inline:.12em }
+.essay-body sup a:hover { text-decoration:underline }
+.essay-body .sources,.essay-body .essay-sources,.essay-body [role=doc-bibliography],.essay-body .essay-footnotes { font:.88rem/1.7 var(--sans) }
+.essay-body li { margin-bottom:1rem; padding-left:.25rem }
+.essay-body li a { overflow-wrap:anywhere }
+.essay-body .citation-backlinks { font-size:.76rem; white-space:normal }
+.essay-end { margin:3rem 0 0; padding:1.5rem 0 0; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem }
+.essay-end p { margin:.2rem 0 }
+.essay-end .back-link { display:inline-block; margin-top:1.5rem }
+.essay-related { border-top:1px solid var(--line); margin-top:3rem; padding-top:1.7rem; max-width:42rem }
+.essay-related h2 { font:500 .875rem/1.5 var(--sans); color:var(--muted); margin:0 0 1rem }
+.essay-related h3 { font:normal 1.55rem/1.35 var(--serif); letter-spacing:-.015em; margin:0 0 .65rem }
+.essay-related h3 a { color:var(--ink); text-decoration:none }
+.essay-related h3 a:hover { text-decoration:underline; text-decoration-color:var(--blue) }
+.essay-related p { font-size:1rem; color:var(--muted); margin:0 }
+.essay-related > div + div { margin-top:1.5rem }
+.essay-guide-signpost{font:.9rem/1.7 var(--sans);margin:-.6rem 0 1.6rem}
+.mobile-contents { display:none }
+.gaming-intro { max-width:42rem; margin:0 0 2.5rem }
+.gaming-collection { margin-bottom:3rem }
+.game-record { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:4rem; border-top:1px solid var(--line); padding:2.7rem 0 3.5rem }
+.game-story { max-width:29rem }
+.game-story .eyebrow { margin:0 0 .8rem }
+.game-story h2 { font:normal clamp(2.2rem,4vw,3.1rem)/1.15 var(--serif); letter-spacing:-.03em; margin:0 0 .6rem }
+.game-story .game-score { font:normal 1.3rem/1.4 var(--serif); color:var(--muted); margin:.4rem 0 1.5rem }
+.game-story>p { color:var(--muted) }
+.game-facts { border-top:1px solid var(--line); margin:1.8rem 0 0; padding-top:1rem; font-size:.86rem }
+.game-facts>div { display:grid; grid-template-columns:8rem 1fr; gap:1rem; padding:.5rem 0 }
+.game-facts dt { color:var(--muted) }
+.game-facts dd { margin:0 }
+.game-media { min-width:0 }
+.game-media figure { margin:0 }
+.game-media figure>a { display:block; background:var(--wash) }
+.game-media img { display:block; width:100%; height:auto; max-height:39rem; object-fit:contain; image-orientation:from-image }
+.game-media figcaption { color:var(--muted); font:.8rem/1.65 var(--sans); padding:.85rem 0 .35rem }
+.game-media figcaption a { white-space:nowrap }
+.more-photos { border-top:1px solid var(--line); margin-top:1rem; font-size:.85rem }
+.more-photos summary { cursor:pointer; padding:.9rem 0; color:var(--blue) }
+.more-photos[open] summary { margin-bottom:.5rem }
+.gaming-close { font-size:.95rem; color:var(--muted); margin:0 0 3.5rem; max-width:45rem }
+@media(max-width:1000px) {
+  .personal-preview { gap:2.4rem; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) }
+  .play-preview { padding:1.5rem }
+  .play-entry { gap:2.5rem }
+  .essay-heading { margin-left:14rem }
+  .essay-layout { grid-template-columns:12rem minmax(0,1fr); gap:2rem }
+  .game-record { gap:2rem }
+}
+@media(max-width:760px) {
+  .research-features { grid-template-columns:1fr; gap:0 }
+  .research-feature+.research-feature { border-top:1px solid var(--line) }
+  .research-feature h3 { font-size:1.6rem }
+  .masthead { align-items:flex-start; flex-direction:column; gap:1.2rem }
+  .nav { column-gap:1.4rem; row-gap:.65rem; font-size:.9rem }
+  .personal-preview { grid-template-columns:1fr; gap:1.5rem }
+  .play-preview { max-width:none }
+  .play-entry { grid-template-columns:1fr; gap:1.8rem; padding:2rem 0 }
+  .play-entry-copy { max-width:100% }
+  .play-entry h2 { font-size:2.1rem }
+  .play-entry .inline-link { margin-top:.6rem }
+  .puzzle-gallery { grid-template-columns:1fr; gap:1.5rem }
+  .essay-heading { margin-left:0 }
+  .essay-layout { display:block }
+  .essay-sidebar { display:none }
+  .mobile-contents { display:block; background:var(--wash); margin:0 0 2rem; padding:1rem 1.2rem; font-size:.9rem }
+  .mobile-contents summary { cursor:pointer; color:var(--ink) }
+  .mobile-contents nav { margin-top:1rem }
+  .mobile-contents ol { margin-bottom:0 }
+  .essay-body { font-size:1.14rem; line-height:1.8 }
+  .essay-body h2 { font-size:1.7rem }
+  .game-record { grid-template-columns:1fr; gap:1.5rem; padding:2rem 0 2.5rem }
+  .game-story { max-width:100% }
+  .game-story .game-score { margin-bottom:1rem }
+  .game-facts { margin-top:1.2rem }
+}
+@media(max-width:400px) {
+  .nav { column-gap:1.1rem }
+  .essay-library .essay-card h2,.essay-library .essay-card h3 { font-size:2rem }
+  .essay-deck { font-size:1.2rem }
+  .play-preview { padding:1.3rem }
+}
+@media(max-width:620px) {
+  .intro-aside p:not(.label) { display:grid; grid-template-columns:5.8rem minmax(0,1fr); gap:.65rem; margin:.6rem 0 }
+  .intro-aside .entry-description { margin:0; line-height:1.55 }
+}
+@media print {
+  .essay-sidebar,.mobile-contents,.more-photos,.essay-end,.essay-related,.essay-heading .text-links { display:none }
+  .essay-heading { margin-left:0 }
+  .essay-layout { display:block }
+  .essay-body { font-size:11pt; line-height:1.5 }
+  .essay-body h2 { break-after:avoid }
+  .game-record { break-inside:avoid }
+}
+
+/* Standalone source lists have no intervening subject heading. */
+.narrow > .writing > h2 { font:normal 1.65rem/1.3 var(--serif); margin:0 0 .7rem }
+.narrow > .writing > h2 a { color:var(--ink); text-decoration:none }
+.narrow > .writing > h2 a:hover { text-decoration:underline }
+.privacy-preferences { padding:1.1rem 1.25rem; border:1px solid var(--line); margin:1.5rem 0 }
+.privacy-actions { display:flex; flex-wrap:wrap; gap:.7rem }
+.privacy-actions button { font:inherit; color:var(--ink); background:transparent; border:1px solid currentColor; border-radius:3px; padding:.55rem .85rem; cursor:pointer }
+.privacy-actions button:hover:not(:disabled) { background:var(--wash) }
+.privacy-actions button:focus-visible { outline:3px solid var(--blue); outline-offset:3px }
+.privacy-actions button:disabled { opacity:.55; cursor:default }
+
+
+/* Mathematical Life: parts, sections, and equivalent grouped contents. */
+.essay-body .essay-part-title { border-top:1px solid var(--line); padding-top:1.25rem; margin:3.5rem 0 1.75rem; font:500 .85rem/1.6 var(--sans); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); scroll-margin-top:2rem }
+.essay-part-title > span { margin-right:.45rem }
+.essay-body .essay-section-title { font:normal 1.6rem/1.3 var(--serif); margin:2.75rem 0 1.1rem; color:var(--ink); scroll-margin-top:2rem }
+.essay-section-title .section-number { font:.78em/1.3 var(--sans); color:var(--muted); margin-right:.3rem }
+.essay-sidebar .contents-parts,.mobile-contents .contents-parts { list-style:none; padding:0 }
+.essay-sidebar .contents-parts > li,.mobile-contents .contents-parts > li { margin-bottom:1.5rem }
+.contents-parts .contents-part-title { display:block; font-weight:500; color:var(--ink); line-height:1.45; margin-bottom:.75rem }
+.essay-sidebar .contents-parts ol,.mobile-contents .contents-parts ol { list-style:none; margin:0; padding-left:.7rem; border-left:1px solid var(--line) }
+.essay-sidebar .contents-parts ol li,.mobile-contents .contents-parts ol li { margin-bottom:.6rem }
+.archive-section-mappings li,.archive-note-mappings li { scroll-margin-top:2rem; margin-bottom:.7rem }
+.archive-fragment { display:block; scroll-margin-top:2rem }
+.essay-archive .text-links { flex-wrap:wrap }
+@media(max-width:760px) {
+ .essay-body .essay-part-title { margin-top:2.75rem; font-size:.8rem }
+ .essay-body .essay-section-title { font-size:1.4rem; margin-top:2rem }
+ .mobile-contents .contents-parts { margin-top:.8rem }
+}
+@media print {
+ .essay-body .essay-part-title,.essay-body .essay-section-title { break-after:avoid }
+ .essay-body .essay-section-title { font-size:15pt }
+}

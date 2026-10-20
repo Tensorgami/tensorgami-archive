@@ -1,0 +1,435 @@
+[
+  {
+    "slug": "mathematical-life-in-the-age-of-ai",
+    "published": true,
+    "title": "Mathematical Life in the Age of AI",
+    "subtitle": "Understanding, judgment, and the freedom to inquire",
+    "subject": "Mathematics and intellectual life",
+    "summary": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities.",
+    "date": "2026-10-12",
+    "manuscript": "content/essays/mathematical-life-in-the-age-of-ai.md",
+    "body": "content/essays/mathematical-life-in-the-age-of-ai.html",
+    "page": "/essays/mathematical-life-in-the-age-of-ai.html",
+    "staticMath": true,
+    "pdf": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+    "source": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
+    "sourceLabel": "Markdown source",
+    "parts": [
+      {
+        "id": "part-i",
+        "number": "I",
+        "title": "What understanding makes possible"
+      },
+      {
+        "id": "part-ii",
+        "number": "II",
+        "title": "How support becomes authority"
+      },
+      {
+        "id": "part-iii",
+        "number": "III",
+        "title": "Giving greater capacity a shared purpose"
+      }
+    ],
+    "sections": [
+      {
+        "id": "understanding-as-a-purpose",
+        "number": "1",
+        "title": "Understanding as a purpose",
+        "part": "part-i"
+      },
+      {
+        "id": "a-comparison-worth-understanding",
+        "number": "2",
+        "title": "A comparison worth understanding",
+        "part": "part-i"
+      },
+      {
+        "id": "becoming-capable",
+        "number": "3",
+        "title": "Becoming capable",
+        "part": "part-i"
+      },
+      {
+        "id": "a-hearing-before-a-verdict",
+        "number": "4",
+        "title": "A hearing before a verdict",
+        "part": "part-ii"
+      },
+      {
+        "id": "what-performed-mastery-costs",
+        "number": "5",
+        "title": "What performed mastery costs",
+        "part": "part-ii"
+      },
+      {
+        "id": "the-means-to-continue",
+        "number": "6",
+        "title": "The means to continue",
+        "part": "part-ii"
+      },
+      {
+        "id": "when-the-grounds-for-a-judgment-change",
+        "number": "7",
+        "title": "When the grounds for a judgment change",
+        "part": "part-iii"
+      },
+      {
+        "id": "credit-as-an-intellectual-record",
+        "number": "8",
+        "title": "Credit as an intellectual record",
+        "part": "part-iii"
+      },
+      {
+        "id": "making-participation-substantial",
+        "number": "9",
+        "title": "Making participation substantial",
+        "part": "part-iii"
+      },
+      {
+        "id": "an-inquiry-with-somewhere-to-go",
+        "number": "10",
+        "title": "An inquiry with somewhere to go",
+        "part": "part-iii"
+      }
+    ],
+    "related": [
+      {
+        "slug": "when-a-description-becomes-a-verdict",
+        "description": "A test for what a description determines, and a worked distinction between recovering groups and recovering their induced maps."
+      },
+      {
+        "slug": "what-a-new-proof-makes-possible",
+        "description": "How different arguments reveal mechanisms, quantitative information, and connections beyond establishing the same conclusion."
+      },
+      {
+        "slug": "when-accountability-stops-being-reciprocal",
+        "description": "How institutions can keep moral judgments open to scrutiny, correction, and proportionate review."
+      },
+      {
+        "slug": "the-authority-of-a-vision",
+        "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+      },
+      {
+        "kind": "exposition",
+        "slug": "what-a-boundary-map-can-prove",
+        "anchor": "the-attachment-point-changes-the-motivic-symmetry-group",
+        "description": "An optional advanced comparison with §10’s relative logarithm: an elliptic attachment changes reconstructed symmetry. The extensions have different pure pieces; this calculation adds elliptic geometry and its stated motivic comparison hypotheses."
+      },
+      {
+        "slug": "the-performance-of-depth",
+        "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+      }
+    ],
+    "group": "mathematics-and-intellectual-life",
+    "order": 3
+  },
+  {
+    "slug": "when-accountability-stops-being-reciprocal",
+    "published": true,
+    "title": "When Accountability Stops Being Reciprocal",
+    "subtitle": "Moral authority and the permanent defendant",
+    "subject": "Institutions and intellectual life",
+    "group": "mathematics-and-intellectual-life",
+    "order": 4,
+    "summary": "How accusations acquire institutional force, why scrutiny can become costly, and what makes consequential judgments open to challenge and correction.",
+    "date": "2026-10-19",
+    "manuscript": "content/essays/when-accountability-stops-being-reciprocal.md",
+    "body": "content/essays/when-accountability-stops-being-reciprocal.html",
+    "page": "/essays/when-accountability-stops-being-reciprocal.html",
+    "pdf": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+    "source": "/assets/essays/when-accountability-stops-being-reciprocal.md",
+    "sourceLabel": "Markdown source",
+    "sections": [
+      {
+        "id": "how-an-accusation-protects-itself",
+        "title": "How an accusation protects itself"
+      },
+      {
+        "id": "when-an-institution-adopts-the-judgment",
+        "title": "When an institution adopts the judgment"
+      },
+      {
+        "id": "what-the-institution-loses",
+        "title": "What the institution loses"
+      },
+      {
+        "id": "why-the-pattern-can-persist",
+        "title": "Why the pattern can persist"
+      },
+      {
+        "id": "making-judgment-answerable",
+        "title": "Making judgment answerable"
+      },
+      {
+        "id": "notes-and-sources",
+        "title": "Sources and notes"
+      }
+    ],
+    "related": [
+      {
+        "slug": "when-a-description-becomes-a-verdict",
+        "description": "What a description or comparison must preserve to support a judgment about a contribution."
+      },
+      {
+        "slug": "mathematical-life-in-the-age-of-ai",
+        "description": "How understanding, assistance, judgment, credit, and participation sustain an inquiry."
+      },
+      {
+        "slug": "the-performance-of-depth",
+        "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+      }
+    ]
+  },
+  {
+    "slug": "the-performance-of-depth",
+    "published": true,
+    "title": "The Performance of Depth",
+    "subtitle": "Prestige, incentives, and the reproduction of intellectual conformity",
+    "subject": "Institutions and intellectual life",
+    "group": "mathematics-and-intellectual-life",
+    "order": 5,
+    "summary": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment.",
+    "date": "2026-10-19",
+    "manuscript": "content/essays/the-performance-of-depth.md",
+    "body": "content/essays/the-performance-of-depth.html",
+    "page": "/essays/the-performance-of-depth.html",
+    "source": "/assets/essays/the-performance-of-depth.md",
+    "sourceLabel": "Markdown source",
+    "sections": [
+      {
+        "id": "a-century-of-certification",
+        "title": "A century of certification"
+      },
+      {
+        "id": "how-recognition-reproduces-itself",
+        "title": "How recognition reproduces itself"
+      },
+      {
+        "id": "the-cost-of-an-independent-agenda",
+        "title": "The cost of an independent agenda"
+      },
+      {
+        "id": "what-becomes-dominant",
+        "title": "What becomes dominant"
+      },
+      {
+        "id": "where-inquiry-can-continue",
+        "title": "Where inquiry can continue"
+      },
+      {
+        "id": "authority-beyond-the-record",
+        "title": "Authority beyond the record"
+      },
+      {
+        "id": "notes-and-sources",
+        "title": "Sources and notes"
+      }
+    ],
+    "related": [
+      {
+        "slug": "mathematical-life-in-the-age-of-ai",
+        "description": "How understanding and the means to pursue it develop through assistance, recognition, credit, and shared work."
+      },
+      {
+        "slug": "when-accountability-stops-being-reciprocal",
+        "description": "How consequential institutional judgments remain open to challenge, review, and correction."
+      },
+      {
+        "slug": "when-a-description-becomes-a-verdict",
+        "description": "What an abbreviated description establishes, and where a further judgment needs substantive comparison."
+      }
+    ]
+  },
+  {
+    "slug": "what-a-new-proof-makes-possible",
+    "published": true,
+    "title": "What a New Proof Makes Possible",
+    "subtitle": "Old theorems and the changing means of understanding",
+    "subject": "Proof and understanding",
+    "summary": "How new proofs of familiar theorems expose mechanisms, improve estimates, and connect mathematical subjects. Comparing the arguments reveals why their constructions work, where they generalize, and what further questions they open.",
+    "date": "2026-10-08",
+    "manuscript": "content/essays/what-a-new-proof-makes-possible.md",
+    "body": "content/essays/what-a-new-proof-makes-possible.html",
+    "page": "/essays/what-a-new-proof-makes-possible.html",
+    "staticMath": true,
+    "sections": [
+      {
+        "id": "the-structure-inside-an-old-conclusion",
+        "title": "The structure inside an old conclusion"
+      },
+      {
+        "id": "when-a-method-branches-and-returns",
+        "title": "When a method branches and returns"
+      },
+      {
+        "id": "generalization-in-different-directions",
+        "title": "Generalization in different directions"
+      },
+      {
+        "id": "from-existence-to-a-procedure",
+        "title": "From existence to a procedure"
+      },
+      {
+        "id": "what-the-connection-between-proofs-reveals",
+        "title": "What the connection between proofs reveals"
+      },
+      {
+        "id": "economy-across-a-body-of-mathematics",
+        "title": "Economy across a body of mathematics"
+      },
+      {
+        "id": "when-proofs-become-more-abundant",
+        "title": "When proofs become more abundant"
+      }
+    ],
+    "related": [
+      {
+        "slug": "when-a-description-becomes-a-verdict",
+        "description": "What a comparison must preserve before familiar ingredients or known conclusions can support a verdict about a contribution."
+      },
+      {
+        "slug": "mathematical-life-in-the-age-of-ai",
+        "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+      },
+      {
+        "kind": "exposition",
+        "slug": "fourier-symmetry-and-reconstruction",
+        "description": "Follow root algebras and their character decompositions through the classical cubic and quartic formulas into geometry and arithmetic."
+      },
+      {
+        "kind": "exposition",
+        "slug": "what-a-boundary-map-can-prove",
+        "description": "Follow a boundary presentation through determinant laws, geometric inequalities, and the symmetries of an elliptic attachment."
+      },
+      {
+        "kind": "exposition",
+        "slug": "what-a-derivative-retains",
+        "anchor": "rectangle",
+        "description": "Follow the rectangle product rule through infinitesimal probes and Kähler differentials. Sections 1–5 give an elementary route; later sections retain equations and lifting obstructions."
+      }
+    ],
+    "group": "mathematics-and-intellectual-life",
+    "order": 1
+  },
+  {
+    "slug": "when-a-description-becomes-a-verdict",
+    "published": true,
+    "title": "When a Description Becomes a Verdict",
+    "subtitle": "Expertise, explanation, and the scope of judgment",
+    "subject": "Mathematics and intellectual life",
+    "group": "mathematics-and-intellectual-life",
+    "order": 2,
+    "summary": "How to test whether a description retains what a conclusion needs, through eigenvalues, naturality, and the scope of judgment.",
+    "date": "2026-10-17",
+    "manuscript": "content/essays/when-a-description-becomes-a-verdict.md",
+    "body": "content/essays/when-a-description-becomes-a-verdict.html",
+    "page": "/essays/when-a-description-becomes-a-verdict.html",
+    "staticMath": true,
+    "source": "/assets/essays/when-a-description-becomes-a-verdict.md",
+    "sourceLabel": "Markdown source",
+    "sections": [
+      {
+        "id": "the-extra-conclusion",
+        "number": "1",
+        "title": "The extra conclusion"
+      },
+      {
+        "id": "enough-for-which-question",
+        "number": "2",
+        "title": "Enough for which question?"
+      },
+      {
+        "id": "what-the-arrangement-does",
+        "number": "3",
+        "title": "What the arrangement does"
+      },
+      {
+        "id": "what-recognition-knows",
+        "number": "4",
+        "title": "What recognition knows"
+      },
+      {
+        "id": "reasons-for-stopping",
+        "number": "5",
+        "title": "Reasons for stopping"
+      },
+      {
+        "id": "keeping-the-boundary-visible",
+        "number": "6",
+        "title": "Keeping the boundary visible"
+      }
+    ],
+    "related": [
+      {
+        "slug": "what-a-new-proof-makes-possible",
+        "description": "How different arguments reveal mechanisms and connections beyond establishing the same conclusion."
+      },
+      {
+        "slug": "mathematical-life-in-the-age-of-ai",
+        "description": "How judgments about understanding shape attention, support, credit, and the means to continue an inquiry."
+      },
+      {
+        "slug": "when-accountability-stops-being-reciprocal",
+        "description": "From what warrants a judgment to how people can challenge its consequential use."
+      },
+      {
+        "kind": "exposition",
+        "slug": "fourier-symmetry-and-reconstruction",
+        "anchor": "section-12-3",
+        "description": "Continue the identity-and-shear example into the circle transform, where a thickened spectral point records the nilpotent action concealed by equal eigenvalues."
+      }
+    ]
+  },
+  {
+    "slug": "the-authority-of-a-vision",
+    "published": true,
+    "title": "The Authority of a Vision",
+    "subtitle": "Knowledge, Belief, and Freedom in Villeneuve’s Dune",
+    "subject": "Film and interpretation",
+    "summary": "How learned competence, extraordinary knowledge, and collective hope become claims to command in Villeneuve’s Dune.",
+    "date": "2026-10-07",
+    "manuscript": "content/essays/the-authority-of-a-vision.md",
+    "body": "content/essays/the-authority-of-a-vision.html",
+    "page": "/essays/the-authority-of-a-vision.html",
+    "contentNote": "An essay on Dune (2021) and Dune: Part Two (2024). Contains spoilers for both films.",
+    "related": [
+      {
+        "slug": "mathematical-life-in-the-age-of-ai",
+        "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+      }
+    ],
+    "sections": [
+      {
+        "id": "the-limits-of-revelation",
+        "title": "1. The limits of revelation"
+      },
+      {
+        "id": "knowledge-learned-from-a-world",
+        "title": "2. Knowledge learned from a world"
+      },
+      {
+        "id": "from-belief-to-allegiance",
+        "title": "3. From belief to allegiance"
+      },
+      {
+        "id": "the-production-of-confirmation",
+        "title": "4. The production of confirmation"
+      },
+      {
+        "id": "destiny-and-the-scope-of-choice",
+        "title": "5. Destiny and the scope of choice"
+      },
+      {
+        "id": "the-authority-of-spectacle",
+        "title": "6. The authority of spectacle"
+      },
+      {
+        "id": "a-person-beyond-the-prophecy",
+        "title": "7. A person beyond the prophecy"
+      }
+    ],
+    "group": "film-and-interpretation",
+    "order": 1
+  }
+]
