@@ -26,7 +26,7 @@ const fourierRoutes=[
     id:'matrix-calculation',label:'Matrices and extensions',heading:'Through a matrix calculation',
     sections:[[12,'§12'],[13,'§13']],
     itinerary:([circle,categorical])=>`${circle} → ${categorical}. Begin with the circle calculation, then continue to Fourier–Mukai reconstruction.`,
-    guide:([circle,categorical])=>`${circle} begins with an invertible matrix and asks what its eigenvalues forget. Its explicit transform uses modules over Laurent polynomials and two-term complexes. The calculation prepares the extension and specialization phenomena in the Fourier–Mukai theory of ${categorical}. The <a href="/#a-reconstruction-example">homepage's expandable example</a> introduces the distinction using two linear maps.`
+    guide:([circle,categorical])=>`${circle} begins with an invertible matrix and asks what its eigenvalues forget. Its explicit transform uses modules over Laurent polynomials and two-term complexes. The calculation prepares the extension and specialization phenomena in the Fourier–Mukai theory of ${categorical}. The <a href="/#a-reconstruction-example">homepage's expandable example</a> introduces the distinction using two linear maps. For the characteristic-zero qualification on the logarithmic coordinate in §12.4, <a href="/notes/when-a-formal-logarithm-fails.html">When a Formal Logarithm Fails</a> calculates the obstruction in characteristic three.`
   },
   {
     id:'arithmetic-and-estimates',label:'Arithmetic and estimates',heading:'Through arithmetic and estimates',
@@ -52,7 +52,7 @@ export const boundaryMapRouteLinks=`<nav class="reader-route-links" aria-label="
 const derivative='/notes/what-a-derivative-retains.html';
 const derivativeRoutes=[
   {label:'From calculus to infinitesimal points',anchor:'rectangle',sections:'§§1–5',itinerary:'Follow strips, boundaries, and the diagonal to the familiar derivative.',guide:'Begin with calculus and the product rule. Oriented boundaries introduce degrees and signs; polynomial rings and modules enter with Kähler differentials. §5 returns to tangent probes, the chain rule, and the analytic derivative. Stop here for a complete first-order route.'},
-  {label:'Arithmetic and invisible directions',anchor:'arithmetic-derivative',sections:'§§6–7',itinerary:'Change the coefficients and see what first-order measurements detect.',guide:'The Gaussian integers make ramification visible in a differential and its derived fiber. Frobenius and Artin–Schreier then separate topological behavior from infinitesimal behavior. Use §§4–5 first; §6 introduces a two-term complex, and §8 develops its general construction.'},
+  {label:'Arithmetic and invisible directions',anchor:'arithmetic-derivative',sections:'§§6–7',itinerary:'Change the coefficients and see what first-order measurements detect. Continue with <a href="/notes/when-a-formal-logarithm-fails.html">a formal logarithm obstruction</a> in characteristic three.',guide:'The Gaussian integers make ramification visible in a differential and its derived fiber. Frobenius and Artin–Schreier then separate topological behavior from infinitesimal behavior. Use §§4–5 first; §6 introduces a two-term complex, and §8 develops its general construction. The companion <a href="/notes/when-a-formal-logarithm-fails.html">When a Formal Logarithm Fails</a> turns successive corrections into a filtered complex and computes its first nonzero obstruction. It introduces the spectral sequence needed for the calculation.'},
   {label:'Equations, intersections, and higher operations',anchor:'cotangent-complex',sections:'§§8–11',itinerary:'Retain a constraint, test its lifts, and recover its nonlinear equation.',guide:'The cotangent complex and the node make a failed lift explicit in §§8–9; this is a useful stopping point after the elementary algebra. §10 is an optional geometric branch using projective geometry and normal bundles. §11 returns to the local equation, using graded algebra and characteristic-zero formal deformation theory to recover equations from higher operations. Equal pointwise tangent complexes alone leave those equations undecided.'},
   {label:'Spectra and functors of spaces',anchor:'spectral-differentiation',sections:'§§12–13',itinerary:'Follow coherent multiplication and gluing into two homotopical calculi.',guide:'§12 assumes stable homotopy theory and studies infinitesimal responses of commutative ring spectra, with MU and KU calculations. <a href="/notes/what-a-derivative-retains.html#goodwillie-derivatives">§13</a> studies Goodwillie approximations of functors of based spaces, using a product-cell boundary and its Whitehead attaching map. These are separate advanced branches. §14 gathers the reconstruction question and its limits.'}
 ];
@@ -65,6 +65,11 @@ export function expositionReadingRoutes(slug) {
 }
 
 const companions={
+  'when-a-formal-logarithm-fails':[
+    {slug:'what-a-derivative-retains',anchor:'frobenius-and-artin-schreier',section:'§7',description:'Recover the distinction between higher Taylor coefficients and homological information about constraints.'},
+    {slug:'fourier-symmetry-and-reconstruction',anchor:'section-12-4',section:'§12.4',description:'See the logarithmic coordinate turn tensor products into addition in characteristic zero.'},
+    {slug:'what-a-boundary-map-can-prove',anchor:'removing-an-edge-produces-an-obstruction-map',section:'§2.2',description:'Compare the lifting tower with a connecting map that measures the obstruction to gluing across an edge.'}
+  ],
   'fourier-symmetry-and-reconstruction':[
     {slug:'what-a-boundary-map-can-prove',anchor:'symmetry-turns-eigenvalues-into-concrete-counts',section:'§3.3',description:'Apply the finite abelian character projectors to cube and cycle Laplacians, then turn their eigenvalues into spanning-tree counts.'},
     {slug:'what-a-derivative-retains',anchor:'arithmetic-derivative',section:'§6',description:'Compare the exceptional derived fiber of the circle transform with a cotangent complex at a ramified prime. Both computations retain a two-term complex before specialization.'}
@@ -81,7 +86,7 @@ const companions={
 
 export function companionReadingLinks(slug,notes,esc) {
   if(!companions[slug])return '';
-  return `<section class="reader-related" aria-label="Related expositions"><h2>Continue across the three studies</h2>${companions[slug].map(item=>{
+  return `<section class="reader-related" aria-label="Related expositions"><h2>${slug==='when-a-formal-logarithm-fails'?'Related calculations':'Continue across the three studies'}</h2>${companions[slug].map(item=>{
     const note=notes.find(n=>n.slug===item.slug);
     if(!note)throw Error(`Missing companion exposition: ${item.slug}`);
     return `<div><h3><a href="${note.page}#${item.anchor}">${esc(note.title)} · ${item.section}</a></h3><p>${esc(item.description)}</p></div>`;

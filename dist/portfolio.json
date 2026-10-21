@@ -96,6 +96,14 @@
       "companionPath": "polynomial-structure"
     },
     {
+      "id": "formal-identities-and-obstructions",
+      "title": "From a formal identity to an obstruction",
+      "description": "Follow one attempted logarithm in characteristic three. The quadratic correction succeeds; a cubic class records why the next lift fails. The exposition constructs its complex and spectral sequence as they are needed.",
+      "notes": [
+        "when-a-formal-logarithm-fails"
+      ]
+    },
+    {
       "id": "polynomial-structure",
       "title": "Two views of a polynomial composition law",
       "description": "Follow one criterion through two proofs: a direct module argument, then a Galois-theoretic and Frobenius-descent approach.",
@@ -142,12 +150,13 @@
       "pdf": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
       "page": "/notes/fourier-symmetry-and-reconstruction.html",
       "kind": "Exposition",
-      "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree.",
+      "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions.",
       "catalogueBackground": "Polynomial route: linear algebra, polynomial rings, finite group actions, and basic Galois theory. Later routes use further geometric and cohomological background.",
       "readingGuide": "/mechanisms.html#fourier-routes-title",
       "entryLabel": "Explore the Fourier exposition",
       "featureDetail": "Concrete applications include reducing genus-two integrals to elliptic integrals, reconstructing vector bundles, counting points over finite fields, and bounding exponential sums.",
-      "readingSource": "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex"
+      "readingSource": "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "pdfSha256": "9a5fd7d1f8487d790733e2acd7888fe032c081e8737e39e99938f98ba0a231c7"
     },
     {
       "slug": "what-a-boundary-map-can-prove",
@@ -191,16 +200,41 @@
       "readingBody": "content/expositions/what-a-derivative-retains.html",
       "readingSource": "assets/expositions/what-a-derivative-retains.md",
       "manuscript": "/assets/expositions/what-a-derivative-retains.md",
-      "manuscriptSha256": "45249381a32b0ba351ce236d559904c1fde1bec1bed36910bff05353540a4721",
+      "manuscriptSha256": "aab066d67a7a4f37055d8171ba2bbec732575d002d550cd93e5eb8d1778f2819",
       "edition": "October 2026",
       "page": "/notes/what-a-derivative-retains.html",
       "source": null,
-      "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition.",
+      "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions.",
       "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
       "pageCount": 39,
-      "pdfSha256": "c3c09bd7652cddb05717d95d57ff0dfd0a0b160cfb51a799e39606d42da97671",
+      "pdfSha256": "63994b17a9fe06738827296c2671d73f39195390049b47ecc19dafcadb7c6379",
       "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/",
       "readingGuide": "/mechanisms.html#derivative-routes-title"
+    },
+    {
+      "slug": "when-a-formal-logarithm-fails",
+      "title": "When a Formal Logarithm Fails",
+      "subtitle": "Corrections, cohomology, and a spectral sequence in characteristic three",
+      "topic": "Formal groups · Cohomology · Spectral sequences",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "An attempted formal logarithm produces a quadratic correction and a cubic obstruction. A filtered cobar complex identifies the failure as a nonzero spectral sequence differential.",
+      "body": "The multiplicative law supplies a coproduct. Its normalized cobar complex organizes successive corrections, and a total-weight filtration exposes a nonzero second differential. A Witt-vector addition law gives the obstruction polynomial a further use.",
+      "background": "Begin with formal power series and linear algebra over a field. Cochain complexes, filtrations and the required spectral sequence are constructed in the text; the final interpretation uses exact triangles.",
+      "catalogueBackground": "Formal power series and linear algebra. The text develops the cochain complex, filtration and spectral sequence used in the calculation.",
+      "readingBody": "content/expositions/when-a-formal-logarithm-fails.html",
+      "readingSource": "assets/expositions/when-a-formal-logarithm-fails.md",
+      "manuscript": "/assets/expositions/when-a-formal-logarithm-fails.md",
+      "tex": "/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "pdf": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "page": "/notes/when-a-formal-logarithm-fails.html",
+      "source": null,
+      "edition": "October 2026",
+      "revision": "First published October 20, 2026. The web, PDF, Markdown and TeX editions contain the same argument.",
+      "readingGuide": "/mechanisms.html#formal-identities-and-obstructions",
+      "pageCount": 12,
+      "pdfSha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
+      "manuscriptSha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91"
     },
     {
       "slug": "pointwise-weighting-convergence-in-measure",

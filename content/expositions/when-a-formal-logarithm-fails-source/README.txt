@@ -1,0 +1,5 @@
+When a Formal Logarithm Fails — reading editions
+
+The canonical manuscript is assets/expositions/when-a-formal-logarithm-fails.md. The retained render-article.mjs takes manuscript, HTML-fragment and compilation-report paths. It requires marked and mathjax-full; TENSORGAMI_MATHJAX_ROOT may select a project directory containing node_modules, and TENSORGAMI_MARKED_MODULE may select the marked module file. article-to-tex.py takes that HTML, the compilation report, and an output directory; it requires beautifulsoup4. Compile its main.tex three times with XeLaTeX, using Georgia and Segoe UI fonts. The standalone public TeX contains the complete article and needs no separate figure files. Every mathematical body is recorded verbatim in the FORMAL-LOG-MATH markers. The edition manifest pins reviewed source and output hashes.
+
+The short note on the outgoing target is a direct finite calculation; the other notes attribute the filtered-complex, formal-group and Witt-vector constructions. The proof is an exposition of established mathematics, not a novelty claim.

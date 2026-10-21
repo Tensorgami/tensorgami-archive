@@ -1,0 +1,238 @@
+{
+  "preceding_edition": "2026-10-20.1",
+  "edition": "2026-10-21.1",
+  "comparison_to_old_archive": {
+    "added": [
+      {
+        "path": "assets/expositions/when-a-formal-logarithm-fails.md",
+        "bytes": 23574,
+        "sha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91"
+      },
+      {
+        "path": "editions.html",
+        "bytes": 9513,
+        "sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b"
+      },
+      {
+        "path": "notes/when-a-formal-logarithm-fails.html",
+        "bytes": 883306,
+        "sha256": "96e84e3b228ee38450923da36f1f1e595caf731ad05e0647d87f46939e34aeef"
+      },
+      {
+        "path": "pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+        "bytes": 126781,
+        "sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a"
+      },
+      {
+        "path": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+        "bytes": 43753,
+        "sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f"
+      }
+    ],
+    "changed": [
+      {
+        "path": "404.html",
+        "bytes": 2465,
+        "sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96"
+      },
+      {
+        "path": "about.html",
+        "bytes": 7168,
+        "sha256": "68745d592e6e318e81e5f96a3bfd9ad7778ed436dd657269096fd2ec98ab6200"
+      },
+      {
+        "path": "assets/expositions/what-a-derivative-retains.md",
+        "bytes": 96788,
+        "sha256": "aab066d67a7a4f37055d8171ba2bbec732575d002d550cd93e5eb8d1778f2819"
+      },
+      {
+        "path": "assets/expositions.css",
+        "bytes": 15931,
+        "sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d"
+      },
+      {
+        "path": "essays/mathematical-life-in-the-age-of-ai.html",
+        "bytes": 149953,
+        "sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b"
+      },
+      {
+        "path": "essays/mathematical-understanding-in-the-age-of-ai.html",
+        "bytes": 5406,
+        "sha256": "851aae15cdea5edafa0c979d74b618d797fd5f3121d1214c969cab8d7e60de75"
+      },
+      {
+        "path": "essays/the-authority-of-a-vision.html",
+        "bytes": 26263,
+        "sha256": "aa9ef5a95b2e1310c8f89617613a7401f12a8016c075cb96888c331be3c05489"
+      },
+      {
+        "path": "essays/the-culture-of-mathematical-judgment.html",
+        "bytes": 12896,
+        "sha256": "c15bbf4507f26b4acf24765a72d255e8c44fc55448efbeaef571b65de8d2713c"
+      },
+      {
+        "path": "essays/the-performance-of-depth.html",
+        "bytes": 64352,
+        "sha256": "dd10e69272f960e0280bcffdfffeec5b7888ec8b1cf1aee23ff6cf225e4462dc"
+      },
+      {
+        "path": "essays/what-a-new-proof-makes-possible.html",
+        "bytes": 217175,
+        "sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba"
+      },
+      {
+        "path": "essays/when-a-description-becomes-a-verdict.html",
+        "bytes": 88524,
+        "sha256": "6bdfdd7ab3da7ea78d4fb3fc72214b0ce414bab3fdb9ea2da284d96987cbe9e9"
+      },
+      {
+        "path": "essays/when-accountability-stops-being-reciprocal.html",
+        "bytes": 40733,
+        "sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8"
+      },
+      {
+        "path": "essays.html",
+        "bytes": 7146,
+        "sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26"
+      },
+      {
+        "path": "expositions.html",
+        "bytes": 22601,
+        "sha256": "d157c7d9999a40cc7257568d52ae4b088b095353e5edb76b01e469b23c8ec45a"
+      },
+      {
+        "path": "index.html",
+        "bytes": 16266,
+        "sha256": "b40ee963826d3246a0ed1c9b1a706da06f079fd33174e7b57ce39ff59bf45ea9"
+      },
+      {
+        "path": "interests.html",
+        "bytes": 5262,
+        "sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876"
+      },
+      {
+        "path": "license.html",
+        "bytes": 2905,
+        "sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab"
+      },
+      {
+        "path": "mechanisms.html",
+        "bytes": 25875,
+        "sha256": "0c5d751d8e665d7ffa0c1c8a6eab0272c284abda3a58e13eabb1f18fde27296f"
+      },
+      {
+        "path": "notes/disjoint-decompositions.html",
+        "bytes": 4117,
+        "sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5"
+      },
+      {
+        "path": "notes/extracting-first-prime.html",
+        "bytes": 4468,
+        "sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e"
+      },
+      {
+        "path": "notes/fourier-symmetry-and-reconstruction.html",
+        "bytes": 5413130,
+        "sha256": "f1caebd6ba536236d62e74a9d3a00c66b8b29b29dffe76e492763e0b46d0838a"
+      },
+      {
+        "path": "notes/galois-frobenius-composition-law.html",
+        "bytes": 4943,
+        "sha256": "c573e8b0d091006bebd11c1cdded52b5aa04bd267efb18761a735a0ee5430957"
+      },
+      {
+        "path": "notes/hartshorne-ii-5-14-18.html",
+        "bytes": 4460,
+        "sha256": "4f8059a5d4d65f80131b2c68692f9cfca373ef9020ea6d3b30da1c23e383ed70"
+      },
+      {
+        "path": "notes/ibm-ponder-this-2010.html",
+        "bytes": 4324,
+        "sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6"
+      },
+      {
+        "path": "notes/lebesgue-riemann-integrability.html",
+        "bytes": 4837,
+        "sha256": "ba947df6c0cd857ca840719e0b02ddf2dcedc44fcc8ed28c472d08be5fcf8531"
+      },
+      {
+        "path": "notes/pointwise-weighting-convergence-in-measure.html",
+        "bytes": 4986,
+        "sha256": "2ac8f04242bb0459c2441aa0a7a5ef78a092389fc410432c4c0496cfa9294a47"
+      },
+      {
+        "path": "notes/products-preserve-riemann-integrability.html",
+        "bytes": 165141,
+        "sha256": "9468015b3b575c29a63aa04f7f749b1a82df6c1d217c1c65cdba42bffb6ddee0"
+      },
+      {
+        "path": "notes/selected-problems-discrete-mathematics-analysis.html",
+        "bytes": 11687,
+        "sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12"
+      },
+      {
+        "path": "notes/separated-polynomial-divisibility.html",
+        "bytes": 4772,
+        "sha256": "9ec1bffe8015a316a7beebc30aaca5c5273642f116bb63d09c0f401cd1f675ed"
+      },
+      {
+        "path": "notes/what-a-boundary-map-can-prove.html",
+        "bytes": 6248866,
+        "sha256": "fd1252d52c2334cd626707da96af0dc5331177e99a235f16d9d4a44b19dd76f7"
+      },
+      {
+        "path": "notes/what-a-derivative-retains.html",
+        "bytes": 3552966,
+        "sha256": "8e6bcb5ea7885827d54567fec986095268cb4e62c515cabcb4d4497c1c8d91f8"
+      },
+      {
+        "path": "papers.html",
+        "bytes": 10047,
+        "sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd"
+      },
+      {
+        "path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+        "bytes": 534817,
+        "sha256": "9a5fd7d1f8487d790733e2acd7888fe032c081e8737e39e99938f98ba0a231c7"
+      },
+      {
+        "path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
+        "bytes": 275311,
+        "sha256": "63994b17a9fe06738827296c2671d73f39195390049b47ecc19dafcadb7c6379"
+      },
+      {
+        "path": "play/cube-patterns.html",
+        "bytes": 5398,
+        "sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848"
+      },
+      {
+        "path": "portfolio.json",
+        "bytes": 53453,
+        "sha256": "8e3627ecc7c8b694494d5cd8a76fce45f1254fe0dc9ddd5a0a40b90b519fed80"
+      },
+      {
+        "path": "privacy.html",
+        "bytes": 5152,
+        "sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837"
+      },
+      {
+        "path": "sitemap.xml",
+        "bytes": 2546,
+        "sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6"
+      },
+      {
+        "path": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+        "bytes": 136668,
+        "sha256": "c532a816cba5a4ad78b642078896cb09402dd6413e9eab49c871ad17c0e81c0b"
+      },
+      {
+        "path": "verification.html",
+        "bytes": 6751,
+        "sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40"
+      }
+    ],
+    "removed": [],
+    "unchanged": 98
+  },
+  "note": "Differences include the archive/footer additions since the preceding snapshot and the new companion integration. The older immutable release remains unchanged."
+}

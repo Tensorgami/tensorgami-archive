@@ -11,6 +11,14 @@
     "companionPath": "polynomial-structure"
   },
   {
+    "id": "formal-identities-and-obstructions",
+    "title": "From a formal identity to an obstruction",
+    "description": "Follow one attempted logarithm in characteristic three. The quadratic correction succeeds; a cubic class records why the next lift fails. The exposition constructs its complex and spectral sequence as they are needed.",
+    "notes": [
+      "when-a-formal-logarithm-fails"
+    ]
+  },
+  {
     "id": "polynomial-structure",
     "title": "Two views of a polynomial composition law",
     "description": "Follow one criterion through two proofs: a direct module argument, then a Galois-theoretic and Frobenius-descent approach.",

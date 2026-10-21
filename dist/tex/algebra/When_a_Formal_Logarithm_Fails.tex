@@ -1,0 +1,1475 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,top=.9in,bottom=.85in]{geometry}
+\usepackage{sectsty,lmodern,fontspec}
+\setmainfont{Georgia}
+\setsansfont{Segoe UI}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{microtype,booktabs,array,tabularx,enumitem,xcolor,graphicx,needspace}
+\allsectionsfont{\raggedright\hyphenpenalty=10000\exhyphenpenalty=10000}
+\definecolor{ink}{HTML}{25313C}
+\definecolor{inkblue}{HTML}{345B70}
+\definecolor{accent}{HTML}{9B7A48}
+\usepackage{hyperref,bookmark}
+\hypersetup{unicode=true,colorlinks=true,linkcolor=inkblue,urlcolor=inkblue,citecolor=inkblue,pdftitle={When a Formal Logarithm Fails},pdfauthor={Henry Shin},pdfsubject={Corrections, cohomology, and a spectral sequence in characteristic three},bookmarksopen=true,bookmarksnumbered=true}
+\urlstyle{same}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textsc{When a Formal Logarithm Fails}}
+\fancyhead[R]{\small\textsc{Tensorgami}}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{16pt}
+\renewcommand{\headrulewidth}{.3pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{.5em}
+\linespread{1.09}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000\widowpenalty=10000\displaywidowpenalty=10000
+\setcounter{tocdepth}{1}
+\newsavebox{\articlemathbox}
+\newcommand{\ArticleDisplay}[2]{%
+  \par\addvspace{.35em}\begingroup
+  \sbox{\articlemathbox}{$\displaystyle #2$}%
+  \typeout{PDF-MATH:#1:width=\the\wd\articlemathbox:height=\the\ht\articlemathbox:depth=\the\dp\articlemathbox:limit=\the\linewidth}%
+  \noindent\makebox[\linewidth][c]{\ifdim\wd\articlemathbox>\linewidth\resizebox{\linewidth}{!}{\usebox{\articlemathbox}}\else\usebox{\articlemathbox}\fi}%
+  \par\endgroup\addvspace{.35em}}
+\begin{document}
+\color{ink}
+\thispagestyle{empty}
+{\sffamily\small\textcolor{accent}{TENSORGAMI · EXPOSITIONS}\par}
+\vspace{.6em}
+{\LARGE\bfseries When a Formal Logarithm Fails\par}
+\vspace{.4em}
+{\large\itshape Corrections, cohomology, and a spectral sequence in characteristic three\par}
+\vspace{.65em}
+{Henry Shin\hspace{.6em}·\hspace{.6em}October 2026\par}
+\vspace{.3em}
+{\small\href{https://tensorgami.com/notes/when-a-formal-logarithm-fails.html}{Tensorgami · web edition}\par}
+\vspace{.6em}
+
+The identity \(
+% FORMAL-LOG-MATH-BEGIN 0 inline
+\log(uv)=\log u+\log v
+% FORMAL-LOG-MATH-END 0
+\) changes multiplication into addition. Near \(
+% FORMAL-LOG-MATH-BEGIN 1 inline
+u=v=1
+% FORMAL-LOG-MATH-END 1
+\), it becomes a formal power-series identity: no convergence or choice of branch is involved. In characteristic three, its first two orders can still be recovered. The next order cannot.
+
+
+We will follow that failure through a single calculation. Substitution becomes a coproduct, an attempted identity becomes a cocycle condition, and a correction removes a boundary. The first residual that cannot be removed is detected by a nonzero differential in a spectral sequence. Its polynomial then supplies the addition law of a different group, where the same compatibility equation proves associativity.
+
+
+The opening requires formal power series and arithmetic in characteristic three. Tensor products and cochain complexes are introduced as they become useful. Sections 5–6 give the complete spectral-sequence calculation; section 7 interprets it through a tower of exact triangles. The argument uses only finitely many polynomial weights, so no convergence theorem for an infinite spectral sequence is needed.
+
+
+
+
+\clearpage\thispagestyle{plain}\tableofcontents\clearpage
+\section{The identity and its obstruction}\label{sec:identity-and-obstruction}\hypertarget{identity-and-obstruction}{}
+
+Let \(
+% FORMAL-LOG-MATH-BEGIN 2 inline
+k
+% FORMAL-LOG-MATH-END 2
+\) be a field. Write a unit near \(
+% FORMAL-LOG-MATH-BEGIN 3 inline
+1
+% FORMAL-LOG-MATH-END 3
+\) as \(
+% FORMAL-LOG-MATH-BEGIN 4 inline
+1+t
+% FORMAL-LOG-MATH-END 4
+\). Multiplication gives the law
+
+
+\ArticleDisplay{5}{
+% FORMAL-LOG-MATH-BEGIN 5 display
+F(x,y)=(1+x)(1+y)-1=x+y+xy.
+% FORMAL-LOG-MATH-END 5
+}
+
+This is the multiplicative formal group in the coordinate \(
+% FORMAL-LOG-MATH-BEGIN 6 inline
+t
+% FORMAL-LOG-MATH-END 6
+\). Its identity is \(
+% FORMAL-LOG-MATH-BEGIN 7 inline
+0
+% FORMAL-LOG-MATH-END 7
+\), its inverse is the formal series \(
+% FORMAL-LOG-MATH-BEGIN 8 inline
+-t/(1+t)
+% FORMAL-LOG-MATH-END 8
+\), and associativity follows from associativity of multiplication. We seek a series
+
+
+
+\ArticleDisplay{9}{
+% FORMAL-LOG-MATH-BEGIN 9 display
+L(t)=t+\ell_2t^2+\ell_3t^3+\cdots
+% FORMAL-LOG-MATH-END 9
+}
+
+such that
+
+
+
+\ArticleDisplay{10}{
+% FORMAL-LOG-MATH-BEGIN 10 display
+L(F(x,y))=L(x)+L(y).
+% FORMAL-LOG-MATH-END 10
+}
+
+The coefficient of \(
+% FORMAL-LOG-MATH-BEGIN 11 inline
+t
+% FORMAL-LOG-MATH-END 11
+\) is prescribed to be \(
+% FORMAL-LOG-MATH-BEGIN 12 inline
+1
+% FORMAL-LOG-MATH-END 12
+\). Such a series would be an invertible change of formal coordinate, turning the multiplicative law into the additive law.
+
+
+In characteristic zero,
+
+
+
+\ArticleDisplay{13}{
+% FORMAL-LOG-MATH-BEGIN 13 display
+L(t)=\log(1+t)=\sum_{n\geq1}\frac{(-1)^{n+1}}n t^n
+% FORMAL-LOG-MATH-END 13
+}
+
+does the job. One proof differentiates the proposed identity in \(
+% FORMAL-LOG-MATH-BEGIN 14 inline
+x
+% FORMAL-LOG-MATH-END 14
+\):
+
+
+
+\ArticleDisplay{15}{
+% FORMAL-LOG-MATH-BEGIN 15 display
+\frac{\partial}{\partial x}
+\bigl(L(F(x,y))-L(x)-L(y)\bigr)
+=\frac{1+y}{1+F(x,y)}-\frac1{1+x}=0.
+% FORMAL-LOG-MATH-END 15
+}
+
+The difference vanishes at \(
+% FORMAL-LOG-MATH-BEGIN 16 inline
+x=0
+% FORMAL-LOG-MATH-END 16
+\), so it is zero. Here the last inference uses characteristic zero: a formal series with zero \(
+% FORMAL-LOG-MATH-BEGIN 17 inline
+x
+% FORMAL-LOG-MATH-END 17
+\)-derivative is independent of \(
+% FORMAL-LOG-MATH-BEGIN 18 inline
+x
+% FORMAL-LOG-MATH-END 18
+\).
+
+
+In characteristic \(
+% FORMAL-LOG-MATH-BEGIN 19 inline
+p
+% FORMAL-LOG-MATH-END 19
+\), \(
+% FORMAL-LOG-MATH-BEGIN 20 inline
+d(t^p)/dt=0
+% FORMAL-LOG-MATH-END 20
+\), and that inference loses information. There is a second issue: a logarithm with the required normalization does not exist. The coefficients with denominator divisible by \(
+% FORMAL-LOG-MATH-BEGIN 21 inline
+p
+% FORMAL-LOG-MATH-END 21
+\) signal an actual obstruction, not merely a poor formula.
+
+
+For characteristic three, the obstruction has a short proof. The threefold sum under \(
+% FORMAL-LOG-MATH-BEGIN 22 inline
+F
+% FORMAL-LOG-MATH-END 22
+\) is
+
+
+
+\ArticleDisplay{23}{
+% FORMAL-LOG-MATH-BEGIN 23 display
+[3]_F(t)=(1+t)^3-1=t^3.
+% FORMAL-LOG-MATH-END 23
+}
+
+The threefold sum under the additive law is zero. Consequently any formal-group homomorphism \(
+% FORMAL-LOG-MATH-BEGIN 24 inline
+L
+% FORMAL-LOG-MATH-END 24
+\) from the multiplicative group to the additive group satisfies
+
+
+
+\ArticleDisplay{25}{
+% FORMAL-LOG-MATH-BEGIN 25 display
+L(t^3)=3L(t)=0.
+% FORMAL-LOG-MATH-END 25
+}
+
+Substitution \(
+% FORMAL-LOG-MATH-BEGIN 26 inline
+t\mapsto t^3
+% FORMAL-LOG-MATH-END 26
+\) is injective on \(
+% FORMAL-LOG-MATH-BEGIN 27 inline
+k[[t]]
+% FORMAL-LOG-MATH-END 27
+\), so \(
+% FORMAL-LOG-MATH-BEGIN 28 inline
+L=0
+% FORMAL-LOG-MATH-END 28
+\). In particular, there is no such homomorphism with linear coefficient \(
+% FORMAL-LOG-MATH-BEGIN 29 inline
+1
+% FORMAL-LOG-MATH-END 29
+\).
+
+
+This proves nonexistence. The question that remains is more precise: how far can the desired identity be constructed, and which part of its failure cannot be changed by another coefficient? From now on, \(
+% FORMAL-LOG-MATH-BEGIN 30 inline
+\operatorname{char}k=3
+% FORMAL-LOG-MATH-END 30
+\).
+
+
+
+\section{Retaining substitution and multiplication}\label{sec:substitution-and-coproduct}\hypertarget{substitution-and-coproduct}{}
+
+Higher Taylor coefficients retain the variation hidden by the ordinary derivative. The Hasse coefficients are defined by
+
+
+\ArticleDisplay{31}{
+% FORMAL-LOG-MATH-BEGIN 31 display
+f(x+h)=\sum_{n\geq0}D^{[n]}f(x)h^n,
+\qquad
+D^{[n]}(x^m)=\binom mn x^{m-n}.
+% FORMAL-LOG-MATH-END 31
+}
+
+This definition works in every characteristic, for polynomials or formal power series. For example, \(
+% FORMAL-LOG-MATH-BEGIN 32 inline
+D^{[3]}(x^3)=1
+% FORMAL-LOG-MATH-END 32
+\), although the ordinary derivative of \(
+% FORMAL-LOG-MATH-BEGIN 33 inline
+x^3
+% FORMAL-LOG-MATH-END 33
+\) vanishes. The \href{https://tensorgami.com/notes/what-a-derivative-retains.html\#frobenius-and-artin-schreier}{Frobenius calculation in \emph{What a Derivative Retains}} explains this distinction; \href{https://tensorgami.com/notes/separated-polynomial-divisibility.html}{\emph{Divisibility of Separated Polynomials}} uses these coefficients to retain multiplicities in a fiber.
+
+
+The diagonal gives a geometric setting for these coefficients. Put \(
+% FORMAL-LOG-MATH-BEGIN 34 inline
+A=k[[t]]
+% FORMAL-LOG-MATH-END 34
+\). The completed tensor product is
+
+
+
+\ArticleDisplay{35}{
+% FORMAL-LOG-MATH-BEGIN 35 display
+A\widehat\otimes_k A=k[[x,y]].
+% FORMAL-LOG-MATH-END 35
+}
+
+The diagonal pullback \(
+% FORMAL-LOG-MATH-BEGIN 36 inline
+k[[x,y]]\to k[[t]]
+% FORMAL-LOG-MATH-END 36
+\) sends both \(
+% FORMAL-LOG-MATH-BEGIN 37 inline
+x
+% FORMAL-LOG-MATH-END 37
+\) and \(
+% FORMAL-LOG-MATH-BEGIN 38 inline
+y
+% FORMAL-LOG-MATH-END 38
+\) to \(
+% FORMAL-LOG-MATH-BEGIN 39 inline
+t
+% FORMAL-LOG-MATH-END 39
+\). Its kernel is \(
+% FORMAL-LOG-MATH-BEGIN 40 inline
+(y-x)
+% FORMAL-LOG-MATH-END 40
+\). Writing \(
+% FORMAL-LOG-MATH-BEGIN 41 inline
+h=y-x
+% FORMAL-LOG-MATH-END 41
+\), the successive quotients by powers of that ideal retain successive powers of displacement. The first quotient by \(
+% FORMAL-LOG-MATH-BEGIN 42 inline
+h^2
+% FORMAL-LOG-MATH-END 42
+\) gives the usual first-order differential; the entire completion retains every Hasse coefficient.
+
+
+Our identity asks for another compatibility as well: the coefficients must respect a group law. That law pulls functions in the other direction:
+
+
+
+\ArticleDisplay{43}{
+% FORMAL-LOG-MATH-BEGIN 43 display
+\Delta:A\longrightarrow A\widehat\otimes_k A,
+\qquad
+\Delta f=f(F(x,y)).
+% FORMAL-LOG-MATH-END 43
+}
+
+Thus the diagonal identifies two points, while \(
+% FORMAL-LOG-MATH-BEGIN 44 inline
+\Delta
+% FORMAL-LOG-MATH-END 44
+\) evaluates a function on their group product. In tensor notation,
+
+
+
+\ArticleDisplay{45}{
+% FORMAL-LOG-MATH-BEGIN 45 display
+\Delta t=t\otimes1+1\otimes t+t\otimes t.
+% FORMAL-LOG-MATH-END 45
+}
+
+For \(
+% FORMAL-LOG-MATH-BEGIN 46 inline
+g=1+t
+% FORMAL-LOG-MATH-END 46
+\), this is the simple identity
+
+
+
+\ArticleDisplay{47}{
+% FORMAL-LOG-MATH-BEGIN 47 display
+\Delta g=g\otimes g.
+% FORMAL-LOG-MATH-END 47
+}
+
+An element with constant term one satisfying this identity is called \emph{group-like}. An element \(
+% FORMAL-LOG-MATH-BEGIN 48 inline
+f
+% FORMAL-LOG-MATH-END 48
+\) satisfying
+
+
+
+\ArticleDisplay{49}{
+% FORMAL-LOG-MATH-BEGIN 49 display
+\Delta f=f\otimes1+1\otimes f
+% FORMAL-LOG-MATH-END 49
+}
+
+is called \emph{primitive}. The requested logarithm would turn this group-like coordinate into a primitive series with linear coefficient \(
+% FORMAL-LOG-MATH-BEGIN 50 inline
+1
+% FORMAL-LOG-MATH-END 50
+\).
+
+
+Associativity now has a reusable algebraic form:
+
+
+
+\ArticleDisplay{51}{
+% FORMAL-LOG-MATH-BEGIN 51 display
+(\Delta\otimes1)\Delta=(1\otimes\Delta)\Delta.
+% FORMAL-LOG-MATH-END 51
+}
+
+Both sides send \(
+% FORMAL-LOG-MATH-BEGIN 52 inline
+g
+% FORMAL-LOG-MATH-END 52
+\) to \(
+% FORMAL-LOG-MATH-BEGIN 53 inline
+g\otimes g\otimes g
+% FORMAL-LOG-MATH-END 53
+\). This coassociativity will ensure that failures of the primitive equation satisfy a compatibility equation of their own.
+
+
+The same multiplicative law already occurs in the \href{https://tensorgami.com/notes/what-a-derivative-retains.html\#spectral-ku}{line-bundle calculation in \emph{What a Derivative Retains}}. In \href{https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html\#section-12-4}{\emph{Fourier, Symmetry, and Reconstruction}, §12.4}, a logarithmic coordinate makes tensor products of unipotent monodromies additive over \(
+% FORMAL-LOG-MATH-BEGIN 54 inline
+\mathbf C
+% FORMAL-LOG-MATH-END 54
+\). Our calculation examines the obstruction to that universal coordinate change in characteristic three. It does not prohibit every logarithm calculation in a sufficiently small nilpotent quotient.
+
+
+
+\section{A complex for the compatibility conditions}\label{sec:cobar-complex}\hypertarget{cobar-complex}{}
+
+Let \(
+% FORMAL-LOG-MATH-BEGIN 55 inline
+\mathfrak m=tk[[t]]
+% FORMAL-LOG-MATH-END 55
+\), and remove the two terms forced by the identity element:
+
+
+\ArticleDisplay{56}{
+% FORMAL-LOG-MATH-BEGIN 56 display
+\overline\Delta f=\Delta f-f\otimes1-1\otimes f,
+\qquad f\in\mathfrak m.
+% FORMAL-LOG-MATH-END 56
+}
+
+The remaining series vanishes when either input is zero. It therefore lies in \(
+% FORMAL-LOG-MATH-BEGIN 57 inline
+\mathfrak m\widehat\otimes\mathfrak m
+% FORMAL-LOG-MATH-END 57
+\). Its vanishing is exactly the primitive condition.
+
+
+Define cochains by
+
+
+
+\ArticleDisplay{58}{
+% FORMAL-LOG-MATH-BEGIN 58 display
+C^0=k,
+\qquad
+C^n=\mathfrak m^{\widehat\otimes n}\quad(n\geq1).
+% FORMAL-LOG-MATH-END 58
+}
+
+Concretely, \(
+% FORMAL-LOG-MATH-BEGIN 59 inline
+C^n
+% FORMAL-LOG-MATH-END 59
+\) consists of the series in \(
+% FORMAL-LOG-MATH-BEGIN 60 inline
+k[[x_1,\ldots,x_n]]
+% FORMAL-LOG-MATH-END 60
+\) divisible by \(
+% FORMAL-LOG-MATH-BEGIN 61 inline
+x_1\cdots x_n
+% FORMAL-LOG-MATH-END 61
+\). They vanish whenever an input is the identity. Write a tensor as \(
+% FORMAL-LOG-MATH-BEGIN 62 inline
+f_1\mid\cdots\mid f_n
+% FORMAL-LOG-MATH-END 62
+\). The differential is
+
+
+
+\ArticleDisplay{63}{
+% FORMAL-LOG-MATH-BEGIN 63 display
+D(f_1\mid\cdots\mid f_n)
+=\sum_{i=1}^n(-1)^i
+f_1\mid\cdots\mid\overline\Delta f_i\mid\cdots\mid f_n,
+% FORMAL-LOG-MATH-END 63
+}
+
+with \(
+% FORMAL-LOG-MATH-BEGIN 64 inline
+D=0
+% FORMAL-LOG-MATH-END 64
+\) on \(
+% FORMAL-LOG-MATH-BEGIN 65 inline
+C^0
+% FORMAL-LOG-MATH-END 65
+\). Inserting \(
+% FORMAL-LOG-MATH-BEGIN 66 inline
+\overline\Delta f_i
+% FORMAL-LOG-MATH-END 66
+\) replaces one slot by two, so \(
+% FORMAL-LOG-MATH-BEGIN 67 inline
+D
+% FORMAL-LOG-MATH-END 67
+\) raises cohomological degree by one. This is the normalized completed cobar complex of the coproduct.
+
+
+For a one-cochain,
+
+
+
+\ArticleDisplay{68}{
+% FORMAL-LOG-MATH-BEGIN 68 display
+Df(x,y)=f(x)+f(y)-f(F(x,y)).
+% FORMAL-LOG-MATH-END 68
+}
+
+For a two-cochain,
+
+
+
+\ArticleDisplay{69}{
+% FORMAL-LOG-MATH-BEGIN 69 display
+Dh(x,y,z)
+=h(y,z)-h(F(x,y),z)+h(x,F(y,z))-h(x,y).
+% FORMAL-LOG-MATH-END 69
+}
+
+The four terms compare the two ways of grouping three inputs. Coassociativity gives \(
+% FORMAL-LOG-MATH-BEGIN 70 inline
+D^2=0
+% FORMAL-LOG-MATH-END 70
+\): when the reduced coproduct is inserted twice, disjoint insertions cancel with opposite signs, and the two insertions in a single original slot agree by coassociativity and cancel as well. Thus every defect \(
+% FORMAL-LOG-MATH-BEGIN 71 inline
+Df
+% FORMAL-LOG-MATH-END 71
+\) is automatically a two-cocycle.
+
+
+Cochains can also be concatenated. If \(
+% FORMAL-LOG-MATH-BEGIN 72 inline
+u\in C^r
+% FORMAL-LOG-MATH-END 72
+\) and \(
+% FORMAL-LOG-MATH-BEGIN 73 inline
+v\in C^s
+% FORMAL-LOG-MATH-END 73
+\), place the slots of \(
+% FORMAL-LOG-MATH-BEGIN 74 inline
+v
+% FORMAL-LOG-MATH-END 74
+\) after those of \(
+% FORMAL-LOG-MATH-BEGIN 75 inline
+u
+% FORMAL-LOG-MATH-END 75
+\). This associative product satisfies
+
+
+
+\ArticleDisplay{76}{
+% FORMAL-LOG-MATH-BEGIN 76 display
+D(uv)=D(u)v+(-1)^r uD(v).
+% FORMAL-LOG-MATH-END 76
+}
+
+It is not imposed to be graded commutative. In particular, \(
+% FORMAL-LOG-MATH-BEGIN 77 inline
+t\mid t
+% FORMAL-LOG-MATH-END 77
+\) need not vanish. The distinction between two kinds of multiplication is essential:
+
+
+
+\ArticleDisplay{78}{
+% FORMAL-LOG-MATH-BEGIN 78 display
+t^2\in C^1,
+\qquad
+t\mid t\in C^2.
+% FORMAL-LOG-MATH-END 78
+}
+
+The first squares a function in one variable; the second puts that function in two slots. Both have polynomial weight two, but their cohomological degrees differ.
+
+
+We have turned the requested identity into \(
+% FORMAL-LOG-MATH-BEGIN 79 inline
+DL=0
+% FORMAL-LOG-MATH-END 79
+\). There is still no solution with the required leading term. The filtration will identify the first stage at which that prescribed leading term prevents a solution.
+
+
+
+\section{Filtering by the order retained}\label{sec:weight-filtration}\hypertarget{weight-filtration}{}
+
+Give the tensor monomial
+
+
+\ArticleDisplay{80}{
+% FORMAL-LOG-MATH-BEGIN 80 display
+t^{i_1}\mid\cdots\mid t^{i_n}
+% FORMAL-LOG-MATH-END 80
+}
+
+weight \(
+% FORMAL-LOG-MATH-BEGIN 81 inline
+i_1+\cdots+i_n
+% FORMAL-LOG-MATH-END 81
+\), where each \(
+% FORMAL-LOG-MATH-BEGIN 82 inline
+i_j\geq1
+% FORMAL-LOG-MATH-END 82
+\). Let \(
+% FORMAL-LOG-MATH-BEGIN 83 inline
+F^sC^n
+% FORMAL-LOG-MATH-END 83
+\) consist of series whose monomials have weight at least \(
+% FORMAL-LOG-MATH-BEGIN 84 inline
+s
+% FORMAL-LOG-MATH-END 84
+\). On \(
+% FORMAL-LOG-MATH-BEGIN 85 inline
+C^0=k
+% FORMAL-LOG-MATH-END 85
+\), take \(
+% FORMAL-LOG-MATH-BEGIN 86 inline
+F^0C^0=k
+% FORMAL-LOG-MATH-END 86
+\) and \(
+% FORMAL-LOG-MATH-BEGIN 87 inline
+F^1C^0=0
+% FORMAL-LOG-MATH-END 87
+\).
+
+
+Substitution by \(
+% FORMAL-LOG-MATH-BEGIN 88 inline
+x+y+xy
+% FORMAL-LOG-MATH-END 88
+\) cannot lower total degree. Consequently
+
+
+
+\ArticleDisplay{89}{
+% FORMAL-LOG-MATH-BEGIN 89 display
+D(F^sC)\subseteq F^sC.
+% FORMAL-LOG-MATH-END 89
+}
+
+The quotient \(
+% FORMAL-LOG-MATH-BEGIN 90 inline
+C/F^{s+1}C
+% FORMAL-LOG-MATH-END 90
+\) retains weights through \(
+% FORMAL-LOG-MATH-BEGIN 91 inline
+s
+% FORMAL-LOG-MATH-END 91
+\). A series is a cocycle there when its identity holds through that order. Lifting it to the next quotient means choosing the next coefficient so that one further order also holds.
+
+
+The part of the coproduct that preserves weight is
+
+
+
+\ArticleDisplay{92}{
+% FORMAL-LOG-MATH-BEGIN 92 display
+\Delta_0t=t\otimes1+1\otimes t.
+% FORMAL-LOG-MATH-END 92
+}
+
+Thus the associated graded complex uses the additive group law. The term \(
+% FORMAL-LOG-MATH-BEGIN 93 inline
+t\otimes t
+% FORMAL-LOG-MATH-END 93
+\), which distinguished multiplication from addition, raises weight. Let \(
+% FORMAL-LOG-MATH-BEGIN 94 inline
+D_j
+% FORMAL-LOG-MATH-END 94
+\) denote the component of \(
+% FORMAL-LOG-MATH-BEGIN 95 inline
+D
+% FORMAL-LOG-MATH-END 95
+\) that raises weight by \(
+% FORMAL-LOG-MATH-BEGIN 96 inline
+j
+% FORMAL-LOG-MATH-END 96
+\), so
+
+
+
+\ArticleDisplay{97}{
+% FORMAL-LOG-MATH-BEGIN 97 display
+D=D_0+D_1+D_2+\cdots.
+% FORMAL-LOG-MATH-END 97
+}
+
+Here \(
+% FORMAL-LOG-MATH-BEGIN 98 inline
+D_0
+% FORMAL-LOG-MATH-END 98
+\) is the additive cobar differential. This decomposition uses the chosen coordinate and its homogeneous monomials; the filtration itself is the sequence of order cutoffs just defined.
+
+
+Three gradings or indices now have separate roles. Cohomological degree counts input slots. Weight counts powers of the formal coordinates. The index of a spectral-sequence differential will measure how far the first remaining defect raises weight.
+
+
+Only weights at most four are needed below. We may therefore do the entire calculation in the finite complex \(
+% FORMAL-LOG-MATH-BEGIN 99 inline
+C/F^5C
+% FORMAL-LOG-MATH-END 99
+\). It is finite-dimensional: a nonzero normalized tensor of weight below five has at most four slots. This quotient truncates the whole complex by total weight. It is not asserted to be the cobar complex of \(
+% FORMAL-LOG-MATH-BEGIN 100 inline
+k[[t]]/(t^5)
+% FORMAL-LOG-MATH-END 100
+\); that ideal need not define a quotient compatible with the coproduct.
+
+
+
+\section{The first correction and the cubic residual}\label{sec:first-correction}\hypertarget{first-correction}{}
+
+The linear term has defect
+
+
+\ArticleDisplay{101}{
+% FORMAL-LOG-MATH-BEGIN 101 display
+Dt=-t\mid t.
+% FORMAL-LOG-MATH-END 101
+}
+
+It is primitive in the associated graded, but fails at weight two. To see whether a quadratic correction can remove the failure, calculate \(
+% FORMAL-LOG-MATH-BEGIN 102 inline
+D(t^2)
+% FORMAL-LOG-MATH-END 102
+\). This is the only coproduct multiplication we need to perform explicitly.
+
+
+Put \(
+% FORMAL-LOG-MATH-BEGIN 103 inline
+u=t\otimes1
+% FORMAL-LOG-MATH-END 103
+\), \(
+% FORMAL-LOG-MATH-BEGIN 104 inline
+v=1\otimes t
+% FORMAL-LOG-MATH-END 104
+\), and \(
+% FORMAL-LOG-MATH-BEGIN 105 inline
+r=t\otimes t
+% FORMAL-LOG-MATH-END 105
+\). Multiplicativity of \(
+% FORMAL-LOG-MATH-BEGIN 106 inline
+\Delta
+% FORMAL-LOG-MATH-END 106
+\) gives
+
+
+
+\ArticleDisplay{107}{
+% FORMAL-LOG-MATH-BEGIN 107 display
+\overline\Delta(t^2)
+=(u+v+r)^2-u^2-v^2
+=2uv+2(u+v)r+r^2.
+% FORMAL-LOG-MATH-END 107
+}
+
+Since \(
+% FORMAL-LOG-MATH-BEGIN 108 inline
+-2=1
+% FORMAL-LOG-MATH-END 108
+\) in \(
+% FORMAL-LOG-MATH-BEGIN 109 inline
+k
+% FORMAL-LOG-MATH-END 109
+\), taking its negative gives
+
+
+
+\ArticleDisplay{110}{
+% FORMAL-LOG-MATH-BEGIN 110 display
+D(t^2)
+=t\mid t+t\mid t^2+t^2\mid t-t^2\mid t^2.
+% FORMAL-LOG-MATH-END 110
+}
+
+\Needspace{6\baselineskip}\begin{samepage}
+In particular, \(
+% FORMAL-LOG-MATH-BEGIN 111 inline
+D_0(t^2)=t\mid t
+% FORMAL-LOG-MATH-END 111
+\). Adding \(
+% FORMAL-LOG-MATH-BEGIN 112 inline
+t^2
+% FORMAL-LOG-MATH-END 112
+\) therefore cancels the first defect:
+
+
+
+\ArticleDisplay{113}{
+% FORMAL-LOG-MATH-BEGIN 113 display
+\boxed{
+D(t+t^2)=c-v,
+\qquad
+c=t\mid t^2+t^2\mid t,
+\quad
+v=t^2\mid t^2.
+}
+% FORMAL-LOG-MATH-END 113
+}
+\end{samepage}
+
+The two remaining terms have different weights: \(
+% FORMAL-LOG-MATH-BEGIN 114 inline
+c
+% FORMAL-LOG-MATH-END 114
+\) has weight three and \(
+% FORMAL-LOG-MATH-BEGIN 115 inline
+v
+% FORMAL-LOG-MATH-END 115
+\) has weight four. The series \(
+% FORMAL-LOG-MATH-BEGIN 116 inline
+t+t^2
+% FORMAL-LOG-MATH-END 116
+\) satisfies the logarithm identity through total degree two. The question is whether a cubic correction can remove \(
+% FORMAL-LOG-MATH-BEGIN 117 inline
+c
+% FORMAL-LOG-MATH-END 117
+\).
+
+
+Consider the weight-three part of the additive cobar complex:
+
+
+
+\ArticleDisplay{118}{
+% FORMAL-LOG-MATH-BEGIN 118 display
+k\,t^3
+\xrightarrow{\ D_0\ }
+k\{t\mid t^2,\ t^2\mid t\}
+\xrightarrow{\ D_0\ }
+k\,(t\mid t\mid t).
+% FORMAL-LOG-MATH-END 118
+}
+
+The three terms lie in cohomological degrees one, two, and three. Frobenius gives \(
+% FORMAL-LOG-MATH-BEGIN 119 inline
+D_0(t^3)=0
+% FORMAL-LOG-MATH-END 119
+\). The graded product rule and \(
+% FORMAL-LOG-MATH-BEGIN 120 inline
+D_0(t^2)=t\mid t
+% FORMAL-LOG-MATH-END 120
+\) give
+
+
+
+\ArticleDisplay{121}{
+% FORMAL-LOG-MATH-BEGIN 121 display
+D_0(t\mid t^2)=-t\mid t\mid t,
+\qquad
+D_0(t^2\mid t)=t\mid t\mid t.
+% FORMAL-LOG-MATH-END 121
+}
+
+The kernel in degree two is precisely \(
+% FORMAL-LOG-MATH-BEGIN 122 inline
+k\,c
+% FORMAL-LOG-MATH-END 122
+\), while the image from degree one is zero. Therefore
+
+
+
+\ArticleDisplay{123}{
+% FORMAL-LOG-MATH-BEGIN 123 display
+H^2(\operatorname{gr}_F^3 C)=k\cdot[c],
+\qquad [c]\ne0.
+% FORMAL-LOG-MATH-END 123
+}
+
+A cubic correction is a scalar multiple of \(
+% FORMAL-LOG-MATH-BEGIN 124 inline
+t^3
+% FORMAL-LOG-MATH-END 124
+\). Its weight-three defect is zero, so it cannot change \(
+% FORMAL-LOG-MATH-BEGIN 125 inline
+c
+% FORMAL-LOG-MATH-END 125
+\). Terms of higher weight cannot change a cubic defect either. The attempted logarithm has reached its first unrepairable order.
+
+
+In coordinates,
+
+
+
+\ArticleDisplay{126}{
+% FORMAL-LOG-MATH-BEGIN 126 display
+c(x,y)=xy^2+x^2y,
+\qquad
+D(t+t^2)(x,y)=xy^2+x^2y-x^2y^2.
+% FORMAL-LOG-MATH-END 126
+}
+
+The obstruction is the class of the leading term in the weight-three complex. The full defect is a coboundary—it is \(
+% FORMAL-LOG-MATH-BEGIN 127 inline
+D(t+t^2)
+% FORMAL-LOG-MATH-END 127
+\). There is no contradiction: the lifting problem prescribes a leading term, and the relevant boundaries are those available from corrections at the next weight.
+
+
+
+\section{The nonzero second differential}\label{sec:second-differential}\hypertarget{second-differential}{}
+
+We can now identify the calculation as a spectral-sequence differential, including its target page. Use the convention
+
+
+\ArticleDisplay{128}{
+% FORMAL-LOG-MATH-BEGIN 128 display
+E_0^{s,q}=\operatorname{gr}_F^s C^{s+q},
+\qquad
+E_1^{s,q}=H^{s+q}(\operatorname{gr}_F^s C,D_0).
+% FORMAL-LOG-MATH-END 128
+}
+
+The differential has bidegree
+
+
+
+\ArticleDisplay{129}{
+% FORMAL-LOG-MATH-BEGIN 129 display
+d_r:E_r^{s,q}\longrightarrow E_r^{s+r,q-r+1}.
+% FORMAL-LOG-MATH-END 129
+}
+
+It raises total cohomological degree by one and filtration degree by \(
+% FORMAL-LOG-MATH-BEGIN 130 inline
+r
+% FORMAL-LOG-MATH-END 130
+\). A representative whose lower-weight defects have been removed supplies its next differential by taking the leading remaining defect.\hypertarget{citation-filtered-complex-1}{}\nobreak\hspace{.08em}\hyperlink{note-filtered-complex}{\textsuperscript{1}}
+
+
+Each next page is the cohomology of the preceding one: \(
+% FORMAL-LOG-MATH-BEGIN 131 inline
+E_{r+1}=H(E_r,d_r)
+% FORMAL-LOG-MATH-END 131
+\).
+
+
+The one-cochain \(
+% FORMAL-LOG-MATH-BEGIN 132 inline
+t
+% FORMAL-LOG-MATH-END 132
+\) gives a class in \(
+% FORMAL-LOG-MATH-BEGIN 133 inline
+E_1^{1,0}
+% FORMAL-LOG-MATH-END 133
+\). Its first possible differential is represented by
+
+
+
+\ArticleDisplay{134}{
+% FORMAL-LOG-MATH-BEGIN 134 display
+D_1t=-t\mid t=-D_0(t^2).
+% FORMAL-LOG-MATH-END 134
+}
+
+Hence \(
+% FORMAL-LOG-MATH-BEGIN 135 inline
+d_1[t]=0
+% FORMAL-LOG-MATH-END 135
+\). The explicit nullhomotopy is the correction \(
+% FORMAL-LOG-MATH-BEGIN 136 inline
+t^2
+% FORMAL-LOG-MATH-END 136
+\), and a representative appropriate to the next page is \(
+% FORMAL-LOG-MATH-BEGIN 137 inline
+t+t^2
+% FORMAL-LOG-MATH-END 137
+\). Its weight-three defect is \(
+% FORMAL-LOG-MATH-BEGIN 138 inline
+c
+% FORMAL-LOG-MATH-END 138
+\), so the proposed second differential is
+
+
+
+\ArticleDisplay{139}{
+% FORMAL-LOG-MATH-BEGIN 139 display
+d_2[t]=[c].
+% FORMAL-LOG-MATH-END 139
+}
+
+We must check that \(
+% FORMAL-LOG-MATH-BEGIN 140 inline
+[c]
+% FORMAL-LOG-MATH-END 140
+\) remains nonzero on \(
+% FORMAL-LOG-MATH-BEGIN 141 inline
+E_2
+% FORMAL-LOG-MATH-END 141
+\), rather than only on \(
+% FORMAL-LOG-MATH-BEGIN 142 inline
+E_1
+% FORMAL-LOG-MATH-END 142
+\). There are two checks.
+
+
+First, no \(
+% FORMAL-LOG-MATH-BEGIN 143 inline
+d_1
+% FORMAL-LOG-MATH-END 143
+\) can hit it. The incoming group is
+
+
+
+\ArticleDisplay{144}{
+% FORMAL-LOG-MATH-BEGIN 144 display
+E_1^{2,-1}=H^1(\operatorname{gr}_F^2 C)=0,
+% FORMAL-LOG-MATH-END 144
+}
+
+because the weight-two complex is the isomorphism
+
+
+
+\ArticleDisplay{145}{
+% FORMAL-LOG-MATH-BEGIN 145 display
+k\,t^2\xrightarrow{\ D_0\ }k\,(t\mid t).
+% FORMAL-LOG-MATH-END 145
+}
+
+Second, its outgoing \(
+% FORMAL-LOG-MATH-BEGIN 146 inline
+d_1
+% FORMAL-LOG-MATH-END 146
+\) vanishes. Here the identity \(
+% FORMAL-LOG-MATH-BEGIN 147 inline
+D^2=0
+% FORMAL-LOG-MATH-END 147
+\) performs useful work. From \(
+% FORMAL-LOG-MATH-BEGIN 148 inline
+D(t+t^2)=c-v
+% FORMAL-LOG-MATH-END 148
+\), we obtain
+
+
+
+\ArticleDisplay{149}{
+% FORMAL-LOG-MATH-BEGIN 149 display
+Dc=Dv.
+% FORMAL-LOG-MATH-END 149
+}
+
+Taking the weight-four part gives
+
+
+
+\ArticleDisplay{150}{
+% FORMAL-LOG-MATH-BEGIN 150 display
+D_1c=D_0v.
+% FORMAL-LOG-MATH-END 150
+}
+
+The right side is explicitly
+
+
+
+\ArticleDisplay{151}{
+% FORMAL-LOG-MATH-BEGIN 151 display
+D_0(t^2\mid t^2)
+=t\mid t\mid t^2-t^2\mid t\mid t.
+% FORMAL-LOG-MATH-END 151
+}
+
+Thus the first differential out of \(
+% FORMAL-LOG-MATH-BEGIN 152 inline
+[c]
+% FORMAL-LOG-MATH-END 152
+\) is a boundary. Its target group is nonzero; it is this displayed boundary that makes \(
+% FORMAL-LOG-MATH-BEGIN 153 inline
+[c]
+% FORMAL-LOG-MATH-END 153
+\) survive.\hypertarget{citation-outgoing-target-1}{}\nobreak\hspace{.08em}\hyperlink{note-outgoing-target}{\textsuperscript{2}} Since no incoming differential kills it, \(
+% FORMAL-LOG-MATH-BEGIN 154 inline
+E_2^{3,-1}=k\cdot[c]
+% FORMAL-LOG-MATH-END 154
+\).
+
+
+\Needspace{6\baselineskip}\begin{samepage}
+The source also survives as \(
+% FORMAL-LOG-MATH-BEGIN 155 inline
+E_2^{1,0}=k\cdot[t]
+% FORMAL-LOG-MATH-END 155
+\): its only possible incoming \(
+% FORMAL-LOG-MATH-BEGIN 156 inline
+d_1
+% FORMAL-LOG-MATH-END 156
+\) comes from constants, whose differential is zero. We have proved
+
+
+
+\ArticleDisplay{157}{
+% FORMAL-LOG-MATH-BEGIN 157 display
+\boxed{
+d_2:E_2^{1,0}\longrightarrow E_2^{3,-1},
+\qquad
+[t]\longmapsto[t\mid t^2+t^2\mid t],
+\qquad d_2\ne0.
+}
+% FORMAL-LOG-MATH-END 157
+}
+\end{samepage}
+
+Both spaces are one-dimensional, so this map is an isomorphism. The class with linear term \(
+% FORMAL-LOG-MATH-BEGIN 158 inline
+t
+% FORMAL-LOG-MATH-END 158
+\) disappears on the next page. It cannot arise from a genuine primitive series with that leading term.
+
+
+The index two measures the increase from weight one to weight three. It does not mean that the residual is a quadratic polynomial, or that it lies in cohomological degree three. The residual is cubic, and it is a two-cochain. Keeping these roles separate makes the page number intelligible.
+
+
+This also clarifies the use of \(
+% FORMAL-LOG-MATH-BEGIN 159 inline
+c
+% FORMAL-LOG-MATH-END 159
+\). It is a cocycle for \(
+% FORMAL-LOG-MATH-BEGIN 160 inline
+D_0
+% FORMAL-LOG-MATH-END 160
+\), and it represents an \(
+% FORMAL-LOG-MATH-BEGIN 161 inline
+E_2
+% FORMAL-LOG-MATH-END 161
+\) class. It is not a cocycle for the full multiplicative differential: \(
+% FORMAL-LOG-MATH-BEGIN 162 inline
+Dc=Dv
+% FORMAL-LOG-MATH-END 162
+\). The filtered construction remembers precisely the correction needed to interpret its leading term.
+
+
+
+\section{The tower behind the pages}\label{sec:lifting-tower}\hypertarget{lifting-tower}{}
+
+Let \(
+% FORMAL-LOG-MATH-BEGIN 163 inline
+K_s=C/F^sC
+% FORMAL-LOG-MATH-END 163
+\). Successive truncations fit into short exact sequences of complexes
+
+
+\ArticleDisplay{164}{
+% FORMAL-LOG-MATH-BEGIN 164 display
+0\longrightarrow\operatorname{gr}_F^s C
+\longrightarrow K_{s+1}
+\longrightarrow K_s
+\longrightarrow0.
+% FORMAL-LOG-MATH-END 164
+}
+
+They give exact triangles in the derived category of \(
+% FORMAL-LOG-MATH-BEGIN 165 inline
+k
+% FORMAL-LOG-MATH-END 165
+\)-vector spaces,
+
+
+
+\ArticleDisplay{166}{
+% FORMAL-LOG-MATH-BEGIN 166 display
+\operatorname{gr}_F^s C
+\longrightarrow K_{s+1}
+\longrightarrow K_s
+\longrightarrow\operatorname{gr}_F^s C[1],
+% FORMAL-LOG-MATH-END 166
+}
+
+and connecting maps
+
+
+
+\ArticleDisplay{167}{
+% FORMAL-LOG-MATH-BEGIN 167 display
+\partial_s:H^1(K_s)\longrightarrow
+H^2(\operatorname{gr}_F^s C).
+% FORMAL-LOG-MATH-END 167
+}
+
+To compute \(
+% FORMAL-LOG-MATH-BEGIN 168 inline
+\partial_s
+% FORMAL-LOG-MATH-END 168
+\), choose a representative lift to \(
+% FORMAL-LOG-MATH-BEGIN 169 inline
+K_{s+1}
+% FORMAL-LOG-MATH-END 169
+\) and apply \(
+% FORMAL-LOG-MATH-BEGIN 170 inline
+D
+% FORMAL-LOG-MATH-END 170
+\). Its differential lies in the kernel, which is the new weight layer. Another lift differs by a cochain in that layer, so its differential changes by a \(
+% FORMAL-LOG-MATH-BEGIN 171 inline
+D_0
+% FORMAL-LOG-MATH-END 171
+\)-boundary. This proves that the obstruction class is independent of the chosen lift. Its vanishing is equivalent to the existence of a correction making the lift a cocycle.
+
+
+Our calculation follows two consecutive stages:
+
+
+
+\begin{center}\begingroup\small\setlength{\tabcolsep}{5pt}\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Partial solution} & \textbf{Next residual} & \textbf{Obstruction class} & \textbf{Result} \\
+\midrule
+\(
+% FORMAL-LOG-MATH-BEGIN 172 inline
+t
+% FORMAL-LOG-MATH-END 172
+\) in \(
+% FORMAL-LOG-MATH-BEGIN 173 inline
+K_2
+% FORMAL-LOG-MATH-END 173
+\) & \(
+% FORMAL-LOG-MATH-BEGIN 174 inline
+-t\mid t
+% FORMAL-LOG-MATH-END 174
+\) & Zero in \(
+% FORMAL-LOG-MATH-BEGIN 175 inline
+H^2(\operatorname{gr}^2 C)
+% FORMAL-LOG-MATH-END 175
+\) & Correct by \(
+% FORMAL-LOG-MATH-BEGIN 176 inline
+t^2
+% FORMAL-LOG-MATH-END 176
+\) and lift to \(
+% FORMAL-LOG-MATH-BEGIN 177 inline
+K_3
+% FORMAL-LOG-MATH-END 177
+\) \\
+\(
+% FORMAL-LOG-MATH-BEGIN 178 inline
+t+t^2
+% FORMAL-LOG-MATH-END 178
+\) in \(
+% FORMAL-LOG-MATH-BEGIN 179 inline
+K_3
+% FORMAL-LOG-MATH-END 179
+\) & \(
+% FORMAL-LOG-MATH-BEGIN 180 inline
+c
+% FORMAL-LOG-MATH-END 180
+\) & Nonzero in \(
+% FORMAL-LOG-MATH-BEGIN 181 inline
+H^2(\operatorname{gr}^3 C)
+% FORMAL-LOG-MATH-END 181
+\) & No lift to \(
+% FORMAL-LOG-MATH-BEGIN 182 inline
+K_4
+% FORMAL-LOG-MATH-END 182
+\) \\
+\bottomrule
+\end{tabularx}\endgroup\end{center}
+
+The spectral sequence organizes such successive lift-and-correct calculations, accounting for the ambiguity in earlier choices. In this example the quadratic correction is unique, and the second obstruction is the nonzero \(
+% FORMAL-LOG-MATH-BEGIN 183 inline
+d_2
+% FORMAL-LOG-MATH-END 183
+\) just computed. The weight-four calculation verifies that its value is defined on the second page.
+
+
+There is a direct comparison with the \href{https://tensorgami.com/notes/what-a-boundary-map-can-prove.html\#removing-an-edge-produces-an-obstruction-map}{edge-removal obstruction in \emph{What a Boundary Map Can Prove}}. There a connecting map measures whether local data extend across an edge. Here successive connecting maps measure whether an identity extends by one polynomial order. The complexes differ, but the operation is the same: lift a representative, take its differential, and identify the resulting class modulo changes of lift.
+
+
+Formal-group obstruction calculations have long used degree filtrations in this way. Rezk's account of the Lubin–Tate theorem constructs a complex of symmetric cocycles, filters by polynomial degree, and calculates the resulting spectral sequence. His two-term symmetric-cocycle complex differs from the full normalized cobar complex used here; it provides a close setting for the method and its wider role.\hypertarget{citation-rezk-1}{}\nobreak\hspace{.08em}\hyperlink{note-rezk}{\textsuperscript{3}}
+
+
+
+\section{The obstruction becomes an addition law}\label{sec:witt-extension}\hypertarget{witt-extension}{}
+
+The same cubic class has a constructive use. Its additive cocycle identity is
+
+
+\ArticleDisplay{184}{
+% FORMAL-LOG-MATH-BEGIN 184 display
+c(x,y)+c(x+y,z)=c(y,z)+c(x,y+z).
+% FORMAL-LOG-MATH-END 184
+}
+
+This is exactly \(
+% FORMAL-LOG-MATH-BEGIN 185 inline
+D_0c=0
+% FORMAL-LOG-MATH-END 185
+\), already proved in the weight-three complex. Define an operation on pairs by
+
+
+
+\ArticleDisplay{186}{
+% FORMAL-LOG-MATH-BEGIN 186 display
+(x,u)+(y,v)
+=\bigl(x+y,\ u+v-c(x,y)\bigr).
+% FORMAL-LOG-MATH-END 186
+}
+
+The two bracketings of a threefold sum have equal first coordinates. Their second coordinates differ by the two sides of the cocycle identity. They are therefore equal. Symmetry of \(
+% FORMAL-LOG-MATH-BEGIN 187 inline
+c
+% FORMAL-LOG-MATH-END 187
+\) proves commutativity, \(
+% FORMAL-LOG-MATH-BEGIN 188 inline
+c(x,0)=0
+% FORMAL-LOG-MATH-END 188
+\) gives the identity \(
+% FORMAL-LOG-MATH-BEGIN 189 inline
+(0,0)
+% FORMAL-LOG-MATH-END 189
+\), and \(
+% FORMAL-LOG-MATH-BEGIN 190 inline
+c(x,-x)=0
+% FORMAL-LOG-MATH-END 190
+\) gives inverse \(
+% FORMAL-LOG-MATH-BEGIN 191 inline
+(-x,-u)
+% FORMAL-LOG-MATH-END 191
+\).
+
+
+This is the addition law of length-two, \(
+% FORMAL-LOG-MATH-BEGIN 192 inline
+3
+% FORMAL-LOG-MATH-END 192
+\)-typical Witt vectors over \(
+% FORMAL-LOG-MATH-BEGIN 193 inline
+k
+% FORMAL-LOG-MATH-END 193
+\). To see the coefficient directly, first work over the integers with the two ghost polynomials
+
+
+
+\ArticleDisplay{194}{
+% FORMAL-LOG-MATH-BEGIN 194 display
+w_0(X,U)=X,
+\qquad
+w_1(X,U)=X^3+3U.
+% FORMAL-LOG-MATH-END 194
+}
+
+Requiring both ghost coordinates to add forces the second coordinate of a sum to be
+
+
+
+\ArticleDisplay{195}{
+% FORMAL-LOG-MATH-BEGIN 195 display
+U+V-\frac{(X+Y)^3-X^3-Y^3}{3}
+=U+V-X^2Y-XY^2.
+% FORMAL-LOG-MATH-END 195
+}
+
+The quotient is an integer polynomial. Reducing it modulo three gives the displayed addition law; no division by three is performed in \(
+% FORMAL-LOG-MATH-BEGIN 196 inline
+k
+% FORMAL-LOG-MATH-END 196
+\).\hypertarget{citation-witt-1}{}\nobreak\hspace{.08em}\hyperlink{note-witt}{\textsuperscript{4}}
+
+
+The extension retains information absent from the two separate additive coordinates. Its threefold sum is
+
+
+
+\ArticleDisplay{197}{
+% FORMAL-LOG-MATH-BEGIN 197 display
+[3](x,u)=(0,x^3).
+% FORMAL-LOG-MATH-END 197
+}
+
+Indeed, \(
+% FORMAL-LOG-MATH-BEGIN 198 inline
+c(x,x)=2x^3=-x^3
+% FORMAL-LOG-MATH-END 198
+\) and \(
+% FORMAL-LOG-MATH-BEGIN 199 inline
+c(2x,x)=0
+% FORMAL-LOG-MATH-END 199
+\), so the second coordinate of three copies is \(
+% FORMAL-LOG-MATH-BEGIN 200 inline
+3u-c(x,x)-c(2x,x)=x^3
+% FORMAL-LOG-MATH-END 200
+\). Componentwise addition on \(
+% FORMAL-LOG-MATH-BEGIN 201 inline
+\mathbf G_a^2
+% FORMAL-LOG-MATH-END 201
+\) would have zero three-series. The cubic correction changes the group structure even though the underlying space remains the affine plane.
+
+
+The projection \(
+% FORMAL-LOG-MATH-BEGIN 202 inline
+(x,u)\mapsto x
+% FORMAL-LOG-MATH-END 202
+\) is a homomorphism to \(
+% FORMAL-LOG-MATH-BEGIN 203 inline
+\mathbf G_a
+% FORMAL-LOG-MATH-END 203
+\), with kernel the additive second coordinate. Thus \(
+% FORMAL-LOG-MATH-BEGIN 204 inline
+c
+% FORMAL-LOG-MATH-END 204
+\) supplies the data of an extension. This construction gives a different group law; it does not produce the scalar logarithm ruled out in section 1. A polynomial that obstructed one compatibility problem now enforces associativity in another.
+
+
+
+\section{What the filtered object retains}\label{sec:retained-structure}\hypertarget{retained-structure}{}
+
+The additive and multiplicative formal groups both have underlying formal disk \(
+% FORMAL-LOG-MATH-BEGIN 205 inline
+\operatorname{Spf}k[[t]]
+% FORMAL-LOG-MATH-END 205
+\). Their continuous cotangent modules are both \(
+% FORMAL-LOG-MATH-BEGIN 206 inline
+k[[t]]\,dt
+% FORMAL-LOG-MATH-END 206
+\), and their tangent spaces at the identity are one-dimensional. That information cannot decide whether a normalized logarithm exists. The difference lies in how two formal points are combined.
+
+Keeping the coproduct retains that combination. Passing to the associated graded makes its lowest-order law additive. Keeping the filtered complex as well retains the interaction between successive orders. Its differential records the original identity, its boundaries record available corrections, and its later spectral-sequence differentials record failures that remain after earlier corrections have been made.
+
+
+In the derived category, the exact triangles specify the obstruction targets and prove independence from choices. The finite tower may equivalently be regarded as a tower of \(
+% FORMAL-LOG-MATH-BEGIN 207 inline
+Hk
+% FORMAL-LOG-MATH-END 207
+\)-module spectra, where its connecting maps become connecting maps of spectra. That reformulation does not introduce additional information into this calculation. Further spectral questions require further structured input; the completed Hopf algebra has supplied the nonlinear law throughout.
+
+
+The distinction also explains why the two remedies for a vanishing derivative have different jobs. Higher Taylor coefficients recover variation that first order cannot see. Cohomology determines whether those coefficients can be chosen compatibly with a specified law. Better coefficient detection cannot make an impossible logarithm exist. It can expose its obstruction, locate the first order where it appears, and show how that same obstruction participates in another construction.
+
+
+
+\clearpage\section*{Notes and sources}\hypertarget{notes-and-sources}{}\addcontentsline{toc}{section}{Notes and sources}
+
+\begingroup\small
+\begin{enumerate}[leftmargin=1.8em,label=\arabic*.,itemsep=.8em]
+\item \hypertarget{note-filtered-complex}{}The Stacks Project, \href{https://stacks.math.columbia.edu/tag/012K}{Spectral sequences: filtered complexes}, especially Lemma 12.24.2 for \(
+% FORMAL-LOG-MATH-BEGIN 208 inline
+E_0^{s,q}=\operatorname{gr}^s C^{s+q}
+% FORMAL-LOG-MATH-END 208
+\), the bidegree of \(
+% FORMAL-LOG-MATH-BEGIN 209 inline
+d_r
+% FORMAL-LOG-MATH-END 209
+\), and the representative formula; Lemma 12.24.3 identifies the first differential with a connecting map. The explicit weight-two through weight-four calculations above establish the claimed second differential without an infinite-convergence assertion. \hyperlink{citation-filtered-complex-1}{\textsuperscript{\(\hookleftarrow\)}}
+\item \hypertarget{note-outgoing-target}{}The target is \(
+% FORMAL-LOG-MATH-BEGIN 210 inline
+H^3(\operatorname{gr}_F^4C)
+% FORMAL-LOG-MATH-END 210
+\). Set \(
+% FORMAL-LOG-MATH-BEGIN 211 inline
+u=t^2\mid t\mid t
+% FORMAL-LOG-MATH-END 211
+\), \(
+% FORMAL-LOG-MATH-BEGIN 212 inline
+w=t\mid t^2\mid t
+% FORMAL-LOG-MATH-END 212
+\), and \(
+% FORMAL-LOG-MATH-BEGIN 213 inline
+z=t\mid t\mid t^2
+% FORMAL-LOG-MATH-END 213
+\). Their \(
+% FORMAL-LOG-MATH-BEGIN 214 inline
+D_0
+% FORMAL-LOG-MATH-END 214
+\)-images are respectively \(
+% FORMAL-LOG-MATH-BEGIN 215 inline
+t\mid t\mid t\mid t
+% FORMAL-LOG-MATH-END 215
+\), its negative, and itself, so the kernel is two-dimensional. In weight four, the degree-two basis is \(
+% FORMAL-LOG-MATH-BEGIN 216 inline
+t\mid t^3,t^2\mid t^2,t^3\mid t
+% FORMAL-LOG-MATH-END 216
+\); its images are \(
+% FORMAL-LOG-MATH-BEGIN 217 inline
+0,z-u,0
+% FORMAL-LOG-MATH-END 217
+\). The quotient is therefore one-dimensional, represented for example by \(
+% FORMAL-LOG-MATH-BEGIN 218 inline
+u+w
+% FORMAL-LOG-MATH-END 218
+\). \hyperlink{citation-outgoing-target-1}{\textsuperscript{\(\hookleftarrow\)}}
+\item \hypertarget{note-rezk}{}Charles Rezk, \href{https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/hopkins-miller-thm.pdf}{Notes on the Hopkins–Miller Theorem}, §§5.1–5.8, printed pp. 7–10. The discussion constructs the formal-group symmetric-cocycle complex, filters it by polynomial degree, and computes its associated spectral sequence. The full normalized cobar complex and its particular characteristic-three calculation are presented directly here. \hyperlink{citation-rezk-1}{\textsuperscript{\(\hookleftarrow\)}}
+\item \hypertarget{note-witt}{}Lars Hesselholt, \href{https://math.mit.edu/~larsh/papers/s03/wittsurvey.pdf}{Lecture notes on Witt vectors}, opening construction of the Witt polynomials and their addition operations. For the first two \(
+% FORMAL-LOG-MATH-BEGIN 219 inline
+3
+% FORMAL-LOG-MATH-END 219
+\)-typical coordinates, the integer ghost-coordinate calculation in section 8 gives the required polynomial explicitly; the cocycle identity independently proves its associativity after reduction. \hyperlink{citation-witt-1}{\textsuperscript{\(\hookleftarrow\)}}
+\end{enumerate}
+\endgroup
+
+
+\end{document}

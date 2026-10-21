@@ -408,6 +408,8 @@ For \(n=1\), this is the original Leibniz rule. At higher orders it retains the 
 
 A test algebra \(k[h]/(h^{N+1})\) first retains the Frobenius change at \(N=p\). Higher jets preserve higher powers of the displacement. Derived cotangent information preserves homological information about infinitesimal constraints; it does not supply a missing \(p\)th-order Taylor coefficient. These are two directions in which the first-order picture can be enriched.
 
+A companion, [*When a Formal Logarithm Fails*](https://tensorgami.com/notes/when-a-formal-logarithm-fails.html), follows the attempted conversion of the multiplicative law into addition in characteristic three. A quadratic correction removes the first residual; a cubic cohomology class obstructs the next lift.
+
 <!-- figure:frobenius -->
 
 ## 8 The cotangent complex retains the equations {#cotangent-complex}

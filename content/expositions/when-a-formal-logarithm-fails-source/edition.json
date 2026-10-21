@@ -1,0 +1,17 @@
+{
+  "title": "When a Formal Logarithm Fails",
+  "edition": "October 2026",
+  "manuscript": "/assets/expositions/when-a-formal-logarithm-fails.md",
+  "manuscript_sha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91",
+  "html": "content/expositions/when-a-formal-logarithm-fails.html",
+  "html_sha256": "5cfba44e0930f179f3e7f234a1e29327aa83ffc4c0ea84fe3842d32c3c3e3cf5",
+  "tex": "/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+  "tex_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
+  "pdf": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+  "pdf_sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
+  "pages": 12,
+  "math_expressions": 220,
+  "display_formulas": 51,
+  "source_notes": 4,
+  "sections": 9
+}

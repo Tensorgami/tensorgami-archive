@@ -1,8 +1,8 @@
 {
-  "edition": "2026-10-20.1",
+  "edition": "2026-10-21.1",
   "counts": {
     "currentEssays": 6,
-    "currentExpositions": 12,
+    "currentExpositions": 13,
     "problemSets": 1,
     "archivedEssays": 2,
     "archivedExpositions": 1,
@@ -148,7 +148,7 @@
       "status": "current public work",
       "declaredDates": {
         "edition": "Revised and expanded, October 2026",
-        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree."
+        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions."
       },
       "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
       "publicFiles": [
@@ -204,7 +204,7 @@
       "status": "current public work",
       "declaredDates": {
         "edition": "October 2026",
-        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition.",
+        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions.",
         "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/"
       },
       "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
@@ -224,6 +224,40 @@
         "content/expositions/what-a-derivative-retains.html",
         "assets/expositions/what-a-derivative-retains.md",
         "content/expositions/what-a-derivative-retains-pdf/"
+      ]
+    },
+    {
+      "type": "exposition",
+      "slug": "when-a-formal-logarithm-fails",
+      "title": "When a Formal Logarithm Fails",
+      "page": "/notes/when-a-formal-logarithm-fails.html",
+      "status": "current public work",
+      "declaredDates": {
+        "edition": "October 2026",
+        "revision": "First published October 20, 2026. The web, PDF, Markdown and TeX editions contain the same argument."
+      },
+      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
+      "publicFiles": [
+        {
+          "kind": "pdf",
+          "path": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+          "existsInDist": true
+        },
+        {
+          "kind": "tex",
+          "path": "/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+          "existsInDist": true
+        },
+        {
+          "kind": "manuscript",
+          "path": "/assets/expositions/when-a-formal-logarithm-fails.md",
+          "existsInDist": true
+        }
+      ],
+      "sourceFiles": [
+        "content/expositions/when-a-formal-logarithm-fails.html",
+        "assets/expositions/when-a-formal-logarithm-fails.md",
+        "content/expositions/when-a-formal-logarithm-fails-source/"
       ]
     },
     {
