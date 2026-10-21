@@ -1,6 +1,6 @@
 {
-  "edition": "2026-10-21.1",
-  "site_version": 109,
+  "edition": "2026-10-21.2",
+  "site_version": 110,
   "files": [
     {
       "path": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
@@ -112,8 +112,8 @@
     },
     {
       "path": "assets/expositions/what-a-derivative-retains.md",
-      "bytes": 96788,
-      "sha256": "aab066d67a7a4f37055d8171ba2bbec732575d002d550cd93e5eb8d1778f2819",
+      "bytes": 96716,
+      "sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
       "served": true
     },
     {
@@ -520,8 +520,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 16266,
-      "sha256": "b40ee963826d3246a0ed1c9b1a706da06f079fd33174e7b57ce39ff59bf45ea9",
+      "bytes": 16473,
+      "sha256": "8c2dda3137fed773ad9207ce57049e3600c1130177f8c823e209c3d5b461cac8",
       "served": true
     },
     {
@@ -568,8 +568,8 @@
     },
     {
       "path": "notes/fourier-symmetry-and-reconstruction.html",
-      "bytes": 5413130,
-      "sha256": "f1caebd6ba536236d62e74a9d3a00c66b8b29b29dffe76e492763e0b46d0838a",
+      "bytes": 5413109,
+      "sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0",
       "served": true
     },
     {
@@ -622,14 +622,14 @@
     },
     {
       "path": "notes/what-a-boundary-map-can-prove.html",
-      "bytes": 6248866,
-      "sha256": "fd1252d52c2334cd626707da96af0dc5331177e99a235f16d9d4a44b19dd76f7",
+      "bytes": 6248775,
+      "sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079",
       "served": true
     },
     {
       "path": "notes/what-a-derivative-retains.html",
-      "bytes": 3552966,
-      "sha256": "8e6bcb5ea7885827d54567fec986095268cb4e62c515cabcb4d4497c1c8d91f8",
+      "bytes": 3552894,
+      "sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564",
       "served": true
     },
     {
@@ -664,20 +664,20 @@
     },
     {
       "path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
-      "bytes": 534817,
-      "sha256": "9a5fd7d1f8487d790733e2acd7888fe032c081e8737e39e99938f98ba0a231c7",
+      "bytes": 534796,
+      "sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
       "served": true
     },
     {
       "path": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
-      "bytes": 599828,
-      "sha256": "29d39b645ed83c54dc895100052b812dd93ecf840b9eb90b0a1744d401b0b0a0",
+      "bytes": 599738,
+      "sha256": "b95ec42807df0e7272428bfb4baa340cd7adbc5c7b226739dae56946e8f36dfb",
       "served": true
     },
     {
       "path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
-      "bytes": 275311,
-      "sha256": "63994b17a9fe06738827296c2671d73f39195390049b47ecc19dafcadb7c6379",
+      "bytes": 275246,
+      "sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3",
       "served": true
     },
     {
@@ -760,8 +760,8 @@
     },
     {
       "path": "portfolio.json",
-      "bytes": 53453,
-      "sha256": "8e3627ecc7c8b694494d5cd8a76fce45f1254fe0dc9ddd5a0a40b90b519fed80",
+      "bytes": 53666,
+      "sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
       "served": true
     },
     {
@@ -808,14 +808,14 @@
     },
     {
       "path": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-      "bytes": 136668,
-      "sha256": "c532a816cba5a4ad78b642078896cb09402dd6413e9eab49c871ad17c0e81c0b",
+      "bytes": 136647,
+      "sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
       "served": true
     },
     {
       "path": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
-      "bytes": 143987,
-      "sha256": "02646918ea6bef352beebb698b9a2548b3af7622a5b932fddac10d03c545948a",
+      "bytes": 143896,
+      "sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
       "served": true
     },
     {

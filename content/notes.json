@@ -16,13 +16,13 @@
     "pdf": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
     "page": "/notes/fourier-symmetry-and-reconstruction.html",
     "kind": "Exposition",
-    "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions.",
+    "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
     "catalogueBackground": "Polynomial route: linear algebra, polynomial rings, finite group actions, and basic Galois theory. Later routes use further geometric and cohomological background.",
     "readingGuide": "/mechanisms.html#fourier-routes-title",
     "entryLabel": "Explore the Fourier exposition",
     "featureDetail": "Concrete applications include reducing genus-two integrals to elliptic integrals, reconstructing vector bundles, counting points over finite fields, and bounding exponential sums.",
     "readingSource": "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-    "pdfSha256": "9a5fd7d1f8487d790733e2acd7888fe032c081e8737e39e99938f98ba0a231c7"
+    "pdfSha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa"
   },
   {
     "slug": "what-a-boundary-map-can-prove",
@@ -49,7 +49,7 @@
     "legacyPages": [
       "/notes/a-tree-is-a-discrete-poincare-lemma.html"
     ],
-    "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree."
+    "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree. Prose refined October 20, 2026; the mathematical content is unchanged."
   },
   {
     "slug": "what-a-derivative-retains",
@@ -66,14 +66,14 @@
     "readingBody": "content/expositions/what-a-derivative-retains.html",
     "readingSource": "assets/expositions/what-a-derivative-retains.md",
     "manuscript": "/assets/expositions/what-a-derivative-retains.md",
-    "manuscriptSha256": "aab066d67a7a4f37055d8171ba2bbec732575d002d550cd93e5eb8d1778f2819",
+    "manuscriptSha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
     "edition": "October 2026",
     "page": "/notes/what-a-derivative-retains.html",
     "source": null,
-    "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions.",
+    "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
     "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
     "pageCount": 39,
-    "pdfSha256": "63994b17a9fe06738827296c2671d73f39195390049b47ecc19dafcadb7c6379",
+    "pdfSha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3",
     "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/",
     "readingGuide": "/mechanisms.html#derivative-routes-title"
   },

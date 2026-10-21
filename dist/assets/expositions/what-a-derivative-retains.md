@@ -1446,7 +1446,7 @@ Each subsequent construction makes the retained information more precise. Kähle
 
 The example \(x^n=0\) shows why these distinctions matter. Equal pointwise tangent complexes can coexist with different formal neighborhoods. Higher brackets recover the equation because they specify how several tangent inputs combine into an obstruction. Spectral differentiation keeps coherent multiplication and spectral coefficients; Goodwillie differentiation keeps the interactions a functor creates when spaces are combined.
 
-This gives a concrete reconstruction question in the Tensorgami spirit. Choose the probes and the representation of their responses. Determine which operations survive. Then identify the additional structure required to recover what was discarded. A derivative can be universal for first-order measurements while remaining incomplete as a description of the whole object. The successful reconstruction theorem names both the information retained and the hypotheses under which it suffices.
+Choose the probes and the representation of their responses. Determine which operations survive. Then identify the additional structure required to recover what was discarded. A derivative can be universal for first-order measurements while remaining incomplete as a description of the whole object. The successful reconstruction theorem names both the information retained and the hypotheses under which it suffices.
 
 The ordinary coefficient \(f'(x)\) is one instance of this architecture. It records the action on the displacement \(x+u\varepsilon\). More elaborate derivatives preserve more of the surrounding algebra, equations, or homotopy theory, while continuing to answer a recognizable question: how does the object respond to a controlled change?
 

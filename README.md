@@ -35,21 +35,23 @@ Author: Henry Shin
 ORCID: https://orcid.org/0009-0000-6453-6865  
 Correspondence: hkshin@alumni.harvard.edu
 
-## Archival edition 2026-10-21.1
+## Archival edition 2026-10-21.2
 
-[Immutable release and publication record](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.1) · [Previous fixed edition](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-20.1)
+[Immutable release and publication record](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.2) · [Previous fixed edition](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.1)
 
-This edition preserves the complete version-109 public website: 141 served files,
+This edition preserves the complete version-110 public website: 141 served files,
 including 39 HTML pages and 18 PDFs, plus the available editable public source.
 Its 23 individual work packages include *When a Formal Logarithm Fails* and the
-updated Derivative and Fourier editions. The complete source and site ZIPs,
+current aligned reading editions. Three passages in Derivative, Fourier and Boundary Map
+state their mathematical content more directly; a homepage companion link improves discovery.
+All mathematics and the complete companion are preserved. The complete source and site ZIPs,
 `EDITION.json`, `WORKS.json` and `SHA256SUMS.txt` are attached to the release.
 
 `MANIFEST.sha256` covers every repository snapshot file except itself. Each work
 package includes its own file hashes. The frozen release preserves the Archived
 editions page as it appeared on the current site; that page still describes the
-previous edition. This README and `archive/works.json` identify this new release.
-The earlier release, tag and assets remain preserved. The main branch may advance;
+original 2026-10-20.1 archive. This README and `archive/works.json` identify this new release.
+Both earlier releases, 2026-10-20.1 and 2026-10-21.1, retain their tags, assets and signed timestamps. The main branch may advance;
 cite the specific release or tag for exact-edition evidence.
 
 The edition date uses UTC. Public availability is recorded by GitHub's release
@@ -57,39 +59,39 @@ publication time and signed attestation; dates printed in manuscripts are separa
 Immutability protects the tag and attached assets, not editable release notes.
 
 Whole-corpus citation: Henry Shin, *Tensorgami: complete public corpus snapshot*,
-archival edition 2026-10-21.1, https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.1.
+archival edition 2026-10-21.2, https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.2.
 
 ### Individual works
 
-- [Fourier, Symmetry, and Reconstruction](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/fourier-symmetry-and-reconstruction-2026-10-21.1.zip)
-- [What a Boundary Map Can Prove](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/what-a-boundary-map-can-prove-2026-10-21.1.zip)
-- [What a Derivative Retains](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/what-a-derivative-retains-2026-10-21.1.zip)
-- [When a Formal Logarithm Fails](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/when-a-formal-logarithm-fails-2026-10-21.1.zip)
-- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/pointwise-weighting-convergence-in-measure-2026-10-21.1.zip)
-- [IBM Ponder This July 2010](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/ibm-ponder-this-2010-2026-10-21.1.zip)
-- [Divisibility of Separated Polynomials](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/separated-polynomial-divisibility-2026-10-21.1.zip)
-- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/galois-frobenius-composition-law-2026-10-21.1.zip)
-- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/hartshorne-ii-5-14-18-2026-10-21.1.zip)
-- [Extracting the First Prime Greater than m](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/extracting-first-prime-2026-10-21.1.zip)
-- [A Note on Disjoint Decompositions of [0,1) into Closed Sets](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/disjoint-decompositions-2026-10-21.1.zip)
-- [Lebesgue's Criterion for Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/lebesgue-riemann-integrability-2026-10-21.1.zip)
-- [Products Preserve Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/products-preserve-riemann-integrability-2026-10-21.1.zip)
-- [Selected Problems in Discrete Mathematics and Analysis](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/selected-problems-discrete-mathematics-analysis-2026-10-21.1.zip)
-- [Mathematical Life in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/mathematical-life-in-the-age-of-ai-2026-10-21.1.zip)
-- [When Accountability Stops Being Reciprocal](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/when-accountability-stops-being-reciprocal-2026-10-21.1.zip)
-- [The Performance of Depth](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/the-performance-of-depth-2026-10-21.1.zip)
-- [What a New Proof Makes Possible](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/what-a-new-proof-makes-possible-2026-10-21.1.zip)
-- [When a Description Becomes a Verdict](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/when-a-description-becomes-a-verdict-2026-10-21.1.zip)
-- [The Authority of a Vision](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/the-authority-of-a-vision-2026-10-21.1.zip)
-- [Mathematical Understanding in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/mathematical-understanding-in-the-age-of-ai-2026-10-21.1.zip)
-- [The Culture of Mathematical Judgment](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/the-culture-of-mathematical-judgment-2026-10-21.1.zip)
-- [A Tree Is a Discrete Poincaré Lemma](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.1/a-tree-is-a-discrete-poincare-lemma-2026-10-21.1.zip)
+- [Fourier, Symmetry, and Reconstruction](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/fourier-symmetry-and-reconstruction-2026-10-21.2.zip)
+- [What a Boundary Map Can Prove](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-boundary-map-can-prove-2026-10-21.2.zip)
+- [What a Derivative Retains](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-derivative-retains-2026-10-21.2.zip)
+- [When a Formal Logarithm Fails](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-formal-logarithm-fails-2026-10-21.2.zip)
+- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/pointwise-weighting-convergence-in-measure-2026-10-21.2.zip)
+- [IBM Ponder This July 2010](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/ibm-ponder-this-2010-2026-10-21.2.zip)
+- [Divisibility of Separated Polynomials](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/separated-polynomial-divisibility-2026-10-21.2.zip)
+- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/galois-frobenius-composition-law-2026-10-21.2.zip)
+- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/hartshorne-ii-5-14-18-2026-10-21.2.zip)
+- [Extracting the First Prime Greater than m](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/extracting-first-prime-2026-10-21.2.zip)
+- [A Note on Disjoint Decompositions of [0,1) into Closed Sets](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/disjoint-decompositions-2026-10-21.2.zip)
+- [Lebesgue's Criterion for Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/lebesgue-riemann-integrability-2026-10-21.2.zip)
+- [Products Preserve Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/products-preserve-riemann-integrability-2026-10-21.2.zip)
+- [Selected Problems in Discrete Mathematics and Analysis](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/selected-problems-discrete-mathematics-analysis-2026-10-21.2.zip)
+- [Mathematical Life in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-life-in-the-age-of-ai-2026-10-21.2.zip)
+- [When Accountability Stops Being Reciprocal](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-accountability-stops-being-reciprocal-2026-10-21.2.zip)
+- [The Performance of Depth](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-performance-of-depth-2026-10-21.2.zip)
+- [What a New Proof Makes Possible](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-new-proof-makes-possible-2026-10-21.2.zip)
+- [When a Description Becomes a Verdict](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-description-becomes-a-verdict-2026-10-21.2.zip)
+- [The Authority of a Vision](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-authority-of-a-vision-2026-10-21.2.zip)
+- [Mathematical Understanding in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-understanding-in-the-age-of-ai-2026-10-21.2.zip)
+- [The Culture of Mathematical Judgment](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-culture-of-mathematical-judgment-2026-10-21.2.zip)
+- [A Tree Is a Discrete Poincaré Lemma](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/a-tree-is-a-discrete-poincare-lemma-2026-10-21.2.zip)
 
 ### Verify this edition
 
 ```sh
-gh release verify 2026-10-21.1 --repo Tensorgami/tensorgami-archive
-gh release verify-asset 2026-10-21.1 tensorgami-source-2026-10-21.1.zip --repo Tensorgami/tensorgami-archive
+gh release verify 2026-10-21.2 --repo Tensorgami/tensorgami-archive
+gh release verify-asset 2026-10-21.2 tensorgami-source-2026-10-21.2.zip --repo Tensorgami/tensorgami-archive
 ```
 
 The source ZIP named above is an explicit attached asset. It is distinct from

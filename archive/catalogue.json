@@ -1,5 +1,5 @@
 {
-  "edition": "2026-10-21.1",
+  "edition": "2026-10-21.2",
   "counts": {
     "currentEssays": 6,
     "currentExpositions": 13,
@@ -148,7 +148,7 @@
       "status": "current public work",
       "declaredDates": {
         "edition": "Revised and expanded, October 2026",
-        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions."
+        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions. Prose refined October 20, 2026; the mathematical content is unchanged."
       },
       "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
       "publicFiles": [
@@ -176,7 +176,7 @@
       "status": "current public work",
       "declaredDates": {
         "edition": "October 2026 · revised",
-        "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree."
+        "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree. Prose refined October 20, 2026; the mathematical content is unchanged."
       },
       "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
       "publicFiles": [
@@ -204,7 +204,7 @@
       "status": "current public work",
       "declaredDates": {
         "edition": "October 2026",
-        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions.",
+        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
         "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/"
       },
       "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",

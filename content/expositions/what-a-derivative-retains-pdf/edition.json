@@ -3,9 +3,9 @@
   "edition": "October 2026",
   "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
   "pages": 39,
-  "pdf_sha256": "63994b17a9fe06738827296c2671d73f39195390049b47ecc19dafcadb7c6379",
-  "article_source_sha256": "6e43b3dea63e55819f992f085a2ad011af53504948e63c408a26f721cb80d647",
-  "manuscript_sha256": "aab066d67a7a4f37055d8171ba2bbec732575d002d550cd93e5eb8d1778f2819",
+  "pdf_sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3",
+  "article_source_sha256": "0de8da3a93d9c3c155cfae09e7eed5498b375e615aa5eecf4457a4425f885aa1",
+  "manuscript_sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
   "math_expressions": 876,
   "display_formulas": 156,
   "figures": 9,
@@ -16,5 +16,5 @@
   ],
   "static_adaptations": "Published defaults are labelled; all four arithmetic prime choices and probe orders 1, 2, 3 are shown as static comparisons. Original captions and body prose are preserved.",
   "compiler": "XeLaTeX with Georgia prose, Latin Modern and AMS mathematics, TikZ vector figures; all fonts embedded.",
-  "revision": "October 20, 2026: added one prose-only companion paragraph after the Hasse-derivative discussion in section 7. All prior mathematical bodies, figures and source notes are unchanged."
+  "revision": "October 20, 2026: added one prose-only companion paragraph after the Hasse-derivative discussion in section 7. All prior mathematical bodies, figures and source notes are unchanged. Later on October 20, 2026, removed one introductory sentence from the section 14 conclusion; all mathematical bodies, figures, source notes and other prose remain unchanged."
 }

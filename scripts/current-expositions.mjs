@@ -33,7 +33,7 @@ export function currentExpositions({featuredNotes,esc,showCatalogueLink=false,ho
       ${landingEntry?`<div class="catalogue-entry-route"><p><a href="${n.page}#${landingEntry.anchor}">${esc(landingEntry.label)}</a></p><p>${esc(landingEntry.background)}</p></div>`:''}${(entry?.subtitle||n.subtitle)?`<p class="feature-subtitle">${esc(entry?.subtitle||n.subtitle)}</p>`:''}<p>${esc(entry?.summary||n.summary)}</p>
       ${entry?`<div class="home-entry-route"><p><a href="${n.page}#${entry.anchor}">${esc(entry.label)}</a></p><p>${esc(entry.background)}</p></div>`:n.featureDetail?`<p class="feature-detail">${esc(n.featureDetail)}</p>`:''}
       <div class="text-links"><a href="${n.page}">Read the exposition</a>${n.pdf?`<a href="${n.pdf}" aria-label="PDF, ${n.pageCount} pages: ${esc(n.title)}">PDF · ${n.pageCount} pages</a>`:''}${n.manuscript&&!homepage?`<a href="${n.manuscript}" aria-label="Markdown manuscript: ${esc(n.title)}">Markdown manuscript</a>`:''}${n.tex?`<a href="${n.tex}" aria-label="TeX source: ${esc(n.title)}">TeX source</a>`:''}</div>
-      ${n.readingGuide?`<p class="feature-route"><a href="${n.readingGuide}">Background and reading routes</a></p>`:''}
+      ${n.readingGuide?`<p class="feature-route"><a href="${n.readingGuide}">Background and reading routes</a></p>`:''}${homepage&&n.slug==='what-a-derivative-retains'?'\n      <p class="feature-route"><a href="/notes/when-a-formal-logarithm-fails.html">Companion: When a Formal Logarithm Fails</a><br>A quadratic correction and a cubic obstruction in characteristic three.</p>':''}
     </article>`;}).join('')}</div>
   </section>`;
 }
