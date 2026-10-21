@@ -1,80 +1,80 @@
 {
-  "edition": "2026-10-21.2",
+  "edition": "2026-10-21.3",
   "works": [
     {
       "slug": "fourier-symmetry-and-reconstruction",
       "title": "Fourier, Symmetry, and Reconstruction",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "edition": "Revised and expanded, October 2026",
         "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions. Prose refined October 20, 2026; the mathematical content is unchanged."
       },
-      "archive_file": "fourier-symmetry-and-reconstruction-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/fourier-symmetry-and-reconstruction-2026-10-21.2.zip",
-      "bytes": 2287502,
-      "sha256": "27d064e38f1d40f7bac4140cbf2736643fad650c160a4ba32de53db247f51fb5",
-      "citation": "Henry Shin. Fourier, Symmetry, and Reconstruction. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/fourier-symmetry-and-reconstruction-2026-10-21.2.zip"
+      "archive_file": "fourier-symmetry-and-reconstruction-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/fourier-symmetry-and-reconstruction-2026-10-21.3.zip",
+      "bytes": 2287592,
+      "sha256": "37fa4842c7134e47a7b745a226a15a7b716682b9c5e8b78438400a4cc1e3a5d3",
+      "citation": "Henry Shin. Fourier, Symmetry, and Reconstruction. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/fourier-symmetry-and-reconstruction-2026-10-21.3.zip"
     },
     {
       "slug": "what-a-boundary-map-can-prove",
       "title": "What a Boundary Map Can Prove",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/what-a-boundary-map-can-prove.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "edition": "October 2026 · revised",
         "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree. Prose refined October 20, 2026; the mathematical content is unchanged."
       },
-      "archive_file": "what-a-boundary-map-can-prove-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-boundary-map-can-prove-2026-10-21.2.zip",
-      "bytes": 2741539,
-      "sha256": "4a700de9ca3c5b42428d3ded96b46fdd68f98eb0e23e31fa99cf2f37df0deb45",
-      "citation": "Henry Shin. What a Boundary Map Can Prove. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-boundary-map-can-prove-2026-10-21.2.zip"
+      "archive_file": "what-a-boundary-map-can-prove-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-boundary-map-can-prove-2026-10-21.3.zip",
+      "bytes": 2741628,
+      "sha256": "ea4268afb88880778933c5c2030f75792b720b6fda72b8d37808e6e3581c7bc6",
+      "citation": "Henry Shin. What a Boundary Map Can Prove. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-boundary-map-can-prove-2026-10-21.3.zip"
     },
     {
       "slug": "what-a-derivative-retains",
       "title": "What a Derivative Retains",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/what-a-derivative-retains.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "edition": "October 2026",
         "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions. Prose refined October 20, 2026; the mathematical content is unchanged."
       },
-      "archive_file": "what-a-derivative-retains-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-derivative-retains-2026-10-21.2.zip",
-      "bytes": 1440579,
-      "sha256": "e91c81a597029424bfa781a935185f30fb335df60d732710f613b398d72540e8",
-      "citation": "Henry Shin. What a Derivative Retains. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-derivative-retains-2026-10-21.2.zip"
+      "archive_file": "what-a-derivative-retains-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-derivative-retains-2026-10-21.3.zip",
+      "bytes": 1440673,
+      "sha256": "703a915f39d9d74c0e67e81fe64cbf99c74d8574b20e2cd624346424854b7776",
+      "citation": "Henry Shin. What a Derivative Retains. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-derivative-retains-2026-10-21.3.zip"
     },
     {
       "slug": "when-a-formal-logarithm-fails",
       "title": "When a Formal Logarithm Fails",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/when-a-formal-logarithm-fails.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "edition": "October 2026",
         "revision": "First published October 20, 2026. The web, PDF, Markdown and TeX editions contain the same argument."
       },
-      "archive_file": "when-a-formal-logarithm-fails-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-formal-logarithm-fails-2026-10-21.2.zip",
-      "bytes": 422517,
-      "sha256": "1b3c1e27c4dd7e0ee003b86813ac38c02a35fb44a5d4c2d170305dce5fd0e7fc",
-      "citation": "Henry Shin. When a Formal Logarithm Fails. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-formal-logarithm-fails-2026-10-21.2.zip"
+      "archive_file": "when-a-formal-logarithm-fails-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-formal-logarithm-fails-2026-10-21.3.zip",
+      "bytes": 422610,
+      "sha256": "1060073e347b8704d560031519e866c895f5087d9d13118d7940685eca366bcd",
+      "citation": "Henry Shin. When a Formal Logarithm Fails. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-formal-logarithm-fails-2026-10-21.3.zip"
     },
     {
       "slug": "pointwise-weighting-convergence-in-measure",
       "title": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope. The PDF and TeX source agree.",
@@ -82,32 +82,32 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "pointwise-weighting-convergence-in-measure-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/pointwise-weighting-convergence-in-measure-2026-10-21.2.zip",
-      "bytes": 341268,
-      "sha256": "d79e9c540126a1d01a22b2bebf709d804fe472657e6ca64f824f733622b1b894",
-      "citation": "Henry Shin. A Weighting Argument for Pointwise Convergence to Convergence in Measure. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/pointwise-weighting-convergence-in-measure-2026-10-21.2.zip"
+      "archive_file": "pointwise-weighting-convergence-in-measure-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/pointwise-weighting-convergence-in-measure-2026-10-21.3.zip",
+      "bytes": 341362,
+      "sha256": "884bb80b8319cd04e036679da2c9aa69cee845f090ae97289dc6e43c040bc3dd",
+      "citation": "Henry Shin. A Weighting Argument for Pointwise Convergence to Convergence in Measure. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/pointwise-weighting-convergence-in-measure-2026-10-21.3.zip"
     },
     {
       "slug": "ibm-ponder-this-2010",
       "title": "IBM Ponder This July 2010",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {},
-      "archive_file": "ibm-ponder-this-2010-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/ibm-ponder-this-2010-2026-10-21.2.zip",
-      "bytes": 326348,
-      "sha256": "0f6544f8261ea94e18d4a7b50b446107e8963041d9e5995bc6a3b89f98b02828",
-      "citation": "Henry Shin. IBM Ponder This July 2010. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/ibm-ponder-this-2010-2026-10-21.2.zip"
+      "archive_file": "ibm-ponder-this-2010-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/ibm-ponder-this-2010-2026-10-21.3.zip",
+      "bytes": 326435,
+      "sha256": "f48740dea57c3fcf67d166f97e7d660b6caf189b063cd0e17a780d3a8cabed8e",
+      "citation": "Henry Shin. IBM Ponder This July 2010. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/ibm-ponder-this-2010-2026-10-21.3.zip"
     },
     {
       "slug": "separated-polynomial-divisibility",
       "title": "Divisibility of Separated Polynomials",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/separated-polynomial-divisibility.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged. The PDF and TeX source agree.",
@@ -115,18 +115,18 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "separated-polynomial-divisibility-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/separated-polynomial-divisibility-2026-10-21.2.zip",
-      "bytes": 215410,
-      "sha256": "031cfcc4232d04912a498ebd0fe6fcb832faa76d9128e531e09f5ee4e448dc85",
-      "citation": "Henry Shin. Divisibility of Separated Polynomials. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/separated-polynomial-divisibility-2026-10-21.2.zip"
+      "archive_file": "separated-polynomial-divisibility-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/separated-polynomial-divisibility-2026-10-21.3.zip",
+      "bytes": 215502,
+      "sha256": "da6fa1cf97149be33e7fbc88fb5a8b64df64dea5c29fc1ffad476babd53ae584",
+      "citation": "Henry Shin. Divisibility of Separated Polynomials. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/separated-polynomial-divisibility-2026-10-21.3.zip"
     },
     {
       "slug": "galois-frobenius-composition-law",
       "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/galois-frobenius-composition-law.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged. The PDF and TeX source agree.",
@@ -134,18 +134,18 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "galois-frobenius-composition-law-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/galois-frobenius-composition-law-2026-10-21.2.zip",
-      "bytes": 441819,
-      "sha256": "d395018070c63f6fe984dabc0f7baf101c0cd5bceee5a4f4f1269b1246fc3746",
-      "citation": "Henry Shin. A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/galois-frobenius-composition-law-2026-10-21.2.zip"
+      "archive_file": "galois-frobenius-composition-law-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/galois-frobenius-composition-law-2026-10-21.3.zip",
+      "bytes": 441911,
+      "sha256": "882922cb92c38824d1453672d33ca31ad2d8c757a4c07362c9e8ecc47645a2c8",
+      "citation": "Henry Shin. A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/galois-frobenius-composition-law-2026-10-21.3.zip"
     },
     {
       "slug": "hartshorne-ii-5-14-18",
       "title": "Normality, Coherent Extension, Tensor Operations, and Affineness",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/hartshorne-ii-5-14-18.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections. The PDF and TeX source agree.",
@@ -153,18 +153,18 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "hartshorne-ii-5-14-18-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/hartshorne-ii-5-14-18-2026-10-21.2.zip",
-      "bytes": 327473,
-      "sha256": "39f6c319a48706c238e94e5ad257b0d22ed86276a389c3a4450a302e782dbc19",
-      "citation": "Henry Shin. Normality, Coherent Extension, Tensor Operations, and Affineness. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/hartshorne-ii-5-14-18-2026-10-21.2.zip"
+      "archive_file": "hartshorne-ii-5-14-18-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/hartshorne-ii-5-14-18-2026-10-21.3.zip",
+      "bytes": 327564,
+      "sha256": "fd32b160ad49d72c6fbc94e5f8a7d6c4a7c28d283f12644cb383a08d6c2426b9",
+      "citation": "Henry Shin. Normality, Coherent Extension, Tensor Operations, and Affineness. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/hartshorne-ii-5-14-18-2026-10-21.3.zip"
     },
     {
       "slug": "extracting-first-prime",
       "title": "Extracting the First Prime Greater than m",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/extracting-first-prime.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
@@ -172,18 +172,18 @@
           "2026-10-07"
         ]
       },
-      "archive_file": "extracting-first-prime-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/extracting-first-prime-2026-10-21.2.zip",
-      "bytes": 326104,
-      "sha256": "cedf4303003827b37e90a7149a29c9d1996bda18913a3fa9cebf540d3b76644f",
-      "citation": "Henry Shin. Extracting the First Prime Greater than m. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/extracting-first-prime-2026-10-21.2.zip"
+      "archive_file": "extracting-first-prime-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/extracting-first-prime-2026-10-21.3.zip",
+      "bytes": 326197,
+      "sha256": "0a081d69d76669beb34f27bd815870790ae02ed01af730878fba73b23636833a",
+      "citation": "Henry Shin. Extracting the First Prime Greater than m. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/extracting-first-prime-2026-10-21.3.zip"
     },
     {
       "slug": "disjoint-decompositions",
       "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/disjoint-decompositions.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: explicitly established that the closed remainder is nonempty before applying the Baire category theorem.",
@@ -191,18 +191,18 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "disjoint-decompositions-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/disjoint-decompositions-2026-10-21.2.zip",
-      "bytes": 199261,
-      "sha256": "1dff1b7be88ec21a49745701da252b31dd5a247692aa42ab746dd1df56ec75f4",
-      "citation": "Henry Shin. A Note on Disjoint Decompositions of [0,1) into Closed Sets. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/disjoint-decompositions-2026-10-21.2.zip"
+      "archive_file": "disjoint-decompositions-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/disjoint-decompositions-2026-10-21.3.zip",
+      "bytes": 199361,
+      "sha256": "c4fa64470be36f03aa0e4ad14a3785772f5e37f760aa8f1deb4f41c4181d6622",
+      "citation": "Henry Shin. A Note on Disjoint Decompositions of [0,1) into Closed Sets. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/disjoint-decompositions-2026-10-21.3.zip"
     },
     {
       "slug": "lebesgue-riemann-integrability",
       "title": "Lebesgue's Criterion for Riemann Integrability",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/lebesgue-riemann-integrability.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: rebuilt the editable source, clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples. The PDF and TeX source agree.",
@@ -211,18 +211,18 @@
           "2026-10-07"
         ]
       },
-      "archive_file": "lebesgue-riemann-integrability-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/lebesgue-riemann-integrability-2026-10-21.2.zip",
-      "bytes": 325293,
-      "sha256": "00d8868cfc69a77f5bc6408919ff32d9c4e8adb032ec611d812f2f54b76875ff",
-      "citation": "Henry Shin. Lebesgue's Criterion for Riemann Integrability. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/lebesgue-riemann-integrability-2026-10-21.2.zip"
+      "archive_file": "lebesgue-riemann-integrability-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/lebesgue-riemann-integrability-2026-10-21.3.zip",
+      "bytes": 325382,
+      "sha256": "5deb2094aa1db4e87aca3c1efd7b3baf169480403144ef5d334f548729de5a51",
+      "citation": "Henry Shin. Lebesgue's Criterion for Riemann Integrability. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/lebesgue-riemann-integrability-2026-10-21.3.zip"
     },
     {
       "slug": "products-preserve-riemann-integrability",
       "title": "Products Preserve Riemann Integrability",
       "kind": "exposition",
       "public_url": "https://tensorgami.com/notes/products-preserve-riemann-integrability.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit, and the opening proof outline has been reflowed. The PDF and TeX source agree. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
@@ -232,18 +232,18 @@
         ],
         "originalPublishedAt": "2026-04-29T02:18:00Z"
       },
-      "archive_file": "products-preserve-riemann-integrability-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/products-preserve-riemann-integrability-2026-10-21.2.zip",
-      "bytes": 288912,
-      "sha256": "61b3ea23159f906a7606991782417b541439cc382cb1a2e6d767bfa637d45dc6",
-      "citation": "Henry Shin. Products Preserve Riemann Integrability. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/products-preserve-riemann-integrability-2026-10-21.2.zip"
+      "archive_file": "products-preserve-riemann-integrability-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/products-preserve-riemann-integrability-2026-10-21.3.zip",
+      "bytes": 289001,
+      "sha256": "ec76f463bb5826d36ff243a35c0e4f41ecfd87ecd6504f98f934d85547db9664",
+      "citation": "Henry Shin. Products Preserve Riemann Integrability. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/products-preserve-riemann-integrability-2026-10-21.3.zip"
     },
     {
       "slug": "selected-problems-discrete-mathematics-analysis",
       "title": "Selected Problems in Discrete Mathematics and Analysis",
       "kind": "problem-set",
       "public_url": "https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant. The web edition, PDF, and TeX source agree.",
@@ -251,114 +251,114 @@
           "2026-09-22"
         ]
       },
-      "archive_file": "selected-problems-discrete-mathematics-analysis-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/selected-problems-discrete-mathematics-analysis-2026-10-21.2.zip",
-      "bytes": 200386,
-      "sha256": "b6d96008b3b69c68db3fe0a0b6bd3e82dcd0e7095b83562ae7cb4d9fbe29bbd1",
-      "citation": "Henry Shin. Selected Problems in Discrete Mathematics and Analysis. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/selected-problems-discrete-mathematics-analysis-2026-10-21.2.zip"
+      "archive_file": "selected-problems-discrete-mathematics-analysis-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/selected-problems-discrete-mathematics-analysis-2026-10-21.3.zip",
+      "bytes": 200483,
+      "sha256": "b39bf4c265431448ddc38ef42bcdd85d70b544ff2ac8580dec1da415e742334f",
+      "citation": "Henry Shin. Selected Problems in Discrete Mathematics and Analysis. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/selected-problems-discrete-mathematics-analysis-2026-10-21.3.zip"
     },
     {
       "slug": "mathematical-life-in-the-age-of-ai",
       "title": "Mathematical Life in the Age of AI",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-12"
       },
-      "archive_file": "mathematical-life-in-the-age-of-ai-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-life-in-the-age-of-ai-2026-10-21.2.zip",
-      "bytes": 331468,
-      "sha256": "e73f68861a47e8c9ee0625748c5982151f088d1ed83084bc445b4fd65751ae3f",
-      "citation": "Henry Shin. Mathematical Life in the Age of AI. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-life-in-the-age-of-ai-2026-10-21.2.zip"
+      "archive_file": "mathematical-life-in-the-age-of-ai-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-life-in-the-age-of-ai-2026-10-21.3.zip",
+      "bytes": 331569,
+      "sha256": "e8b0ff2a06367eaa0cb7990eafb397bb85cf01fc4c21b9d38fbcbe7ee572536b",
+      "citation": "Henry Shin. Mathematical Life in the Age of AI. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-life-in-the-age-of-ai-2026-10-21.3.zip"
     },
     {
       "slug": "when-accountability-stops-being-reciprocal",
       "title": "When Accountability Stops Being Reciprocal",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/when-accountability-stops-being-reciprocal.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-19"
       },
-      "archive_file": "when-accountability-stops-being-reciprocal-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-accountability-stops-being-reciprocal-2026-10-21.2.zip",
-      "bytes": 196482,
-      "sha256": "2bb0e5e0af0fdd5daa07a2ca8b400ba32b09e2a31cc48a8d03473817883e17b7",
-      "citation": "Henry Shin. When Accountability Stops Being Reciprocal. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-accountability-stops-being-reciprocal-2026-10-21.2.zip"
+      "archive_file": "when-accountability-stops-being-reciprocal-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-accountability-stops-being-reciprocal-2026-10-21.3.zip",
+      "bytes": 196577,
+      "sha256": "de0ac0b21024de19da66943920baa2e6b65c84df9e78ca4d4b3ca918b62d029d",
+      "citation": "Henry Shin. When Accountability Stops Being Reciprocal. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-accountability-stops-being-reciprocal-2026-10-21.3.zip"
     },
     {
       "slug": "the-performance-of-depth",
       "title": "The Performance of Depth",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/the-performance-of-depth.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-19"
       },
-      "archive_file": "the-performance-of-depth-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-performance-of-depth-2026-10-21.2.zip",
-      "bytes": 101249,
-      "sha256": "55293fc27cfbcfc784d34464c4f989c1b004088e5e7f612bf1aa80f123b51410",
-      "citation": "Henry Shin. The Performance of Depth. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-performance-of-depth-2026-10-21.2.zip"
+      "archive_file": "the-performance-of-depth-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-performance-of-depth-2026-10-21.3.zip",
+      "bytes": 101338,
+      "sha256": "9ab0d06cd176bfee936d55415be93c0d1febdc620ee308a435a327acee022779",
+      "citation": "Henry Shin. The Performance of Depth. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-performance-of-depth-2026-10-21.3.zip"
     },
     {
       "slug": "what-a-new-proof-makes-possible",
       "title": "What a New Proof Makes Possible",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/what-a-new-proof-makes-possible.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-08"
       },
-      "archive_file": "what-a-new-proof-makes-possible-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-new-proof-makes-possible-2026-10-21.2.zip",
-      "bytes": 115200,
-      "sha256": "53549f280c861f0b1986d81bce5ba2447b54b6582df55c30645802c6a2caadb1",
-      "citation": "Henry Shin. What a New Proof Makes Possible. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/what-a-new-proof-makes-possible-2026-10-21.2.zip"
+      "archive_file": "what-a-new-proof-makes-possible-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-new-proof-makes-possible-2026-10-21.3.zip",
+      "bytes": 115298,
+      "sha256": "670de66e4905fa778537fbd22d179fcd5af878f92fdfe868b8fac61f9d2b65dd",
+      "citation": "Henry Shin. What a New Proof Makes Possible. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-new-proof-makes-possible-2026-10-21.3.zip"
     },
     {
       "slug": "when-a-description-becomes-a-verdict",
       "title": "When a Description Becomes a Verdict",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/when-a-description-becomes-a-verdict.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-17"
       },
-      "archive_file": "when-a-description-becomes-a-verdict-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-description-becomes-a-verdict-2026-10-21.2.zip",
-      "bytes": 68676,
-      "sha256": "4756c4ea3968f167ffdd030e491f217f75791c92cce3e425a74b94ba3d6f6d1a",
-      "citation": "Henry Shin. When a Description Becomes a Verdict. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/when-a-description-becomes-a-verdict-2026-10-21.2.zip"
+      "archive_file": "when-a-description-becomes-a-verdict-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-description-becomes-a-verdict-2026-10-21.3.zip",
+      "bytes": 68768,
+      "sha256": "b7a6a9586f15640b866c0204c01032ecc605b87d6ec51fe96b8e14487fb9dda0",
+      "citation": "Henry Shin. When a Description Becomes a Verdict. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-description-becomes-a-verdict-2026-10-21.3.zip"
     },
     {
       "slug": "the-authority-of-a-vision",
       "title": "The Authority of a Vision",
       "kind": "essay",
       "public_url": "https://tensorgami.com/essays/the-authority-of-a-vision.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": null,
       "source_supplied_history": {
         "date": "2026-10-07"
       },
-      "archive_file": "the-authority-of-a-vision-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-authority-of-a-vision-2026-10-21.2.zip",
-      "bytes": 49451,
-      "sha256": "b31c6dd64471a187bcd04b631ad5a51b51604d7ef13523c9e84302d39721e21f",
-      "citation": "Henry Shin. The Authority of a Vision. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-authority-of-a-vision-2026-10-21.2.zip"
+      "archive_file": "the-authority-of-a-vision-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-authority-of-a-vision-2026-10-21.3.zip",
+      "bytes": 49552,
+      "sha256": "3d152272b2dc154ab9c1a84f22897b75d251f4aea6f8cf0d2fed670e0f5c2b54",
+      "citation": "Henry Shin. The Authority of a Vision. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-authority-of-a-vision-2026-10-21.3.zip"
     },
     {
       "slug": "mathematical-understanding-in-the-age-of-ai",
       "title": "Mathematical Understanding in the Age of AI",
       "kind": "historical-essay",
       "public_url": "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": "Version 75",
       "source_supplied_history": {
         "date": "2026-10-07",
@@ -366,18 +366,18 @@
         "archivedDate": "2026-10-12",
         "superseded_by": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html"
       },
-      "archive_file": "mathematical-understanding-in-the-age-of-ai-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-understanding-in-the-age-of-ai-2026-10-21.2.zip",
-      "bytes": 81458,
-      "sha256": "544cc3ffdf0df8e7517760b84f208e9505dcbe809eb2dfca1a9266f3d5c872d6",
-      "citation": "Henry Shin. Mathematical Understanding in the Age of AI. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/mathematical-understanding-in-the-age-of-ai-2026-10-21.2.zip"
+      "archive_file": "mathematical-understanding-in-the-age-of-ai-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-understanding-in-the-age-of-ai-2026-10-21.3.zip",
+      "bytes": 81555,
+      "sha256": "8f1d2eac4d6ee696c1e5f507a4a06a74e3c1ef605c7bdc2659bd3876c5bfcf8c",
+      "citation": "Henry Shin. Mathematical Understanding in the Age of AI. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-understanding-in-the-age-of-ai-2026-10-21.3.zip"
     },
     {
       "slug": "the-culture-of-mathematical-judgment",
       "title": "The Culture of Mathematical Judgment",
       "kind": "historical-essay",
       "public_url": "https://tensorgami.com/essays/the-culture-of-mathematical-judgment.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": "Version 75",
       "source_supplied_history": {
         "date": "2026-10-12",
@@ -385,18 +385,18 @@
         "archivedDate": "2026-10-12",
         "superseded_by": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html"
       },
-      "archive_file": "the-culture-of-mathematical-judgment-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-culture-of-mathematical-judgment-2026-10-21.2.zip",
-      "bytes": 198013,
-      "sha256": "2db9c2f0ed6432ea613656cb95a8638731bd7db650aa5b7bc5d7003c47c7d502",
-      "citation": "Henry Shin. The Culture of Mathematical Judgment. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/the-culture-of-mathematical-judgment-2026-10-21.2.zip"
+      "archive_file": "the-culture-of-mathematical-judgment-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-culture-of-mathematical-judgment-2026-10-21.3.zip",
+      "bytes": 198111,
+      "sha256": "973b224e575376230b2aa1dad55e8cfaa54f0cbf6d9b63a947fd9ee4e947713a",
+      "citation": "Henry Shin. The Culture of Mathematical Judgment. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-culture-of-mathematical-judgment-2026-10-21.3.zip"
     },
     {
       "slug": "a-tree-is-a-discrete-poincare-lemma",
       "title": "A Tree Is a Discrete Poincaré Lemma",
       "kind": "historical-exposition",
       "public_url": "https://tensorgami.com/notes/a-tree-is-a-discrete-poincare-lemma.html",
-      "archival_version": "2026-10-21.2",
+      "archival_version": "2026-10-21.3",
       "historical_edition": "October 2026 (retained predecessor)",
       "source_supplied_history": {
         "edition": "October 2026",
@@ -404,11 +404,11 @@
         "archivedDate": null,
         "superseded_by": "https://tensorgami.com/notes/what-a-boundary-map-can-prove.html"
       },
-      "archive_file": "a-tree-is-a-discrete-poincare-lemma-2026-10-21.2.zip",
-      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/a-tree-is-a-discrete-poincare-lemma-2026-10-21.2.zip",
+      "archive_file": "a-tree-is-a-discrete-poincare-lemma-2026-10-21.3.zip",
+      "archive_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/a-tree-is-a-discrete-poincare-lemma-2026-10-21.3.zip",
       "bytes": 1050822,
-      "sha256": "4c3361b683942ac4cde8aac3862d2fada9fd934dfd1cb9998098f8c2ea53670f",
-      "citation": "Henry Shin. A Tree Is a Discrete Poincaré Lemma. Tensorgami archival edition 2026-10-21.2. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.2/a-tree-is-a-discrete-poincare-lemma-2026-10-21.2.zip"
+      "sha256": "e17b9cff475131051500c5a9f3b05cd9f39b6d28d864c44be22b79c7b7a05b11",
+      "citation": "Henry Shin. A Tree Is a Discrete Poincaré Lemma. Tensorgami archival edition 2026-10-21.3. https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/a-tree-is-a-discrete-poincare-lemma-2026-10-21.3.zip"
     }
   ]
 }

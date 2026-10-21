@@ -1,6 +1,6 @@
 {
-  "edition": "2026-10-21.2",
-  "site_version": 110,
+  "edition": "2026-10-21.3",
+  "site_version": 111,
   "files": [
     {
       "path": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
@@ -106,8 +106,8 @@
     },
     {
       "path": "assets/expositions.css",
-      "bytes": 15931,
-      "sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d",
+      "bytes": 16640,
+      "sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
       "served": true
     },
     {
@@ -520,8 +520,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 16473,
-      "sha256": "8c2dda3137fed773ad9207ce57049e3600c1130177f8c823e209c3d5b461cac8",
+      "bytes": 16635,
+      "sha256": "956259d78845a8e616a1ed7da9f4faffe90ff21fa9d223e235c5f396da2e0b85",
       "served": true
     },
     {

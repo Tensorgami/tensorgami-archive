@@ -1,67 +1,22 @@
 {
-  "preceding_edition": "2026-10-21.1",
-  "edition": "2026-10-21.2",
+  "preceding_edition": "2026-10-21.2",
+  "edition": "2026-10-21.3",
   "comparison_to_old_archive": {
     "added": [],
     "changed": [
       {
-        "path": "assets/expositions/what-a-derivative-retains.md",
-        "bytes": 96716,
-        "sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260"
+        "path": "assets/expositions.css",
+        "bytes": 16640,
+        "sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36"
       },
       {
         "path": "index.html",
-        "bytes": 16473,
-        "sha256": "8c2dda3137fed773ad9207ce57049e3600c1130177f8c823e209c3d5b461cac8"
-      },
-      {
-        "path": "notes/fourier-symmetry-and-reconstruction.html",
-        "bytes": 5413109,
-        "sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0"
-      },
-      {
-        "path": "notes/what-a-boundary-map-can-prove.html",
-        "bytes": 6248775,
-        "sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079"
-      },
-      {
-        "path": "notes/what-a-derivative-retains.html",
-        "bytes": 3552894,
-        "sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564"
-      },
-      {
-        "path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
-        "bytes": 534796,
-        "sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa"
-      },
-      {
-        "path": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
-        "bytes": 599738,
-        "sha256": "b95ec42807df0e7272428bfb4baa340cd7adbc5c7b226739dae56946e8f36dfb"
-      },
-      {
-        "path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
-        "bytes": 275246,
-        "sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3"
-      },
-      {
-        "path": "portfolio.json",
-        "bytes": 53666,
-        "sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16"
-      },
-      {
-        "path": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-        "bytes": 136647,
-        "sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77"
-      },
-      {
-        "path": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
-        "bytes": 143896,
-        "sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d"
+        "bytes": 16635,
+        "sha256": "956259d78845a8e616a1ed7da9f4faffe90ff21fa9d223e235c5f396da2e0b85"
       }
     ],
     "removed": [],
-    "unchanged": 132
+    "unchanged": 141
   },
-  "note": "Only the authorized surgical prose and homepage changes, their aligned reading editions and required metadata differ from the preceding site snapshot. Both earlier immutable releases remain unchanged."
+  "note": "Only the authorized homepage companion presentation and required metadata differ from the preceding site snapshot. All article content and downloadable editions are unchanged. All three earlier immutable releases remain unchanged."
 }

@@ -1,6 +1,6 @@
 {
-  "verified_at_utc": "2026-10-21T05:25:05.820Z",
-  "site_version": 110,
+  "verified_at_utc": "2026-10-21T06:02:18.237Z",
+  "site_version": 111,
   "public_files": 141,
   "html_pages": 39,
   "pdfs": 18,
@@ -10,6 +10,56 @@
   "method": "Non-HTML files compare byte for byte. HTML authored bytes compare exactly, allowing only the specifically recognized hosting challenge script immediately before the closing body tag.",
   "public_source_dist_files_exact": 143,
   "checks": [
+    {
+      "url": "https://tensorgami.com/editions.html",
+      "file": "editions.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b",
+      "received_sha256": "5d75483a74e03838b4b0648f1ef06aade843c93bc311b575d95e86db4347a7c5",
+      "bytes": 10451
+    },
+    {
+      "url": "https://tensorgami.com/about.html",
+      "file": "about.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "68745d592e6e318e81e5f96a3bfd9ad7778ed436dd657269096fd2ec98ab6200",
+      "received_sha256": "b132a97b2fe07298d182f92a03136429f3d335ec122c87ef29705e398b6c3904",
+      "bytes": 8106
+    },
+    {
+      "url": "https://tensorgami.com/essays.html",
+      "file": "essays.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26",
+      "received_sha256": "391a02579a4941edc34e73dfecde9dccfadbe0bf4b650fc73beafd4e3630c73b",
+      "bytes": 8084
+    },
+    {
+      "url": "https://tensorgami.com/interests.html",
+      "file": "interests.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876",
+      "received_sha256": "8c3c9724b4996aa2a576ed1e0b1cd557210c27f7e81e085d3972e81170f58a2e",
+      "bytes": 6200
+    },
+    {
+      "url": "https://tensorgami.com/index.html",
+      "file": "index.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "956259d78845a8e616a1ed7da9f4faffe90ff21fa9d223e235c5f396da2e0b85",
+      "received_sha256": "e68c2e8eab91a75888329aad345646881effb45ca8fe8d26c9732268b6829b88",
+      "bytes": 17573
+    },
     {
       "url": "https://tensorgami.com/favicon.svg",
       "file": "favicon.svg",
@@ -21,54 +71,24 @@
       "bytes": 150
     },
     {
-      "url": "https://tensorgami.com/about.html",
-      "file": "about.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "68745d592e6e318e81e5f96a3bfd9ad7778ed436dd657269096fd2ec98ab6200",
-      "received_sha256": "6111cb952f6cd4af0083e0214d72aed4305569715c2a854f09f4d0f3ea175637",
-      "bytes": 8106
-    },
-    {
       "url": "https://tensorgami.com/expositions.html",
       "file": "expositions.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "d157c7d9999a40cc7257568d52ae4b088b095353e5edb76b01e469b23c8ec45a",
-      "received_sha256": "fa3f0f656642a02905570646b7c62e0d047481b506c1b62fb3e1b46e5fcdbdcd",
+      "received_sha256": "86a919482e6dc753082bb805a413586789c1c1bd8ec60f43f79e68142233e005",
       "bytes": 23539
     },
     {
-      "url": "https://tensorgami.com/essays.html",
-      "file": "essays.html",
+      "url": "https://tensorgami.com/license.html",
+      "file": "license.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26",
-      "received_sha256": "616b3e89bfa8ac036349fa9e9d767fcf4e2212bb12851ff6045e5c86fa60ece7",
-      "bytes": 8084
-    },
-    {
-      "url": "https://tensorgami.com/LICENSE.md",
-      "file": "LICENSE.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b",
-      "received_sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b",
-      "bytes": 818
-    },
-    {
-      "url": "https://tensorgami.com/interests.html",
-      "file": "interests.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876",
-      "received_sha256": "4c9a609553a6de5cd1fb5846e62063b64a1be685bcab597734d9bf384b51b995",
-      "bytes": 6200
+      "expected_sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab",
+      "received_sha256": "630a9f89c151c9972ddd25579c7d6f4ae6f525458888cecd753a244a817e7347",
+      "bytes": 3843
     },
     {
       "url": "https://tensorgami.com/llms.txt",
@@ -81,14 +101,24 @@
       "bytes": 2803
     },
     {
-      "url": "https://tensorgami.com/license.html",
-      "file": "license.html",
+      "url": "https://tensorgami.com/LICENSE.md",
+      "file": "LICENSE.md",
       "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
+      "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab",
-      "received_sha256": "171086e50939f177d5d2568e41c5f0bfde30e4651117da8ede94b95fa526ddbe",
-      "bytes": 3843
+      "expected_sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b",
+      "received_sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b",
+      "bytes": 818
+    },
+    {
+      "url": "https://tensorgami.com/portfolio.json",
+      "file": "portfolio.json",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
+      "received_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
+      "bytes": 53666
     },
     {
       "url": "https://tensorgami.com/404.html",
@@ -97,18 +127,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96",
-      "received_sha256": "8cc2ba3b7b95a1ecf8978a88d5f460675422cef4acb3e8380f77f2fe5b79609c",
+      "received_sha256": "f2dbea8549f1e6c11f8c6b7cb636dfe935da70e07af47986456af378a47f4bad",
       "bytes": 3403
-    },
-    {
-      "url": "https://tensorgami.com/editions.html",
-      "file": "editions.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b",
-      "received_sha256": "e0d0edc7d5c2318092b4d8d7aecc5468925531afc863cfc9e4a3efdf54c3960b",
-      "bytes": 10451
     },
     {
       "url": "https://tensorgami.com/mechanisms.html",
@@ -117,8 +137,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "0c5d751d8e665d7ffa0c1c8a6eab0272c284abda3a58e13eabb1f18fde27296f",
-      "received_sha256": "3ce2c7000c74311cf31ade7506e7704577e37504376eba26dcf168f42b9ec7b8",
+      "received_sha256": "aae3be761439ca42436a1d502919dd88f734ce5f596e226786608e6abef679e5",
       "bytes": 26813
+    },
+    {
+      "url": "https://tensorgami.com/papers.html",
+      "file": "papers.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd",
+      "received_sha256": "026b7c63d49ff282fb52428e97dd1b7a1bd3b417823583c0b39e16287f17b4ea",
+      "bytes": 10985
     },
     {
       "url": "https://tensorgami.com/play.html",
@@ -127,7 +157,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793",
-      "received_sha256": "33f2825c3a221b01f6130f7d2491e8a24c8aaebbc11d9c4cf610651614129268",
+      "received_sha256": "8b7bbd3396b118798696b3dc1ac4a9b41f86e5ea74f8f132e86b6426f1e92c9c",
       "bytes": 1321
     },
     {
@@ -141,24 +171,14 @@
       "bytes": 67
     },
     {
-      "url": "https://tensorgami.com/papers.html",
-      "file": "papers.html",
+      "url": "https://tensorgami.com/privacy.html",
+      "file": "privacy.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd",
-      "received_sha256": "6e09de3929ade34e439657efb8bf2127148853fa99435f05cdf180528f844fe4",
-      "bytes": 10985
-    },
-    {
-      "url": "https://tensorgami.com/portfolio.json",
-      "file": "portfolio.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
-      "received_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
-      "bytes": 53666
+      "expected_sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837",
+      "received_sha256": "f44665c9245a0433efbde8744f639f0de95c493f0bb7b212f00f1bfaa0849f9f",
+      "bytes": 6090
     },
     {
       "url": "https://tensorgami.com/styles.css",
@@ -171,16 +191,6 @@
       "bytes": 11004
     },
     {
-      "url": "https://tensorgami.com/privacy.html",
-      "file": "privacy.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837",
-      "received_sha256": "6728fdc7ca34770e7663f81513897c8378ac7f57d3e798961b9afb5ec38cb163",
-      "bytes": 6090
-    },
-    {
       "url": "https://tensorgami.com/sitemap.xml",
       "file": "sitemap.xml",
       "http_status": 200,
@@ -191,16 +201,6 @@
       "bytes": 2546
     },
     {
-      "url": "https://tensorgami.com/index.html",
-      "file": "index.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "8c2dda3137fed773ad9207ce57049e3600c1130177f8c823e209c3d5b461cac8",
-      "received_sha256": "c45542658be7cbaec421a0bfe28da04dcaca150ad532d6d414413c5a0f0cece5",
-      "bytes": 17411
-    },
-    {
       "url": "https://tensorgami.com/assets/analytics.js",
       "file": "assets/analytics.js",
       "http_status": 200,
@@ -209,6 +209,16 @@
       "expected_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
       "received_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
       "bytes": 3578
+    },
+    {
+      "url": "https://tensorgami.com/verification.html",
+      "file": "verification.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40",
+      "received_sha256": "69b925e5e513717d019d771b4655d58cf197ace209589ede9f74319dc5a24e80",
+      "bytes": 7689
     },
     {
       "url": "https://tensorgami.com/assets/derivative-exposition.css",
@@ -237,18 +247,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7",
-      "received_sha256": "575b5737c21d9c240c3695a597fc7c4252f419984620e7d648764d2e5c5e99d4",
+      "received_sha256": "aa554ba56fd5bc0f006a2490442472cc6e131ab011f5f4a2670c437418e503ef",
       "bytes": 1261
-    },
-    {
-      "url": "https://tensorgami.com/verification.html",
-      "file": "verification.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40",
-      "received_sha256": "22d856aa13f7490d68baaffeab5327152d82d89116d0a76f8c2cabde614df47c",
-      "bytes": 7689
     },
     {
       "url": "https://tensorgami.com/assets/interests.css",
@@ -261,14 +261,14 @@
       "bytes": 5788
     },
     {
-      "url": "https://tensorgami.com/assets/expositions.css",
-      "file": "assets/expositions.css",
+      "url": "https://tensorgami.com/assets/mathjax-LICENSE.txt",
+      "file": "assets/mathjax-LICENSE.txt",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d",
-      "received_sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d",
-      "bytes": 15931
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "received_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
     },
     {
       "url": "https://tensorgami.com/assets/math-typeset.css",
@@ -281,16 +281,6 @@
       "bytes": 2634
     },
     {
-      "url": "https://tensorgami.com/assets/styles.css",
-      "file": "assets/styles.css",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "received_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "bytes": 11004
-    },
-    {
       "url": "https://tensorgami.com/assets/personal.css",
       "file": "assets/personal.css",
       "http_status": 200,
@@ -301,14 +291,14 @@
       "bytes": 16611
     },
     {
-      "url": "https://tensorgami.com/assets/mathjax-LICENSE.txt",
-      "file": "assets/mathjax-LICENSE.txt",
+      "url": "https://tensorgami.com/assets/expositions.css",
+      "file": "assets/expositions.css",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "received_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358
+      "expected_sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
+      "received_sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
+      "bytes": 16640
     },
     {
       "url": "https://tensorgami.com/assets/privacy-controls.js",
@@ -331,24 +321,34 @@
       "bytes": 1260
     },
     {
+      "url": "https://tensorgami.com/assets/styles.css",
+      "file": "assets/styles.css",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
+      "received_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
+      "bytes": 11004
+    },
+    {
+      "url": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html",
+      "file": "essays/mathematical-life-in-the-age-of-ai.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b",
+      "received_sha256": "3eccac679fc39601404427d4487d0064ec3cbe9c502d25d516c640a99a868ed3",
+      "bytes": 150891
+    },
+    {
       "url": "https://tensorgami.com/essays/the-culture-of-mathematical-judgment.html",
       "file": "essays/the-culture-of-mathematical-judgment.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "c15bbf4507f26b4acf24765a72d255e8c44fc55448efbeaef571b65de8d2713c",
-      "received_sha256": "993e8881b2e3b090e4b4a118b5cc3d297f938823b1d2817b685c4d6bd5f065c6",
+      "received_sha256": "738e28c87023cec0fca05ddc6fbd16d6882fab9cb3b5a5e9713285909706002b",
       "bytes": 13834
-    },
-    {
-      "url": "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai.html",
-      "file": "essays/mathematical-understanding-in-the-age-of-ai.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "851aae15cdea5edafa0c979d74b618d797fd5f3121d1214c969cab8d7e60de75",
-      "received_sha256": "180e8731a2c9a887b73681250535cdc7a1d2cfe57b75b9163f530362fdca7f64",
-      "bytes": 6344
     },
     {
       "url": "https://tensorgami.com/essays/the-authority-of-a-vision.html",
@@ -357,7 +357,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "aa9ef5a95b2e1310c8f89617613a7401f12a8016c075cb96888c331be3c05489",
-      "received_sha256": "1f153aecc76d9235a1ff0ef9e8b172ee344847e196633f5d4683eb517e6555dc",
+      "received_sha256": "6d1647097218522d763e500ed523e30ec9c3379cf23a4c06d24de471a8e393c3",
       "bytes": 27201
     },
     {
@@ -367,28 +367,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "dd10e69272f960e0280bcffdfffeec5b7888ec8b1cf1aee23ff6cf225e4462dc",
-      "received_sha256": "644e888b40a8120e85fcb76b713cf3c6c22c4c686fc00f78e7f198d97c46ee5f",
+      "received_sha256": "93f7dcff07e1a6f267c256d03af6c7e28a337b6a21dda1557ae7184f037c03f2",
       "bytes": 65290
     },
     {
-      "url": "https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html",
-      "file": "essays/mathematical-life-in-the-age-of-ai.html",
+      "url": "https://tensorgami.com/essays/mathematical-understanding-in-the-age-of-ai.html",
+      "file": "essays/mathematical-understanding-in-the-age-of-ai.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b",
-      "received_sha256": "8fd6bd4c613be1227784b49df9e46cc968f742c25f2395d5a3ef7e5052a810b6",
-      "bytes": 150891
-    },
-    {
-      "url": "https://tensorgami.com/essays/what-a-new-proof-makes-possible.html",
-      "file": "essays/what-a-new-proof-makes-possible.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba",
-      "received_sha256": "94d5435313d0c603571238c783efe715c3f6bf75c19242a8423d23c8b5c83031",
-      "bytes": 218113
+      "expected_sha256": "851aae15cdea5edafa0c979d74b618d797fd5f3121d1214c969cab8d7e60de75",
+      "received_sha256": "791314d167119681ed6e86c2a179e89164af907be3fce304ff19869eebaa4ec8",
+      "bytes": 6344
     },
     {
       "url": "https://tensorgami.com/formalizations/README.md",
@@ -401,44 +391,34 @@
       "bytes": 2934
     },
     {
-      "url": "https://tensorgami.com/essays/when-accountability-stops-being-reciprocal.html",
-      "file": "essays/when-accountability-stops-being-reciprocal.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8",
-      "received_sha256": "9dba62793df7f31eb66ad619eec89e729f7010af146183c283251b6e69056f4f",
-      "bytes": 41671
-    },
-    {
       "url": "https://tensorgami.com/essays/when-a-description-becomes-a-verdict.html",
       "file": "essays/when-a-description-becomes-a-verdict.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "6bdfdd7ab3da7ea78d4fb3fc72214b0ce414bab3fdb9ea2da284d96987cbe9e9",
-      "received_sha256": "33b7e832c4b84faca20338c2b33500fc72806db21afad82f034436e55fbc7ff8",
+      "received_sha256": "06b6ebd1b5616c366d7a8e44bb788b34f78fc356053a8d480c575b0aa72632dc",
       "bytes": 89462
     },
     {
-      "url": "https://tensorgami.com/notes/extracting-first-prime.html",
-      "file": "notes/extracting-first-prime.html",
+      "url": "https://tensorgami.com/essays/what-a-new-proof-makes-possible.html",
+      "file": "essays/what-a-new-proof-makes-possible.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e",
-      "received_sha256": "1171a09cc54e22a1cc08b4f4eec13571d58e631aa3141783352a492af7ff5bea",
-      "bytes": 5406
+      "expected_sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba",
+      "received_sha256": "0bdd566d39ea1104604a1055328ac2061eb7775ee7774babbff1c1aee44cbb0d",
+      "bytes": 218113
     },
     {
-      "url": "https://tensorgami.com/notes/a-tree-is-a-discrete-poincare-lemma.html",
-      "file": "notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "url": "https://tensorgami.com/essays/when-accountability-stops-being-reciprocal.html",
+      "file": "essays/when-accountability-stops-being-reciprocal.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5",
-      "received_sha256": "019310ea09bc2b37293f068666ccaf47ee6992b3213975d642bb07da2a4a7fa1",
-      "bytes": 1377
+      "expected_sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8",
+      "received_sha256": "5a4ebad574f6dc6722b7a6f64124585cf1c2e494503f26bb5b3b4da19ccdb46f",
+      "bytes": 41671
     },
     {
       "url": "https://tensorgami.com/notes/galois-frobenius-composition-law.html",
@@ -447,18 +427,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "c573e8b0d091006bebd11c1cdded52b5aa04bd267efb18761a735a0ee5430957",
-      "received_sha256": "885e2a0f5d63152817c6505b2200178cfad8e857a698b2b5ed76ecc719878c7a",
+      "received_sha256": "cc69125c70386b0408e8846812e6b80e82c07d9a352fd28050b894933879e477",
       "bytes": 5881
     },
     {
-      "url": "https://tensorgami.com/notes/disjoint-decompositions.html",
-      "file": "notes/disjoint-decompositions.html",
+      "url": "https://tensorgami.com/notes/extracting-first-prime.html",
+      "file": "notes/extracting-first-prime.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5",
-      "received_sha256": "747e9e2c2a95958390316d46e81583e1cb1839e0f6031f9b1cc4fe6fab9feabb",
-      "bytes": 5055
+      "expected_sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e",
+      "received_sha256": "7c742bef40436ffff9e2784fac4dcac415e0004a0cc2a72ee7db4356fccf9df8",
+      "bytes": 5406
     },
     {
       "url": "https://tensorgami.com/notes/hartshorne-ii-5-14-18.html",
@@ -467,18 +447,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "4f8059a5d4d65f80131b2c68692f9cfca373ef9020ea6d3b30da1c23e383ed70",
-      "received_sha256": "2b0096e62af61f85ad1f246ade86c34e59562a60d9976231d13959e34bfe698a",
+      "received_sha256": "f697d97a48a6a240b05b6c0a0221c05a0280c63f5dc13c7cdf8e18fdb808981b",
       "bytes": 5398
-    },
-    {
-      "url": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
-      "file": "notes/ibm-ponder-this-2010.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6",
-      "received_sha256": "f3ef642870b9b68f2f3a0599197f3a4858796d25f0f360316c237640a890daee",
-      "bytes": 5262
     },
     {
       "url": "https://tensorgami.com/notes/lebesgue-riemann-integrability.html",
@@ -487,7 +457,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "ba947df6c0cd857ca840719e0b02ddf2dcedc44fcc8ed28c472d08be5fcf8531",
-      "received_sha256": "b904864b946202b00219f100191a99096126fcaf2a1053143ed1d6930cc25b42",
+      "received_sha256": "23177bff13d88854b442ecb7d3005fe63f3aa5d9650c979a813ee532a2191ced",
       "bytes": 5775
     },
     {
@@ -497,28 +467,38 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "2ac8f04242bb0459c2441aa0a7a5ef78a092389fc410432c4c0496cfa9294a47",
-      "received_sha256": "1dabf3dba096e036059cbde791edece5c680642e846fabca0d1a48e73e6ecc3e",
+      "received_sha256": "e3caab2ae3c91521a317e9cd12bfa2a85bf676ae8ae6da763a833ad02904bc07",
       "bytes": 5924
     },
     {
-      "url": "https://tensorgami.com/notes/products-preserve-riemann-integrability.html",
-      "file": "notes/products-preserve-riemann-integrability.html",
+      "url": "https://tensorgami.com/notes/ibm-ponder-this-2010.html",
+      "file": "notes/ibm-ponder-this-2010.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "9468015b3b575c29a63aa04f7f749b1a82df6c1d217c1c65cdba42bffb6ddee0",
-      "received_sha256": "9ff5321c1628dcdf828756c83c24aca80efdf1debace962ac1902823396fb6a1",
-      "bytes": 166079
+      "expected_sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6",
+      "received_sha256": "1fe48efc06c535ff325e1a430c17ec9b072d61510a45c41f8a720ae9398d0f0d",
+      "bytes": 5262
     },
     {
-      "url": "https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html",
-      "file": "notes/selected-problems-discrete-mathematics-analysis.html",
+      "url": "https://tensorgami.com/notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "file": "notes/a-tree-is-a-discrete-poincare-lemma.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12",
-      "received_sha256": "4d93a2a666fbfd61bc7ffb50f6d17af9a59aac04a82ad4dde515fa65b84eb8e0",
-      "bytes": 12625
+      "expected_sha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5",
+      "received_sha256": "f5dfe3b9bd2202db7a8494c8375761daf33b21bd6cf8b72a2178956563c5c24d",
+      "bytes": 1377
+    },
+    {
+      "url": "https://tensorgami.com/notes/disjoint-decompositions.html",
+      "file": "notes/disjoint-decompositions.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5",
+      "received_sha256": "c59e894465a17fdb4b035b85ab90b3afcacf2b49f50ccef9aa69ef695c7aacfe",
+      "bytes": 5055
     },
     {
       "url": "https://tensorgami.com/notes/separated-polynomial-divisibility.html",
@@ -527,18 +507,28 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "9ec1bffe8015a316a7beebc30aaca5c5273642f116bb63d09c0f401cd1f675ed",
-      "received_sha256": "6b36a2cc0b34bb7423fba06b81ffed15896b828733fd6eb5396af274bc67d32f",
+      "received_sha256": "ce7b08be0f7130cfd0e7c695010c598ef4b5105dbaf3577a7ba9f5241b814fa2",
       "bytes": 5710
     },
     {
-      "url": "https://tensorgami.com/play/cube-patterns.html",
-      "file": "play/cube-patterns.html",
+      "url": "https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html",
+      "file": "notes/fourier-symmetry-and-reconstruction.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848",
-      "received_sha256": "aa9b9fddcab67c644f897c5b15046ca4f8eb8fd6529659bf19f3feddd53e7bac",
-      "bytes": 6336
+      "expected_sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0",
+      "received_sha256": "5e04ce9bcb4848e3be8b1542d8ee3fb1b598e2c03e9fa76f8bcc5af182c05c5c",
+      "bytes": 5414047
+    },
+    {
+      "url": "https://tensorgami.com/notes/products-preserve-riemann-integrability.html",
+      "file": "notes/products-preserve-riemann-integrability.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "9468015b3b575c29a63aa04f7f749b1a82df6c1d217c1c65cdba42bffb6ddee0",
+      "received_sha256": "e63aae07dc53d449dc2aea0d3aa91418f28f36d2255e9c211922fe091e97a464",
+      "bytes": 166079
     },
     {
       "url": "https://tensorgami.com/assets/essays/mathematical-life-in-the-age-of-ai.md",
@@ -551,14 +541,14 @@
       "bytes": 72288
     },
     {
-      "url": "https://tensorgami.com/notes/when-a-formal-logarithm-fails.html",
-      "file": "notes/when-a-formal-logarithm-fails.html",
+      "url": "https://tensorgami.com/play/cube-patterns.html",
+      "file": "play/cube-patterns.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "96e84e3b228ee38450923da36f1f1e595caf731ad05e0647d87f46939e34aeef",
-      "received_sha256": "685228e920513ae27d4ef92c54c383d6dc3208336cd031785bb3c3a5b3ad738c",
-      "bytes": 884244
+      "expected_sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848",
+      "received_sha256": "96bb2a8ffdbb7d0fc6d9d21f570f62b37aa67bdd3bec4e1dae8aa0c49f1bcb41",
+      "bytes": 6336
     },
     {
       "url": "https://tensorgami.com/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
@@ -581,14 +571,14 @@
       "bytes": 38108
     },
     {
-      "url": "https://tensorgami.com/notes/fourier-symmetry-and-reconstruction.html",
-      "file": "notes/fourier-symmetry-and-reconstruction.html",
+      "url": "https://tensorgami.com/notes/selected-problems-discrete-mathematics-analysis.html",
+      "file": "notes/selected-problems-discrete-mathematics-analysis.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0",
-      "received_sha256": "909f38fd4f605cbb4ada063c56f20c6492a334788b160a5598903ebfaadacdef",
-      "bytes": 5414047
+      "expected_sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12",
+      "received_sha256": "8a84650e6c8a6255baaf92b72fbc2e8cb7dec187282d3f6a1341d826ba1e0f7a",
+      "bytes": 12625
     },
     {
       "url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.pdf",
@@ -601,6 +591,26 @@
       "bytes": 148272
     },
     {
+      "url": "https://tensorgami.com/notes/what-a-derivative-retains.html",
+      "file": "notes/what-a-derivative-retains.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564",
+      "received_sha256": "7b0c720cf1ace480269f4b14dd3dc9edaf264fa44a14709168c1f02a9eff1c55",
+      "bytes": 3553832
+    },
+    {
+      "url": "https://tensorgami.com/notes/when-a-formal-logarithm-fails.html",
+      "file": "notes/when-a-formal-logarithm-fails.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "96e84e3b228ee38450923da36f1f1e595caf731ad05e0647d87f46939e34aeef",
+      "received_sha256": "518219ce01a3989e8d845829e5025696fe1ff5c104d493fe9a7e5b1bf5558c4c",
+      "bytes": 884244
+    },
+    {
       "url": "https://tensorgami.com/assets/essays/when-a-description-becomes-a-verdict.md",
       "file": "assets/essays/when-a-description-becomes-a-verdict.md",
       "http_status": 200,
@@ -609,16 +619,6 @@
       "expected_sha256": "ac64faccbf9ded9cd326e2dd1e0631cc97f7c05884772bf3d7052e67c8ec4da1",
       "received_sha256": "ac64faccbf9ded9cd326e2dd1e0631cc97f7c05884772bf3d7052e67c8ec4da1",
       "bytes": 12124
-    },
-    {
-      "url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.md",
-      "file": "assets/essays/the-culture-of-mathematical-judgment.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
-      "received_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
-      "bytes": 45747
     },
     {
       "url": "https://tensorgami.com/assets/essays/the-performance-of-depth.md",
@@ -631,14 +631,14 @@
       "bytes": 57344
     },
     {
-      "url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.md",
-      "file": "assets/essays/when-accountability-stops-being-reciprocal.md",
+      "url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.md",
+      "file": "assets/essays/the-culture-of-mathematical-judgment.md",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
-      "received_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
-      "bytes": 34425
+      "expected_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
+      "received_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
+      "bytes": 45747
     },
     {
       "url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.pdf",
@@ -651,34 +651,14 @@
       "bytes": 140240
     },
     {
-      "url": "https://tensorgami.com/notes/what-a-derivative-retains.html",
-      "file": "notes/what-a-derivative-retains.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564",
-      "received_sha256": "1202831765d3c285dff03425489df890c8fe544b5e35cbd93140610e237fd932",
-      "bytes": 3553832
-    },
-    {
       "url": "https://tensorgami.com/notes/what-a-boundary-map-can-prove.html",
       "file": "notes/what-a-boundary-map-can-prove.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079",
-      "received_sha256": "d7297ebfbdb7e3da9dfddf225e372595daf0bf25594259da4254ecda70bde97a",
+      "received_sha256": "f19d0421082af9c8a1bfbb47cc0d203005cf08365af65fcf9ba7ad4da5e86e8a",
       "bytes": 6249713
-    },
-    {
-      "url": "https://tensorgami.com/assets/gaming/overwatch-2-diamond-5-support.jpg",
-      "file": "assets/gaming/overwatch-2-diamond-5-support.jpg",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
-      "received_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
-      "bytes": 113142
     },
     {
       "url": "https://tensorgami.com/assets/expositions/when-a-formal-logarithm-fails.md",
@@ -701,24 +681,34 @@
       "bytes": 96716
     },
     {
-      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
-      "file": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "url": "https://tensorgami.com/assets/gaming/overwatch-2-diamond-5-support.jpg",
+      "file": "assets/gaming/overwatch-2-diamond-5-support.jpg",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
-      "received_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
-      "bytes": 9261
+      "expected_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
+      "received_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
+      "bytes": 113142
     },
     {
-      "url": "https://tensorgami.com/assets/gaming/overwatch-riemannroch-master-3508.jpg",
-      "file": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
+      "url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.md",
+      "file": "assets/essays/when-accountability-stops-being-reciprocal.md",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
-      "received_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
-      "bytes": 4643163
+      "expected_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
+      "received_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
+      "bytes": 34425
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-hearts.jpg",
+      "file": "assets/puzzles/cube-hearts.jpg",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13",
+      "received_sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13",
+      "bytes": 2679344
     },
     {
       "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figure-held.jpg",
@@ -741,24 +731,14 @@
       "bytes": 2365168
     },
     {
-      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lake-manifest.json",
-      "file": "formalizations/disjoint-decomposition/lake-manifest.json",
+      "url": "https://tensorgami.com/assets/gaming/overwatch-riemannroch-master-3508.jpg",
+      "file": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "bytes": 3279
-    },
-    {
-      "url": "https://tensorgami.com/assets/puzzles/cube-hearts.jpg",
-      "file": "assets/puzzles/cube-hearts.jpg",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13",
-      "received_sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13",
-      "bytes": 2679344
+      "expected_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
+      "received_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
+      "bytes": 4643163
     },
     {
       "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lakefile.toml",
@@ -771,34 +751,14 @@
       "bytes": 363
     },
     {
-      "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figures-front-top.jpg",
-      "file": "assets/puzzles/cube-pixel-figures-front-top.jpg",
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lake-manifest.json",
+      "file": "formalizations/disjoint-decomposition/lake-manifest.json",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c",
-      "received_sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c",
-      "bytes": 2881498
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/README.md",
-      "file": "formalizations/disjoint-decomposition/README.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
-      "received_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
-      "bytes": 273
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
-      "file": "formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0",
-      "received_sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0",
-      "bytes": 20483
+      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "bytes": 3279
     },
     {
       "url": "https://tensorgami.com/formalizations/disjoint-decomposition/lean-toolchain",
@@ -811,6 +771,26 @@
       "bytes": 30
     },
     {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "file": "formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0",
+      "received_sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0",
+      "bytes": 20483
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/README.md",
+      "file": "formalizations/disjoint-decomposition/README.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
+      "received_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
+      "bytes": 273
+    },
+    {
       "url": "https://tensorgami.com/formalizations/extracting-first-prime/lake-manifest.json",
       "file": "formalizations/extracting-first-prime/lake-manifest.json",
       "http_status": 200,
@@ -819,16 +799,6 @@
       "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
       "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
       "bytes": 3279
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/extracting-first-prime/lean-toolchain",
-      "file": "formalizations/extracting-first-prime/lean-toolchain",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "bytes": 30
     },
     {
       "url": "https://tensorgami.com/formalizations/extracting-first-prime/README.md",
@@ -851,6 +821,26 @@
       "bytes": 360
     },
     {
+      "url": "https://tensorgami.com/formalizations/extracting-first-prime/lean-toolchain",
+      "file": "formalizations/extracting-first-prime/lean-toolchain",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "bytes": 30
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "file": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
+      "received_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
+      "bytes": 69041
+    },
+    {
       "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lake-manifest.json",
       "file": "formalizations/galois-frobenius-composition-law/lake-manifest.json",
       "http_status": 200,
@@ -871,16 +861,6 @@
       "bytes": 387
     },
     {
-      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
-      "file": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
-      "received_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
-      "bytes": 69041
-    },
-    {
       "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/README.md",
       "file": "formalizations/galois-frobenius-composition-law/README.md",
       "http_status": 200,
@@ -889,26 +869,6 @@
       "expected_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
       "received_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
       "bytes": 560
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lean-toolchain",
-      "file": "formalizations/galois-frobenius-composition-law/lean-toolchain",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "bytes": 30
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lean-toolchain",
-      "file": "formalizations/ibm-ponder-this-2010/lean-toolchain",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "bytes": 30
     },
     {
       "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
@@ -921,16 +881,6 @@
       "bytes": 27
     },
     {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lakefile.toml",
-      "file": "formalizations/ibm-ponder-this-2010/lakefile.toml",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
-      "received_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
-      "bytes": 290
-    },
-    {
       "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lake-manifest.json",
       "file": "formalizations/ibm-ponder-this-2010/lake-manifest.json",
       "http_status": 200,
@@ -941,14 +891,54 @@
       "bytes": 3271
     },
     {
-      "url": "https://tensorgami.com/formalizations/packages/galois-frobenius-composition-law.zip",
-      "file": "formalizations/packages/galois-frobenius-composition-law.zip",
+      "url": "https://tensorgami.com/formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "file": "formalizations/galois-frobenius-composition-law/lean-toolchain",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "8a4dfb77612f3f97bb403592a05f36465296f6f8436b572e77c9b85753b3f4da",
-      "received_sha256": "8a4dfb77612f3f97bb403592a05f36465296f6f8436b572e77c9b85753b3f4da",
-      "bytes": 16077
+      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "bytes": 30
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "file": "formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
+      "received_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
+      "bytes": 290
+    },
+    {
+      "url": "https://tensorgami.com/assets/puzzles/cube-pixel-figures-front-top.jpg",
+      "file": "assets/puzzles/cube-pixel-figures-front-top.jpg",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c",
+      "received_sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c",
+      "bytes": 2881498
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/disjoint-decomposition.zip",
+      "file": "formalizations/packages/disjoint-decomposition.zip",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
+      "received_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
+      "bytes": 5940
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "file": "formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "bytes": 30
     },
     {
       "url": "https://tensorgami.com/formalizations/packages/extracting-first-prime.zip",
@@ -961,24 +951,44 @@
       "bytes": 7723
     },
     {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/README.md",
-      "file": "formalizations/ibm-ponder-this-2010/README.md",
+      "url": "https://tensorgami.com/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "file": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
-      "received_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
-      "bytes": 1000
+      "expected_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
+      "received_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
+      "bytes": 9261
     },
     {
-      "url": "https://tensorgami.com/formalizations/packages/disjoint-decomposition.zip",
-      "file": "formalizations/packages/disjoint-decomposition.zip",
+      "url": "https://tensorgami.com/formalizations/packages/pointwise-weighting.zip",
+      "file": "formalizations/packages/pointwise-weighting.zip",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
-      "received_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
-      "bytes": 5940
+      "expected_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
+      "received_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
+      "bytes": 10351
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/packages/galois-frobenius-composition-law.zip",
+      "file": "formalizations/packages/galois-frobenius-composition-law.zip",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8a4dfb77612f3f97bb403592a05f36465296f6f8436b572e77c9b85753b3f4da",
+      "received_sha256": "8a4dfb77612f3f97bb403592a05f36465296f6f8436b572e77c9b85753b3f4da",
+      "bytes": 16077
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lake-manifest.json",
+      "file": "formalizations/pointwise-weighting/lake-manifest.json",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b",
+      "received_sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b",
+      "bytes": 3237
     },
     {
       "url": "https://tensorgami.com/formalizations/packages/ibm-ponder-this-2010.zip",
@@ -1001,26 +1011,6 @@
       "bytes": 7167
     },
     {
-      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lake-manifest.json",
-      "file": "formalizations/pointwise-weighting/lake-manifest.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b",
-      "received_sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b",
-      "bytes": 3237
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/packages/pointwise-weighting.zip",
-      "file": "formalizations/packages/pointwise-weighting.zip",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
-      "received_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
-      "bytes": 10351
-    },
-    {
       "url": "https://tensorgami.com/formalizations/pointwise-weighting/lean-toolchain",
       "file": "formalizations/pointwise-weighting/lean-toolchain",
       "http_status": 200,
@@ -1031,24 +1021,14 @@
       "bytes": 26
     },
     {
-      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting.lean",
-      "file": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lakefile.toml",
+      "file": "formalizations/pointwise-weighting/lakefile.toml",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
-      "received_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
-      "bytes": 33
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lake-manifest.json",
-      "file": "formalizations/separated-polynomial-differences/lake-manifest.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "bytes": 3279
+      "expected_sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3",
+      "received_sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3",
+      "bytes": 401
     },
     {
       "url": "https://tensorgami.com/formalizations/pointwise-weighting/README.md",
@@ -1061,6 +1041,36 @@
       "bytes": 888
     },
     {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/README.md",
+      "file": "formalizations/ibm-ponder-this-2010/README.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
+      "received_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
+      "bytes": 1000
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lake-manifest.json",
+      "file": "formalizations/separated-polynomial-differences/lake-manifest.json",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "bytes": 3279
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "file": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
+      "received_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
+      "bytes": 33
+    },
+    {
       "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lean-toolchain",
       "file": "formalizations/separated-polynomial-differences/lean-toolchain",
       "http_status": 200,
@@ -1069,16 +1079,6 @@
       "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
       "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
       "bytes": 30
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lakefile.toml",
-      "file": "formalizations/separated-polynomial-differences/lakefile.toml",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e",
-      "received_sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e",
-      "bytes": 390
     },
     {
       "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/README.md",
@@ -1101,14 +1101,14 @@
       "bytes": 15380
     },
     {
-      "url": "https://tensorgami.com/formalizations/pointwise-weighting/lakefile.toml",
-      "file": "formalizations/pointwise-weighting/lakefile.toml",
+      "url": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "file": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3",
-      "received_sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3",
-      "bytes": 401
+      "expected_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
+      "received_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
+      "bytes": 202443
     },
     {
       "url": "https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
@@ -1121,44 +1121,14 @@
       "bytes": 416965
     },
     {
-      "url": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
-      "file": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "url": "https://tensorgami.com/formalizations/separated-polynomial-differences/lakefile.toml",
+      "file": "formalizations/separated-polynomial-differences/lakefile.toml",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
-      "received_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
-      "bytes": 202443
-    },
-    {
-      "url": "https://tensorgami.com/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
-      "file": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
-      "received_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
-      "bytes": 483829
-    },
-    {
-      "url": "https://tensorgami.com/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
-      "file": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
-      "received_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
-      "bytes": 326988
-    },
-    {
-      "url": "https://tensorgami.com/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
-      "file": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
-      "received_sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
-      "bytes": 534796
+      "expected_sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e",
+      "received_sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e",
+      "bytes": 390
     },
     {
       "url": "https://tensorgami.com/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
@@ -1181,24 +1151,24 @@
       "bytes": 275246
     },
     {
-      "url": "https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
-      "file": "pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "url": "https://tensorgami.com/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "file": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416",
-      "received_sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416",
-      "bytes": 319331
+      "expected_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
+      "received_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
+      "bytes": 483829
     },
     {
-      "url": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
-      "file": "pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "url": "https://tensorgami.com/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "file": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563",
-      "received_sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563",
-      "bytes": 185467
+      "expected_sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
+      "received_sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
+      "bytes": 534796
     },
     {
       "url": "https://tensorgami.com/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
@@ -1211,24 +1181,14 @@
       "bytes": 126781
     },
     {
-      "url": "https://tensorgami.com/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
-      "file": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "url": "https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "file": "pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
-      "received_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
-      "bytes": 303594
-    },
-    {
-      "url": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
-      "file": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
-      "received_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
-      "bytes": 311420
+      "expected_sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416",
+      "received_sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416",
+      "bytes": 319331
     },
     {
       "url": "https://tensorgami.com/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
@@ -1241,6 +1201,46 @@
       "bytes": 208287
     },
     {
+      "url": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "file": "pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563",
+      "received_sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563",
+      "bytes": 185467
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "file": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
+      "received_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
+      "bytes": 326988
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "file": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
+      "received_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
+      "bytes": 311420
+    },
+    {
+      "url": "https://tensorgami.com/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "file": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
+      "received_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
+      "bytes": 303594
+    },
+    {
       "url": "https://tensorgami.com/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
       "file": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
       "http_status": 200,
@@ -1249,26 +1249,6 @@
       "expected_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
       "received_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
       "bytes": 172310
-    },
-    {
-      "url": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
-      "file": "pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
-      "received_sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
-      "bytes": 310966
-    },
-    {
-      "url": "https://tensorgami.com/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
-      "file": "tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50",
-      "received_sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50",
-      "bytes": 36441
     },
     {
       "url": "https://tensorgami.com/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
@@ -1281,6 +1261,16 @@
       "bytes": 21547
     },
     {
+      "url": "https://tensorgami.com/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "file": "tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50",
+      "received_sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50",
+      "bytes": 36441
+    },
+    {
       "url": "https://tensorgami.com/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
       "file": "tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
       "http_status": 200,
@@ -1289,116 +1279,6 @@
       "expected_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
       "received_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
       "bytes": 84280
-    },
-    {
-      "url": "https://tensorgami.com/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
-      "file": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
-      "received_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
-      "bytes": 43753
-    },
-    {
-      "url": "https://tensorgami.com/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
-      "file": "tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff",
-      "received_sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff",
-      "bytes": 19719
-    },
-    {
-      "url": "https://tensorgami.com/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
-      "file": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
-      "received_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
-      "bytes": 42737
-    },
-    {
-      "url": "https://tensorgami.com/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
-      "file": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
-      "received_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
-      "bytes": 143896
-    },
-    {
-      "url": "https://tensorgami.com/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
-      "file": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
-      "received_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
-      "bytes": 13328
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
-      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758",
-      "received_sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758",
-      "bytes": 4085
-    },
-    {
-      "url": "https://tensorgami.com/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
-      "file": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
-      "received_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
-      "bytes": 4124
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
-      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
-      "received_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
-      "bytes": 6449
-    },
-    {
-      "url": "https://tensorgami.com/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
-      "file": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
-      "received_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
-      "bytes": 10176
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
-      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
-      "received_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
-      "bytes": 10625
-    },
-    {
-      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
-      "file": "formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226",
-      "received_sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226",
-      "bytes": 28388
     },
     {
       "url": "https://tensorgami.com/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
@@ -1411,44 +1291,144 @@
       "bytes": 136647
     },
     {
+      "url": "https://tensorgami.com/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "file": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
+      "received_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
+      "bytes": 143896
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "file": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
+      "received_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
+      "bytes": 43753
+    },
+    {
+      "url": "https://tensorgami.com/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "file": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
+      "received_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
+      "bytes": 42737
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "file": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
+      "received_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
+      "bytes": 10176
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "file": "tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff",
+      "received_sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff",
+      "bytes": 19719
+    },
+    {
+      "url": "https://tensorgami.com/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "file": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
+      "received_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
+      "bytes": 13328
+    },
+    {
+      "url": "https://tensorgami.com/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "file": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
+      "received_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
+      "bytes": 4124
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
+      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758",
+      "received_sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758",
+      "bytes": 4085
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
+      "received_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
+      "bytes": 10625
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
+      "received_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
+      "bytes": 6449
+    },
+    {
+      "url": "https://tensorgami.com/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "file": "formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226",
+      "received_sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226",
+      "bytes": 28388
+    },
+    {
       "url": "https://tensorgami.com/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
       "file": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b",
-      "received_sha256": "9a3a87628cb028902059df7d7dfeaa397be2ec1fee4099b98379edbedd664d35",
+      "received_sha256": "2573bf8bc081499a65397357100734415d95d11d127b17ec00f9ace180b421ec",
       "bytes": 1427
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/favicon.svg",
-      "file": "favicon.svg",
+      "url": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "file": "pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d",
-      "received_sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d",
-      "bytes": 150
+      "expected_sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
+      "received_sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
+      "bytes": 310966
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/editions.html",
-      "file": "editions.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/expositions.html",
+      "file": "expositions.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b",
-      "received_sha256": "34270be4daf02d7812f592ddfb2f39b3f9ac4f1ef7423ce443e60979c23ff3fc",
-      "bytes": 10451
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/interests.html",
-      "file": "interests.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876",
-      "received_sha256": "613430f9652974be43d5f9a2fd6242f5d731eb988c45cbd84a7f786a1adc3894",
-      "bytes": 6200
+      "expected_sha256": "d157c7d9999a40cc7257568d52ae4b088b095353e5edb76b01e469b23c8ec45a",
+      "received_sha256": "9dee7c4f0210d8305353d78c42b1eaa67069c275a85af60c9c8ac5abe1390d5a",
+      "bytes": 23539
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays.html",
@@ -1457,8 +1437,28 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26",
-      "received_sha256": "239b9728fa1c6f76aa44caf6b2c8566fc730b717868a537f8cee09ec80e0d322",
+      "received_sha256": "899ecd23ff1ae65cc2293dcf2567c3799cee541f9b9c20de4c4904c5ab91b293",
       "bytes": 8084
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/interests.html",
+      "file": "interests.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876",
+      "received_sha256": "f4325809b261f7bfd0c845f2f82e155015aa85d0bc22af951ef4a8103e33f124",
+      "bytes": 6200
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/index.html",
+      "file": "index.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "956259d78845a8e616a1ed7da9f4faffe90ff21fa9d223e235c5f396da2e0b85",
+      "received_sha256": "dcc7b4dd14d095dd7e0ea5898f8fcb6e80ced8698403ac2fda83228c52ea7eb4",
+      "bytes": 17573
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/license.html",
@@ -1467,8 +1467,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab",
-      "received_sha256": "37c671b67d9d33d5a8740ab76118cfa169a7efd31164950475d04ec62ba70948",
+      "received_sha256": "6fe9e8f8ef7a2c66c1400c932c3550cdf09474831ac97c373711c8acfa7fe048",
       "bytes": 3843
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/editions.html",
+      "file": "editions.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b",
+      "received_sha256": "07ff3ee83931ba58a7afc4b2120ac0d047f727fe42cf69d9993448f195a35a6a",
+      "bytes": 10451
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/LICENSE.md",
@@ -1481,16 +1491,6 @@
       "bytes": 818
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/index.html",
-      "file": "index.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "8c2dda3137fed773ad9207ce57049e3600c1130177f8c823e209c3d5b461cac8",
-      "received_sha256": "c7a3365b4d513382545d3e5f8f300d24b541104339cd37d9437b6932b2ec0e75",
-      "bytes": 17411
-    },
-    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/llms.txt",
       "file": "llms.txt",
       "http_status": 200,
@@ -1501,14 +1501,14 @@
       "bytes": 2803
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/404.html",
-      "file": "404.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/mechanisms.html",
+      "file": "mechanisms.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96",
-      "received_sha256": "bcd938d4fafcd2415e24ca52310fe200c62cc15ea0d932714f1ba0f73c54f8da",
-      "bytes": 3403
+      "expected_sha256": "0c5d751d8e665d7ffa0c1c8a6eab0272c284abda3a58e13eabb1f18fde27296f",
+      "received_sha256": "5f8a609dfe14f42a569070c30567b21917b410c38abbee1e0c16468be6f85ee7",
+      "bytes": 26813
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/about.html",
@@ -1517,28 +1517,38 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "68745d592e6e318e81e5f96a3bfd9ad7778ed436dd657269096fd2ec98ab6200",
-      "received_sha256": "3e6daa2f436dab64f0ab9aa968d8937b979d6a4894952f7595ae2621059d51a7",
+      "received_sha256": "267a773f69fc4a03c3157bce4e0623383d5fb3493a58052c8f52030e2b37a486",
       "bytes": 8106
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/expositions.html",
-      "file": "expositions.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/papers.html",
+      "file": "papers.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "d157c7d9999a40cc7257568d52ae4b088b095353e5edb76b01e469b23c8ec45a",
-      "received_sha256": "c96094b2f5142b45668b3219482133ab97f2575e7e6c376012ae22a8442992c3",
-      "bytes": 23539
+      "expected_sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd",
+      "received_sha256": "181aa8b69471ce227aba9d02f417671a95e4cc30d5f28f2f5848e21fe68a221f",
+      "bytes": 10985
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/mechanisms.html",
-      "file": "mechanisms.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/play.html",
+      "file": "play.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "0c5d751d8e665d7ffa0c1c8a6eab0272c284abda3a58e13eabb1f18fde27296f",
-      "received_sha256": "cda1b91bc3a22fb549321c543ae8e29d8e13ec1f6048ea72b53c84f84f1012aa",
-      "bytes": 26813
+      "expected_sha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793",
+      "received_sha256": "f0b5af404f790c18cb0b6fa1d76e2cc1d16e5e24461dd0ac6df59b1ba0fac65e",
+      "bytes": 1321
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/404.html",
+      "file": "404.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96",
+      "received_sha256": "b18686bf5f6868a2a119123ed63a934d6a70cca367a468738759449d3d7dafb6",
+      "bytes": 3403
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/robots.txt",
@@ -1551,14 +1561,14 @@
       "bytes": 67
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/sitemap.xml",
-      "file": "sitemap.xml",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/portfolio.json",
+      "file": "portfolio.json",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6",
-      "received_sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6",
-      "bytes": 2546
+      "expected_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
+      "received_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
+      "bytes": 53666
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/styles.css",
@@ -1571,14 +1581,14 @@
       "bytes": 11004
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/papers.html",
-      "file": "papers.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/sitemap.xml",
+      "file": "sitemap.xml",
       "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
+      "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd",
-      "received_sha256": "8348bf06adee75978e2dd9dc13202793cc8093038229be6f87f838c63361c654",
-      "bytes": 10985
+      "expected_sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6",
+      "received_sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6",
+      "bytes": 2546
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/privacy.html",
@@ -1587,28 +1597,28 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837",
-      "received_sha256": "b0c2035ebfcf82c688965e6a5b85eb9450712c48e78e756bb9644023b4513e99",
+      "received_sha256": "0b588e14646ba922e311179a2579d5c19a0316ad951c4eb8cfa2fe46e639ec5d",
       "bytes": 6090
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/play.html",
-      "file": "play.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/verification.html",
+      "file": "verification.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793",
-      "received_sha256": "3a345eed776df1236a6c408ae0550c935d0bfd09c5b1236257eb7f1b90990eb3",
-      "bytes": 1321
+      "expected_sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40",
+      "received_sha256": "9898ec1968c1590e9eb8af7f3dba62d7f0f07f5acecebc0d66be4c7944c94ace",
+      "bytes": 7689
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/derivative-exposition.js",
-      "file": "assets/derivative-exposition.js",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/analytics.js",
+      "file": "assets/analytics.js",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455",
-      "received_sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455",
-      "bytes": 5508
+      "expected_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
+      "received_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
+      "bytes": 3578
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/derivative-exposition.css",
@@ -1621,14 +1631,24 @@
       "bytes": 8182
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/verification.html",
-      "file": "verification.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/about/index.html",
+      "file": "about/index.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40",
-      "received_sha256": "61dc7877442fbc48e790156cceb90ec8c688b19415d371f5c4c008d5f0a7c8b4",
-      "bytes": 7689
+      "expected_sha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7",
+      "received_sha256": "8d47335c36023d4ba597a7528d8f9d30fbee0ea837bc2b33bbb60c891b3ef624",
+      "bytes": 1261
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/derivative-exposition.js",
+      "file": "assets/derivative-exposition.js",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455",
+      "received_sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455",
+      "bytes": 5508
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/interests.css",
@@ -1646,29 +1666,9 @@
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d",
-      "received_sha256": "2ec5ad41af41d5bebf4b7ad7f14d2c8e84bb800c0d2fc5323a75842027e7739d",
-      "bytes": 15931
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/analytics.js",
-      "file": "assets/analytics.js",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
-      "received_sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
-      "bytes": 3578
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/about/index.html",
-      "file": "about/index.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7",
-      "received_sha256": "13935700ca8d43b0010b41ef88c2e89be6e9748f203cc0e2eb5dbfd8bf72d7ba",
-      "bytes": 1261
+      "expected_sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
+      "received_sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
+      "bytes": 16640
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/math-typeset.css",
@@ -1701,24 +1701,14 @@
       "bytes": 2328
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/mathjax-LICENSE.txt",
-      "file": "assets/mathjax-LICENSE.txt",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/styles.css",
+      "file": "assets/styles.css",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "received_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "bytes": 11358
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/portfolio.json",
-      "file": "portfolio.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
-      "received_sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
-      "bytes": 53666
+      "expected_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
+      "received_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
+      "bytes": 11004
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/reading-entry.js",
@@ -1731,14 +1721,24 @@
       "bytes": 1260
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/mathematical-life-in-the-age-of-ai.html",
-      "file": "essays/mathematical-life-in-the-age-of-ai.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/mathjax-LICENSE.txt",
+      "file": "assets/mathjax-LICENSE.txt",
       "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
+      "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b",
-      "received_sha256": "6936bdec8f222884b5d9f218139514926c4aaadaa2e498fc651f3b16eeddfab6",
-      "bytes": 150891
+      "expected_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "received_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/favicon.svg",
+      "file": "favicon.svg",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d",
+      "received_sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d",
+      "bytes": 150
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/mathematical-understanding-in-the-age-of-ai.html",
@@ -1747,8 +1747,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "851aae15cdea5edafa0c979d74b618d797fd5f3121d1214c969cab8d7e60de75",
-      "received_sha256": "14f56909cf74218221400406db917087d9058d53ed6a3f1076fcd19f22ee1401",
+      "received_sha256": "5241d161b38fe4a532615d19e89387da49c977ea840f22a92aa811a7fd284466",
       "bytes": 6344
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/mathematical-life-in-the-age-of-ai.html",
+      "file": "essays/mathematical-life-in-the-age-of-ai.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b",
+      "received_sha256": "58444d7db5e4e88c1d5e50895a3953ff240aa3935975e5ad9ed90d1548045763",
+      "bytes": 150891
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/the-culture-of-mathematical-judgment.html",
@@ -1757,8 +1767,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "c15bbf4507f26b4acf24765a72d255e8c44fc55448efbeaef571b65de8d2713c",
-      "received_sha256": "ebce04c8a6a8fcb99000dfb72a6a49e6f8b5042532e2c7f600b98b11abfcf1dc",
+      "received_sha256": "3310909e9fab90a17f2a8c1c5b1aae9fdcf09d49c231a4e2a58084e8c91b47fa",
       "bytes": 13834
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/what-a-new-proof-makes-possible.html",
+      "file": "essays/what-a-new-proof-makes-possible.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba",
+      "received_sha256": "e43a4af6e36c4d65e4f5af7545eeb0c30806ee31c1fe90b4236d1693a57b47eb",
+      "bytes": 218113
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/the-performance-of-depth.html",
@@ -1767,7 +1787,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "dd10e69272f960e0280bcffdfffeec5b7888ec8b1cf1aee23ff6cf225e4462dc",
-      "received_sha256": "7583adfb7ef5c24c8fc562bfabee6c3075f11db5a393034a6591444a89f57755",
+      "received_sha256": "8283fbef1123b745e0f4eeddbe10ccca05618f7b99b81fcaead1f72953d8b01d",
       "bytes": 65290
     },
     {
@@ -1777,28 +1797,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "aa9ef5a95b2e1310c8f89617613a7401f12a8016c075cb96888c331be3c05489",
-      "received_sha256": "49492e50e3e213edd1314dd38df5e3df0aeb71e92a74d2e522b3d80dffe773e2",
+      "received_sha256": "07cab2815e529153b696ea2ced0ea14e939cd3926efb37e94a587a4f19b917c2",
       "bytes": 27201
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/what-a-new-proof-makes-possible.html",
-      "file": "essays/what-a-new-proof-makes-possible.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba",
-      "received_sha256": "7186b4bd25de1b0a709283bdcfcf75ccaae0fed227e9679000f5bcdde359b889",
-      "bytes": 218113
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/styles.css",
-      "file": "assets/styles.css",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "received_sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "bytes": 11004
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/README.md",
@@ -1817,7 +1817,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "6bdfdd7ab3da7ea78d4fb3fc72214b0ce414bab3fdb9ea2da284d96987cbe9e9",
-      "received_sha256": "f74e3a3524dbf03d60514d239d27a6969667b558761e04bf3df9f0d4ffca12de",
+      "received_sha256": "1b1902e3fbd617d3da5435209bcb1c9d3493951d8e4ef11cf794ecbf2d5a63d6",
       "bytes": 89462
     },
     {
@@ -1827,8 +1827,28 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5",
-      "received_sha256": "abc7324e44e57acc996f99af94a42a9a25a22bc7be35523fe6bae32b97dba75e",
+      "received_sha256": "0f386cd3e3f9169e0b675874280a5600ae3efe76459a0dd664ff6b9941371960",
       "bytes": 1377
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/when-accountability-stops-being-reciprocal.html",
+      "file": "essays/when-accountability-stops-being-reciprocal.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8",
+      "received_sha256": "bcf566cdb69aad4ee7871022c7b6c61116a0a1e9b3dead63ee5fd815411fb197",
+      "bytes": 41671
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/extracting-first-prime.html",
+      "file": "notes/extracting-first-prime.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e",
+      "received_sha256": "d9d8b976901b1868949c8382adc7cacbaf2c20e86aa1cbc0554ad548cd9f4bd6",
+      "bytes": 5406
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/disjoint-decompositions.html",
@@ -1837,7 +1857,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5",
-      "received_sha256": "03998a0bd0e1f885a963610a0cf6473af1d57a71e4717fbbd9a215e3a946596b",
+      "received_sha256": "c078f4fed41b3fa426559bf46d3556b36146a6cd9881ed84460d57b1eb7e4811",
       "bytes": 5055
     },
     {
@@ -1847,18 +1867,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "4f8059a5d4d65f80131b2c68692f9cfca373ef9020ea6d3b30da1c23e383ed70",
-      "received_sha256": "ae654a547a49621d6a7f96955034c87424d67df589cc00906051ed29c95fc2d5",
+      "received_sha256": "683fef28f2f815e5a64d0cfe8c6c16cadf8c22f9ada92d4c7607c1db76927d91",
       "bytes": 5398
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/extracting-first-prime.html",
-      "file": "notes/extracting-first-prime.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e",
-      "received_sha256": "8694fb09fd4d1d3a3420e98d16d6f443bdfbb8781942bd1cab9b24de0cf0c68f",
-      "bytes": 5406
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/galois-frobenius-composition-law.html",
@@ -1867,7 +1877,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "c573e8b0d091006bebd11c1cdded52b5aa04bd267efb18761a735a0ee5430957",
-      "received_sha256": "5ca44656c62fd989020db5b66d8f8dfffde5e8a32b5362a23b85df3790129b1a",
+      "received_sha256": "22b67968e2b9a51d0b6617198f65c886550f38fe9d3f3acefd43609453897bf2",
       "bytes": 5881
     },
     {
@@ -1877,18 +1887,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6",
-      "received_sha256": "12d80bf6bdc10bc017be861f19d42f61746031d954d2c009ac4cb6024a45d5f1",
+      "received_sha256": "6708b89ba333c2b08c221082f34284a18cbd9c6a14470cbdb3d2e3fd7bb910ce",
       "bytes": 5262
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/lebesgue-riemann-integrability.html",
-      "file": "notes/lebesgue-riemann-integrability.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "ba947df6c0cd857ca840719e0b02ddf2dcedc44fcc8ed28c472d08be5fcf8531",
-      "received_sha256": "071be72b05ef8f9cd66419cd6f20bd1cab856838bf575a49767b19d51edcec24",
-      "bytes": 5775
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/pointwise-weighting-convergence-in-measure.html",
@@ -1897,8 +1897,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "2ac8f04242bb0459c2441aa0a7a5ef78a092389fc410432c4c0496cfa9294a47",
-      "received_sha256": "38fc4847694e231c6a0dea0124c9b85a554194bf0541ea6f6c01cdb65a01841d",
+      "received_sha256": "e39b47f98f68c08eaa922e713f4bd09f97144823c21ad00df6d398bcb280e4d2",
       "bytes": 5924
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/lebesgue-riemann-integrability.html",
+      "file": "notes/lebesgue-riemann-integrability.html",
+      "http_status": 200,
+      "mode": "authored_html_exact_with_host_challenge_script",
+      "pass": true,
+      "expected_sha256": "ba947df6c0cd857ca840719e0b02ddf2dcedc44fcc8ed28c472d08be5fcf8531",
+      "received_sha256": "c1393107ae5eec0a20daa76c5585430c62f2c727178c6e52daab608580c453f6",
+      "bytes": 5775
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/products-preserve-riemann-integrability.html",
@@ -1907,18 +1917,18 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "9468015b3b575c29a63aa04f7f749b1a82df6c1d217c1c65cdba42bffb6ddee0",
-      "received_sha256": "532ccc7dd808244de0bc21149e3d659c2c5f738dbb6587dcf7a10fecc601843c",
+      "received_sha256": "dc579407b20aa8302aec61a6ab1b22e780ac7653ad5404cea382df4f2774db50",
       "bytes": 166079
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/essays/when-accountability-stops-being-reciprocal.html",
-      "file": "essays/when-accountability-stops-being-reciprocal.html",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/selected-problems-discrete-mathematics-analysis.html",
+      "file": "notes/selected-problems-discrete-mathematics-analysis.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8",
-      "received_sha256": "0f08e77d49f1560bf91a946e679eb1f84785586e790fc60f4b40d09567ce50c0",
-      "bytes": 41671
+      "expected_sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12",
+      "received_sha256": "c3f2d1d983f2867ad56d8d557800118189156867ca9dd588ef83ac90a0273848",
+      "bytes": 12625
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/fourier-symmetry-and-reconstruction.html",
@@ -1927,7 +1937,7 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0",
-      "received_sha256": "3222b1ec3e5a9aa8ed34f5e0c85ee9eaecacf3c0ebc1cb673fc31086209fc8ec",
+      "received_sha256": "db709f60b38e87e1fb18c04a27d293a91287c8d8864fc293da5703fc6b5e2dfd",
       "bytes": 5414047
     },
     {
@@ -1937,18 +1947,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "9ec1bffe8015a316a7beebc30aaca5c5273642f116bb63d09c0f401cd1f675ed",
-      "received_sha256": "fd207f9011016e233a0073290490270dfd19774ebf67dc485d76f5d95eb7b994",
+      "received_sha256": "31c0d72349ac2ffd383ae51d971c719202347d29c190531689ea4329f99ea3e1",
       "bytes": 5710
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/mathematical-life-in-the-age-of-ai.md",
-      "file": "assets/essays/mathematical-life-in-the-age-of-ai.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c35320eaf3d6c7192dd16e17e6f00362b89e56193e8b75540b0f6154c07164bf",
-      "received_sha256": "c35320eaf3d6c7192dd16e17e6f00362b89e56193e8b75540b0f6154c07164bf",
-      "bytes": 72288
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/when-a-formal-logarithm-fails.html",
@@ -1957,38 +1957,8 @@
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "96e84e3b228ee38450923da36f1f1e595caf731ad05e0647d87f46939e34aeef",
-      "received_sha256": "f302aa4766461c19e1391c4ee8ef87f895d5d38a1fe7540dbbd6f53f328444be",
+      "received_sha256": "435981d6dd57bb837b84607bb7f153b1da7b88fe7b273a7f589aca779b3e0ddf",
       "bytes": 884244
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/play/cube-patterns.html",
-      "file": "play/cube-patterns.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848",
-      "received_sha256": "38b7fe548d519200471ead212b0fe5661e686acbd76cd96ff3d370a9c58be4cd",
-      "bytes": 6336
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/mathematical-understanding-in-the-age-of-ai.md",
-      "file": "assets/essays/mathematical-understanding-in-the-age-of-ai.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a",
-      "received_sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a",
-      "bytes": 38108
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/the-culture-of-mathematical-judgment.md",
-      "file": "assets/essays/the-culture-of-mathematical-judgment.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
-      "received_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
-      "bytes": 45747
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
@@ -2001,6 +1971,16 @@
       "bytes": 160854
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "file": "assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "c35320eaf3d6c7192dd16e17e6f00362b89e56193e8b75540b0f6154c07164bf",
+      "received_sha256": "c35320eaf3d6c7192dd16e17e6f00362b89e56193e8b75540b0f6154c07164bf",
+      "bytes": 72288
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/the-culture-of-mathematical-judgment.pdf",
       "file": "assets/essays/the-culture-of-mathematical-judgment.pdf",
       "http_status": 200,
@@ -2011,24 +1991,34 @@
       "bytes": 148272
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/the-culture-of-mathematical-judgment.md",
+      "file": "assets/essays/the-culture-of-mathematical-judgment.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
+      "received_sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
+      "bytes": 45747
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+      "file": "assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a",
+      "received_sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a",
+      "bytes": 38108
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/what-a-derivative-retains.html",
       "file": "notes/what-a-derivative-retains.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564",
-      "received_sha256": "49ebc6d41af6ae08644a23c88b4dbd37392085f892c66ac343d0d7d89cc4a986",
+      "received_sha256": "703e52453f3aa06b72f5b009e59e0d94e3900ef57b485549dbaed11bf5797343",
       "bytes": 3553832
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/what-a-boundary-map-can-prove.html",
-      "file": "notes/what-a-boundary-map-can-prove.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079",
-      "received_sha256": "c3ec2821c2220642301f55c767a7b157379e6c59d920a174c8e67cf02f2bc4bb",
-      "bytes": 6249713
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/when-a-description-becomes-a-verdict.md",
@@ -2041,16 +2031,6 @@
       "bytes": 12124
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/selected-problems-discrete-mathematics-analysis.html",
-      "file": "notes/selected-problems-discrete-mathematics-analysis.html",
-      "http_status": 200,
-      "mode": "authored_html_exact_with_host_challenge_script",
-      "pass": true,
-      "expected_sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12",
-      "received_sha256": "ba089320e7ace705e1d9696c4d41bbaf542dadb681d7cbaf070bd92cea471703",
-      "bytes": 12625
-    },
-    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/when-accountability-stops-being-reciprocal.md",
       "file": "assets/essays/when-accountability-stops-being-reciprocal.md",
       "http_status": 200,
@@ -2059,16 +2039,6 @@
       "expected_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
       "received_sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
       "bytes": 34425
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/expositions/what-a-derivative-retains.md",
-      "file": "assets/expositions/what-a-derivative-retains.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
-      "received_sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
-      "bytes": 96716
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/expositions/when-a-formal-logarithm-fails.md",
@@ -2081,14 +2051,14 @@
       "bytes": 23574
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/gaming/overwatch-2-diamond-5-support.jpg",
-      "file": "assets/gaming/overwatch-2-diamond-5-support.jpg",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/expositions/what-a-derivative-retains.md",
+      "file": "assets/expositions/what-a-derivative-retains.md",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
-      "received_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
-      "bytes": 113142
+      "expected_sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
+      "received_sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
+      "bytes": 96716
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/when-accountability-stops-being-reciprocal.pdf",
@@ -2101,24 +2071,24 @@
       "bytes": 140240
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/the-performance-of-depth.md",
-      "file": "assets/essays/the-performance-of-depth.md",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/gaming/overwatch-2-diamond-5-support.jpg",
+      "file": "assets/gaming/overwatch-2-diamond-5-support.jpg",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0",
-      "received_sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0",
-      "bytes": 57344
+      "expected_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
+      "received_sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
+      "bytes": 113142
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/puzzles/cube-pixel-figure-held.jpg",
-      "file": "assets/puzzles/cube-pixel-figure-held.jpg",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/notes/what-a-boundary-map-can-prove.html",
+      "file": "notes/what-a-boundary-map-can-prove.html",
       "http_status": 200,
-      "mode": "byte_exact",
+      "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3",
-      "received_sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3",
-      "bytes": 2388653
+      "expected_sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079",
+      "received_sha256": "dfaba12d8746c2aa89e9d92fdc2c53f878e8c4925a80002c76ca62ed8d3b9cf1",
+      "bytes": 6249713
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/puzzles/cube-hearts.jpg",
@@ -2131,14 +2101,54 @@
       "bytes": 2679344
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/lakefile.toml",
-      "file": "formalizations/disjoint-decomposition/lakefile.toml",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/gaming/overwatch-riemannroch-master-3508.jpg",
+      "file": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56",
-      "received_sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56",
-      "bytes": 363
+      "expected_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
+      "received_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
+      "bytes": 4643163
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/puzzles/cube-pixel-figure-held.jpg",
+      "file": "assets/puzzles/cube-pixel-figure-held.jpg",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3",
+      "received_sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3",
+      "bytes": 2388653
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/essays/the-performance-of-depth.md",
+      "file": "assets/essays/the-performance-of-depth.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0",
+      "received_sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0",
+      "bytes": 57344
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/lake-manifest.json",
+      "file": "formalizations/disjoint-decomposition/lake-manifest.json",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "bytes": 3279
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "file": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
+      "received_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
+      "bytes": 9261
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/puzzles/cube-pixel-figures-front-top.jpg",
@@ -2161,26 +2171,6 @@
       "bytes": 2365168
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
-      "file": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
-      "received_sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
-      "bytes": 9261
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/assets/gaming/overwatch-riemannroch-master-3508.jpg",
-      "file": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
-      "received_sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
-      "bytes": 4643163
-    },
-    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/lean-toolchain",
       "file": "formalizations/disjoint-decomposition/lean-toolchain",
       "http_status": 200,
@@ -2191,54 +2181,24 @@
       "bytes": 30
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/lake-manifest.json",
-      "file": "formalizations/disjoint-decomposition/lake-manifest.json",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/lakefile.toml",
+      "file": "formalizations/disjoint-decomposition/lakefile.toml",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "bytes": 3279
+      "expected_sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56",
+      "received_sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56",
+      "bytes": 363
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/lake-manifest.json",
-      "file": "formalizations/extracting-first-prime/lake-manifest.json",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/play/cube-patterns.html",
+      "file": "play/cube-patterns.html",
       "http_status": 200,
-      "mode": "byte_exact",
+      "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
-      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "bytes": 3279
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/README.md",
-      "file": "formalizations/extracting-first-prime/README.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1",
-      "received_sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1",
-      "bytes": 377
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
-      "file": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
-      "received_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
-      "bytes": 69041
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/README.md",
-      "file": "formalizations/disjoint-decomposition/README.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
-      "received_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
-      "bytes": 273
+      "expected_sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848",
+      "received_sha256": "b3f8989dd4696bb3a1e6f34379e7619ff17f8797a11fc123e3fa7b4f5ac2d30e",
+      "bytes": 6336
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
@@ -2251,18 +2211,8 @@
       "bytes": 20483
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/lakefile.toml",
-      "file": "formalizations/extracting-first-prime/lakefile.toml",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714",
-      "received_sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714",
-      "bytes": 360
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/lake-manifest.json",
-      "file": "formalizations/galois-frobenius-composition-law/lake-manifest.json",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/lake-manifest.json",
+      "file": "formalizations/extracting-first-prime/lake-manifest.json",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
@@ -2271,34 +2221,24 @@
       "bytes": 3279
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/lean-toolchain",
-      "file": "formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/disjoint-decomposition/README.md",
+      "file": "formalizations/disjoint-decomposition/README.md",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "bytes": 30
+      "expected_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
+      "received_sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
+      "bytes": 273
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
-      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/lakefile.toml",
+      "file": "formalizations/extracting-first-prime/lakefile.toml",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84",
-      "received_sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84",
-      "bytes": 27
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lake-manifest.json",
-      "file": "formalizations/ibm-ponder-this-2010/lake-manifest.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d",
-      "received_sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d",
-      "bytes": 3271
+      "expected_sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714",
+      "received_sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714",
+      "bytes": 360
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/lean-toolchain",
@@ -2311,34 +2251,34 @@
       "bytes": 30
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/README.md",
-      "file": "formalizations/galois-frobenius-composition-law/README.md",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/extracting-first-prime/README.md",
+      "file": "formalizations/extracting-first-prime/README.md",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
-      "received_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
-      "bytes": 560
+      "expected_sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1",
+      "received_sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1",
+      "bytes": 377
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lakefile.toml",
-      "file": "formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/lake-manifest.json",
+      "file": "formalizations/galois-frobenius-composition-law/lake-manifest.json",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
-      "received_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
-      "bytes": 290
+      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "bytes": 3279
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lean-toolchain",
-      "file": "formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "file": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "bytes": 30
+      "expected_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
+      "received_sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
+      "bytes": 69041
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/lakefile.toml",
@@ -2351,14 +2291,54 @@
       "bytes": 387
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/README.md",
-      "file": "formalizations/ibm-ponder-this-2010/README.md",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
+      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
-      "received_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
-      "bytes": 1000
+      "expected_sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84",
+      "received_sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84",
+      "bytes": 27
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/README.md",
+      "file": "formalizations/galois-frobenius-composition-law/README.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
+      "received_sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
+      "bytes": 560
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lake-manifest.json",
+      "file": "formalizations/ibm-ponder-this-2010/lake-manifest.json",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d",
+      "received_sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d",
+      "bytes": 3271
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "file": "formalizations/galois-frobenius-composition-law/lean-toolchain",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "bytes": 30
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "file": "formalizations/ibm-ponder-this-2010/lean-toolchain",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "received_sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
+      "bytes": 30
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/extracting-first-prime.zip",
@@ -2371,6 +2351,16 @@
       "bytes": 7723
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/README.md",
+      "file": "formalizations/ibm-ponder-this-2010/README.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
+      "received_sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
+      "bytes": 1000
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/disjoint-decomposition.zip",
       "file": "formalizations/packages/disjoint-decomposition.zip",
       "http_status": 200,
@@ -2379,26 +2369,6 @@
       "expected_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
       "received_sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
       "bytes": 5940
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/pointwise-weighting.zip",
-      "file": "formalizations/packages/pointwise-weighting.zip",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
-      "received_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
-      "bytes": 10351
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/separated-polynomial-differences.zip",
-      "file": "formalizations/packages/separated-polynomial-differences.zip",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "442e2ad2520e4bd3719e882ffd57c48d1e4f830a34d829ce96312942038006b5",
-      "received_sha256": "442e2ad2520e4bd3719e882ffd57c48d1e4f830a34d829ce96312942038006b5",
-      "bytes": 7167
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/galois-frobenius-composition-law.zip",
@@ -2411,16 +2381,6 @@
       "bytes": 16077
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/lean-toolchain",
-      "file": "formalizations/pointwise-weighting/lean-toolchain",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82",
-      "received_sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82",
-      "bytes": 26
-    },
-    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/ibm-ponder-this-2010.zip",
       "file": "formalizations/packages/ibm-ponder-this-2010.zip",
       "http_status": 200,
@@ -2429,6 +2389,16 @@
       "expected_sha256": "cfd4a6f7b6100fa85c8d1a86f22cf01583b88cc9d9dcb85f13f622ede030e588",
       "received_sha256": "cfd4a6f7b6100fa85c8d1a86f22cf01583b88cc9d9dcb85f13f622ede030e588",
       "bytes": 9210
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/pointwise-weighting.zip",
+      "file": "formalizations/packages/pointwise-weighting.zip",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
+      "received_sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
+      "bytes": 10351
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/lake-manifest.json",
@@ -2451,6 +2421,26 @@
       "bytes": 401
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/packages/separated-polynomial-differences.zip",
+      "file": "formalizations/packages/separated-polynomial-differences.zip",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "442e2ad2520e4bd3719e882ffd57c48d1e4f830a34d829ce96312942038006b5",
+      "received_sha256": "442e2ad2520e4bd3719e882ffd57c48d1e4f830a34d829ce96312942038006b5",
+      "bytes": 7167
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/lean-toolchain",
+      "file": "formalizations/pointwise-weighting/lean-toolchain",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82",
+      "received_sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82",
+      "bytes": 26
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/PointwiseWeighting.lean",
       "file": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
       "http_status": 200,
@@ -2459,6 +2449,16 @@
       "expected_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
       "received_sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
       "bytes": 33
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "file": "formalizations/ibm-ponder-this-2010/lakefile.toml",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
+      "received_sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
+      "bytes": 290
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/lean-toolchain",
@@ -2471,26 +2471,6 @@
       "bytes": 30
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/lake-manifest.json",
-      "file": "formalizations/separated-polynomial-differences/lake-manifest.json",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "bytes": 3279
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/README.md",
-      "file": "formalizations/pointwise-weighting/README.md",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd",
-      "received_sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd",
-      "bytes": 888
-    },
-    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/lakefile.toml",
       "file": "formalizations/separated-polynomial-differences/lakefile.toml",
       "http_status": 200,
@@ -2501,24 +2481,14 @@
       "bytes": 390
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
-      "file": "formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/lake-manifest.json",
+      "file": "formalizations/separated-polynomial-differences/lake-manifest.json",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617",
-      "received_sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617",
-      "bytes": 15380
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
-      "file": "pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5",
-      "received_sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5",
-      "bytes": 416965
+      "expected_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "received_sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
+      "bytes": 3279
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/README.md",
@@ -2531,6 +2501,16 @@
       "bytes": 416
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/pointwise-weighting/README.md",
+      "file": "formalizations/pointwise-weighting/README.md",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd",
+      "received_sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd",
+      "bytes": 888
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "file": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "http_status": 200,
@@ -2539,16 +2519,6 @@
       "expected_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
       "received_sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
       "bytes": 202443
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
-      "file": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
-      "received_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
-      "bytes": 483829
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
@@ -2561,6 +2531,26 @@
       "bytes": 534796
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "file": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
+      "received_sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
+      "bytes": 483829
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "file": "pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5",
+      "received_sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5",
+      "bytes": 416965
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
       "file": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
       "http_status": 200,
@@ -2571,14 +2561,14 @@
       "bytes": 599738
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
-      "file": "pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "file": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
-      "received_sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
-      "bytes": 126781
+      "expected_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
+      "received_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
+      "bytes": 326988
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/What_a_Derivative_Retains.pdf",
@@ -2611,14 +2601,14 @@
       "bytes": 319331
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
-      "file": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "file": "formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
-      "received_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
-      "bytes": 303594
+      "expected_sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617",
+      "received_sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617",
+      "bytes": 15380
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
@@ -2631,24 +2621,14 @@
       "bytes": 208287
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
-      "file": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "file": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
-      "received_sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
-      "bytes": 326988
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
-      "file": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
-      "received_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
-      "bytes": 172310
+      "expected_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
+      "received_sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
+      "bytes": 303594
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
@@ -2661,14 +2641,14 @@
       "bytes": 310966
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
-      "file": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "file": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
-      "received_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
-      "bytes": 311420
+      "expected_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
+      "received_sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
+      "bytes": 172310
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
@@ -2681,34 +2661,14 @@
       "bytes": 36441
     },
     {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
-      "file": "tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "file": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
       "http_status": 200,
       "mode": "byte_exact",
       "pass": true,
-      "expected_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
-      "received_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
-      "bytes": 84280
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-      "file": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
-      "received_sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
-      "bytes": 136647
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
-      "file": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
-      "received_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
-      "bytes": 43753
+      "expected_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
+      "received_sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
+      "bytes": 311420
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
@@ -2721,6 +2681,36 @@
       "bytes": 21547
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "file": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
+      "received_sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
+      "bytes": 136647
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+      "file": "tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
+      "received_sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
+      "bytes": 84280
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "file": "pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
+      "received_sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
+      "bytes": 126781
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
       "file": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
       "http_status": 200,
@@ -2729,46 +2719,6 @@
       "expected_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
       "received_sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
       "bytes": 143896
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
-      "file": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
-      "received_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
-      "bytes": 42737
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
-      "file": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
-      "received_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
-      "bytes": 13328
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
-      "file": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
-      "received_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
-      "bytes": 10176
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
-      "file": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
-      "received_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
-      "bytes": 4124
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
@@ -2781,6 +2731,56 @@
       "bytes": 19719
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "file": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
+      "received_sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
+      "bytes": 43753
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "file": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
+      "received_sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
+      "bytes": 10176
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "file": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
+      "received_sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
+      "bytes": 13328
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "file": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
+      "received_sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
+      "bytes": 4124
+    },
+    {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "file": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
+      "received_sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
+      "bytes": 42737
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
       "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
       "http_status": 200,
@@ -2789,16 +2789,6 @@
       "expected_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
       "received_sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
       "bytes": 6449
-    },
-    {
-      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
-      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
-      "http_status": 200,
-      "mode": "byte_exact",
-      "pass": true,
-      "expected_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
-      "received_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
-      "bytes": 10625
     },
     {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
@@ -2821,13 +2811,23 @@
       "bytes": 28388
     },
     {
+      "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "file": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
+      "http_status": 200,
+      "mode": "byte_exact",
+      "pass": true,
+      "expected_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
+      "received_sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
+      "bytes": 10625
+    },
+    {
       "url": "https://tensorgami-henry-shin.tensorgami.chatgpt.site/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
       "file": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
       "http_status": 200,
       "mode": "authored_html_exact_with_host_challenge_script",
       "pass": true,
       "expected_sha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b",
-      "received_sha256": "7dc1fd8f237b0f518bd63d840b827c241dd8f16595c50afccadb4337a0de5275",
+      "received_sha256": "c3b5d3cde06b49738ad50030c88b1180539503afc575f39018ce873a12b0d2f1",
       "bytes": 1427
     }
   ],
