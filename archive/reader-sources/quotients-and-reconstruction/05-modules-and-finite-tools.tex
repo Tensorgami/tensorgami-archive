@@ -1,0 +1,249 @@
+\section{Keeping the operations when we change the object}
+\label{m:section}
+
+The common comparison has produced intrinsic simple factors. Its group example
+also showed a limit: the factors of $C_4$ and $C_2\times C_2$ agree, although
+the groups do not. We now develop that question in a setting where the
+attachments can be calculated explicitly. The objects will be modules,
+and our main examples will be vector spaces equipped with an operator.
+We retain the operator in every map, just as the dimension argument
+retained scalar multiplication in every quotient.
+
+\subsection{Modules and their maps}
+
+A ring $R$ has an abelian group under addition, an associative multiplication
+with identity $1$, and the two distributive laws. Multiplication need not be
+commutative. A left $R$-module is an abelian group $M$ with operations $rx$
+for $r\in R$, $x\in M$, satisfying
+\[
+ r(x+y)=rx+ry,\quad (r+s)x=rx+sx,\quad
+ r(sx)=(rs)x,\quad 1x=x.
+\]
+The same cancellation arguments as for vector spaces give $r0=0$,
+$0x=0$ and $(-1)x=-x$. A submodule contains zero and is closed under
+addition and all these scalar operations. A module map preserves addition
+and satisfies $f(rx)=rf(x)$. In this part all unspecified maps between
+modules are module maps. We work over a fixed ring whenever forming
+extensions or comparing modules.
+
+Intersections of submodules are submodules. Their sum $U+W$ consists of
+the elements $u+w$; distributivity proves that it is a submodule, and it
+is the smallest one containing both. The direct sum of two modules is
+the set of pairs with coordinatewise addition and scalar action. Each
+module identity holds in both coordinates. Its inclusions and projections
+are module maps. A map out of $A\oplus B$ is determined by its restrictions
+to $(a,0)$ and $(0,b)$, since $(a,b)=(a,0)+(0,b)$.
+
+For a submodule $N\subseteq M$, the additive quotient $M/N$ is already
+defined by the group construction. Set $r(x+N)=rx+N$. Replacing $x$ by
+$x+n$ changes $rx$ by $rn\in N$, so this action is well-defined;
+the module identities descend on representatives. The projection is a
+module map. If a module map $f:M\to X$ kills $N$, its unique additive
+factorization $\bar f:M/N\to X$ is a module map, because
+\[
+ \bar f(r(x+N))=f(rx)=rf(x)=r\bar f(x+N).
+\]
+Thus the quotient universal property retains every operation required here.
+
+Kernels, images and preimages of submodules are submodules: apply a map
+to a sum or a scalar multiple, and use the corresponding closure in the
+target. An image of a submodule is the image of the map restricted to it.
+Consequently the first isomorphism theorem supplies a module isomorphism
+\[
+ M/\Ker f\iso\im f.
+\]
+The inverse of a bijective module map is a module map: writing $y=f(x)$
+gives $f^{-1}(ry)=rx$, and the analogous calculation handles sums.
+All the short exact sequences below mean injectivity, surjectivity, and
+image equal to kernel for these maps.
+
+\subsection{Preimages, quotients, and the local comparison}
+
+For a surjection $q:M\to Q$ with kernel $N$, inverse image and direct
+image give an inclusion-preserving correspondence
+between submodules of $Q$ and submodules of $M$ containing $N$.
+Indeed, for a submodule $H$ of $M$,
+\[
+ q^{-1}(q(H))=N+H:
+ \quad q(x)=q(h)\ \Longleftrightarrow\ x-h\in N.
+\]
+Every quotient map and induced isomorphism in this correspondence is
+linear over $R$. For $N\subseteq L\subseteq M$ this also proves
+$(M/N)/(L/N)\cong M/L$ by $(x+N)+(L/N)\mapsto x+L$.
+
+The kernel calculation at the heart of the butterfly remains valid:
+if $A_1\subseteq A_2$ and $B_1\subseteq B_2$ are submodules of $M$,
+write $C=A_2\cap B_2$, $U=A_1\cap B_2$, $W=A_2\cap B_1$.
+The map
+\[
+ C\longrightarrow (A_1+C)/(A_1+W),\qquad c\longmapsto c+(A_1+W)
+\]
+is onto, and its kernel is $U+W$. To check the nontrivial inclusion,
+if $c=a+w$ with $c,w\in C$ and $a\in A_1$, then $a=c-w\in U$.
+The reverse inclusion follows by substitution. Exchanging $A$ and $B$
+gives the same kernel and the other wing. This is a concrete calculation
+of the common support quotient, retaining the $R$-action. It is available independently
+of any theorem about composition series.
+
+\subsection{Finite-dimensional tools, after dimension has been proved}
+\label{m:finite-tools}
+
+The later operator examples use subspace bases and lifts. We establish
+their existence here, after Theorem~\ref{e:dimension-theorem}; none is
+being fed back into the earlier proof of dimension.
+
+\begin{lemma}\label{m:bases}
+If a vector space $V$ has a finite basis of size $n$, every subspace has
+a finite basis. Every independent list in $V$ extends to a basis of $V$.
+For a subspace $W$, a basis of $W$ followed by lifts of a basis of $V/W$
+is a basis of $V$.
+\end{lemma}
+\begin{proof}
+Start with any finite independent list. Pass through a fixed finite
+spanning list of $V$, appending a vector exactly when it is outside
+the span of the vectors already present. Each append preserves
+independence: a relation with nonzero coefficient on the new vector
+would put it in the old span. At the end the list spans $V$, so it is
+a basis. The already proved invariance of basis size shows that the
+original independent list had at most $n$ members.
+An arbitrary independent set cannot contain $n+1$ distinct vectors,
+so it too is finite and the same conclusion applies.
+
+To construct a basis of $W$, start with the empty list and, as long
+as it does not span $W$, choose an element outside its span. This
+cannot produce $n+1$ independent vectors. Thus it stops after finitely
+many steps with a basis of $W$. This requires only finitely many
+choices, bounded by $n$.
+
+The images in $V/W$ of a finite basis of $V$ span the quotient.
+Applying the append procedure starting with the empty list to those
+images gives a quotient basis. Choose one lift of each of its finitely
+many members. The lifts together with a basis of $W$ span $V$:
+subtract the lifted expression of a vector's quotient class, leaving
+an element of $W$. In a relation among this list, projection to $V/W$
+first forces all lift coefficients to vanish; independence in $W$
+then forces the remaining coefficients to vanish.
+\end{proof}
+
+In particular, $\dim V=\dim W+\dim(V/W)$. Applying the first
+isomorphism theorem to a linear map gives
+$\dim V=\dim\Ker f+\dim\im f$. These are consequences of the
+dimension theorem already proved, and will be used only from here on.
+The same basis-lifting proof gives a vector-space section of any
+surjective linear map onto a finite-dimensional space. Such a section
+need not preserve a further module or operator structure.
+
+\subsection{An operator is a polynomial action}
+\label{m:operators}
+
+For a field $k$, $k[t]$ consists of finite formal sums
+$\sum_{i\geq0}a_it^i$. Addition is coefficientwise and multiplication
+is convolution: the coefficient of $t^r$ in a product is
+$\sum_{i+j=r}a_ib_j$. All sums involved are finite. Associativity
+holds because either parenthesization of a triple product has coefficient
+$\sum_{i+j+\ell=r}a_ib_jc_\ell$; distributivity is the corresponding
+distributivity of finite sums. The constant polynomial $1$ is the identity.
+
+Given a $k$-linear endomorphism $T$ of $V$, define
+\[
+ p(t)v=p(T)v=\sum_i a_iT^iv,\qquad T^0=\id.
+\]
+Induction gives $T^iT^j=T^{i+j}$, so convolution proves
+$p(T)q(T)=(pq)(T)$. The other module axioms follow from linearity.
+Conversely, a $k[t]$-module has its underlying $k$-vector space and
+the linear operator $T(v)=tv$; the module axioms recover the displayed
+polynomial action. These constructions are inverse.
+
+A linear map $f:(V,T)\to(V',T')$ is a module map exactly when
+$fT=T'f$. Necessity uses the polynomial $t$; sufficiency follows by
+induction on powers and addition. Submodules are exactly the
+$T$-stable subspaces. Thus the square
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+V\arrow[r,"T"]\arrow[d,"f"']&V\arrow[d,"f"]\\
+V'\arrow[r,"T'"']&V'
+\end{tikzcd}
+\]
+records the extra condition that distinguishes an operator-preserving
+map from an arbitrary linear map.
+
+For $\lambda\in k$, let $S_\lambda$ be $k$ with $t$ acting by
+$\lambda$. It is simple as a module because its only $k$-subspaces
+are zero and itself. It is also $k[t]/(t-\lambda)$: evaluation
+$p\mapsto p(\lambda)$ is onto, and the identity
+$t^i-\lambda^i=(t-\lambda)\sum_{j=0}^{i-1}t^{i-1-j}\lambda^j$
+shows that its kernel is $(t-\lambda)$.
+
+We also use $P_r=k[t]/(t^r)$ for $r\geq1$. Its vectors have unique
+representatives of degree less than $r$, by separating the terms of
+degree at least $r$. Thus $1,t,\ldots,t^{r-1}$ is a vector-space
+basis, and multiplication by $t$ shifts along a nilpotent chain.
+No polynomial factorization theorem is required for these modules.
+
+\subsection{Simple layers and finite length}
+\label{m:length-foundations}
+
+A module is simple if it is nonzero and has only zero and itself as
+submodules. A composition series is a finite strictly increasing
+submodule filtration from zero to the whole module with simple
+successive quotients. A module has finite length if it admits such
+a series; at this stage that phrase is an existence condition.
+The zero module has the series with one term and no factors.
+
+\begin{lemma}\label{m:simple-map}
+A nonzero module map between simple modules is an isomorphism.
+\end{lemma}
+\begin{proof}
+Its image is nonzero, hence is the whole target. Its kernel cannot be
+the whole source, hence is zero. The kernel test gives injectivity,
+and the inverse of a bijective module map preserves the module operations.
+\end{proof}
+
+Here a $k$-algebra is a ring $R$ with a unital map from $k$ into its
+center. Restricting scalars makes each $R$-module a $k$-vector space,
+and every $R$-submodule is a $k$-subspace.
+Every finite-dimensional module over a $k$-algebra has a composition
+series. If it is nonzero, choose a proper submodule of largest possible
+vector-space dimension; zero is one candidate. The possible dimensions
+form a finite set by Lemma~\ref{m:bases}. Its quotient is simple:
+an intermediate nonzero proper submodule would lift to a larger proper
+submodule. Repeat inside the chosen proper submodule. Dimensions
+strictly decrease, so the process ends. This proves existence without
+using uniqueness of composition factors.
+
+We will also need closure of finite-length modules under submodules
+and quotients over a general ring. Let
+$0=M_0\subsetneq\cdots\subsetneq M_n=M$ be a composition series
+and $N\subseteq M$ a submodule. Set
+$N_i=N\cap M_i$ and $Q_i=(M_i+N)/N$.
+For each $i$, inclusion and projection give a short exact sequence
+\begin{equation}\label{m:layer-exact}
+0\longrightarrow N_i/N_{i-1}\longrightarrow M_i/M_{i-1}
+\longrightarrow Q_i/Q_{i-1}\longrightarrow0.
+\end{equation}
+The first map sends $n+N_{i-1}$ to $n+M_{i-1}$ and is injective.
+The second sends $m+M_{i-1}$ to $(m+N)+Q_{i-1}$ and is onto.
+Its kernel consists of $m=a+n$ with $a\in M_{i-1}$ and $n\in N$;
+then $n=m-a\in N_i$, proving equality with the first image.
+The simple middle module forces precisely one outer module to be zero
+and the other to be isomorphic to it. Deleting repetitions from the
+$N_i$ and $Q_i$ therefore gives composition series for $N$ and $M/N$.
+
+Conversely, if $A$ and $B$ have composition series and
+$0\to A\to E\xrightarrow{q}B\to0$ is short exact, identify $A$
+with its image in $E$. Append to its series the preimages under $q$
+of a composition series of $B$. The quotient correspondence proves
+strictness, and the maps
+\[
+ q^{-1}(B_j)/q^{-1}(B_{j-1})\longrightarrow B_j/B_{j-1},\qquad
+ e+q^{-1}(B_{j-1})\longmapsto q(e)+B_{j-1}
+\]
+are isomorphisms by their kernels and surjectivity. This constructs
+a composition series for $E$. Its factors are exactly the two given
+lists together. No uniqueness theorem is used in this construction.
+
+We now have the objects and operations needed for an independent
+spectral comparison of two module filtrations. Length and multiplicities
+are already intrinsic by Theorem~\ref{j:jordan-holder}. The following
+page calculations will compare the factors directly, without using that
+theorem as a premise.

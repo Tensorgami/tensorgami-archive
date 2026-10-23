@@ -1,0 +1,31 @@
+{
+  "edition": "2026-10-23.2",
+  "previous_edition": "2026-10-23.1",
+  "documentation_date": "2026-10-23",
+  "mathematical_edition_date": "2026-10-22",
+  "native_readme": {
+    "path": "content/expositions/quotients-and-reconstruction-pdf/README.md",
+    "before_sha256": "ee29bd41bf9424d3d9b7839c795e86a9996c495050ea6c569ac338bb96cebea5",
+    "after_sha256": "8f3f41f7d446f8a03a73365443de9d4e01e571f80ed0e5020d3482cd45560c80"
+  },
+  "archival_source": {
+    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+    "source_directory": "archive/reader-sources/quotients-and-reconstruction",
+    "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
+    "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
+    "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
+    "bytes": 97091,
+    "readme_only_change": true,
+    "changed_members": [
+      "quotients-and-reconstruction/README.md"
+    ],
+    "unchanged_tex_inputs": 16,
+    "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
+  },
+  "canonical_source_unchanged": true,
+  "original_published_zip_unchanged": true,
+  "mathematical_inputs_pdf_article_and_diagrams_unchanged": true
+}

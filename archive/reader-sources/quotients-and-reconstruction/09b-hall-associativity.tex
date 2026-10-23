@@ -1,0 +1,236 @@
+\section{Associativity by counting filtrations}\label{hall:chapter}
+
+An extension records an attachment. We can also ask how many attachments
+of one type occur inside a fixed middle object. This question leads to a
+new multiplication. Its associativity will follow from the correspondence
+between submodules of a quotient and submodules containing its kernel.
+The quotient calculation that began the exposition will thus return as
+the mechanism behind an algebra law.
+
+\subsection{A setting where the counts are finite}
+
+Fix a finite field $\kk$ with $q$ elements. We work with finite-dimensional
+$\kk[t]$-modules on which $t$ acts nilpotently. Equivalently, our objects
+are pairs $(V,N)$ with $N^s=0$ for some $s$, and our maps are linear maps
+commuting with the operators. A submodule is exactly an $N$-invariant
+subspace. Throughout this chapter an isomorphism must respect $N$.
+
+Submodules and quotients stay in this class because the same power of
+$N$ is zero on them. Extensions stay in the class too. Indeed, in an
+exact sequence
+\[
+0\longrightarrow B\longrightarrow E\longrightarrow A\longrightarrow0,
+\]
+if $t^aA=0$ and $t^bB=0$, then $t^aE\subseteq B$ and hence
+$t^{a+b}E=0$. Also $\dim E=\dim A+\dim B$, by the proved dimension
+formula for an exact sequence. These are closure checks, not extra
+assumptions about the category.
+
+For isomorphism classes $A,B,E$, define the nonnegative integer
+\begin{equation}\label{hall:count}
+g_{A,B}^{E}
+=\#\{U\subseteq E:\ U\text{ is a submodule},\ U\cong B,\ E/U\cong A\}.
+\end{equation}
+The order matters: $B$ is the lower layer and $A$ is the quotient above it.
+This counts actual submodules of $E$. It does not count chosen
+isomorphisms $B\to U$, chosen quotient identifications, or marked
+extension classes. An isomorphism $E\to E'$ gives a bijection on these
+sets by sending $U$ to its image, so the count depends only on the three
+isomorphism classes.
+
+The set in \eqref{hall:count} is finite because $E$ has finitely many
+elements. For fixed $A,B$, only finitely many classes $E$ can occur.
+They have the fixed dimension $d=\dim A+\dim B$. Choosing a basis
+identifies such an operator with a $d$ by $d$ matrix over $\kk$, and
+there are $q^{d^2}$ matrices altogether. Each isomorphism class has a
+representative among them. This argument establishes finiteness without
+requiring a classification of nilpotent operators.
+
+Let $\mathcal H$ be the rational vector space with one basis symbol
+$u_M$ for each isomorphism class in our collection. Explicitly, its
+vectors are finite rational linear combinations of these symbols.
+Define a bilinear multiplication by
+\begin{equation}\label{hall:product}
+u_Au_B=\sum_{[E]}g_{A,B}^{E}u_E.
+\end{equation}
+The preceding finiteness checks make this an element of $\mathcal H$.
+It is the untwisted Hall multiplication for this collection of modules.
+We now prove its algebra laws.
+
+\subsection{One flag, two intermediate objects}
+
+\begin{theorem}[Associativity from a flag bijection]\label{hall:associativity}
+The multiplication \eqref{hall:product} is associative, with identity $u_0$.
+\end{theorem}
+
+\begin{proof}
+Fix $A,B,C,E$. Count the set of flags
+\begin{equation}\label{hall:flag}
+0\subseteq U\subseteq V\subseteq E,
+\qquad U\cong C,\quad V/U\cong B,\quad E/V\cong A.
+\end{equation}
+Inclusions may be equal when one of the specified factors is zero.
+
+First fix $U$. If $E/U\cong D$, there are $g_{D,C}^{E}$ choices of $U$.
+For each such $U$, the possible submodules $V/U\subseteq E/U$ with
+the required factors are counted by $g_{A,B}^{D}$. The quotient
+correspondence gives a bijection
+\[
+\{V:U\subseteq V\subseteq E\}
+\longleftrightarrow
+\{W:W\subseteq E/U\},
+\quad V\longmapsto V/U,\quad W\longmapsto\pi^{-1}(W).
+\]
+It also gives $(E/U)/(V/U)\cong E/V$, by the map
+$(e+U)+(V/U)\mapsto e+V$. Thus the number of flags is
+\[
+\sum_{[D]}g_{A,B}^{D}g_{D,C}^{E}.
+\]
+This is the coefficient of $u_E$ in $(u_Au_B)u_C$.
+
+Alternatively fix $V$. If $V\cong D$, there are $g_{A,D}^{E}$ choices
+of $V$, and then $g_{B,C}^{D}$ choices of $U\subseteq V$.
+The same flags are therefore counted by
+\[
+\sum_{[D]}g_{B,C}^{D}g_{A,D}^{E},
+\]
+the coefficient of $u_E$ in $u_A(u_Bu_C)$. No choice of an isomorphism
+to a representative $D$ affects either count: every such isomorphism
+induces a bijection of the relevant submodule sets. Both counting
+procedures identify their data with precisely the flags in
+\eqref{hall:flag}. Equality of all coefficients proves associativity on
+basis vectors, and bilinearity proves it on $\mathcal H$.
+
+For the unit, the only submodule of $E$ isomorphic to zero is $0$,
+and the only submodule with zero quotient is $E$. Consequently
+$g_{A,0}^{E}=g_{0,A}^{E}$ is $1$ if $E\cong A$ and $0$ otherwise.
+Hence $u_Au_0=u_0u_A=u_A$.
+\end{proof}
+
+The two readings of the flag use different intermediate objects:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+0\arrow[r]&U\arrow[r,hook]\arrow[d,equal]&V\arrow[r,two heads]\arrow[d,hook]
+  &V/U\arrow[r]\arrow[d,hook]&0\\
+0\arrow[r]&U\arrow[r,hook]&E\arrow[r,two heads]&E/U\arrow[r]&0.
+\end{tikzcd}
+\]
+Both rows are exact. The right vertical map sends $v+U$ to $v+U$;
+it is injective since its zero class means $v\in U$. The square on the
+right commutes on each representative $v$. The quotient of that vertical
+inclusion is $E/V$. Thus the intermediate object is either $V$, carrying
+the lower two layers, or $E/U$, carrying the upper two layers.
+
+At the beginning of the exposition, associativity of the group operation
+was an axiom permitting us to compose translations. Here associativity
+of a newly defined operation is a theorem. The theorem is proved by a
+bijection: the two bracketings organize exactly the same data. This is
+a structural explanation with an explicit inverse correspondence, not
+an appeal to a resemblance between diagrams.
+
+\subsection{The first product, computed completely}
+
+Write $S=\kk[t]/(t)$ and $J_r=\kk[t]/(t^r)$. Thus $J_r$ is the single
+nilpotent chain of length $r$ constructed in the preceding chapter.
+There are two isomorphism classes of two-dimensional nilpotent modules:
+$S\oplus S$ and $J_2$. One can see this directly. If $N=0$, the first
+description holds. If $N\neq0$, a two-dimensional nilpotent operator has
+a chain $Nv\neq0$, $N^2v=0$, and $(Nv,v)$ is a basis. For completeness,
+one may obtain such a chain by taking the last two nonzero vectors in
+any maximal chain; independence of a chain of length three would
+contradict dimension two. The chain basis gives $J_2$.
+
+For $S\oplus S$, every line is a submodule of type $S$ with quotient
+$S$. There are $q+1$ lines: the $q$ lines spanned by $(1,a)$ for
+$a\in\kk$, and the line spanned by $(0,1)$. In $J_2$, every invariant
+line has zero restricted operator, since a nilpotent scalar is zero in
+a field. It must therefore lie in $\Ker N$, which is itself one line.
+There is exactly one choice. Hence
+\begin{equation}\label{hall:square}
+u_S^2=(q+1)u_{S\oplus S}+u_{J_2}.
+\end{equation}
+
+The nonsplit middle object appears once in this product, although the
+marked extension calculation gave $q-1$ nonzero classes when the
+endpoints are identified with $S$. The reason is the definition of the
+count. Equation~\eqref{hall:square} counts submodules of a fixed middle
+object. Marked extension equivalence keeps endpoint identifications;
+our Hall basis keeps only the middle object's isomorphism class.
+Neither convention can silently replace the other.
+
+\subsection{Three layers and a second count}
+
+The preceding reconstruction theorem gives exactly three nilpotent
+types in dimension three:
+\[
+S^{\oplus3},\qquad J_2\oplus S,\qquad J_3.
+\]
+The coefficient of $u_E$ in $u_S^3$ counts full invariant flags
+$0\subset U\subset V\subset E$, with $\dim U=1$ and $\dim V=2$.
+Every factor is $S$, because a one-dimensional nilpotent operator is zero.
+
+For $E=S^{\oplus3}$ all flags are invariant. There are
+$(q^3-1)/(q-1)=q^2+q+1$ choices of $U$: the nonzero vectors partition
+into sets of $q-1$ vectors spanning the same line. For each $U$, the
+planes containing it correspond to the $q+1$ lines in $E/U$.
+This gives $(q^2+q+1)(q+1)$ flags.
+
+For $E=J_2\oplus S$, put $L=\im N$ and $K=\Ker N$. Then
+$L\subset K$, $\dim L=1$, and $\dim K=2$. An invariant line $U$ lies
+in $K$, giving $q+1$ choices. An invariant plane $V$ contains $L$:
+the induced operator on the one-dimensional quotient $E/V$ is
+nilpotent and hence zero, so $N(E)\subseteq V$. Conversely, every plane
+containing $L$ is invariant. If $U=L$, there are $q+1$ possible planes
+through it. For each of the other $q$ lines $U\subset K$, the only
+plane containing both $U$ and $L$ is $K$. The count is $2q+1$.
+
+For $J_3$, an invariant line must equal $\Ker N$, and an invariant
+plane must equal $\im N$ by the same quotient argument and their
+dimensions. These two subspaces form a flag, so the count is $1$.
+We obtain
+\begin{equation}\label{hall:cube}
+u_S^3=(q+1)(q^2+q+1)u_{S^{\oplus3}}
+       +(2q+1)u_{J_2\oplus S}+u_{J_3}.
+\end{equation}
+Associativity says that either order of the two successive Hall
+multiplications gives this count. The flag description explains why
+before any structure constants are expanded.
+
+\subsection{What the multiplication remembers}
+
+Every nonzero coefficient in $u_Au_B$ comes from a short exact sequence,
+so it satisfies
+\[
+[E]=[A]+[B]\quad\text{in }K_0.
+\]
+This makes Hall multiplication graded by the additive invariant: the
+degree of $u_M$ is $[M]$. In our nilpotent collection the only simple
+module is $S$. Indeed, if a nonzero nilpotent module is simple, its
+nonzero kernel of $t$ is the whole module; then every vector line is a
+submodule, forcing dimension one. Writing $\mathcal N_q$ for this
+nilpotent collection, we have $K_0(\mathcal N_q)\cong\mathbb Z$, and
+this grading is ordinary dimension. Here $K_0(\mathcal N_q)$ is formed
+using generators and exact-sequence relations inside $\mathcal N_q$,
+as in Section~\ref{k:section}; the closure checks at the beginning of
+this chapter make that construction applicable.
+
+Within a single degree, the Hall algebra retains different basis vectors
+for different isomorphism classes. The terms in \eqref{hall:square} all
+have degree two, but the multiplication distinguishes the split object
+from the chain and records their different numbers of subobjects.
+This statement is a grading statement; it does not claim that $K_0$ is
+a quotient algebra of $\mathcal H$.
+
+We have reached three distinct forms of information. Composition
+multiplicities retain what is additive across exact sequences.
+Marked extensions retain a specified two-layer attachment. Hall
+coefficients retain counts of subobjects and their quotients, and their
+associativity packages the compatibility of longer flags. In the
+nilpotent setting, the spaces of maps studied earlier recover the whole
+isomorphism class. Each construction answers a precise question about
+what the preceding description left unresolved.
+
+Hall algebras can be developed much further, including settings where
+geometric invariants replace finite counts. That further theory requires
+additional constructions. The result established here is the finite
+counting algebra and its associativity, proved directly from flags.

@@ -1,5 +1,5 @@
 {
-  "edition": "2026-10-23.1",
+  "edition": "2026-10-23.2",
   "notes": [
     {
       "slug": "fourier-symmetry-and-reconstruction",
@@ -1586,6 +1586,25 @@
         }
       ],
       "history_status": "Current public redirect and retained public files verify predecessor status. No exact supersession date has been asserted."
+    }
+  ],
+  "archival_reader_sources": [
+    {
+      "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+      "source_directory": "archive/reader-sources/quotients-and-reconstruction",
+      "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
+      "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
+      "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
+      "bytes": 97091,
+      "readme_only_change": true,
+      "changed_members": [
+        "quotients-and-reconstruction/README.md"
+      ],
+      "unchanged_tex_inputs": 16,
+      "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
     }
   ]
 }

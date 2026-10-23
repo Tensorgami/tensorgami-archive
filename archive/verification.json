@@ -1,7 +1,7 @@
 {
   "edition": "Tensorgami version 121",
   "source_commit": "cf0756927115020b5b28e1d0e48db7deacd21f5c",
-  "verified_at": "2026-10-23T15:48:36.538059+00:00",
+  "verified_at": "2026-10-23T16:32:17.388387+00:00",
   "origin": "https://tensorgami.com",
   "files_checked": 183,
   "html_files_checked": 42,
@@ -36,5 +36,27 @@
   "canonical_source_unchanged": true,
   "canonical_files_checked": 448,
   "scope": "Publication identity and archive-integrity verification. No theorem certification, new proof audit, external-link audit, or browser visual review.",
-  "passed": true
+  "passed": true,
+  "archival_documentation": {
+    "native_readme_corrected": true,
+    "archival_source": {
+      "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+      "source_directory": "archive/reader-sources/quotients-and-reconstruction",
+      "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
+      "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
+      "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
+      "bytes": 97091,
+      "readme_only_change": true,
+      "changed_members": [
+        "quotients-and-reconstruction/README.md"
+      ],
+      "unchanged_tex_inputs": 16,
+      "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
+    },
+    "all_original_website_files_unchanged": true,
+    "scope": "Live-file comparisons and canonical stable-file counts above refer to unchanged website bytes. In the archival source copy, one native README is intentionally corrected; mathematical source files are unchanged."
+  }
 }

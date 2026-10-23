@@ -1,5 +1,5 @@
 {
-  "edition": "2026-10-23.1",
+  "edition": "2026-10-23.2",
   "published_files_changed": false,
   "source_only_changes": [
     {
@@ -49,7 +49,30 @@
       "canonical_sha256": "76b002994e3e08b8ba31a5782e74a57314eb3ebc2c0ebadedf3155cdf555380f",
       "archived_sha256": "25072158173d9c94ddc9155ddc4a3be830bf72013f0b8fe38a53189909c4ca52",
       "reason": "Remove machine-specific dependency path; installed package and explicit environment override remain supported."
+    },
+    {
+      "path": "content/expositions/quotients-and-reconstruction-pdf/README.md",
+      "canonical_sha256": "ee29bd41bf9424d3d9b7839c795e86a9996c495050ea6c569ac338bb96cebea5",
+      "archived_sha256": "8f3f41f7d446f8a03a73365443de9d4e01e571f80ed0e5020d3482cd45560c80",
+      "reason": "Authorized archival README correction: full web reading edition, current published PDF hash, current proof-notes link title; mathematical inputs and canonical website source untouched."
     }
   ],
-  "scope": "Private metadata and inactive private template branches are excluded. Two converter dependency fallbacks are made portable. Public README replaces internal working documentation."
+  "scope": "Public-only metadata and two converter dependency-path adaptations are retained. This edition adds two archival README corrections and a separately named reader-source variant; every served website file remains exact.",
+  "reader_source_addition": {
+    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+    "source_directory": "archive/reader-sources/quotients-and-reconstruction",
+    "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
+    "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
+    "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
+    "bytes": 97091,
+    "readme_only_change": true,
+    "changed_members": [
+      "quotients-and-reconstruction/README.md"
+    ],
+    "unchanged_tex_inputs": 16,
+    "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
+  }
 }

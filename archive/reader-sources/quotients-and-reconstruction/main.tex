@@ -1,0 +1,88 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,amscd,mathtools}
+\usepackage{microtype,booktabs,array,longtable}
+\usepackage{tikz-cd}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{xcolor}
+\definecolor{linkink}{HTML}{735632}
+\definecolor{softink}{HTML}{5E675D}
+\usepackage[colorlinks=true,linkcolor=linkink,urlcolor=linkink,citecolor=linkink]{hyperref}
+\usepackage{bookmark,fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textsc{Quotients and Reconstruction}}
+\fancyhead[R]{\small\textsc{Tensorgami}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\parskip}{4pt plus 1pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.035}\allowdisplaybreaks[1]\raggedbottom
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\kk}{k}
+\newcommand{\nml}{\trianglelefteq}
+\newcommand{\iso}{\xrightarrow{\sim}}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\rank}{rank}
+\setcounter{tocdepth}{2}
+\hypersetup{pdftitle={Quotients, Refinement, and Reconstruction},pdfsubject={Exact Malcev categories, Jordan--Holder, coherent quotients, descent and derived structure},pdfauthor={}}
+\title{\textbf{Quotients, Refinement,\\and Reconstruction}\\[9pt]\large From exact Mal'cev categories to homotopy and linearization}
+\author{}\date{\small October 22, 2026}
+\begin{document}
+\maketitle\thispagestyle{empty}
+\begin{abstract}
+A quotient makes some distinctions disappear. A relation remembers which
+distinctions are to disappear, and exactness makes that record into an
+object. The Mal'cev condition makes compatible relations complete their
+rectangles. From these constructions we derive a single refinement theorem
+and a single Jordan--H\"older theorem. Groups, modules, and other algebraic
+structures enter by verifying the hypotheses; invariance of dimension
+then follows from the flags of two bases.
+
+We next examine what the resulting factors retain and what they lose.
+Comparison pages pair simple layers, additive invariants discard extension
+data, and explicit probes recover nilpotent operators. Counting flags
+produces an associative Hall multiplication. Finally, homotopy quotients
+retain automorphisms and coherent gluing, descent recovers actions, and
+linearization supplies coefficient categories, derived extensions and
+cotangent information. The ordinary comparison is proved from the stated
+categorical axioms. The higher chapters distinguish imported foundational
+theorems from the deductions proved here. Each enlargement answers a
+specific question that the preceding construction leaves open.
+\end{abstract}
+\clearpage\input{00-reading-guide}
+\clearpage\begingroup\setlength{\parskip}{0pt}\tableofcontents\endgroup
+\clearpage\part{One comparison framework}
+\input{01-maps-relations-exactness}
+\input{02-malcev-and-comparison}
+\input{03-refinement-and-factors}
+\clearpage\part{Instances and comparison pages}
+\input{04-instances-and-dimension}
+\input{05-modules-and-finite-tools}
+\input{06a-common-comparison-pages}
+\input{06b-module-spectral-calculus}
+\clearpage\part{What the factors retain and what probes recover}
+\input{07-additive-invariants}
+\input{08-extensions-and-lifting}
+\input{09-probes-and-reconstruction}
+\input{09b-hall-associativity}
+\clearpage\part{Coherent quotients and deeper structure}
+\input{10-higher-quotients}
+\input{11-linearization-and-derived-structure}
+\clearpage\appendix\input{12-dependencies-and-reading}
+\end{document}

@@ -1,0 +1,522 @@
+\section{Filtered maps and their successive obstructions}\label{s:chapter}
+
+The common Jordan--H\"older theorem is already complete. A reader following
+only that theorem may pass to Section~\ref{k:section}; the purpose here
+is to extend the page construction to arbitrary filtered module maps.
+We now develop the module page calculus beyond composition-series input.
+Its simplest acyclic example will recover the preceding comparison.
+We can put the two copies of an object into the exact complex
+\[
+0\longrightarrow M\xrightarrow{\id}M\longrightarrow0,
+\]
+give its two terms different filtrations, and calculate what happens to
+their layers. The complex has no homology: the identity has zero kernel
+and zero cokernel. Its initial layers need not cancel immediately,
+because they occur at different filtration levels. A spectral sequence
+records the successive cancellations.
+
+When the layers are simple, every nonzero cancellation map is an
+isomorphism. Since nothing survives, these maps pair every factor on one
+side with exactly one factor on the other. This will prove the module
+Jordan--H\"older theorem without assuming composition length, composition
+multiplicities, or their invariance.
+
+We shall construct all the pages needed for this argument. The setting is
+left modules over a fixed ring with identity. Only submodules, quotient
+modules, and module homomorphisms are used. The argument does not invoke
+the earlier categorical Jordan--H\"older theorem. The preceding chapter
+has already supplied the group and operator version of the particular
+simple-factor calculation. Here additive module structure permits
+arbitrary filtered maps, nonsimple layers, and nonzero limiting homology.
+
+\subsection{A map seen one layer at a time}
+
+Let $f:X\to Y$ be a module homomorphism. Give both modules finite
+increasing filtrations indexed by the integers. Thus
+\[
+F_pX\subseteq F_{p+1}X,\qquad F_pY\subseteq F_{p+1}Y,
+\]
+the filtrations are zero for sufficiently negative $p$, and they equal
+the whole modules for sufficiently positive $p$. Assume that $f$ preserves
+them:
+\[
+f(F_pX)\subseteq F_pY\quad\text{for every }p.
+\]
+One may regard $X\xrightarrow{f}Y$ as a chain complex in degrees $1$ and
+$0$. Its homology is
+\[
+H_1=\Ker f,\qquad H_0=Y/f(X).
+\]
+There are no other terms or differentials, so the condition that two
+successive differentials compose to zero is automatic.
+
+At the first level of resolution, keep only the associated layers:
+\[
+X_0(p)=F_pX/F_{p-1}X,\qquad
+Y_0(p)=F_pY/F_{p-1}Y.
+\]
+Filtration preservation gives a well-defined module map
+\[
+d_{0,p}:X_0(p)\longrightarrow Y_0(p),\qquad [x]\longmapsto[f(x)].
+\]
+If $x$ is changed by an element of $F_{p-1}X$, its image changes by an
+element of $F_{p-1}Y$. This is the entire well-definedness check.
+
+Taking the kernel and cokernel of these maps retains the source classes
+whose images have fallen to a lower layer, and the target classes not yet
+accounted for by images. We then ask whether the retained source classes
+reach a target one layer lower, two layers lower, and so on. The page
+number measures how far down the filtration the map is being examined.
+
+\subsection{The pages and their maps}
+
+For $r\geq1$ and integers $p,q$, define
+\begin{align}
+X_r(p)
+&=
+\frac{F_pX\cap f^{-1}(F_{p-r}Y)}
+     {F_{p-1}X\cap f^{-1}(F_{p-r}Y)},
+\label{s:source-page}\\[3pt]
+Y_r(q)
+&=
+\frac{F_qY}
+     {F_{q-1}Y+\bigl(F_qY\cap f(F_{q+r-1}X)\bigr)}.
+\label{s:target-page}
+\end{align}
+All the displayed sets are submodules. In the first formula the
+denominator lies in the numerator because $F_{p-1}X\subseteq F_pX$;
+in the second both summands of the denominator lie in $F_qY$.
+
+The numerator of $X_r(p)$ consists of representatives in source layer $p$
+whose image has reached target level $p-r$ or lower. Its denominator
+identifies representatives that were already in a lower source layer
+and satisfy the same condition. On the target side, $Y_r(q)$ discards
+lower target layers and images already detected from source levels up
+to $q+r-1$.
+
+More precisely, $[x]\mapsto x+F_{p-1}X$ embeds $X_r(p)$ into
+$F_pX/F_{p-1}X$: the map on its numerator has exactly the displayed
+denominator as kernel.
+The target $Y_r(q)$ is a quotient of $F_qY/F_{q-1}Y$. Thus a surviving
+source entry is retained as a submodule of its original layer, while a
+surviving target entry is retained as a quotient of its original layer.
+
+There is a module map
+\begin{equation}\label{s:page-differential}
+d_{r,p}:X_r(p)\longrightarrow Y_r(p-r),\qquad[x]\longmapsto[f(x)].
+\end{equation}
+To check it, put $q=p-r$. A numerator representative has image in $F_qY$.
+Changing it by
+$z\in F_{p-1}X\cap f^{-1}(F_qY)$ changes the image by
+\[
+f(z)\in F_qY\cap f(F_{p-1}X)
+       =F_qY\cap f(F_{q+r-1}X),
+\]
+which is in the target denominator. The formula is therefore independent
+of representatives and is linear.
+
+For each page, the arrows go from the source row to the target row:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X_r(p) \arrow[d,"d_{r,p}"] & \text{source degree }1\\
+Y_r(p-r) & \text{target degree }0.
+\end{tikzcd}
+\]
+There are no arrows out of the target row or into the source row. Hence
+the square of the differential is zero.
+
+\begin{proposition}[The next page is homology]\label{s:transition}
+There are canonical isomorphisms
+\begin{align*}
+X_{r+1}(p)&\cong\Ker\bigl(d_{r,p}:X_r(p)\to Y_r(p-r)\bigr),\\
+Y_{r+1}(q)&\cong
+Y_r(q)/\im\bigl(d_{r,q+r}:X_r(q+r)\to Y_r(q)\bigr)
+\end{align*}
+for every $r\geq0$.
+\end{proposition}
+
+\begin{proof}
+For $r=0$, the kernel of $d_{0,p}$ consists of the classes represented by
+$x\in F_pX$ with $f(x)\in F_{p-1}Y$. Since
+$f(F_{p-1}X)\subseteq F_{p-1}Y$, its denominator is $F_{p-1}X$.
+This is exactly $X_1(p)$. Quotienting $Y_0(q)$ by the image of $d_{0,q}$
+gives
+\[
+F_qY/\bigl(F_{q-1}Y+f(F_qX)\bigr)=Y_1(q).
+\]
+
+Now take $r\geq1$ and put $q=p-r$. The numerator for $X_{r+1}(p)$ is
+contained in the numerator for $X_r(p)$. Its intersection with the old
+denominator is
+\[
+\bigl(F_pX\cap f^{-1}(F_{q-1}Y)\bigr)
+\cap\bigl(F_{p-1}X\cap f^{-1}(F_qY)\bigr)
+=F_{p-1}X\cap f^{-1}(F_{q-1}Y).
+\]
+That is precisely the new denominator. Thus inclusion of representatives
+induces an injection $X_{r+1}(p)\hookrightarrow X_r(p)$.
+Every class in its image maps to zero under $d_{r,p}$, because its image
+under $f$ lies in $F_{q-1}Y$.
+
+Conversely, suppose $[x]\in X_r(p)$ maps to zero. Then
+\[
+f(x)\in F_{q-1}Y+\bigl(F_qY\cap f(F_{p-1}X)\bigr).
+\]
+Choose $z\in F_{p-1}X$ with $f(z)\in F_qY$ such that
+$f(x)-f(z)\in F_{q-1}Y$. The element $z$ is in the denominator of
+$X_r(p)$, so $x-z$ represents the same class there. But $x-z$ is in the
+numerator of $X_{r+1}(p)$. This proves that the injection identifies
+$X_{r+1}(p)$ with the kernel.
+The choice of $z$ proves that a suitable representative exists; the
+canonical map itself is induced by inclusion and does not depend on that
+choice.
+
+On the target side, the denominators increase with $r$, giving a natural
+surjection $Y_r(q)\twoheadrightarrow Y_{r+1}(q)$. The additional elements
+killed are the classes of
+\[
+F_qY\cap f(F_{q+r}X).
+\]
+Every such element is $f(x)$ for an $x\in F_{q+r}X$ whose image lies in
+$F_qY$, so it comes from $X_r(q+r)$. Conversely, every image of
+$d_{r,q+r}$ has this form. The kernel of the surjection is therefore
+exactly that image, proving the asserted cokernel formula.
+\end{proof}
+
+This calculation is a spectral sequence, in the ordinary algebraic
+sense. To see the conventional indexing, set
+\[
+E_r^{p,q}=
+\begin{cases}
+X_r(p),&p+q=1,\\
+Y_r(p),&p+q=0,\\
+0,&\text{otherwise}.
+\end{cases}
+\]
+Then $d_r$ has bidegree $(-r,r-1)$, the convention for an increasing
+filtration on a chain complex, and Proposition~\ref{s:transition} says
+exactly
+\[
+E_{r+1}=H(E_r,d_r).
+\]
+The explicit formulas establish this relation; no general spectral
+sequence existence theorem is being assumed.
+The support lies on the two total-degree diagonals $p+q=1$ and $p+q=0$.
+The index $q$ may be negative; no first-quadrant assumption is needed.
+The finite filtration support will supply the convergence bound.
+
+The construction also respects maps. Suppose
+\[
+\begin{tikzcd}
+X\arrow[r,"f"]\arrow[d,"a"']&Y\arrow[d,"b"]\\
+X'\arrow[r,"f'"']&Y'
+\end{tikzcd}
+\]
+commutes and $a,b$ preserve filtrations. The formula $[x]\mapsto[a(x)]$
+defines $X_r(p)\to X'_r(p)$: the equality $f'a=bf$ carries both numerator
+and denominator into their primed versions. Similarly $[y]\mapsto[b(y)]$
+defines $Y_r(q)\to Y'_r(q)$, since
+$b(f(F_jX))=f'(a(F_jX))\subseteq f'(F_jX')$. These maps commute with
+$d_r$ by the same equality $f'a=bf$. The source inclusions and target
+quotient maps defining the next page commute with $a,b$ as well, so
+the identifications with homology are natural. Thus every page and differential
+belongs to the given filtered map, rather than to choices of bases.
+
+\subsection{What eventually survives}
+
+\begin{proposition}[Convergence in this two-term setting]\label{s:convergence}
+For sufficiently large $r$, the pages stabilize to
+\begin{align*}
+X_r(p)&=
+\frac{F_pX\cap\Ker f}{F_{p-1}X\cap\Ker f},\\
+Y_r(q)&=
+\frac{F_qY}{F_{q-1}Y+(F_qY\cap f(X))}.
+\end{align*}
+The first is the associated layer of the induced filtration on $\Ker f$;
+the second is canonically the associated layer of the quotient filtration
+on $Y/f(X)$. In particular, if $f$ is an isomorphism, every page entry
+is eventually zero.
+\end{proposition}
+
+\begin{proof}
+Fix $p$. For sufficiently large $r$, $F_{p-r}Y=0$, so the two inverse
+images in \eqref{s:source-page} become $\Ker f$. Fix $q$. For sufficiently
+large $r$, $F_{q+r-1}X=X$, giving the second formula from
+\eqref{s:target-page}.
+
+Let $\pi:Y\to Y/f(X)$ be the quotient map. The quotient filtration is
+$F_q(Y/f(X))=\pi(F_qY)$. The map
+\[
+F_qY\longrightarrow\pi(F_qY)/\pi(F_{q-1}Y),\qquad
+y\longmapsto\pi(y)+\pi(F_{q-1}Y)
+\]
+is surjective. An element $y\in F_qY$ is in its kernel exactly when
+$y=y_0+f(x)$ for $y_0\in F_{q-1}Y$. Then $f(x)=y-y_0\in F_qY$,
+so the kernel is $F_{q-1}Y+(F_qY\cap f(X))$, as asserted.
+
+Only finitely many filtration columns are nonzero on page $0$.
+Proposition~\ref{s:transition} shows that a zero entry stays zero.
+We may therefore take a single sufficiently large $r$ for all relevant
+columns. If $f$ is an isomorphism, its kernel and cokernel are zero,
+so all the stabilized entries are zero.
+\end{proof}
+
+Notice what the proof used: bounded filtrations, kernels, images, and
+explicit quotient maps. It did not count dimensions or composition
+factors. This is the point that makes a noncircular application to
+Jordan--H\"older possible.
+
+\subsection{Two composition series inside an acyclic complex}
+
+Suppose that a module $M$ has two composition series
+\[
+0=A_0\subsetneq A_1\subsetneq\cdots\subsetneq A_m=M,
+\qquad
+0=B_0\subsetneq B_1\subsetneq\cdots\subsetneq B_n=M.
+\]
+Thus each $A_i/A_{i-1}$ and each $B_j/B_{j-1}$ is a nonzero simple
+module. The numbers $m$ and $n$ are not assumed equal.
+
+Extend the notation by $A_i=0$ for $i\leq0$, $A_i=M$ for $i\geq m$,
+and similarly for $B$. Take $X=Y=M$ and $f=\id_M$, with
+\begin{equation}\label{s:staggered-filtrations}
+F_pX=A_{p-n},\qquad F_pY=B_p.
+\end{equation}
+The entire $B$ filtration occurs before the nonzero stages of the
+$A$ filtration. This makes the identity filtration preserving:
+if $p\leq n$, then $F_pX=0$; if $p>n$, then $F_pY=M$.
+We have a filtered complex even though the inverse identity need not
+preserve these two filtrations.
+
+Its nonzero page-$0$ entries are precisely
+\[
+X_0(n+i)=A_i/A_{i-1}\quad(1\leq i\leq m),
+\qquad
+Y_0(j)=B_j/B_{j-1}\quad(1\leq j\leq n).
+\]
+Their column ranges are disjoint, so $d_0=0$ and $E_1=E_0$.
+The positions can be summarized as follows:
+\[
+\begin{array}{c|c|c}
+\text{row}&\text{nonzero columns}&\text{entry}\\ \hline
+\text{source}&p=n+i,\quad1\leq i\leq m&A_i/A_{i-1}\\
+\text{target}&p=j,\quad1\leq j\leq n&B_j/B_{j-1}
+\end{array}
+\]
+Each $d_r$ travels from a source column to the target column $r$ places
+to its left.
+
+\begin{theorem}[Module Jordan--H\"older by spectral cancellation]
+\label{s:jordan-holder}
+The two composition series have equal length, $m=n$, and their factors
+can be paired by module isomorphisms. The nonzero differentials in the
+spectral sequence of \eqref{s:staggered-filtrations} supply such a pairing.
+\end{theorem}
+
+\begin{proof}
+Recall first why a nonzero map $u:S\to T$ between simple modules is an
+isomorphism. Its kernel is a submodule of $S$, and cannot be all of $S$
+when $u\neq0$, so it is zero. Its image is a nonzero submodule of $T$,
+so it is $T$. The first isomorphism theorem now gives the assertion.
+
+Initially every nonzero page entry is simple. Inductively suppose this
+is true on page $r$. A differential is either zero, leaving its source
+and target unchanged on the next page, or is an isomorphism between two
+simple entries, making both zero on the next page. There is only one
+possible outgoing differential from each source position and one
+possible incoming differential to each target position on a fixed page.
+There are no incoming differentials to source positions and no outgoing
+differentials from target positions. Proposition~\ref{s:transition}
+therefore proves the induction.
+
+Keep each original factor as a label on its position until that position
+vanishes. A zero differential carries the label forward by the canonical
+kernel or quotient identification. A nonzero differential pairs its two
+labels by an isomorphism and removes them. Removed positions stay zero,
+so no label is used twice. Proposition~\ref{s:convergence} applies to
+$f=\id_M$ and says that eventually every position is zero. Consequently
+every original label is paired exactly once, one $A$ factor with one
+$B$ factor. This is a bijection of their finite index sets, proving
+$m=n$ and the required isomorphisms.
+
+If $M=0$, both composition series have no factors and the conclusion
+holds directly.
+\end{proof}
+
+For $M\ne0$, termination also has an explicit bound: $E_{m+n}=0$.
+Indeed, in a source column $p=n+i$, formula~\eqref{s:source-page}
+then uses $F_{p-(m+n)}Y=B_{i-m}=0$. In a target column $j\geq1$,
+formula~\eqref{s:target-page} uses
+$F_{j+(m+n)-1}X=A_{j+m-1}=M$, so its denominator is all of $B_j$.
+These bounds use the lengths of the two given lists, without assuming
+that those lengths agree or are intrinsic to $M$.
+
+This proof obtains an actual pairing. An equality of alternating sums
+would give less information unless one had already established the
+independence of simple classes. No such independence, or Grothendieck
+group calculation, is needed here.
+
+\subsection{A calculation with nonzero differentials}
+
+Let $M=\kk e_1\oplus\kk e_2$, with
+\[
+A_1=\kk e_1,\qquad B_1=\kk e_2,\qquad A_2=B_2=M.
+\]
+Take $n=2$ in \eqref{s:staggered-filtrations}. Thus the source enters at
+columns $3,4$, while the target enters at columns $1,2$:
+\[
+\begin{array}{c|cccc}
+&1&2&3&4\\ \hline
+X_1&0&0&\kk e_1&M/\kk e_1\\
+Y_1&\kk e_2&M/\kk e_2&0&0.
+\end{array}
+\]
+The only potentially nonzero $d_1$ is
+\[
+d_{1,3}:\kk e_1\longrightarrow M/\kk e_2,
+\qquad ae_1\longmapsto ae_1+\kk e_2.
+\]
+It is an isomorphism: every target class has such a representative, and
+the only vector common to the two coordinate lines is zero. Those two
+positions disappear. Page $2$ therefore has just
+\[
+X_2(4)=M/\kk e_1,\qquad Y_2(1)=\kk e_2.
+\]
+There is no target in column $2$, so $d_{2,4}=0$; there is no source
+in column $3$, so no $d_2$ reaches column $1$. Page $3$ has the same two
+surviving factors, but its source formula gives a useful representative:
+\[
+X_3(4)=\frac{M\cap\kk e_2}{\kk e_1\cap\kk e_2}
+       =\kk e_2,
+\qquad
+Y_3(1)=\frac{\kk e_2}{\kk e_2\cap\kk e_1}=\kk e_2.
+\]
+The identification of this $X_3(4)$ with $X_2(4)$ sends
+$ae_2$ to $ae_2+\kk e_1$. Now
+\[
+d_{3,4}:\kk e_2\xrightarrow{\id}\kk e_2
+\]
+removes the remaining pair, and $E_4=0$.
+In particular, the zero differential $d_2$ did not mean that the
+calculation had stabilized: $d_3$ was still nonzero. Equality of two
+successive pages does not by itself imply that every later differential
+vanishes.
+
+The cancellations occur at different distances:
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\kk e_1\arrow[r,"d_{1,3}","\sim"']&M/\kk e_2
+&\text{columns }3\to2\\
+\kk e_2\arrow[r,"d_{3,4}","\sim"']&\kk e_2
+&\text{columns }4\to1.
+\end{tikzcd}
+\]
+This last picture records the two nonzero arrows on their respective
+pages; it is not a single page. The source label $\kk e_2$ in the second row
+is the page-$3$ representative just calculated.
+
+For comparison, if $A_1=B_1=\kk e_1$, then $d_1=0$ and the two nonzero
+maps occur on page $2$:
+\[
+d_{2,3}:\kk e_1\iso\kk e_1,
+\qquad
+d_{2,4}:M/\kk e_1\iso M/\kk e_1.
+\]
+The page of cancellation records relative filtration position; it is not
+an invariant of the unfiltered module. One may also give $M$ the operator
+$Te_1=0$, $Te_2=e_2$ and regard it as a $\kk[t]$-module. The same crossed
+filtration calculation then pairs the simple type with eigenvalue $0$
+on page $1$, and the different simple type with eigenvalue $1$ on page
+$3$. The argument matches module types, as well as the number of terms.
+
+\subsection{The butterfly is visible inside the differentials}
+
+The construction has a precise relation to the earlier refinement
+rectangle. Take any two finite filtrations $A$ and $B$ of a module $M$;
+their factors need not be simple. Use the same shifted identity complex.
+For $1\leq i\leq m$ and $1\leq j\leq n$, put
+\[
+r=n+i-j,\qquad p=n+i.
+\]
+Then $r\geq1$, and the explicit pages become
+\begin{align*}
+X_r(n+i)&=\frac{A_i\cap B_j}{A_{i-1}\cap B_j},\\
+Y_r(j)&=\frac{B_j}{B_{j-1}+(A_{i-1}\cap B_j)}.
+\end{align*}
+The differential is induced by the inclusion $A_i\cap B_j\hookrightarrow
+B_j$. Its image is canonically
+\begin{equation}\label{s:differential-cell}
+\im d_{n+i-j,n+i}\cong
+Q_{ij}:=
+\frac{A_i\cap B_j}
+{(A_{i-1}\cap B_j)+(A_i\cap B_{j-1})}.
+\end{equation}
+Here is the kernel check. If $x\in A_i\cap B_j$ has zero target class,
+write $x=b+z$ with $b\in B_{j-1}$ and $z\in A_{i-1}\cap B_j$.
+Since both $x$ and $z$ lie in $A_i$, so does $b=x-z$; hence
+$b\in A_i\cap B_{j-1}$. The converse is immediate. Thus the kernel of
+the map from $A_i\cap B_j$ to its image is exactly the denominator
+in \eqref{s:differential-cell}, and the first isomorphism theorem applies.
+
+The same $Q_{ij}$ is what appears on taking associated layers in either
+order. To state this precisely, filter $A_i/A_{i-1}$ by
+\[
+\overline B_j=\frac{A_{i-1}+(A_i\cap B_j)}{A_{i-1}}.
+\]
+The map $A_i\cap B_j\to\overline B_j/\overline B_{j-1}$ is surjective.
+Its kernel is
+$(A_{i-1}\cap B_j)+(A_i\cap B_{j-1})$: if
+$x=a+y$ with $a\in A_{i-1}$ and $y\in A_i\cap B_{j-1}$, then
+$a=x-y\in B_j$; the reverse inclusion is immediate. Consequently
+\[
+\operatorname{gr}^{B}_j\operatorname{gr}^{A}_i M
+\cong Q_{ij}
+\cong\operatorname{gr}^{A}_i\operatorname{gr}^{B}_j M.
+\]
+The second isomorphism follows by the same calculation after interchanging
+$A$ and $B$. These are isomorphisms of individual indexed subquotients;
+no simultaneous choice of a basis or a splitting of the filtrations has
+been made.
+
+Thus the static comparison rectangle and the spectral calculation share
+the same subquotients. The rectangle displays all $Q_{ij}$ together.
+The spectral sequence encounters them in order of the distance
+$r=n+i-j$, as images of actual differentials. The kernel and quotient
+calculations proved above explain the connection. Calling the rectangle
+alone a spectral sequence would omit the page transitions and the
+differentials that we have now supplied.
+
+\subsection{What this adds, and what it does not assert}
+
+The initial framework is a filtered map. Its successive pages separate
+what the map already accounts for from what remains. The stable pages
+retain the layers of its kernel and cokernel. When the map is an identity,
+these stable pages are zero; when the initial layers are simple, the
+necessary cancellations become isomorphisms. Jordan--H\"older emerges
+from those two facts together.
+
+A single filtration on a module concentrated in degree zero has no
+nonzero differentials. Its spectral sequence leaves its own associated
+graded object in place and does not by itself compare a second
+filtration. The two-term identity complex is what creates a comparison
+with nonzero differentials. Likewise, the bare statement that an
+alternating sum vanishes would not supply our pairing proof.
+
+With finite filtrations, the stabilized pages describe associated
+layers of homology. They do not, without further data, specify how those
+layers are attached. That limitation returns us to the questions about
+extensions and reconstruction in the following chapters. Spectral
+sequences organize successive information; they do not make the extension
+problem disappear.
+
+For the general theory, the Stacks Project constructs filtered-complex
+spectral sequences and proves finite-filtration convergence in
+\href{https://stacks.math.columbia.edu/tag/012K}{Section 12.24,
+especially Lemmas 12.24.2 and 12.24.11}. Its convention is cohomological
+with decreasing filtrations, whereas ours is homological with increasing
+filtrations. The two-filtration interchange is explicitly identified
+with Zassenhaus's lemma in Deligne's
+\href{https://www.numdam.org/item/10.1007/BF02684692.pdf}{\emph{Th\'eorie
+de Hodge II}, \S1.2.1}. These references place the constructions in their
+classical setting; the proof in this chapter is given directly, and no
+originality claim is made for this presentation.
