@@ -1,0 +1,96 @@
+\contentsline {section}{How to read the construction}{2}{section*.1}%
+\contentsline {part}{I\hspace {1em}One comparison framework}{6}{part.1}%
+\contentsline {section}{\numberline {1}From algebraic maneuvers to maps and relations}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}An elementary maneuver is a diagram}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}What is retained by a universal construction?}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}A precise license to reason with witnesses}{9}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Relations compose by matching, then forgetting}{9}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Exactness makes an identification into an object}{11}{subsection.1.5}%
+\contentsline {section}{\numberline {2}The Mal'cev condition and the universal comparison}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Why relative difference is enough}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Partial identifications and their supports}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}One relation, two quotients, one object}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Which relations descend through a quotient?}{15}{subsection.2.4}%
+\contentsline {section}{\numberline {3}A quotient remembers which identifications were made}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The data in a normal series}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}What a genuine refinement means}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}The comparison rectangle}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Simplicity removes the remaining freedom}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Factor data becomes an invariant only after the comparison}{23}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}What is natural in the construction}{24}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Dependency and scope check}{25}{subsection.3.7}%
+\contentsline {part}{II\hspace {1em}Instances and comparison pages}{26}{part.2}%
+\contentsline {section}{\numberline {4}Groups, modules, and dimension as instances}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}One verification for algebraic structures}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Reading the axioms in familiar examples}{27}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Reading one cell as the familiar group butterfly}{28}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}A comparison that changes the order}{28}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Finite basis size, with no dimension in the prerequisites}{29}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}What a factor list leaves unresolved}{29}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Keeping the operations when we change the object}{30}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Modules and their maps}{30}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Preimages, quotients, and the local comparison}{31}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Finite-dimensional tools, after dimension has been proved}{31}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}An operator is a polynomial action}{32}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Simple layers and finite length}{32}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Comparison pages with the operations retained}{33}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The normality that makes the pages possible}{34}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Terms, maps, and the next page}{34}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}A nonabelian crossing and the module specialization}{36}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Filtered maps and their successive obstructions}{37}{section.7}%
+\contentsline {subsection}{\numberline {7.1}A map seen one layer at a time}{37}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}The pages and their maps}{38}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}What eventually survives}{40}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Two composition series inside an acyclic complex}{41}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}A calculation with nonzero differentials}{42}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}The butterfly is visible inside the differentials}{43}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}What this adds, and what it does not assert}{44}{subsection.7.7}%
+\contentsline {part}{III\hspace {1em}What the factors retain and what probes recover}{45}{part.3}%
+\contentsline {section}{\numberline {8}What every additive measurement must retain}{45}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Splicing gives additivity before we name a group}{45}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Constructing the universal recipient}{45}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Why the chosen category matters}{46}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}A short bridge to Euler characteristic}{47}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}The information that remains to be recovered}{47}{subsection.8.5}%
+\contentsline {section}{\numberline {9}What attaches one layer to another}{47}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Keeping the endpoints fixed}{48}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Change the quotient: pull back}{48}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Change the subobject: push out}{49}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Adding extensions by merging their kernels}{50}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}An extension that fits in one matrix}{52}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}A boundary map measures failure to lift}{53}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}An attachment can skip an adjacent layer}{54}{subsection.9.7}%
+\contentsline {section}{\numberline {10}Recovering a nilpotent operator from spaces of maps}{55}{section.10}%
+\contentsline {subsection}{\numberline {10.1}A relation becomes a test object}{55}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Which endpoints can be reached by a long chain?}{56}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Lifting the endpoint filtration to a basis of chains}{57}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Reading the operator from its measurements}{59}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Associativity by counting filtrations}{60}{section.11}%
+\contentsline {subsection}{\numberline {11.1}A setting where the counts are finite}{61}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}One flag, two intermediate objects}{61}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}The first product, computed completely}{62}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Three layers and a second count}{63}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}What the multiplication remembers}{63}{subsection.11.5}%
+\contentsline {part}{IV\hspace {1em}Coherent quotients and deeper structure}{65}{part.4}%
+\contentsline {section}{\numberline {12}Higher quotients: keeping the identifications}{65}{section.12}%
+\contentsline {subsection}{\numberline {12.1}One construction of homotopical algebraic objects}{65}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}The action groupoid and the role of associativity}{66}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Extensions become fiber diagrams}{67}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Quotients that survive change of base}{68}{subsection.12.4}%
+\contentsline {subsection}{\numberline {12.5}Descent: a family over $BG$ is an action}{69}{subsection.12.5}%
+\contentsline {subsection}{\numberline {12.6}Intersections acquire additional components}{70}{subsection.12.6}%
+\contentsline {subsection}{\numberline {12.7}Higher normality requires quotient data}{70}{subsection.12.7}%
+\contentsline {section}{\numberline {13}Linear objects, extension data, and derived reconstruction}{71}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Why a full additive replacement cannot work}{71}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Modules already arise as abelian objects over a group}{72}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Stabilization retains the base and enriches the coefficients}{73}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}A derived connecting map reconstructs an extension}{74}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}A derived tensor product retains an equation}{76}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Cotangent objects: the same method for equations and deformations}{76}{subsection.13.6}%
+\contentsline {section}{\numberline {A}Dependencies, scope, and further reading}{79}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}What was proved from what}{79}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Three different comparison claims}{80}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}The additional hypotheses behind reconstruction}{80}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Where the higher foundations enter}{80}{subsection.A.4}%
+\contentsline {subsection}{\numberline {A.5}Audit and reproducibility}{81}{subsection.A.5}%
+\contentsline {section}{References}{81}{section*.4}%

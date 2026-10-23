@@ -1,0 +1,536 @@
+\section{What attaches one layer to another}\label{x:extensions}
+
+The additive invariant has reached its limit. For finite-length modules,
+an exact sequence
+\[
+0\longrightarrow A\xrightarrow{i}E\xrightarrow{q}B\longrightarrow0
+\]
+always gives $[E]=[A]+[B]$, whether or not $E$ is a direct sum. To learn
+more, we must retain the way $A$ sits in $E$ and the way $E$ maps onto $B$.
+The maps are part of the object we now study.
+
+Throughout this section $R$ is a ring with identity, modules are left
+$R$-modules, and every map between modules is $R$-linear. Direct sums carry
+componentwise operations. An \emph{extension of $B$ by $A$} means the whole
+displayed short exact sequence, with $A$ and $B$ fixed. We will first
+construct extensions, then calculate a family of them, and finally use
+them to detect when a map cannot be lifted.
+
+\subsection{Keeping the endpoints fixed}
+
+Two extensions $(i,E,q)$ and $(i',E',q')$ are \emph{equivalent} if there is
+a map $h:E\to E'$ making this diagram commute:
+\[
+\begin{tikzcd}[column sep=large]
+0\arrow[r]&A\arrow[r,"i"]\arrow[d,equal]
+ &E\arrow[r,"q"]\arrow[d,"h"]&B\arrow[r]\arrow[d,equal]&0\\
+0\arrow[r]&A\arrow[r,"i'"]&E'\arrow[r,"q'"]&B\arrow[r]&0.
+\end{tikzcd}
+\]
+Thus $hi=i'$ and $q'h=q$. No separate invertibility assumption on $h$ is
+needed.
+
+\begin{lemma}\label{x:marked-iso}
+Every such $h$ is an isomorphism.
+\end{lemma}
+\begin{proof}
+If $h(e)=0$, then $q(e)=q'h(e)=0$, so $e=i(a)$ for some $a\in A$.
+Now $0=hi(a)=i'(a)$, and injectivity of $i'$ gives $a=0$ and $e=0$.
+Hence $h$ is injective.
+
+Given $e'\in E'$, choose $e\in E$ with $q(e)=q'(e')$. This is possible
+because $q$ is surjective. The difference $e'-h(e)$ lies in $\Ker q'$, so
+it is $i'(a)$ for some $a\in A$. Then $h(e+i(a))=e'$. Thus $h$ is
+surjective. The inverse of a bijective linear map is linear: apply $h$ to
+the proposed addition and scalar identities and use its injectivity.
+\end{proof}
+
+Identity maps, compositions, and inverses now show that equivalence is
+indeed an equivalence relation. The word \emph{fixed} matters: an
+isomorphism between the middle modules that changes an endpoint
+identification need not give an equivalence of extensions.
+
+The \emph{split extension} is
+\[
+0\longrightarrow A\xrightarrow{a\mapsto(a,0)}A\oplus B
+ \xrightarrow{(a,b)\mapsto b}B\longrightarrow0.
+\]
+An extension is called split when it is equivalent to this one.
+
+\begin{proposition}\label{x:splitting}
+An extension is split if and only if there is a linear map $s:B\to E$
+with $qs=\id_B$.
+\end{proposition}
+\begin{proof}
+Such a map is a \emph{section} of $q$. Given a section, the map
+\[
+A\oplus B\longrightarrow E,\qquad (a,b)\longmapsto i(a)+s(b)
+\]
+commutes with both endpoint maps and is therefore an isomorphism by
+Lemma~\ref{x:marked-iso}. Conversely, an equivalence with the split
+extension transports its section $b\mapsto(0,b)$ to a section of $q$.
+\end{proof}
+
+A choice of a lift of each individual element of $B$ is insufficient.
+The lifts must form a linear map. Failure of that compatibility is
+precisely what a nonsplit extension records.
+
+\subsection{Change the quotient: pull back}
+
+Suppose we want to compare an extension with a map $f:P\to B$. We need
+an object that simultaneously records an element of $E$ and an element
+of $P$ which have the same image in $B$. Define
+\[
+f^*E=E\times_B P
+ =\{(e,p)\in E\oplus P:q(e)=f(p)\}.
+\]
+This is a submodule: it is the kernel of the linear map
+$(e,p)\mapsto q(e)-f(p)$. Put
+\[
+j(a)=(i(a),0),\qquad \pi(e,p)=p,\qquad u(e,p)=e.
+\]
+These maps form the diagram
+\[
+\begin{tikzcd}[column sep=large]
+0\arrow[r]&A\arrow[r,"j"]\arrow[d,equal]
+ &f^*E\arrow[r,"\pi"]\arrow[d,"u"]&P\arrow[r]\arrow[d,"f"]&0\\
+0\arrow[r]&A\arrow[r,"i"]&E\arrow[r,"q"]&B\arrow[r]&0.
+\end{tikzcd}
+\]
+The left square commutes because $uj=i$. The right one commutes because
+membership in $f^*E$ says exactly that $qu=f\pi$.
+
+The top row is exact. The map $j$ is injective because $i$ is. If
+$\pi(e,p)=0$, then $p=0$ and $q(e)=0$, so $(e,p)=(i(a),0)=j(a)$
+for a unique $a$. Conversely every $j(a)$ maps to zero. Finally, for
+any $p\in P$, surjectivity of $q$ supplies $e$ with $q(e)=f(p)$, so
+$\pi(e,p)=p$. No assumption that $f$ is injective or surjective was used.
+
+The right square is a pullback in the precise universal sense. If maps
+$r:T\to E$ and $s:T\to P$ satisfy $qr=fs$, the unique map to $f^*E$
+with coordinates $r$ and $s$ is
+\[
+T\longrightarrow f^*E,\qquad t\longmapsto(r(t),s(t)).
+\]
+The compatibility puts its image in $f^*E$; coordinatewise operations
+make it linear; its two coordinates force uniqueness.
+
+\subsection{Change the subobject: push out}
+
+Now suppose instead that $g:A\to A'$ is given. We want to replace the
+embedded $A$ by $A'$ while preserving the quotient $B$. In $A'\oplus E$
+we therefore identify $(g(a),0)$ with $(0,i(a))$. The required relation
+submodule is
+\[
+L_g=\{(g(a),-i(a)):a\in A\},
+\qquad
+g_*E=(A'\oplus E)/L_g.
+\]
+Here $L_g$ is the image of a linear map, so it is a submodule and the
+quotient is defined. Brackets below denote classes modulo $L_g$. Define
+\[
+i_g(a')=[a',0],\qquad u_g(e)=[0,e],\qquad q_g([a',e])=q(e).
+\]
+The last map is well-defined because $q(i(a))=0$. The diagram is
+\[
+\begin{tikzcd}[column sep=large]
+0\arrow[r]&A\arrow[r,"i"]\arrow[d,"g"]
+ &E\arrow[r,"q"]\arrow[d,"u_g"]&B\arrow[r]\arrow[d,equal]&0\\
+0\arrow[r]&A'\arrow[r,"i_g"]&g_*E\arrow[r,"q_g"]&B\arrow[r]&0.
+\end{tikzcd}
+\]
+The left square commutes because $[0,i(a)]=[g(a),0]$. The right square
+commutes by the formula for $q_g$.
+
+The bottom row is exact. If $[a',0]=0$, then
+$(a',0)=(g(a),-i(a))$ for some $a$; injectivity of $i$ gives $a=0$
+and then $a'=0$. If $q_g([a',e])=0$, write $e=i(a)$. The relation gives
+\[
+[a',e]=[a',i(a)]=[a'+g(a),0],
+\]
+so the kernel is the image of $i_g$. That image is visibly killed by
+$q_g$, and $q_g$ is surjective because $q$ is. Again no injectivity or
+surjectivity of $g$ was required.
+
+The left square is a pushout. Given maps $r:A'\to T$ and $s:E\to T$
+with $rg=si$, the formula
+\[
+[a',e]\longmapsto r(a')+s(e)
+\]
+defines a linear map $g_*E\to T$: the map on the direct sum kills
+$(g(a),-i(a))$. It has the prescribed composites with $i_g$ and $u_g$.
+Uniqueness follows because every class is $[a',0]+[0,e]$.
+
+These two constructions have opposite directions for a reason. A map
+\emph{into} the quotient permits us to restrict the extension over a new
+domain. A map \emph{out of} the subobject permits us to impose a new
+identification in the kernel. Their universal properties specify exactly
+which compatible maps survive the construction.
+
+\subsection{Adding extensions by merging their kernels}
+
+Suppose
+\[
+\xi_j:\quad 0\longrightarrow A\xrightarrow{i_j}E_j
+ \xrightarrow{q_j}B\longrightarrow0
+\qquad (j=1,2)
+\]
+are two extensions with the same endpoints. Taking their direct sum gives
+two copies of $B$ and two copies of $A$. We first require the quotient
+coordinates to agree, and then merge the kernel coordinates by addition.
+Thus we pull back along the diagonal $B\to B\oplus B$ and push out along
+the sum $A\oplus A\to A$.
+
+Here is the resulting object in one formula. Let
+\[
+T_2=\{(e_1,e_2):q_1(e_1)=q_2(e_2)\},\qquad
+L_2=\{(i_1(a),-i_2(a)):a\in A\},
+\]
+and set $Q_2=T_2/L_2$. Both are submodules of the relevant direct sum,
+and $L_2\subseteq T_2$. Define
+\[
+i_+(a)=[i_1(a),0]=[0,i_2(a)],\qquad
+q_+([e_1,e_2])=q_1(e_1)=q_2(e_2).
+\]
+The equality defining $i_+$ is exactly the relation imposed by $L_2$.
+The map $i_+$ is injective: if $(i_1(a),0)=(i_1(c),-i_2(c))$, then
+$c=0$ and $a=0$. Every pair in the kernel of $q_+$ has the form
+$(i_1(a),i_2(b))$, and its class is $i_+(a+b)$. Surjectivity follows by
+lifting a given $b\in B$ through both $q_1$ and $q_2$. Hence
+\[
+\xi_1+\xi_2:\quad
+0\longrightarrow A\xrightarrow{i_+}Q_2\xrightarrow{q_+}B
+\longrightarrow0
+\]
+is an extension. This operation is called the \emph{Baer sum}.
+
+To check the asserted pullback--pushout description, the pullback is
+$T_2$, with kernel $A\oplus A$. Its pushout along addition is
+\[
+\frac{A\oplus T_2}
+ {\{(a+b,(-i_1(a),-i_2(b))):a,b\in A\}}.
+\]
+It maps to $Q_2$ by
+\[
+[c,(e_1,e_2)]\longmapsto[e_1+i_1(c),e_2].
+\]
+A displayed relation maps to $[i_1(b),-i_2(b)]=0$. Its inverse sends
+$[e_1,e_2]$ to $[0,(e_1,e_2)]$; the relation defining $L_2$ maps to a
+pushout relation with $b=-a$. The two composites are identities, since
+$[c,(e_1,e_2)]=[0,(e_1+i_1(c),e_2)]$ in the pushout. This verifies the
+construction, including its endpoint maps.
+
+\begin{proposition}\label{x:baer-group}
+Baer sum makes the equivalence classes of extensions of $B$ by $A$ into
+an abelian group. Its zero is the split extension. An inverse of
+$(i,E,q)$ is $(-i,E,q)$.
+\end{proposition}
+\begin{proof}
+First the operation is well-defined on classes. Equivalences
+$h_j:E_j\to E'_j$ send $T_2$ into $T'_2$ and $L_2$ into $L'_2$
+coordinatewise. They induce a map of extensions, which is an isomorphism
+by Lemma~\ref{x:marked-iso}.
+
+For associativity, form the common-image tuples for any $n\geq1$:
+\[
+T_n=\{(e_1,\ldots,e_n):q_1(e_1)=\cdots=q_n(e_n)\},
+\]
+and the relation submodule
+\[
+L_n=\{(i_1(a_1),\ldots,i_n(a_n)):a_1+\cdots+a_n=0\}.
+\]
+The quotient $Q_n=T_n/L_n$ is an extension of $B$ by $A$. Its quotient
+map takes the common image; its kernel map sends $a$ to
+$[i_1(a),0,\ldots,0]$. This kernel map is injective, because a tuple of
+that form belongs to $L_n$ only if $a=0$. A tuple in the kernel of the
+quotient map has entries $i_j(a_j)$; modulo $L_n$ it equals the kernel
+image of $\sum_j a_j$. Finally, a given element of $B$ can be lifted in
+each coordinate. These statements prove exactness.
+
+In the following calculation, $E_1+E_2$ denotes the middle module of
+the Baer sum, with its displayed endpoint maps.
+For $n=3$ the map
+\[
+T_3\longrightarrow (E_1+E_2)+E_3,
+\qquad (e_1,e_2,e_3)\longmapsto[[e_1,e_2],e_3]
+\]
+is linear. If $a_1+a_2+a_3=0$, its value on
+$(i_1(a_1),i_2(a_2),i_3(a_3))$ is the class of
+$(i_{12}(a_1+a_2),i_3(a_3))$, which is zero by the outer sum relation.
+Here $i_{12}$ denotes the kernel inclusion for $E_1+E_2$.
+Thus it factors through $Q_3$. The induced map is the identity on the
+fixed endpoints, so it is an equivalence. The map
+\[
+(e_1,e_2,e_3)\longmapsto[e_1,[e_2,e_3]]
+\]
+likewise identifies $Q_3$ with $E_1+(E_2+E_3)$: a kernel tuple maps to
+the relation determined by $a_1+(a_2+a_3)=0$. Both bracketings therefore
+represent the same extension class. This proves associativity without
+assuming it for the new operation.
+
+Swapping the two coordinates identifies $E_1+E_2$ with $E_2+E_1$.
+It preserves the kernel inclusion because
+$[i_1(a),0]=[0,i_2(a)]$, and preserves the common quotient image.
+This proves commutativity.
+
+For the split extension $S=A\oplus B$, the formula
+\[
+E+S\longrightarrow E,\qquad [e,(a,b)]\longmapsto e+i(a)
+\]
+is defined on pairs with $q(e)=b$. The relation
+$(i(c),(-c,0))$ maps to zero, and both endpoint maps are preserved.
+Lemma~\ref{x:marked-iso} makes it an equivalence, proving the identity law.
+
+Finally, in $E+(-E)$, where $-E$ denotes $(-i,E,q)$, the relation
+submodule consists of pairs $(i(a),i(a))$. The linear map
+$e\mapsto[e,e]$ kills $i(A)$, so it factors uniquely through $E/i(A)$.
+The quotient map identifies $E/i(A)$ with $B$; hence we obtain a linear
+map $s:B\to E+(-E)$ with $q_+s=\id_B$. By
+Proposition~\ref{x:splitting}, this sum is split. The inverse law follows.
+\end{proof}
+
+These equivalence classes form a set. Indeed, choosing a set-theoretic
+lift of every element of $B$ identifies the underlying set of a middle
+module with $A\times B$, by $(a,b)\mapsto i(a)+s(b)$; this uses only
+a choice of representatives, not a linear section. Module operations
+and endpoint maps on this fixed set range over sets of functions.
+Thus the extension classes can be represented by a set of such data.
+For arbitrary modules this set-theoretic observation uses the usual
+axiom of choice; none of the finite-filtration comparison proofs needs it.
+
+We denote this abelian group by $\Ext^1_R(B,A)$. The order of the
+arguments records the sequence: $A$ is the kernel and $B$ the quotient.
+The superscript $1$ refers to a single extension step. No higher
+extension theory is needed for what follows. These are classical
+constructions; the notation and the general pullback--pushout description
+are also recorded in the \href{https://stacks.math.columbia.edu/tag/010I}
+{Stacks Project, Section 12.6}.
+
+The new associativity has a concrete source. Three extensions can be
+added by retaining triples with a common image and then imposing the
+single condition that the three kernel coordinates sum to zero. Either
+pairwise construction gives that same object up to the specified
+isomorphism. The quotient has removed the dependence on how the addition
+was parenthesized.
+
+\subsection{An extension that fits in one matrix}\label{x:operator-extensions}
+
+Let $k$ be a field. For $\lambda\in k$, let $S_\lambda$ be the
+one-dimensional $k[t]$-module on which $t$ acts by multiplication by
+$\lambda$. It is simple because a nonzero vector spans its underlying
+one-dimensional space. Consider
+\[
+0\longrightarrow S_\mu\xrightarrow{i}E\xrightarrow{q}S_\lambda
+\longrightarrow0.
+\]
+Write $T$ for the action of $t$. Choose $u=i(1)$ and choose $v\in E$
+with $q(v)=1$. These form a $k$-basis: every $e\in E$ can first have its
+quotient coordinate removed by subtracting $q(e)v$, leaving an element
+of $i(S_\mu)$; and applying $q$ to $cu+dv=0$ gives $d=0$, followed by
+$c=0$ since $i$ is injective.
+
+The endpoint maps commute with the operators, so
+\[
+Tu=\mu u,\qquad Tv=\lambda v+a u
+\]
+for a unique $a\in k$. In this basis,
+\[
+[T]_{(u,v)}=\begin{pmatrix}\mu&a\\0&\lambda\end{pmatrix}.
+\]
+Conversely, for any $a$, these formulas define a linear operator on
+$ku\oplus kv$, hence a $k[t]$-module $E_a$, and an extension with
+$i(1)=u$, $q(u)=0$, and $q(v)=1$. Thus every extension under discussion
+has this form.
+
+The choice of $u$ is fixed by the marked endpoint, whereas another lift
+of $1$ has the form $v'=v+bu$. Its coefficient is found by one calculation:
+\[
+T(v+bu)=\lambda(v+bu)+\bigl(a+b(\mu-\lambda)\bigr)u.
+\]
+The change of lift acts on the attachment coefficient by
+\[
+a\longmapsto a+b(\mu-\lambda).
+\]
+
+\begin{proposition}\label{x:operator-ext-classification}
+The preceding coefficient gives an isomorphism of abelian groups
+\[
+\Ext^1_{k[t]}(S_\lambda,S_\mu)
+ \cong k/(\mu-\lambda)k.
+\]
+In particular, extensions split when $\lambda\ne\mu$. When
+$\lambda=\mu$, each $a\in k$ gives a distinct marked extension class,
+and its class is zero exactly when $a=0$.
+\end{proposition}
+\begin{proof}
+Changing the lift changes $a$ by an element of $(\mu-\lambda)k$, so
+its coset is independent of that choice. An equivalence fixes $u$ and
+sends a lift of $1$ to a lift of $1$; thus it preserves the same coset.
+Conversely, if $a'=a+b(\mu-\lambda)$, the map $E_{a'}\to E_a$ sending
+$u'\mapsto u$ and $v'\mapsto v+bu$ commutes with $T$ by the displayed
+calculation. It therefore commutes with every polynomial in $T$, is
+$k[t]$-linear, and is an equivalence of extensions. The classification
+is consequently bijective.
+
+To compute its addition, take $E_a$ and $E_c$ with chosen vectors
+$u_1,v_1$ and $u_2,v_2$. In their Baer sum put
+\[
+u_+=[u_1,0]=[0,u_2],\qquad v_+=[v_1,v_2].
+\]
+The first vector is the marked kernel image of $1$ and the second maps
+to $1$ in the quotient. The same spanning and independence argument
+used above makes them a basis. Their operator satisfies
+\[
+Tu_+=\mu u_+,\qquad
+Tv_+=\lambda v_++[a u_1,c u_2]
+       =\lambda v_++(a+c)u_+.
+\]
+Thus Baer sum corresponds to addition of coefficient classes.
+
+The split extension has coefficient zero. If $\mu-\lambda\ne0$, it
+is invertible in $k$, so $(\mu-\lambda)k=k$ and the quotient group is
+zero. If $\mu=\lambda$, the ideal is zero, giving the stated result.
+\end{proof}
+
+When the eigenvalues differ, the explicit section can be read off as
+well. Choose $b=-a/(\mu-\lambda)$. Then $v'=v+bu$ satisfies
+$Tv'=\lambda v'$, and the map $S_\lambda\to E$, $c\mapsto cv'$, is
+$k[t]$-linear and is a section of $q$.
+
+When the eigenvalues agree, a nonzero $a$ cannot be removed by changing
+the lift. Yet all nonzero $a$ give isomorphic \emph{middle modules}.
+Indeed, put $w=au$; then
+\[
+Tw=\lambda w,\qquad Tv=\lambda v+w,
+\]
+which has the same matrix for every nonzero $a$. This rescaling changes
+the marked kernel vector, so it is not an equivalence keeping the
+endpoints fixed. The $a=0$ middle module is different: $T-\lambda\id$
+is zero there, whereas it is nonzero for $a\ne0$, a property preserved
+by every intertwining isomorphism.
+
+For $\lambda=\mu=1$, the cases $a=0$ and $a=1$ give the identity
+operator and the triangular shear $(x,y)\mapsto(x+y,y)$. Both layers carry the
+identity action. The coefficient $a$ now records explicitly the
+attachment that their common list of layers forgot.
+
+There are therefore two different classification questions. One asks
+for the middle operator up to change of basis. The other remembers a
+specified subobject and a specified quotient map. The latter contains
+more information, which is why it supports the extension group just
+constructed.
+
+\subsection{A boundary map measures failure to lift}\label{x:obstruction}
+
+Return to an arbitrary extension
+\[
+\xi:\quad0\longrightarrow A\xrightarrow{i}E\xrightarrow{q}B
+\longrightarrow0.
+\]
+Given $f:P\to B$, we can now form a precise obstruction to finding
+$\widetilde f:P\to E$ with $q\widetilde f=f$: take the pullback
+extension and its class. Define
+\[
+\delta_\xi:\Hom_R(P,B)\longrightarrow\Ext^1_R(P,A),
+\qquad f\longmapsto[f^*E].
+\]
+If $\widetilde f$ exists, then $p\mapsto(\widetilde f(p),p)$ is a
+section of the pullback extension. Conversely, a section of its
+projection to $P$ has exactly this form, and its first coordinate is
+a lift. Proposition~\ref{x:splitting} therefore proves
+\[
+\delta_\xi(f)=0
+\quad\Longleftrightarrow\quad
+f\text{ has a linear lift through }q.
+\]
+
+This is a homomorphism of abelian groups. To verify the assertion,
+take $f,g:P\to B$. The map
+\[
+(f^*E)+(g^*E)\longrightarrow(f+g)^*E,
+\qquad[(e_1,p),(e_2,p)]\longmapsto(e_1+e_2,p)
+\]
+is well-defined: the target condition is
+$q(e_1+e_2)=f(p)+g(p)$, and a Baer relation
+$((i(a),0),(-i(a),0))$ maps to zero. It is linear and preserves both
+endpoint maps. Lemma~\ref{x:marked-iso} makes it an equivalence, proving
+$\delta_\xi(f+g)=\delta_\xi(f)+\delta_\xi(g)$. The pullback along
+the zero map has section $p\mapsto(0,p)$, so $\delta_\xi(0)=0$.
+
+In particular, we have proved exactness of the sequence of abelian groups
+\[
+0\longrightarrow\Hom_R(P,A)\xrightarrow{i\circ-}\Hom_R(P,E)
+\xrightarrow{q\circ-}\Hom_R(P,B)
+\xrightarrow{\delta_\xi}\Ext^1_R(P,A).
+\]
+Here exactness is asserted at the three $\Hom$ groups. The first map
+is injective because $i$ is injective. A map $h:P\to E$ is killed by
+$q\circ-$ exactly when its image lies in $i(A)$; it then factors
+uniquely as $h=i\bar h$, with $\bar h$ linear because $i$ is an
+injective linear map. Exactness at $\Hom_R(P,B)$ is the lifting
+criterion proved above. No surjectivity onto $\Ext^1_R(P,A)$ is claimed.
+
+For example, if $P=B$ and $f=\id_B$, its pullback is equivalent to
+the original extension by $e\mapsto(e,q(e))$. Thus
+$\delta_\xi(\id_B)=[\xi]$: lifting the identity is exactly splitting
+the extension. In the equal-eigenvalue example, this class is the
+coefficient $a$. A section would require an eigenvector above $1$;
+the calculation shows exactly when such a vector exists.
+
+There is also a useful contrast. If $P=R$, every map $f:R\to B$ lifts:
+choose $e$ with $q(e)=f(1)$ and define $\widetilde f(r)=re$. This is
+linear and satisfies $q\widetilde f(r)=r f(1)=f(r)$. The obstruction
+depends on the object from which we test the quotient. A test object
+with relations can detect constraints that a single free generator
+cannot.
+
+\subsection{An attachment can skip an adjacent layer}\label{x:skip-layer}
+
+It is tempting to recover a filtered object by listing its simple
+layers and the extension between every adjacent pair. Even that list
+can miss information. The following example identifies the loss without
+using any classification theorem.
+
+On $k^3$ fix the flag
+\[
+0=F_0\subset F_1=ke_1\subset F_2=ke_1+ke_2\subset F_3=k^3.
+\]
+Compare the zero operator with the operator $N$ given by
+\[
+N(e_1)=N(e_2)=0,\qquad N(e_3)=e_1.
+\]
+Both preserve every $F_i$, so these are filtrations by $k[t]$-submodules.
+Each of the three successive one-dimensional quotients has zero induced
+operator in both examples, hence is $S_0$.
+
+Now retain the adjacent two-layer pieces as well. On $F_2/F_0=F_2$
+the operator is zero in both examples. On $F_3/F_1$ it is also zero,
+because $N(F_3)\subseteq F_1$. Thus the marked extensions
+\[
+0\to F_1/F_0\to F_2/F_0\to F_2/F_1\to0,
+\qquad
+0\to F_2/F_1\to F_3/F_1\to F_3/F_2\to0
+\]
+are split and agree, using the indicated coordinate identifications,
+for the two operators. Nevertheless the full modules are not
+isomorphic. An isomorphism intertwining $N$ with zero would satisfy
+$hN=0$; injectivity of $h$ would force $N=0$, contrary to $N(e_3)=e_1$.
+
+The map from the third layer into the first is invisible in either
+adjacent two-layer quotient. It remains visible if we retain the whole
+extension
+\[
+0\longrightarrow F_2\longrightarrow F_3\longrightarrow F_3/F_2
+\longrightarrow0
+\]
+with its maps: in the $N$ example every lift of the quotient generator
+has the form $e_3+x$ with $x\in F_2$, and $N(e_3+x)=e_1\ne0$,
+so no $k[t]$-linear section exists. For the zero operator the evident
+section does exist.
+
+The example specifies what the proposed summary discarded. Complete
+successive extension data includes each already assembled module and
+the maps attaching the next layer. Replacing those data by isolated
+adjacent two-layer summaries can erase a longer attachment. We now
+seek observations that retain enough information to reconstruct all
+finite-dimensional nilpotent operators.

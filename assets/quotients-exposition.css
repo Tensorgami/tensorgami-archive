@@ -1,0 +1,17 @@
+/* Complete Quotients reading edition: shared typography, contained diagrams and tables. */
+.edition-format{font:.88rem/1.7 var(--sans);color:var(--muted);margin:1rem 0}
+.exposition-reader .qrr-part{font:.78rem/1.6 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--accent);margin:3rem 0 .8rem;padding-top:1rem}
+.exposition-reader .qrr-diagram-scroll{max-width:100%;margin:1.4rem 0;overflow-x:auto;scrollbar-width:thin;padding:.5rem 0}
+.exposition-reader .qrr-diagram-scroll img{display:block;max-width:none;height:auto;margin:0 auto}
+.exposition-reader .qrr-diagram figcaption{font:.8rem/1.6 var(--sans);color:var(--muted);margin-top:.5rem}
+.exposition-reader .table-scroll{max-width:100%;overflow-x:auto;scrollbar-width:thin;margin:1.4rem 0}
+.exposition-reader .table-scroll table{border-collapse:collapse;width:100%;font:.9rem/1.65 var(--serif)}
+.exposition-reader .table-scroll th,.exposition-reader .table-scroll td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.65rem}
+.exposition-reader .table-scroll th{border-top:1px solid var(--line);font-weight:600}
+.exposition-reader .theorem-title{font-weight:600}
+.exposition-reader .legacy-anchor{display:block;scroll-margin-top:1.5rem}
+@media(max-width:760px){.exposition-reader .table-scroll table{min-width:34rem}.exposition-reader .math-inline{overflow-wrap:normal}.exposition-reader .qrr-diagram-scroll{padding-bottom:.7rem}}
+.exposition-reader .qrr-abstract{font-size:1rem;line-height:1.75;border-left:2px solid var(--blue);padding-left:1.25rem;margin-bottom:2rem;color:var(--muted)}
+.exposition-reader .qrr-diagram{max-width:100%;margin:1.4rem 0}
+.exposition-reader .qrr-anchor{scroll-margin-top:1.5rem}
+.exposition-reader .qrr-diagram-scroll:focus-visible,.exposition-reader .table-scroll:focus-visible{outline:2px solid var(--blue);outline-offset:4px}

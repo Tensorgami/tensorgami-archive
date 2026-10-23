@@ -37,9 +37,11 @@
     "featuredExpositions": [
       "fourier-symmetry-and-reconstruction",
       "what-a-boundary-map-can-prove",
-      "what-a-derivative-retains"
+      "what-a-derivative-retains",
+      "quotients-and-reconstruction"
     ],
     "expositions": [
+      "quotients-and-reconstruction",
       "fourier-symmetry-and-reconstruction",
       "ibm-ponder-this-2010",
       "pointwise-weighting-convergence-in-measure",
@@ -94,6 +96,37 @@
         "what-a-derivative-retains"
       ],
       "companionPath": "polynomial-structure"
+    },
+    {
+      "id": "quotients-and-reconstruction",
+      "title": "Quotients, factors, and reconstruction",
+      "description": "Start with the six-element teaching companion to compute the comparison step by step, then turn to the main exposition for the general framework. Continue through comparison pages, extensions and nilpotent probes, then coherent quotients and linearization. Both texts have full web editions and PDF downloads.",
+      "notes": [
+        "six-elements-one-comparison",
+        "quotients-and-reconstruction"
+      ],
+      "stops": [
+        {
+          "label": "Concrete first route: the C₆ teaching companion, §§1–8",
+          "url": "/notes/six-elements-one-comparison.html#section-1"
+        },
+        {
+          "label": "First reading: dimension and Jordan–Hölder",
+          "url": "/notes/quotients-and-reconstruction.html#f:begin"
+        },
+        {
+          "label": "Comparison pages and spectral calculations",
+          "url": "/notes/quotients-and-reconstruction.html#m:section"
+        },
+        {
+          "label": "Factors, extensions, and reconstruction",
+          "url": "/notes/quotients-and-reconstruction.html#k:section"
+        },
+        {
+          "label": "Higher quotients and linearization",
+          "url": "/notes/quotients-and-reconstruction.html#h:chapter"
+        }
+      ]
     },
     {
       "id": "formal-identities-and-obstructions",
@@ -237,6 +270,57 @@
       "manuscriptSha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91"
     },
     {
+      "slug": "quotients-and-reconstruction",
+      "title": "Quotients, Refinement, and Reconstruction",
+      "subtitle": "From exact Mal’cev categories to homotopy and linearization",
+      "topic": "Quotients · Jordan–Hölder · Reconstruction",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "One comparison of quotients yields refinement, Jordan–Hölder, and invariance of dimension. Extensions, probes, and higher quotients then reveal what the simple factors leave undetermined.",
+      "body": "A common quotient construction compares filtrations in pointed exact Mal’cev categories, with groups and modules as instances. Comparison pages, extensions, nilpotent probes, and Hall multiplication lead onward to coherent quotients, descent, and linearization.",
+      "background": "Begin with groups, vector spaces, and their maps. The ordinary categorical comparison is developed from stated axioms. The later routes introduce module calculations and complexes, then use spaces, derived categories, and explicitly cited higher foundations.",
+      "catalogueBackground": "Groups, vector spaces, and their maps. Read §§1–4.5 for the common comparison and dimension theorem; later routes state their further prerequisites.",
+      "readingBody": "content/expositions/quotients-and-reconstruction.html",
+      "readingSource": "content/expositions/quotients-and-reconstruction-web-source.tex",
+      "readingFormat": "full",
+      "edition": "October 2026",
+      "pageCount": 82,
+      "pdf": "/pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
+      "pdfSha256": "dcc9120795b78e227b0711f5b72139e326e6c3b8d75595d6c14c5ec5922a50bb",
+      "sourceArchive": "/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "pdfEditionSource": "content/expositions/quotients-and-reconstruction-pdf/",
+      "source": null,
+      "page": "/notes/quotients-and-reconstruction.html",
+      "readingGuide": "/mechanisms.html#quotients-and-reconstruction",
+      "revision": "First published October 2026. The October 22 clarification edition makes three explanatory steps explicit. Further discussion appears in the notes on proofs, dependencies, and revisions. The complete web text and 82-page PDF have matching section and theorem numbers; the TeX archive contains the corresponding manuscript inputs.",
+      "featureDetail": "Worked calculations compare finite bases and simple layers, distinguish extensions with the same factors, recover nilpotent chain lengths, and count flags to obtain Hall multiplication.",
+      "auditReport": "/notes/quotients-and-reconstruction-audit.html"
+    },
+    {
+      "slug": "six-elements-one-comparison",
+      "title": "Six Elements, One Comparison",
+      "subtitle": "A teaching companion to Quotients, Refinement and Reconstruction",
+      "topic": "C₆ · Quotients · Worked examples",
+      "group": "algebra-geometry",
+      "kind": "Teaching companion",
+      "summary": "Follow addition modulo six through quotient maps, the comparison rectangle, refinement and factor matching, with seven exercises, worked answers and a guide to the higher chapters.",
+      "body": "A concrete first route through the quotient comparison. The same six elements accompany each construction, followed by an optional spectral calculation and a staged guide to the main exposition.",
+      "background": "Subgroups and cosets suffice for the main route. The categorical language is introduced after its role is visible. Read §§1–8 first; §9 and the higher-chapter routes are optional.",
+      "catalogueBackground": "Subgroups and cosets. A concrete C₆ route through the main exposition, with exercises and worked answers.",
+      "readingBody": "content/expositions/six-elements-one-comparison.html",
+      "readingSource": "content/expositions/six-elements-one-comparison-web-source.tex",
+      "readingFormat": "full",
+      "edition": "October 2026",
+      "pageCount": 14,
+      "pdf": "/pdfs/algebra/Six_Elements_One_Comparison.pdf",
+      "pdfSha256": "860667e3a34fb2bf709d0b61d8df318aac10c31a98b6512d5162006f5659abd6",
+      "sourceArchive": "/tex/algebra/Six_Elements_One_Comparison.zip",
+      "pdfEditionSource": "content/expositions/six-elements-one-comparison-pdf/",
+      "source": null,
+      "page": "/notes/six-elements-one-comparison.html",
+      "readingGuide": "/mechanisms.html#quotients-and-reconstruction"
+    },
+    {
       "slug": "pointwise-weighting-convergence-in-measure",
       "title": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
       "topic": "Measure theory",
@@ -249,7 +333,7 @@
       "pdf": "/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
       "page": "/notes/pointwise-weighting-convergence-in-measure.html",
       "kind": "Exposition",
-      "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope. The PDF and TeX source agree.",
+      "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope.",
       "pageCount": 9,
       "revisionDates": [
         "2026-09-22"
@@ -290,7 +374,7 @@
       "pdf": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "page": "/notes/separated-polynomial-divisibility.html",
       "kind": "Exposition",
-      "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged. The PDF and TeX source agree.",
+      "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged.",
       "pageCount": 15,
       "revisionDates": [
         "2026-09-22"
@@ -309,7 +393,7 @@
       "pdf": "/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
       "page": "/notes/galois-frobenius-composition-law.html",
       "kind": "Exposition",
-      "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged. The PDF and TeX source agree.",
+      "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged.",
       "pageCount": 11,
       "revisionDates": [
         "2026-09-22"
@@ -328,7 +412,7 @@
       "pdf": "/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
       "page": "/notes/hartshorne-ii-5-14-18.html",
       "kind": "Exposition",
-      "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections. The PDF and TeX source agree.",
+      "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections.",
       "pageCount": 13,
       "revisionDates": [
         "2026-09-22"
@@ -385,7 +469,7 @@
       "pdf": "/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
       "page": "/notes/lebesgue-riemann-integrability.html",
       "kind": "Exposition",
-      "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: rebuilt the editable source, clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples. The PDF and TeX source agree.",
+      "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples.",
       "pageCount": 4,
       "revisionDates": [
         "2026-09-22",
@@ -409,7 +493,7 @@
       "legacyPages": [
         "/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/"
       ],
-      "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit, and the opening proof outline has been reflowed. The PDF and TeX source agree. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
+      "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
       "pageCount": 6,
       "revisionDates": [
         "2026-09-22",
@@ -427,13 +511,13 @@
       "group": "problems",
       "summary": "Six problems on counting, arithmetic progressions, recurrences, infinite series, and the information supplied by different observation rules.",
       "body": "A collection of six problem statements, presented without solutions. They range from finite counting arguments to the asymptotic behavior of an infinite series.",
-      "background": "Background varies by problem.",
+      "background": "Counting, elementary number theory, recurrences, and convergence of series.",
       "tex": "/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
       "source": null,
       "pdf": "/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
       "page": "/notes/selected-problems-discrete-mathematics-analysis.html",
       "kind": "Problem set",
-      "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant. The web edition, PDF, and TeX source agree.",
+      "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant.",
       "pageCount": 3,
       "revisionDates": [
         "2026-09-22"
@@ -1012,6 +1096,17 @@
     }
   ],
   "personalInterests": {
+    "youtube": {
+      "published": true,
+      "url": "https://www.youtube.com/@hkshin",
+      "label": "Cube patterns and game recordings on YouTube"
+    },
+    "broodWar": {
+      "published": true,
+      "title": "StarCraft: Brood War",
+      "body": "I play StarCraft: Brood War, lately especially on Fastest Possible maps. I enjoy the scale and pace of these games: keeping production moving, reading the map, bringing together units with different roles, and finding the moment to act with teammates. The generous resources make it possible to set a great deal in motion. Much of the pleasure lies in deciding where attention matters next, and how one action can prepare the way for another.\n\nI’ve begun collecting some of these games on YouTube, with in-game audio and no commentary.",
+      "recordingsUrl": "https://www.youtube.com/playlist?list=PLb9QsiBdsSQY"
+    },
     "overwatch": {
       "published": true,
       "title": "Overwatch",

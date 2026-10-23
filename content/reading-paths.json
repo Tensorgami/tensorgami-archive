@@ -11,6 +11,37 @@
     "companionPath": "polynomial-structure"
   },
   {
+    "id": "quotients-and-reconstruction",
+    "title": "Quotients, factors, and reconstruction",
+    "description": "Start with the six-element teaching companion to compute the comparison step by step, then turn to the main exposition for the general framework. Continue through comparison pages, extensions and nilpotent probes, then coherent quotients and linearization. Both texts have full web editions and PDF downloads.",
+    "notes": [
+      "six-elements-one-comparison",
+      "quotients-and-reconstruction"
+    ],
+    "stops": [
+      {
+        "label": "Concrete first route: the C₆ teaching companion, §§1–8",
+        "url": "/notes/six-elements-one-comparison.html#section-1"
+      },
+      {
+        "label": "First reading: dimension and Jordan–Hölder",
+        "url": "/notes/quotients-and-reconstruction.html#f:begin"
+      },
+      {
+        "label": "Comparison pages and spectral calculations",
+        "url": "/notes/quotients-and-reconstruction.html#m:section"
+      },
+      {
+        "label": "Factors, extensions, and reconstruction",
+        "url": "/notes/quotients-and-reconstruction.html#k:section"
+      },
+      {
+        "label": "Higher quotients and linearization",
+        "url": "/notes/quotients-and-reconstruction.html#h:chapter"
+      }
+    ]
+  },
+  {
     "id": "formal-identities-and-obstructions",
     "title": "From a formal identity to an obstruction",
     "description": "Follow one attempted logarithm in characteristic three. The quadratic correction succeeds; a cubic class records why the next lift fails. The exposition constructs its complex and spectral sequence as they are needed.",

@@ -1,0 +1,401 @@
+\section{From algebraic maneuvers to maps and relations}
+\label{f:begin}
+
+When we write $a=b+c$ and then $b=a-c$, something more organized than
+symbol manipulation is happening. We have applied an invertible map. When
+we then write $d(a-c)=da-dc$, we have used a map that preserves an
+operation. These two ideas---invertibility and preservation---will remain
+visible as the objects become more general.
+
+\subsection{An elementary maneuver is a diagram}
+
+Let $(V,+,0)$ be an abelian group. For $c\in V$, translation is the map of
+sets $\tau_c:V\to V$, $x\mapsto x+c$. Associativity, the identity law,
+and the inverse law give
+\[
+\tau_{-c}\tau_c(x)=(x+c)+(-c)=x+(c-c)=x.
+\]
+The same calculation in the other order proves
+$\tau_{-c}=\tau_c^{-1}$. Thus $a=b+c$ means $a=\tau_c(b)$, and solving
+for $b$ means applying the inverse. Translation need not preserve the
+zero element, so it is generally an isomorphism of sets, not an
+automorphism of abelian groups.
+
+Associativity itself says that two composites are the same map:
+\[
+\begin{tikzcd}[column sep=large]
+V\times V\times V \arrow[r,"+\,\times\,\id"]
+  \arrow[d,"\id\,\times\,+"'] & V\times V \arrow[d,"+"]\\
+V\times V \arrow[r,"+"'] & V.
+\end{tikzcd}
+\]
+Here the usual canonical identification of the two parenthesizations of
+the triple product is understood. The diagram says that making one
+intermediate sum rather than the other does not change the result.
+
+If $W$ is another abelian group and $h:V\to W$ preserves addition,
+then $h(0)=0$: the equality
+$h(0)=h(0)+h(0)$ can be translated by $-h(0)$. Also
+$h(-c)=-h(c)$, because $h(c)+h(-c)=h(0)=0$. Consequently
+\[
+h(a-c)=h(a)-h(c),\qquad h\tau_c=\tau_{h(c)}h.
+\]
+For a module, multiplication by a scalar is an additive homomorphism,
+so distributivity is exactly this preservation statement. In a group,
+the same discussion uses multiplication and left or right translations,
+with the order retained. Its multiplication is a map of underlying
+sets; it is not generally a homomorphism from the product group.
+
+There is also a structural explanation of the triangular substitutions
+used in basis exchange. Given an additive homomorphism $u:V\to W$, the
+\emph{shear}
+\[
+S_u:V\times W\longrightarrow V\times W,
+\qquad (v,w)\longmapsto(v,w+u(v))
+\]
+has inverse $S_{-u}$. This follows by composing the maps, without counting
+any basis. Over a field, if $t_1\ne0$, the map
+\[
+(x_1,\ldots,x_n)\longmapsto
+(t_1x_1,t_2x_1+x_2,\ldots,t_nx_1+x_n)
+\]
+is a scaling in the first coordinate followed by the shear $S_u$ on
+$\kk\times\kk^{n-1}$, where
+\[
+u:\kk\longrightarrow\kk^{n-1},\qquad
+u(z)=(t_2t_1^{-1}z,\ldots,t_nt_1^{-1}z).
+\]
+Both maps are invertible. The inverse of the composite sends $y_1$ to
+$t_1^{-1}y_1$ and $y_i$ to
+$y_i-t_i t_1^{-1}y_1$ for $i>1$. This establishes the elementary maneuver
+without presupposing invariance of dimension.
+
+The aim of the following constructions is similar: replace a list of
+rearrangements by maps whose behavior is controlled once, and then reuse
+that control.
+
+\subsection{What is retained by a universal construction?}
+
+A \emph{category} consists of objects, sets of maps between objects,
+identity maps, and associative composition. A diagram commutes when
+every indicated pair of composites with the same endpoints agrees.
+A map $m$ is a \emph{monomorphism} if $mu=mv$ implies $u=v$; a map $e$
+is an \emph{epimorphism} if $ue=ve$ implies $u=v$. These are cancellation
+conditions on maps, not definitions in terms of elements.
+
+A \emph{subobject} of $X$ is a monomorphism into $X$, with two such
+monomorphisms identified if an isomorphism over $X$ relates them. We
+write $A\leq B\leq X$ when the map representing $A$ factors through the
+one representing $B$. Products are characterized by their projections:
+a map to $X\times Y$ is uniquely a pair of maps to $X$ and $Y$.
+
+\begin{definition}[Pullback]
+For $f:X\to Z$ and $g:Y\to Z$, a pullback is an object $P$ with maps
+$a:P\to X$, $b:P\to Y$ such that $fa=gb$, universal with that property:
+every pair $u:T\to X$, $v:T\to Y$ with $fu=gv$ has a unique map
+$t:T\to P$ satisfying $at=u$ and $bt=v$.
+\[
+\begin{tikzcd}
+P \arrow[r,"b"] \arrow[d,"a"'] & Y \arrow[d,"g"]\\
+X \arrow[r,"f"'] & Z.
+\end{tikzcd}
+\]
+We write $P=X\times_ZY$.
+\end{definition}
+
+In sets this is the set of pairs with the same image in $Z$. In groups
+and modules it has the same description with coordinatewise operations.
+The universal property retains the equation $fu=gv$, without selecting
+coordinates. A terminal object receives exactly one map from each object.
+An initial object has exactly one map to each object.
+An equalizer of $u,v:X\to Y$ is universal among maps $a:T\to X$ with
+$ua=va$. A finite-limit category has a terminal object, finite products,
+and equalizers, hence all the pullbacks used here: $X\times_ZY$ is the
+equalizer of $f\pi_X,g\pi_Y:X\times Y\to Z$. The
+\emph{kernel pair} of $f:X\to Y$ is
+$X\times_YX\rightrightarrows X$: it records exactly which inputs $f$
+identifies.
+
+A \emph{coequalizer} of $u,v:K\rightrightarrows X$ is a map $q:X\to Q$
+with $qu=qv$ such that every map $h:X\to Z$ satisfying $hu=hv$ factors
+uniquely as $h=\bar hq$. A \emph{regular epimorphism} is a coequalizer
+of some pair. Every regular epimorphism is an epimorphism, by the
+uniqueness part of this property. We draw it as $X\twoheadrightarrow Q$.
+
+\begin{lemma}[The elementary descent rule]\label{f:descent}
+In a category with pullbacks, a regular epimorphism $q:X\twoheadrightarrow Q$
+is the coequalizer of its kernel pair. It has the following lifting
+property against any monomorphism $m:A\hookrightarrow B$: in a
+commutative square
+\[
+\begin{tikzcd}
+X \arrow[r,"a"] \arrow[d,two heads,"q"'] & A \arrow[d,hook,"m"]\\
+Q \arrow[r,"b"'] \arrow[ur,dashed,"d"] & B,
+\end{tikzcd}
+\]
+there is a unique $d$ with $dq=a$ and $md=b$.
+\end{lemma}
+\begin{proof}
+Choose a pair $u,v$ of which $q$ is a coequalizer. Since $qu=qv$, this
+pair factors through the kernel pair of $q$. A map equal on that kernel
+pair is therefore equal on $u,v$, and descends uniquely through $q$.
+This proves the first claim.
+
+For the square, $ma u=bq u=bq v=ma v$, and monicity of $m$ gives
+$a u=a v$. Hence $a=dq$ for a unique $d$. Now $mdq=ma=bq$, so
+$md=b$ because $q$ is epic. The equation $dq=a$ also proves uniqueness.
+\end{proof}
+
+In particular, a regular epimorphism that is also a monomorphism is an
+isomorphism: apply the lifting property to its square with itself and
+identity maps. This argument uses neither a choice of representatives nor
+a splitting assumption.
+
+\begin{definition}[Regular category]\label{f:regular}
+A category is \emph{regular} if it has finite limits, every map factors
+as a regular epimorphism followed by a monomorphism, and pullbacks of
+regular epimorphisms are regular epimorphisms. The monomorphism in
+\[
+X\twoheadrightarrow \im(f)\hookrightarrow Y
+\]
+is called the \emph{image} of $f:X\to Y$.
+\end{definition}
+
+\begin{lemma}[Image calculus]\label{f:images}
+In a regular category, images are unique as subobjects, regular
+epimorphisms compose, and pulling back an image factorization gives an
+image factorization.
+\end{lemma}
+\begin{proof}
+Given two regular-epimorphism--monomorphism factorizations of a map,
+Lemma~\ref{f:descent} gives a map between their middle objects in each
+direction. Its uniqueness says the two composites are identities.
+This proves uniqueness of images.
+
+The lifting property in Lemma~\ref{f:descent} is preserved under
+composition: first lift against the first regular epimorphism and then
+against the second. Factor their composite as $mp$, where $p$ is a
+regular epimorphism and $m$ is monic. The lifting property of the
+composite, applied against $m$, gives a right inverse of $m$. A monic
+map with a right inverse is an isomorphism. The composite is therefore
+a regular epimorphism.
+
+Pull back the mono part of a factorization, and then pull back its
+regular epi part. The resulting square is a pullback of the composite,
+by the defining universal properties. Pullback stability makes the
+first part a regular epimorphism; pullbacks of monomorphisms are monic
+because maps into the pullback are determined by their two projections.
+This is the required image factorization.
+\end{proof}
+
+Images express what survives a map. Pullback stability says that this
+description remains valid after imposing a compatible condition at the
+target. It is the reason local witnesses can safely be used below.
+
+\subsection{A precise license to reason with witnesses}
+
+An arbitrary category may have too few maps from its terminal object to
+detect equality. In particular, a group has just one group homomorphism
+from the trivial group. Thus an argument about ordinary global points
+would miss nearly everything. We instead use \emph{generalized elements}:
+an input $x$ of $X$ over a test object $T$ means a map $x:T\to X$.
+
+For a subobject $M\hookrightarrow X$, saying that $x$ belongs to $M$
+means that $x$ factors through that monomorphism. A \emph{cover} below
+means a regular epimorphism, not an assumed topological covering.
+
+\begin{lemma}[Local witness calculus]\label{f:local-calculus}
+Let $f:A\to X$ be a map in a regular category. A generalized element
+$x:T\to X$ belongs to $\im(f)$ if and only if there is a cover
+$e:T'\twoheadrightarrow T$ and a map $a:T'\to A$ such that $fa=xe$.
+Finite lists of such witnesses can be chosen over a common cover.
+They can be pulled back along any map of test objects.
+\end{lemma}
+\begin{proof}
+Factor $f=mp$ with $p:A\twoheadrightarrow I$ regular epic and $m:I\hookrightarrow X$
+monic. If $x=mi$, pull back $p$ along $i:T\to I$. The pullback cover
+has a map $a$ with $fa=xe$. Conversely, such $e,a$ give a square
+against $m$; Lemma~\ref{f:descent} makes $x$ factor through $m$.
+
+Pulling back a cover gives a cover. To combine two choices over $T$,
+take their fiber product over $T$; either projection is a cover, and
+its composite to $T$ is a cover by Lemma~\ref{f:images}. Repeat for
+finitely many choices. Nested choices are handled by composing covers.
+\end{proof}
+
+This is the precise meaning of ``there exists'' in our relation
+calculations. A witness may exist only after a cover of the test object.
+Every proof using witnesses below permits that replacement. Equalities
+of subobjects are checked by inclusions in both directions: to check
+$M\leq N$, one may test the generalized element $M\hookrightarrow X$
+itself. The method therefore proves actual categorical statements,
+not merely assertions about points.
+
+\subsection{Relations compose by matching, then forgetting}
+
+\begin{definition}[Internal relation]
+A relation $R:X\rightsquigarrow Y$ is a subobject of $X\times Y$.
+Choose a representative with projections
+\[
+\begin{tikzcd}[column sep=large]
+& M \arrow[dl,"a"'] \arrow[dr,"b"] &\\
+X && Y.
+\end{tikzcd}
+\]
+The pair $(a,b)$ is jointly monic. We may write $x\,R\,y$ for membership
+in this subobject. Its opposite $R^{\mathrm{op}}:Y\rightsquigarrow X$
+interchanges the projections. The identity relation $\Delta_X$ is the
+diagonal $X\hookrightarrow X\times X$.
+\end{definition}
+
+If $S:Y\rightsquigarrow Z$ has carrier $N$, form $M\times_YN$ and take
+its image in $X\times Z$. This is the composite $SR$. Thus
+\[
+x\,(SR)\,z
+\quad\Longleftrightarrow\quad
+\text{locally there is }y\text{ with }x\,R\,y\text{ and }y\,S\,z.
+\]
+\emph{Our convention is always that $SR$ means first $R$, then $S$.}
+The pullback retains the matching intermediate value; the image forgets
+which matching value was used.
+
+\begin{proposition}[The calculus of relations]\label{f:relation-calculus}
+In a regular category, relation composition is associative and has
+the diagonal relations as identities. It preserves inclusions, and
+\[
+(SR)^{\mathrm{op}}=R^{\mathrm{op}}S^{\mathrm{op}}.
+\]
+\end{proposition}
+\begin{proof}
+For $R:X\rightsquigarrow Y$, $S:Y\rightsquigarrow Z$, and
+$T:Z\rightsquigarrow W$, membership in either $(TS)R$ or $T(SR)$
+means that, over a cover, there are $y,z$ with
+$x\,R\,y$, $y\,S\,z$, $z\,T\,w$. Lemma~\ref{f:local-calculus}
+combines any nested witnesses into one cover and also allows the same
+triple witness to be grouped in either order. This proves equality of
+the two image subobjects. Equivalently, both are the image of
+$M_R\times_YM_S\times_ZM_T$ in $X\times W$.
+
+A diagonal intermediate relation forces the two matched coordinates
+to agree and introduces no further condition; hence the unit laws.
+An inclusion of relations sends every witness to a witness, proving
+monotonicity. Reversing a witness exchanges its endpoints and reverses
+the order of the two conditions, proving the last identity.
+\end{proof}
+
+This associativity has the same shape as elementary reassociation, but
+it applies to correspondences that may not be functions. Its proof
+identifies one object of complete witness data and shows that the order
+of forgetting intermediate information does not matter.
+
+A map $f:X\to Y$ is identified with its graph relation, represented by
+$(\id_X,f):X\hookrightarrow X\times Y$. The opposite graph is generally
+not a map: it remembers all possible preimages.
+
+\begin{lemma}[Graphs, kernels, and supports]\label{f:graph-kernel}
+For a map $f:X\to Y$,
+\[
+f^{\mathrm{op}}f=\operatorname{Eq}(f),
+\qquad
+ff^{\mathrm{op}}=\Delta_{\im(f)}
+\quad\text{as a relation on }Y.
+\]
+Here $\operatorname{Eq}(f)=X\times_YX$ is the kernel pair, and the second
+diagonal is supported on the image subobject of $Y$. Consequently
+\[
+ff^{\mathrm{op}}f=f,
+\qquad ff^{\mathrm{op}}=\Delta_Y
+\text{ if }f\text{ is regular epic}.
+\]
+Every relation with projections $a:M\to X$, $b:M\to Y$ satisfies
+\[
+R=ba^{\mathrm{op}}.
+\]
+\end{lemma}
+\begin{proof}
+The first composite relates $x,x'$ exactly when $f(x)=f(x')$, which is
+the defining pullback. The second relates $y,y'$ exactly when, locally,
+$y=f(x)=y'$ for some $x$; this is the image diagonal by
+Lemma~\ref{f:local-calculus}. These descriptions give the two
+consequences. Finally $ba^{\mathrm{op}}$ is the image of $(a,b)$ in
+$X\times Y$; that pair already represents the subobject $R$.
+\end{proof}
+
+\begin{lemma}[When a relation is a map]\label{f:functional}
+A relation $R:X\rightsquigarrow Y$ is the graph of a unique map
+$f:X\to Y$ if
+\[
+\Delta_X\leq R^{\mathrm{op}}R,
+\qquad RR^{\mathrm{op}}\leq\Delta_Y.
+\]
+The first condition says that every input has a locally available
+output; the second says that the output is unique.
+\end{lemma}
+\begin{proof}
+Write $R=ba^{\mathrm{op}}$ with carrier $M$. The first condition says
+that the image of $a:M\to X$ is all of $X$, so $a$ is regular epic.
+If $u,v:T\to M$ have $au=av$, then $bu$ and $bv$ are two outputs for
+the same input. The second condition gives $bu=bv$. Joint monicity
+of $(a,b)$ gives $u=v$, so $a$ is also monic and hence an isomorphism.
+Now $f=ba^{-1}$ has graph $R$. Its value is forced by that graph,
+which proves uniqueness.
+\end{proof}
+
+\subsection{Exactness makes an identification into an object}
+
+A relation $E:X\rightsquigarrow X$ is \emph{reflexive} if
+$\Delta_X\leq E$, \emph{symmetric} if $E^{\mathrm{op}}=E$, and
+\emph{transitive} if $EE\leq E$. An \emph{internal equivalence relation}
+has all three properties. Reflexivity also gives $E\leq EE$, so an
+equivalence relation satisfies $EE=E$.
+
+Kernel pairs are equivalence relations. For example, transitivity says
+that $f(x)=f(y)$ and $f(y)=f(z)$ imply $f(x)=f(z)$; this is equally an
+equality of maps over any test object.
+
+\begin{definition}[Barr exactness]\label{f:exact}
+A regular category is \emph{Barr-exact} if every internal equivalence
+relation is the kernel pair of a map. Equivalently, for every such
+$E$ on $X$ there is a regular epimorphism $q:X\twoheadrightarrow Q$
+with $E=q^{\mathrm{op}}q$. We call $Q$ the quotient $X/E$.
+\end{definition}
+
+For the equivalence of these formulations, factor a map exhibiting the
+kernel pair into its image. The monomorphism part does not change its
+kernel pair, and the other part is regular epic. Lemma~\ref{f:descent}
+then gives the quotient's full universal property: maps from $X$ that
+identify the pairs in $E$ descend uniquely to $Q$. Two such quotients
+are uniquely isomorphic over $X$, by applying this property twice.
+Exactness concerns these equivalence-relation quotients; it does not
+assert that the category is abelian or that its maps can be added.
+
+A category is \emph{pointed} if it has an object $0$ that is both initial
+and terminal. There is then a zero map between every two objects, namely
+the composite through $0$. A \emph{kernel} of $f:X\to Y$ is the
+pullback of $0\to Y$ along $f$:
+\[
+\begin{tikzcd}
+\Ker(f) \arrow[r] \arrow[d,hook] & 0 \arrow[d]\\
+X \arrow[r,"f"'] & Y.
+\end{tikzcd}
+\]
+The left map is monic since $0\to Y$ is monic. In a pointed category
+it is a distinguished subobject, but it is only one class of the whole
+kernel pair.
+
+If $E=q^{\mathrm{op}}q$, its zero class is the relation $E0_X$,
+viewed as a subobject of $X$, where $0_X:0\to X$. Since $q0_X=0_Q$,
+\[
+E0_X=q^{\mathrm{op}}0_Q=\Ker(q).
+\]
+It is saturated: $E(E0_X)=E0_X$. We will retain both the full
+equivalence relation and its zero class. In groups the zero class
+determines the normal quotient, but we will not build that additional
+fact into the general framework.
+
+The roles of the assumptions are now visible. Finite limits impose
+compatible equations. Images forget witnesses. Regularity makes that
+forgetting compatible with substitution. Exactness realizes consistent
+identifications as quotient objects. Pointedness selects a zero class.
+The next condition will make different identifications compatible with
+one another.

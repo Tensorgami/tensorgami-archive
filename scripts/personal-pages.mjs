@@ -6,6 +6,9 @@ import {groupCurrentEssays} from './essay-groups.mjs';
 export function renderPersonalPages({save,heading,esc,notes,selectedNotes,featuredNotes,selectedPapers,papers,essays,gaming,noteLinks,interests={}}) {
   const published = papers.filter(p=>p.status==='Published');
   const compactOverwatch = interests.overwatch?.published===true;
+  const broodWar = interests.broodWar?.published===true;
+  const games = [broodWar?'Brood War':null,compactOverwatch?'Overwatch':null].filter(Boolean);
+  const gameList = new Intl.ListFormat('en',{style:'long',type:'conjunction'}).format(games);
   const pursuitDescription = interests.fashion
     ? (interests.car?'Puzzles, games, clothes, and cars':'Puzzles, games, and clothes')
     : (interests.car?'Puzzles, games, and cars':'Puzzles and games');
@@ -51,11 +54,11 @@ ${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays
       <p class="collection-description home-library-intro">Proofs, constructions, and worked examples across algebra, geometry, number theory, and analysis.</p>
       <div class="home-writing home-expositions">${widerNotes.map(n=>`<article class="writing"><p class="meta">${esc(n.topic)}</p><h3><a href="${n.page}">${esc(n.title)}</a></h3><p>${esc(n.summary)}</p>${noteLinks(n)}</article>`).join('')}</div>
     </section>
-    <section class="reading-invitation"><div><h2>Find a route through the writing.</h2><p>Follow the shared examples between expositions and essays, or choose a shorter path through polynomial composition, exact arithmetic and analysis. The three main exposition routes state their background and useful stopping points.</p></div><a href="/mechanisms.html">Explore the reading paths</a></section>
+    <section class="reading-invitation"><div><h2>Find a route through the writing.</h2><p>Follow the shared examples between expositions and essays, or choose a shorter path through polynomial composition, exact arithmetic and analysis. The four main exposition routes state their background and useful stopping points.</p></div><a href="/mechanisms.html">Explore the reading paths</a></section>
     <section class="home-secondary" aria-label="About, archive, and interests">
       <div><h2><a href="/about.html">About Henry Shin</a></h2><p>Current studies, mathematical practice, and correspondence.</p></div>
       <div><h2><a href="/papers.html">Research archive</a></h2><p>Papers and preprints from earlier work in algebra, combinatorics, and geometric analysis.</p></div>
-      <div><h2><a href="/interests.html">Other interests</a></h2><p>${compactOverwatch?'Patterns on large twisty cubes and a few notes on playing Overwatch.':'Patterns on large twisty cubes, built from commutators and move sequences.'}</p></div>
+      <div><h2><a href="/interests.html">Other interests</a></h2><p>${broodWar?`Patterns on large twisty cubes and notes on playing ${esc(gameList)}.`:compactOverwatch?'Patterns on large twisty cubes and a few notes on playing Overwatch.':'Patterns on large twisty cubes, built from commutators and move sequences.'}</p></div>
     </section>
   `);
 
@@ -68,7 +71,8 @@ ${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays
       <p>A useful starting point is the family <span class="math">w<sup>3</sup> − 3w = t</span>. Moving around its branch points permutes its roots, bringing monodromy into contact with Galois theory. Tannakian and motivic Galois theory provide a wider setting for these questions, connecting symmetry with cohomology, periods, and differential equations.</p>
       <p><a href="/notes/fourier-symmetry-and-reconstruction.html"><em>Fourier, Symmetry, and Reconstruction</em></a> follows one route through this territory, from the classical cubic and quartic formulas to categorical Fourier duality.</p>
       <p><a href="/notes/what-a-boundary-map-can-prove.html"><em>What a Boundary Map Can Prove</em></a> follows another, from a graph’s boundary map to derived gluing, Hodge inequalities, and the motivic Galois symmetries of an elliptic attachment.</p>
-      <p><a href="/notes/what-a-derivative-retains.html"><em>What a Derivative Retains</em></a> begins with rectangle strips and oriented boundaries, then asks what infinitesimal geometry and homotopical calculus retain. The <a href="/mechanisms.html#connected-expositions">shared reading guide</a> connects the three studies through specific calculations and their prerequisites.</p>
+      <p><a href="/notes/what-a-derivative-retains.html"><em>What a Derivative Retains</em></a> begins with rectangle strips and oriented boundaries, then asks what infinitesimal geometry and homotopical calculus retain.</p>
+      <p><a href="/notes/quotients-and-reconstruction.html"><em>Quotients, Refinement, and Reconstruction</em></a> begins with elementary algebraic maneuvers, derives composition-factor invariance from a common comparison construction, and asks what extension data a list of factors forgets. The <a href="/mechanisms.html#connected-expositions">shared reading guide</a> connects the four studies through specific calculations and their prerequisites.</p>
       <h2>Earlier research</h2>
       <p>The <a href="/papers.html">research archive</a> collects earlier work in group theory, algebra, additive combinatorics, and geometric analysis, with papers, preprints, publication details, and corrections.</p>
       ${essays.length?'<h2 id="writing-and-intellectual-life">Writing and intellectual life</h2>':''}
@@ -83,9 +87,9 @@ ${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays
       <p>The expositions follow what calculations retain; the essays examine what explanations and judgments warrant, and how people acquire the means to continue an inquiry. The <a href="/mechanisms.html#essays-and-expositions">reading paths</a> connect their specific examples and questions.</p>
       ${visionEssay?`<p>The <a href="/essays.html">essays</a> also include film interpretation. <a href="${essayPath(visionEssay)}"><em>${esc(visionEssay.title)}</em></a> examines the relationship between knowledge, belief, and political allegiance in Villeneuve’s <em>Dune</em>.</p>`:''}
       <h2>Other pursuits</h2>
-      <p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. ${compactOverwatch?'My <a href="/interests.html">Interests page</a> also includes a few notes on playing Overwatch.':'Photographs are collected in the <a href="/play/cube-patterns.html">cube gallery</a>.'}</p>
+      <p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. ${broodWar?`I also play StarCraft: ${esc(gameList)}. My <a href="/interests.html">Interests page</a> brings together photographs, game recordings, and a few notes on what I enjoy about these pursuits.`:compactOverwatch?'My <a href="/interests.html">Interests page</a> also includes a few notes on playing Overwatch.':'Photographs are collected in the <a href="/play/cube-patterns.html">cube gallery</a>.'}</p>
       <h2>Correspondence</h2><p>If something here connects with your work—or if you spot a point that could be clearer—I’d be glad to hear from you.</p><p><a href="mailto:hkshin@alumni.harvard.edu">hkshin@alumni.harvard.edu</a></p>
-    </div><aside class="about-links"><h2>Elsewhere</h2><ul><li><a href="https://orcid.org/0009-0000-6453-6865">ORCID</a></li><li><a href="https://math.stackexchange.com/users/268083/henry-shin">Mathematics Stack Exchange</a></li></ul></aside></div>`);
+    </div><aside class="about-links"><h2>Elsewhere</h2><ul><li><a href="https://orcid.org/0009-0000-6453-6865">ORCID</a></li><li><a href="https://math.stackexchange.com/users/268083/henry-shin">Mathematics Stack Exchange</a></li>${interests.youtube?`<li><a href="${esc(interests.youtube.url)}">YouTube · cube patterns and games</a></li>`:''}</ul></aside></div>`);
 
   if(essays.length)save('/essays.html','Essays','Essays by Henry Shin on understanding, independent inquiry, and the scope of authority, from mathematics in the age of AI to Villeneuve’s Dune.','Essays',
     heading('Understanding and judgment','Essays','What knowledge makes possible, what authority it warrants, and how people remain free to choose their purposes.')+

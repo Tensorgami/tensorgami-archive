@@ -1,4 +1,11 @@
 const homeEntries = {
+  'quotients-and-reconstruction': {
+    topic:'Algebra · Quotients',
+    subtitle:'From basis size to invariant layers and extensions',
+    summary:'Elementary changes of coordinates lead to one comparison of quotients. It proves Jordan–Hölder for groups and modules and equality of finite basis sizes. Later sections recover extension and operator data that simple factors forget, before passing to coherent quotients.',
+    anchor:'f:begin', label:'Start with elementary maneuvers (§1)',
+    background:'Begin with groups, vector spaces, and their maps. §§1–4.5 develop the common comparison; stop after the dimension theorem. Later routes introduce modules, complexes, and higher foundations.'
+  },
   'fourier-symmetry-and-reconstruction': {
     topic:'Polynomials · Symmetry',
     subtitle:'From roots and radicals to geometric reconstruction',
@@ -26,13 +33,13 @@ export function currentExpositions({featuredNotes,esc,showCatalogueLink=false,ho
   if(!featuredNotes.length)return '';
   return `<section class="current-expositions${homepage?' home-entry-expositions':''}${entryGuidance?' catalogue-entry-expositions':''}" aria-labelledby="current-expositions-title">
     <div class="section-head"><h2 id="current-expositions-title">Current expositions</h2>${showCatalogueLink?'<a href="/expositions.html">All expositions</a>':''}</div>
-    <p class="collection-description">${homepage?'Begin with polynomial roots, a graph, or the product rule. Each study develops a familiar calculation into a question about the structure it retains.':'Root covers, graph complexes, and derivatives provide starting points for following familiar calculations into geometry, arithmetic, and reconstruction.'}</p>
-    <p class="collection-reading-guide"><a href="/mechanisms.html#connected-expositions">Choose an entry point and follow the connections between the three studies</a></p>
+    <p class="collection-description">${homepage?'Begin with polynomial roots, a graph, the product rule, or the size of a basis. Each study develops a familiar calculation into a question about the structure it retains.':'Root covers, graph complexes, derivatives, and quotient comparisons provide starting points for following familiar calculations into geometry, arithmetic, and reconstruction.'}</p>
+    <p class="collection-reading-guide"><a href="/mechanisms.html#connected-expositions">Choose an entry point and follow the connections between the four studies</a></p>
     <div class="current-exposition-grid">${featuredNotes.map(n=>{const entry=homepage?homeEntries[n.slug]:null;const landingEntry=entryGuidance?homeEntries[n.slug]:null;if(homepage&&!entry)throw Error(`Missing homepage entry: ${n.slug}`);if(entryGuidance&&!landingEntry)throw Error(`Missing catalogue entry: ${n.slug}`);return `<article class="current-exposition${entry?' home-entry-exposition':''}">
       <p class="meta">${esc(entry?.topic||n.topic)}</p><h3><a href="${n.page}">${esc(n.title)}</a></h3>
       ${landingEntry?`<div class="catalogue-entry-route"><p><a href="${n.page}#${landingEntry.anchor}">${esc(landingEntry.label)}</a></p><p>${esc(landingEntry.background)}</p></div>`:''}${(entry?.subtitle||n.subtitle)?`<p class="feature-subtitle">${esc(entry?.subtitle||n.subtitle)}</p>`:''}<p>${esc(entry?.summary||n.summary)}</p>
       ${entry?`<div class="home-entry-route"><p><a href="${n.page}#${entry.anchor}">${esc(entry.label)}</a></p><p>${esc(entry.background)}</p></div>`:n.featureDetail?`<p class="feature-detail">${esc(n.featureDetail)}</p>`:''}
-      <div class="text-links"><a href="${n.page}">Read the exposition</a>${n.pdf?`<a href="${n.pdf}" aria-label="PDF, ${n.pageCount} pages: ${esc(n.title)}">PDF · ${n.pageCount} pages</a>`:''}${n.manuscript&&!homepage?`<a href="${n.manuscript}" aria-label="Markdown manuscript: ${esc(n.title)}">Markdown manuscript</a>`:''}${n.tex?`<a href="${n.tex}" aria-label="TeX source: ${esc(n.title)}">TeX source</a>`:''}</div>
+      <div class="text-links"><a href="${n.page}">Read the exposition</a>${n.pdf?`<a href="${n.pdf}" aria-label="PDF, ${n.pageCount} pages: ${esc(n.title)}">PDF · ${n.pageCount} pages</a>`:''}${n.manuscript&&!homepage?`<a href="${n.manuscript}" aria-label="Markdown manuscript: ${esc(n.title)}">Markdown manuscript</a>`:''}${n.tex?`<a href="${n.tex}" aria-label="TeX source: ${esc(n.title)}">TeX source</a>`:''}${n.sourceArchive&&!homepage?`<a href="${n.sourceArchive}" download>TeX sources (ZIP)</a>`:''}</div>
       ${n.readingGuide?`<p class="feature-route"><a href="${n.readingGuide}">Background and reading routes</a></p>`:''}${homepage&&n.slug==='what-a-derivative-retains'?`
       <section class="home-entry-companion" aria-labelledby="home-logarithm-title">
         <p class="eyebrow">Companion exposition</p>

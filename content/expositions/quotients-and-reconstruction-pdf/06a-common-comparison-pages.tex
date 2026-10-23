@@ -1,0 +1,243 @@
+\section{Comparison pages with the operations retained}
+\label{p:chapter}
+
+The relation rectangle gives one proof for every pointed Barr-exact
+Mal'cev category. There is another useful way to watch the comparison
+proceed: let simple factors persist through a sequence of pages until
+maps pair them. We can carry this calculation out simultaneously for
+groups and modules, without pretending that arbitrary group maps behave
+like linear maps.
+
+For this chapter a group with operators means a group equipped with a
+fixed family of endomorphisms. Subgroups and normal subgroups under
+discussion must be invariant under all those endomorphisms, and maps
+commute with them. Modules are included by their additive groups and the
+operators $x\mapsto rx$ for every scalar $r$. Quotient simplicity is
+simplicity with this structure retained. Ordinary groups are the case
+of an empty family of extra operators. This is a concrete common instance
+of the preceding framework; the page construction below is asserted for
+this instance, with composition series as input.
+
+\subsection{The normality that makes the pages possible}
+
+Write two composition series as
+\[
+1=A_0\nml A_1\nml\cdots\nml A_m=G,
+\qquad
+1=B_0\nml B_1\nml\cdots\nml B_n=G.
+\]
+We use multiplicative notation, including for the identity subgroup $1$.
+Extend both filtrations constantly below zero and beyond their last
+indices. Put $S_i=A_i/A_{i-1}$ and $T_j=B_j/B_{j-1}$ for the real
+indices $1\leq i\leq m$, $1\leq j\leq n$.
+
+\begin{lemma}\label{p:normality}
+A subnormal subgroup of a simple group with operators is either trivial
+or the whole group. For every integer $k$ and every real index $j$,
+\[
+ B_{j-1}(A_k\cap B_j)
+ \quad\text{is either }B_{j-1}\text{ or }B_j.
+\]
+In particular this product is an invariant normal subgroup of $B_j$.
+Similarly the image of $A_i\cap B_k$ in $S_i$ is either trivial or all
+of $S_i$.
+\end{lemma}
+\begin{proof}
+Take a finite normal chain from a proper subnormal subgroup $H$ to a
+simple group $S$. The term immediately before the first occurrence of
+$S$ is proper and normal in $S$, so it is trivial. The earlier terms,
+including $H$, must be trivial. This proves the first claim with
+invariance under the operators included.
+
+Intersecting a normal chain with a fixed subgroup preserves adjacent
+normality: conjugating an element of $U\cap K$ by an element of
+$V\cap K$ stays in both $U$ and $K$ when $U\nml V$.
+Taking images under a homomorphism also preserves adjacent normality,
+since $f(v)f(u)f(v)^{-1}=f(vuv^{-1})$. Intersections and images here
+remain invariant under every operator. Thus $A_k\cap B_j$ is subnormal
+in $B_j$, by intersecting the tail of the $A$-chain with $B_j$; the
+constant extensions at the endpoints cause no change to this assertion.
+Its image in the simple factor $T_j$ is trivial or everything. The
+preimage of that image is exactly $B_{j-1}(A_k\cap B_j)$, proving
+the stated alternatives. The same argument with the roles exchanged
+proves the last assertion.
+\end{proof}
+
+This check is essential. A nonzero homomorphism between simple groups
+need not be onto: an inclusion $C_2\hookrightarrow A_5$ is an immediate
+counterexample. The maps constructed below have subnormal, and in fact
+normal, images for a specified reason. That is what makes the cancellation
+argument valid.
+
+\subsection{Terms, maps, and the next page}
+
+For $r\geq1$ define two rows
+\begin{align}
+ U_r(i)&=
+ \frac{A_i\cap B_{n+i-r}}{A_{i-1}\cap B_{n+i-r}},
+       &&1\leq i\leq m,\label{p:source}\\
+ V_r(j)&=
+ \frac{B_j}{B_{j-1}(A_{j+r-n-1}\cap B_j)},
+       &&1\leq j\leq n.\label{p:target}
+\end{align}
+The same formulas give trivial groups outside the real index ranges.
+Every source denominator is invariant and normal in its numerator by
+intersection. Every target denominator is invariant and normal by
+Lemma~\ref{p:normality}. Consequently these are actual quotient groups
+with all their operators, not just sets of cosets.
+
+For $j=n+i-r$, inclusion followed by quotient defines
+\begin{equation}\label{p:differential}
+ d_{r,i}:U_r(i)\longrightarrow V_r(j),\qquad [x]\longmapsto[x].
+\end{equation}
+Its source denominator is $A_{i-1}\cap B_j$, and this is contained in
+the target denominator $B_{j-1}(A_{i-1}\cap B_j)$. Thus the map is
+well-defined, is a homomorphism, and preserves the operators. Each source
+has one designated target; each target has one designated incoming source.
+
+\begin{proposition}[The page transition]\label{p:transition}
+With $j=n+i-r$, the inclusion and quotient maps give canonical
+isomorphisms
+\[
+ U_{r+1}(i)\cong\ker d_{r,i},\qquad
+ V_{r+1}(j)\cong V_r(j)/\im d_{r,i}.
+\]
+The image in the second formula is an invariant normal subgroup.
+\end{proposition}
+\begin{proof}
+Put $H=A_i\cap B_j$, $D=A_{i-1}\cap B_j$, and $K=B_{j-1}$.
+Thus the map in question is $H/D\to B_j/KD$. The subgroup $D$ is
+normal in $H$, $K$ is normal in $B_j$, and both $KD$ and $KH$ are
+normal in $B_j$ by Lemma~\ref{p:normality}. If $j$ is outside the real
+target range, the constant extension gives $B_{j-1}=B_j$, so these
+normality assertions hold automatically. This also covers transitions
+whose designated source or target lies outside the initial rows.
+
+We first compute its kernel. Since $D\leq H$,
+\[
+                     H\cap KD=(H\cap K)D.
+\]
+Indeed, if $h=kd\in H$ with $k\in K$ and $d\in D$, then
+$k=hd^{-1}\in H\cap K$. The reverse inclusion follows by multiplying
+elements already in $H$ and in $KD$. Restricting the quotient map to
+$H\cap K$ therefore gives a surjection onto the kernel with kernel
+$D\cap K$. Hence
+\[
+ \ker d_{r,i}\cong\frac{H\cap K}{D\cap K}
+ =\frac{A_i\cap B_{j-1}}{A_{i-1}\cap B_{j-1}}
+ =U_{r+1}(i).
+\]
+This isomorphism is induced by inclusion; all its operations are retained.
+
+The image is $KH/KD$, a normal subgroup of $B_j/KD$. The next target
+projection has precisely this kernel, so the compatible iterated quotient
+map gives
+\[
+ \frac{V_r(j)}{\im d_{r,i}}
+ \cong \frac{B_j}{KH}
+ =\frac{B_j}{B_{j-1}(A_i\cap B_j)}
+ =V_{r+1}(j).
+\]
+The last equality uses $i=j+r-n$. These are explicit maps between
+quotients, so their inverses preserve the operators as well.
+\end{proof}
+
+The transition can be displayed as two short exact sequences:
+\[
+\begin{tikzcd}[column sep=small]
+1\arrow[r]&U_{r+1}(i)\arrow[r,hook]&U_r(i)
+ \arrow[r,two heads]&\im d_{r,i}\arrow[r]&1,\\
+1\arrow[r]&\im d_{r,i}\arrow[r,hook]&V_r(j)
+ \arrow[r,two heads]&V_{r+1}(j)\arrow[r]&1.
+\end{tikzcd}
+\]
+The first row retains the source part not yet seen in the target. The
+second removes the target part accounted for by that map. This is the
+two-row page mechanism $E_{r+1}\cong H(E_r,d_r)$, with the group
+quotients justified by the normality proof. We need no addition of maps
+to perform this particular calculation.
+
+\begin{theorem}[Every layer eventually finds its partner]\label{p:cancellation}
+The pages above give a bijection between the simple factors $S_i$ and
+$T_j$, together with isomorphisms preserving all the operators. The proof
+uses neither Schreier refinement nor Jordan--H\"older as an input.
+\end{theorem}
+\begin{proof}
+The source $U_r(i)$ is isomorphic to the image of $A_i\cap B_{n+i-r}$
+in $S_i$, by the kernel of the restricted quotient map. By
+Lemma~\ref{p:normality} it is trivial or isomorphic to $S_i$.
+The target denominator in~\eqref{p:target} is either $B_{j-1}$ or
+$B_j$, so $V_r(j)$ is trivial or isomorphic to $T_j$.
+
+The image of $d_{r,i}$ is normal by Proposition~\ref{p:transition}.
+A nontrivial map therefore surjects onto its simple target. Its kernel
+is an invariant normal subgroup of its simple source; it cannot be the
+whole source, so it is trivial. Consequently every nontrivial
+differential is an isomorphism. The transition then removes precisely
+that source and target. When the differential is trivial, the transition
+retains both terms by its canonical isomorphisms.
+
+On the first page, $n+i-1\geq n$ for every real source index, so
+$U_1(i)=S_i$. For the targets $j-n\leq0$, giving $V_1(j)=T_j$.
+If $G\neq1$, then $m,n\geq1$. On every page $r\geq m+n$ we have
+$n+i-r\leq0$ and $j+r-n-1\geq m$ at real indices. Every term is
+therefore trivial. Each initial factor must have disappeared exactly
+once, by an isomorphism differential, and each such differential removes
+one source and one target. Following the transition isomorphisms to that
+page gives the required pairwise factor isomorphisms. For $G=1$, both
+lists are empty and the conclusion is immediate.
+\end{proof}
+
+Notice the dependency: simplicity is part of the supplied filtrations;
+invariance of their lengths is the conclusion. No page count assumes
+that the two rows start with the same number of terms.
+
+\subsection{A nonabelian crossing and the module specialization}
+
+Let $G=A_5\times C_2$ and use the two series with intermediate subgroups
+$A_5\times1$ and $1\times C_2$. Their first-page factors have opposite
+orders. The first differential at $(i,j)=(1,2)$ identifies
+$A_5\times1$ with $G/(1\times C_2)$. It removes the two $A_5$ factors.
+The second page has no nontrivial differential, but the process has not
+terminated. On the third page, at $(i,j)=(2,1)$, the actual differential
+is the identity on $1\times C_2$, since both $U_3(2)$ and $V_3(1)$
+are that group. Its source is identified with the original factor
+$G/(A_5\times1)$ by the restricted quotient map
+$1\times C_2\to G/(A_5\times1)$. Thus it pairs the two remaining
+$C_2$ factors. The fourth page is trivial. A quiet page need not be the
+last page.
+
+For completeness, the simplicity of $A_5$ used only in this illustration
+can be checked by its conjugacy classes. Its nonidentity elements are
+the $15$ double transpositions, $20$ three-cycles, and $24$ five-cycles.
+Their centralizers in $A_5$ have orders $4,3,5$, respectively: commuting
+permutations permute cycles of equal length; on a three- or five-cycle they
+are powers of that cycle, with the odd transposition on the two unused
+letters excluded in the three-cycle case; the even permutations commuting
+with a double transposition form its four-element Klein group.
+Counting conjugates by cosets of the centralizer therefore gives class
+sizes $15,20,12,12$. A normal subgroup is a union of these classes and
+the identity, and its order divides $60$ because its cosets partition
+$A_5$. None of the proper nontrivial sums of $1$ and a selection from
+$15,20,12,12$ divides $60$. Hence no proper nontrivial normal subgroup
+exists. This finite check is not a prerequisite of the page theorem.
+
+For modules the products in~\eqref{p:target} are sums, and the first
+row of~\eqref{p:source} is a subquotient of modules. Put
+$F_pX=A_{p-n}$, $F_pY=B_p$, and take $f=\id_G:X\to Y$ on the
+underlying module. The page formulas in the next chapter recover exactly
+$U_r(i)$ at $p=n+i$ and $V_r(j)$ at $q=j$, with the differential
+landing at $q=p-r$. The next chapter proves that calculus for an
+\emph{arbitrary filtered module map}, where the pages may have nonsimple
+terms and nonzero limiting kernel or cokernel. The present calculation
+explains why its composition-series cancellation can also be carried
+out for groups with operators.
+
+The scope is precise. We proved the relation refinement theorem for all
+pointed Barr-exact Mal'cev categories. We proved this explicit page
+calculation for composition series of groups with operators. We have not
+asserted that every filtered group complex supports the ordinary abelian
+spectral-sequence machinery. General nonabelian exact-couple theories
+require additional constructions; one primary reference is
+\href{https://arxiv.org/pdf/1007.0632}{Grandis, \emph{Homotopy spectral
+sequences}}, Sections~2--4.

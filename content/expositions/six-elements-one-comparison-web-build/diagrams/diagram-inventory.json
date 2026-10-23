@@ -1,0 +1,118 @@
+{
+  "source": "content/expositions/six-elements-one-comparison-pdf",
+  "source_files": [
+    {
+      "file": "main.tex",
+      "sha256": "3a0e5b4c7a46905377e47ef769bf18ed8757cc43caadb348582aa89c081e8bde"
+    },
+    {
+      "file": "01-concrete-route.tex",
+      "sha256": "139698d5d3b6ad47150bb0998f79b5da05bbc0655fc27fa83fc3145126b14e42"
+    },
+    {
+      "file": "02-exercises.tex",
+      "sha256": "31551d105a7fd557f2eae56de8a62460a670688bdea77e33596e46738937655a"
+    },
+    {
+      "file": "03-higher-guide.tex",
+      "sha256": "a876d88d709cbc9506bb848facb092f81d0721f62d5a87afa428d660c872cc96"
+    }
+  ],
+  "source_pdf_sha256": "860667e3a34fb2bf709d0b61d8df318aac10c31a98b6512d5162006f5659abd6",
+  "diagrams": [
+    {
+      "number": 1,
+      "file": "01-concrete-route.tex",
+      "line": 20,
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n0\\arrow[r,hook]&A\\arrow[r,hook]&G\\\\\n0\\arrow[r,hook]&B\\arrow[r,hook]&G.\n\\end{tikzcd}",
+      "tex_sha256": "a79678df2ec6b2b46b7b6a87ec4b3dac058d202187bfae41ebb417bd838ebbdd",
+      "svg": "diagram-01.svg",
+      "tex": "diagram-01.tex",
+      "title": "Two normal series in C6",
+      "alt": "Two rows of subgroup inclusions: zero to A to G, and zero to B to G. Here G is the additive group Z/6Z, A is {0, 3}, B is {0, 2, 4}, and zero denotes the trivial subgroup.",
+      "width_pt": 138.58900451660156,
+      "height_pt": 46.67399978637695,
+      "width_css_px": 184.78533935546875,
+      "height_css_px": 62.23199971516927,
+      "svg_sha256": "0d9ca9154af7bf36f01aeae02b0013bff2b1eacd64c5899684b454f37f2e1a99",
+      "svg_bytes": 9928,
+      "vector_only": true,
+      "pdf_text": "0\nA\nG\n0\nB\nG.\n"
+    },
+    {
+      "number": 2,
+      "file": "01-concrete-route.tex",
+      "line": 72,
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n G\\arrow[r,\"\\tau_c\"]\\arrow[d,\"h\"']&G\\arrow[d,\"h\"]\\\\\n G\\arrow[r,\"\\tau_{h(c)}\"']&G .\n \\end{tikzcd}",
+      "tex_sha256": "f970009542599bf98001e4331f84971737a43745b3852b418647b604d3d1e56a",
+      "svg": "diagram-02.svg",
+      "tex": "diagram-02.tex",
+      "title": "A homomorphism commutes with the appropriate translations",
+      "alt": "A commutative square with G at all four corners. The top map is translation tau_c, both downward maps are h, and the bottom map is translation tau_{h(c)}. Thus h composed with tau_c equals tau_{h(c)} composed with h. In this example h(x) = 2x.",
+      "width_pt": 85.01300048828125,
+      "height_pt": 52.11899948120117,
+      "width_css_px": 113.35066731770833,
+      "height_css_px": 69.49199930826823,
+      "svg_sha256": "62c99b68f47f9a3d548453f8895b58be38240eebbe5d37084ae8a62ed89d5400",
+      "svg_bytes": 11963,
+      "vector_only": true,
+      "pdf_text": "G\nG\nG\nG.\nτc\nh\nh\nτh(c)\n"
+    },
+    {
+      "number": 3,
+      "file": "01-concrete-route.tex",
+      "line": 94,
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n G\\arrow[r,\"h\"]\\arrow[d,\"q_A\"']&H\\\\\n G/A\\arrow[ur,dashed,\"\\bar h\"']&\n \\end{tikzcd}",
+      "tex_sha256": "15285468e03fe91e0c9dddd5d12a80d14c9c62b36a083563fd840bd569f50d64",
+      "svg": "diagram-03.svg",
+      "tex": "diagram-03.tex",
+      "title": "A homomorphism descends through the quotient",
+      "alt": "A triangle with h from G to H across the top and q_A from G down to G/A. The unique descended homomorphism bar h is the dashed arrow from G/A up to H. It satisfies bar h composed with q_A equals h, with bar h(x+A) = h(x).",
+      "width_pt": 95.5999984741211,
+      "height_pt": 51.84000015258789,
+      "width_css_px": 127.46666463216145,
+      "height_css_px": 69.12000020345052,
+      "svg_sha256": "9be1001ff19f4d3cf73e5367e63c8b380507d17c2ab4f8a6e712ba9c36feb374",
+      "svg_bytes": 13318,
+      "vector_only": true,
+      "pdf_text": "G\nH\nG/A\nh\nqA\n¯h\n"
+    },
+    {
+      "number": 4,
+      "file": "01-concrete-route.tex",
+      "line": 221,
+      "raw_tex": "\\begin{tikzcd}[row sep=large,column sep=large]\n &M\\arrow[dl,two heads,\"a\"']\\arrow[dr,two heads,\"b'\"]&\\\\\n B\\arrow[d,\"\\id_B\"']&&G\\arrow[d,\"q_A\"]\\\\\n B\\arrow[rr,\"\\beta\"']&&G/A .\n\\end{tikzcd}",
+      "tex_sha256": "3714ca859b3b8dd605ad8a2f3f8dd921fcb6ec7d589e51b1016e03882a1c5e3b",
+      "svg": "diagram-04.svg",
+      "tex": "diagram-04.tex",
+      "title": "The common quotient of the relation supports",
+      "alt": "The relation carrier M maps surjectively to B by a and to G by b-prime. B maps down to B by its identity, G maps down to G/A by q_A, and beta maps B to G/A across the bottom. The diagram commutes: beta composed with a equals q_A composed with b-prime. Here a(b,y) = b, b-prime(b,y) = y, and beta(b) = b+A.",
+      "width_pt": 167.10499572753906,
+      "height_pt": 117.19300079345703,
+      "width_css_px": 222.8066609700521,
+      "height_css_px": 156.25733439127603,
+      "svg_sha256": "779d19f53c298d8bb99da45b3da09c359a493450352b1eb1fc3b917173222b78",
+      "svg_bytes": 23417,
+      "vector_only": true,
+      "pdf_text": "M\nB\nG\nB\nG/A.\na\nb′\nidB\nqA\nβ\n"
+    }
+  ],
+  "pipeline": {
+    "pdflatex": "pdflatex",
+    "pymupdf": "2.0",
+    "rendering": "Exact TikZ body, native TeX standalone PDF, vector SVG paths; no raster images.",
+    "exact_tikz_bodies_and_svg_assets_retained": true
+  },
+  "mixed_display_requirements": [
+    {
+      "diagram": 2,
+      "preceding_math": "h(x+c)=h(x)+h(c),\\qquad",
+      "must_be_retained_outside_svg": true
+    },
+    {
+      "diagram": 3,
+      "preceding_math": "\\bar h(x+A)=h(x),\\qquad",
+      "must_be_retained_outside_svg": true
+    }
+  ]
+}

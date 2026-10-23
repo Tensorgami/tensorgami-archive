@@ -1,0 +1,263 @@
+\section{Groups, modules, and dimension as instances}\label{e:section}
+
+The comparison theorem has been proved before choosing a multiplication
+table, a scalar field, or a basis. To use it, we must now check its hypotheses.
+This is an essential part of the argument: a category name does not by itself
+verify an image factorization or construct a quotient.
+
+\subsection{One verification for algebraic structures}\label{e:varieties}
+
+An algebraic theory specifies operations of finite arity and equations between
+expressions built from them. A model is a set with those operations satisfying
+the equations; a morphism preserves every operation. A subalgebra is a subset
+closed under them. An internal relation on a model $A$ is a subalgebra of
+$A\times A$. An equivalence relation of this kind is a \emph{congruence}:
+equivalent inputs give equivalent outputs for every operation.
+
+\begin{proposition}\label{e:algebraic-instances}
+The category of models of an algebraic theory is Barr-exact. If its one-element
+model is also initial, it is pointed. If the theory has a ternary term $p$
+satisfying
+\[
+p(x,y,y)=x,\qquad p(x,x,z)=z,
+\]
+then it is a Mal'cev category. Under these last two conditions the general
+comparison theorem applies to its finite composition series.
+\end{proposition}
+\begin{proof}
+Products carry the operations coordinatewise. An equalizer is the subset
+where two homomorphisms agree, closed under every operation. These give finite
+limits, with the one-element algebra terminal. The image of a homomorphism
+is a subalgebra, so every map factors as a surjection followed by an inclusion.
+A pullback of a surjection is surjective: an element of the other object has
+a lift of its image, giving a pair in the pullback.
+
+Let $q:A\to B$ be surjective. A homomorphism $h:A\to C$ constant on its
+fibers defines $\bar h(b)=h(a)$ for any $a$ with $q(a)=b$. This is independent
+of $a$, and choosing lifts of the finitely many inputs of an operation proves
+that $\bar h$ preserves that operation. Surjectivity proves uniqueness.
+Thus $q$ is the coequalizer of its kernel pair.
+
+Conversely a regular epimorphism is surjective. Factor a coequalizer
+$q:A\to B$ through its set-theoretic image as $q=me$. If $q$ coequalizes
+$u,v$, injectivity of $m$ shows $eu=ev$. Its universal property supplies
+$d:B\to\im(q)$ with $dq=e$. Then $mdq=q$, so $md=\id_B$ because
+coequalizers are epimorphisms. Also $dme=e$, and the surjectivity of $e$
+gives $dm=\id_{\im(q)}$. Hence $m$ is an isomorphism.
+We have established regularity with exactly the stated quotient maps.
+Monomorphisms are precisely the injective homomorphisms: injectivity gives
+left cancellation, while factoring a monomorphism into its image makes
+the surjective part both monic and regular epic, hence an isomorphism by
+Lemma~\ref{f:descent}. Thus the internal subobjects and relations really
+are the subalgebras used in the next step.
+
+For a congruence $E$ on $A$, form the set $A/E$ and define every operation
+on classes by applying it to representatives. Closure of $E$ under the
+operation makes this well-defined; the equations descend because they hold
+on representatives. The quotient map has kernel pair exactly $E$ and has
+the same coequalizer property just proved. Thus every internal equivalence
+relation is effective, proving Barr-exactness.
+
+Finally let $R\subseteq A\times A$ be reflexive and an internal relation.
+It is closed under the term $p$. If $xRy$, apply $p$ to
+$(y,y),(x,y),(x,x)$ to obtain $(y,x)$, proving symmetry. If $xRy$ and $yRz$,
+apply $p$ to $(x,y),(y,y),(y,z)$ to obtain $(x,z)$, proving transitivity.
+Thus every reflexive internal relation is an equivalence relation.
+The pointed assertion is precisely the extra initial-object hypothesis.
+\end{proof}
+
+The displayed terms are operations in a presentation. For a nonabelian group,
+$G^3\to G$, $(x,y,z)\mapsto xy^{-1}z$, need not be a group homomorphism.
+What we used is that a subalgebra is closed under terms, including that term.
+This distinction lets algebraic expressions justify a categorical property
+without confusing them with arrows in the category.
+
+\subsection{Reading the axioms in familiar examples}\label{e:examples}
+
+For groups use multiplication, inverse and identity, with their axioms.
+The one-element group is initial and terminal, and
+$p(x,y,z)=xy^{-1}z$ has the required identities. For left modules over a fixed
+unital ring $R$, use addition, negative, zero, and an operation $x\mapsto rx$
+for every $r\in R$, with the module equations. The zero module is initial
+and terminal, and $p(x,y,z)=x-y+z$ works. Neither argument uses a dimension,
+a composition series, or Jordan--H\"older.
+
+We check that the categorical quotient data are the familiar ones. In a
+group $G$, the kernel $N$ of a homomorphism is normal, since
+$q(gng^{-1})=q(g)q(n)q(g)^{-1}=1$. Conversely, for a normal subgroup $N$,
+the relation $x\sim y$ if $x^{-1}y\in N$ is an equivalence relation
+compatible with multiplication and inverses. For example, if $x'=xn$ and
+$y'=ym$, then $x'y'=xy(y^{-1}ny)m$ differs from $xy$ by an element of $N$.
+The congruence quotient just constructed is the usual group $G/N$.
+
+More generally, if $E$ is a group congruence, its identity class $N$ is a
+normal subgroup: closure gives products and inverses, and conjugating a pair
+$(n,1)\in E$ by $(g,g)\in E$ gives $(gng^{-1},1)\in E$. Translating
+$(x,y)$ by $(x^{-1},x^{-1})$ shows $xEy$ exactly when $x^{-1}y\in N$.
+Thus normal subgroups and these quotient relations agree.
+
+For modules, a congruence has zero class a submodule $N$, and translating
+pairs gives $x\sim y$ exactly when $y-x\in N$. The quotient operations are
+$(x+N)+(y+N)=x+y+N$ and $r(x+N)=rx+N$. Consequently all isomorphisms supplied
+by the categorical theorem are $R$-linear. A quotient-simple group is exactly
+a nontrivial group with no proper nontrivial normal subgroup; a quotient-simple
+module is exactly a nonzero module with no proper nonzero submodule.
+
+We therefore obtain both classical theorems from Theorem~\ref{j:jordan-holder}:
+two composition series of a group have the same group factors, and two of an
+$R$-module have the same module factors. This is one specialization step for
+each category, not a second proof of the comparison theorem.
+
+The same verification covers groups with specified endomorphism operators:
+include those operators and their preservation equations in the theory.
+Subobjects and quotients retain them. It also covers Lie algebras over a field,
+using the additive term $x-y+z$, and nonunital associative algebras over a
+commutative ring. Their kernels are respectively ideals and two-sided ideals.
+For Lie algebras our categorical use of simple includes a one-dimensional
+abelian algebra. Unital rings with identity-preserving maps do not have a zero
+object and are not a direct instance of this pointed statement.
+
+\subsection{Reading one cell as the familiar group butterfly}
+\label{e:butterfly-dictionary}
+
+Take $A_1\nml A_2\leq G$ and $B_1\nml B_2\leq G$.
+Let $r,s$ be the partial equivalence relations on $G$ supplied by
+$A_2\twoheadrightarrow A_2/A_1$ and $B_2\twoheadrightarrow B_2/B_1$.
+Put
+\[
+ C=A_2\cap B_2,\qquad U=A_1\cap B_2,\qquad W=A_2\cap B_1.
+\]
+Applying $s$ and then $r$ to a subset means taking the appropriate
+congruence classes inside $B_2$ and then inside $A_2$. In particular,
+$sG=B_2$ and $s0=B_1$, so the endpoint identities give
+\[
+ (rsr)G=rsG=A_1C,\qquad (rsr)0=rs0=A_1W.
+\]
+Here $0$ denotes the identity subgroup. Interchanging the two relations gives
+support $B_1C$ and identity class $B_1U$ for $srs$. Since a group
+congruence is determined by its identity class, the two cell quotients are
+\[
+ Q(rsr)=\frac{A_1C}{A_1W},\qquad
+ Q(srs)=\frac{B_1C}{B_1U}.
+\]
+
+We can see their common quotient and every normality assertion directly.
+The groups $U,W$ are normal in $C$: conjugation by an element of $C$
+preserves $A_1$ or $B_1$, respectively, and remains in the other ambient
+subgroup. Consequently $UW=WU$ is a normal subgroup of $C$.
+The product $A_1C$ is a subgroup because $A_1\nml A_2$ and $C\leq A_2$.
+In $A_1C/A_1$, the image of $C$ is the whole group and the image of
+$W\nml C$ is normal. Its inverse image is $A_1W$, proving
+$A_1W\nml A_1C$. The same argument proves $B_1U\nml B_1C$.
+
+Now use the two homomorphisms
+\[
+ C\longrightarrow A_1C/A_1W,\quad c\longmapsto c(A_1W),
+ \qquad
+ C\longrightarrow B_1C/B_1U,\quad c\longmapsto c(B_1U).
+\]
+Both are onto, since the extra factor $A_1$ or $B_1$ is killed.
+The first kernel is $C\cap A_1W=UW$: if $c=aw$ lies in $C$, then
+$a=cw^{-1}\in A_1\cap C=U$; the converse inclusion is immediate.
+The second kernel is $C\cap B_1U=WU=UW$, by the same calculation.
+The effective quotient property therefore gives
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+ &C\arrow[dl,two heads]\arrow[d,two heads]\arrow[dr,two heads]&\\
+ A_1C/A_1W & C/UW\arrow[l,"\sim"']\arrow[r,"\sim"] & B_1C/B_1U .
+\end{tikzcd}
+\]
+These isomorphisms give the usual butterfly, with its maps specified.
+They are also the previously constructed cell comparison: for every
+element of the correspondence $rs$, its two ends can be represented as
+$bc$ and $ac$, with $b\in B_1$, $a\in A_1$ and $c\in C$.
+Both quotient maps then use the same class of $c$. The characterization
+in Proposition~\ref{r:cell-isomorphism} identifies the maps.
+Thus the subgroup products are the concrete supports and identity
+classes of one categorical construction.
+
+\subsection{A comparison that changes the order}\label{e:cyclic-six}
+
+In $G=C_6=\mathbb Z/6\mathbb Z$ put $A_1=\{0,3\}$ and
+$B_1=\{0,2,4\}$. Reduction modulo $3$ has kernel $A_1$ and reduction
+modulo $2$ has kernel $B_1$. Hence
+\[
+0<A_1<G,\qquad 0<B_1<G
+\]
+have factors $(C_2,C_3)$ and $(C_3,C_2)$. Every nonzero element of $C_2$
+or $C_3$ generates the group, so the factors are simple.
+The relation comparison becomes the following concrete rectangle:
+\[
+\begin{array}{c|cc}
+ & B_1/0&G/B_1\\\hline
+A_1/0&0&C_2\\
+G/A_1&C_3&0
+\end{array}
+\]
+Indeed $A_1\cap B_1=0$ and $A_1+B_1=G$, since $3+4=1$ modulo $6$.
+The two nonzero comparisons are induced by $a\mapsto a+B_1$ and
+$b\mapsto b+A_1$. Each is onto by the sum equality and injective by the
+intersection equality. These are actual isomorphisms, not just equalities
+of cardinalities. A refined chain need not contain both $A_1$ and $B_1$;
+the matching occurs between its factors.
+
+Normality is always in the next term. In $A_4$, for example,
+$1<V_4<A_4$ has both terms normal in the ambient group, but $V_4$ is not
+simple. Insert one of its order-two subgroups to obtain a composition series.
+That subgroup is normal in the abelian group $V_4$ and is not normal in
+$A_4$: conjugation by a three-cycle permutes the three double transpositions.
+The lattice of subgroups normal in the ambient group describes a different
+filtration problem.
+
+\subsection{Finite basis size, with no dimension in the prerequisites}
+\label{e:dimension}
+
+Let $k$ be a field. A list $v_1,\ldots,v_n$ is a basis if it spans the vector
+space $V$ and every relation $\sum_i a_i v_i=0$ has all $a_i=0$.
+The module construction above provides subspaces, quotient spaces and their
+linear maps before any notion of dimension is introduced.
+
+\begin{theorem}[Invariance of finite basis size]\label{e:dimension-theorem}
+If $V$ has finite bases $v_1,\ldots,v_n$ and $w_1,\ldots,w_m$, then $n=m$.
+\end{theorem}
+\begin{proof}
+Put $V_i=\Span(v_1,\ldots,v_i)$, with $V_0=0$. Each inclusion is strict:
+otherwise $v_i$ would be a linear combination of the preceding vectors,
+contradicting independence. The map
+\[
+k\longrightarrow V_i/V_{i-1},\qquad a\longmapsto av_i+V_{i-1}
+\]
+is onto by the definition of span. If its image is zero, a relation with
+coefficient $a$ on $v_i$ shows $a=0$. It is therefore an isomorphism of
+$k$-modules. The module $k$ is simple: a submodule containing $a\ne0$
+contains $a^{-1}a=1$ and every scalar multiple of $1$.
+The basis thus supplies a composition series with $n$ factors isomorphic
+to $k$. The other basis supplies one with $m$ factors. Apply the general
+Jordan--H\"older theorem in $k$-modules. If $V=0$, independence forces
+both lists empty, giving the same conclusion.
+\end{proof}
+
+We may now define $\dim_k V$ to be this invariant basis size. We have not
+used bases of arbitrary subspaces, rank--nullity, determinants, exterior
+powers, or a pre-existing dimension function. Those are possible later
+constructions; they are not concealed inputs to this proof.
+
+\subsection{What a factor list leaves unresolved}\label{e:extensions}
+
+Both $C_4$ and $C_2\times C_2$ have factors $C_2,C_2$. Their exact sequences
+can be written
+\[
+0\longrightarrow C_2\xrightarrow{\,a\mapsto2a\,}C_4
+\longrightarrow C_2\longrightarrow0,
+\qquad
+0\longrightarrow C_2\longrightarrow C_2\times C_2
+\longrightarrow C_2\longrightarrow0,
+\]
+where the last two maps in the second sequence are first-factor inclusion
+and second-factor projection. The first quotient is reduction modulo $2$.
+The displayed kernels and surjections verify exactness directly.
+Yet $C_4$ has an element of order four, whereas every element of
+$C_2\times C_2$ is killed by multiplication by two. They are not isomorphic.
+The general theorem compares the simple pieces. It does not split the
+extension joining them. The following parts develop measurements and
+constructions that retain more of this attachment information.

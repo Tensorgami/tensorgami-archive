@@ -1,0 +1,184 @@
+\clearpage
+\section{Seven short exercises}\label{c:exercises}
+The first five exercises stay with \(G=\Z/6\Z\),
+\(A=\{0,3\}\), \(B=\{0,2,4\}\). They test the maps, not just the final
+factor list. Worked answers follow on the next two pages.
+
+\begin{enumerate}
+\item \textbf{Direction and witnesses.}
+For \(R=r_2s_1\), give an intermediate witness showing \(2R5\).
+Does \(5R2\)? Describe \(R^\op=s_1r_2\).
+Explain why associativity of relation composition does not allow us
+to interchange \(r_2\) and \(s_1\).
+
+\item \textbf{The two ambiguities.}
+Compute \(R^\op R\) and \(RR^\op\), including their supports.
+Why is the first not an equivalence relation on all of \(G\)?
+Write the induced quotient isomorphism and its inverse.
+
+\item \textbf{Three corners.}
+Let \(T\leq X\times Y\) be a subgroup, with \(X,Y\) possibly
+noncommutative. Verify the ordered product that completes
+\((x,y),(x',y),(x',y')\) to \((x,y')\).
+For the congruence modulo \(B\), apply it to
+\((0,2),(4,2),(4,4)\).
+Give an arbitrary subset of \(C_2\times C_2\) for which the
+three-corner property fails.
+
+\item \textbf{What saturation repairs.}
+Let \(T=\{(b,b):b\in B\}\subseteq B\times G\), and let
+\(p=\id_B\times q_A\).
+Show \(p(T)=p(R)\), but \(p^{-1}(p(T))=R\ne T\).
+Compute \(r_2T\) and \(r_2R\). Which relation includes every representative
+of each output coset?
+
+\item \textbf{Reconstruct the rectangle.}
+Without looking at §\ref{c:rectangle}, compute all four output quotients
+and all four input quotients. Recover the two refined chains.
+Verify that \(x+B\mapsto3x\) is inverse to \(a\mapsto a+B\).
+Explain the different supports of the two trivial cells.
+
+\item \textbf{Normal in the next term.}
+Let \(A_4\) be the group of even permutations of four symbols, composed
+from right to left. Inside \(A_4\), let
+\[
+ H=\{1,(12)(34)\},\qquad
+ V_4=\{1,(12)(34),(13)(24),(14)(23)\}.
+\]
+Show that \(1<H<V_4<A_4\) is a composition series, but
+\(H\) is not normal in \(A_4\).
+For the last assertion, conjugate \((12)(34)\) by \((123)\).
+Why would a proof considering only ambient-normal subgroups miss this
+series?
+
+\item \textbf{What the factors forget.}
+Give composition series for \(C_4\) and \(C_2\times C_2\) with the same
+simple factors. Prove the groups are not isomorphic.
+Then count the homomorphisms \(C_2\to C_4\) and
+\(C_2\to C_2\times C_2\). What information does this small probe detect
+that the factor list does not?
+\end{enumerate}
+
+\route{Exercises 1--5 check the comparison mechanism. Exercises 6--7
+expose two features deliberately invisible in the easy \(C_6\) example:
+non-ambient normality and different ways to assemble the same factors.}
+
+\clearpage
+\section{Worked answers}\label{c:answers}
+\textbf{1. Direction and witnesses.}
+The intermediate point is \(2\): \(2s_12\) and \(2r_25\), since
+\(5-2=3\in A\). But \(5\) is outside the input support \(B\), so \(5R2\)
+is false. The opposite relation has pairs
+\[
+ R^\op=\{(b,b),(b+3,b):b\in B\}.
+\]
+It has input support \(G\) and output support \(B\). First move by \(A\),
+then require the endpoint to lie in \(B\).
+Associativity permits regrouping three successive operations; it does
+not reverse their order. Here \(r_2s_1\ne s_1r_2\), as the supports
+already show.
+
+\medskip
+\textbf{2. The two ambiguities.}
+Distinct rows in the relation table have disjoint outputs, so
+\[
+ R^\op R=\Delta_B.
+\]
+It is reflexive on \(B\), but not on \(G\): for example \((1,1)\) is
+missing. The other composite is
+\[
+ RR^\op=
+ \{0,3\}^2\ \cup\ \{2,5\}^2\ \cup\ \{4,1\}^2=r_2.
+\]
+Its support is \(G\), and its three classes are the \(A\)-cosets.
+The quotient map is \(B\to G/A,\ b\mapsto b+A\).
+Its inverse \(x+A\mapsto4x\) is well defined because \(4A=0\).
+The two identities \(4b=b\) on \(B\) and \(4x-x\in A\) verify both
+composites directly.
+
+\medskip
+\textbf{3. Three corners.}
+In the direct product group,
+\[
+\begin{split}
+ (x,y)(x',y)^{-1}(x',y')
+ &=\bigl(xx'^{-1}x',\,yy^{-1}y'\bigr)\\
+ &=(x,y').
+\end{split}
+\]
+The subgroup contains this product. Nothing is commuted, so the argument
+works for arbitrary groups. In the additive \(C_6\) example the same
+operation reads
+\[
+ (0,2)-(4,2)+(4,4)=(0,4),
+\]
+which indeed belongs to the congruence modulo \(B\).
+
+The subset
+\(\{(0,0),(1,0),(1,1)\}\subseteq C_2\times C_2\)
+contains three corners but omits \((0,1)\).
+It is not a subgroup. Merely having a subset of a product supplies no
+three-corner property.
+
+\pausehere{The ternary expression \(uv^{-1}w\) need not be a group
+homomorphism in its three variables. The proof uses closure of the
+subgroup under the displayed operations, not such a homomorphism claim.}
+
+\clearpage
+\textbf{4. What saturation repairs.}
+Both images are the graph
+\[
+ L=\{(0,A),(2,2+A),(4,4+A)\}\subseteq B\times G/A.
+\]
+A pair \((b,y)\) lies in \(p^{-1}(L)\) exactly when \(y+A=b+A\),
+or \(y-b\in A\). This is precisely \(R\). Therefore
+\(r_2T=R\) and \(r_2R=R\). Only \(R\) includes all representatives
+of each output coset; \(T\) includes just one.
+
+\medskip
+\textbf{5. Reconstruct the rectangle.}
+The output and input quotient tables, respectively, are
+\[
+ \begin{pmatrix}0/0&A/0\\G/A&G/G\end{pmatrix},
+ \qquad
+ \begin{pmatrix}0/0&G/B\\B/0&G/G\end{pmatrix}.
+\]
+Their row and column chains are
+\[
+ 0\subseteq0\subseteq A\subseteq G\subseteq G,\qquad
+ 0\subseteq0\subseteq B\subseteq G\subseteq G.
+\]
+The formula \(x+B\mapsto3x\) is well defined since \(3B=0\).
+For \(a\in A\), \(3a=a\); for \(x\in G\), \(3x-x=2x\in B\).
+These prove both inverse identities. The first trivial cell has support
+\(\{0\}\), and the last has support \(G\). Each quotient has one element,
+although their supports and relations differ.
+
+\medskip
+\textbf{6. Normal in the next term.}
+\(V_4\) is abelian, so \(H\nml V_4\). Conjugation by an element of
+\(A_4\) permutes the three double transpositions, so \(V_4\nml A_4\).
+The successive factors have orders \(2,2,3\), and every group of prime
+order is cyclic and simple. These steps give a composition series.
+However,
+\[
+ (123)(12)(34)(123)^{-1}=(23)(14)\notin H.
+\]
+Thus \(H\) is not normal in \(A_4\). The theorem concerns subnormal
+series, where each term is normal in the next; it cannot be reduced to
+chains in the lattice of subgroups normal in the whole ambient group.
+
+\medskip
+\textbf{7. What the factors forget.}
+Use
+\[
+ 0<\{0,2\}<\Z/4\Z,\qquad
+ 0<C_2\times0<C_2\times C_2.
+\]
+Both factor lists are \(C_2,C_2\). The first group has an element of order
+four, while the second does not, so they are not isomorphic.
+A homomorphism out of \(C_2\) is determined by the image of its generator,
+which must be killed by two. There are two possibilities in \(C_4\)
+and four in \(C_2\times C_2\). The probe detects their different
+two-torsion subgroups. The simple factors alone do not recover how those
+factors are assembled.

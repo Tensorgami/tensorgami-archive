@@ -1,0 +1,2153 @@
+{
+  "source": "content/expositions/quotients-and-reconstruction-pdf",
+  "source_pdf_sha256": "2687a9dad17e29259030eebf572a15a07fb206e8882756bf93ea6300a1b24c45",
+  "main_sha256": "525b71be5fa737eafa32738f0536f1d27d7f3685eb6c3a3b7af6a940d88a7a0d",
+  "ordered_inputs": [
+    "00-reading-guide",
+    "01-maps-relations-exactness",
+    "02-malcev-and-comparison",
+    "03-refinement-and-factors",
+    "04-instances-and-dimension",
+    "05-modules-and-finite-tools",
+    "06a-common-comparison-pages",
+    "06b-module-spectral-calculus",
+    "07-additive-invariants",
+    "08-extensions-and-lifting",
+    "09-probes-and-reconstruction",
+    "09b-hall-associativity",
+    "10-higher-quotients",
+    "11-linearization-and-derived-structure",
+    "12-dependencies-and-reading"
+  ],
+  "files": [
+    {
+      "file": "00-reading-guide.tex",
+      "sha256": "8c6e677c7054a9e65c04b06d740915ac400bf413ba2eedf10555e6b1b6807fa0",
+      "bytes": 3691,
+      "lines": 69,
+      "environments": {},
+      "bracket_display_count": 1,
+      "inline_dollar_count": 6,
+      "section_count": 1,
+      "subsection_count": 0
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "sha256": "36ab480e76f9f867206de3ede2c6979b5972036f25feb31f3d850efeaf7c4111",
+      "bytes": 17348,
+      "lines": 395,
+      "environments": {
+        "tikzcd": 5,
+        "definition": 4,
+        "lemma": 5,
+        "proof": 6,
+        "proposition": 1
+      },
+      "bracket_display_count": 17,
+      "inline_dollar_count": 436,
+      "section_count": 1,
+      "subsection_count": 5
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "sha256": "13f1b164133f1b16846aadb81ba00c31553849f2b94f2fbeaa211c4b2dff6ee4",
+      "bytes": 15638,
+      "lines": 382,
+      "environments": {
+        "definition": 1,
+        "proposition": 2,
+        "enumerate": 1,
+        "proof": 5,
+        "align*": 2,
+        "lemma": 1,
+        "tikzcd": 2,
+        "theorem": 1,
+        "corollary": 1
+      },
+      "bracket_display_count": 22,
+      "inline_dollar_count": 340,
+      "section_count": 1,
+      "subsection_count": 4
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "sha256": "04fe5e073376411c02cd38a1febb766cd7a13475b7cfafd74d4b50464d85635a",
+      "bytes": 28139,
+      "lines": 628,
+      "environments": {
+        "definition": 2,
+        "tikzcd": 3,
+        "lemma": 3,
+        "equation": 7,
+        "proof": 11,
+        "proposition": 5,
+        "align": 1,
+        "split": 1,
+        "theorem": 2,
+        "corollary": 1
+      },
+      "bracket_display_count": 23,
+      "inline_dollar_count": 482,
+      "section_count": 1,
+      "subsection_count": 7
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "sha256": "5990242fad47589094449c4bec3f3e179e8e06acf89e0b46003d05f637db0b59",
+      "bytes": 13335,
+      "lines": 263,
+      "environments": {
+        "proposition": 1,
+        "proof": 2,
+        "tikzcd": 1,
+        "array": 1,
+        "theorem": 1
+      },
+      "bracket_display_count": 10,
+      "inline_dollar_count": 358,
+      "section_count": 1,
+      "subsection_count": 6
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "sha256": "dfd4b359d05187f078ba55751346b8ad20592691274201b8aa418640d921d30f",
+      "bytes": 11978,
+      "lines": 249,
+      "environments": {
+        "lemma": 2,
+        "proof": 2,
+        "tikzcd": 1,
+        "equation": 1
+      },
+      "bracket_display_count": 8,
+      "inline_dollar_count": 300,
+      "section_count": 1,
+      "subsection_count": 5
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "sha256": "41449c9016a863bf40e95e7ea4577f4f1af8c4032eae01d8c3f0ed7f6250a0f6",
+      "bytes": 11580,
+      "lines": 243,
+      "environments": {
+        "lemma": 1,
+        "proof": 3,
+        "align": 1,
+        "equation": 1,
+        "proposition": 1,
+        "tikzcd": 1,
+        "theorem": 1
+      },
+      "bracket_display_count": 7,
+      "inline_dollar_count": 234,
+      "section_count": 1,
+      "subsection_count": 3
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "sha256": "501cf576818866c6fdbd468a58e2085cdcf78659e5fd48fc634823dc658c3043",
+      "bytes": 21227,
+      "lines": 519,
+      "environments": {
+        "align": 1,
+        "equation": 3,
+        "tikzcd": 3,
+        "proposition": 2,
+        "align*": 3,
+        "proof": 3,
+        "cases": 1,
+        "array": 2,
+        "theorem": 1
+      },
+      "bracket_display_count": 31,
+      "inline_dollar_count": 406,
+      "section_count": 1,
+      "subsection_count": 7
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "sha256": "cc44c8ef6a90b8838727196815d6ec4f51009d52c71b73797d763e906566f379",
+      "bytes": 7524,
+      "lines": 167,
+      "environments": {
+        "equation": 3,
+        "theorem": 1,
+        "proof": 1
+      },
+      "bracket_display_count": 5,
+      "inline_dollar_count": 126,
+      "section_count": 1,
+      "subsection_count": 5
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "sha256": "f93c80acfa37fc3432ad1abcdf041f6027d0cc0fa36cd74e96c31f70acd42149",
+      "bytes": 21839,
+      "lines": 536,
+      "environments": {
+        "tikzcd": 3,
+        "lemma": 1,
+        "proof": 4,
+        "proposition": 3,
+        "pmatrix": 1
+      },
+      "bracket_display_count": 42,
+      "inline_dollar_count": 638,
+      "section_count": 1,
+      "subsection_count": 7
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "sha256": "4f9abe2eb31ef0458a6a042004db0f0d518a1515c95bd72ffb92dd919e2bb01b",
+      "bytes": 15618,
+      "lines": 386,
+      "environments": {
+        "proposition": 1,
+        "proof": 3,
+        "tikzcd": 2,
+        "equation": 6,
+        "theorem": 1,
+        "corollary": 1,
+        "center": 1,
+        "tabular": 1
+      },
+      "bracket_display_count": 22,
+      "inline_dollar_count": 420,
+      "section_count": 1,
+      "subsection_count": 4
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "sha256": "dc3991d84756d12371bf28fab8c280cc4c7e2de6c90b70f50fdb06debbc04517",
+      "bytes": 11160,
+      "lines": 236,
+      "environments": {
+        "equation": 5,
+        "theorem": 1,
+        "proof": 1,
+        "tikzcd": 1
+      },
+      "bracket_display_count": 7,
+      "inline_dollar_count": 292,
+      "section_count": 1,
+      "subsection_count": 5
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "sha256": "71b6952a2e2c4b3557ef090503190b8c83bad33ea7fb24fad7766ccd0cfbcbdc",
+      "bytes": 20727,
+      "lines": 426,
+      "environments": {
+        "equation": 2,
+        "proposition": 6,
+        "proof": 7,
+        "theorem": 3,
+        "definition": 1,
+        "tikzcd": 2,
+        "corollary": 1
+      },
+      "bracket_display_count": 10,
+      "inline_dollar_count": 374,
+      "section_count": 1,
+      "subsection_count": 7
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "sha256": "5e764cfd7b851424a7b6de903a7bcc2bc5bc8f2966fdc454520fd639781f8b31",
+      "bytes": 24705,
+      "lines": 536,
+      "environments": {
+        "proposition": 4,
+        "proof": 7,
+        "theorem": 5,
+        "equation": 2,
+        "example": 2,
+        "cases": 1
+      },
+      "bracket_display_count": 26,
+      "inline_dollar_count": 550,
+      "section_count": 1,
+      "subsection_count": 6
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "sha256": "59380c04419f8a663a29138b0285da140c365112c4549f13cf10c0c6032c7b74",
+      "bytes": 10465,
+      "lines": 200,
+      "environments": {
+        "tikzcd": 1,
+        "thebibliography": 1
+      },
+      "bracket_display_count": 1,
+      "inline_dollar_count": 12,
+      "section_count": 1,
+      "subsection_count": 5
+    }
+  ],
+  "environment_counts": {
+    "tikzcd": 25,
+    "definition": 8,
+    "lemma": 13,
+    "proof": 55,
+    "proposition": 26,
+    "enumerate": 1,
+    "align*": 5,
+    "theorem": 17,
+    "corollary": 4,
+    "equation": 30,
+    "align": 3,
+    "split": 1,
+    "array": 3,
+    "cases": 2,
+    "pmatrix": 1,
+    "center": 1,
+    "tabular": 1,
+    "example": 2,
+    "thebibliography": 1
+  },
+  "labels": [
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 2,
+      "label": "f:begin"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 119,
+      "label": "f:descent"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 148,
+      "label": "f:regular"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 158,
+      "label": "f:images"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 201,
+      "label": "f:local-calculus"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 256,
+      "label": "f:relation-calculus"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 289,
+      "label": "f:graph-kernel"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 318,
+      "label": "f:functional"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 350,
+      "label": "f:exact"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 2,
+      "label": "d:begin"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 23,
+      "label": "d:malcev"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 53,
+      "label": "d:difunctional"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 116,
+      "label": "d:partial-equivalence"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 172,
+      "label": "d:comparison"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 287,
+      "label": "d:saturated-descent"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 336,
+      "label": "d:iterated-quotient"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 2,
+      "label": "r:chapter"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 20,
+      "label": "r:normal-series"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 68,
+      "label": "r:series-relations"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 73,
+      "label": "r:boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 136,
+      "label": "r:refined-map"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 155,
+      "label": "r:refinement-descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 160,
+      "label": "r:saturation"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 162,
+      "label": "r:refinement-boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 227,
+      "label": "r:endpoint-identities"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 230,
+      "label": "r:rs-idempotent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 235,
+      "label": "r:endpoint-equalities"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 267,
+      "label": "r:cells"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 281,
+      "label": "r:rectangle-refines"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 329,
+      "label": "r:cell-isomorphism"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 332,
+      "label": "r:cell-iso"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 381,
+      "label": "r:schreier"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 382,
+      "label": "j:schreier"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 418,
+      "label": "j:simple"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 431,
+      "label": "j:simple-refinement"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 453,
+      "label": "j:jordan-holder"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 496,
+      "label": "j:extension-additivity"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 497,
+      "label": "j:splicing"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 502,
+      "label": "j:mu-additive"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 533,
+      "label": "j:universal-invariant"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 534,
+      "label": "j:universal-monoid"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 567,
+      "label": "r:functoriality"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 1,
+      "label": "e:section"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 8,
+      "label": "e:varieties"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 17,
+      "label": "e:algebraic-instances"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 75,
+      "label": "e:examples"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 121,
+      "label": "e:butterfly-dictionary"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 179,
+      "label": "e:cyclic-six"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 213,
+      "label": "e:dimension"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 220,
+      "label": "e:dimension-theorem"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 245,
+      "label": "e:extensions"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 2,
+      "label": "m:section"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 89,
+      "label": "m:finite-tools"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 95,
+      "label": "m:bases"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 137,
+      "label": "m:operators"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 184,
+      "label": "m:length-foundations"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 193,
+      "label": "m:simple-map"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 220,
+      "label": "m:layer-exact"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 2,
+      "label": "p:chapter"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 34,
+      "label": "p:normality"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 78,
+      "label": "p:source"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 81,
+      "label": "p:target"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 90,
+      "label": "p:differential"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 98,
+      "label": "p:transition"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 160,
+      "label": "p:cancellation"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 1,
+      "label": "s:chapter"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 79,
+      "label": "s:source-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 84,
+      "label": "s:target-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 105,
+      "label": "s:page-differential"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 128,
+      "label": "s:transition"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 224,
+      "label": "s:convergence"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 279,
+      "label": "s:staggered-filtrations"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 307,
+      "label": "s:jordan-holder"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 445,
+      "label": "s:differential-cell"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 2,
+      "label": "k:section"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 19,
+      "label": "k:multiplicity-additivity"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 34,
+      "label": "k:all-measurements"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 72,
+      "label": "k:free-simples"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 128,
+      "label": "k:euler"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 146,
+      "label": "k:euler-formula"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 1,
+      "label": "x:extensions"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 33,
+      "label": "x:marked-iso"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 60,
+      "label": "x:splitting"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 223,
+      "label": "x:baer-group"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 316,
+      "label": "x:operator-extensions"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 355,
+      "label": "x:operator-ext-classification"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 423,
+      "label": "x:obstruction"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 487,
+      "label": "x:skip-layer"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 2,
+      "label": "p:probes"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 16,
+      "label": "p:relation-probe"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 48,
+      "label": "p:hom-kernel"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 101,
+      "label": "p:bottom-spaces"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 128,
+      "label": "p:kernel-bottom-ses"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 139,
+      "label": "p:bottom-dim"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 145,
+      "label": "p:canonical-multiplicity"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 150,
+      "label": "p:second-difference"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 159,
+      "label": "p:chain-construction"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 172,
+      "label": "p:endpoint-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 206,
+      "label": "p:chain-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 269,
+      "label": "p:profile-reconstruction"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 274,
+      "label": "p:profile-formula"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 284,
+      "label": "p:reconstruction"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 1,
+      "label": "hall:chapter"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 30,
+      "label": "hall:count"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 53,
+      "label": "hall:product"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 62,
+      "label": "hall:associativity"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 68,
+      "label": "hall:flag"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 149,
+      "label": "hall:square"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 191,
+      "label": "hall:cube"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 2,
+      "label": "h:chapter"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 46,
+      "label": "h:theory-models"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 55,
+      "label": "h:discrete"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 82,
+      "label": "h:rigidification"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 137,
+      "label": "h:action-nerve"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 153,
+      "label": "h:homotopy-quotient"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 159,
+      "label": "h:stabilizers"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 194,
+      "label": "h:extension-fiber"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 233,
+      "label": "h:topos-foundation"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 245,
+      "label": "h:quotient-basechange"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 275,
+      "label": "h:straightening"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 299,
+      "label": "h:action-descent"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 331,
+      "label": "h:double-coset"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 400,
+      "label": "h:monos-discrete"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 2,
+      "label": "t:chapter"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 22,
+      "label": "t:no-full-additive"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 69,
+      "label": "t:beck"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 106,
+      "label": "t:semidirect-law"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 168,
+      "label": "t:spectra-over-bg"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 230,
+      "label": "t:extension-classification"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 269,
+      "label": "t:extension-automorphisms"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 304,
+      "label": "t:dual-number-extension"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 348,
+      "label": "t:derived-intersection"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 403,
+      "label": "t:cotangent-foundation"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 413,
+      "label": "t:transitivity"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 432,
+      "label": "t:derivation-obstruction"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 477,
+      "label": "t:hypersurface-input"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 493,
+      "label": "t:cotangent-dual-numbers"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 2,
+      "label": "a:dependencies"
+    }
+  ],
+  "references": [
+    {
+      "file": "00-reading-guide.tex",
+      "line": 34,
+      "target": "f:begin"
+    },
+    {
+      "file": "00-reading-guide.tex",
+      "line": 34,
+      "target": "e:section"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 165,
+      "target": "f:descent"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 169,
+      "target": "f:descent"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 212,
+      "target": "f:descent"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 216,
+      "target": "f:images"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 267,
+      "target": "f:local-calculus"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 313,
+      "target": "f:local-calculus"
+    },
+    {
+      "file": "01-maps-relations-exactness.tex",
+      "line": 359,
+      "target": "f:descent"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 80,
+      "target": "f:graph-kernel"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 134,
+      "target": "f:local-calculus"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 207,
+      "target": "f:descent"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 269,
+      "target": "f:functional"
+    },
+    {
+      "file": "02-malcev-and-comparison.tex",
+      "line": 366,
+      "target": "f:descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 42,
+      "target": "r:normal-series"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 60,
+      "target": "d:partial-equivalence"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 69,
+      "target": "r:normal-series"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 95,
+      "target": "r:boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 100,
+      "target": "r:boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 173,
+      "target": "d:saturated-descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 193,
+      "target": "r:refinement-boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 197,
+      "target": "r:series-relations"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 203,
+      "target": "r:refinement-boundary"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 241,
+      "target": "d:difunctional"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 247,
+      "target": "r:rs-idempotent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 251,
+      "target": "r:rs-idempotent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 283,
+      "target": "r:refinement-descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 290,
+      "target": "r:endpoint-identities"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 317,
+      "target": "r:endpoint-equalities"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 318,
+      "target": "r:refinement-descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 352,
+      "target": "d:comparison"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 371,
+      "target": "r:cell-iso"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 391,
+      "target": "r:rectangle-refines"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 395,
+      "target": "r:cell-isomorphism"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 448,
+      "target": "r:schreier"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 461,
+      "target": "r:schreier"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 463,
+      "target": "j:simple-refinement"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 465,
+      "target": "r:refinement-descent"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 491,
+      "target": "j:jordan-holder"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 510,
+      "target": "r:refined-map"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 516,
+      "target": "j:mu-additive"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 550,
+      "target": "j:extension-additivity"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 587,
+      "target": "r:cells"
+    },
+    {
+      "file": "03-refinement-and-factors.tex",
+      "line": 589,
+      "target": "r:cell-isomorphism"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 51,
+      "target": "f:descent"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 106,
+      "target": "j:jordan-holder"
+    },
+    {
+      "file": "04-instances-and-dimension.tex",
+      "line": 175,
+      "target": "r:cell-isomorphism"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 92,
+      "target": "e:dimension-theorem"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 208,
+      "target": "m:bases"
+    },
+    {
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 247,
+      "target": "j:jordan-holder"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 86,
+      "target": "p:normality"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 111,
+      "target": "p:normality"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 168,
+      "target": "p:normality"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 169,
+      "target": "p:target"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 172,
+      "target": "p:transition"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 225,
+      "target": "p:target"
+    },
+    {
+      "file": "06a-common-comparison-pages.tex",
+      "line": 226,
+      "target": "p:source"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 4,
+      "target": "k:section"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 194,
+      "target": "s:transition"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 240,
+      "target": "s:source-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 242,
+      "target": "s:target-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 255,
+      "target": "s:transition"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 310,
+      "target": "s:staggered-filtrations"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 326,
+      "target": "s:transition"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 333,
+      "target": "s:convergence"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 344,
+      "target": "s:source-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 346,
+      "target": "s:target-page"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 362,
+      "target": "s:staggered-filtrations"
+    },
+    {
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 456,
+      "target": "s:differential-cell"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 7,
+      "target": "j:jordan-holder"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 10,
+      "target": "j:universal-monoid"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 16,
+      "target": "m:section"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 39,
+      "target": "k:multiplicity-additivity"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 101,
+      "target": "m:bases"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 103,
+      "target": "m:length-foundations"
+    },
+    {
+      "file": "07-additive-invariants.tex",
+      "line": 120,
+      "target": "k:multiplicity-additivity"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 70,
+      "target": "x:marked-iso"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 232,
+      "target": "x:marked-iso"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 282,
+      "target": "x:marked-iso"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 289,
+      "target": "x:splitting"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 440,
+      "target": "x:splitting"
+    },
+    {
+      "file": "08-extensions-and-lifting.tex",
+      "line": 456,
+      "target": "x:marked-iso"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 109,
+      "target": "p:hom-kernel"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 181,
+      "target": "p:endpoint-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 222,
+      "target": "p:endpoint-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 227,
+      "target": "p:endpoint-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 244,
+      "target": "p:hom-kernel"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 280,
+      "target": "p:second-difference"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 298,
+      "target": "p:hom-kernel"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 300,
+      "target": "p:chain-basis"
+    },
+    {
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 328,
+      "target": "x:skip-layer"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 41,
+      "target": "hall:count"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 63,
+      "target": "hall:product"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 101,
+      "target": "hall:flag"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 156,
+      "target": "hall:square"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 214,
+      "target": "k:section"
+    },
+    {
+      "file": "09b-hall-associativity.tex",
+      "line": 218,
+      "target": "hall:square"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 90,
+      "target": "h:theory-models"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 114,
+      "target": "h:discrete"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 155,
+      "target": "h:action-nerve"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 216,
+      "target": "h:stabilizers"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 256,
+      "target": "h:topos-foundation"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 352,
+      "target": "h:stabilizers"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 116,
+      "target": "t:semidirect-law"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 178,
+      "target": "h:straightening"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 198,
+      "target": "t:beck"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 358,
+      "target": "t:dual-number-extension"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 445,
+      "target": "t:transitivity"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 495,
+      "target": "t:hypersurface-input"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 521,
+      "target": "t:derivation-obstruction"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 26,
+      "target": "j:jordan-holder"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 58,
+      "target": "p:chapter"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 61,
+      "target": "s:chapter"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 75,
+      "target": "j:universal-monoid"
+    },
+    {
+      "file": "12-dependencies-and-reading.tex",
+      "line": 116,
+      "target": "h:monos-discrete"
+    }
+  ],
+  "citations": [
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 88,
+      "keys": "HTT"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 88,
+      "keys": "Badzioch"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 96,
+      "keys": "GoerssJardine"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 98,
+      "keys": "HA"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 106,
+      "keys": "Stacks"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 109,
+      "keys": "HA"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 239,
+      "keys": "HTT"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 282,
+      "keys": "HTT"
+    },
+    {
+      "file": "10-higher-quotients.tex",
+      "line": 393,
+      "keys": "BeardsleyFox"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 151,
+      "keys": "HA"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 223,
+      "keys": "HA"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 223,
+      "keys": "Stacks"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 419,
+      "keys": "HA"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 423,
+      "keys": "Stacks"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 469,
+      "keys": "HA"
+    },
+    {
+      "file": "11-linearization-and-derived-structure.tex",
+      "line": 488,
+      "keys": "Stacks"
+    }
+  ],
+  "diagrams": [
+    {
+      "number": 1,
+      "file": "01-maps-relations-exactness.tex",
+      "line": 26,
+      "tex_sha256": "e6e74e56b4fcbd3db3f738f39a325f3d9a2fbf65d1d1ac833d27df705ab1b676",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\nV\\times V\\times V \\arrow[r,\"+\\,\\times\\,\\id\"]\n  \\arrow[d,\"\\id\\,\\times\\,+\"'] & V\\times V \\arrow[d,\"+\"]\\\\\nV\\times V \\arrow[r,\"+\"'] & V.\n\\end{tikzcd}",
+      "svg": "diagram-01.svg",
+      "tex": "diagram-01.tex",
+      "title": "Associativity of addition",
+      "alt": "From V times V times V to V, adding the first two inputs then the third equals adding the last two inputs then the first. The intermediate objects are V times V.",
+      "width_pt": 147.9770050048828,
+      "height_pt": 63.790000915527344,
+      "width_css_px": 197.30267333984375,
+      "height_css_px": 85.05333455403645,
+      "svg_sha256": "f7bb183fe05751f21806e2d4e46d1e4fc65038dadc0ab8b1a0c65b86e6ae2824",
+      "svg_bytes": 10352,
+      "vector_only": true,
+      "pdf_text": "V × V × V\nV × V\nV × V\nV.\n+ × id\nid × +\n+\n+\n"
+    },
+    {
+      "number": 2,
+      "file": "01-maps-relations-exactness.tex",
+      "line": 92,
+      "tex_sha256": "115c70b877ad328c212975b2e34e3f8f9435424c8dbddb4bcc42e3499d5d2ab3",
+      "raw_tex": "\\begin{tikzcd}\nP \\arrow[r,\"b\"] \\arrow[d,\"a\"'] & Y \\arrow[d,\"g\"]\\\\\nX \\arrow[r,\"f\"'] & Z.\n\\end{tikzcd}",
+      "svg": "diagram-02.svg",
+      "tex": "diagram-02.tex",
+      "title": "The pullback square",
+      "alt": "P maps to X by a and to Y by b; X maps to Z by f and Y maps to Z by g. The square commutes.",
+      "width_pt": 71.49199676513672,
+      "height_pt": 63.46500015258789,
+      "width_css_px": 95.32266235351562,
+      "height_css_px": 84.62000020345052,
+      "svg_sha256": "4b745370c4f90e674521a39466378111c5a1e71f9f8f14ac640d359b9f415874",
+      "svg_bytes": 15212,
+      "vector_only": true,
+      "pdf_text": "P\nY\nX\nZ.\nb\na\ng\nf\n"
+    },
+    {
+      "number": 3,
+      "file": "01-maps-relations-exactness.tex",
+      "line": 125,
+      "tex_sha256": "5fc397e012a1d0b1d557c1b1db93f37bf7f21b9542f09236046ef11e0cdab90d",
+      "raw_tex": "\\begin{tikzcd}\nX \\arrow[r,\"a\"] \\arrow[d,two heads,\"q\"'] & A \\arrow[d,hook,\"m\"]\\\\\nQ \\arrow[r,\"b\"'] \\arrow[ur,dashed,\"d\"] & B,\n\\end{tikzcd}",
+      "svg": "diagram-03.svg",
+      "tex": "diagram-03.tex",
+      "title": "The diagonal lifting property",
+      "alt": "The square has regular epimorphism q from X to Q on the left and monomorphism m from A to B on the right. Its top map is a, its bottom map is b, and a dashed diagonal d maps Q to A.",
+      "width_pt": 74.45700073242188,
+      "height_pt": 60.20399856567383,
+      "width_css_px": 99.2760009765625,
+      "height_css_px": 80.27199808756511,
+      "svg_sha256": "1131a1bb3229739d910080aafc023cd592da45489e566bbb7db67868a1a9f63d",
+      "svg_bytes": 19940,
+      "vector_only": true,
+      "pdf_text": "X\nA\nQ\nB,\na\nq\nm\nb\nd\n"
+    },
+    {
+      "number": 4,
+      "file": "01-maps-relations-exactness.tex",
+      "line": 234,
+      "tex_sha256": "57031b9b9fee1a5f52cef93c6cfaa0d43635c7d2e0f31f3efeadd0caae8cc63d",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n& M \\arrow[dl,\"a\"'] \\arrow[dr,\"b\"] &\\\\\nX && Y.\n\\end{tikzcd}",
+      "svg": "diagram-04.svg",
+      "tex": "diagram-04.tex",
+      "title": "A relation and its projections",
+      "alt": "A relation carrier M maps to X by a and to Y by b.",
+      "width_pt": 144.34100341796875,
+      "height_pt": 56.49300003051758,
+      "width_css_px": 192.45467122395834,
+      "height_css_px": 75.32400004069011,
+      "svg_sha256": "ce6984b3050b2e1cadda918e85bcd76f3723cf26a92bfc0a639d43ea69602fe1",
+      "svg_bytes": 10839,
+      "vector_only": true,
+      "pdf_text": "M\nX\nY.\na\nb\n"
+    },
+    {
+      "number": 5,
+      "file": "01-maps-relations-exactness.tex",
+      "line": 371,
+      "tex_sha256": "57ccf7a5d3d1d82d397dd2ec815ce9785f561b0ea8219af8dc618ce6af452df3",
+      "raw_tex": "\\begin{tikzcd}\n\\Ker(f) \\arrow[r] \\arrow[d,hook] & 0 \\arrow[d]\\\\\nX \\arrow[r,\"f\"'] & Y.\n\\end{tikzcd}",
+      "svg": "diagram-05.svg",
+      "tex": "diagram-05.tex",
+      "title": "The kernel as a pullback",
+      "alt": "The kernel of f maps into X and to the zero object. The square over f from X to Y and the zero map from zero to Y is a pullback.",
+      "width_pt": 90.49400329589844,
+      "height_pt": 65.20800018310547,
+      "width_css_px": 120.65867106119792,
+      "height_css_px": 86.94400024414062,
+      "svg_sha256": "7bc81cd425ee4cc7afa8f5d5a5007978a248592ee74126737075ed7a0a25edc2",
+      "svg_bytes": 15716,
+      "vector_only": true,
+      "pdf_text": "ker(f)\n0\nX\nY.\nf\n"
+    },
+    {
+      "number": 6,
+      "file": "02-malcev-and-comparison.tex",
+      "line": 162,
+      "tex_sha256": "ee3322897bbfe0ae56a044a46a9bb2f0bea41b92d33e5ff190d42916d07e73b0",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n&M \\arrow[dl,two heads,\"a\"'] \\arrow[dr,two heads,\"b\"]&\\\\\nX' \\arrow[d,hook,\"m\"'] &&Y' \\arrow[d,hook,\"n\"]\\\\\nX&&Y.\n\\end{tikzcd}",
+      "svg": "diagram-06.svg",
+      "tex": "diagram-06.tex",
+      "title": "Restricting a relation to its supports",
+      "alt": "The carrier M maps by regular epimorphisms a and b to X-prime and Y-prime. Monomorphisms m and n include those supports into X and Y.",
+      "width_pt": 150.06399536132812,
+      "height_pt": 92.5,
+      "width_css_px": 200.0853271484375,
+      "height_css_px": 123.33333333333333,
+      "svg_sha256": "af5882a30e2872139831801e8c86487c306747c338aad657990589d27701b305",
+      "svg_bytes": 18287,
+      "vector_only": true,
+      "pdf_text": "M\nX′\nY ′\nX\nY.\na\nb\nm\nn\n"
+    },
+    {
+      "number": 7,
+      "file": "02-malcev-and-comparison.tex",
+      "line": 229,
+      "tex_sha256": "23c9ec460cd2a3647abe2d94d65aa0dc06dd9efce87ed196c7c18d828f21ccff",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\n&M \\arrow[dl,two heads,\"a\"'] \\arrow[dr,two heads,\"b\"]&\\\\\nX' \\arrow[d,two heads,\"q\"'] &&Y' \\arrow[d,two heads,\"p\"]\\\\\nQ \\arrow[rr,\"\\theta\", \"\\sim\"'] &&P.\n\\end{tikzcd}",
+      "svg": "diagram-07.svg",
+      "tex": "diagram-07.tex",
+      "title": "The support-quotient comparison",
+      "alt": "M maps by regular epimorphisms a and b to the supports X-prime and Y-prime. Their quotient maps q and p reach Q and P. The isomorphism theta from Q to P makes theta q a equal p b.",
+      "width_pt": 148.718994140625,
+      "height_pt": 114.25800323486328,
+      "width_css_px": 198.2919921875,
+      "height_css_px": 152.34400431315103,
+      "svg_sha256": "7be5e2117132bcdab47a21166391f176663e05385cc4b20e68280472b5f21710",
+      "svg_bytes": 22268,
+      "vector_only": true,
+      "pdf_text": "M\nX′\nY ′\nQ\nP.\na\nb\nq\np\nθ\n∼\n"
+    },
+    {
+      "number": 8,
+      "file": "03-refinement-and-factors.tex",
+      "line": 38,
+      "tex_sha256": "c50e8f59763a12bc0939d85f9a04b867f7d892baa26a7b66b2fd889af9d9bbff",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\nX_{i-1}\\arrow[r,hook]\\arrow[d] & X_i\\arrow[d,two heads,\"q_i\"]\\\\\n0\\arrow[r] & S_i .\n\\end{tikzcd}",
+      "svg": "diagram-08.svg",
+      "tex": "diagram-08.tex",
+      "title": "The kernel square of a series step",
+      "alt": "X sub i-minus-one includes into X sub i and maps to zero. The regular quotient q sub i maps X sub i to S sub i. This square is a pullback.",
+      "width_pt": 100.97000122070312,
+      "height_pt": 70.41400146484375,
+      "width_css_px": 134.62666829427084,
+      "height_css_px": 93.88533528645833,
+      "svg_sha256": "0bfbc5bd80a843387e6b84e06c3a7618c2054fb6966cc4fe3d730ce232bbbdb6",
+      "svg_bytes": 14331,
+      "vector_only": true,
+      "pdf_text": "Xi−1\nXi\n0\nSi.\nqi\n"
+    },
+    {
+      "number": 9,
+      "file": "03-refinement-and-factors.tex",
+      "line": 124,
+      "tex_sha256": "4e6f1f697ad08e344682b0055d25f4c2e279b23caa33224302d1f62da3c1ab57",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\nK=P_0\\arrow[r,hook]\\arrow[d,two heads]\n &P_1\\arrow[r,hook]\\arrow[d,two heads,\"p_1\"]\n &\\cdots\\arrow[r,hook]&P_t=D\\arrow[d,two heads,\"q\"]\\\\\n0=Q_0\\arrow[r,hook]&Q_1\\arrow[r,hook]\n &\\cdots\\arrow[r,hook]&Q_t=Q .\n\\end{tikzcd}",
+      "svg": "diagram-09.svg",
+      "tex": "diagram-09.tex",
+      "title": "Pulling a refinement back along a quotient",
+      "alt": "The top chain is K equals P zero, P one, through P t equals D. The bottom chain is zero equals Q zero, Q one, through Q t equals Q. Regular epimorphic vertical comparison maps make the displayed squares pullbacks.",
+      "width_pt": 262.1619873046875,
+      "height_pt": 70.06800079345703,
+      "width_css_px": 349.54931640625,
+      "height_css_px": 93.4240010579427,
+      "svg_sha256": "020e3e45f9b7695880a99bb5672e38a11cb966583d6097c25d4adc9ae5cf18f4",
+      "svg_bytes": 25017,
+      "vector_only": true,
+      "pdf_text": "K = P0\nP1\n· · ·\nPt = D\n0 = Q0\nQ1\n· · ·\nQt = Q.\np1\nq\n"
+    },
+    {
+      "number": 10,
+      "file": "03-refinement-and-factors.tex",
+      "line": 356,
+      "tex_sha256": "88e5135d53758d62dfceba26695f0a81162f7804737edd8ee3fdcc75d7e7f6ca",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\nL_{ij}\\arrow[d,two heads,\"\\lambda_{ij}\"']\n &C_{ij}\\arrow[l,two heads,\"a_{ij}\"']\n          \\arrow[r,two heads,\"b_{ij}\"]\n &R_{ij}\\arrow[d,two heads,\"\\rho_{ij}\"]\\\\\nQ(s_{ji})\\arrow[rr,\"\\theta_{ij}\"',\"\\sim\"]\n &&Q(r_{ij})\n\\end{tikzcd}",
+      "svg": "diagram-10.svg",
+      "tex": "diagram-10.tex",
+      "title": "The canonical comparison of a refinement cell",
+      "alt": "The correspondence C sub i j maps regularly epimorphically to left support L sub i j by a sub i j and to right support R sub i j by b sub i j. Their quotient maps lambda and rho descend to Q of s sub j i and Q of r sub i j, joined by the isomorphism theta sub i j.",
+      "width_pt": 186.55099487304688,
+      "height_pt": 80.4010009765625,
+      "width_css_px": 248.73465983072916,
+      "height_css_px": 107.20133463541667,
+      "svg_sha256": "486687c29dddf77f4354483446af0de4d130c86d0c3deb6486f839b8f91b2e98",
+      "svg_bytes": 28577,
+      "vector_only": true,
+      "pdf_text": "Lij\nCij\nRij\nQ(sji)\nQ(rij)\nλij\naij\nbij\nρij\nθij\n∼\n"
+    },
+    {
+      "number": 11,
+      "file": "04-instances-and-dimension.tex",
+      "line": 165,
+      "tex_sha256": "526cfa45524a842acbe32f827d5c0617198d258f0615fb92351e38b0281933c5",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\n &C\\arrow[dl,two heads]\\arrow[d,two heads]\\arrow[dr,two heads]&\\\\\n A_1C/A_1W & C/UW\\arrow[l,\"\\sim\"']\\arrow[r,\"\\sim\"] & B_1C/B_1U .\n\\end{tikzcd}",
+      "svg": "diagram-11.svg",
+      "tex": "diagram-11.tex",
+      "title": "The group butterfly as one common quotient",
+      "alt": "The intersection carrier C maps onto A one C modulo A one W, C modulo U W, and B one C modulo B one U. The middle quotient maps isomorphically to each outer quotient.",
+      "width_pt": 247.85699462890625,
+      "height_pt": 69.76499938964844,
+      "width_css_px": 330.4759928385417,
+      "height_css_px": 93.01999918619792,
+      "svg_sha256": "2337f8e64139b9516026051603ddc5f2b373edc31ae5cdb7e3ba164b108f5ec8",
+      "svg_bytes": 15073,
+      "vector_only": true,
+      "pdf_text": "C\nA1C/A1W\nC/UW\nB1C/B1U.\n∼\n∼\n"
+    },
+    {
+      "number": 12,
+      "file": "05-modules-and-finite-tools.tex",
+      "line": 162,
+      "tex_sha256": "2598368b3a72ed958bf8e6fc2fecc5b8257ca992b737d44dca0ef8db90498dad",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\nV\\arrow[r,\"T\"]\\arrow[d,\"f\"']&V\\arrow[d,\"f\"]\\\\\nV'\\arrow[r,\"T'\"']&V'\n\\end{tikzcd}",
+      "svg": "diagram-12.svg",
+      "tex": "diagram-12.tex",
+      "title": "A map preserving an operator",
+      "alt": "The square compares T from V to V with T-prime from V-prime to V-prime. Both vertical maps are f, so commutativity is f T equals T-prime f.",
+      "width_pt": 87.2040023803711,
+      "height_pt": 73.1760025024414,
+      "width_css_px": 116.27200317382812,
+      "height_css_px": 97.56800333658855,
+      "svg_sha256": "e0bd5dcc7b4010c81d9b5d31fb6fe1b30999a3732dd4651f9c8c56570336fda7",
+      "svg_bytes": 8616,
+      "vector_only": true,
+      "pdf_text": "V\nV\nV ′\nV ′\nT\nf\nf\nT ′\n"
+    },
+    {
+      "number": 13,
+      "file": "06a-common-comparison-pages.tex",
+      "line": 147,
+      "tex_sha256": "bd1d4ab3bf01e84dcf01d4094fc10ee31ac25031925f3eb9799cd7b0ec6d2b08",
+      "raw_tex": "\\begin{tikzcd}[column sep=small]\n1\\arrow[r]&U_{r+1}(i)\\arrow[r,hook]&U_r(i)\n \\arrow[r,two heads]&\\im d_{r,i}\\arrow[r]&1,\\\\\n1\\arrow[r]&\\im d_{r,i}\\arrow[r,hook]&V_r(j)\n \\arrow[r,two heads]&V_{r+1}(j)\\arrow[r]&1.\n\\end{tikzcd}",
+      "svg": "diagram-13.svg",
+      "tex": "diagram-13.tex",
+      "title": "The two exact sequences of a comparison page",
+      "alt": "First exact row: one, U sub r-plus-one of i, U sub r of i, image of d sub r i, one. Second exact row: one, image of d sub r i, V sub r of j, V sub r-plus-one of j, one.",
+      "width_pt": 214.177001953125,
+      "height_pt": 64.31900024414062,
+      "width_css_px": 285.5693359375,
+      "height_css_px": 85.7586669921875,
+      "svg_sha256": "2b2feab83e1c140caa5135a5a65ec5cf8e7a9ae7cffd6555ee64318d18e62134",
+      "svg_bytes": 25311,
+      "vector_only": true,
+      "pdf_text": "1\nUr+1(i)\nUr(i)\nim dr,i\n1,\n1\nim dr,i\nVr(j)\nVr+1(j)\n1.\n"
+    },
+    {
+      "number": 14,
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 120,
+      "tex_sha256": "60503b0a8eed3da9542554f23fade936158d8e9654b4af2b8cae5d29cb89f013",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\nX_r(p) \\arrow[d,\"d_{r,p}\"] & \\text{source degree }1\\\\\nY_r(p-r) & \\text{target degree }0.\n\\end{tikzcd}",
+      "svg": "diagram-14.svg",
+      "tex": "diagram-14.tex",
+      "title": "The two-row differential",
+      "alt": "The differential d sub r p maps X sub r of p in source degree one to Y sub r of p-minus-r in target degree zero.",
+      "width_pt": 182.06399536132812,
+      "height_pt": 73.22000122070312,
+      "width_css_px": 242.75199381510416,
+      "height_css_px": 97.62666829427083,
+      "svg_sha256": "4dcb133fdd5152019b82f6532d2a34c6c88b24e0edd7134a147b5ec464ba65c3",
+      "svg_bytes": 32581,
+      "vector_only": true,
+      "pdf_text": "Xr(p)\nsource degree 1\nYr(p −r)\ntarget degree 0.\ndr,p\n"
+    },
+    {
+      "number": 15,
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 207,
+      "tex_sha256": "e311915ed4119dc5d1cad8f5cb1e3d49f7ab3e6feafb74706ef7d72e3c737bd3",
+      "raw_tex": "\\begin{tikzcd}\nX\\arrow[r,\"f\"]\\arrow[d,\"a\"']&Y\\arrow[d,\"b\"]\\\\\nX'\\arrow[r,\"f'\"']&Y'\n\\end{tikzcd}",
+      "svg": "diagram-15.svg",
+      "tex": "diagram-15.tex",
+      "title": "Naturality in a filtered map",
+      "alt": "X maps to Y by f and to X-prime by a. Y maps to Y-prime by b; X-prime maps to Y-prime by f-prime. The square commutes.",
+      "width_pt": 75.18900299072266,
+      "height_pt": 66.5459976196289,
+      "width_css_px": 100.2520039876302,
+      "height_css_px": 88.72799682617188,
+      "svg_sha256": "1901d246b4e38d737d83ce327bb782e7411ffc5ff263feda31bb7e3dacc2666b",
+      "svg_bytes": 12528,
+      "vector_only": true,
+      "pdf_text": "X\nY\nX′\nY ′\nf\na\nb\nf′\n"
+    },
+    {
+      "number": 16,
+      "file": "06b-module-spectral-calculus.tex",
+      "line": 404,
+      "tex_sha256": "65d845f494c497995591be2071af3adfd33a49ae3cf48e959e48970fc1218622",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\n\\kk e_1\\arrow[r,\"d_{1,3}\",\"\\sim\"']&M/\\kk e_2\n&\\text{columns }3\\to2\\\\\n\\kk e_2\\arrow[r,\"d_{3,4}\",\"\\sim\"']&\\kk e_2\n&\\text{columns }4\\to1.\n\\end{tikzcd}",
+      "svg": "diagram-16.svg",
+      "tex": "diagram-16.tex",
+      "title": "The two nonzero cancellations",
+      "alt": "On page one, d one-three identifies k e one with M modulo k e two, from column three to two. On page three, d three-four identifies k e two with k e two, from column four to one. The rows refer to different pages.",
+      "width_pt": 234.38800048828125,
+      "height_pt": 74.7760009765625,
+      "width_css_px": 312.517333984375,
+      "height_css_px": 99.70133463541667,
+      "svg_sha256": "5c3a7ccdd9a28fa504e6b7123b0e363fb3e7296b56df2922fd428ed4b96d48de",
+      "svg_bytes": 28467,
+      "vector_only": true,
+      "pdf_text": "ke1\nM/ke2\ncolumns 3 →2\nke2\nke2\ncolumns 4 →1.\nd1,3\n∼\nd3,4\n∼\n"
+    },
+    {
+      "number": 17,
+      "file": "08-extensions-and-lifting.tex",
+      "line": 24,
+      "tex_sha256": "35d4eefd46a9826df2277606559a2e30177cb31f61c0c66262e9f3304760f040",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n0\\arrow[r]&A\\arrow[r,\"i\"]\\arrow[d,equal]\n &E\\arrow[r,\"q\"]\\arrow[d,\"h\"]&B\\arrow[r]\\arrow[d,equal]&0\\\\\n0\\arrow[r]&A\\arrow[r,\"i'\"]&E'\\arrow[r,\"q'\"]&B\\arrow[r]&0.\n\\end{tikzcd}",
+      "svg": "diagram-17.svg",
+      "tex": "diagram-17.tex",
+      "title": "A map of marked extensions",
+      "alt": "Two exact rows run from zero through A and their middle objects E or E-prime, then B, then zero. The endpoint vertical maps are identities; the middle map h satisfies h i equals i-prime and q-prime h equals q.",
+      "width_pt": 252.45799255371094,
+      "height_pt": 58.869998931884766,
+      "width_css_px": 336.61065673828125,
+      "height_css_px": 78.49333190917969,
+      "svg_sha256": "495d3de044a135448d1f40ea5f0883788babcda39f5994a204695bab3c401142",
+      "svg_bytes": 18925,
+      "vector_only": true,
+      "pdf_text": "0\nA\nE\nB\n0\n0\nA\nE′\nB\n0.\ni\nq\nh\ni′\nq′\n"
+    },
+    {
+      "number": 18,
+      "file": "08-extensions-and-lifting.tex",
+      "line": 94,
+      "tex_sha256": "da5dcc93be77b4cd2b8efad7fa80a7143b08d36b81ecb563ddf65685a3e28f17",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n0\\arrow[r]&A\\arrow[r,\"j\"]\\arrow[d,equal]\n &f^*E\\arrow[r,\"\\pi\"]\\arrow[d,\"u\"]&P\\arrow[r]\\arrow[d,\"f\"]&0\\\\\n0\\arrow[r]&A\\arrow[r,\"i\"]&E\\arrow[r,\"q\"]&B\\arrow[r]&0.\n\\end{tikzcd}",
+      "svg": "diagram-18.svg",
+      "tex": "diagram-18.tex",
+      "title": "Pulling back an extension",
+      "alt": "The top exact row is zero, A, f-star E, P, zero; the bottom is zero, A, E, B, zero. Vertical maps are the identity on A, u on the middle objects, and f from P to B.",
+      "width_pt": 260.9100036621094,
+      "height_pt": 61.60900115966797,
+      "width_css_px": 347.8800048828125,
+      "height_css_px": 82.1453348795573,
+      "svg_sha256": "abe79b21db3dfad4ebaafe8e4610a3e2a2926fa42429e22ed9559826ed436571",
+      "svg_bytes": 25580,
+      "vector_only": true,
+      "pdf_text": "0\nA\nf∗E\nP\n0\n0\nA\nE\nB\n0.\nj\nπ\nu\nf\ni\nq\n"
+    },
+    {
+      "number": 19,
+      "file": "08-extensions-and-lifting.tex",
+      "line": 136,
+      "tex_sha256": "68bd5b11592155b4816553da7cce1c82029760967f10727ade5e5003aa5cf39f",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n0\\arrow[r]&A\\arrow[r,\"i\"]\\arrow[d,\"g\"]\n &E\\arrow[r,\"q\"]\\arrow[d,\"u_g\"]&B\\arrow[r]\\arrow[d,equal]&0\\\\\n0\\arrow[r]&A'\\arrow[r,\"i_g\"]&g_*E\\arrow[r,\"q_g\"]&B\\arrow[r]&0.\n\\end{tikzcd}",
+      "svg": "diagram-19.svg",
+      "tex": "diagram-19.tex",
+      "title": "Pushing out an extension",
+      "alt": "The top exact row is zero, A, E, B, zero; the bottom is zero, A-prime, g-star E, B, zero. Vertical maps are g on the kernels, u sub g on the middle objects, and the identity on B.",
+      "width_pt": 262.39300537109375,
+      "height_pt": 60.99100112915039,
+      "width_css_px": 349.8573404947917,
+      "height_css_px": 81.32133483886719,
+      "svg_sha256": "0c4bd9c86f5921fabe8b6e9498e881932d75dcd79bdd5ed123b60becf0584e6e",
+      "svg_bytes": 24099,
+      "vector_only": true,
+      "pdf_text": "0\nA\nE\nB\n0\n0\nA′\ng∗E\nB\n0.\ni\ng\nq\nug\nig\nqg\n"
+    },
+    {
+      "number": 20,
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 82,
+      "tex_sha256": "38806794de185105784e608e6815848da43fd29274ea9a921d78610869ef24e9",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\n\\Hom_{k[t]}(P_r,M) \\arrow[r,\"\\operatorname{ev}_1\",\"\\sim\"']\n  \\arrow[d,\"f\\mapsto F\\circ f\"']\n  & \\Ker N^r \\arrow[d,\"F|_{\\Ker N^r}\"] \\\\\n\\Hom_{k[t]}(P_r,M') \\arrow[r,\"\\operatorname{ev}_1\",\"\\sim\"']\n  & \\Ker (N')^r\n\\end{tikzcd}",
+      "svg": "diagram-20.svg",
+      "tex": "diagram-20.tex",
+      "title": "Naturality of evaluation at one",
+      "alt": "Evaluation at one identifies module maps over the polynomial ring k[t] from P sub r into M with the kernel of N to the r-th power. The same identification holds for M-prime and N-prime. Postcomposition with F on the left agrees with restriction of F on the right.",
+      "width_pt": 190.63900756835938,
+      "height_pt": 76.3949966430664,
+      "width_css_px": 254.18534342447916,
+      "height_css_px": 101.85999552408855,
+      "svg_sha256": "3e272bb8a27d71b71df99edbecaeabc13644ba1fcb41ff3954244854cb3cc369",
+      "svg_bytes": 39871,
+      "vector_only": true,
+      "pdf_text": "Homk[t](Pr, M)\nker Nr\nHomk[t](Pr, M′)\nker(N′)r\nev1\n∼\nf↦→F◦f\nF|ker Nr\nev1\n∼\n"
+    },
+    {
+      "number": 21,
+      "file": "09-probes-and-reconstruction.tex",
+      "line": 196,
+      "tex_sha256": "60fa37565b8975cca302cb09015cd6b77eaae156982be5871011fc31c4a6980d",
+      "raw_tex": "\\begin{tikzcd}[column sep=large]\n w_{3,j,3} \\arrow[r,mapsto,\"N\"] &\n w_{3,j,2} \\arrow[r,mapsto,\"N\"] &\n w_{3,j,1} \\arrow[r,mapsto,\"N\"] &0.\n\\end{tikzcd}",
+      "svg": "diagram-21.svg",
+      "tex": "diagram-21.tex",
+      "title": "A nilpotent chain of length three",
+      "alt": "N sends w sub three-j-three to w sub three-j-two, then to w sub three-j-one, then to zero.",
+      "width_pt": 244.5399932861328,
+      "height_pt": 26.22599983215332,
+      "width_css_px": 326.05332438151044,
+      "height_css_px": 34.96799977620443,
+      "svg_sha256": "3deb74fa08e33ed69058e6e89d7b52abd083b2ed310cffd3ff9e69061ab0f6c5",
+      "svg_bytes": 13939,
+      "vector_only": true,
+      "pdf_text": "w3,j,3\nw3,j,2\nw3,j,1\n0.\nN\nN\nN\n"
+    },
+    {
+      "number": 22,
+      "file": "09b-hall-associativity.tex",
+      "line": 112,
+      "tex_sha256": "e6ad26a586d4d8e55cc16738a653b536394a41099cb25351faa9499e2caae932",
+      "raw_tex": "\\begin{tikzcd}[column sep=large,row sep=large]\n0\\arrow[r]&U\\arrow[r,hook]\\arrow[d,equal]&V\\arrow[r,two heads]\\arrow[d,hook]\n  &V/U\\arrow[r]\\arrow[d,hook]&0\\\\\n0\\arrow[r]&U\\arrow[r,hook]&E\\arrow[r,two heads]&E/U\\arrow[r]&0.\n\\end{tikzcd}",
+      "svg": "diagram-22.svg",
+      "tex": "diagram-22.tex",
+      "title": "One flag and two intermediate objects",
+      "alt": "The top exact row is zero, U, V, V modulo U, zero; the bottom is zero, U, E, E modulo U, zero. The left comparison is the identity on U; the other vertical comparisons are inclusions.",
+      "width_pt": 264.177001953125,
+      "height_pt": 73.22000122070312,
+      "width_css_px": 352.2360026041667,
+      "height_css_px": 97.62666829427083,
+      "svg_sha256": "baaeee86a2001f0c395410862b9fa126898543474430f88229734e8a45eadae5",
+      "svg_bytes": 15129,
+      "vector_only": true,
+      "pdf_text": "0\nU\nV\nV/U\n0\n0\nU\nE\nE/U\n0.\n"
+    },
+    {
+      "number": 23,
+      "file": "10-higher-quotients.tex",
+      "line": 201,
+      "tex_sha256": "364eeaffa4cba8bb0a29e289482e833c945b2dde9e79d2fe56fcbe62c3985b8a",
+      "raw_tex": "\\begin{tikzcd}\n BN \\arrow[r] \\arrow[d] & BG \\arrow[d,\"Bp\"]\\\\\n * \\arrow[r] & BQ.\n\\end{tikzcd}",
+      "svg": "diagram-23.svg",
+      "tex": "diagram-23.tex",
+      "title": "A group extension gives a homotopy fiber square",
+      "alt": "B N maps to B G and to a point; B G maps to B Q by B p. The point maps to the basepoint of B Q, and the square is a homotopy pullback.",
+      "width_pt": 91.2040023803711,
+      "height_pt": 58.61399841308594,
+      "width_css_px": 121.60533650716145,
+      "height_css_px": 78.15199788411458,
+      "svg_sha256": "902e508f11987c4646eb065aa4a6293f6adc1f87744e55f4ef5e187f14125eca",
+      "svg_bytes": 14164,
+      "vector_only": true,
+      "pdf_text": "BN\nBG\n∗\nBQ.\nBp\n"
+    },
+    {
+      "number": 24,
+      "file": "10-higher-quotients.tex",
+      "line": 375,
+      "tex_sha256": "535cd881f05b7ffb915850fb0ac9c59b9d703cf148cc0ab27ed797e1fdba40cf",
+      "raw_tex": "\\begin{tikzcd}\n BH \\arrow[r] \\arrow[d] & BG \\arrow[d]\\\\\n * \\arrow[r] & Q.\n\\end{tikzcd}",
+      "svg": "diagram-24.svg",
+      "tex": "diagram-24.tex",
+      "title": "A higher normality datum",
+      "alt": "B H maps to B G and to a point; B G maps to the pointed connected space Q. The square with the basepoint of Q is a homotopy pullback in the ambient category of spaces.",
+      "width_pt": 87.12300109863281,
+      "height_pt": 58.61399841308594,
+      "width_css_px": 116.16400146484375,
+      "height_css_px": 78.15199788411458,
+      "svg_sha256": "95d6a90074797cd54f74938f4f940c94f7087187d02e166dc50d4959908c0bb6",
+      "svg_bytes": 11407,
+      "vector_only": true,
+      "pdf_text": "BH\nBG\n∗\nQ.\n"
+    },
+    {
+      "number": 25,
+      "file": "12-dependencies-and-reading.tex",
+      "line": 8,
+      "tex_sha256": "ce95757fd19648a76d7bc1ff597dc67ebb4c548e82243ba11006f60635d078db",
+      "raw_tex": "\\begin{tikzcd}[column sep=small,row sep=large]\n\\text{finite limits and regular images}\\arrow[d]\\\\\n\\text{associative relation calculus}\\arrow[d]\\\\\n\\text{Mal'cev difunctionality}\\arrow[d]\\\\\n\\text{effective support quotients}\\arrow[d]\\\\\n\\text{saturated descent and refinement cells}\\arrow[d]\\\\\n\\text{Schreier refinement}\\arrow[d]\\\\\n\\text{simple-factor rigidity}\\arrow[d]\\\\\n\\text{Jordan--H\\\"older}\\arrow[d]\\\\\n\\text{basis size and additive invariants}.\n\\end{tikzcd}",
+      "svg": "diagram-25.svg",
+      "tex": "diagram-25.tex",
+      "title": "The proof dependency chain",
+      "alt": "Finite limits and regular images lead to associative relation calculus, Malcev difunctionality, effective support quotients, saturated descent and refinement cells, Schreier refinement, simple-factor rigidity, Jordan-Holder, and finally basis size and additive invariants.",
+      "width_pt": 197.4320068359375,
+      "height_pt": 389.59600830078125,
+      "width_css_px": 263.24267578125,
+      "height_css_px": 519.4613444010416,
+      "svg_sha256": "85f31f0bbd01b3203d913ae1b736f45870f5688824ab38f5a798d0b4bea487a6",
+      "svg_bytes": 55939,
+      "vector_only": true,
+      "pdf_text": "finite limits and regular images\nassociative relation calculus\nMal’cev difunctionality\neffective support quotients\nsaturated descent and refinement cells\nSchreier refinement\nsimple-factor rigidity\nJordan–Hölder\nbasis size and additive invariants.\n"
+    }
+  ],
+  "counts": {
+    "files": 15,
+    "diagrams": 25,
+    "labels": 138,
+    "reference_occurrences": 115,
+    "citation_occurrences": 16,
+    "bracket_displays": 232,
+    "inline_dollar_delimiters": 4974,
+    "sections": 15,
+    "subsections": 76
+  },
+  "pipeline": {
+    "latex": "pdflatex (TeX Live 2026)",
+    "pymupdf": "2.0",
+    "rendering": "Exact TikZ body compiled to standalone PDF; SVG glyph paths and vector drawing, no raster images.",
+    "source_unchanged": true
+  }
+}

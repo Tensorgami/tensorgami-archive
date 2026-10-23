@@ -1,864 +1,920 @@
 {
-  "edition": "2026-10-21.3",
-  "site_version": 111,
+  "source_commit": "cf0756927115020b5b28e1d0e48db7deacd21f5c",
   "files": [
     {
       "path": "2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/index.html",
       "bytes": 489,
-      "sha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b",
-      "served": true
+      "sha256": "0e43023b6437139a9cfc7c21be2e8116b2f215d118ff62bbf76dab7bc6eacb2b"
     },
     {
       "path": "404.html",
       "bytes": 2465,
-      "sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96",
-      "served": true
-    },
-    {
-      "path": "LICENSE.md",
-      "bytes": 818,
-      "sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b",
-      "served": true
-    },
-    {
-      "path": "about.html",
-      "bytes": 7168,
-      "sha256": "68745d592e6e318e81e5f96a3bfd9ad7778ed436dd657269096fd2ec98ab6200",
-      "served": true
+      "sha256": "7336b45cd8ab054aff27caa8d7272b790904b1d61dbbf14ebac3c619e9908d96"
     },
     {
       "path": "about/index.html",
       "bytes": 323,
-      "sha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7",
-      "served": true
+      "sha256": "a7fd877a6d033a2bb84258c1a0a063c739f7c8a0c440a3760931fe5124a617a7"
+    },
+    {
+      "path": "about.html",
+      "bytes": 7652,
+      "sha256": "8c1bdf1dbd198a1226eb00b5f071c9f3c6e46c9a2ae437e3aa8611265309ce59"
     },
     {
       "path": "assets/analytics.js",
       "bytes": 3578,
-      "sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa",
-      "served": true
+      "sha256": "8f20891fb953b5097fe5bc12395f7a62eea9a565b2539ed71ff66b0f1380b5fa"
+    },
+    {
+      "path": "assets/archive-fragments.js",
+      "bytes": 1311,
+      "sha256": "961699242eb01c49304cec166f1f2547e2bcb33b9f334207a7aa3999d6fc8013"
+    },
+    {
+      "path": "assets/c6-companion.css",
+      "bytes": 1287,
+      "sha256": "fe60c61c2513d4b22762f40b837b602b23e7fac0b55e01364866ca1922010513"
     },
     {
       "path": "assets/derivative-exposition.css",
       "bytes": 8182,
-      "sha256": "3c5aa2f9407ec58604aa030fcf4ce4e5478bea8d28712b9ad6a3d3f196ab1edc",
-      "served": true
+      "sha256": "3c5aa2f9407ec58604aa030fcf4ce4e5478bea8d28712b9ad6a3d3f196ab1edc"
     },
     {
       "path": "assets/derivative-exposition.js",
       "bytes": 5508,
-      "sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455",
-      "served": true
+      "sha256": "bb4406a9b1a35bb610a80081790769c6fdede11e7ed1d4b39220a3593b9d3455"
     },
     {
       "path": "assets/essays/mathematical-life-in-the-age-of-ai.md",
-      "bytes": 72288,
-      "sha256": "c35320eaf3d6c7192dd16e17e6f00362b89e56193e8b75540b0f6154c07164bf",
-      "served": true
+      "bytes": 72272,
+      "sha256": "cb85ac5fb5a8ee054ca4f34185e02c34718d797d3f1e45f50ef8f2e57c310e37"
     },
     {
       "path": "assets/essays/mathematical-life-in-the-age-of-ai.pdf",
-      "bytes": 160854,
-      "sha256": "34b9876b5138d3a4a41da09f4bc56d1a4a366393a4475af009d9b152681191ae",
-      "served": true
+      "bytes": 160867,
+      "sha256": "5501eeb7625d619f647095ea881512fa6743f65cd5c0bded3a566d8044a5f66b"
     },
     {
       "path": "assets/essays/mathematical-understanding-in-the-age-of-ai.md",
       "bytes": 38108,
-      "sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a",
-      "served": true
+      "sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a"
     },
     {
       "path": "assets/essays/the-culture-of-mathematical-judgment.md",
       "bytes": 45747,
-      "sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685",
-      "served": true
+      "sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685"
     },
     {
       "path": "assets/essays/the-culture-of-mathematical-judgment.pdf",
       "bytes": 148272,
-      "sha256": "0cae59099bbdb259dc3a346c0259ec20c7b5ed05a6a8d71f62c638d34f4698bc",
-      "served": true
+      "sha256": "0cae59099bbdb259dc3a346c0259ec20c7b5ed05a6a8d71f62c638d34f4698bc"
     },
     {
       "path": "assets/essays/the-performance-of-depth.md",
       "bytes": 57344,
-      "sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0",
-      "served": true
+      "sha256": "f6f6353df1e94dca42b5ed215731e3480ad2a59efd16dac40ce46d670f38f7f0"
     },
     {
       "path": "assets/essays/when-a-description-becomes-a-verdict.md",
       "bytes": 12124,
-      "sha256": "ac64faccbf9ded9cd326e2dd1e0631cc97f7c05884772bf3d7052e67c8ec4da1",
-      "served": true
+      "sha256": "ac64faccbf9ded9cd326e2dd1e0631cc97f7c05884772bf3d7052e67c8ec4da1"
     },
     {
       "path": "assets/essays/when-accountability-stops-being-reciprocal.md",
       "bytes": 34425,
-      "sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608",
-      "served": true
+      "sha256": "195b28f0ef32d70db5dd336489e4e87e6add150a1a08c9573090cbd7b7989608"
     },
     {
       "path": "assets/essays/when-accountability-stops-being-reciprocal.pdf",
       "bytes": 140240,
-      "sha256": "a4d6bfa9e9dd28e4473fd001a41fac002eddb4bab379ea878e14099deaa871d2",
-      "served": true
+      "sha256": "a4d6bfa9e9dd28e4473fd001a41fac002eddb4bab379ea878e14099deaa871d2"
     },
     {
-      "path": "assets/expositions.css",
-      "bytes": 16640,
-      "sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36",
-      "served": true
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-01.svg",
+      "bytes": 10352,
+      "sha256": "f7bb183fe05751f21806e2d4e46d1e4fc65038dadc0ab8b1a0c65b86e6ae2824"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-02.svg",
+      "bytes": 15212,
+      "sha256": "4b745370c4f90e674521a39466378111c5a1e71f9f8f14ac640d359b9f415874"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-03.svg",
+      "bytes": 19940,
+      "sha256": "1131a1bb3229739d910080aafc023cd592da45489e566bbb7db67868a1a9f63d"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-04.svg",
+      "bytes": 10839,
+      "sha256": "ce6984b3050b2e1cadda918e85bcd76f3723cf26a92bfc0a639d43ea69602fe1"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-05.svg",
+      "bytes": 15716,
+      "sha256": "7bc81cd425ee4cc7afa8f5d5a5007978a248592ee74126737075ed7a0a25edc2"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-06.svg",
+      "bytes": 18287,
+      "sha256": "af5882a30e2872139831801e8c86487c306747c338aad657990589d27701b305"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-07.svg",
+      "bytes": 22268,
+      "sha256": "7be5e2117132bcdab47a21166391f176663e05385cc4b20e68280472b5f21710"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-08.svg",
+      "bytes": 14331,
+      "sha256": "0bfbc5bd80a843387e6b84e06c3a7618c2054fb6966cc4fe3d730ce232bbbdb6"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-09.svg",
+      "bytes": 25017,
+      "sha256": "020e3e45f9b7695880a99bb5672e38a11cb966583d6097c25d4adc9ae5cf18f4"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-10.svg",
+      "bytes": 28577,
+      "sha256": "486687c29dddf77f4354483446af0de4d130c86d0c3deb6486f839b8f91b2e98"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-11.svg",
+      "bytes": 15073,
+      "sha256": "2337f8e64139b9516026051603ddc5f2b373edc31ae5cdb7e3ba164b108f5ec8"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-12.svg",
+      "bytes": 8616,
+      "sha256": "e0bd5dcc7b4010c81d9b5d31fb6fe1b30999a3732dd4651f9c8c56570336fda7"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-13.svg",
+      "bytes": 25311,
+      "sha256": "2b2feab83e1c140caa5135a5a65ec5cf8e7a9ae7cffd6555ee64318d18e62134"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-14.svg",
+      "bytes": 32581,
+      "sha256": "4dcb133fdd5152019b82f6532d2a34c6c88b24e0edd7134a147b5ec464ba65c3"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-15.svg",
+      "bytes": 12528,
+      "sha256": "1901d246b4e38d737d83ce327bb782e7411ffc5ff263feda31bb7e3dacc2666b"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-16.svg",
+      "bytes": 28467,
+      "sha256": "5c3a7ccdd9a28fa504e6b7123b0e363fb3e7296b56df2922fd428ed4b96d48de"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-17.svg",
+      "bytes": 18925,
+      "sha256": "495d3de044a135448d1f40ea5f0883788babcda39f5994a204695bab3c401142"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-18.svg",
+      "bytes": 25580,
+      "sha256": "abe79b21db3dfad4ebaafe8e4610a3e2a2926fa42429e22ed9559826ed436571"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-19.svg",
+      "bytes": 24099,
+      "sha256": "0c4bd9c86f5921fabe8b6e9498e881932d75dcd79bdd5ed123b60becf0584e6e"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-20.svg",
+      "bytes": 39871,
+      "sha256": "3e272bb8a27d71b71df99edbecaeabc13644ba1fcb41ff3954244854cb3cc369"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-21.svg",
+      "bytes": 13939,
+      "sha256": "3deb74fa08e33ed69058e6e89d7b52abd083b2ed310cffd3ff9e69061ab0f6c5"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-22.svg",
+      "bytes": 15129,
+      "sha256": "baaeee86a2001f0c395410862b9fa126898543474430f88229734e8a45eadae5"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-23.svg",
+      "bytes": 14164,
+      "sha256": "902e508f11987c4646eb065aa4a6293f6adc1f87744e55f4ef5e187f14125eca"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-24.svg",
+      "bytes": 11407,
+      "sha256": "95d6a90074797cd54f74938f4f940c94f7087187d02e166dc50d4959908c0bb6"
+    },
+    {
+      "path": "assets/expositions/quotients-and-reconstruction/diagram-25.svg",
+      "bytes": 55939,
+      "sha256": "85f31f0bbd01b3203d913ae1b736f45870f5688824ab38f5a798d0b4bea487a6"
+    },
+    {
+      "path": "assets/expositions/six-elements-one-comparison/diagram-01.svg",
+      "bytes": 9928,
+      "sha256": "0d9ca9154af7bf36f01aeae02b0013bff2b1eacd64c5899684b454f37f2e1a99"
+    },
+    {
+      "path": "assets/expositions/six-elements-one-comparison/diagram-02.svg",
+      "bytes": 11963,
+      "sha256": "62c99b68f47f9a3d548453f8895b58be38240eebbe5d37084ae8a62ed89d5400"
+    },
+    {
+      "path": "assets/expositions/six-elements-one-comparison/diagram-03.svg",
+      "bytes": 13318,
+      "sha256": "9be1001ff19f4d3cf73e5367e63c8b380507d17c2ab4f8a6e712ba9c36feb374"
+    },
+    {
+      "path": "assets/expositions/six-elements-one-comparison/diagram-04.svg",
+      "bytes": 23417,
+      "sha256": "779d19f53c298d8bb99da45b3da09c359a493450352b1eb1fc3b917173222b78"
     },
     {
       "path": "assets/expositions/what-a-derivative-retains.md",
       "bytes": 96716,
-      "sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
-      "served": true
+      "sha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260"
     },
     {
       "path": "assets/expositions/when-a-formal-logarithm-fails.md",
       "bytes": 23574,
-      "sha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91",
-      "served": true
+      "sha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91"
+    },
+    {
+      "path": "assets/expositions.css",
+      "bytes": 16640,
+      "sha256": "596491876e98d2bfb63f67651e38384360e2bed750657c65ff266138fbd19a36"
     },
     {
       "path": "assets/gaming/overwatch-2-diamond-5-support.jpg",
       "bytes": 113142,
-      "sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1",
-      "served": true
+      "sha256": "c3037ccc8ef392ea3ec83ec8771b0ef0240f9b50f053eb7dbecc436d476906d1"
     },
     {
       "path": "assets/gaming/overwatch-riemannroch-master-3508.jpg",
       "bytes": 4643163,
-      "sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921",
-      "served": true
+      "sha256": "ff9a1985806db053f54e7c90b8680cfd4917e4c2fefe1c40df377846edf2c921"
     },
     {
       "path": "assets/interests.css",
       "bytes": 5788,
-      "sha256": "fd2c5d3822e31fc00f16652823c52b77367903c6661585f50170162e63f34abe",
-      "served": true
+      "sha256": "fd2c5d3822e31fc00f16652823c52b77367903c6661585f50170162e63f34abe"
     },
     {
       "path": "assets/math-typeset.css",
       "bytes": 2634,
-      "sha256": "33bd6b9b3b1b2e87bfd12d089b6f90b4b5a2df97c130e45cd9af895aa68f1cca",
-      "served": true
+      "sha256": "33bd6b9b3b1b2e87bfd12d089b6f90b4b5a2df97c130e45cd9af895aa68f1cca"
     },
     {
       "path": "assets/mathjax-LICENSE.txt",
       "bytes": 11358,
-      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
-      "served": true
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
     },
     {
       "path": "assets/personal.css",
       "bytes": 16611,
-      "sha256": "9341718a9925dc736ad27b7b0c6ded4e1a35ccee5fda16818e61f284f0f98079",
-      "served": true
+      "sha256": "9341718a9925dc736ad27b7b0c6ded4e1a35ccee5fda16818e61f284f0f98079"
     },
     {
       "path": "assets/privacy-controls.js",
       "bytes": 2328,
-      "sha256": "674b3da74acc6d7b77b23581e693b920d6e7cae7063d122f4c324459b1c38a8f",
-      "served": true
+      "sha256": "674b3da74acc6d7b77b23581e693b920d6e7cae7063d122f4c324459b1c38a8f"
     },
     {
       "path": "assets/puzzles/cube-hearts.jpg",
       "bytes": 2679344,
-      "sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13",
-      "served": true
+      "sha256": "c9934ae9ec856386c6816a7d0593def50659568734e86ebd477db6bdef1b3a13"
     },
     {
       "path": "assets/puzzles/cube-pixel-figure-held.jpg",
       "bytes": 2388653,
-      "sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3",
-      "served": true
+      "sha256": "29293a51904caba7011b7e9cecabe4899924c7d23e72617dfc7acb529dd045e3"
     },
     {
       "path": "assets/puzzles/cube-pixel-figures-alternate.jpg",
       "bytes": 2365168,
-      "sha256": "2ec91709e8ad5222d2cebc8d7ef89e32d381052586f2868e63f5f3ad584c640e",
-      "served": true
+      "sha256": "2ec91709e8ad5222d2cebc8d7ef89e32d381052586f2868e63f5f3ad584c640e"
     },
     {
       "path": "assets/puzzles/cube-pixel-figures-front-top.jpg",
       "bytes": 2881498,
-      "sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c",
-      "served": true
+      "sha256": "4a609f3ff96e8209c6fe372427e39dc7e5b322feebb101b6181aad5c3ca1770c"
+    },
+    {
+      "path": "assets/quotients-audit.css",
+      "bytes": 207,
+      "sha256": "85e6d2a3eac70ca158f85fa125c704b4256acb560deafaca02ec144c7110e716"
+    },
+    {
+      "path": "assets/quotients-exposition.css",
+      "bytes": 1895,
+      "sha256": "037d65523b3f49027c91507e7afccad25e53f327cf56d7bd32a99c6c516507d6"
     },
     {
       "path": "assets/reading-entry.js",
       "bytes": 1260,
-      "sha256": "bec8e02c3c4d52a715eb49123a8eb00fe78cb65245d2ff026fc6484eea7d0563",
-      "served": true
+      "sha256": "bec8e02c3c4d52a715eb49123a8eb00fe78cb65245d2ff026fc6484eea7d0563"
     },
     {
       "path": "assets/styles.css",
       "bytes": 11004,
-      "sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "served": true
+      "sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279"
+    },
+    {
+      "path": "audits/quotients-and-reconstruction-audit.json",
+      "bytes": 10513,
+      "sha256": "b0a0b9b6a9483e2cfce775ee4de96d95953582a1eae01c3de4387a904f271e06"
+    },
+    {
+      "path": "audits/quotients-and-reconstruction-audit.md",
+      "bytes": 8324,
+      "sha256": "6b3016f264390087361c7c42b4683fe8a80ccaf1144f23d20b3307e4621d25bd"
     },
     {
       "path": "editions.html",
       "bytes": 9513,
-      "sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b",
-      "served": true
-    },
-    {
-      "path": "essays.html",
-      "bytes": 7146,
-      "sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26",
-      "served": true
+      "sha256": "d1af6e3cd62eba8e06e145e56d87034ab71fbf36ed6965f5a446af6abc679b7b"
     },
     {
       "path": "essays/mathematical-life-in-the-age-of-ai.html",
-      "bytes": 149953,
-      "sha256": "1063555f57a47a333913e945e32af749d8f0003b6e8d8309e961161e2e321a0b",
-      "served": true
+      "bytes": 149937,
+      "sha256": "4b67fdcfb3ebaa9c15207cdf865ed128973f060f037fb3b60807c580bdc24539"
     },
     {
       "path": "essays/mathematical-understanding-in-the-age-of-ai.html",
-      "bytes": 5406,
-      "sha256": "851aae15cdea5edafa0c979d74b618d797fd5f3121d1214c969cab8d7e60de75",
-      "served": true
+      "bytes": 5542,
+      "sha256": "140b362553388e1272c0f46b3cf85d4f793531c1cea5221c22a643ea64452a8d"
     },
     {
       "path": "essays/the-authority-of-a-vision.html",
       "bytes": 26263,
-      "sha256": "aa9ef5a95b2e1310c8f89617613a7401f12a8016c075cb96888c331be3c05489",
-      "served": true
+      "sha256": "aa9ef5a95b2e1310c8f89617613a7401f12a8016c075cb96888c331be3c05489"
     },
     {
       "path": "essays/the-culture-of-mathematical-judgment.html",
-      "bytes": 12896,
-      "sha256": "c15bbf4507f26b4acf24765a72d255e8c44fc55448efbeaef571b65de8d2713c",
-      "served": true
+      "bytes": 13018,
+      "sha256": "9f9a2f223d8dff55b88c2d5f2b9392194b0093cdda829dc15f5b3e1f93357f23"
     },
     {
       "path": "essays/the-performance-of-depth.html",
       "bytes": 64352,
-      "sha256": "dd10e69272f960e0280bcffdfffeec5b7888ec8b1cf1aee23ff6cf225e4462dc",
-      "served": true
+      "sha256": "dd10e69272f960e0280bcffdfffeec5b7888ec8b1cf1aee23ff6cf225e4462dc"
     },
     {
       "path": "essays/what-a-new-proof-makes-possible.html",
       "bytes": 217175,
-      "sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba",
-      "served": true
+      "sha256": "174c9dbdad498bdeb178b6efb24f7fe0b972d4569bfad2b413fd80a2cbb633ba"
     },
     {
       "path": "essays/when-a-description-becomes-a-verdict.html",
       "bytes": 88524,
-      "sha256": "6bdfdd7ab3da7ea78d4fb3fc72214b0ce414bab3fdb9ea2da284d96987cbe9e9",
-      "served": true
+      "sha256": "6bdfdd7ab3da7ea78d4fb3fc72214b0ce414bab3fdb9ea2da284d96987cbe9e9"
     },
     {
       "path": "essays/when-accountability-stops-being-reciprocal.html",
       "bytes": 40733,
-      "sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8",
-      "served": true
+      "sha256": "2854dbc085dde06a234682e72a9858a3d26848ccb8b5c205c4560a1df052a4a8"
+    },
+    {
+      "path": "essays.html",
+      "bytes": 7146,
+      "sha256": "7f415a91f56d2b176ae025bcece474c26fca7b3b77b55966033ebc0901c37a26"
     },
     {
       "path": "expositions.html",
-      "bytes": 22601,
-      "sha256": "d157c7d9999a40cc7257568d52ae4b088b095353e5edb76b01e469b23c8ec45a",
-      "served": true
+      "bytes": 25877,
+      "sha256": "6cdc8d42a7cd95b26da25eda6041cc65b926958baec99fac7fa7efee180b185d"
     },
     {
       "path": "favicon.svg",
       "bytes": 150,
-      "sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d",
-      "served": true
-    },
-    {
-      "path": "formalizations/README.md",
-      "bytes": 2934,
-      "sha256": "a85fc2fe8e79480696889bf2db9972d3212060f1aae795412b227d07edc93d28",
-      "served": true
+      "sha256": "27e56b120410f067591df7c445076d1e32cce31bab8119638cf1dc7ee77dcc9d"
     },
     {
       "path": "formalizations/disjoint-decomposition/DisjointDecomposition.lean",
       "bytes": 9261,
-      "sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039",
-      "served": true
-    },
-    {
-      "path": "formalizations/disjoint-decomposition/README.md",
-      "bytes": 273,
-      "sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a",
-      "served": true
+      "sha256": "d5c90679b105735c5088e56c61878461e6d0fb73513bb041fa5f0231dbf7f039"
     },
     {
       "path": "formalizations/disjoint-decomposition/lake-manifest.json",
       "bytes": 3279,
-      "sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "served": true
+      "sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd"
     },
     {
       "path": "formalizations/disjoint-decomposition/lakefile.toml",
       "bytes": 363,
-      "sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56",
-      "served": true
+      "sha256": "9d679e00749296fd439f7daaae13105242f0ac31c7a658006ab469c47bb4ce56"
     },
     {
       "path": "formalizations/disjoint-decomposition/lean-toolchain",
       "bytes": 30,
-      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "served": true
+      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507"
+    },
+    {
+      "path": "formalizations/disjoint-decomposition/README.md",
+      "bytes": 273,
+      "sha256": "ad22ebd9b5515ef6db837efb4ded258e8f9f6e33b91b7210d1c265ee537d7e6a"
     },
     {
       "path": "formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
       "bytes": 20483,
-      "sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0",
-      "served": true
-    },
-    {
-      "path": "formalizations/extracting-first-prime/README.md",
-      "bytes": 377,
-      "sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1",
-      "served": true
+      "sha256": "a9b5ab62e2bff07da12efe6dc1c1240d0126308ab89494866e221ddd42c3c9b0"
     },
     {
       "path": "formalizations/extracting-first-prime/lake-manifest.json",
-      "bytes": 3279,
-      "sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "served": true
+      "bytes": 3278,
+      "sha256": "c6553ba0be16dd522831c7ffa74cdb853c2d48b5167927d887cfae490ea8a004"
     },
     {
       "path": "formalizations/extracting-first-prime/lakefile.toml",
       "bytes": 360,
-      "sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714",
-      "served": true
+      "sha256": "c48cd3cee82f391a081c9e4b0bb6a9bfd95036a921fd32923d9e69bd2588f714"
     },
     {
       "path": "formalizations/extracting-first-prime/lean-toolchain",
       "bytes": 30,
-      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "served": true
+      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507"
+    },
+    {
+      "path": "formalizations/extracting-first-prime/README.md",
+      "bytes": 377,
+      "sha256": "1ed055a3908419159f85342b6f47b3e6e22fbde41a733b1298c5a5ad887850f1"
     },
     {
       "path": "formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
       "bytes": 69041,
-      "sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c",
-      "served": true
-    },
-    {
-      "path": "formalizations/galois-frobenius-composition-law/README.md",
-      "bytes": 560,
-      "sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4",
-      "served": true
+      "sha256": "c9a4e68f563079c4d7783eec1062bc78e89a47065a949d4e7cadbd7f34a2c41c"
     },
     {
       "path": "formalizations/galois-frobenius-composition-law/lake-manifest.json",
-      "bytes": 3279,
-      "sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "served": true
+      "bytes": 3287,
+      "sha256": "6d14edb454ffa2184048f9d462a054f1bf9cdbc937d013511c3f0e821f1ee272"
     },
     {
       "path": "formalizations/galois-frobenius-composition-law/lakefile.toml",
       "bytes": 387,
-      "sha256": "74ef2d347f5e0c195963992f95283fe57e5ec9c641d2ee0d1ee94c60236188d3",
-      "served": true
+      "sha256": "74ef2d347f5e0c195963992f95283fe57e5ec9c641d2ee0d1ee94c60236188d3"
     },
     {
       "path": "formalizations/galois-frobenius-composition-law/lean-toolchain",
       "bytes": 30,
-      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "served": true
+      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507"
     },
     {
-      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
-      "bytes": 27,
-      "sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84",
-      "served": true
+      "path": "formalizations/galois-frobenius-composition-law/README.md",
+      "bytes": 560,
+      "sha256": "59018fa5a5f531bc26864308ae5f3e9f9fc44a4ed9c9d55bca7f77cfb91479c4"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Certificate.lean",
       "bytes": 4085,
-      "sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758",
-      "served": true
+      "sha256": "b4527bf086a454c6dcd6153d23e34b3b5273689a57e4a940b143b9ceff903758"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
       "bytes": 6449,
-      "sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c",
-      "served": true
+      "sha256": "6bf901aced3b58f575c716dae00eff5d522a54c3111713908f110c83f6ec2d8c"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis/RealBridge.lean",
       "bytes": 10625,
-      "sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b",
-      "served": true
+      "sha256": "8c358fcac34fe5cc791b6ad729434d102dc9f68f44f9cdb1837804bc0b22779b"
     },
     {
-      "path": "formalizations/ibm-ponder-this-2010/README.md",
-      "bytes": 1000,
-      "sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e",
-      "served": true
+      "path": "formalizations/ibm-ponder-this-2010/IBMPonderThis.lean",
+      "bytes": 27,
+      "sha256": "4771fbdf14addf467466b0e9ddbe8dab4587a910eb6489428312101789127b84"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/lake-manifest.json",
       "bytes": 3271,
-      "sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d",
-      "served": true
+      "sha256": "c7061a1145c771e6d0bb842fe23a320ed053e5cab42437b3e6c2a12edb2ee49d"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/lakefile.toml",
       "bytes": 290,
-      "sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e",
-      "served": true
+      "sha256": "ec1ebc6297b1e9170b66093b4749daf3562f29bb55e2c7abc82c68207f90808e"
     },
     {
       "path": "formalizations/ibm-ponder-this-2010/lean-toolchain",
       "bytes": 30,
-      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "served": true
+      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507"
+    },
+    {
+      "path": "formalizations/ibm-ponder-this-2010/README.md",
+      "bytes": 1000,
+      "sha256": "09d1dd28ef053dc1211fa260b7e7f0348b902381c5ee6457f0f2f7c88934161e"
     },
     {
       "path": "formalizations/packages/disjoint-decomposition.zip",
       "bytes": 5940,
-      "sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84",
-      "served": true
+      "sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84"
     },
     {
       "path": "formalizations/packages/extracting-first-prime.zip",
-      "bytes": 7723,
-      "sha256": "d14da2c519167533d46fab64d384f65e13d82373152e3011ea58843338b6d88f",
-      "served": true
+      "bytes": 7724,
+      "sha256": "386225872534f462006871a55b7acf066738a9bb25891798f97e919f84db13f1"
     },
     {
       "path": "formalizations/packages/galois-frobenius-composition-law.zip",
-      "bytes": 16077,
-      "sha256": "8a4dfb77612f3f97bb403592a05f36465296f6f8436b572e77c9b85753b3f4da",
-      "served": true
+      "bytes": 16085,
+      "sha256": "3114c3e1b2a9c05385bb3ce035ff942f13cc0b177472745e454cd5c888e86f87"
     },
     {
       "path": "formalizations/packages/ibm-ponder-this-2010.zip",
       "bytes": 9210,
-      "sha256": "cfd4a6f7b6100fa85c8d1a86f22cf01583b88cc9d9dcb85f13f622ede030e588",
-      "served": true
+      "sha256": "cfd4a6f7b6100fa85c8d1a86f22cf01583b88cc9d9dcb85f13f622ede030e588"
     },
     {
       "path": "formalizations/packages/pointwise-weighting.zip",
       "bytes": 10351,
-      "sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468",
-      "served": true
+      "sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468"
     },
     {
       "path": "formalizations/packages/separated-polynomial-differences.zip",
-      "bytes": 7167,
-      "sha256": "442e2ad2520e4bd3719e882ffd57c48d1e4f830a34d829ce96312942038006b5",
-      "served": true
-    },
-    {
-      "path": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
-      "bytes": 33,
-      "sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d",
-      "served": true
-    },
-    {
-      "path": "formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
-      "bytes": 28388,
-      "sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226",
-      "served": true
-    },
-    {
-      "path": "formalizations/pointwise-weighting/README.md",
-      "bytes": 888,
-      "sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd",
-      "served": true
+      "bytes": 7173,
+      "sha256": "c33ffb72ecd442027a01ba804202bc489741f3be3748c74d91229769e529c3b4"
     },
     {
       "path": "formalizations/pointwise-weighting/lake-manifest.json",
       "bytes": 3237,
-      "sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b",
-      "served": true
+      "sha256": "701e3e63d486804a09dabe56bd3b348b93c900fdd3d28d5d994c1d6f15584b7b"
     },
     {
       "path": "formalizations/pointwise-weighting/lakefile.toml",
       "bytes": 401,
-      "sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3",
-      "served": true
+      "sha256": "2e39a08d1992e811a7c224f205c3e7c71153217f175966a6e53a5947be4862c3"
     },
     {
       "path": "formalizations/pointwise-weighting/lean-toolchain",
       "bytes": 26,
-      "sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82",
-      "served": true
+      "sha256": "b15a57f8ea4c890197465ce1156667ae13d9ed4ab8a9f263a920bf010d967d82"
     },
     {
-      "path": "formalizations/separated-polynomial-differences/README.md",
-      "bytes": 416,
-      "sha256": "6f083a1759bebcea3cb0ab841bcc86e9d9d3435313527e9344ab608fce796548",
-      "served": true
+      "path": "formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "bytes": 28388,
+      "sha256": "60e1c45cdac884207a5d137c8ab3bfd1c30e4e314be75342a9bde35752cf0226"
     },
     {
-      "path": "formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
-      "bytes": 15380,
-      "sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617",
-      "served": true
+      "path": "formalizations/pointwise-weighting/PointwiseWeighting.lean",
+      "bytes": 33,
+      "sha256": "a9ed277821a5b2ec66e3aa23dc83569c2eb7f9881c6c8d4903fa89c19fe9c34d"
+    },
+    {
+      "path": "formalizations/pointwise-weighting/README.md",
+      "bytes": 888,
+      "sha256": "ab204ae068c42980fdbfd99da0f59c46c35a3fc418b346a97f27116c48e887cd"
+    },
+    {
+      "path": "formalizations/README.md",
+      "bytes": 2934,
+      "sha256": "a85fc2fe8e79480696889bf2db9972d3212060f1aae795412b227d07edc93d28"
     },
     {
       "path": "formalizations/separated-polynomial-differences/lake-manifest.json",
-      "bytes": 3279,
-      "sha256": "fb181997f3406485e08501ffd7e0101ba0aad891992da3722de04fd9670848cd",
-      "served": true
+      "bytes": 3288,
+      "sha256": "b7c115c637de832607be8e95e93809d508c5c4730ae299bba241e9308bc340d4"
     },
     {
       "path": "formalizations/separated-polynomial-differences/lakefile.toml",
       "bytes": 390,
-      "sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e",
-      "served": true
+      "sha256": "1affb3a252e121313bba18774cfb3ce8ebd5ff44fad83b45098460c3a959a08e"
     },
     {
       "path": "formalizations/separated-polynomial-differences/lean-toolchain",
       "bytes": 30,
-      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507",
-      "served": true
+      "sha256": "4ffb62ce8c8f7ebaff1c1e98c5d36fd60956fb6c9a55d66d8c75ceaae9e96507"
+    },
+    {
+      "path": "formalizations/separated-polynomial-differences/README.md",
+      "bytes": 416,
+      "sha256": "6f083a1759bebcea3cb0ab841bcc86e9d9d3435313527e9344ab608fce796548"
+    },
+    {
+      "path": "formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "bytes": 15380,
+      "sha256": "fe51f659fe233a61c1be20e1df81431fb8e27d67a06da7712b0d730735a95617"
     },
     {
       "path": "index.html",
-      "bytes": 16635,
-      "sha256": "956259d78845a8e616a1ed7da9f4faffe90ff21fa9d223e235c5f396da2e0b85",
-      "served": true
+      "bytes": 17999,
+      "sha256": "d4861b1a81c43a9b3432284158621b92403e96b1b778fc38b04af1c07c8face9"
     },
     {
       "path": "interests.html",
-      "bytes": 5262,
-      "sha256": "a4c982dce64ab3b911b4c992445db58830299d6dc4f0b0f5fdbc3e63c8885876",
-      "served": true
+      "bytes": 6257,
+      "sha256": "6ce5ef03117255aedbc53d67856acaf5bedde519fa07922ababd795561e20f1b"
     },
     {
       "path": "license.html",
       "bytes": 2905,
-      "sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab",
-      "served": true
+      "sha256": "4f79f50051dbb388909550a7d146a11eff0c46bb64878ae7f481b8a1dab513ab"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 818,
+      "sha256": "66105a17afd5ab98d98ad1f8aa342d46f64d57cbdbb5733802dda68a9587743b"
     },
     {
       "path": "llms.txt",
-      "bytes": 2803,
-      "sha256": "1b019f100602134c8decdb44502a260b5a9d07fd7927eca286ddc371ed0e3095",
-      "served": true
+      "bytes": 3108,
+      "sha256": "10d142dc94772929aad7997a9eff3e44408b635a4dea144dc64c29907477b8cb"
     },
     {
       "path": "mechanisms.html",
-      "bytes": 25875,
-      "sha256": "0c5d751d8e665d7ffa0c1c8a6eab0272c284abda3a58e13eabb1f18fde27296f",
-      "served": true
+      "bytes": 28578,
+      "sha256": "da3fd59b999d86ca5485699658ea20a580ec7c4a030d196f6e1a218c71f08e85"
     },
     {
       "path": "notes/a-tree-is-a-discrete-poincare-lemma.html",
       "bytes": 439,
-      "sha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5",
-      "served": true
+      "sha256": "efff8c6469bab04d2b14e7bc386f8bb7b35080351f6c6e3944655d16244c49d5"
     },
     {
       "path": "notes/disjoint-decompositions.html",
       "bytes": 4117,
-      "sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5",
-      "served": true
+      "sha256": "8729e1b6b76eba2ef02250eaf02a7196bd200bd3c439966f3dc1467db36519b5"
     },
     {
       "path": "notes/extracting-first-prime.html",
       "bytes": 4468,
-      "sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e",
-      "served": true
+      "sha256": "f0871e111b3b87bfb0c5a7d5abd9bda2d8fdd3ba4fc7e08bcbfb8db713d1796e"
     },
     {
       "path": "notes/fourier-symmetry-and-reconstruction.html",
-      "bytes": 5413109,
-      "sha256": "002031a832c5cdd5e22b3bfbfd3d89da71230df7fa5e43a93bc7da3610c011a0",
-      "served": true
+      "bytes": 5413363,
+      "sha256": "3a86c695a5a88536af31aa6ec25cec262c0ee032329736e08d95dc95b1cf92bf"
     },
     {
       "path": "notes/galois-frobenius-composition-law.html",
-      "bytes": 4943,
-      "sha256": "c573e8b0d091006bebd11c1cdded52b5aa04bd267efb18761a735a0ee5430957",
-      "served": true
+      "bytes": 4913,
+      "sha256": "947304168ad0fa2e9e123afaa5cc00d49594da98cf12fb76c0de43c7f4a27a48"
     },
     {
       "path": "notes/hartshorne-ii-5-14-18.html",
-      "bytes": 4460,
-      "sha256": "4f8059a5d4d65f80131b2c68692f9cfca373ef9020ea6d3b30da1c23e383ed70",
-      "served": true
+      "bytes": 4430,
+      "sha256": "0bb5a6799322f629f6c93661ba3c3052325ac2a23a034417edd4e713348930d4"
     },
     {
       "path": "notes/ibm-ponder-this-2010.html",
       "bytes": 4324,
-      "sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6",
-      "served": true
+      "sha256": "1d2d64b67ebe8bd1626d121bc9877ec0449e638d32cd486ad567d91614a553a6"
     },
     {
       "path": "notes/lebesgue-riemann-integrability.html",
-      "bytes": 4837,
-      "sha256": "ba947df6c0cd857ca840719e0b02ddf2dcedc44fcc8ed28c472d08be5fcf8531",
-      "served": true
+      "bytes": 4778,
+      "sha256": "f908a02bf72ca2f51b90fe3c2d7a093928695dacc1a8d73446449023aef5257c"
     },
     {
       "path": "notes/pointwise-weighting-convergence-in-measure.html",
-      "bytes": 4986,
-      "sha256": "2ac8f04242bb0459c2441aa0a7a5ef78a092389fc410432c4c0496cfa9294a47",
-      "served": true
+      "bytes": 4956,
+      "sha256": "ef1404995c56e318ee6018932740075a86196821e107ca0f4e59146d9cd73f63"
     },
     {
       "path": "notes/products-preserve-riemann-integrability.html",
-      "bytes": 165141,
-      "sha256": "9468015b3b575c29a63aa04f7f749b1a82df6c1d217c1c65cdba42bffb6ddee0",
-      "served": true
+      "bytes": 165062,
+      "sha256": "6cfce078704ec6f7908e4f59137db94fa3d9e6b4b17520fa379cae2afa0f0a44"
+    },
+    {
+      "path": "notes/quotients-and-reconstruction-audit.html",
+      "bytes": 21653,
+      "sha256": "6c61a24ce3b2110d09ec7ead98f6a1fcfa33936b9fb3de7821aa5df6dc700825"
+    },
+    {
+      "path": "notes/quotients-and-reconstruction.html",
+      "bytes": 9531177,
+      "sha256": "4a350d1f2dfc47d866e0c84b4e92b8f2e1fdfd5f786c4cbc9bee8fc7a8ba1c65"
     },
     {
       "path": "notes/selected-problems-discrete-mathematics-analysis.html",
-      "bytes": 11687,
-      "sha256": "b6c89a82a6177d7e8be3b936507111750463db31e5da1c0fa8f69c0a69673b12",
-      "served": true
+      "bytes": 11689,
+      "sha256": "3c9dd45ef22c8c90d71fa80e747568ef736a3c3b6fd0f8dbeaf4f2bb89a1e49e"
     },
     {
       "path": "notes/separated-polynomial-divisibility.html",
-      "bytes": 4772,
-      "sha256": "9ec1bffe8015a316a7beebc30aaca5c5273642f116bb63d09c0f401cd1f675ed",
-      "served": true
+      "bytes": 4742,
+      "sha256": "e0e2ee6834ec3e4362b9890829a132aa0941d038c0eb00d0e49d755f7bdc6d02"
+    },
+    {
+      "path": "notes/six-elements-one-comparison.html",
+      "bytes": 1617428,
+      "sha256": "6a44fced9cc7244c4ea3efcfd8a66f88e6c081d2f39353e454b1605961b77848"
     },
     {
       "path": "notes/what-a-boundary-map-can-prove.html",
-      "bytes": 6248775,
-      "sha256": "d712c1d3e87b6f49c9a95a87ee7da8e216e34ad5894ee468bc52a62e44071079",
-      "served": true
+      "bytes": 6248713,
+      "sha256": "124290c54d5fdbcc80f2c300c33e1da6012b8e5b6e7901c5d6b96ba6a9d2b157"
     },
     {
       "path": "notes/what-a-derivative-retains.html",
-      "bytes": 3552894,
-      "sha256": "1754aae8e43ab643bdbeb91d8741f9c3b11aa222e8543664bc41fafef7e7e564",
-      "served": true
+      "bytes": 3553159,
+      "sha256": "3b417b3002b5a31b6cf56b5addeace6c2911620ec9b46fd7b8852d4d494b9e0a"
     },
     {
       "path": "notes/when-a-formal-logarithm-fails.html",
-      "bytes": 883306,
-      "sha256": "96e84e3b228ee38450923da36f1f1e595caf731ad05e0647d87f46939e34aeef",
-      "served": true
+      "bytes": 883305,
+      "sha256": "6522fcb2e40a728d38d808a83cd32468d0651925cf0f91c08b3ef3f73731c599"
     },
     {
       "path": "papers.html",
       "bytes": 10047,
-      "sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd",
-      "served": true
+      "sha256": "57aa2db64520cdd49777292a9b1c67a44430f5adb3318ff41a6c3316541d9dbd"
     },
     {
       "path": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
       "bytes": 202443,
-      "sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e",
-      "served": true
+      "sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e"
     },
     {
       "path": "pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
       "bytes": 416965,
-      "sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5",
-      "served": true
+      "sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5"
     },
     {
       "path": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
       "bytes": 483829,
-      "sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb",
-      "served": true
+      "sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb"
     },
     {
       "path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
       "bytes": 534796,
-      "sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa",
-      "served": true
+      "sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa"
+    },
+    {
+      "path": "pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
+      "bytes": 707536,
+      "sha256": "dcc9120795b78e227b0711f5b72139e326e6c3b8d75595d6c14c5ec5922a50bb"
+    },
+    {
+      "path": "pdfs/algebra/Six_Elements_One_Comparison.pdf",
+      "bytes": 343043,
+      "sha256": "860667e3a34fb2bf709d0b61d8df318aac10c31a98b6512d5162006f5659abd6"
     },
     {
       "path": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
       "bytes": 599738,
-      "sha256": "b95ec42807df0e7272428bfb4baa340cd7adbc5c7b226739dae56946e8f36dfb",
-      "served": true
+      "sha256": "b95ec42807df0e7272428bfb4baa340cd7adbc5c7b226739dae56946e8f36dfb"
     },
     {
       "path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
       "bytes": 275246,
-      "sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3",
-      "served": true
+      "sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3"
     },
     {
       "path": "pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
       "bytes": 126781,
-      "sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
-      "served": true
+      "sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a"
     },
     {
       "path": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
       "bytes": 326988,
-      "sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889",
-      "served": true
-    },
-    {
-      "path": "pdfs/analysis/.gitkeep",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "served": false
+      "sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889"
     },
     {
       "path": "pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
       "bytes": 185467,
-      "sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563",
-      "served": true
+      "sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563"
     },
     {
       "path": "pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
       "bytes": 319331,
-      "sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416",
-      "served": true
+      "sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416"
     },
     {
       "path": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
       "bytes": 303594,
-      "sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42",
-      "served": true
+      "sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42"
     },
     {
       "path": "pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
       "bytes": 208287,
-      "sha256": "e819db389f29fa9323938ba5316b970d2ae03ebf13638b90a843d037349db86b",
-      "served": true
-    },
-    {
-      "path": "pdfs/combinatorics/.gitkeep",
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "served": false
+      "sha256": "e819db389f29fa9323938ba5316b970d2ae03ebf13638b90a843d037349db86b"
     },
     {
       "path": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
       "bytes": 311420,
-      "sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a",
-      "served": true
+      "sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a"
     },
     {
       "path": "pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
       "bytes": 310966,
-      "sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956",
-      "served": true
+      "sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956"
     },
     {
       "path": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
       "bytes": 172310,
-      "sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780",
-      "served": true
-    },
-    {
-      "path": "play.html",
-      "bytes": 383,
-      "sha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793",
-      "served": true
+      "sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780"
     },
     {
       "path": "play/cube-patterns.html",
       "bytes": 5398,
-      "sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848",
-      "served": true
+      "sha256": "ac119977a6fb57a434912255f21f9d223c6ae987ba0de22a1e2a64c80799d848"
+    },
+    {
+      "path": "play.html",
+      "bytes": 383,
+      "sha256": "14573e76787638e217ebe60eba89bad149895ce0fec59e2da89eafdf48a87793"
     },
     {
       "path": "portfolio.json",
-      "bytes": 53666,
-      "sha256": "90260f410fb81a5575a90a8a6ec8613cc5c0b18a73622c21b5c48d1bd9edae16",
-      "served": true
+      "bytes": 60169,
+      "sha256": "3cd9c9f0c4bbb0a441c45706b739d2b9bc241dc68bf4a76aff6ed63ed2c4aadb"
     },
     {
       "path": "privacy.html",
       "bytes": 5152,
-      "sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837",
-      "served": true
+      "sha256": "9bc7c19380499cb09e9e2e12a9407135fde8bfe1a03c16e6155271e29a76e837"
     },
     {
       "path": "robots.txt",
       "bytes": 67,
-      "sha256": "63faf2e2917055308aba7d60451b1d78991a63dbb543e3099dc2dabd0009c478",
-      "served": true
+      "sha256": "63faf2e2917055308aba7d60451b1d78991a63dbb543e3099dc2dabd0009c478"
     },
     {
       "path": "sitemap.xml",
-      "bytes": 2546,
-      "sha256": "3993692d248628bdc49e653122cc23388f216fb051e5f9db3b29a62d2c7c96e6",
-      "served": true
+      "bytes": 2803,
+      "sha256": "4512eb98c39170f1ede8536fe3a1538f2aa9007d89fb3a4299b939bcbdd21294"
     },
     {
       "path": "styles.css",
       "bytes": 11004,
-      "sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279",
-      "served": true
+      "sha256": "519fd477eac4df8c286841e85336e97b8a23e7549e442782ea18cf8c70599279"
     },
     {
       "path": "tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
       "bytes": 36441,
-      "sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50",
-      "served": true
+      "sha256": "d4fe9af77b97324bd261cfe17b59b8bb1bdc6eede6e26ce4b286bc4491787f50"
     },
     {
       "path": "tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
       "bytes": 21547,
-      "sha256": "94543913b0e087b0e9db5ad43676ba52a2e67e76370d9e4e6fe06e19da2d9a6b",
-      "served": true
+      "sha256": "94543913b0e087b0e9db5ad43676ba52a2e67e76370d9e4e6fe06e19da2d9a6b"
     },
     {
       "path": "tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
       "bytes": 84280,
-      "sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75",
-      "served": true
+      "sha256": "983a5cbcb10f73363cfccbf2264896d548b6b91c7983db87c0094e88f3c25d75"
     },
     {
       "path": "tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
       "bytes": 136647,
-      "sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77",
-      "served": true
+      "sha256": "bb39e2f8d62d0c1aac1102b612a74530bf950f9ded2ce4c6dbd4c37e3c995d77"
+    },
+    {
+      "path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "bytes": 96682,
+      "sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502"
+    },
+    {
+      "path": "tex/algebra/Six_Elements_One_Comparison.zip",
+      "bytes": 16562,
+      "sha256": "de38260e0486c8f9c71a554f9585220e6fc984bed4fdbe5b105aa02d0a66b5e1"
     },
     {
       "path": "tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
       "bytes": 143896,
-      "sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d",
-      "served": true
+      "sha256": "0390929f027dfd1662c7a1a06e7b375405dbfa27657f1af7dc24f05d2208235d"
     },
     {
       "path": "tex/algebra/When_a_Formal_Logarithm_Fails.tex",
       "bytes": 43753,
-      "sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f",
-      "served": true
+      "sha256": "36532f1d55d3c6e62310d370a0929a1f3806aba10edb7704fbc774cceb33a76f"
     },
     {
       "path": "tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
       "bytes": 42737,
-      "sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33",
-      "served": true
+      "sha256": "4f8ec76169fab6a93e556c7ca041c740c92aa56bba15af9192a6df85bcb32a33"
     },
     {
       "path": "tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
       "bytes": 19719,
-      "sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff",
-      "served": true
+      "sha256": "2bd82f3e3a359c578c23f5c99520832ea91f9c4ba6a3b01645f365f5f2d10bff"
     },
     {
       "path": "tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
       "bytes": 10176,
-      "sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788",
-      "served": true
+      "sha256": "8d5b4ff03f8eff78f24ffdefe697b8d274cdfa7743f39220df5eee2ed4ac9788"
     },
     {
       "path": "tex/analysis/Products_Preserve_Riemann_Integrability.tex",
       "bytes": 13328,
-      "sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387",
-      "served": true
+      "sha256": "a60a50e7d9ae923399238eb22a3f2b518f31be684bae26095748425994422387"
     },
     {
       "path": "tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
       "bytes": 4124,
-      "sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b",
-      "served": true
+      "sha256": "997609a33a5255f326168b0c351cb7d93d160360a6c22b731f7ec6bda2b1c49b"
     },
     {
       "path": "verification.html",
       "bytes": 6751,
-      "sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40",
-      "served": true
+      "sha256": "2f41a71f871ba52c1f7b8cb75e9cda425afa9263bb7816c461d2d7e3db607e40"
     }
   ]
 }

@@ -1,0 +1,382 @@
+\section{The Mal'cev condition and the universal comparison}
+\label{d:begin}
+
+Suppose a relation connects inputs in $X$ with outputs in $Y$. Three
+corners of a rectangle may already force the fourth:
+\[
+x\,R\,y,\qquad x'\,R\,y,\qquad x'\,R\,y'
+\quad\Longrightarrow\quad x\,R\,y'.
+\]
+This property is called \emph{difunctionality}. It says that the
+relation breaks into complete rectangular blocks. It does not say that
+each input has just one output. Several inputs and several outputs can
+belong to the same block.
+
+The structural comparison is already suggested by this picture. Group
+the inputs according to which block they occupy, and group the outputs
+in the same way. The two resulting quotient objects should agree. We
+will construct that agreement, including its maps, before using it to
+compare any filtrations.
+
+\subsection{Why relative difference is enough}
+
+\begin{definition}[Mal'cev category]\label{d:malcev}
+A regular category is a \emph{Mal'cev category} if every reflexive
+internal relation is an equivalence relation.
+\end{definition}
+
+This categorical condition has an elementary source. Suppose we have
+algebraic structures with a ternary term $p$ satisfying
+\[
+p(x,y,y)=x,\qquad p(x,x,y)=y.
+\]
+If a compatible relation $R\subseteq X\times X$ is reflexive and
+$x\,R\,y$, its closure under $p$ gives
+\[
+p\bigl((y,y),(x,y),(x,x)\bigr)=(y,x)\in R.
+\]
+Thus it is symmetric. If also $y\,R\,z$, closure gives
+\[
+p\bigl((x,y),(y,y),(y,z)\bigr)=(x,z)\in R,
+\]
+so it is transitive. The operation is applied coordinatewise to pairs.
+For groups $p(x,y,z)=xy^{-1}z$; for modules it is $x-y+z$. No
+commutativity of group multiplication was used. A term is an operation
+on the underlying algebra; in the group case it need not be a group
+homomorphism from $X^3$ to $X$.
+
+This gives the central common resource: a way to take a relative
+difference and then reattach it at another point. The categorical
+definition retains its effect on compatible relations without requiring
+a chosen formula for the operation.
+
+\begin{proposition}[Three forms of the Mal'cev condition]\label{d:difunctional}
+For a regular category the following conditions are equivalent:
+\begin{enumerate}
+\item every reflexive relation is an equivalence relation;
+\item equivalence relations on the same object commute under
+relation composition;
+\item every relation $R:X\rightsquigarrow Y$ is difunctional, that is,
+\[
+RR^{\mathrm{op}}R=R.
+\]
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Assume the first condition. If $E,F$ are equivalence relations on $X$,
+their composite $EF$ is reflexive, since both contain $\Delta_X$.
+It is therefore symmetric, and
+\[
+EF=(EF)^{\mathrm{op}}=FE.
+\]
+This proves the second condition.
+
+Assume the second. Give $R$ a carrier with projections
+$a:M\to X$ and $b:M\to Y$. The kernel pairs
+\[
+E_a=a^{\mathrm{op}}a,\qquad E_b=b^{\mathrm{op}}b
+\]
+are equivalence relations on the \emph{same} object $M$, so they
+commute. Using Lemma~\ref{f:graph-kernel}, we obtain
+\begin{align*}
+RR^{\mathrm{op}}R
+&=ba^{\mathrm{op}}ab^{\mathrm{op}}ba^{\mathrm{op}}\\
+&=bE_aE_ba^{\mathrm{op}}
+ =bE_bE_aa^{\mathrm{op}}\\
+&=(bb^{\mathrm{op}}b)(a^{\mathrm{op}}aa^{\mathrm{op}})
+ =ba^{\mathrm{op}}=R.
+\end{align*}
+The equalities are typed on $M$; we have not interchanged unrelated
+relations on $X$ and $Y$. This proves the third condition.
+
+Finally assume the third and let $R$ be reflexive. Monotonicity gives
+\[
+R^{\mathrm{op}}=\Delta_XR^{\mathrm{op}}\Delta_X
+\leq RR^{\mathrm{op}}R=R.
+\]
+Taking opposites gives the reverse inclusion, so $R$ is symmetric.
+Also $\Delta_X\leq R^{\mathrm{op}}$, and hence
+$RR\leq RR^{\mathrm{op}}R=R$. Thus $R$ is transitive and is an
+equivalence relation.
+\end{proof}
+
+The local-witness interpretation of $RR^{\mathrm{op}}R\leq R$ is
+exactly the three-corners implication above. The reverse inclusion
+always holds: a related pair can supply all three edges of a degenerate
+rectangle. The proposition explains why the rectangle-completion law
+holds simultaneously for every relation, rather than having to be
+verified anew for each quotient comparison.
+
+\subsection{Partial identifications and their supports}
+
+Relations used in a filtration may live on a subobject rather than all
+of the ambient object. We must record that support instead of silently
+assuming reflexivity everywhere.
+
+\begin{lemma}[Partial equivalence relations]\label{d:partial-equivalence}
+Let $E:X\rightsquigarrow X$ be symmetric and transitive in a regular
+category. The two projections of its carrier have the same image
+$m:D\hookrightarrow X$. Restricted to $D$, the relation is an
+equivalence relation $E_D$. In a Barr-exact category there is a regular
+epimorphism $q:D\twoheadrightarrow Q$ with
+\[
+E=mq^{\mathrm{op}}qm^{\mathrm{op}}.
+\]
+Conversely, every relation of this displayed form is symmetric and
+transitive, with support $D$.
+\end{lemma}
+\begin{proof}
+Symmetry interchanges the two projections, so their images agree.
+Their factorizations through $D$ give a relation $E_D\hookrightarrow
+D\times D$; the pair is still jointly monic. Both of its projections
+are regular epic. If $x$ is an input in $D$, a cover supplies a witness
+$x\,E_D\,y$. Symmetry gives $y\,E_D\,x$, and transitivity gives
+$x\,E_D\,x$. Lemma~\ref{f:local-calculus} descends this membership,
+so $E_D$ is reflexive. Symmetry and transitivity are inherited by
+restriction. Exactness gives $E_D=q^{\mathrm{op}}q$, proving the formula.
+
+Conversely, $q^{\mathrm{op}}q$ is an equivalence relation on $D$.
+Its extension along $m$ is symmetric; since $m^{\mathrm{op}}m=\Delta_D$,
+its square is itself. The projections onto $D$ are regular epic
+because the relation is reflexive, so their images in $X$ are $D$.
+\end{proof}
+
+We call $Q$ the quotient of the partial equivalence relation. It is
+the quotient of its support, not a quotient of all of $X$. This
+distinction permits the same relation language to describe every step
+of a chain whose terms are only normal in their successors.
+
+For example, a quotient map $q:A\twoheadrightarrow S$ with
+$A\hookrightarrow G$ determines a relation on $G$: two inputs are
+related precisely when they both lie in $A$ and have the same image
+in $S$. Its support is $A$; in a pointed category its zero class is
+$\Ker(q)$. Thus one partial relation remembers the numerator, the
+identifications, and the chosen quotient, up to its unique quotient
+isomorphism.
+
+\subsection{One relation, two quotients, one object}
+
+Let $R:X\rightsquigarrow Y$ have carrier $M$ and factor its projections
+through their images:
+\[
+\begin{tikzcd}[column sep=large]
+&M \arrow[dl,two heads,"a"'] \arrow[dr,two heads,"b"]&\\
+X' \arrow[d,hook,"m"'] &&Y' \arrow[d,hook,"n"]\\
+X&&Y.
+\end{tikzcd}
+\]
+The pair $(a,b)$ is jointly monic. We use $\widehat R:X'\rightsquigarrow Y'$
+for the relation on these supports, so $R=n\widehat Rm^{\mathrm{op}}$.
+Both projections of $\widehat R$ are regular epic.
+
+\begin{theorem}[The universal support-quotient comparison]\label{d:comparison}
+In a Barr-exact Mal'cev category, put
+\[
+E=\widehat R^{\mathrm{op}}\widehat R
+\quad\text{on }X',\qquad
+F=\widehat R\widehat R^{\mathrm{op}}
+\quad\text{on }Y'.
+\]
+These are equivalence relations. For their regular quotient maps
+$q:X'\twoheadrightarrow Q=X'/E$ and
+$p:Y'\twoheadrightarrow P=Y'/F$, there is a unique isomorphism
+$\theta:Q\iso P$ satisfying
+\[
+\theta qa=pb.
+\]
+In particular the two support quotients of any relation are canonically
+isomorphic.
+\end{theorem}
+\begin{proof}
+Because $a$ is regular epic, every input in $X'$ has locally some
+$\widehat R$-related output. Using that same output twice proves
+$\Delta_{X'}\leq E$. Likewise $\Delta_{Y'}\leq F$. Both relations are
+symmetric by taking opposites. Difunctionality gives
+\[
+E^2=\widehat R^{\mathrm{op}}
+ (\widehat R\widehat R^{\mathrm{op}}\widehat R)=E,
+\qquad
+F^2=(\widehat R\widehat R^{\mathrm{op}}\widehat R)
+ \widehat R^{\mathrm{op}}=F.
+\]
+Thus they are equivalence relations, and exactness supplies $q,p$.
+
+We construct the map rather than merely matching equivalence classes.
+The map $pb:M\to P$ is equal on the kernel pair of $a$: if $au=av$,
+then $bu$ and $bv$ share a $\widehat R$-related input, so they are
+$F$-related and $pbu=pbv$. Lemma~\ref{f:descent} gives a unique
+$g:X'\to P$ with $ga=pb$.
+
+Next $g$ is equal on $E$. An $E$-related pair is locally of the form
+$a(u),a(v)$ with $b(u)=b(v)$. Consequently
+$ga(u)=pb(u)=pb(v)=ga(v)$. These equalities hold after a cover,
+and covers are epimorphisms, so they hold on the relation itself.
+Hence $g$ descends uniquely through $q$, giving $\theta:Q\to P$.
+
+The same construction with the opposite relation gives $\psi:P\to Q$
+such that $\psi pb=qa$. It follows that
+\[
+\psi\theta qa=qa,\qquad \theta\psi pb=pb.
+\]
+Both $qa$ and $pb$ are composites of regular epimorphisms, hence are
+epic. Cancellation proves $\psi\theta=\id_Q$ and
+$\theta\psi=\id_P$. Finally $qa$ is epic, so the equation specifying
+$\theta$ proves its uniqueness.
+\end{proof}
+
+The construction is summarized by the commutative diagram
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+&M \arrow[dl,two heads,"a"'] \arrow[dr,two heads,"b"]&\\
+X' \arrow[d,two heads,"q"'] &&Y' \arrow[d,two heads,"p"]\\
+Q \arrow[rr,"\theta", "\sim"'] &&P.
+\end{tikzcd}
+\]
+There is generally no map $X'\to Y'$ to put across the middle row.
+The relation supplies multiple possible outputs. The quotient removes
+precisely their ambiguity, after which the comparison becomes a
+uniquely determined isomorphism.
+
+For a familiar model, take the additive group $\mathbb Z$ and the relation
+$xRy$ meaning that $x-y$ is even. This is a subgroup of
+$\mathbb Z\times\mathbb Z$, with both supports equal to $\mathbb Z$.
+Two inputs share an output precisely when they have the same parity;
+the same is true of two outputs sharing an input. Thus both support
+quotients are $\mathbb Z/2\mathbb Z$, and the comparison sends the parity
+class of an input to that of any related output. There are infinitely
+many possible outputs before quotienting, but exactly one class afterwards.
+This illustrates the construction; the categorical theorem did not need
+a preferred output or a choice of representatives.
+
+Here is another view of the same map, useful for computations. Its
+graph is
+\[
+L=p\widehat Rq^{\mathrm{op}}:Q\rightsquigarrow P.
+\]
+Indeed,
+\begin{align*}
+L^{\mathrm{op}}L
+ &=q\widehat R^{\mathrm{op}}p^{\mathrm{op}}p
+       \widehat Rq^{\mathrm{op}}
+   =qE^2q^{\mathrm{op}}=\Delta_Q,\\
+LL^{\mathrm{op}}
+ &=p\widehat Rq^{\mathrm{op}}q
+       \widehat R^{\mathrm{op}}p^{\mathrm{op}}
+   =pF^2p^{\mathrm{op}}=\Delta_P.
+\end{align*}
+We used $q^{\mathrm{op}}q=E$, $p^{\mathrm{op}}p=F$, their
+idempotence, and $qq^{\mathrm{op}}=\Delta_Q$,
+$pp^{\mathrm{op}}=\Delta_P$. Lemma~\ref{f:functional} makes $L$ a
+map, and makes $L^{\mathrm{op}}$ its inverse. This is the same $\theta$
+because its graph relates the quotient images of every pair in
+$\widehat R$.
+
+This theorem is the comparison mechanism from which the refinement
+rectangle will be built. It is stronger than a statement about lengths:
+it constructs the actual isomorphism between the surviving objects.
+No filtration, simplicity assumption, or Jordan--H\"older theorem has
+entered its proof.
+
+\subsection{Which relations descend through a quotient?}
+
+There is one further compatibility to make explicit. If we identify
+inputs by a quotient map, a relation descends only when changing an
+input within its equivalence class does not change the relation. This
+is saturation.
+
+\begin{proposition}[Saturation and descent]\label{d:saturated-descent}
+Let $q:X\twoheadrightarrow Q$ and $p:Y\twoheadrightarrow P$ be
+regular epimorphisms, with kernel pairs
+$E=q^{\mathrm{op}}q$ and $F=p^{\mathrm{op}}p$. There is an
+order-preserving bijection
+\[
+\left\{\text{relations }L:Q\rightsquigarrow P\right\}
+\longleftrightarrow
+\left\{R:X\rightsquigarrow Y\mid FRE=R\right\}.
+\]
+It sends $L$ to $p^{\mathrm{op}}Lq$, and its inverse sends $R$ to
+$pRq^{\mathrm{op}}$. The first construction is precisely inverse image
+of the relation along $q\times p$.
+\end{proposition}
+\begin{proof}
+Inverse image consists of pairs $(x,y)$ whose quotient images satisfy
+$q(x)\,L\,p(y)$, which is $p^{\mathrm{op}}Lq$ by the graph formulas.
+Since $qq^{\mathrm{op}}=\Delta_Q$ and
+$pp^{\mathrm{op}}=\Delta_P$, the two constructions satisfy
+\[
+p(p^{\mathrm{op}}Lq)q^{\mathrm{op}}=L,
+\qquad
+p^{\mathrm{op}}(pRq^{\mathrm{op}})q=FRE.
+\]
+An inverse-image relation is saturated because
+$Fp^{\mathrm{op}}=p^{\mathrm{op}}$ and $qE=q$. Thus the formulas are
+mutually inverse exactly on the stated saturated relations. Both are
+order preserving by monotonicity of relation composition.
+\end{proof}
+
+For a relation $T$ on $X$ and a single quotient $q$, saturation is
+$ETE=T$. Since $E$ contains the diagonal, this implies separately
+$ET=T$ and $TE=T$. Consequently the correspondence respects
+composition of saturated relations:
+\[
+(qSq^{\mathrm{op}})(qTq^{\mathrm{op}})
+=qSETq^{\mathrm{op}}=qSTq^{\mathrm{op}}.
+\]
+It also respects opposites. Thus a saturated symmetric transitive
+relation descends to a symmetric transitive relation, including its
+possibly proper support. Conversely, inverse image preserves these
+properties: for example
+\[
+(q^{\mathrm{op}}Lq)^2
+=q^{\mathrm{op}}L^2q\leq q^{\mathrm{op}}Lq
+\]
+when $L$ is transitive. These statements hold for partial equivalence
+relations as well as for equivalence relations on all of $X$.
+
+\begin{corollary}[Quotients of quotients]\label{d:iterated-quotient}
+In a Barr-exact category, fix $q:X\twoheadrightarrow Q$ with kernel
+pair $E$. Equivalence relations $L$ on $Q$ correspond to equivalence
+relations $T$ on $X$ containing $E$, by
+\[
+T=q^{\mathrm{op}}Lq,\qquad L=qTq^{\mathrm{op}}.
+\]
+If $t:X\twoheadrightarrow Z$ is the quotient of $T$, it factors
+uniquely as $t=uq$, where $u:Q\twoheadrightarrow Z$ is the quotient
+of $L$. Thus $(X/E)/L\cong X/T$, with the isomorphism determined by
+the quotient maps.
+\end{corollary}
+\begin{proof}
+If $T$ is an equivalence relation containing $E$, then
+$T\leq ETE\leq TTT=T$, so it is saturated. Its descent is reflexive
+because $q\Delta_Xq^{\mathrm{op}}=\Delta_Q$, and is symmetric and
+transitive by the preceding formulas. Conversely, the inverse image
+of an equivalence relation is an equivalence relation containing
+$q^{\mathrm{op}}\Delta_Qq=E$.
+
+Since $E\leq T$, the map $t$ is equal on the kernel pair of $q$,
+so it descends uniquely to $u$. Factor $u$ into its image. If its mono
+part were a proper subobject of $Z$, then $t=uq$ would factor through
+that same subobject, contradicting the lifting property of the regular
+epimorphism $t$. Hence $u$ is regular epic. Its kernel pair is
+\[
+u^{\mathrm{op}}u
+=qq^{\mathrm{op}}u^{\mathrm{op}}uqq^{\mathrm{op}}
+=qt^{\mathrm{op}}tq^{\mathrm{op}}=qTq^{\mathrm{op}}=L.
+\]
+Lemma~\ref{f:descent} makes it the quotient of $L$. The universal
+property proves the claimed canonical isomorphism.
+\end{proof}
+
+This last result needs exactness and regularity, but not the Mal'cev
+condition. Recording that distinction matters: Mal'cev is used to make
+\emph{every} relation difunctional and hence to produce the universal
+comparison. The ordinary law for compatible iterated quotients has
+already been supplied by exactness. Later, in a higher setting, we
+will see why retaining such compatibility data remains essential.
+
+The relation calculus and support comparison are classical. For
+context, see \href{https://arxiv.org/pdf/math/0610552}{Knop,
+\emph{Tensor envelopes of regular categories}}, Section~5 and
+Appendices~A--B. The arguments here have been written out so that the
+refinement theorem can depend on explicit constructions rather than on
+an unnamed isomorphism theorem.

@@ -1,4 +1,15 @@
 {
+  "youtube": {
+    "published": true,
+    "url": "https://www.youtube.com/@hkshin",
+    "label": "Cube patterns and game recordings on YouTube"
+  },
+  "broodWar": {
+    "published": true,
+    "title": "StarCraft: Brood War",
+    "body": "I play StarCraft: Brood War, lately especially on Fastest Possible maps. I enjoy the scale and pace of these games: keeping production moving, reading the map, bringing together units with different roles, and finding the moment to act with teammates. The generous resources make it possible to set a great deal in motion. Much of the pleasure lies in deciding where attention matters next, and how one action can prepare the way for another.\n\nI’ve begun collecting some of these games on YouTube, with in-game audio and no commentary.",
+    "recordingsUrl": "https://www.youtube.com/playlist?list=PLb9QsiBdsSQY"
+  },
   "overwatch": {
     "published": true,
     "title": "Overwatch",

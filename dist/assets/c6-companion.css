@@ -1,0 +1,19 @@
+/* Companion-only additions to the established exposition reader. */
+.exposition-reader .c6-edition{font:.82rem/1.65 var(--sans);color:var(--muted);margin:0 0 1.4rem}
+.exposition-reader .c6-pause{border-left:2px solid #53645c;background:rgba(83,100,92,.055);padding:.75rem 1rem;margin:1.5rem 0}
+.exposition-reader .c6-pause p{margin:0}
+.exposition-reader .c6-route{font:.87rem/1.7 var(--sans);color:var(--muted);margin:1.1rem 0 2rem}
+.exposition-reader .c6-exercises{padding-left:1.6rem}
+.exposition-reader .c6-exercises>li{padding-left:.35rem;margin:0 0 2rem;scroll-margin-top:1.5rem}
+.exposition-reader [id^="answer-"]{scroll-margin-top:1.5rem;margin-top:2rem}
+.exposition-reader .c6-table-pair{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;max-width:100%}
+.exposition-reader .c6-table-pair>.table-scroll{min-width:0}
+.exposition-reader .c6-table table{font-size:.91rem}
+.exposition-reader .c6-table th,.exposition-reader .c6-table td{padding:.55rem .65rem}
+.exposition-reader .c6-table mjx-container{white-space:nowrap}
+@media(max-width:760px){
+  .exposition-reader .c6-table-pair{grid-template-columns:1fr;gap:0}
+  .exposition-reader .c6-table table{min-width:0}
+  .exposition-reader .c6-pause{padding:.65rem .8rem}
+  .exposition-reader .c6-exercises{padding-left:1.25rem}
+}

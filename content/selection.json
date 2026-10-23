@@ -6,9 +6,11 @@
   "featuredExpositions": [
     "fourier-symmetry-and-reconstruction",
     "what-a-boundary-map-can-prove",
-    "what-a-derivative-retains"
+    "what-a-derivative-retains",
+    "quotients-and-reconstruction"
   ],
   "expositions": [
+    "quotients-and-reconstruction",
     "fourier-symmetry-and-reconstruction",
     "ibm-ponder-this-2010",
     "pointwise-weighting-convergence-in-measure",

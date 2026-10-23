@@ -1,0 +1,55 @@
+{
+  "edition": "2026-10-23.1",
+  "published_files_changed": false,
+  "source_only_changes": [
+    {
+      "path": "content/essays.json",
+      "canonical_sha256": "7678a7643383ab4f12209deb7414b7e53ecb0deb9d25f1b0a7bd602695136000",
+      "archived_sha256": "0311d5276658af684f5b988ba3b570c8c7accb75bfbafb10f7f63df950a8addf",
+      "reason": "Remove unpublished essay record."
+    },
+    {
+      "path": "content/gaming.json",
+      "canonical_sha256": "38cb452984f376dbf649ff8a475a7f37689882af85d7324ee50484878ef0c324",
+      "archived_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "reason": "Remove hidden detailed gaming records; the public compact note and images remain in public interests metadata."
+    },
+    {
+      "path": "content/interests.json",
+      "canonical_sha256": "b541bdbb3008c474f39892f4b2368124cc6033ca40cd62d0129ff2c922df13f3",
+      "archived_sha256": "77a19b712f97ad592b4fe934f60f8e95c3c059eca13323aae76bcb59d82003c9",
+      "reason": "Retain public YouTube, Brood War and Overwatch entries; remove hidden fashion, car and private Maps profile metadata."
+    },
+    {
+      "path": "scripts/interests-pages.mjs",
+      "canonical_sha256": "94e2a7446fe5c5cd59bdd843a973009357afdd7726cb52bf53718eac4da2f59b",
+      "archived_sha256": "e4af2ec95c9923b2f6cfbab69b8ced0009c8688c20c92a1a3952e4a37d3f0785",
+      "reason": "Remove unreachable private collection template branches; retain active public output."
+    },
+    {
+      "path": "scripts/render.mjs",
+      "canonical_sha256": "71395f6a6be7634f0564b3329b2cc92449de216a0fdd4d389250e35b91415725",
+      "archived_sha256": "01a2fac9ab06a51f131dfc8bf9c25b4604dfa2e47ea0f861e5a1abef5e6233e8",
+      "reason": "Treat absent private collections as unpublished in sanitized metadata."
+    },
+    {
+      "path": "scripts/check.mjs",
+      "canonical_sha256": "a1ae94e09b5b5b881269ea59b229f2ecdc4ea2505823751b7a6b15aae1113c20",
+      "archived_sha256": "247eaea2e2d5459755b1b49c1b64f7e9c4be18a22bf104d0d9fa4bbcbb1d1879",
+      "reason": "Check compact public screenshot metadata without retaining hidden detailed game records; treat absent car as unpublished."
+    },
+    {
+      "path": "content/expositions/when-a-formal-logarithm-fails-source/render-article.mjs",
+      "canonical_sha256": "7bb86c6c6efbc2b6a841aa39e04ef666e7cc8d18f8b0059c2ce0acae8d79005a",
+      "archived_sha256": "7957001b0643b21452edca8c1f8a284a4cc4c6b8a6c1cbb7137a6d6c36bb652c",
+      "reason": "Remove machine-specific fallback paths; installed packages and explicit environment overrides remain supported."
+    },
+    {
+      "path": "content/expositions/when-a-formal-logarithm-fails-source/article-to-tex.py",
+      "canonical_sha256": "76b002994e3e08b8ba31a5782e74a57314eb3ebc2c0ebadedf3155cdf555380f",
+      "archived_sha256": "25072158173d9c94ddc9155ddc4a3be830bf72013f0b8fe38a53189909c4ca52",
+      "reason": "Remove machine-specific dependency path; installed package and explicit environment override remain supported."
+    }
+  ],
+  "scope": "Private metadata and inactive private template branches are excluded. Two converter dependency fallbacks are made portable. Public README replaces internal working documentation."
+}

@@ -1,0 +1,536 @@
+\section{Linear objects, extension data, and derived reconstruction}
+\label{t:chapter}
+
+The preceding section enlarged a quotient by retaining identifications and
+their coherences.  There is a second enlargement with a different purpose:
+keep a nonlinear object, and construct a linear category of coefficients
+over it.  Modules then emerge from the construction rather than being
+imposed on every object at the outset.  We will see this first for ordinary
+groups, then for spaces over $BG$, and finally for rings and their
+cotangent complexes.
+
+This distinction also clarifies what Jordan--H\"older does not recover.
+Two objects can have the same simple factors and different extension
+data.  A derived mapping space can retain the missing extension classes
+and their automorphisms.  A derived tensor product can retain a relation
+that an ordinary tensor product discards.  These are additional structural
+theorems with explicit computations, rather than a claim that a change of
+language makes the factors determine the original object.
+
+\subsection{Why a full additive replacement cannot work}
+
+\begin{proposition}\label{t:no-full-additive}
+There is no fully faithful functor from the category of groups to an
+additive category.
+\end{proposition}
+\begin{proof}
+Suppose $F:\mathbf{Grp}\to\mathcal A$ were such a functor.  The trivial
+group has just one endomorphism.  Thus $F1$ has one endomorphism, so its
+identity equals its zero endomorphism.  It follows that $F1$ is a zero
+object: every map into or out of it is zero.  Consequently $F$ carries
+zero homomorphisms to zero morphisms, since these factor through $1$.
+
+Let $p:S_3\to C_2$ be the sign quotient.  There are four homomorphisms
+$C_2\to S_3$: the trivial one and the three choices of a transposition
+as image of the generator.  There are two homomorphisms $C_2\to C_2$.
+Postcomposition with $p$ sends only the trivial map to zero, and sends
+the three remaining maps to the identity.  In $\mathcal A$, postcomposition
+with $Fp$ is a homomorphism of abelian groups
+\[
+ \operatorname{Hom}_{\mathcal A}(FC_2,FS_3)
+ \longrightarrow \operatorname{Hom}_{\mathcal A}(FC_2,FC_2).
+\]
+Full faithfulness makes its kernel trivial, so it must be injective.  But
+it has the four-element and two-element sets just described as its domain
+and codomain.  This is a contradiction.
+\end{proof}
+
+The obstruction concerns a \emph{full} replacement preserving all maps.
+It does not prohibit a linear invariant, nor an encoding with additional
+nonlinear structure.  It explains why we retain the original base when
+constructing its linear theory.  The homotopy category of a stable
+$\infty$-category is additive, so a fully faithful embedding of the nerve
+of all groups into a stable $\infty$-category would give the same
+contradiction after passage to homotopy categories.
+
+\subsection{Modules already arise as abelian objects over a group}
+
+Fix a group $G$.  An object of $\mathbf{Grp}/G$ is a homomorphism
+$p:E\to G$.  An abelian group object in this slice has, in addition,
+a zero section $s:G\to E$, fiberwise addition
+\[
+ \mu:E\times_G E\longrightarrow E,
+\]
+and fiberwise inverse, satisfying the abelian group axioms.  All these
+maps must themselves be group homomorphisms over $G$.  The requirement
+relates the old group multiplication to the new fiberwise addition.
+
+\begin{theorem}[Modules over a group as linear objects]
+\label{t:beck}
+There is an equivalence of ordinary categories
+\[
+ \operatorname{Ab}(\mathbf{Grp}/G)
+ \simeq \mathbb Z[G]\text{-}\mathbf{Mod}.
+\]
+\end{theorem}
+\begin{proof}
+Start with an abelian group object $p:E\to G$ and let $M=\ker p$.
+The fiberwise addition restricts to a second operation on $M$ with the
+same identity as the inherited group multiplication, since $s$ is a
+homomorphism and $s(1)=1$.  The fact that $\mu$ is a homomorphism gives
+the interchange law
+\[
+ \mu(aa',bb')=\mu(a,b)\mu(a',b')\qquad(a,a',b,b'\in M).
+\]
+It follows that
+\[
+ \mu(a,b)=\mu(a,1)\mu(1,b)=ab,
+ \qquad
+ \mu(a,b)=\mu(1,b)\mu(a,1)=ba.
+\]
+Thus $M$ is abelian, and its two operations agree.
+
+The section acts on $M$ by conjugation:
+\[
+ g\cdot m=s(g)ms(g)^{-1}.
+\]
+Normality of the kernel keeps this in $M$.  Conjugation is an automorphism
+of its abelian group, and $s(gh)=s(g)s(h)$ gives
+$(gh)\cdot m=g\cdot(h\cdot m)$.  Extending the action additively gives
+a left $\mathbb Z[G]$-module.  The map
+\[
+ M\rtimes G\longrightarrow E,\qquad (m,g)\longmapsto m s(g)
+\]
+is an isomorphism: its inverse sends $e$ to
+$(e s(p(e))^{-1},p(e))$.  The multiplication formula is
+\begin{equation}\label{t:semidirect-law}
+ (m,g)(n,h)=(m+g\cdot n,gh).
+\end{equation}
+Because $\mu$ is a homomorphism, its values on
+$(m s(g),n s(g))$ are obtained by multiplying its value on $(m,n)$ with
+its value on $(s(g),s(g))$.  The former is $m+n$ and the latter is $s(g)$,
+the zero in the fiber.  Thus the fiberwise addition becomes
+$((m,g),(n,g))\mapsto(m+n,g)$.
+
+Conversely, let $M$ be a left $\mathbb Z[G]$-module.  Formula
+\eqref{t:semidirect-law} is associative because the action is by
+automorphisms and respects multiplication in $G$.  Its identity is $(0,1)$
+and the inverse of $(m,g)$ is $(-g^{-1}\cdot m,g^{-1})$.
+Projection to $G$ has the zero section $g\mapsto(0,g)$.  Fiberwise addition
+is the formula above and fiberwise inverse is $(m,g)\mapsto(-m,g)$.
+To check addition is a group homomorphism, compare
+\[
+ (m+g\cdot m')+(n+g\cdot n')
+   =(m+n)+g\cdot(m'+n').
+\]
+This uses commutativity in $M$ and additivity of the action.  Fiberwise
+inverse is a homomorphism by the same additivity, and all abelian group
+axioms hold fiber by fiber.
+
+A morphism of abelian group objects preserves $p$, $s$, and $\mu$.
+Its restriction to $M$ is additive and commutes with conjugation by
+$s(g)$, hence is $\mathbb Z[G]$-linear.  Conversely a module map
+$u:M\to M'$ gives $(m,g)\mapsto(u(m),g)$, which preserves every structure
+map.  These assignments are inverse on objects up to the displayed
+isomorphism and inverse on morphisms.  This proves the equivalence.
+\end{proof}
+
+No representation has been chosen externally.  The action appeared
+because a coefficient object over $G$ must be transported along $G$.
+The theorem derives modules as internal linear objects over a nonlinear
+base.  It does not identify a simple $\mathbb Z[G]$-module with a simple
+quotient group of $G$; these are different questions about the same base.
+
+\subsection{Stabilization retains the base and enriches the coefficients}
+
+A spectrum object can be described by pointed objects $E_0,E_1,\ldots$
+and equivalences $E_n\simeq\Omega E_{n+1}$.  The loop object is formed by
+a homotopy pullback at the distinguished point.  Stabilization
+$\operatorname{Sp}(\mathcal C)$ collects such objects in a suitable
+$\infty$-category $\mathcal C$ with finite limits.  We use the standard
+theory in \cite[\S\S1.4.2--1.4.3]{HA}, including the standard $t$-structure on
+spectra and its heart $\mathbf{Ab}$.  The heart consists of the
+Eilenberg--Mac Lane spectra, having only degree-zero homotopy.
+
+The terminology records a degree-by-degree separation. A spectrum is
+connective when $\pi_i=0$ for $i<0$, and coconnective when $\pi_i=0$
+for $i>0$. The standard $t$-structure supplies compatible truncations
+to these ranges. Its heart is their intersection: only $\pi_0$ can
+remain, and it is an abelian group. Thus passing to the heart will
+recover ordinary linear coefficients from coefficients with higher degrees.
+
+In the slice $\mathcal S_{/BG}$, a pointed object means a family
+$E\to BG$ with a section $BG\to E$; that section chooses the basepoint
+in each fiber. Looping is performed in each fiber. A spectrum object
+is consequently a family with compatible repeated deloopings, so the
+base and its transport remain part of the construction.
+
+\begin{theorem}[Stable coefficients on a groupoid]\label{t:spectra-over-bg}
+For an ordinary group $G$ there is a natural equivalence
+\[
+ \operatorname{Sp}(\mathcal S_{/BG})
+  \simeq\operatorname{Fun}(BG,\operatorname{Sp}).
+\]
+Its pointwise standard $t$-structure has heart
+$\mathbb Z[G]\text{-}\mathbf{Mod}$.
+\end{theorem}
+\begin{proof}
+Straightening, Theorem~\ref{h:straightening}, first identifies
+$\mathcal S_{/BG}$ with $\operatorname{Fun}(BG,\mathcal S)$.
+Pointed objects and finite limits in a functor category are computed
+pointwise.  Therefore a sequence of pointed functors with equivalences
+$E_n\simeq\Omega E_{n+1}$ is exactly a functor from $BG$ to sequences
+of pointed spaces satisfying those equivalences.  This identifies the
+objects, coherent maps, and their mapping spaces with
+$\operatorname{Fun}(BG,\operatorname{Sp})$.
+
+Pointwise truncation gives the stated $t$-structure.  An object in its
+heart assigns an Eilenberg--Mac Lane spectrum to the unique object of
+$BG$, hence an abelian group $M$.  Its transport maps give a $G$-action
+by automorphisms of $M$.  Mapping spaces between heart objects are
+discrete, so the coherent conditions reduce exactly to the ordinary
+action identities.  Maps are additive maps commuting with the action.
+These are left $\mathbb Z[G]$-modules and their linear maps.
+\end{proof}
+
+This theorem adds higher coefficient groups and coherent transport while
+keeping $BG$ in the construction.  Its restriction to degree zero has
+the same module category as Theorem~\ref{t:beck}.  The two descriptions
+explain the relationship between ordinary internal linear objects and
+stable local coefficient systems.
+
+The ambient homotopical category matters.  We have stabilized
+$\mathcal S_{/BG}$, not the ordinary nerve of $\mathbf{Grp}$.
+Indeed, in the ordinary pointed category of groups the pullback
+$1\times_G1$ is $1$ for every $G$.  Thus its ordinary loop construction
+is trivial, and spectrum objects in that unenhanced nerve are trivial.
+The homotopy fiber $*\times^h_{BG}*$ instead retains $G$.
+Homotopical enhancement must precede this stabilization.
+
+\subsection{A derived connecting map reconstructs an extension}
+
+For this subsection $R$ is an associative unital ring and modules are left
+modules.  We use cochain complexes, whose differentials raise degree.
+The shift is $(C[1])^j=C^{j+1}$ with negated differential, so a module
+$N[1]$ has its only nonzero cohomology in degree $-1$.
+
+We use the standard derived framework: localizing complexes at
+quasi-isomorphisms gives a stable $\infty$-category $\mathcal D(R)$;
+its heart is $R\text{-}\mathbf{Mod}$; a fiber/cofiber sequence gives the
+long exact cohomology sequence; and a bounded projective resolution
+computes derived maps and derived tensor products.  These are foundational
+inputs, not consequences of composition-factor uniqueness.  References
+are \cite[\S1.3]{HA} and \cite[Tags 06XP, 0643]{Stacks}.
+Write $[X,Y]$ for $\pi_0\operatorname{Map}_{\mathcal D(R)}(X,Y)$ and set
+\[
+ \operatorname{Ext}^1_R(L,N)=[L,N[1]].
+\]
+
+\begin{theorem}[Extensions are connecting morphisms]
+\label{t:extension-classification}
+The isomorphism classes of marked short exact sequences
+\[
+ 0\longrightarrow N\xrightarrow{i}E\xrightarrow{p}L\longrightarrow0
+\]
+are naturally in bijection with $[L,N[1]]$.  Here an isomorphism of marked
+extensions induces the identity on both $N$ and $L$.
+\end{theorem}
+\begin{proof}
+The cone of $i:N[0]\to E[0]$ is the complex $N\to E$ in degrees
+$-1,0$.  Its cohomology is $L$ in degree zero and zero elsewhere, so
+the quotient map identifies it with $L$ in $\mathcal D(R)$.  The cofiber
+sequence therefore supplies a connecting map
+\[
+ N\longrightarrow E\longrightarrow L\xrightarrow{\delta}N[1].
+\]
+An isomorphism of marked extensions preserves $\delta$.
+
+Conversely, given a map $\delta:L\to N[1]$, form its fiber $E_\delta$.
+The long exact cohomology sequence gives
+\[
+ 0\longrightarrow N\longrightarrow H^0(E_\delta)
+ \longrightarrow L\longrightarrow0,
+\]
+and $H^j(E_\delta)=0$ for $j\neq0$.  The canonical truncation maps
+therefore identify $E_\delta$ with this module in the derived category.
+A path between two choices of $\delta$ induces an equivalence of their
+fiber diagrams, hence an isomorphism of marked extensions.
+
+Finally, the fiber of the connecting map of the first construction is
+the original $E$, with its given maps.  The connecting map recovered
+from the second construction is the original $\delta$, because both
+are the same fiber/cofiber diagram.  This uses the universal properties
+of the fiber and the stable rotation of a cofiber sequence; the spaces
+of choices of each such limit or colimit are contractible.  Thus the
+two constructions are inverse on the stated isomorphism classes.
+\end{proof}
+
+\begin{proposition}[The automorphisms also survive]
+\label{t:extension-automorphisms}
+The automorphism group of a marked extension as above is naturally
+$\operatorname{Hom}_R(L,N)$.  It agrees with the fundamental group of
+$\operatorname{Map}(L,N[1])$ at its class $\delta$.
+\end{proposition}
+\begin{proof}
+For $u:L\to N$, the map $1_E+iup$ preserves both markings and has
+inverse $1_E-iup$, since $pi=0$.  Multiplication of these automorphisms
+corresponds to addition of $u$.
+Conversely, if $f$ preserves the markings, $p(f-1)=0$, so $f-1$ factors
+uniquely as $iv$ with $v:E\to N$.  The equality $(f-1)i=0$ and
+monicity of $i$ give $vi=0$.  The quotient property of $p$ makes $v=up$
+for a unique $u:L\to N$.
+
+In a stable category, looping the mapping space at zero identifies
+$\pi_1\operatorname{Map}(L,N[1])$ with $[L,N]$.  Translation in this
+grouplike mapping space gives the same group at $\delta$.
+The fully faithful inclusion of the heart identifies $[L,N]$ with
+$\operatorname{Hom}_R(L,N)$, proving the final assertion.
+\end{proof}
+
+The bijection also respects the Baer addition previously
+constructed. Naturality of the connecting map makes pullback along
+$L\to L\oplus L$ and pushout along $N\oplus N\to N$ act by
+precomposition and postcomposition. Applied to $\delta_1\oplus\delta_2$,
+their composite is $\delta_1+\delta_2$. Thus the derived notation
+$\operatorname{Ext}^1$ identifies the same abelian group as the earlier
+extension construction, not only the same underlying set.
+
+The factors $N,L$ are the endpoints, and $\delta$ is the missing
+attachment.  Its mapping space also retains the automorphisms of that
+attachment.  This is a precise instance of gaining reconstruction data
+by retaining maps rather than just a list of objects.
+
+\begin{example}[The same two factors, different attachments]
+\label{t:dual-number-extension}
+Let $R=k[t]$ for a field $k$, and let $k=R/(t)$ as an $R$-module.
+The free resolution
+\[
+ 0\longrightarrow R\xrightarrow{\,t\,}R\longrightarrow k
+ \longrightarrow0
+\]
+is exact: multiplication by $t$ is injective in the polynomial ring,
+and its image is the kernel of evaluation at $0$.  Applying
+$\operatorname{Hom}_R(-,k)$ makes the differential zero, hence
+$\operatorname{Ext}^1_R(k,k)\cong k$.
+
+Every marked extension can also be described without derived notation.
+Let $e$ be the specified image of $1$ in its kernel and choose a lift $f$
+of $1$ in its quotient.  Then $e,f$ span the underlying vector space:
+subtract a multiple of $f$ from any element and the result is in $ke$.
+They are independent by applying the quotient map first, then using
+injectivity on the kernel.  Necessarily
+\[
+ te=0,\qquad tf=\lambda e
+\]
+for a unique $\lambda\in k$.  Replacing $f$ by $f+ce$ does not change
+$\lambda$.  Conversely these formulas define an $R$-module extension
+for every $\lambda$.  A map preserving the markings preserves this
+scalar, and the formulas give an isomorphism whenever the scalars agree.
+This is the concrete parameter detected by the derived calculation.
+
+At $\lambda=0$ the module is $k\oplus k$.  At $\lambda\neq0$ it is
+isomorphic, after forgetting the markings, to $R/(t^2)$: send $1$ to
+$f$ and $t$ to $\lambda e$.  The map is surjective, has kernel $(t^2)$,
+and the displayed independent vectors prove injectivity of the induced
+map.  Both modules have two factors isomorphic to $k$, but their
+$t$-operators are different.  The marked classification distinguishes
+all values of $\lambda$, while the middle-object classification merges
+all nonzero values.  These classifications must not be conflated.
+\end{example}
+
+\subsection{A derived tensor product retains an equation}
+
+For commutative $R$, the derived tensor product is denoted
+$M\otimes_R^{\mathbf L}N$.  A projective resolution replaces one input
+before tensoring.  This repairs the failure of ordinary tensoring to
+preserve exactness by retaining the resulting homology.
+
+\begin{proposition}\label{t:derived-intersection}
+For $R=k[t]$ and $k=R/(t)$,
+\[
+ H^j(k\otimes_R^{\mathbf L}k)=
+ \begin{cases}k,&j=0,-1,\\0,&\text{otherwise.}\end{cases}
+\]
+The ordinary tensor product is only $k$.
+\end{proposition}
+\begin{proof}
+Place the two free terms of the resolution in
+Example~\ref{t:dual-number-extension} in degrees $-1,0$.
+Tensoring with $k$ gives the complex
+\[
+ \bigl[\,k\xrightarrow{\,0\,}k\,\bigr]
+\]
+in those degrees, because $t$ acts as zero on $k$.
+Its cohomology is exactly the displayed answer.
+Ordinary tensoring gives $R/(t)\otimes_R R/(t)\cong R/(t)$: the map
+$a\otimes b\mapsto ab$ has inverse $c\mapsto c\otimes1$.
+\end{proof}
+
+In affine geometry this is the derived self-intersection of the origin
+inside the affine line.  The degree $-1$ copy of $k$ retains the overlap
+of the two imposed copies of the equation $t=0$.  The statement about
+cohomology was proved directly by the resolution; the geometric name
+does not serve as its proof.  The calculation is already beyond what a
+list of simple factors or an ordinary quotient alone records.
+
+\subsection{Cotangent objects: the same method for equations and deformations}
+
+There is a corresponding linear theory for a commutative algebra.
+For an ordinary $A$-module $M$, the split square-zero algebra $A\oplus M$
+has multiplication
+\[
+ (a,m)(b,n)=(ab,an+bm).
+\]
+Its ideal $0\oplus M$ has square zero.  A section of
+$A\oplus M\to A$ has the form $a\mapsto(a,d(a))$.  Comparing products
+shows that it is a ring map exactly when
+$d(ab)=a\,d(b)+b\,d(a)$ and $d$ is additive with $d(1)=0$.
+Over a base ring $R$, being an $R$-algebra map adds $d(r)=0$.
+Thus derivations arise as maps into linear objects over the algebra.
+
+For the higher statement, the notation retains these markings:
+\[
+ \operatorname{Der}_A(B,M)
+ :=\operatorname{Map}_{(\operatorname{CAlg}_{A/})_{/B}}
+       (B,B\oplus M).
+\]
+The source is the identity map of the $A$-algebra $B$ and the target is
+its split square-zero extension, with its projection to $B$.  Thus this
+is the space of sections over $B$ in $A$-algebras, including the specified
+coherences with the base and the projection.
+
+\begin{theorem}[Framework theorem, quoted: tangent modules and cotangents]
+\label{t:cotangent-foundation}
+For an $E_\infty$-ring $A$,
+$\operatorname{Sp}(\operatorname{CAlg}_{/A})\simeq\operatorname{Mod}_A$.
+For a map $A\to B$, derived $A$-derivations of $B$ into a $B$-module $M$
+are represented by a cotangent module $L_{B/A}$:
+\[
+ \operatorname{Der}_A(B,M)
+ \simeq\operatorname{Map}_{\operatorname{Mod}_B}(L_{B/A},M).
+\]
+For $A\to B\to C$ there is a cofiber sequence
+\begin{equation}\label{t:transitivity}
+ C\otimes_B L_{B/A}\longrightarrow L_{C/A}
+ \longrightarrow L_{C/B}.
+\end{equation}
+\end{theorem}
+These are the tangent equivalence, representing property, and transitivity
+formalism of \cite[\S7.3; Corollaries 7.3.4.14 and 7.3.3.6]{HA}.
+Tensor products here are tensor products of module spectra, hence derived.
+In ordinary commutative algebra the corresponding cotangent complexes
+and transitivity triangle are constructed using simplicial resolutions
+\cite[Tag 08QX]{Stacks}.
+
+The category $\operatorname{CAlg}_{/A}$ contains nonlinear algebras mapping
+to $A$.  Its stabilization produces the linear coefficient category at
+$A$, just as spaces over $BG$ produced spectrum-valued local coefficients.
+The representing property says exactly which measurements the cotangent
+module encodes: all derived derivations into any coefficient module.
+
+\begin{proposition}[An explicit obstruction to extending a derivation]
+\label{t:derivation-obstruction}
+Let $A\to B\to C$ be maps of $E_\infty$-rings and $M$ a $C$-module.
+A homotopy class of $A$-derivations $B\to M$ extends to an $A$-derivation
+$C\to M$ if and only if its image under the connecting homomorphism
+\[
+ [C\otimes_B L_{B/A},M]
+   \longrightarrow [L_{C/B},M[1]]
+\]
+vanishes.  The brackets denote morphisms in the homotopy category of
+$C$-modules.
+\end{proposition}
+\begin{proof}
+Apply the mapping-spectrum functor into $M$ to
+\eqref{t:transitivity}.  Mapping out of a cofiber turns it into a fiber,
+giving the exact sequence
+\[
+ [L_{C/A},M]\longrightarrow[C\otimes_B L_{B/A},M]
+   \longrightarrow[L_{C/B},M[1]].
+\]
+The first arrow is restriction of derivations: naturality of the
+representing property identifies the cotangent map with restriction,
+and extension of scalars identifies the middle term with
+$[L_{B/A},M]$ as a $B$-module mapping group.
+Exactness says precisely that a class lies in the image of restriction
+if and only if its connecting class is zero.
+\end{proof}
+
+This is a theorem about existence of an extension of a homotopy class.
+It does not assert uniqueness.  The full mapping fiber retains the
+choices of extension, their paths, and their higher compatibilities.
+The transitivity triangle organizes all three algebras in one statement;
+its connecting arrow identifies the obstruction rather than merely
+asserting that some obstruction ought to exist.
+
+For a final explicit computation, use ordinary commutative algebras over
+a field $k$ of characteristic zero.  This choice also permits comparison
+with commutative differential graded algebras and $E_\infty$-$Hk$-algebras
+\cite[Proposition 7.1.4.11]{HA}; no equivalence between those models in
+arbitrary positive characteristic is being assumed. The calculation below
+is in ordinary derived cotangent theory. Under the rational comparison,
+its cotangent object corresponds to the spectral one because both
+corepresent the same derived-derivation functor, with the algebra and
+coefficient module retained.
+
+\begin{theorem}[Framework theorem, quoted: a hypersurface cotangent]
+\label{t:hypersurface-input}
+If $P=k[x_1,\ldots,x_n]$ and $A=P/(f)$ with $f$ a nonzero divisor,
+the ordinary derived cotangent complex $L_{A/k}$ is represented in
+degrees $-1,0$ by
+\[
+ (f)/(f^2)\longrightarrow\Omega_{P/k}\otimes_P A,
+ \qquad [f]\longmapsto df.
+\]
+\end{theorem}
+This regular-quotient computation follows from the cotangent
+transitivity triangle and the regular-sequence theorem
+\cite[Tags 08SH, 08QX]{Stacks}.  The ordinary module of differentials
+alone is its degree-zero cohomology; the complex retains the relation
+before taking that quotient.
+
+\begin{example}[The infinitesimal direction of the dual numbers]
+\label{t:cotangent-dual-numbers}
+Take $A=k[t]/(t^2)$.  The polynomial $t^2$ is a nonzero divisor in
+$k[t]$, so Theorem~\ref{t:hypersurface-input} applies.  Both terms are
+free rank-one $A$-modules, and the complex is
+\[
+ L_{A/k}\simeq
+ \bigl[\,A e\xrightarrow{\ e\mapsto 2t\,dt\ }A\,dt\,\bigr].
+\]
+The characteristic assumption makes $2$ invertible.  Multiplication by
+$2t$ has image $kt$ and kernel $kt$ in $A$.  Consequently
+\[
+ H^0(L_{A/k})\cong k\,dt,
+ \qquad H^{-1}(L_{A/k})\cong k\,(te).
+\]
+These assertions can be checked on $a+bt$: multiplication by $2t$
+gives $2at$.  The negative-degree term therefore survives; replacing
+the complex by its ordinary differentials loses it.
+
+Let $k$ be an $A$-module through $t\mapsto0$.  Since the displayed
+cotangent complex is a bounded complex of free modules, its derived
+maps into $k$ are computed by the ordinary Hom complex.  That complex
+has a copy of $k$ in degrees $0,1$ and zero differential.  Thus
+\[
+ [L_{A/k},k]\cong k,
+ \qquad [L_{A/k},k[1]]\cong k.
+\]
+The first is the group of derivations into this coefficient module;
+the second is the next group available for obstruction calculations
+such as Proposition~\ref{t:derivation-obstruction}.  A nonzero possible
+obstruction group does not by itself assert that a specified lifting
+problem has a nonzero obstruction: that requires computing its
+connecting class.
+\end{example}
+
+The progression is now visible.  Exact quotients and refinement identify
+which simple pieces are invariant.  Coherent quotients retain actions and
+transport.  Linear objects over a base produce modules.  Derived maps
+retain attachments and automorphisms; derived tensor products and
+cotangent complexes retain relations and obstruction classes.  Each
+construction answers a new question about information the preceding
+one did not retain.  The ordinary Jordan--H\"older theorem remains one
+proved consequence of the exact framework, while these higher and
+derived results enlarge the kinds of reconstruction that can be asked
+and answered.

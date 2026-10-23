@@ -1,0 +1,386 @@
+\section{Recovering a nilpotent operator from spaces of maps}
+\label{p:probes}
+
+Composition factors count the simple layers, and extensions record ways to
+attach them. We now ask a reconstruction question with a complete answer:
+can a suitable collection of maps into an object determine its isomorphism
+class?
+
+Our objects will be finite-dimensional vector spaces over an arbitrary field
+$k$, equipped with a nilpotent operator. The answer will use only kernels,
+images, quotients, and finite bases. In particular, we will prove the required
+decomposition into chains. No classification of modules over a polynomial
+ring, or Jordan normal form theorem, is assumed.
+
+\subsection{A relation becomes a test object}
+\label{p:relation-probe}
+
+Let $V$ be a finite-dimensional $k$-vector space and let $N:V\to V$ be linear.
+Recall how $N$ gives $V$ the structure of a $k[t]$-module $M$:
+\[
+ \left(\sum_i a_it^i\right)\!\cdot v=\sum_i a_iN^iv,
+ \qquad N^0=\id_V.
+\]
+The identity $N^iN^j=N^{i+j}$ ensures that multiplication of polynomials
+agrees with composition of their actions. A linear map $F:V\to V'$ is a
+$k[t]$-module map precisely when $FN=N'F$: necessity follows by considering
+$t$, and sufficiency follows by induction for powers of $t$ and then by
+linearity for polynomials.
+
+Assume henceforth that $N^R=0$ for some integer $R\geq1$. This is the
+meaning of nilpotence. We allow $V=0$.
+
+For every $r\geq1$, introduce the module
+\[
+ P_r=k[t]/(t^r).
+\]
+Its elements have unique representatives
+$a_0+a_1t+\cdots+a_{r-1}t^{r-1}$: remove all terms divisible by $t^r$, and
+observe that a polynomial of degree less than $r$ divisible by $t^r$ is zero.
+Thus $1,t,\ldots,t^{r-1}$, understood as residue classes, form a $k$-basis.
+Multiplication by $t$ runs along this basis and then gives zero.
+
+The module $P_r$ has one generator with one relation, $t^r\cdot1=0$.
+A map out of $P_r$ asks whether a proposed image of the generator satisfies
+that relation.
+
+\begin{proposition}[A kernel represented by a module]
+\label{p:hom-kernel}
+Evaluation at $1$ gives a $k$-linear isomorphism
+\[
+ \operatorname{ev}_1:\Hom_{k[t]}(P_r,M)\iso\Ker N^r,
+ \qquad f\longmapsto f(1).
+\]
+Its inverse sends $v\in\Ker N^r$ to the map
+\[
+ f_v:P_r\longrightarrow M,\qquad \overline{p(t)}\longmapsto p(N)v.
+\]
+\end{proposition}
+
+\begin{proof}
+If $f$ is a module map, then
+$N^rf(1)=f(t^r\cdot1)=0$. Moreover,
+$f(\overline{p(t)})=p(N)f(1)$, so $f(1)$ determines $f$.
+
+Conversely, if $N^rv=0$ and $p-p'=t^rq$, then
+$(p-p')(N)v=q(N)N^rv=0$. Thus $f_v$ is well-defined on residue classes.
+It is additive and $k$-linear, and
+\[
+ f_v(\overline{a(t)p(t)})=a(N)p(N)v
+ =a(t)\cdot f_v(\overline{p(t)}),
+\]
+so it is a module map. The two constructions are inverse. Addition and
+scalar multiplication of module maps are defined pointwise; the module
+identities verify that these remain module maps. Evaluation and its inverse
+respect these operations.
+\end{proof}
+
+This isomorphism respects maps between the objects being measured. If
+$F:M\to M'$ is a module map, then $FN^r=(N')^rF$, so $F$ sends
+$\Ker N^r$ into $\Ker(N')^r$. The square
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+\Hom_{k[t]}(P_r,M) \arrow[r,"\operatorname{ev}_1","\sim"']
+  \arrow[d,"f\mapsto F\circ f"']
+  & \Ker N^r \arrow[d,"F|_{\Ker N^r}"] \\
+\Hom_{k[t]}(P_r,M') \arrow[r,"\operatorname{ev}_1","\sim"']
+  & \Ker (N')^r
+\end{tikzcd}
+\]
+commutes because both paths send $f$ to $F(f(1))$. This compatibility is what
+it means here for the identification to be \emph{natural} in $M$.
+
+There is also compatibility as we enlarge the test object. The quotient
+map $q_r:P_{r+1}\to P_r$ sends $\overline p$ to $\overline p$; it is
+well-defined because $(t^{r+1})\subseteq(t^r)$. Precomposition by $q_r$
+corresponds, under evaluation at $1$, to the inclusion
+$\Ker N^r\subseteq\Ker N^{r+1}$. The growing sequence of kernels is thus
+also a growing sequence of spaces of maps from explicit test objects.
+
+\subsection{Which endpoints can be reached by a long chain?}
+\label{p:bottom-spaces}
+
+Set
+\[
+ K_r=\Ker N^r,\qquad d_r=\dim K_r\quad(r\geq0).
+\]
+Since $N^0=\id_V$, $K_0=0$ and $d_0=0$. For $r\geq R$, we have
+$K_r=V$. The numbers $d_r$ are now well-defined by the dimension theorem
+already proved. By Proposition~\ref{p:hom-kernel}, they are precisely the
+dimensions of the spaces of maps from the $P_r$.
+
+To understand these numbers, look at a second filtration, this time inside
+$\Ker N$:
+\[
+ B_r=\Ker N\cap\im N^{r-1}\qquad(r\geq1).
+\]
+Every $B_r$ is a subspace, and
+\[
+ \Ker N=B_1\supseteq B_2\supseteq\cdots
+ \supseteq B_R\supseteq B_{R+1}=0.
+\]
+An element of $B_r$ is killed by $N$ and can be reached by applying $N$
+$r-1$ times. It can therefore be the endpoint of a chain of length $r$.
+Membership in $B_{r+1}$ says that it can be reached by an even longer chain.
+
+There is a short exact sequence of vector spaces
+\begin{equation}
+\label{p:kernel-bottom-ses}
+ 0\longrightarrow K_{r-1}\longrightarrow K_r
+ \xrightarrow{\ N^{r-1}\ } B_r\longrightarrow0.
+\end{equation}
+The middle map has the stated target because $N^rx=0$ for $x\in K_r$.
+Its kernel is $K_{r-1}$. It is surjective: if $y\in B_r$, write
+$y=N^{r-1}x$; then $0=Ny=N^rx$, so $x\in K_r$. The first arrow is
+inclusion, and the end arrows are the unique maps to or from the zero space.
+
+Finite-dimensional dimension additivity applied to this sequence gives
+\begin{equation}
+\label{p:bottom-dim}
+ \dim B_r=d_r-d_{r-1}.
+\end{equation}
+Consequently the successive increments in the sequence $(d_r)$ are
+nonnegative and nonincreasing. Define
+\begin{equation}
+\label{p:canonical-multiplicity}
+ E_r=B_r/B_{r+1},\qquad b_r=\dim E_r.
+\end{equation}
+Taking dimensions in the quotient gives
+\begin{equation}
+\label{p:second-difference}
+ \boxed{\ b_r=2d_r-d_{r-1}-d_{r+1}.\ }
+\end{equation}
+This equation has been proved before any choice of chains. In particular,
+its right side is nonnegative because it is the dimension of an actual
+quotient space. We next prove why that quotient counts chains of exactly
+length $r$.
+
+\subsection{Lifting the endpoint filtration to a basis of chains}
+\label{p:chain-construction}
+
+For each $r$, choose vectors
+\[
+ u_{r,1},\ldots,u_{r,b_r}\in B_r
+\]
+whose residue classes form a basis of $B_r/B_{r+1}$. Such vectors exist by
+finite-dimensional basis extension, proved after the dimension theorem.
+Equivalently, start from the empty basis of $B_{R+1}=0$ and extend a basis
+successively as we pass to $B_R,B_{R-1},\ldots,B_1$.
+
+It follows that, for every $h\geq1$, the vectors
+\begin{equation}
+\label{p:endpoint-basis}
+ \{u_{r,j}:h\leq r\leq R,\ 1\leq j\leq b_r\}
+ \quad\text{form a basis of } B_h.
+\end{equation}
+Here is the elementary reason. If a subspace $W\subseteq U$ has a basis and
+we lift a basis of $U/W$, the two lists together span $U$: subtract a
+combination of the lifts to leave an element of $W$. They are independent:
+reduce a relation modulo $W$ first, and then use independence in $W$.
+Applying this observation down the filtration proves
+\eqref{p:endpoint-basis}.
+
+Because $u_{r,j}\in\im N^{r-1}$, choose $v_{r,j}\in V$ with
+\[
+ N^{r-1}v_{r,j}=u_{r,j}.
+\]
+Since $u_{r,j}\in\Ker N$, we also have $N^rv_{r,j}=0$. For
+$1\leq h\leq r$, write
+\[
+ w_{r,j,h}=N^{r-h}v_{r,j}.
+\]
+The index $h$ is the height above zero: $w_{r,j,1}=u_{r,j}$,
+$Nw_{r,j,1}=0$, and $Nw_{r,j,h}=w_{r,j,h-1}$ for $h>1$.
+For example, a chain of length three has the form
+\[
+\begin{tikzcd}[column sep=large]
+ w_{3,j,3} \arrow[r,mapsto,"N"] &
+ w_{3,j,2} \arrow[r,mapsto,"N"] &
+ w_{3,j,1} \arrow[r,mapsto,"N"] &0.
+\end{tikzcd}
+\]
+The nodes in this last diagram are vectors, and the arrows show the action
+of $N$ on them; it is not a diagram of vector spaces and linear maps.
+
+\begin{theorem}[A basis of nilpotent chains]
+\label{p:chain-basis}
+The vectors $w_{r,j,h}$, for $1\leq r\leq R$, $1\leq j\leq b_r$ and
+$1\leq h\leq r$, form a basis of $V$.
+Consequently there is a $k[t]$-module isomorphism
+\[
+ M\cong\bigoplus_{r=1}^{R}P_r^{\oplus b_r}.
+\]
+\end{theorem}
+
+\begin{proof}
+First prove independence. Suppose that a linear combination of these
+vectors is zero. If any coefficient is nonzero, let $H$ be the largest
+height $h$ at which a nonzero coefficient occurs. Apply $N^{H-1}$ to the
+relation. Every term of height less than $H$ vanishes, and a term
+$w_{r,j,H}$ becomes $u_{r,j}$. We obtain a relation among the vectors
+$u_{r,j}$ with $r\geq H$. These vectors are independent by
+\eqref{p:endpoint-basis}. Thus every coefficient at height $H$ is zero,
+contradicting its choice. No nonzero relation exists.
+
+For spanning, prove by induction on $h$ that $K_h$ lies in the span of the
+chosen chain vectors. The case $h=0$ is immediate. Given $x\in K_h$,
+the vector $N^{h-1}x$ lies in $B_h$. By \eqref{p:endpoint-basis}, write
+\[
+ N^{h-1}x=\sum_{r\geq h,\,j}c_{r,j}u_{r,j}.
+\]
+Each $u_{r,j}$ in this sum has the chosen lift $w_{r,j,h}$ at height $h$.
+Therefore
+\[
+ x-\sum_{r\geq h,\,j}c_{r,j}w_{r,j,h}\in K_{h-1}.
+\]
+The induction hypothesis puts this difference in the required span, and
+so puts $x$ there. Since $K_R=V$, spanning follows.
+
+For the module statement, on the copy of $P_r$ indexed by $(r,j)$ define
+\[
+ \overline{p(t)}\longmapsto p(N)v_{r,j}.
+\]
+This is a well-defined module map because $N^rv_{r,j}=0$, by the same
+argument as Proposition~\ref{p:hom-kernel}. Combining these maps gives a map
+from the displayed finite direct sum to $M$. It sends the standard basis
+vectors $1,t,\ldots,t^{r-1}$ in each summand to the corresponding chain,
+in reverse height order. The basis statement makes this map bijective;
+its inverse respects the module operations because the map is bijective
+and respects those operations. It is therefore a module isomorphism.
+\end{proof}
+
+The choices in this proof are visible. We selected representatives of
+quotient bases and then lifted them through powers of $N$. Different
+choices can give different chain bases. The spaces $B_r$, the quotients
+$E_r$, and their dimensions $b_r$ depend only on $N$.
+
+In particular, the construction proves the precise interpretation
+\[
+ \boxed{
+ \dim\frac{\Ker N\cap\im N^{r-1}}
+              {\Ker N\cap\im N^r}
+ =\text{the number of chains of length exactly }r.
+ }
+\]
+The quotient removes endpoints which can be lifted farther. A basis of
+what remains supplies the new chains of length $r$ in the construction.
+
+\subsection{Reading the operator from its measurements}
+\label{p:profile-reconstruction}
+
+In one chain of length $s$, the kernel of $N^r$ is spanned by the bottom
+$\min(r,s)$ vectors. The direct-sum decomposition therefore gives
+\begin{equation}
+\label{p:profile-formula}
+ d_r=\sum_{s=1}^{R}b_s\min(r,s),\qquad
+ d_r-d_{r-1}=\sum_{s\geq r}b_s.
+\end{equation}
+The increment counts chains of length at least $r$. Subtracting successive
+increments gives exactly the second-difference formula
+\eqref{p:second-difference}, which we had already obtained from canonical
+subquotients.
+
+\begin{corollary}[Reconstruction by a finite nilpotent profile]
+\label{p:reconstruction}
+Two finite-dimensional nilpotent $k[t]$-modules $M$ and $M'$ are isomorphic
+if and only if
+\[
+ \dim_k\Hom_{k[t]}(P_r,M)=\dim_k\Hom_{k[t]}(P_r,M')
+ \qquad\text{for every }r\geq1.
+\]
+If a common nilpotence bound $R$ is known, it suffices to use $1\leq r\leq R$.
+\end{corollary}
+
+\begin{proof}
+A module isomorphism identifies the spaces of maps by postcomposition,
+so it preserves all the displayed dimensions. Conversely, equality of
+the dimensions means equality of the $d_r$ by
+Proposition~\ref{p:hom-kernel}. The formula
+$b_r=2d_r-d_{r-1}-d_{r+1}$ then gives the same chain multiplicities for
+both modules. Theorem~\ref{p:chain-basis} identifies each with the same
+direct sum of the $P_r$, so they are isomorphic.
+
+For a known common bound $R$, put $d_0=0$ and $d_{R+1}=d_R$; nilpotence
+justifies the latter equality. The first $R$ measurements therefore
+determine every possibly nonzero $b_r$.
+\end{proof}
+
+Thus the dimensions of these particular spaces of maps determine the
+isomorphism class in this particular category. They do not choose an
+isomorphism or a preferred basis. The proof succeeds because we established
+a decomposition theorem and then showed that the measurements recover
+every multiplicity in that decomposition.
+
+Here are the first distinctions. Write $J_s$ for multiplication by $t$ on
+$P_s$; as an operator, it is a single nilpotent chain of length $s$.
+In dimension three we obtain
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Operator & $(d_1,d_2,d_3)$ & $(b_1,b_2,b_3)$ \\
+\midrule
+Zero on $k^3$ & $(3,3,3)$ & $(3,0,0)$ \\
+$J_2\oplus J_1$ & $(2,3,3)$ & $(1,1,0)$ \\
+$J_3$ & $(1,2,3)$ & $(0,0,1)$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+The skipped-attachment operator from Section~\ref{x:skip-layer},
+with $N(e_3)=e_1$ and $N(e_1)=N(e_2)=0$, is the middle row:
+$(e_3,e_1)$ is a chain of length two and $e_2$ is a chain of length one.
+Its first measurement is $d_1=2$, whereas the zero operator has $d_1=3$.
+Thus even maps from $P_1$ recover the distinction that both adjacent
+two-layer summaries missed.
+
+All three have three simple factors isomorphic to
+$S_0=P_1=k[t]/(t)$. Indeed, in a chain the subspaces spanned by its first
+$h$ bottom vectors are submodules, and each successive quotient is a copy
+of $S_0$. Concatenating these filtrations across the direct sum gives a
+composition series. The space $S_0$ is simple because it is
+one-dimensional over $k$ and every submodule is a $k$-subspace.
+Consequently all three examples have the same class $3[S_0]$ in the
+Grothendieck group. Their spaces of maps from $P_1,P_2,P_3$ distinguish them.
+
+This does not contradict the universality of the additive invariant:
+these dimensions of spaces of maps need not be additive on short exact
+sequences. For example,
+\[
+ 0\longrightarrow P_1\xrightarrow{\ 1\mapsto t\ }P_2
+ \xrightarrow{\ \overline p\mapsto\overline p\ }P_1
+ \longrightarrow0
+\]
+is exact. The first map identifies $P_1$ with the submodule $kt$ of
+$P_2$, and the second map is reduction modulo $t$, with kernel $kt$.
+Yet $\dim\Hom_{k[t]}(P_1,P_2)=1$, whereas the two endpoint measurements
+sum to $1+1=2$. A module map $P_1\to P_2$ must send $1$ into $kt$, so its
+composition with $P_2\to P_1$ is zero. In particular, the identity map
+of the quotient $P_1$ cannot lift to $P_2$. The failure of additivity is
+the lifting obstruction from the preceding chapter, appearing in an
+explicit measurement.
+
+For a slightly larger calculation, suppose measurements give
+\[
+ (d_0,d_1,d_2,d_3,d_4,d_5)=(0,3,5,6,7,7)
+\]
+for an operator with $N^4=0$. The increments are
+$3,2,1,1,0$. Their successive differences give
+\[
+ (b_1,b_2,b_3,b_4)=(1,1,0,1).
+\]
+Hence $M\cong P_1\oplus P_2\oplus P_4$. The dimensions add to
+$1+2+4=7$, and the kernel dimensions of this sum, calculated as
+$\min(r,1)+\min(r,2)+\min(r,4)$, recover the original measurements.
+
+The scope matters. These same tests do not reconstruct an arbitrary
+operator. If $t$ acts as the identity on a nonzero vector space, every
+$N^r$ is the identity and every $\Hom_{k[t]}(P_r,M)$ is zero. Its profile
+is therefore the same as that of the zero module. The nilpotence
+assumption ensured that our tests eventually reach all of $M$; without
+it, an entire part of the object can remain undetected.
+
+We have now proved a concrete reconstruction result. Composition factors
+identify the simple layers. The canonical subquotients $E_r$ measure how
+far their endpoints can be lifted along the operator. The test modules
+$P_r$ turn those lifting depths into dimensions of spaces of maps, and the
+chain-basis theorem shows that this information is sufficient to recover
+the finite-dimensional nilpotent object up to isomorphism.

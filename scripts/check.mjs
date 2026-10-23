@@ -91,6 +91,7 @@ for(const file of html){
     if(route!=='/404.html'&&!archive)canonicalPages.push(expectedCanonical);
   }
   const allowedScripts=[];
+  if(archive)allowedScripts.push('<script src="/assets/archive-fragments.js" defer></script>');
   if(route==='/notes/what-a-derivative-retains.html'&&!redirect)allowedScripts.push('<script defer src="/assets/derivative-exposition.js" data-tensorgami-derivative="v1"></script>');
   if(route==='/'&&!redirect)allowedScripts.push('<script defer src="/assets/reading-entry.js" data-tensorgami-reading-entry="v1"></script>');
   if(route==='/privacy.html'&&!redirect)allowedScripts.push('<script defer src="/assets/privacy-controls.js" data-tensorgami-privacy-controls="v1"></script>');
@@ -158,11 +159,12 @@ const gaming=allGaming.filter(game=>game.published!==false);
 const puzzles=JSON.parse(readFileSync('content/puzzles.json','utf8'));
 const interests=JSON.parse(readFileSync('content/interests.json','utf8'));
 const compactOverwatch=interests.overwatch?.published===true?interests.overwatch:null;
+const broodWar=interests.broodWar?.published===true?interests.broodWar:null;
 const escapeInterestText=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const compactOverwatchMarkup=compactOverwatch?`<section class="interest-note" aria-labelledby="overwatch"><h2 id="overwatch">${escapeInterestText(compactOverwatch.title)}</h2>${compactOverwatch.body.split(/\n\s*\n/).map(p=>`<p>${escapeInterestText(p)}</p>`).join('')}`:'';
 const compactSignposts=new Map([
-  ['index.html','<p>Patterns on large twisty cubes and a few notes on playing Overwatch.</p>'],
-  ['about.html','<p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. My <a href="/interests.html">Interests page</a> also includes a few notes on playing Overwatch.</p>']
+  ['index.html',broodWar?'<p>Patterns on large twisty cubes and notes on playing Brood War and Overwatch.</p>':'<p>Patterns on large twisty cubes and a few notes on playing Overwatch.</p>'],
+  ['about.html',broodWar?'<p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. I also play StarCraft: Brood War and Overwatch. My <a href="/interests.html">Interests page</a> brings together photographs, game recordings, and a few notes on what I enjoy about these pursuits.</p>':'<p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. My <a href="/interests.html">Interests page</a> also includes a few notes on playing Overwatch.</p>']
 ]);
 if(compactOverwatch)for(const [file,markup] of compactSignposts)if(!readFileSync(path.join(root,file),'utf8').includes(markup))errors.push('Interest signpost missing: '+file);
 if(compactOverwatch&&!readFileSync(path.join(root,'interests.html'),'utf8').includes(compactOverwatchMarkup))errors.push('Compact Overwatch entry missing from Interests');
@@ -281,9 +283,9 @@ for(const sourceAsset of publicAssets){
   const builtAsset=path.join(root,relative);
   if(!existsSync(builtAsset)||!readFileSync(builtAsset).equals(readFileSync(sourceAsset)))errors.push(`${sourceAsset}: retained asset missing or changed in build`);
 }
-for(const note of notes)for(const url of [note.pdf,note.tex,note.source].filter(Boolean)){
+for(const note of notes)for(const url of [note.pdf,note.tex,note.source,note.sourceArchive].filter(Boolean)){
   if(/^\/(pdfs|tex|formalizations)\//.test(url)&&!existsSync(path.join('public',url)))errors.push(`${note.slug}: retained asset has no public source: ${url}`);
 }
-if(notes.length!==14||papers.filter(p=>p.status==='Preprint').length!==9||papers.filter(p=>p.status==='Published').length!==1)errors.push('Unexpected content counts');
+if(notes.length!==16||papers.filter(p=>p.status==='Preprint').length!==9||papers.filter(p=>p.status==='Published').length!==1)errors.push('Unexpected content counts');
 const banned=files.filter(p=>/(?:\.lake|node_modules|deploy-state|\.env|\.git)(?:[\\/]|$)/.test(p));if(banned.length)errors.push('Non-public paths in dist');
 console.log(JSON.stringify({origin,indexable,htmlPages:html.length,sitemapPages:sitemapUrls.length,localReferences:checked,pdfFiles:pdfs.length,papers:papers.length,essays:essays.length,gaming:gaming.length,puzzles:puzzles.length,publicPhotoFiles:publicPhotos.length,retainedPublicAssets:publicAssets.length,errors},null,2));if(errors.length)process.exit(1);

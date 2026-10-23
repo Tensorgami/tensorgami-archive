@@ -1,723 +1,1591 @@
 {
-  "edition": "2026-10-21.3",
-  "counts": {
-    "currentEssays": 6,
-    "currentExpositions": 13,
-    "problemSets": 1,
-    "archivedEssays": 2,
-    "archivedExpositions": 1,
-    "researchRecords": 10,
-    "formalizationProjects": 6
-  },
-  "works": [
+  "edition": "2026-10-23.1",
+  "notes": [
     {
-      "type": "essay",
-      "slug": "mathematical-life-in-the-age-of-ai",
-      "title": "Mathematical Life in the Age of AI",
-      "page": "/essays/mathematical-life-in-the-age-of-ai.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-12"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/essays/mathematical-life-in-the-age-of-ai.html",
-        "content/essays/mathematical-life-in-the-age-of-ai.md"
-      ]
-    },
-    {
-      "type": "essay",
-      "slug": "when-accountability-stops-being-reciprocal",
-      "title": "When Accountability Stops Being Reciprocal",
-      "page": "/essays/when-accountability-stops-being-reciprocal.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-19"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/assets/essays/when-accountability-stops-being-reciprocal.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/essays/when-accountability-stops-being-reciprocal.html",
-        "content/essays/when-accountability-stops-being-reciprocal.md"
-      ]
-    },
-    {
-      "type": "essay",
-      "slug": "the-performance-of-depth",
-      "title": "The Performance of Depth",
-      "page": "/essays/the-performance-of-depth.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-19"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "source",
-          "path": "/assets/essays/the-performance-of-depth.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/essays/the-performance-of-depth.html",
-        "content/essays/the-performance-of-depth.md"
-      ]
-    },
-    {
-      "type": "essay",
-      "slug": "what-a-new-proof-makes-possible",
-      "title": "What a New Proof Makes Possible",
-      "page": "/essays/what-a-new-proof-makes-possible.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-08"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [],
-      "sourceFiles": [
-        "content/essays/what-a-new-proof-makes-possible.html",
-        "content/essays/what-a-new-proof-makes-possible.md"
-      ]
-    },
-    {
-      "type": "essay",
-      "slug": "when-a-description-becomes-a-verdict",
-      "title": "When a Description Becomes a Verdict",
-      "page": "/essays/when-a-description-becomes-a-verdict.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-17"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "source",
-          "path": "/assets/essays/when-a-description-becomes-a-verdict.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/essays/when-a-description-becomes-a-verdict.html",
-        "content/essays/when-a-description-becomes-a-verdict.md"
-      ]
-    },
-    {
-      "type": "essay",
-      "slug": "the-authority-of-a-vision",
-      "title": "The Authority of a Vision",
-      "page": "/essays/the-authority-of-a-vision.html",
-      "status": "current public work",
-      "declaredDates": {
-        "date": "2026-10-07"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [],
-      "sourceFiles": [
-        "content/essays/the-authority-of-a-vision.html",
-        "content/essays/the-authority-of-a-vision.md"
-      ]
-    },
-    {
-      "type": "exposition",
       "slug": "fourier-symmetry-and-reconstruction",
       "title": "Fourier, Symmetry, and Reconstruction",
+      "subtitle": "Cardano, Ferrari, and categorical Fourier duality",
+      "topic": "Galois theory · Fourier duality",
+      "group": "algebra-geometry",
+      "summary": "How root covers and their algebras produce Cardano's and Ferrari's substitutions, then lead to Fourier–Mukai duality, motives, and higher Galois reconstruction.",
+      "body": "Starting with coefficient data, the exposition constructs root covers and uses their character decompositions, traces, and norms to derive the classical substitutions. Worked examples then connect roots to elliptic integrals, monodromy, vector bundles, point counts, and cancellation bounds, leading to motivic and spectral forms of Fourier duality.",
+      "background": "The polynomial calculations use linear algebra, polynomial rings, finite group actions, and basic Galois theory. Section 2 introduces finite étale covers and torsors; the reading routes below offer a way through the calculations before returning to this geometry. Later sections use modules, sheaves, cohomology, and derived categories, with deeper theorems identified where they enter.",
+      "readingBody": "content/expositions/fourier-symmetry-and-reconstruction.html",
+      "edition": "Revised and expanded, October 2026",
+      "pageCount": 47,
+      "tex": "/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "source": null,
+      "pdf": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
       "page": "/notes/fourier-symmetry-and-reconstruction.html",
-      "status": "current public work",
-      "declaredDates": {
-        "edition": "Revised and expanded, October 2026",
-        "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions. Prose refined October 20, 2026; the mathematical content is unchanged."
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/expositions/fourier-symmetry-and-reconstruction.html",
-        "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex"
-      ]
+      "kind": "Exposition",
+      "revision": "Revised October 11, 2026: the introduction and conclusion connect the study to its companion through their shared motivic inquiry. The web edition, PDF, and TeX source agree. A companion link after the characteristic-zero qualification in section 12.4 was added on October 20, 2026 in the web, PDF and TeX editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
+      "catalogueBackground": "Polynomial route: linear algebra, polynomial rings, finite group actions, and basic Galois theory. Later routes use further geometric and cohomological background.",
+      "readingGuide": "/mechanisms.html#fourier-routes-title",
+      "entryLabel": "Explore the Fourier exposition",
+      "featureDetail": "Concrete applications include reducing genus-two integrals to elliptic integrals, reconstructing vector bundles, counting points over finite fields, and bounding exponential sums.",
+      "readingSource": "public/tex/algebra/Fourier_Symmetry_and_Reconstruction.tex",
+      "pdfSha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa"
     },
     {
-      "type": "exposition",
       "slug": "what-a-boundary-map-can-prove",
       "title": "What a Boundary Map Can Prove",
+      "subtitle": "Derived gluing, torsion, Hodge inequalities, and motives",
+      "topic": "Graph theory · Homological algebra · Motives",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "Determinant lines govern tree counts, Hodge theory constrains chromatic coefficients, and an elliptic attachment reveals motivic Galois symmetries invisible in the graph.",
+      "body": "A tree criterion opens a progression through derived global sections, determinant lines, and integral duality. These constructions yield arithmetic deletion–contraction and probability laws for trees and higher cells. Gysin triangles recover graph coloring cohomology; Hodge theory gives chromatic inequalities. Normalization retains attachment points, and tensor reconstruction proves that torsion and nontorsion elliptic attachments have different motivic Galois groups despite the same graph and graded cohomology. Nearby cycles lead onward to graph polynomials and periods.",
+      "background": "Begin with graphs and linear algebra. Complexes, exact triangles, and derived duality are introduced through concrete constructions. The later routes use Hodge theory and motives; the geometric foundations and comparison theorems are stated where they enter the proofs.",
+      "readingBody": "content/expositions/what-a-boundary-map-can-prove.html",
+      "readingSource": "public/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "edition": "October 2026 · revised",
+      "pageCount": 46,
+      "tex": "/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
+      "source": null,
+      "pdf": "/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
       "page": "/notes/what-a-boundary-map-can-prove.html",
-      "status": "current public work",
-      "declaredDates": {
-        "edition": "October 2026 · revised",
-        "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree. Prose refined October 20, 2026; the mathematical content is unchanged."
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/What_a_Boundary_Map_Can_Prove.tex",
-          "existsInDist": true
-        }
+      "catalogueBackground": "Begin with graphs and linear algebra. Complexes, exact triangles, and derived duality enter through concrete constructions; the later routes introduce their Hodge and motivic foundations.",
+      "readingGuide": "/mechanisms.html#boundary-map-routes-title",
+      "entryLabel": "Explore the graph exposition",
+      "featureDetail": "Worked examples show how torsion weighting removes a positive correlation, and how two nodal curves with the same graph can have different motivic Galois groups.",
+      "legacyPages": [
+        "/notes/a-tree-is-a-discrete-poincare-lemma.html"
       ],
-      "sourceFiles": [
-        "content/expositions/what-a-boundary-map-can-prove.html",
-        "public/tex/algebra/What_a_Boundary_Map_Can_Prove.tex"
-      ]
+      "revision": "Revised October 11, 2026: clarified the retained boundary data, metric probability law, Jacobian extension, and period construction; corrected two subsection headings. The web edition, PDF, and TeX source agree. Prose refined October 20, 2026; the mathematical content is unchanged."
     },
     {
-      "type": "exposition",
       "slug": "what-a-derivative-retains",
       "title": "What a Derivative Retains",
+      "subtitle": "From side strips and oriented boundaries to infinitesimal geometry",
+      "topic": "Differentials · Derived geometry · Homotopy theory",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "The rectangle product rule and oriented boundaries lead to Kähler differentials, cotangent complexes, higher brackets, spectral derivatives, and Goodwillie calculus, through explicit calculations.",
+      "body": "Starting with side strips and a corner term, the exposition follows what successive derivatives retain. Tangent probes, ramification, Frobenius, nodal lifting obstructions and derived intersections lead to higher deformation operations, the cotangent spectra of MU and KU, and the multilinear layers of Goodwillie calculus.",
+      "background": "Begin with the product rule, rectangles, and oriented boundaries. Polynomial rings and modules enter with Kähler differentials; complexes and homology enter with constraints and derived intersections. Later sections state the characteristic, grading, and comparison hypotheses needed for deformation theory, spectra, and Goodwillie calculus.",
+      "catalogueBackground": "Begin with calculus, polynomial rings, and oriented boundaries. Later sections introduce complexes and homology, then use formal deformation theory, spectra, and homotopy functors.",
+      "featureDetail": "Worked examples distinguish an invisible Frobenius direction, a node’s lifting obstruction, derived self-intersection, and the K-theory and rational data retained by spectral derivatives.",
+      "readingBody": "content/expositions/what-a-derivative-retains.html",
+      "readingSource": "assets/expositions/what-a-derivative-retains.md",
+      "manuscript": "/assets/expositions/what-a-derivative-retains.md",
+      "manuscriptSha256": "2317e246da2c018b578f7a209dcaa7724d63228d4a1b959b904eacafb5331260",
+      "edition": "October 2026",
       "page": "/notes/what-a-derivative-retains.html",
-      "status": "current public work",
-      "declaredDates": {
-        "edition": "October 2026",
-        "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
-        "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/"
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "manuscript",
-          "path": "/assets/expositions/what-a-derivative-retains.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/expositions/what-a-derivative-retains.html",
-        "assets/expositions/what-a-derivative-retains.md",
-        "content/expositions/what-a-derivative-retains-pdf/"
-      ]
+      "source": null,
+      "revision": "First published October 17, 2026. Revised October 17, 2026 with clarifications in sections 5, 6, 12 and 13. The matching PDF edition of 39 pages and downloadable Markdown reflect the revised reading edition. A short companion link was added to section 7 on October 20, 2026, in the web, Markdown and PDF editions. Prose refined October 20, 2026; the mathematical content is unchanged.",
+      "pdf": "/pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "pageCount": 39,
+      "pdfSha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3",
+      "pdfEditionSource": "content/expositions/what-a-derivative-retains-pdf/",
+      "readingGuide": "/mechanisms.html#derivative-routes-title"
     },
     {
-      "type": "exposition",
       "slug": "when-a-formal-logarithm-fails",
       "title": "When a Formal Logarithm Fails",
+      "subtitle": "Corrections, cohomology, and a spectral sequence in characteristic three",
+      "topic": "Formal groups · Cohomology · Spectral sequences",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "An attempted formal logarithm produces a quadratic correction and a cubic obstruction. A filtered cobar complex identifies the failure as a nonzero spectral sequence differential.",
+      "body": "The multiplicative law supplies a coproduct. Its normalized cobar complex organizes successive corrections, and a total-weight filtration exposes a nonzero second differential. A Witt-vector addition law gives the obstruction polynomial a further use.",
+      "background": "Begin with formal power series and linear algebra over a field. Cochain complexes, filtrations and the required spectral sequence are constructed in the text; the final interpretation uses exact triangles.",
+      "catalogueBackground": "Formal power series and linear algebra. The text develops the cochain complex, filtration and spectral sequence used in the calculation.",
+      "readingBody": "content/expositions/when-a-formal-logarithm-fails.html",
+      "readingSource": "assets/expositions/when-a-formal-logarithm-fails.md",
+      "manuscript": "/assets/expositions/when-a-formal-logarithm-fails.md",
+      "tex": "/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
+      "pdf": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
       "page": "/notes/when-a-formal-logarithm-fails.html",
-      "status": "current public work",
-      "declaredDates": {
-        "edition": "October 2026",
-        "revision": "First published October 20, 2026. The web, PDF, Markdown and TeX editions contain the same argument."
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/When_a_Formal_Logarithm_Fails.tex",
-          "existsInDist": true
-        },
-        {
-          "kind": "manuscript",
-          "path": "/assets/expositions/when-a-formal-logarithm-fails.md",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/expositions/when-a-formal-logarithm-fails.html",
-        "assets/expositions/when-a-formal-logarithm-fails.md",
-        "content/expositions/when-a-formal-logarithm-fails-source/"
-      ]
+      "source": null,
+      "edition": "October 2026",
+      "revision": "First published October 20, 2026. The web, PDF, Markdown and TeX editions contain the same argument.",
+      "readingGuide": "/mechanisms.html#formal-identities-and-obstructions",
+      "pageCount": 12,
+      "pdfSha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a",
+      "manuscriptSha256": "035b5633fddda2812ac8b4462a04e35102eb0fe24bc710092257b7000bd87d91"
     },
     {
-      "type": "exposition",
+      "slug": "quotients-and-reconstruction",
+      "title": "Quotients, Refinement, and Reconstruction",
+      "subtitle": "From exact Mal’cev categories to homotopy and linearization",
+      "topic": "Quotients · Jordan–Hölder · Reconstruction",
+      "group": "algebra-geometry",
+      "kind": "Exposition",
+      "summary": "One comparison of quotients yields refinement, Jordan–Hölder, and invariance of dimension. Extensions, probes, and higher quotients then reveal what the simple factors leave undetermined.",
+      "body": "A common quotient construction compares filtrations in pointed exact Mal’cev categories, with groups and modules as instances. Comparison pages, extensions, nilpotent probes, and Hall multiplication lead onward to coherent quotients, descent, and linearization.",
+      "background": "Begin with groups, vector spaces, and their maps. The ordinary categorical comparison is developed from stated axioms. The later routes introduce module calculations and complexes, then use spaces, derived categories, and explicitly cited higher foundations.",
+      "catalogueBackground": "Groups, vector spaces, and their maps. Read §§1–4.5 for the common comparison and dimension theorem; later routes state their further prerequisites.",
+      "readingBody": "content/expositions/quotients-and-reconstruction.html",
+      "readingSource": "content/expositions/quotients-and-reconstruction-web-source.tex",
+      "readingFormat": "full",
+      "edition": "October 2026",
+      "pageCount": 82,
+      "pdf": "/pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
+      "pdfSha256": "dcc9120795b78e227b0711f5b72139e326e6c3b8d75595d6c14c5ec5922a50bb",
+      "sourceArchive": "/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "pdfEditionSource": "content/expositions/quotients-and-reconstruction-pdf/",
+      "source": null,
+      "page": "/notes/quotients-and-reconstruction.html",
+      "readingGuide": "/mechanisms.html#quotients-and-reconstruction",
+      "revision": "First published October 2026. The October 22 clarification edition makes three explanatory steps explicit. Further discussion appears in the notes on proofs, dependencies, and revisions. The complete web text and 82-page PDF have matching section and theorem numbers; the TeX archive contains the corresponding manuscript inputs.",
+      "featureDetail": "Worked calculations compare finite bases and simple layers, distinguish extensions with the same factors, recover nilpotent chain lengths, and count flags to obtain Hall multiplication.",
+      "auditReport": "/notes/quotients-and-reconstruction-audit.html"
+    },
+    {
+      "slug": "six-elements-one-comparison",
+      "title": "Six Elements, One Comparison",
+      "subtitle": "A teaching companion to Quotients, Refinement and Reconstruction",
+      "topic": "C₆ · Quotients · Worked examples",
+      "group": "algebra-geometry",
+      "kind": "Teaching companion",
+      "summary": "Follow addition modulo six through quotient maps, the comparison rectangle, refinement and factor matching, with seven exercises, worked answers and a guide to the higher chapters.",
+      "body": "A concrete first route through the quotient comparison. The same six elements accompany each construction, followed by an optional spectral calculation and a staged guide to the main exposition.",
+      "background": "Subgroups and cosets suffice for the main route. The categorical language is introduced after its role is visible. Read §§1–8 first; §9 and the higher-chapter routes are optional.",
+      "catalogueBackground": "Subgroups and cosets. A concrete C₆ route through the main exposition, with exercises and worked answers.",
+      "readingBody": "content/expositions/six-elements-one-comparison.html",
+      "readingSource": "content/expositions/six-elements-one-comparison-web-source.tex",
+      "readingFormat": "full",
+      "edition": "October 2026",
+      "pageCount": 14,
+      "pdf": "/pdfs/algebra/Six_Elements_One_Comparison.pdf",
+      "pdfSha256": "860667e3a34fb2bf709d0b61d8df318aac10c31a98b6512d5162006f5659abd6",
+      "sourceArchive": "/tex/algebra/Six_Elements_One_Comparison.zip",
+      "pdfEditionSource": "content/expositions/six-elements-one-comparison-pdf/",
+      "source": null,
+      "page": "/notes/six-elements-one-comparison.html",
+      "readingGuide": "/mechanisms.html#quotients-and-reconstruction"
+    },
+    {
       "slug": "pointwise-weighting-convergence-in-measure",
       "title": "A Weighting Argument for Pointwise Convergence to Convergence in Measure",
+      "topic": "Measure theory",
+      "group": "analysis",
+      "summary": "How a positive measurable weight turns almost-everywhere convergence into convergence in measure, with an Egorov construction and a shorter dominated-convergence proof.",
+      "body": "The note follows a simple idea: control a sequence by changing its scale at each point. It develops both a countable-decomposition argument and a proof through dominated convergence.",
+      "background": "Measure theory and convergence of measurable functions.",
+      "tex": "/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
+      "source": "/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
+      "pdf": "/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
       "page": "/notes/pointwise-weighting-convergence-in-measure.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope. The PDF and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.tex",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/pointwise-weighting/PointwiseWeighting/Basic.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "ibm-ponder-this-2010",
-      "title": "IBM Ponder This July 2010",
-      "page": "/notes/ibm-ponder-this-2010.html",
-      "status": "current public work",
-      "declaredDates": {},
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "separated-polynomial-divisibility",
-      "title": "Divisibility of Separated Polynomials",
-      "page": "/notes/separated-polynomial-divisibility.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged. The PDF and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "galois-frobenius-composition-law",
-      "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
-      "page": "/notes/galois-frobenius-composition-law.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged. The PDF and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "hartshorne-ii-5-14-18",
-      "title": "Normality, Coherent Extension, Tensor Operations, and Affineness",
-      "page": "/notes/hartshorne-ii-5-14-18.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections. The PDF and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "extracting-first-prime",
-      "title": "Extracting the First Prime Greater than m",
-      "page": "/notes/extracting-first-prime.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
-        "revisionDates": [
-          "2026-10-07"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "disjoint-decompositions",
-      "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
-      "page": "/notes/disjoint-decompositions.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: explicitly established that the closed remainder is nonempty before applying the Baire category theorem.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "source",
-          "path": "/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "lebesgue-riemann-integrability",
-      "title": "Lebesgue's Criterion for Riemann Integrability",
-      "page": "/notes/lebesgue-riemann-integrability.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: rebuilt the editable source, clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples. The PDF and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22",
-          "2026-10-07"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": []
-    },
-    {
-      "type": "exposition",
-      "slug": "products-preserve-riemann-integrability",
-      "title": "Products Preserve Riemann Integrability",
-      "page": "/notes/products-preserve-riemann-integrability.html",
-      "status": "current public work",
-      "declaredDates": {
-        "originalPublishedAt": "2026-04-29T02:18:00Z",
-        "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit, and the opening proof outline has been reflowed. The PDF and TeX source agree. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
-        "revisionDates": [
-          "2026-09-22",
-          "2026-10-07"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/excerpts/products-preserve-riemann-integrability.html",
-        "content/excerpts/products-preserve-riemann-integrability.md"
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified positive indexing, the convention for empty suprema, and the domain of the measurable envelope.",
+      "pageCount": 9,
+      "revisionDates": [
+        "2026-09-22"
       ]
     },
     {
-      "type": "problem-set",
-      "slug": "selected-problems-discrete-mathematics-analysis",
-      "title": "Selected Problems in Discrete Mathematics and Analysis",
-      "page": "/notes/selected-problems-discrete-mathematics-analysis.html",
-      "status": "current public work",
-      "declaredDates": {
-        "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant. The web edition, PDF, and TeX source agree.",
-        "revisionDates": [
-          "2026-09-22"
-        ]
-      },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
+      "slug": "ibm-ponder-this-2010",
+      "title": "IBM Ponder This July 2010",
+      "topic": "Algebraic number theory",
+      "group": "number-theory",
+      "summary": "A rounding problem becomes a congruence problem through algebraic traces, recurrences, and a companion matrix.",
+      "body": "This solution to the July 2010 IBM Ponder This challenge moves between algebraic numbers and finite arithmetic. Traces provide an integer recurrence, and a companion matrix organizes the modular calculation.",
+      "background": "Algebraic numbers, polynomial roots, and modular arithmetic.",
+      "tex": null,
+      "source": "/formalizations/ibm-ponder-this-2010/IBMPonderThis/Main.lean",
+      "pdf": "/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "page": "/notes/ibm-ponder-this-2010.html",
+      "kind": "Exposition",
+      "references": [
         {
-          "kind": "pdf",
-          "path": "/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
-          "existsInDist": true
+          "label": "IBM: the original challenge and solution",
+          "url": "https://research.ibm.com/blog/ponder-this-july-2010",
+          "description": "IBM's July 2010 page includes Henry Shin in its list of solvers."
         }
       ],
-      "sourceFiles": []
+      "pageCount": 10
     },
     {
-      "type": "archived-essay",
+      "slug": "separated-polynomial-divisibility",
+      "title": "Divisibility of Separated Polynomials",
+      "topic": "Algebra",
+      "group": "algebra-geometry",
+      "summary": "A criterion explaining when divisibility of two-variable polynomial differences forces composition with a common one-variable polynomial.",
+      "body": "The argument uses a residue expansion in a free module, followed by a reduction along the diagonal. A companion exposition revisits the same criterion through Galois theory and Frobenius descent.",
+      "background": "Polynomial rings and basic field theory.",
+      "tex": "/tex/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.tex",
+      "source": "/formalizations/separated-polynomial-differences/SeparatedPolynomialDifferences.lean",
+      "pdf": "/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "page": "/notes/separated-polynomial-divisibility.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: added a full fiber-constancy criterion over arbitrary fields, using Hasse derivatives to retain inseparable multiplicities. The original composition theorem and its free-module proof are unchanged.",
+      "pageCount": 15,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "galois-frobenius-composition-law",
+      "title": "A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law",
+      "topic": "Algebra · Galois theory",
+      "group": "algebra-geometry",
+      "summary": "A second approach to the separated-polynomial composition criterion, using Galois theory and reduction in positive characteristic.",
+      "body": "Generic fibers and descent give another way to understand the composition law. The positive-characteristic part isolates the role of Frobenius. Read this alongside Divisibility of Separated Polynomials.",
+      "background": "Galois theory and polynomials in positive characteristic.",
+      "tex": "/tex/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.tex",
+      "source": "/formalizations/galois-frobenius-composition-law/GaloisFrobeniusCompositionLaw.lean",
+      "pdf": "/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "page": "/notes/galois-frobenius-composition-law.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified the nontriviality conditions in the closing reducibility discussion and the remainder argument when the outer polynomial is zero. The composition theorem and its hypotheses are unchanged.",
+      "pageCount": 11,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "hartshorne-ii-5-14-18",
+      "title": "Normality, Coherent Extension, Tensor Operations, and Affineness",
+      "topic": "Algebraic geometry",
+      "group": "algebra-geometry",
+      "summary": "Solutions to Hartshorne II.5.14–18 connecting projective normality, coherent sheaves, affine morphisms, and vector bundles.",
+      "body": "These notes bring together exercises 14 through 18 in Chapter II, Section 5 of Hartshorne’s Algebraic Geometry. The emphasis is on the relationships between the constructions: normalization and section rings, coherent extension, tensor operations, relative Spec, and vector bundles.",
+      "background": "Schemes, coherent sheaves, and the material of Hartshorne II.5.",
+      "tex": "/tex/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.tex",
+      "source": null,
+      "pdf": "/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "page": "/notes/hartshorne-ii-5-14-18.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: clarified the nonempty-scheme and rank-zero conventions, independence of lifts in the associated graded, and the local arguments underlying section-ring finiteness, coherent extension, relative Spec, and bundle sections.",
+      "pageCount": 13,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "extracting-first-prime",
+      "title": "Extracting the First Prime Greater than m",
+      "topic": "Number theory",
+      "group": "number-theory",
+      "summary": "An explicit finite formula selects the smallest prime above a given integer using factorial congruences, greatest common divisors, and valuations.",
+      "body": "The construction turns tests for primality into a formula that isolates the first prime beyond a prescribed integer. The point is the exact arithmetic mechanism, rather than a practical prime-search algorithm.",
+      "background": "Elementary number theory, factorials, and divisibility.",
+      "tex": null,
+      "source": "/formalizations/extracting-first-prime/ExtractingFirstPrime.lean",
+      "pdf": "/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "page": "/notes/extracting-first-prime.html",
+      "kind": "Exposition",
+      "revision": "Revised October 7, 2026: clarified the introduction while preserving the problem’s IRC provenance. The theorem, proof, and appendix are unchanged.",
+      "pageCount": 7,
+      "revisionDates": [
+        "2026-10-07"
+      ]
+    },
+    {
+      "slug": "disjoint-decompositions",
+      "title": "A Note on Disjoint Decompositions of [0,1) into Closed Sets",
+      "topic": "Topology · Analysis",
+      "group": "analysis",
+      "summary": "A proof that a half-open interval cannot be partitioned into countably many sets closed in the real line.",
+      "body": "The distinction between being closed in the real line and relatively closed in an interval matters here. The note develops the obstruction using point-set topology and Baire category.",
+      "background": "Closed sets and the Baire category theorem.",
+      "tex": null,
+      "source": "/formalizations/disjoint-decomposition/DisjointDecomposition.lean",
+      "pdf": "/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "page": "/notes/disjoint-decompositions.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: explicitly established that the closed remainder is nonempty before applying the Baire category theorem.",
+      "pageCount": 3,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    },
+    {
+      "slug": "lebesgue-riemann-integrability",
+      "title": "Lebesgue's Criterion for Riemann Integrability",
+      "topic": "Real analysis",
+      "group": "analysis",
+      "summary": "A compactness proof that a bounded function is Riemann integrable when its discontinuities form a set of measure zero.",
+      "body": "The argument connects a local condition on discontinuities with the upper and lower sums of Riemann integration. Compactness supplies the finite control needed to finish the proof.",
+      "background": "Riemann integration, compactness, and sets of measure zero.",
+      "tex": "/tex/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.tex",
+      "source": null,
+      "pdf": "/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "page": "/notes/lebesgue-riemann-integrability.html",
+      "kind": "Exposition",
+      "revision": "Revised September 22, 2026: included the zero-length interval, corrected two strict oscillation bounds to non-strict bounds, and supplied a direct Darboux proof of the composition corollary that uses neither direction of Lebesgue’s criterion. Revised October 7, 2026: clarified overlapping covers and closed-cell estimates, and developed the Thomae and Cantor-set examples.",
+      "pageCount": 4,
+      "revisionDates": [
+        "2026-09-22",
+        "2026-10-07"
+      ]
+    },
+    {
+      "slug": "products-preserve-riemann-integrability",
+      "title": "Products Preserve Riemann Integrability",
+      "topic": "Real analysis",
+      "group": "analysis",
+      "summary": "A local oscillation estimate turns the product-difference identity into a Darboux proof that products of Riemann integrable functions are integrable.",
+      "body": "The note compares two values of a product on a small interval, bounds their difference using the oscillations of the factors, and sums over a common refinement. Diagrams illustrate the estimate and the passage from local variation to a global integrability criterion.",
+      "background": "Bounded functions, upper and lower Darboux sums, and partition refinement.",
+      "tex": "/tex/analysis/Products_Preserve_Riemann_Integrability.tex",
+      "source": null,
+      "pdf": "/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "page": "/notes/products-preserve-riemann-integrability.html",
+      "kind": "Exposition",
+      "originalPublishedAt": "2026-04-29T02:18:00Z",
+      "legacyPages": [
+        "/2026/04/29/why-products-preserve-riemann-integrability-a-local-oscillation-proof/"
+      ],
+      "revision": "Revised September 22, 2026: the product proof chooses positive bounds for the factors, making its strict estimate valid also when both functions vanish. Nonempty intervals are explicit. Revised October 7, 2026: condensed the explanatory prose and made the hypotheses of the concluding Lipschitz principle explicit.",
+      "pageCount": 6,
+      "revisionDates": [
+        "2026-09-22",
+        "2026-10-07"
+      ],
+      "readingExcerpt": {
+        "manuscript": "content/excerpts/products-preserve-riemann-integrability.md",
+        "body": "content/excerpts/products-preserve-riemann-integrability.html"
+      }
+    },
+    {
+      "slug": "selected-problems-discrete-mathematics-analysis",
+      "title": "Selected Problems in Discrete Mathematics and Analysis",
+      "topic": "Combinatorics · Analysis",
+      "group": "problems",
+      "summary": "Six problems on counting, arithmetic progressions, recurrences, infinite series, and the information supplied by different observation rules.",
+      "body": "A collection of six problem statements, presented without solutions. They range from finite counting arguments to the asymptotic behavior of an infinite series.",
+      "background": "Counting, elementary number theory, recurrences, and convergence of series.",
+      "tex": "/tex/problem-sets/Selected_Problems_in_Discrete_Mathematics_and_Analysis.tex",
+      "source": null,
+      "pdf": "/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "page": "/notes/selected-problems-discrete-mathematics-analysis.html",
+      "kind": "Problem set",
+      "revision": "Revised September 22, 2026: Problem 2 specifies a disjoint partition with distinct moduli greater than one; Problem 5 has the corrected series value; and Problem 6 distinguishes three recorded outcomes from an exact-onset timing variant.",
+      "pageCount": 3,
+      "revisionDates": [
+        "2026-09-22"
+      ]
+    }
+  ],
+  "essays": [
+    {
+      "slug": "mathematical-life-in-the-age-of-ai",
+      "published": true,
+      "title": "Mathematical Life in the Age of AI",
+      "subtitle": "Understanding, judgment, and the freedom to inquire",
+      "subject": "Mathematics and intellectual life",
+      "summary": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities.",
+      "date": "2026-10-12",
+      "manuscript": "content/essays/mathematical-life-in-the-age-of-ai.md",
+      "body": "content/essays/mathematical-life-in-the-age-of-ai.html",
+      "page": "/essays/mathematical-life-in-the-age-of-ai.html",
+      "staticMath": true,
+      "pdf": "/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "source": "/assets/essays/mathematical-life-in-the-age-of-ai.md",
+      "sourceLabel": "Markdown source",
+      "parts": [
+        {
+          "id": "part-i",
+          "number": "I",
+          "title": "What understanding makes possible"
+        },
+        {
+          "id": "part-ii",
+          "number": "II",
+          "title": "How support becomes authority"
+        },
+        {
+          "id": "part-iii",
+          "number": "III",
+          "title": "Giving greater capacity a shared purpose"
+        }
+      ],
+      "sections": [
+        {
+          "id": "understanding-as-a-purpose",
+          "number": "1",
+          "title": "Understanding as a purpose",
+          "part": "part-i"
+        },
+        {
+          "id": "a-comparison-worth-understanding",
+          "number": "2",
+          "title": "A comparison worth understanding",
+          "part": "part-i"
+        },
+        {
+          "id": "becoming-capable",
+          "number": "3",
+          "title": "Becoming capable",
+          "part": "part-i"
+        },
+        {
+          "id": "a-hearing-before-a-verdict",
+          "number": "4",
+          "title": "A hearing before a verdict",
+          "part": "part-ii"
+        },
+        {
+          "id": "what-performed-mastery-costs",
+          "number": "5",
+          "title": "What performed mastery costs",
+          "part": "part-ii"
+        },
+        {
+          "id": "the-means-to-continue",
+          "number": "6",
+          "title": "The means to continue",
+          "part": "part-ii"
+        },
+        {
+          "id": "when-the-grounds-for-a-judgment-change",
+          "number": "7",
+          "title": "When the grounds for a judgment change",
+          "part": "part-iii"
+        },
+        {
+          "id": "credit-as-an-intellectual-record",
+          "number": "8",
+          "title": "Credit as an intellectual record",
+          "part": "part-iii"
+        },
+        {
+          "id": "making-participation-substantial",
+          "number": "9",
+          "title": "Making participation substantial",
+          "part": "part-iii"
+        },
+        {
+          "id": "an-inquiry-with-somewhere-to-go",
+          "number": "10",
+          "title": "An inquiry with somewhere to go",
+          "part": "part-iii"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "A test for what a description determines, and a worked distinction between recovering groups and recovering their induced maps."
+        },
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "How different arguments reveal mechanisms, quantitative information, and connections beyond establishing the same conclusion."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "How institutions can keep moral judgments open to scrutiny, correction, and proportionate review."
+        },
+        {
+          "slug": "the-authority-of-a-vision",
+          "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-boundary-map-can-prove",
+          "anchor": "the-attachment-point-changes-the-motivic-symmetry-group",
+          "description": "An optional advanced comparison with §10’s relative logarithm: an elliptic attachment changes reconstructed symmetry. The extensions have different pure pieces; this calculation adds elliptic geometry and its stated motivic comparison hypotheses."
+        },
+        {
+          "slug": "the-performance-of-depth",
+          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+        }
+      ],
+      "group": "mathematics-and-intellectual-life",
+      "order": 3
+    },
+    {
+      "slug": "when-accountability-stops-being-reciprocal",
+      "published": true,
+      "title": "When Accountability Stops Being Reciprocal",
+      "subtitle": "Moral authority and the permanent defendant",
+      "subject": "Institutions and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 4,
+      "summary": "How accusations acquire institutional force, why scrutiny can become costly, and what makes consequential judgments open to challenge and correction.",
+      "date": "2026-10-19",
+      "manuscript": "content/essays/when-accountability-stops-being-reciprocal.md",
+      "body": "content/essays/when-accountability-stops-being-reciprocal.html",
+      "page": "/essays/when-accountability-stops-being-reciprocal.html",
+      "pdf": "/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "source": "/assets/essays/when-accountability-stops-being-reciprocal.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "how-an-accusation-protects-itself",
+          "title": "How an accusation protects itself"
+        },
+        {
+          "id": "when-an-institution-adopts-the-judgment",
+          "title": "When an institution adopts the judgment"
+        },
+        {
+          "id": "what-the-institution-loses",
+          "title": "What the institution loses"
+        },
+        {
+          "id": "why-the-pattern-can-persist",
+          "title": "Why the pattern can persist"
+        },
+        {
+          "id": "making-judgment-answerable",
+          "title": "Making judgment answerable"
+        },
+        {
+          "id": "notes-and-sources",
+          "title": "Sources and notes"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What a description or comparison must preserve to support a judgment about a contribution."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How understanding, assistance, judgment, credit, and participation sustain an inquiry."
+        },
+        {
+          "slug": "the-performance-of-depth",
+          "description": "A historical account of how evaluation, prestige, and research incentives reproduce professional authority and can strengthen intellectual conformity."
+        }
+      ]
+    },
+    {
+      "slug": "the-performance-of-depth",
+      "published": true,
+      "title": "The Performance of Depth",
+      "subtitle": "Prestige, incentives, and the reproduction of intellectual conformity",
+      "subject": "Institutions and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 5,
+      "summary": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment.",
+      "date": "2026-10-19",
+      "manuscript": "content/essays/the-performance-of-depth.md",
+      "body": "content/essays/the-performance-of-depth.html",
+      "page": "/essays/the-performance-of-depth.html",
+      "source": "/assets/essays/the-performance-of-depth.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "a-century-of-certification",
+          "title": "A century of certification"
+        },
+        {
+          "id": "how-recognition-reproduces-itself",
+          "title": "How recognition reproduces itself"
+        },
+        {
+          "id": "the-cost-of-an-independent-agenda",
+          "title": "The cost of an independent agenda"
+        },
+        {
+          "id": "what-becomes-dominant",
+          "title": "What becomes dominant"
+        },
+        {
+          "id": "where-inquiry-can-continue",
+          "title": "Where inquiry can continue"
+        },
+        {
+          "id": "authority-beyond-the-record",
+          "title": "Authority beyond the record"
+        },
+        {
+          "id": "notes-and-sources",
+          "title": "Sources and notes"
+        }
+      ],
+      "related": [
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How understanding and the means to pursue it develop through assistance, recognition, credit, and shared work."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "How consequential institutional judgments remain open to challenge, review, and correction."
+        },
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What an abbreviated description establishes, and where a further judgment needs substantive comparison."
+        }
+      ]
+    },
+    {
+      "slug": "what-a-new-proof-makes-possible",
+      "published": true,
+      "title": "What a New Proof Makes Possible",
+      "subtitle": "Old theorems and the changing means of understanding",
+      "subject": "Proof and understanding",
+      "summary": "How new proofs of familiar theorems expose mechanisms, improve estimates, and connect mathematical subjects. Comparing the arguments reveals why their constructions work, where they generalize, and what further questions they open.",
+      "date": "2026-10-08",
+      "manuscript": "content/essays/what-a-new-proof-makes-possible.md",
+      "body": "content/essays/what-a-new-proof-makes-possible.html",
+      "page": "/essays/what-a-new-proof-makes-possible.html",
+      "staticMath": true,
+      "sections": [
+        {
+          "id": "the-structure-inside-an-old-conclusion",
+          "title": "The structure inside an old conclusion"
+        },
+        {
+          "id": "when-a-method-branches-and-returns",
+          "title": "When a method branches and returns"
+        },
+        {
+          "id": "generalization-in-different-directions",
+          "title": "Generalization in different directions"
+        },
+        {
+          "id": "from-existence-to-a-procedure",
+          "title": "From existence to a procedure"
+        },
+        {
+          "id": "what-the-connection-between-proofs-reveals",
+          "title": "What the connection between proofs reveals"
+        },
+        {
+          "id": "economy-across-a-body-of-mathematics",
+          "title": "Economy across a body of mathematics"
+        },
+        {
+          "id": "when-proofs-become-more-abundant",
+          "title": "When proofs become more abundant"
+        }
+      ],
+      "related": [
+        {
+          "slug": "when-a-description-becomes-a-verdict",
+          "description": "What a comparison must preserve before familiar ingredients or known conclusions can support a verdict about a contribution."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+        },
+        {
+          "kind": "exposition",
+          "slug": "fourier-symmetry-and-reconstruction",
+          "description": "Follow root algebras and their character decompositions through the classical cubic and quartic formulas into geometry and arithmetic."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-boundary-map-can-prove",
+          "description": "Follow a boundary presentation through determinant laws, geometric inequalities, and the symmetries of an elliptic attachment."
+        },
+        {
+          "kind": "exposition",
+          "slug": "what-a-derivative-retains",
+          "anchor": "rectangle",
+          "description": "Follow the rectangle product rule through infinitesimal probes and Kähler differentials. Sections 1–5 give an elementary route; later sections retain equations and lifting obstructions."
+        }
+      ],
+      "group": "mathematics-and-intellectual-life",
+      "order": 1
+    },
+    {
+      "slug": "when-a-description-becomes-a-verdict",
+      "published": true,
+      "title": "When a Description Becomes a Verdict",
+      "subtitle": "Expertise, explanation, and the scope of judgment",
+      "subject": "Mathematics and intellectual life",
+      "group": "mathematics-and-intellectual-life",
+      "order": 2,
+      "summary": "How to test whether a description retains what a conclusion needs, through eigenvalues, naturality, and the scope of judgment.",
+      "date": "2026-10-17",
+      "manuscript": "content/essays/when-a-description-becomes-a-verdict.md",
+      "body": "content/essays/when-a-description-becomes-a-verdict.html",
+      "page": "/essays/when-a-description-becomes-a-verdict.html",
+      "staticMath": true,
+      "source": "/assets/essays/when-a-description-becomes-a-verdict.md",
+      "sourceLabel": "Markdown source",
+      "sections": [
+        {
+          "id": "the-extra-conclusion",
+          "number": "1",
+          "title": "The extra conclusion"
+        },
+        {
+          "id": "enough-for-which-question",
+          "number": "2",
+          "title": "Enough for which question?"
+        },
+        {
+          "id": "what-the-arrangement-does",
+          "number": "3",
+          "title": "What the arrangement does"
+        },
+        {
+          "id": "what-recognition-knows",
+          "number": "4",
+          "title": "What recognition knows"
+        },
+        {
+          "id": "reasons-for-stopping",
+          "number": "5",
+          "title": "Reasons for stopping"
+        },
+        {
+          "id": "keeping-the-boundary-visible",
+          "number": "6",
+          "title": "Keeping the boundary visible"
+        }
+      ],
+      "related": [
+        {
+          "slug": "what-a-new-proof-makes-possible",
+          "description": "How different arguments reveal mechanisms and connections beyond establishing the same conclusion."
+        },
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How judgments about understanding shape attention, support, credit, and the means to continue an inquiry."
+        },
+        {
+          "slug": "when-accountability-stops-being-reciprocal",
+          "description": "From what warrants a judgment to how people can challenge its consequential use."
+        },
+        {
+          "kind": "exposition",
+          "slug": "fourier-symmetry-and-reconstruction",
+          "anchor": "section-12-3",
+          "description": "Continue the identity-and-shear example into the circle transform, where a thickened spectral point records the nilpotent action concealed by equal eigenvalues."
+        }
+      ]
+    },
+    {
+      "slug": "the-authority-of-a-vision",
+      "published": true,
+      "title": "The Authority of a Vision",
+      "subtitle": "Knowledge, Belief, and Freedom in Villeneuve’s Dune",
+      "subject": "Film and interpretation",
+      "summary": "How learned competence, extraordinary knowledge, and collective hope become claims to command in Villeneuve’s Dune.",
+      "date": "2026-10-07",
+      "manuscript": "content/essays/the-authority-of-a-vision.md",
+      "body": "content/essays/the-authority-of-a-vision.html",
+      "page": "/essays/the-authority-of-a-vision.html",
+      "contentNote": "An essay on Dune (2021) and Dune: Part Two (2024). Contains spoilers for both films.",
+      "related": [
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How people acquire the means to understand and pursue mathematics, and how AI changes the responsibilities of institutions that cultivate and judge those capacities."
+        }
+      ],
+      "sections": [
+        {
+          "id": "the-limits-of-revelation",
+          "title": "1. The limits of revelation"
+        },
+        {
+          "id": "knowledge-learned-from-a-world",
+          "title": "2. Knowledge learned from a world"
+        },
+        {
+          "id": "from-belief-to-allegiance",
+          "title": "3. From belief to allegiance"
+        },
+        {
+          "id": "the-production-of-confirmation",
+          "title": "4. The production of confirmation"
+        },
+        {
+          "id": "destiny-and-the-scope-of-choice",
+          "title": "5. Destiny and the scope of choice"
+        },
+        {
+          "id": "the-authority-of-spectacle",
+          "title": "6. The authority of spectacle"
+        },
+        {
+          "id": "a-person-beyond-the-prophecy",
+          "title": "7. A person beyond the prophecy"
+        }
+      ],
+      "group": "film-and-interpretation",
+      "order": 1
+    }
+  ],
+  "historical_essays": [
+    {
       "slug": "mathematical-understanding-in-the-age-of-ai",
       "title": "Mathematical Understanding in the Age of AI",
       "page": "/essays/mathematical-understanding-in-the-age-of-ai.html",
-      "status": "superseded public predecessor",
-      "declaredDates": {
+      "target": "/essays/mathematical-life-in-the-age-of-ai.html",
+      "archivedDate": "2026-10-12",
+      "edition": "Version 75",
+      "sourceMetadata": {
+        "slug": "mathematical-understanding-in-the-age-of-ai",
+        "published": true,
+        "title": "Mathematical Understanding in the Age of AI",
+        "subtitle": "Intellectual life, shared inquiry, and the case for motives",
+        "summary": "How AI can make sustained mathematical inquiry more widely available, and why learning, shared understanding, and the choice of an intellectual direction matter alongside new results.",
         "date": "2026-10-07",
-        "archivedDate": "2026-10-12",
-        "edition": "Version 75"
+        "manuscript": "content/essays/mathematical-understanding-in-the-age-of-ai.md",
+        "body": "content/essays/mathematical-understanding-in-the-age-of-ai.html",
+        "page": "/essays/mathematical-understanding-in-the-age-of-ai.html",
+        "staticMath": true,
+        "sections": [
+          {
+            "id": "understanding-as-a-purpose",
+            "title": "Understanding as a purpose"
+          },
+          {
+            "id": "from-a-compact-insight-to-an-inquiry",
+            "title": "From a compact insight to an inquiry"
+          },
+          {
+            "id": "institutions-and-the-means-of-inquiry",
+            "title": "Institutions and the means of inquiry"
+          },
+          {
+            "id": "journals-and-the-authority-to-judge",
+            "title": "Journals and the authority to judge"
+          },
+          {
+            "id": "competition-and-mathematical-life",
+            "title": "Competition and mathematical life"
+          },
+          {
+            "id": "the-conditions-of-intellectual-self-government",
+            "title": "The conditions of intellectual self-government"
+          },
+          {
+            "id": "grothendieck-and-the-cost-of-winning",
+            "title": "Grothendieck and the cost of winning"
+          },
+          {
+            "id": "why-motives",
+            "title": "Why motives"
+          },
+          {
+            "id": "motivic-inquiry-with-capable-ai",
+            "title": "Motivic inquiry with capable AI"
+          },
+          {
+            "id": "learning-and-participation",
+            "title": "Learning and participation"
+          }
+        ],
+        "subject": "Mathematics and intellectual life",
+        "related": [
+          {
+            "slug": "the-culture-of-mathematical-judgment",
+            "description": "Who receives a hearing, how standards are applied, and how mathematical authority becomes answerable through correction, credit, and supported review."
+          },
+          {
+            "slug": "what-a-new-proof-makes-possible",
+            "description": "How different proofs of the same theorem reveal distinct mechanisms, quantitative information, and connections that further inquiry can develop."
+          },
+          {
+            "slug": "the-authority-of-a-vision",
+            "description": "Knowledge, political command, and the freedom to reconsider allegiance in Villeneuve’s Dune."
+          }
+        ]
       },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [],
-      "sourceFiles": [
-        "content/essays/mathematical-understanding-in-the-age-of-ai.html",
-        "content/essays/mathematical-understanding-in-the-age-of-ai.md"
+      "sectionLinks": [
+        {
+          "id": "understanding-as-a-purpose",
+          "title": "Understanding as a purpose",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#understanding-as-a-purpose"
+        },
+        {
+          "id": "from-a-compact-insight-to-an-inquiry",
+          "title": "From a compact insight to an inquiry",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+        },
+        {
+          "id": "institutions-and-the-means-of-inquiry",
+          "title": "Institutions and the means of inquiry",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#the-means-to-continue"
+        },
+        {
+          "id": "journals-and-the-authority-to-judge",
+          "title": "Journals and the authority to judge",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict"
+        },
+        {
+          "id": "competition-and-mathematical-life",
+          "title": "Competition and mathematical life",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#understanding-as-a-purpose"
+        },
+        {
+          "id": "the-conditions-of-intellectual-self-government",
+          "title": "The conditions of intellectual self-government",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#the-means-to-continue"
+        },
+        {
+          "id": "grothendieck-and-the-cost-of-winning",
+          "title": "Grothendieck and the cost of winning",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#what-performed-mastery-costs"
+        },
+        {
+          "id": "why-motives",
+          "title": "Why motives",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-comparison-worth-understanding"
+        },
+        {
+          "id": "motivic-inquiry-with-capable-ai",
+          "title": "Motivic inquiry with capable AI",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#an-inquiry-with-somewhere-to-go"
+        },
+        {
+          "id": "learning-and-participation",
+          "title": "Learning and participation",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+        }
+      ],
+      "noteLinks": [],
+      "extraLinks": [],
+      "requiredAnchors": [
+        "understanding-as-a-purpose",
+        "from-a-compact-insight-to-an-inquiry",
+        "institutions-and-the-means-of-inquiry",
+        "journals-and-the-authority-to-judge",
+        "competition-and-mathematical-life",
+        "the-conditions-of-intellectual-self-government",
+        "grothendieck-and-the-cost-of-winning",
+        "why-motives",
+        "motivic-inquiry-with-capable-ai",
+        "learning-and-participation"
+      ],
+      "downloads": [
+        {
+          "href": "/assets/essays/mathematical-understanding-in-the-age-of-ai.md",
+          "label": "Archived Markdown source",
+          "sha256": "fabc9f12de34eb2917395485618cc3a8ede6d298ddec69ef6bd9f86dc4e56e5a"
+        }
       ]
     },
     {
-      "type": "archived-essay",
       "slug": "the-culture-of-mathematical-judgment",
       "title": "The Culture of Mathematical Judgment",
       "page": "/essays/the-culture-of-mathematical-judgment.html",
-      "status": "superseded public predecessor",
-      "declaredDates": {
+      "target": "/essays/mathematical-life-in-the-age-of-ai.html",
+      "archivedDate": "2026-10-12",
+      "edition": "Version 75",
+      "sourceMetadata": {
+        "slug": "the-culture-of-mathematical-judgment",
+        "published": true,
+        "title": "The Culture of Mathematical Judgment",
+        "subtitle": "Status, scrutiny, and the terms of participation in the age of AI",
+        "subject": "Mathematics and institutions",
+        "summary": "How status shapes whose mathematics receives a hearing, how contributions are judged and credited, and how AI can change the obligations and organization of scrutiny.",
         "date": "2026-10-12",
-        "archivedDate": "2026-10-12",
-        "edition": "Version 75"
+        "manuscript": "content/essays/the-culture-of-mathematical-judgment.md",
+        "body": "content/essays/the-culture-of-mathematical-judgment.html",
+        "page": "/essays/the-culture-of-mathematical-judgment.html",
+        "pdf": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
+        "source": "/assets/essays/the-culture-of-mathematical-judgment.md",
+        "sourceLabel": "Markdown source",
+        "sections": [
+          {
+            "id": "a-hearing-before-a-verdict",
+            "title": "A hearing before a verdict",
+            "number": "1"
+          },
+          {
+            "id": "the-small-vanities-of-powerful-people",
+            "title": "The small vanities of powerful people",
+            "number": "2"
+          },
+          {
+            "id": "depth-boundaries-and-belonging",
+            "title": "Depth, boundaries, and belonging",
+            "number": "3"
+          },
+          {
+            "id": "credit-as-an-intellectual-record",
+            "title": "Credit as an intellectual record",
+            "number": "4"
+          },
+          {
+            "id": "what-ai-changes-in-the-justification-for-authority",
+            "title": "What AI changes in the justification for authority",
+            "number": "5"
+          },
+          {
+            "id": "building-a-more-answerable-culture",
+            "title": "Building a more answerable culture",
+            "number": "6"
+          },
+          {
+            "id": "authority-that-enlarges-the-field",
+            "title": "Authority that enlarges the field",
+            "number": "7"
+          }
+        ],
+        "related": [
+          {
+            "slug": "mathematical-understanding-in-the-age-of-ai",
+            "description": "The purposes of mathematical inquiry, the assistance that sustains it, and the freedom to choose an intellectual direction."
+          },
+          {
+            "slug": "what-a-new-proof-makes-possible",
+            "description": "What different arguments reveal and enable, beyond establishing the same conclusion."
+          }
+        ]
       },
-      "dateEvidenceScope": "Dates transcribed from current source metadata; not independent authentication of the earlier public availability of these exact bytes.",
-      "publicFiles": [
+      "sectionLinks": [
         {
-          "kind": "pdf",
-          "path": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
-          "existsInDist": true
+          "id": "a-hearing-before-a-verdict",
+          "title": "A hearing before a verdict",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#a-hearing-before-a-verdict"
         },
         {
-          "kind": "source",
-          "path": "/assets/essays/the-culture-of-mathematical-judgment.md",
-          "existsInDist": true
+          "id": "the-small-vanities-of-powerful-people",
+          "title": "The small vanities of powerful people",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#what-performed-mastery-costs"
+        },
+        {
+          "id": "depth-boundaries-and-belonging",
+          "title": "Depth, boundaries, and belonging",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#becoming-capable"
+        },
+        {
+          "id": "credit-as-an-intellectual-record",
+          "title": "Credit as an intellectual record",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#credit-as-an-intellectual-record"
+        },
+        {
+          "id": "what-ai-changes-in-the-justification-for-authority",
+          "title": "What AI changes in the justification for authority",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#when-the-grounds-for-a-judgment-change"
+        },
+        {
+          "id": "building-a-more-answerable-culture",
+          "title": "Building a more answerable culture",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#making-participation-substantial"
+        },
+        {
+          "id": "authority-that-enlarges-the-field",
+          "title": "Authority that enlarges the field",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#making-participation-substantial"
         }
       ],
-      "sourceFiles": [
-        "content/essays/the-culture-of-mathematical-judgment.html",
-        "content/essays/the-culture-of-mathematical-judgment.md"
+      "noteLinks": [
+        {
+          "ids": [
+            "citation-1-1",
+            "note-1"
+          ],
+          "title": "Former note 1",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-18"
+        },
+        {
+          "ids": [
+            "citation-2-1",
+            "note-2"
+          ],
+          "title": "Former note 2: publication history",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#publication-history"
+        },
+        {
+          "ids": [
+            "citation-3-1",
+            "note-3"
+          ],
+          "title": "Former note 3",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-19"
+        },
+        {
+          "ids": [
+            "citation-4-1",
+            "note-4"
+          ],
+          "title": "Former note 4",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-23"
+        },
+        {
+          "ids": [
+            "citation-5-1",
+            "citation-5-2",
+            "note-5"
+          ],
+          "title": "Former note 5",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-24"
+        },
+        {
+          "ids": [
+            "citation-6-1",
+            "note-6"
+          ],
+          "title": "Former note 6",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-25"
+        },
+        {
+          "ids": [
+            "citation-7-1",
+            "note-7"
+          ],
+          "title": "Former note 7",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-27"
+        },
+        {
+          "ids": [
+            "citation-8-1",
+            "note-8"
+          ],
+          "title": "Former note 8",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-28"
+        },
+        {
+          "ids": [
+            "citation-9-1",
+            "note-9"
+          ],
+          "title": "Former note 9",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-29"
+        },
+        {
+          "ids": [
+            "citation-10-1",
+            "citation-10-2",
+            "note-10"
+          ],
+          "title": "Former note 10",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-30"
+        },
+        {
+          "ids": [
+            "citation-11-1",
+            "note-11"
+          ],
+          "title": "Former note 11",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-31"
+        },
+        {
+          "ids": [
+            "citation-12-1",
+            "note-12"
+          ],
+          "title": "Former note 12",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-33"
+        },
+        {
+          "ids": [
+            "citation-13-1",
+            "note-13"
+          ],
+          "title": "Former note 13",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-34"
+        },
+        {
+          "ids": [
+            "citation-14-1",
+            "note-14"
+          ],
+          "title": "Former note 14",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-32"
+        },
+        {
+          "ids": [
+            "citation-15-1",
+            "note-15"
+          ],
+          "title": "Former note 15",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-35"
+        },
+        {
+          "ids": [
+            "citation-16-1",
+            "note-16"
+          ],
+          "title": "Former note 16",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-40"
+        },
+        {
+          "ids": [
+            "citation-17-1",
+            "note-17"
+          ],
+          "title": "Former note 17",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-17"
+        },
+        {
+          "ids": [
+            "citation-18-1",
+            "note-18"
+          ],
+          "title": "Former note 18",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-38"
+        },
+        {
+          "ids": [
+            "citation-19-1",
+            "note-19"
+          ],
+          "title": "Former note 19",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-41"
+        },
+        {
+          "ids": [
+            "citation-20-1",
+            "note-20"
+          ],
+          "title": "Former note 20",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-52"
+        },
+        {
+          "ids": [
+            "citation-21-1",
+            "note-21"
+          ],
+          "title": "Former note 21",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-53"
+        },
+        {
+          "ids": [
+            "citation-22-1",
+            "note-22"
+          ],
+          "title": "Former note 22",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-55"
+        },
+        {
+          "ids": [
+            "citation-23-1",
+            "note-23"
+          ],
+          "title": "Former note 23",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-58"
+        },
+        {
+          "ids": [
+            "citation-24-1",
+            "note-24"
+          ],
+          "title": "Former note 24",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-44"
+        },
+        {
+          "ids": [
+            "citation-25-1",
+            "note-25"
+          ],
+          "title": "Former note 25",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-49"
+        },
+        {
+          "ids": [
+            "citation-26-1",
+            "note-26"
+          ],
+          "title": "Former note 26",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-50"
+        },
+        {
+          "ids": [
+            "citation-27-1",
+            "note-27"
+          ],
+          "title": "Former note 27",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-51"
+        },
+        {
+          "ids": [
+            "citation-28-1",
+            "note-28"
+          ],
+          "title": "Former note 28",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-54"
+        },
+        {
+          "ids": [
+            "citation-29-1",
+            "note-29"
+          ],
+          "title": "Former note 29",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-62"
+        },
+        {
+          "ids": [
+            "citation-30-1",
+            "note-30"
+          ],
+          "title": "Former note 30",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-63"
+        },
+        {
+          "ids": [
+            "citation-31-1",
+            "note-31"
+          ],
+          "title": "Former note 31",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-56"
+        },
+        {
+          "ids": [
+            "citation-32-1",
+            "note-32"
+          ],
+          "title": "Former note 32",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-57"
+        },
+        {
+          "ids": [
+            "citation-33-1",
+            "note-33"
+          ],
+          "title": "Former note 33",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-59"
+        },
+        {
+          "ids": [
+            "citation-34-1",
+            "note-34"
+          ],
+          "title": "Former note 34",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-64"
+        },
+        {
+          "ids": [
+            "citation-35-1",
+            "note-35"
+          ],
+          "title": "Former note 35",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-65"
+        },
+        {
+          "ids": [
+            "citation-36-1",
+            "note-36"
+          ],
+          "title": "Former note 36",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-66"
+        },
+        {
+          "ids": [
+            "citation-37-1",
+            "note-37"
+          ],
+          "title": "Former note 37",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#note-67"
+        }
+      ],
+      "extraLinks": [
+        {
+          "id": "notes-and-sources",
+          "title": "Notes and sources",
+          "target": "/essays/mathematical-life-in-the-age-of-ai.html#notes-and-sources"
+        }
+      ],
+      "requiredAnchors": [
+        "citation-1-1",
+        "citation-2-1",
+        "a-hearing-before-a-verdict",
+        "citation-3-1",
+        "citation-4-1",
+        "citation-5-1",
+        "citation-6-1",
+        "citation-7-1",
+        "citation-8-1",
+        "citation-9-1",
+        "citation-10-1",
+        "the-small-vanities-of-powerful-people",
+        "citation-11-1",
+        "citation-12-1",
+        "citation-13-1",
+        "citation-14-1",
+        "citation-15-1",
+        "depth-boundaries-and-belonging",
+        "citation-16-1",
+        "citation-17-1",
+        "citation-10-2",
+        "citation-18-1",
+        "citation-19-1",
+        "credit-as-an-intellectual-record",
+        "citation-20-1",
+        "citation-21-1",
+        "citation-22-1",
+        "citation-23-1",
+        "what-ai-changes-in-the-justification-for-authority",
+        "citation-24-1",
+        "citation-25-1",
+        "citation-26-1",
+        "citation-27-1",
+        "citation-28-1",
+        "building-a-more-answerable-culture",
+        "citation-29-1",
+        "citation-30-1",
+        "citation-31-1",
+        "citation-32-1",
+        "citation-33-1",
+        "citation-34-1",
+        "citation-5-2",
+        "citation-35-1",
+        "citation-36-1",
+        "citation-37-1",
+        "authority-that-enlarges-the-field",
+        "notes-and-sources",
+        "note-1",
+        "note-2",
+        "note-3",
+        "note-4",
+        "note-5",
+        "note-6",
+        "note-7",
+        "note-8",
+        "note-9",
+        "note-10",
+        "note-11",
+        "note-12",
+        "note-13",
+        "note-14",
+        "note-15",
+        "note-16",
+        "note-17",
+        "note-18",
+        "note-19",
+        "note-20",
+        "note-21",
+        "note-22",
+        "note-23",
+        "note-24",
+        "note-25",
+        "note-26",
+        "note-27",
+        "note-28",
+        "note-29",
+        "note-30",
+        "note-31",
+        "note-32",
+        "note-33",
+        "note-34",
+        "note-35",
+        "note-36",
+        "note-37"
+      ],
+      "downloads": [
+        {
+          "href": "/assets/essays/the-culture-of-mathematical-judgment.pdf",
+          "label": "Archived PDF",
+          "sha256": "0cae59099bbdb259dc3a346c0259ec20c7b5ed05a6a8d71f62c638d34f4698bc"
+        },
+        {
+          "href": "/assets/essays/the-culture-of-mathematical-judgment.md",
+          "label": "Archived Markdown source",
+          "sha256": "593087f92ac427f9cad0d362b5c5ababaf7bd7d34681c0f679b5cee7ce4c9685"
+        }
       ]
-    },
+    }
+  ],
+  "research_records": [
     {
-      "type": "archived-exposition",
-      "slug": "a-tree-is-a-discrete-poincare-lemma",
-      "title": "A Tree Is a Discrete Poincare Lemma",
-      "page": "/notes/a-tree-is-a-discrete-poincare-lemma.html",
-      "status": "Predecessor route redirects to What a Boundary Map Can Prove; retained public PDF/TeX preserved",
-      "publicFiles": [
-        {
-          "kind": "pdf",
-          "path": "/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
-          "existsInDist": true
-        },
-        {
-          "kind": "tex",
-          "path": "/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
-          "existsInDist": true
-        }
-      ],
-      "sourceFiles": [
-        "content/expositions/a-tree-is-a-discrete-poincare-lemma.html"
-      ],
-      "declaredDates": {
-        "texTitlePage": "October 2026"
-      },
-      "dateEvidenceScope": "Transcribed from retained TeX title page; not independently authenticated."
-    },
-    {
-      "type": "research-record",
       "id": "1903.09181",
+      "year": 2020,
+      "status": "Published",
       "title": "Curvature growth of some 4-dimensional gradient Ricci soliton singularity models",
       "authors": "Bennett Chow, Michael Freedman, Henry Shin, Yongjia Zhang",
-      "status": "Published",
-      "page": "/papers.html#arxiv-1903.09181",
-      "arxiv": "https://arxiv.org/abs/1903.09181",
-      "doi": "https://doi.org/10.1016/j.aim.2020.107303"
+      "journal": "Advances in Mathematics 372 (2020), 107303",
+      "doi": "10.1016/j.aim.2020.107303",
+      "description": "Curvature estimates for four-dimensional gradient Ricci soliton singularity models, using geometric analysis and topological arguments.",
+      "correction": "2505.03823"
     },
     {
-      "type": "research-record",
       "id": "2609.01690",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Iterated-sumset spectra: The complete exponent law and its rank geometry",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2609.01690",
-      "arxiv": "https://arxiv.org/abs/2609.01690",
-      "doi": null
+      "topic": "Additive combinatorics",
+      "description": "Determines the growth exponent of the number of possible h-fold sumset sizes for fixed-size integer sets, together with sharp bounds for integer models preserving finite additive relations. Also proves the formula conjectured in OEIS A227589 for minimal labelings of identical four-sided dice that maximize the number of distinct sums.",
+      "oeis": "A227589"
     },
     {
-      "type": "research-record",
       "id": "2608.08533",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Open full-metric formation and local marked first-order asymptotic moduli of FIK blowdown singularities",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2608.08533",
-      "arxiv": "https://arxiv.org/abs/2608.08533",
-      "doi": null
+      "topic": "Geometric analysis",
+      "description": "Formation of FIK singularities under Ricci flow and the local parameters governing their first-order asymptotic behavior."
     },
     {
-      "type": "research-record",
       "id": "2607.01716",
+      "year": 2026,
+      "status": "Preprint",
       "title": "A global girth obstruction for Garg–Mineyev taiko product structures",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2607.01716",
-      "arxiv": "https://arxiv.org/abs/2607.01716",
-      "doi": null
+      "topic": "Combinatorial group theory",
+      "description": "A global obstruction to the Garg–Mineyev triple-girth route to zero-divisor and unit counterexamples in group rings over F₂, proved through incidence geometry."
     },
     {
-      "type": "research-record",
       "id": "2606.15218",
+      "year": 2026,
+      "status": "Preprint",
       "title": "From rough local mass to logarithmic spectral ladders for damped waves",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2606.15218",
-      "arxiv": "https://arxiv.org/abs/2606.15218",
-      "doi": null
+      "topic": "Analysis · Partial differential equations",
+      "description": "Local damping mass, resolvent bounds, and decay, including spectral asymptotics near logarithmic damping wells."
     },
     {
-      "type": "research-record",
       "id": "2606.14877",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Exchange identities and symmetric slices of the valley Delta conjecture",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2606.14877",
-      "arxiv": "https://arxiv.org/abs/2606.14877",
-      "doi": null
+      "topic": "Algebraic combinatorics",
+      "description": "Exchange identities and symmetry for the area-zero and area-one slices of the valley Delta generating function."
     },
     {
-      "type": "research-record",
       "id": "2606.12230",
+      "year": 2026,
+      "status": "Preprint",
       "title": "One extra edge forces Berge pancyclicity",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2606.12230",
-      "arxiv": "https://arxiv.org/abs/2606.12230",
-      "doi": null
+      "topic": "Extremal combinatorics",
+      "description": "Berge cycles of every length from a Hamiltonian Berge cycle and one additional edge, in the stated large-order uniformity regime."
     },
     {
-      "type": "research-record",
       "id": "2605.25291",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Hilbert-90 quotient maps, torsion defects, and symmetric monodromy",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2605.25291",
-      "arxiv": "https://arxiv.org/abs/2605.25291",
-      "doi": null
+      "topic": "Algebra · Arithmetic geometry",
+      "description": "Rational maps from Hilbert-90 descent: cancellation, torsion, and characteristic-zero monodromy."
     },
     {
-      "type": "research-record",
       "id": "2605.21939",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Coset-refined trace statistics, nodal characters, and affine branches in cubic norm tori",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2605.21939",
-      "arxiv": "https://arxiv.org/abs/2605.21939",
-      "doi": null
+      "topic": "Number theory · Algebraic geometry",
+      "description": "Trace distributions on cosets in cubic norm-one tori, including singular fibers and local branch geometry."
     },
     {
-      "type": "research-record",
       "id": "2605.12903",
+      "year": 2026,
+      "status": "Preprint",
       "title": "Logarithmic source curves in polynomial fiber products",
       "authors": "Henry Shin",
-      "status": "Preprint",
-      "page": "/papers.html#arxiv-2605.12903",
-      "arxiv": "https://arxiv.org/abs/2605.12903",
-      "doi": null
+      "topic": "Arithmetic geometry",
+      "description": "Geometry at infinity of polynomial fiber products, rational lifts, and their arithmetic counting behavior."
+    }
+  ],
+  "historical_expositions": [
+    {
+      "slug": "a-tree-is-a-discrete-poincare-lemma",
+      "title": "A Tree Is a Discrete Poincaré Lemma",
+      "page": "/notes/a-tree-is-a-discrete-poincare-lemma.html",
+      "target": "/notes/what-a-boundary-map-can-prove.html",
+      "successor_title": "What a Boundary Map Can Prove",
+      "edition": "October 2026 (retained predecessor)",
+      "archivedDate": null,
+      "sourceMetadata": {
+        "slug": "a-tree-is-a-discrete-poincare-lemma",
+        "title": "A Tree Is a Discrete Poincaré Lemma",
+        "subtitle": "Graph cohomology, spanning trees, and motivic shadows",
+        "summary": "The retained predecessor exposition develops graph cohomology, tree counts, electrical resistance, determinantal tree probabilities, higher spanning trees, graph Jacobians, nodal curves and graph motives.",
+        "page": "/notes/a-tree-is-a-discrete-poincare-lemma.html",
+        "readingBody": "content/expositions/a-tree-is-a-discrete-poincare-lemma.html",
+        "pdf": "/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+        "tex": "/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+        "edition": "October 2026",
+        "pageCount": 29,
+        "metadata_origin": "Archival catalogue entry assembled from the retained public PDF, TeX title page and current redirect; not a current exposition-library entry."
+      },
+      "downloads": [
+        {
+          "href": "/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+          "label": "Retained predecessor PDF"
+        },
+        {
+          "href": "/tex/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.tex",
+          "label": "Retained predecessor TeX source"
+        }
+      ],
+      "history_status": "Current public redirect and retained public files verify predecessor status. No exact supersession date has been asserted."
     }
   ]
 }

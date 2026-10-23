@@ -1,0 +1,229 @@
+{
+  "edition": "2026-10-23.1",
+  "files": [
+    {
+      "site_path": "assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "live_url": "https://tensorgami.com/assets/essays/mathematical-life-in-the-age-of-ai.pdf",
+      "release_file": "mathematical-life-in-the-age-of-ai.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/mathematical-life-in-the-age-of-ai.pdf",
+      "bytes": 160867,
+      "sha256": "5501eeb7625d619f647095ea881512fa6743f65cd5c0bded3a566d8044a5f66b"
+    },
+    {
+      "site_path": "assets/essays/the-culture-of-mathematical-judgment.pdf",
+      "live_url": "https://tensorgami.com/assets/essays/the-culture-of-mathematical-judgment.pdf",
+      "release_file": "the-culture-of-mathematical-judgment.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/the-culture-of-mathematical-judgment.pdf",
+      "bytes": 148272,
+      "sha256": "0cae59099bbdb259dc3a346c0259ec20c7b5ed05a6a8d71f62c638d34f4698bc"
+    },
+    {
+      "site_path": "assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "live_url": "https://tensorgami.com/assets/essays/when-accountability-stops-being-reciprocal.pdf",
+      "release_file": "when-accountability-stops-being-reciprocal.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/when-accountability-stops-being-reciprocal.pdf",
+      "bytes": 140240,
+      "sha256": "a4d6bfa9e9dd28e4473fd001a41fac002eddb4bab379ea878e14099deaa871d2"
+    },
+    {
+      "site_path": "formalizations/packages/disjoint-decomposition.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/disjoint-decomposition.zip",
+      "release_file": "disjoint-decomposition.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/disjoint-decomposition.zip",
+      "bytes": 5940,
+      "sha256": "0c54654ba45179ae3fa8ec4889860b9024ab567d7b47a8bb01250c91b6f7ee84"
+    },
+    {
+      "site_path": "formalizations/packages/extracting-first-prime.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/extracting-first-prime.zip",
+      "release_file": "extracting-first-prime.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/extracting-first-prime.zip",
+      "bytes": 7724,
+      "sha256": "386225872534f462006871a55b7acf066738a9bb25891798f97e919f84db13f1"
+    },
+    {
+      "site_path": "formalizations/packages/galois-frobenius-composition-law.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/galois-frobenius-composition-law.zip",
+      "release_file": "galois-frobenius-composition-law.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/galois-frobenius-composition-law.zip",
+      "bytes": 16085,
+      "sha256": "3114c3e1b2a9c05385bb3ce035ff942f13cc0b177472745e454cd5c888e86f87"
+    },
+    {
+      "site_path": "formalizations/packages/ibm-ponder-this-2010.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/ibm-ponder-this-2010.zip",
+      "release_file": "ibm-ponder-this-2010.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/ibm-ponder-this-2010.zip",
+      "bytes": 9210,
+      "sha256": "cfd4a6f7b6100fa85c8d1a86f22cf01583b88cc9d9dcb85f13f622ede030e588"
+    },
+    {
+      "site_path": "formalizations/packages/pointwise-weighting.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/pointwise-weighting.zip",
+      "release_file": "pointwise-weighting.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/pointwise-weighting.zip",
+      "bytes": 10351,
+      "sha256": "cce4587e7df7bd3a07802a1b89f6774eab0a2af8c1ce00f71bbef12d8e35d468"
+    },
+    {
+      "site_path": "formalizations/packages/separated-polynomial-differences.zip",
+      "live_url": "https://tensorgami.com/formalizations/packages/separated-polynomial-differences.zip",
+      "release_file": "separated-polynomial-differences.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/separated-polynomial-differences.zip",
+      "bytes": 7173,
+      "sha256": "c33ffb72ecd442027a01ba804202bc489741f3be3748c74d91229769e529c3b4"
+    },
+    {
+      "site_path": "pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "release_file": "A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Divisibility_Criterion_for_Separated_Polynomial_Differences.pdf",
+      "bytes": 202443,
+      "sha256": "3bc0126cb219d3722e6325b8b6f66e9a7577289b3f7d0c07047d32c211351c1e"
+    },
+    {
+      "site_path": "pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "release_file": "A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Galois_Theoretic_and_Frobenius_Descent_Viewpoint_on_a_Polynomial_Composition_Law.pdf",
+      "bytes": 416965,
+      "sha256": "78339342a44a40d3eb38f6c288a9c9846afb0092f8970db00209ff47183c01c5"
+    },
+    {
+      "site_path": "pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "release_file": "A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Tree_Is_a_Discrete_Poincare_Lemma.pdf",
+      "bytes": 483829,
+      "sha256": "a22cb2953d9dc2242f75152f3e6f5bbfd2f54dd3219175b3ed7e8667df4f7fcb"
+    },
+    {
+      "site_path": "pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/Fourier_Symmetry_and_Reconstruction.pdf",
+      "release_file": "Fourier_Symmetry_and_Reconstruction.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Fourier_Symmetry_and_Reconstruction.pdf",
+      "bytes": 534796,
+      "sha256": "aba607f109bb58065c80296986fb8d259a88fd4da0a39b77504b6632022437aa"
+    },
+    {
+      "site_path": "pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
+      "release_file": "Quotients_Refinement_and_Reconstruction.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Quotients_Refinement_and_Reconstruction.pdf",
+      "bytes": 707536,
+      "sha256": "dcc9120795b78e227b0711f5b72139e326e6c3b8d75595d6c14c5ec5922a50bb"
+    },
+    {
+      "site_path": "pdfs/algebra/Six_Elements_One_Comparison.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/Six_Elements_One_Comparison.pdf",
+      "release_file": "Six_Elements_One_Comparison.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Six_Elements_One_Comparison.pdf",
+      "bytes": 343043,
+      "sha256": "860667e3a34fb2bf709d0b61d8df318aac10c31a98b6512d5162006f5659abd6"
+    },
+    {
+      "site_path": "pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/What_a_Boundary_Map_Can_Prove.pdf",
+      "release_file": "What_a_Boundary_Map_Can_Prove.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/What_a_Boundary_Map_Can_Prove.pdf",
+      "bytes": 599738,
+      "sha256": "b95ec42807df0e7272428bfb4baa340cd7adbc5c7b226739dae56946e8f36dfb"
+    },
+    {
+      "site_path": "pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/What_a_Derivative_Retains.pdf",
+      "release_file": "What_a_Derivative_Retains.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/What_a_Derivative_Retains.pdf",
+      "bytes": 275246,
+      "sha256": "ed9c70c2cfc64e845871c6f142c15d79ec1ca2310e5e1dca3d7752ee9e7e1fb3"
+    },
+    {
+      "site_path": "pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebra/When_a_Formal_Logarithm_Fails.pdf",
+      "release_file": "When_a_Formal_Logarithm_Fails.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/When_a_Formal_Logarithm_Fails.pdf",
+      "bytes": 126781,
+      "sha256": "b8defd4b97d9c9d9b8ed239f5b921a55e40a0fa9cb52d637826b44e03138d27a"
+    },
+    {
+      "site_path": "pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "live_url": "https://tensorgami.com/pdfs/algebraic-geometry/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "release_file": "Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Notes_on_Hartshorne_Algebraic_Geometry_Chapter_II_Section_5_Exercises_14_18.pdf",
+      "bytes": 326988,
+      "sha256": "e7d6864c94dafa70713340659cd966b70501691d19c4f1862770efb664cd4889"
+    },
+    {
+      "site_path": "pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "live_url": "https://tensorgami.com/pdfs/analysis/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "release_file": "A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Note_on_Disjoint_Decompositions_of_0_1_into_Closed_Sets.pdf",
+      "bytes": 185467,
+      "sha256": "8da0b975483af738b47e8d8c7bdf68f77de9b0aef44d6654eee1811258bb0563"
+    },
+    {
+      "site_path": "pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "live_url": "https://tensorgami.com/pdfs/analysis/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "release_file": "A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Weighting_Argument_for_Pointwise_Convergence_to_Convergence_in_Measure.pdf",
+      "bytes": 319331,
+      "sha256": "ab41c9839f51df70772be1914c052bd2930dcf7c70c5ad88fdd34b4e7159e416"
+    },
+    {
+      "site_path": "pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "live_url": "https://tensorgami.com/pdfs/analysis/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "release_file": "Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Lebesgue_s_Criterion_for_Riemann_Integrability.pdf",
+      "bytes": 303594,
+      "sha256": "4b9cca21b809b8b019121ce400dc3fd262149f7b1baa04ba460aa19f15ea1a42"
+    },
+    {
+      "site_path": "pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "live_url": "https://tensorgami.com/pdfs/analysis/Products_Preserve_Riemann_Integrability.pdf",
+      "release_file": "Products_Preserve_Riemann_Integrability.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Products_Preserve_Riemann_Integrability.pdf",
+      "bytes": 208287,
+      "sha256": "e819db389f29fa9323938ba5316b970d2ae03ebf13638b90a843d037349db86b"
+    },
+    {
+      "site_path": "pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "live_url": "https://tensorgami.com/pdfs/number-theory/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "release_file": "A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/A_Galois_Theoretic_Solution_to_the_July_2010_IBM_Ponder_This_Challenge.pdf",
+      "bytes": 311420,
+      "sha256": "eb2fc5f6c188b41104418e8a4130e26e678f6136531af85cf8c98f1ab368999a"
+    },
+    {
+      "site_path": "pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "live_url": "https://tensorgami.com/pdfs/number-theory/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "release_file": "Extracting_the_First_Prime_Greater_than_m.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Extracting_the_First_Prime_Greater_than_m.pdf",
+      "bytes": 310966,
+      "sha256": "93e683738e2d548322042862346503c4cd4fc47fb9b39743fce886b93a0d0956"
+    },
+    {
+      "site_path": "pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "live_url": "https://tensorgami.com/pdfs/problem-sets/Exercise_Problems_in_Mathematics.pdf",
+      "release_file": "Exercise_Problems_in_Mathematics.pdf",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Exercise_Problems_in_Mathematics.pdf",
+      "bytes": 172310,
+      "sha256": "8ea9bc55462c152a7775e75182b1482dc240f421b863e69d2721d7a19bf4d780"
+    },
+    {
+      "site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+      "release_file": "Quotients_Refinement_and_Reconstruction.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Quotients_Refinement_and_Reconstruction.zip",
+      "bytes": 96682,
+      "sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502"
+    },
+    {
+      "site_path": "tex/algebra/Six_Elements_One_Comparison.zip",
+      "live_url": "https://tensorgami.com/tex/algebra/Six_Elements_One_Comparison.zip",
+      "release_file": "Six_Elements_One_Comparison.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/Six_Elements_One_Comparison.zip",
+      "bytes": 16562,
+      "sha256": "de38260e0486c8f9c71a554f9585220e6fc984bed4fdbe5b105aa02d0a66b5e1"
+    }
+  ]
+}

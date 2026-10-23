@@ -1,0 +1,628 @@
+\section{A quotient remembers which identifications were made}
+\label{r:chapter}
+
+We now have a language in which a quotient is an operation on a relation,
+and a comparison of quotients is an operation on a correspondence.  We will
+use that language once, in a pointed Barr-exact Mal'cev category
+$\mathcal C$.  Groups and modules will enter afterwards by verifying these
+axioms.  Neither commutative addition of arrows nor an invariant called
+dimension is used in this chapter.
+
+There are three stages.  First we record a normal series without forgetting
+its quotient maps.  Next we compare two such records by a rectangular array
+of correspondences.  Finally simplicity prevents the comparison from
+breaking a factor into smaller nonzero factors.  The last step is
+Jordan--H\"older; the rectangle, rather than a numerical count, does the work.
+
+\subsection{The data in a normal series}
+
+\begin{definition}[Normal series with its quotient maps]
+\label{r:normal-series}
+A finite normal series of $X$ consists of a chain of subobjects and chosen
+regular epimorphisms
+\[
+  0=X_0\lhook\joinrel\longrightarrow X_1
+  \lhook\joinrel\longrightarrow\cdots
+  \lhook\joinrel\longrightarrow X_n=X,
+  \qquad q_i:X_i\twoheadrightarrow S_i,
+\]
+such that the inclusion $X_{i-1}\hookrightarrow X_i$ is a kernel of $q_i$.
+The objects $S_i$ are its \emph{factors}.  Repetitions of subobjects and zero
+factors are permitted.  Two series are \emph{equivalent} when their lists of
+factors are isomorphic after a permutation.  We also use equivalence
+\emph{after deleting zero factors}, stating explicitly when we do so.
+\end{definition}
+
+The kernel square in this definition is
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+X_{i-1}\arrow[r,hook]\arrow[d] & X_i\arrow[d,two heads,"q_i"]\\
+0\arrow[r] & S_i .
+\end{tikzcd}
+\tag{\ref{r:normal-series}a}
+\]
+It is a pullback.  In particular, the normality assertion is relative to
+$X_i$, not to all of $X$.  For a group this allows a subgroup normal in its
+successor without demanding that it be normal in the ambient group.
+
+We keep $q_i$ because the kernel alone need not determine a quotient in
+this generality.  A familiar implication from groups, such as ``a regular
+epimorphism with zero kernel is an isomorphism'', is not inserted as an
+unstated axiom.  All our comparisons retain the kernel pair of the actual
+map, which is the full record of its identifications.
+
+Here and below, composition of relations is function-like: $SR$ means
+first $R$, then $S$.  For a relation $r:X\rightsquigarrow X$ and a subobject
+$U\hookrightarrow X$, write $rU$ for the image of the restriction of $r$
+whose input lies in $U$.  Thus $rX$ is its output support and $r0$ its zero
+class.  A symmetric transitive relation is a \emph{partial equivalence
+relation}; it is an equivalence relation on its support, by
+Lemma~\ref{d:partial-equivalence}.  Its support quotient will be written
+\[
+                    Q(r)=(rX)/r.
+\]
+The slash is shorthand for the effective quotient of the restricted
+equivalence relation, not a new operation on objects without relations.
+
+\begin{lemma}[A series as a sequence of identifications]
+\label{r:series-relations}
+For $n\geq1$, the data of Definition~\ref{r:normal-series}, up to the unique isomorphisms
+allowed for quotient objects, are equivalently a list of partial equivalence
+relations $r_1,\ldots,r_n$ on $X$ satisfying
+\begin{equation}
+\label{r:boundary}
+ r_1 0=0,\qquad r_iX=r_{i+1}0\ (1\leq i<n),\qquad r_nX=X.
+\end{equation}
+The associated factors are $Q(r_i)$. The empty series of $0$ is treated
+separately; it has no endpoint relations to name.
+\end{lemma}
+
+\begin{proof}
+Let $a_i:X_i\hookrightarrow X$ be the composite inclusion.  Regarding
+arrows as their graphs, put
+\[
+       r_i=a_iq_i^{\mathrm{op}}q_i a_i^{\mathrm{op}}.
+\]
+On $X_i$, this is the kernel pair of $q_i$; it relates precisely the two
+inputs that $q_i$ identifies.  Extending it along the monomorphism $a_i$
+makes it a partial equivalence relation on $X$.  Its support is $X_i$.
+The zero arrow into $X_i$ is sent to the zero arrow into $S_i$, so taking
+the zero class of that kernel pair gives precisely the pullback defining
+$\ker q_i$.  Therefore
+\[
+                 r_iX=X_i,\qquad r_i0=X_{i-1}.
+\]
+These equalities give~\eqref{r:boundary}.  Since $q_i$ is a regular
+epimorphism, it is the effective quotient of its kernel pair, and
+$Q(r_i)\cong S_i$ canonically.
+
+Conversely, set $X_i=r_iX$.  The zero class $r_i0$ is a subobject of $r_iX$.
+Thus the identities~\eqref{r:boundary} make the $X_i$ a chain, beginning
+with $X_0=0$ and ending with $X_n=X$.  By exactness the restricted relation
+$r_i$ has an effective quotient $q_i:X_i\twoheadrightarrow Q(r_i)$.
+The same kernel-pair calculation says that $\ker q_i=r_i0=X_{i-1}$.
+These two constructions are inverse because an effective quotient is
+determined, up to a unique compatible isomorphism, by its kernel pair.
+\end{proof}
+
+This change of language has retained more than the chain.  It retains
+which pairs of points become equal at each step.  That is the information
+needed to compare two quotient constructions in a category where the zero
+class alone may not determine the entire relation.
+
+\subsection{What a genuine refinement means}
+
+To refine a series, we refine one of its factors and pull that refinement
+back.  Suppose $q:D\twoheadrightarrow Q$ is one quotient step, with kernel
+$K\hookrightarrow D$, and suppose
+\[
+ 0=Q_0\hookrightarrow Q_1\hookrightarrow\cdots\hookrightarrow Q_t=Q,
+ \qquad e_j:Q_j\twoheadrightarrow Z_j,\quad\ker e_j=Q_{j-1},
+\]
+is a normal series of its factor.  Form $P_j=D\times_Q Q_j$.  We obtain
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+K=P_0\arrow[r,hook]\arrow[d,two heads]
+ &P_1\arrow[r,hook]\arrow[d,two heads,"p_1"]
+ &\cdots\arrow[r,hook]&P_t=D\arrow[d,two heads,"q"]\\
+0=Q_0\arrow[r,hook]&Q_1\arrow[r,hook]
+ &\cdots\arrow[r,hook]&Q_t=Q .
+\end{tikzcd}
+\]
+Each displayed comparison square is a pullback.  Pullback stability of
+regular epimorphisms makes $p_j:P_j\twoheadrightarrow Q_j$ a regular
+epimorphism.  The refined quotient map at the $j$th step is
+\begin{equation}
+\label{r:refined-map}
+                  e_jp_j:P_j\twoheadrightarrow Z_j.
+\end{equation}
+Its kernel is $P_{j-1}$: its pullback over $0$ is
+$P_j\times_{Q_j}Q_{j-1}=D\times_Q Q_{j-1}$.  Regular epimorphisms are
+closed under composition, so this really is a normal series between $K$
+and $D$.  Replacing any or all of the original steps in this way is what
+we mean by a \emph{refinement}.
+For the empty series of the zero object we adopt the harmless convention
+that inserting a finite list of zero steps is a refinement.  This
+convention concerns only how empty lists are represented; it introduces
+no nonzero factor.
+
+It would be insufficient to insert arbitrary kernel subobjects between
+$K$ and $D$ while forgetting their relation to $q$.  We need the new
+quotients to have arisen from the original quotient.  The following
+saturation condition expresses exactly that requirement.
+
+\begin{proposition}[Saturation is descent of a refinement]
+\label{r:refinement-descent}
+Let $r$ be a partial equivalence relation on $X$, let $D=rX$, and let
+$q:D\twoheadrightarrow Q(r)$ be its quotient.  For $k\geq1$, lists of
+partial equivalence relations $t_1,\ldots,t_k$ on $X$ satisfying
+\begin{align}
+ rt_jr&=t_j \quad(1\leq j\leq k), \label{r:saturation}\\
+ t_1 0&=r0,\qquad t_jX=t_{j+1}0\ (1\leq j<k),\qquad
+ t_kX=rX \label{r:refinement-boundary}
+\end{align}
+correspond to normal series of $Q(r)$ with exactly $k$ steps. Under this correspondence, their
+support quotients $Q(t_j)$ are the factors of the pulled-back refinement
+of $q$.
+\end{proposition}
+
+\begin{proof}
+The equality $rt_jr=t_j$ first implies that the support of $t_j$ lies
+inside $D$, so we can work on $D$.  Write $E=q^{\mathrm{op}}q$ for the
+kernel pair on $D$; it is the restriction of $r$.  The saturated descent
+lemma, Proposition~\ref{d:saturated-descent}, gives mutually inverse
+operations
+\[
+       T_j=q\,t_j\,q^{\mathrm{op}},\qquad
+       t_j=q^{\mathrm{op}}T_jq.
+\]
+The first is the direct image relation on $Q(r)$; the second is its
+pullback along $q\times q$.  Their being inverse uses $qq^{\mathrm{op}}
+=1_{Q(r)}$ and $Et_jE=t_j$.  That lemma also proves that symmetry and
+transitivity descend, so each $T_j$ is a partial equivalence relation.
+
+We check the endpoints, since those checks are what make this a descent
+of \emph{series}.  Saturation and reflexivity of $E$ on $D$ give
+$t_jE=t_j=Et_j$.  The inverse image of the zero subobject of $Q(r)$ is
+$E0$.  Therefore, as subobjects obtained by regular images,
+\[
+             T_j0=q\,t_jE0=q\,t_j0,
+       \qquad T_jQ(r)=q(t_jD).
+\]
+Now $q(E0)=0$ and $qD=Q(r)$.  Applying these formulas to
+\eqref{r:refinement-boundary} gives
+\[
+ T_10=0,\qquad T_jQ(r)=T_{j+1}0,\qquad T_kQ(r)=Q(r).
+\]
+Lemma~\ref{r:series-relations} therefore supplies a normal series of
+$Q(r)$.
+
+In the other direction, begin with a normal series of $Q(r)$ and its
+relations $T_j$.  Pulling back the relations gives $t_j=q^{\mathrm{op}}T_jq$,
+which are saturated and have precisely the support and zero-class
+boundaries in~\eqref{r:refinement-boundary}.  Concretely, if $Q_j$ is the
+support of $T_j$, the support of $t_j$ is $P_j=D\times_{Q(r)}Q_j$.
+If $e_j:Q_j\twoheadrightarrow Z_j$ is its factor quotient, the kernel pair
+of $e_jp_j$ on $P_j$ is $t_j$.  As $e_jp_j$ is a regular epimorphism,
+its codomain $Z_j$ is the effective quotient of $t_j$.  This gives the
+unique compatible isomorphism $Q(t_j)\cong Z_j$ and identifies the
+quotient maps as well as the objects.
+\end{proof}
+
+The proposition is a small descent theorem.  The equality $rt_jr=t_j$
+says that changing either input by an identification already imposed by
+$r$ does not change the new relation.  Exactly then the relation can be
+defined downstairs, independently of the choice of a representative.
+The proof above replaces that verbal test by pullbacks, images, and
+unique quotient maps.
+
+\subsection{The comparison rectangle}
+
+Let $r,s$ be partial equivalence relations on the same object.  Their
+composite $rs$ need not be an equivalence relation on all of $X$.  It is
+nevertheless a relation, so the Mal'cev theorem applies to it.  This
+produces the identities that will make our rectangle fit together.
+
+\begin{lemma}[Two endpoint identities]
+\label{r:endpoint-identities}
+For partial equivalence relations $r,s$ on $X$,
+\begin{equation}
+\label{r:rs-idempotent}
+                  rsrs=rs,
+\end{equation}
+and
+\begin{equation}
+\label{r:endpoint-equalities}
+                  rsr0=rs0,\qquad rsrX=rsX.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The relation $P=rs$ is difunctional by Proposition~\ref{d:difunctional}, so
+$PP^{\mathrm{op}}P=P$.  Symmetry and idempotence of $r,s$ reduce the left
+side to
+\[
+           rssrrs=rsrs,
+\]
+which proves~\eqref{r:rs-idempotent}.
+
+Every subobject in a pointed category contains its zero arrow.  In
+particular $0\subseteq r0$ and $0\subseteq s0$.  Monotonicity of relational
+image and~\eqref{r:rs-idempotent} now give
+\[
+ rs0\subseteq rsr0\subseteq rsrs0=rs0.
+\]
+Here the second inclusion comes from $r0\subseteq rs0$, itself obtained
+by applying $r$ to $0\subseteq s0$.  For supports, $sX\subseteq X$ gives
+\[
+        rsX=rsrsX\subseteq rsrX\subseteq rsX;
+\]
+the final inclusion uses $rX\subseteq X$.  Both chains give equality.
+\end{proof}
+
+Now take two normal series of $X$ of positive lengths $m,n$, encoded by
+$r_1,\ldots,r_m$ and $s_1,\ldots,s_n$.  At the crossing of the $i$th row
+and $j$th column, define
+\begin{equation}
+\label{r:cells}
+       r_{ij}=r_is_jr_i,\qquad
+       s_{ji}=s_jr_is_j,\qquad P_{ij}=r_is_j.
+\end{equation}
+The two cell relations are the two equivalence relations associated with
+the correspondence $P_{ij}$:
+\[
+       P_{ij}P_{ij}^{\mathrm{op}}=r_{ij},\qquad
+       P_{ij}^{\mathrm{op}}P_{ij}=s_{ji}.
+\]
+Our composition convention matters here: $s_{ji}$ is on the input support
+of $P_{ij}$, and $r_{ij}$ on its output support.
+
+\begin{proposition}[Every row and column is a genuine refinement]
+\label{r:rectangle-refines}
+For fixed $i$, the list $r_{i1},\ldots,r_{in}$ satisfies
+Proposition~\ref{r:refinement-descent} for $r_i$.  For fixed $j$, the list
+$s_{j1},\ldots,s_{jm}$ satisfies that proposition for $s_j$.
+\end{proposition}
+
+\begin{proof}
+We verify every condition for a row.  Symmetry follows by reversing the
+word $r_is_jr_i$.  Idempotence follows from
+Lemma~\ref{r:endpoint-identities}:
+\[
+ r_{ij}r_{ij}=r_is_jr_is_jr_i=r_is_jr_i=r_{ij}.
+\]
+Thus each cell is symmetric and transitive.  Its saturation is
+\[
+       r_i r_{ij}r_i=r_i^2s_jr_i^2=r_{ij}.
+\]
+For the first zero class, use $s_10=0$:
+\[
+            r_{i1}0=r_is_1r_i0=r_is_10=r_i0.
+\]
+For an intermediate join, use $s_j0=s_{j-1}X$:
+\[
+\begin{split}
+ r_{ij}0
+ &=r_is_jr_i0=r_is_j0
+  =r_is_{j-1}X\\
+ &=r_is_{j-1}r_iX=r_{i,j-1}X
+                  \qquad(2\leq j\leq n).
+\end{split}
+\]
+For the last support, use $s_nX=X$:
+\[
+                 r_{in}X=r_is_nr_iX=r_is_nX=r_iX.
+\]
+Every equality that removes the trailing $r_i$ is one of
+\eqref{r:endpoint-equalities}.  We have proved saturation and all boundary
+conditions, so Proposition~\ref{r:refinement-descent} supplies a
+pulled-back refinement of the original quotient.  Interchanging $r$ and
+$s$ proves the column assertion.
+\end{proof}
+
+The boundary identities are the gluing conditions.  They say that the
+support of one cell is precisely the zero class required to start the
+next cell.  Without these identities we would have an assortment of
+quotients, not a refinement of a filtration.
+
+\begin{proposition}[The two readings of a cell have the same quotient]
+\label{r:cell-isomorphism}
+For every $(i,j)$ there is a canonical isomorphism
+\begin{equation}
+\label{r:cell-iso}
+                       Q(s_{ji})\xrightarrow{\ \sim\ }Q(r_{ij}).
+\end{equation}
+It is induced by the correspondence $P_{ij}$ and characterized by its
+two projections, not chosen by comparing lengths or other invariants.
+\end{proposition}
+
+\begin{proof}
+Let $C_{ij}$ be the object representing $P_{ij}\hookrightarrow X\times X$.
+Factor its two projections through their image supports:
+\[
+ C_{ij}\xrightarrow{a_{ij}}L_{ij}\hookrightarrow X,
+ \qquad C_{ij}\xrightarrow{b_{ij}}R_{ij}\hookrightarrow X.
+\]
+Both $a_{ij}$ and $b_{ij}$ are regular epimorphisms.  The input relation
+$P_{ij}^{\mathrm{op}}P_{ij}$ is $s_{ji}$, so $L_{ij}=s_{ji}X$; similarly
+$R_{ij}=r_{ij}X$.  Write their effective quotient maps as
+$\lambda_{ij}:L_{ij}\twoheadrightarrow Q(s_{ji})$ and
+$\rho_{ij}:R_{ij}\twoheadrightarrow Q(r_{ij})$.
+
+The support-quotient comparison theorem, Theorem~\ref{d:comparison},
+applies to $P_{ij}$ and gives the unique isomorphism $\theta_{ij}$ for
+which
+\[
+\begin{tikzcd}[column sep=large,row sep=large]
+L_{ij}\arrow[d,two heads,"\lambda_{ij}"']
+ &C_{ij}\arrow[l,two heads,"a_{ij}"']
+          \arrow[r,two heads,"b_{ij}"]
+ &R_{ij}\arrow[d,two heads,"\rho_{ij}"]\\
+Q(s_{ji})\arrow[rr,"\theta_{ij}"',"\sim"]
+ &&Q(r_{ij})
+\end{tikzcd}
+\]
+commutes, meaning
+$\theta_{ij}\lambda_{ij}a_{ij}=\rho_{ij}b_{ij}$.
+The cited theorem proves existence and invertibility by effective
+quotients and difunctionality.  Its uniqueness also follows directly
+because $\lambda_{ij}a_{ij}$ is an epimorphism.  The displayed computation
+of the two kernel relations identifies its conclusion with
+\eqref{r:cell-iso}.
+\end{proof}
+
+This is the categorical butterfly.  It is the same correspondence read
+from its two ends, with each end quotiented by precisely the ambiguity
+introduced by that correspondence.  No picture of four wings is needed
+to remember the construction: form $P$, compute $P^{\mathrm{op}}P$ and
+$PP^{\mathrm{op}}$, and take their support quotients.
+
+\begin{theorem}[Schreier refinement in an exact Mal'cev category]
+\label{r:schreier}
+\label{j:schreier}
+In a pointed Barr-exact Mal'cev category, any two finite normal series of
+an object have equivalent refinements in the pullback sense specified
+above.  The refinements may contain repeated subobjects and zero factors.
+\end{theorem}
+
+\begin{proof}
+Suppose first that both series have positive numbers $m,n$ of steps.
+For the first series, concatenate the $m$ rows supplied by
+Proposition~\ref{r:rectangle-refines}.  Their endpoints are the original
+successive subobjects, so they fit together into a normal series of $X$.
+For the second series, concatenate the $n$ columns.  Both refined lists
+have $mn$ factors.  Their indexing orders differ, but the transposition
+$(i,j)\leftrightarrow(j,i)$ pairs them.  Proposition~\ref{r:cell-isomorphism}
+gives the isomorphism for each paired cell.
+
+An empty series can occur only for $X=0$.  Every subobject of $0$ is
+isomorphic to $0$: a monomorphism $A\to0$ has its unique map $0\to A$ as
+a right inverse, and monicity makes it a left inverse as well.  A regular
+epimorphism out of $0$ also has zero codomain, since it is at once monic
+and a regular epimorphism.  Thus every factor of every series of $0$ is
+zero.  We may insert zero steps to give both series the same positive
+number of zero factors, or treat two empty lists as already equivalent.
+These are refinements by the zero object's zero series.  This resolves
+the degenerate case without assuming a nonempty comparison rectangle.
+\end{proof}
+
+The theorem does not produce a single nested chain containing the terms
+of both original chains.  Two different lines in a two-dimensional vector
+space already prevent that: neither line contains the other.  It produces
+one refinement of each chain and a matching between their quotient
+factors.  This distinction matters even in the most elementary example.
+
+\subsection{Simplicity removes the remaining freedom}
+
+\begin{definition}[Quotient-simple object]
+\label{j:simple}
+A nonzero object $S$ is \emph{quotient-simple} if every regular
+epimorphism $e:S\twoheadrightarrow T$ is either an isomorphism or has
+zero codomain.  A composition series is a finite normal series all of
+whose factors are quotient-simple.
+\end{definition}
+
+The condition concerns the arrow $e$.  The weaker phrase ``its codomain
+is isomorphic to $S$ or to $0$'' would not exclude a proper self-quotient.
+The definition above does exclude it.  In the group and module instances,
+it agrees with the usual definition of a nontrivial simple object.
+
+\begin{lemma}[A simple factor cannot be broken into smaller factors]
+\label{j:simple-refinement}
+Every finite normal series of a quotient-simple object $S$ has exactly
+one nonzero factor, isomorphic to $S$.  Its other factors are zero.
+\end{lemma}
+
+\begin{proof}
+The last quotient is a regular epimorphism $e:S\twoheadrightarrow T$.
+If $T=0$, its kernel is all of $S$, so the preceding subobject is $S$.
+Remove this last, zero-factor step and consider the shorter series.
+Because the series is finite and begins at $0\neq S$, this removal
+process must eventually reach a last step whose preceding subobject is
+proper in $S$.
+
+For that step the quotient cannot have zero codomain: a map to $0$ has
+kernel $S$.  Simplicity therefore makes the quotient map an isomorphism.
+Its kernel is $0$, so every preceding subobject of the chain is $0$.
+Every regular quotient of $0$ is $0$, as checked in the proof of
+Theorem~\ref{r:schreier}.  We have one quotient isomorphic to $S$, zero
+quotients before it, and the zero quotients stripped from its end.
+\end{proof}
+
+\begin{theorem}[Jordan--H\"older]
+\label{j:jordan-holder}
+Let $\mathcal C$ be a pointed Barr-exact Mal'cev category.  If an object
+$X$ has two finite composition series, then their factor lists agree,
+including multiplicity, up to permutation and isomorphism.  In particular,
+the two series have the same number of factors.
+\end{theorem}
+
+\begin{proof}
+Apply Theorem~\ref{r:schreier} to obtain equivalent refinements.  Each
+refinement is obtained from normal series of the original factors, pulled
+back along the original quotient maps.  By Lemma~\ref{j:simple-refinement},
+each such factor series contributes exactly its original simple factor
+and some zero factors.  Proposition~\ref{r:refinement-descent} identifies
+these with the factors of the pulled-back refinement.
+
+Consequently, deleting zero factors from the first refined list recovers
+the first original list, and deleting them from the second recovers the
+second original list.  An isomorphism cannot identify a nonzero object
+with $0$, so the matching between refined lists restricts to a matching
+between their nonzero lists.  This is the desired permutation and set of
+factor isomorphisms.  The equality of lengths is a consequence of that
+bijection, not an input to its construction.
+\end{proof}
+
+No existence assertion is hidden in this theorem.  We assumed two finite
+composition series and compared them.  A category may contain objects
+with no finite composition series.  Even when maximal or minimal
+subobjects can be selected, a termination argument is still required
+before one can assert existence.  The finite sequences used here are
+already supplied, so neither an ascending nor a descending chain
+condition enters the uniqueness proof.
+
+\subsection{Factor data becomes an invariant only after the comparison}
+
+Now, and only now, a numerical or algebraic record of the factors becomes
+legitimate.  Call an object \emph{composition-finite} when it has a finite
+composition series, allowing $0$ with its empty series.  Write $\mu(X)$
+for the finite multiset of isomorphism classes of its simple factors.
+Theorem~\ref{j:jordan-holder} proves that $\mu(X)$ is independent of the
+chosen series.  It does not reconstruct $X$: distinct extension data can
+give the same multiset.
+
+\begin{proposition}[Splicing an extension]
+\label{j:extension-additivity}
+\label{j:splicing}
+Suppose $e:E\twoheadrightarrow Q$ is a regular epimorphism with kernel
+$K\hookrightarrow E$.  If $K$ and $Q$ are composition-finite, then so is
+$E$, and
+\begin{equation}
+\label{j:mu-additive}
+                         \mu(E)=\mu(K)+\mu(Q).
+\end{equation}
+Here $+$ means disjoint union of finite multisets, including multiplicity.
+\end{proposition}
+
+\begin{proof}
+Choose composition series for $K$ and $Q$.  Pull the series of $Q$ back
+along $e$.  The construction~\eqref{r:refined-map} gives a normal series
+from $K$ to $E$ whose factors are exactly those of $Q$.  Prepend the
+chosen composition series from $0$ to $K$.  Every factor in the resulting
+series is simple, so it is a composition series of $E$.  Its factor list
+is the concatenation of the two chosen lists.  Jordan--H\"older makes
+that calculation independent of all the choices and proves
+\eqref{j:mu-additive}.
+\end{proof}
+
+This proposition establishes closure under these extensions.  It does
+not assert, without an additional argument, that every subobject or every
+regular quotient of a composition-finite object is composition-finite in
+our weakest categorical setting.  The direction used in the proof is
+precisely the direction stated.
+
+For the next statement assume that the isomorphism classes of simple
+objects under discussion form a set $\Sigma$, for example by working in
+an essentially small category.  The free commutative monoid
+$\mathbb N^{(\Sigma)}$ consists of finitely supported functions
+$\Sigma\to\mathbb N$, with pointwise addition.  Thus $\mu(X)$ is an
+element of this monoid.
+
+\begin{corollary}[The universal additive record]
+\label{j:universal-invariant}
+\label{j:universal-monoid}
+Let $M$ be a commutative monoid.  An arbitrary assignment $w:\Sigma\to M$
+extends uniquely to an isomorphism invariant $v$ of composition-finite
+objects satisfying
+\[
+ v(0)=0,\qquad v(E)=v(K)+v(Q)
+\]
+for every kernel--regular-quotient sequence $K\hookrightarrow
+E\twoheadrightarrow Q$ whose terms are composition-finite.  The formula is
+\[
+                 v(X)=\sum_{[S]\in\Sigma}\mu(X)_{[S]}\,w([S]).
+\]
+\end{corollary}
+
+\begin{proof}
+Only finitely many summands are nonzero.  Jordan--H\"older makes the
+formula well defined, and Proposition~\ref{j:extension-additivity} gives
+the required additivity.  For uniqueness, every intermediate term of a
+composition series is composition-finite, because its initial segment
+is itself a composition series.  Repeatedly applying additivity to these
+successive quotient maps forces $v(X)$ to equal the displayed sum.
+\end{proof}
+
+Taking every $w([S])=1$ defines length.  Taking values in a group gives
+the corresponding universal group of additive invariants.  These are
+consequences of factor comparison; using them to justify that comparison
+would reverse the dependency and create circular reasoning.  The order
+here is deliberate: quotient construction, refinement, factor matching,
+then invariant.
+
+\subsection{What is natural in the construction}
+
+\begin{proposition}[Transport by a regular functor]
+\label{r:functoriality}
+Let $F:\mathcal C\to\mathcal D$ be a functor between pointed Barr-exact
+Mal'cev categories that preserves finite limits, regular epimorphisms,
+and a zero object.  Then $F$ transports the relation rectangle, its
+refinements, and its cell isomorphisms to the corresponding constructions
+in $\mathcal D$, up to their canonical structural isomorphisms.
+\end{proposition}
+
+\begin{proof}
+Finite-limit preservation gives preservation of monomorphisms, products,
+kernel pairs, kernels, and pullbacks.  If a map is factored as a regular
+epimorphism followed by a monomorphism, its image under $F$ is again
+such a factorization.  Uniqueness of image factorizations therefore shows
+that $F$ preserves images.  Relational composition is an image of a
+pullback projection, so $F(SR)$ identifies with $F(S)F(R)$.  Converse
+relations are preserved by preservation of the product symmetry.
+
+If $q$ is the effective quotient of an equivalence relation $E$, then
+$F(q)$ is a regular epimorphism and its kernel pair is $F(E)$.  Hence it
+is the effective quotient of $F(E)$.  These observations preserve every
+operation in~\eqref{r:cells}, the support and zero-class equations, and
+the pullback squares defining refinements.  Finally the image of the
+commuting diagram in Proposition~\ref{r:cell-isomorphism} satisfies the
+same characterization as the cell comparison in $\mathcal D$.  Its
+uniqueness identifies the two isomorphisms.
+\end{proof}
+
+A regular functor need not preserve simple objects.  For instance,
+forgetting a module's scalar action can reveal additive subgroups that
+were not submodules.  The proposition transports the comparison
+construction; a statement about composition series additionally requires
+that the relevant simple factors remain nonzero and quotient-simple.
+This distinction prevents a change of framework from silently forgetting
+part of the theorem's information.
+
+\subsection{Dependency and scope check}
+
+The ordinary categorical proof is now complete.  The foundation needed
+finite limits and regular images for relation composition, exactness for
+the effective quotients, and the Mal'cev condition for difunctionality.
+Pointedness supplied zero classes and kernel boundaries.  Saturated
+descent made each row a refinement of the \emph{chosen} quotient map.
+The support-quotient comparison matched each cell.  Simplicity then
+removed the zero cells.  No invariant length, dimension, Grothendieck
+group, or pre-existing Jordan--H\"older theorem entered the chain of
+dependencies.
+
+The comparison pattern is the classical categorical refinement argument
+associated with Lambek; Knop's Appendix~B2 gives its exact Mal'cev
+formulation and emphasizes the saturation requirement.  The proof here
+has supplied the descent, boundary, and quotient-map checks explicitly;
+it is not a claim of a new theorem.  The detailed primary reference is
+\href{https://arxiv.org/pdf/math/0610552}{Friedrich Knop, \emph{Tensor
+envelopes of regular categories}, Appendix B2}.
+
+What has become general is a construction with stated hypotheses, not
+the assertion that every category has composition factors.  The later
+homotopical chapters will ask which quotient and refinement data survive
+when equalities become coherent identifications.  The present theorem
+is available there whenever its ordinary exact Mal'cev hypotheses are
+actually verified; it does not, by terminology alone, assert a
+Jordan--H\"older theorem for arbitrary higher objects.

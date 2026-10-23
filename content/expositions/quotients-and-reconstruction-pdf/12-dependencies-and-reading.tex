@@ -1,0 +1,203 @@
+\section{Dependencies, scope, and further reading}
+\label{a:dependencies}
+
+\subsection{What was proved from what}
+
+The ordinary comparison has a single dependency chain:
+\[
+\begin{tikzcd}[column sep=small,row sep=large]
+\text{finite limits and regular images}\arrow[d]\\
+\text{associative relation calculus}\arrow[d]\\
+\text{Mal'cev difunctionality}\arrow[d]\\
+\text{effective support quotients}\arrow[d]\\
+\text{saturated descent and refinement cells}\arrow[d]\\
+\text{Schreier refinement}\arrow[d]\\
+\text{simple-factor rigidity}\arrow[d]\\
+\text{Jordan--H\"older}\arrow[d]\\
+\text{basis size and additive invariants}.
+\end{tikzcd}
+\]
+Exactness enters at the effective quotients. Pointedness supplies the zero
+classes used to concatenate cells into a series. The Mal'cev condition is
+used where it is needed: to make every relation difunctional. Ordinary
+compatible iterated quotients require regularity and exactness, but do not
+require Mal'cev. The written proofs keep these dependencies separate.
+
+The precise ordinary theorem is Theorem~\ref{j:jordan-holder}: in a
+pointed Barr-exact Mal'cev category, any two given finite composition
+series, retaining their regular quotient maps, have the same factors up
+to permutation and isomorphism. No global chain condition is needed to
+compare two finite series already supplied. This is a sufficient common
+framework, not a claim that these are the logically weakest possible
+axioms for every formulation of Jordan--H\"older.
+
+The existence of a finite series is a separate issue. The basis flags
+provide the required series for a vector space with a given finite basis.
+Later, finite-dimensional module theory uses the now established dimension
+function to prove existence of composition series. That later argument
+does not feed back into the proof of dimension. One can define $K_0$ by
+generators and exact-sequence relations before proving Jordan--H\"older.
+What requires the factor comparison is the identification of $K_0$ with
+the free abelian group on the simple isomorphism classes. Using that
+freeness to prove factor uniqueness would reverse the dependency.
+
+The source of associativity changes as the constructions develop. For the
+original algebra it is an axiom equating two composites. For relation
+composition, Baer addition, and Hall multiplication, it is a theorem:
+both bracketings are obtained from the same complete data of witnesses,
+tuples, or flags. For coherent quotients, the same universal-property
+principle controls the higher compatibility of successive constructions.
+These assertions specify the maps or data that do the work; a resemblance
+between diagrams alone would not establish them.
+
+\subsection{Three different comparison claims}
+
+The scope of the page calculations is worth recording alongside the core
+theorem. The categorical rectangle works for all objects and finite normal
+series satisfying the exact Mal'cev hypotheses. The explicit nonabelian
+page construction in Section~\ref{p:chapter} uses composition-series
+input in groups with endomorphism operators; that simplicity is used to
+prove the normality of differential images. The filtered module calculus
+in Section~\ref{s:chapter} allows arbitrary finite filtrations and an
+arbitrary filtration-preserving module map. Its convergence records
+kernel and cokernel layers, and its staggered identity specialization
+pairs simple factors.
+
+Thus the nonabelian page calculation and the module spectral calculation
+are compatible where both apply. Neither is asserted to provide a general
+spectral sequence for arbitrary filtered groups. The categorical theorem
+already supplies the unified Jordan--H\"older statement independently of
+those more specialized calculations.
+
+\subsection{The additional hypotheses behind reconstruction}
+
+The universal additive record applies to composition-finite objects, with
+the set-size qualification stated in Corollary~\ref{j:universal-monoid}.
+For finite-length modules the category is also closed under submodules
+and quotients, as explicitly proved. We did not assume that extra closure
+for every exact Mal'cev category. Additive records ignore whether an
+extension splits; the marked extension group retains its endpoint maps.
+
+The probe theorem reconstructs finite-dimensional \emph{nilpotent}
+$k[t]$-modules. Its second-difference formula is proved using canonical
+subquotients, and the chain decomposition is constructed before the
+reconstruction conclusion is drawn. The same tests fail for an invertible
+operator, as the example shows. Hall multiplication uses finite fields
+and finite-dimensional nilpotent modules so that every coefficient and
+every basis expansion involved is finite. Its associativity counts the
+same flags in two orders. Marked extension classes, isomorphism classes
+of middle objects, and actual submodules are kept distinct.
+
+\subsection{Where the higher foundations enter}
+
+The higher part has its own declared inputs. Rigidification identifies
+product-preserving theory models in spaces with a familiar simplicial
+presentation. The Kan loop-group equivalence, loop--delooping recognition,
+and Dold--Kan explain the group and module
+instances. Effective groupoid quotients and universal colimits make
+homotopy quotients compatible with base change. Straightening interprets
+families over $BG$ as coherent actions. Stabilization and the derived
+category supply mapping spectra, hearts, and fiber/cofiber sequences.
+The tangent/cotangent theorems supply linear coefficients for algebras,
+the representing object for derivations, and its transitivity sequence.
+
+Those results are explicitly imported from the cited foundational
+literature; this exposition does not reprove higher topos theory or the
+construction of its model categories. Its deductions include the
+double-coset homotopy pullback, the coefficient category over $BG$, the
+marked extension classification and its automorphisms, and explicit
+derived tensor and cotangent calculations. The ordinary internal-linear
+equivalence $\operatorname{Ab}(\mathbf{Grp}/G)\simeq
+\mathbb Z[G]\text{-}\mathbf{Mod}$ is proved directly.
+
+The term ``higher'' does not imply an unrestricted higher
+Jordan--H\"older theorem. Normality data and compatibility remain part of
+the problem, and literal subobject chains from the trivial higher group
+force discreteness by Proposition~\ref{h:monos-discrete}. What the higher
+framework contributes here is a precise enlargement of the retained data
+and several new reconstruction tools. Its ordinary discrete models
+recover the common theorem when its exact Mal'cev hypotheses are checked.
+
+\subsection{Audit and reproducibility}
+
+The \href{https://tensorgami.com/notes/quotients-and-reconstruction-audit.html}{public audit report}
+inventories all theorem-like statements, their proof or imported-foundation
+status, the diagrams, references, and edition fingerprints. It distinguishes
+the full review of the preceding edition from the subsequent check of these
+small clarifications and the matching web, PDF, and source files.
+The ordinary core and the higher chapters received
+independent mathematical rereads; integration checks tracked changed
+action conventions, quotient maps, normality, degrees, and dependencies.
+Supplementary finite group and finite field calculations test examples
+of the actual maps and counts. Such computations do not establish the
+general theorems. Compilation and inspection of the rendered pages are
+separate presentation checks, not proof certification. No proof assistant
+formalization or historical priority claim is made.
+
+The earlier edition is preserved separately. This edition reorganizes
+the core around relations and exactness, so that the group and module
+comparison theorems are genuine instances. It retains the explicit
+extension and reconstruction calculations, and places the new higher
+constructions after the common ordinary proof.
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{References}
+\bibitem{Knop}
+Friedrich Knop, \emph{Tensor envelopes of regular categories},
+Advances in Mathematics \textbf{214} (2007), 571--617.
+\href{https://arxiv.org/pdf/math/0610552}{Author preprint};
+Section 5 and Appendices A--B, especially Appendix B2.
+
+\bibitem{HTT}
+Jacob Lurie, \emph{Higher Topos Theory}, Princeton University Press, 2009.
+\href{https://www.math.ias.edu/~lurie/papers/HTT.pdf}{Author PDF}.
+See Corollary 5.5.9.3, Theorem 6.1.0.6, and Sections 2.2 and 3.2.
+
+\bibitem{HA}
+Jacob Lurie, \emph{Higher Algebra}, September 18, 2017.
+\href{https://www.math.ias.edu/~lurie/papers/HA.pdf}{Author PDF}.
+See Sections 1.3, 1.4.2--1.4.3, 5.2.6 and 7.3;
+Theorem 7.1.2.13; Proposition 7.1.4.11;
+Corollaries 7.3.3.6 and 7.3.4.14.
+
+\bibitem{Badzioch}
+Bernard Badzioch, \emph{Algebraic theories in homotopy theory},
+Annals of Mathematics \textbf{155} (2002), 895--913.
+\href{https://annals.math.princeton.edu/2002/155-3/p06}{Journal article};
+\href{https://arxiv.org/abs/math/0110101}{Author preprint}.
+
+\bibitem{GoerssJardine}
+Paul G. Goerss and John F. Jardine, \emph{Simplicial Homotopy Theory},
+Progress in Mathematics \textbf{174}, Birkh\"auser, 1999.
+\href{https://www.sas.rochester.edu/mth/sites/doug-ravenel/otherpapers/Goerss-Jardine2.pdf}{Book PDF};
+Chapter V, Proposition 6.3 and Corollary 6.4.
+
+\bibitem{BeardsleyFox}
+Jonathan Beardsley and Landon Fox, \emph{Higher Groups and Higher Normality},
+\href{https://arxiv.org/html/2407.21210v3}{arXiv:2407.21210v3},
+August 13, 2026. In particular Definition 4.1 and Section 5,
+including the compatibility condition in Theorem 5.14.
+
+\bibitem{Stacks}
+The Stacks Project Authors, \emph{The Stacks Project},
+\href{https://stacks.math.columbia.edu/}{online reference}.
+The specific tags used are
+\href{https://stacks.math.columbia.edu/tag/010I}{010I} (extensions),
+\href{https://stacks.math.columbia.edu/tag/012K}{012K} (filtered complexes),
+\href{https://stacks.math.columbia.edu/tag/019G}{019G} (Dold--Kan),
+\href{https://stacks.math.columbia.edu/tag/06XP}{06XP} (Ext),
+\href{https://stacks.math.columbia.edu/tag/0643}{0643} (projective resolutions),
+\href{https://stacks.math.columbia.edu/tag/08QX}{08QX} (cotangent transitivity),
+and \href{https://stacks.math.columbia.edu/tag/08SH}{08SH} (regular quotients).
+
+\bibitem{Deligne}
+Pierre Deligne, \emph{Th\'eorie de Hodge II},
+Publications Math\'ematiques de l'IH\'ES \textbf{40} (1971), 5--57.
+\href{https://www.numdam.org/item/10.1007/BF02684692.pdf}{Article PDF};
+Section 1.2.1 discusses interchange of associated gradings.
+
+\bibitem{Grandis}
+Marco Grandis, \emph{Homotopy spectral sequences},
+\href{https://arxiv.org/pdf/1007.0632}{arXiv:1007.0632}, 2010.
+Sections 2--4 give a broader nonabelian exact-couple setting.
+\end{thebibliography}

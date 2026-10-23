@@ -1,14 +1,14 @@
 # Tensorgami public source archive
 
-Writing, mathematical expositions, essays, research records, and other public material by Henry Shin, preserved from [Tensorgami](https://tensorgami.com).
+The public Tensorgami website and available editable manuscripts by Henry Shin, preserved from [Tensorgami](https://tensorgami.com). This snapshot corresponds to Sites version 121.
 
-This source snapshot preserves the public website and the editable public manuscripts available with it. The archive includes six current essays, thirteen current mathematical expositions, one problem set, two superseded essay editions, a retained predecessor exposition, six Lean projects, ten research records, and the public interests pages and images. Research paper records point to arXiv and, where applicable, the journal and correction; their paper bodies are hosted there.
-
-The current publication dates and revision descriptions remain as stated by the source. The archival deposit date records when this snapshot was preserved; it does not authenticate an earlier date for the same bytes or establish originality relative to earlier work.
+The generated reading site in `dist/` preserves the published files byte for byte. It includes 6 current essays, 15 mathematical expositions, 1 problem set, 2 historical essay notices and their retained downloads, the predecessor tree exposition, six Lean projects with downloadable archives, 10 research records, and the public interests pages and images. Research records link to paper hosts; those externally hosted paper bodies are not copied into this site snapshot.
 
 ## Read and rebuild
 
-The complete generated website is in `dist/`. Run these commands with a recent Node.js version:
+In the complete source ZIP, the generated site is in `dist/` and the build commands below apply. In the complete site ZIP, served files are in `site/`; serve that directory with a static HTTP server. The build tools are supplied in the source ZIP.
+
+Use a recent Node.js version:
 
 ```sh
 npm run build
@@ -16,85 +16,93 @@ npm run check
 npm run preview
 ```
 
-Open the local address printed by the preview server. The website uses absolute paths, so serving the directory is more reliable than opening HTML files directly. The build has no npm package dependencies. It copies retained documents and assets and renders the website from `content/` and `scripts/`. It does not compile the mathematical PDFs or re-render the already typeset article bodies.
+Open the local address printed by the preview server. Absolute website links require serving the directory rather than opening HTML files directly. The site build has no npm package dependencies. It copies the retained documents and assets and renders the website from `content/` and `scripts/`. It does not compile every PDF or re-typeset the checked-in mathematical reading fragments.
 
-The formal-logarithm companion retains its Markdown, HTML, standalone TeX and PDF editions, and its conversion tools plus edition hashes in `content/expositions/when-a-formal-logarithm-fails-source/`. The conversion tools have portable dependency lookup in this public snapshot; machine-specific fallback paths have been removed. Their README lists the separate package, XeLaTeX and font requirements.
+Editable mathematical sources are in `public/tex/` and `content/expositions/`, Lean projects in `public/formalizations/`, and essay manuscripts in `content/essays/`. The published PDF files and TeX ZIPs for *Quotients, Refinement, and Reconstruction* and *Six Elements, One Comparison* are retained unchanged. Native manuscript inputs and web-conversion sources are also included. The stable exposition's numbering auxiliary is retained because the web converter uses it as an explicit numbering input. The source-directory README for that exposition describes an earlier guide-only presentation and an earlier PDF hash; it is retained as historical source documentation, while this archive's manifests record the published files in this edition.
 
-Editable mathematics is in `public/tex/`, formalizations in `public/formalizations/`, essay manuscripts in `content/essays/`, and the derivative manuscript in `assets/expositions/`. The derivative PDF's two TeX sources and edition metadata are in `content/expositions/what-a-derivative-retains-pdf/`. Its README describes the separate XeLaTeX and font requirements. Each Lean project includes its own toolchain, dependency manifest, and build instructions. Other retained PDFs are supplied as their published files; three older expositions have no complete editable TeX source in this collection.
-
-The historical essay notices retain their public downloads and section mappings. The predecessor tree exposition retains its PDF and TeX; its former web route redirects to the expanded boundary-map exposition. Historical source bodies are preserved for inspection where present.
+The mathematical converters have separate requirements, described in their nearby READMEs: MathJax, Python packages, TeX installations, and some fonts. Font files and dependency caches are not bundled. Machine-specific fallback dependency paths in the formal-logarithm converter have been replaced with portable installed-package or explicit environment lookup. Every published reading file remains unchanged. Three older mathematical PDFs lack complete editable TeX sources in this collection.
 
 ## Scope and rights
 
-This archive begins with a clean public snapshot. Internal maintenance records, unpublished drafts and personal collections, private infrastructure, and the earlier local Git history are not included. Build metadata and inactive template branches have been reduced accordingly. All generated public files are verified against the source snapshot used for this archive.
+This snapshot contains public material only. Internal continuity and maintenance records, the former full private proof audit, unpublished drafts, hidden personal collections and photographs, credentials, runtime caches and the canonical checkout's earlier private Git history are excluded. Public proof notes are retained at their existing URL. Archive dates establish availability of this snapshot; source date labels do not independently authenticate earlier availability or establish originality or mathematical correctness.
 
-The writing, site source, images, metadata, and formalizations remain subject to [the existing rights notice](public/LICENSE.md). No new general reuse license is granted. MathJax's separate [Apache 2.0 license](assets/mathjax-LICENSE.txt) is retained, and third-party artwork and interface elements remain the property of their owners.
+The writing, site source, images, metadata and formalizations remain subject to [the existing rights notice](LICENSE.md). No new general reuse license is granted. MathJax's separate [Apache 2.0 license](https://github.com/Tensorgami/tensorgami-archive/blob/2026-10-23.1/assets/mathjax-LICENSE.txt) is retained; third-party artwork and interfaces remain the property of their owners.
 
 Website: https://tensorgami.com  
 Author: Henry Shin  
 ORCID: https://orcid.org/0009-0000-6453-6865  
 Correspondence: hkshin@alumni.harvard.edu
 
-## Archival edition 2026-10-21.3
+## Archival edition 2026-10-23.1
 
-[Immutable release and publication record](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.3) · [Previous fixed edition](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.2)
+[Fixed release and publication record](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-23.1) · [Previous edition](https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.3)
 
-This edition preserves the complete version-111 public website: 141 served files,
-including 39 HTML pages and 18 PDFs, plus the available editable public source.
-Its 23 individual work packages include *When a Formal Logarithm Fails* and the
-current aligned reading editions. The homepage gives the logarithm companion a clearer
-entrance within the established three-part reading architecture. All article content,
-mathematics and downloadable editions are unchanged. The complete source and site ZIPs,
-`EDITION.json`, `WORKS.json` and `SHA256SUMS.txt` are attached to the release.
+This edition preserves version 121: 183 served files, including 42 HTML pages,
+20 PDFs and eight published ZIP downloads. The release provides the complete
+site ZIP, the complete public source ZIP, 25 individual work packages, and direct
+copies of all 20 PDFs and eight published source or Lean ZIPs. `archive/downloads.json`
+maps those direct assets to their live website paths; `archive/works.json` gives
+the individual work packages and their hashes.
 
-`MANIFEST.sha256` covers every repository snapshot file except itself. Each work
-package includes its own file hashes. The frozen release preserves the Archived
-editions page as it appeared on the current site; that page still describes the
-original 2026-10-20.1 archive. This README and `archive/works.json` identify this new release.
-All three earlier releases, 2026-10-20.1, 2026-10-21.1 and 2026-10-21.2, retain their tags, assets and signed timestamps. The main branch may advance;
-cite the specific release or tag for exact-edition evidence.
+The live-file comparison covers every served file. Non-HTML files match byte for
+byte. Authored HTML matches exactly after removing only the recognized hosting
+challenge script. The public source rebuild also reproduces all generated files.
+Details and exact file hashes are in `archive/verification.json` and
+`archive/site-file-manifest.json`. Two empty `.gitkeep` placeholders are source
+build markers and are excluded from the served-file count.
 
-The edition date uses UTC. Public availability is recorded by GitHub's release
-publication time and signed attestation; dates printed in manuscripts are separate.
-Immutability protects the tag and attached assets, not editable release notes.
+The stable *Quotients, Refinement, and Reconstruction* exposition, PDF, source ZIP,
+native sources and diagrams are unchanged. The public proof notes and teaching
+companion are included in their current published forms. The website's Archived
+editions page is frozen as it appeared in version 121 and still links to the older
+edition; this release README identifies the new snapshot. No website edit or
+redeployment is part of this archival release.
+
+`MANIFEST.sha256` identifies every file in this repository snapshot except itself.
+The attached `SHA256SUMS.txt` identifies every release asset except itself. GitHub's
+immutable release binds the tag, commit and attached assets; release titles and
+notes can still be edited. The four earlier immutable releases are preserved.
+The main branch may advance, so cite this release or tag for an exact edition.
 
 Whole-corpus citation: Henry Shin, *Tensorgami: complete public corpus snapshot*,
-archival edition 2026-10-21.3, https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-21.3.
+archival edition 2026-10-23.1, https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-23.1.
 
 ### Individual works
 
-- [Fourier, Symmetry, and Reconstruction](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/fourier-symmetry-and-reconstruction-2026-10-21.3.zip)
-- [What a Boundary Map Can Prove](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-boundary-map-can-prove-2026-10-21.3.zip)
-- [What a Derivative Retains](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-derivative-retains-2026-10-21.3.zip)
-- [When a Formal Logarithm Fails](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-formal-logarithm-fails-2026-10-21.3.zip)
-- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/pointwise-weighting-convergence-in-measure-2026-10-21.3.zip)
-- [IBM Ponder This July 2010](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/ibm-ponder-this-2010-2026-10-21.3.zip)
-- [Divisibility of Separated Polynomials](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/separated-polynomial-divisibility-2026-10-21.3.zip)
-- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/galois-frobenius-composition-law-2026-10-21.3.zip)
-- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/hartshorne-ii-5-14-18-2026-10-21.3.zip)
-- [Extracting the First Prime Greater than m](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/extracting-first-prime-2026-10-21.3.zip)
-- [A Note on Disjoint Decompositions of [0,1) into Closed Sets](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/disjoint-decompositions-2026-10-21.3.zip)
-- [Lebesgue's Criterion for Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/lebesgue-riemann-integrability-2026-10-21.3.zip)
-- [Products Preserve Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/products-preserve-riemann-integrability-2026-10-21.3.zip)
-- [Selected Problems in Discrete Mathematics and Analysis](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/selected-problems-discrete-mathematics-analysis-2026-10-21.3.zip)
-- [Mathematical Life in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-life-in-the-age-of-ai-2026-10-21.3.zip)
-- [When Accountability Stops Being Reciprocal](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-accountability-stops-being-reciprocal-2026-10-21.3.zip)
-- [The Performance of Depth](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-performance-of-depth-2026-10-21.3.zip)
-- [What a New Proof Makes Possible](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/what-a-new-proof-makes-possible-2026-10-21.3.zip)
-- [When a Description Becomes a Verdict](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/when-a-description-becomes-a-verdict-2026-10-21.3.zip)
-- [The Authority of a Vision](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-authority-of-a-vision-2026-10-21.3.zip)
-- [Mathematical Understanding in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/mathematical-understanding-in-the-age-of-ai-2026-10-21.3.zip)
-- [The Culture of Mathematical Judgment](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/the-culture-of-mathematical-judgment-2026-10-21.3.zip)
-- [A Tree Is a Discrete Poincaré Lemma](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-21.3/a-tree-is-a-discrete-poincare-lemma-2026-10-21.3.zip)
+- [Fourier, Symmetry, and Reconstruction](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/fourier-symmetry-and-reconstruction-2026-10-23.1.zip)
+- [What a Boundary Map Can Prove](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/what-a-boundary-map-can-prove-2026-10-23.1.zip)
+- [What a Derivative Retains](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/what-a-derivative-retains-2026-10-23.1.zip)
+- [When a Formal Logarithm Fails](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/when-a-formal-logarithm-fails-2026-10-23.1.zip)
+- [Quotients, Refinement, and Reconstruction](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/quotients-and-reconstruction-2026-10-23.1.zip)
+- [Six Elements, One Comparison](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/six-elements-one-comparison-2026-10-23.1.zip)
+- [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/pointwise-weighting-convergence-in-measure-2026-10-23.1.zip)
+- [IBM Ponder This July 2010](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/ibm-ponder-this-2010-2026-10-23.1.zip)
+- [Divisibility of Separated Polynomials](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/separated-polynomial-divisibility-2026-10-23.1.zip)
+- [A Galois-Theoretic and Frobenius-Descent Viewpoint on a Polynomial Composition Law](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/galois-frobenius-composition-law-2026-10-23.1.zip)
+- [Normality, Coherent Extension, Tensor Operations, and Affineness](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/hartshorne-ii-5-14-18-2026-10-23.1.zip)
+- [Extracting the First Prime Greater than m](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/extracting-first-prime-2026-10-23.1.zip)
+- [A Note on Disjoint Decompositions of \[0,1) into Closed Sets](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/disjoint-decompositions-2026-10-23.1.zip)
+- [Lebesgue's Criterion for Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/lebesgue-riemann-integrability-2026-10-23.1.zip)
+- [Products Preserve Riemann Integrability](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/products-preserve-riemann-integrability-2026-10-23.1.zip)
+- [Selected Problems in Discrete Mathematics and Analysis](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/selected-problems-discrete-mathematics-analysis-2026-10-23.1.zip)
+- [Mathematical Life in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/mathematical-life-in-the-age-of-ai-2026-10-23.1.zip)
+- [When Accountability Stops Being Reciprocal](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/when-accountability-stops-being-reciprocal-2026-10-23.1.zip)
+- [The Performance of Depth](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/the-performance-of-depth-2026-10-23.1.zip)
+- [What a New Proof Makes Possible](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/what-a-new-proof-makes-possible-2026-10-23.1.zip)
+- [When a Description Becomes a Verdict](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/when-a-description-becomes-a-verdict-2026-10-23.1.zip)
+- [The Authority of a Vision](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/the-authority-of-a-vision-2026-10-23.1.zip)
+- [Mathematical Understanding in the Age of AI](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/mathematical-understanding-in-the-age-of-ai-2026-10-23.1.zip)
+- [The Culture of Mathematical Judgment](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/the-culture-of-mathematical-judgment-2026-10-23.1.zip)
+- [A Tree Is a Discrete Poincaré Lemma](https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.1/a-tree-is-a-discrete-poincare-lemma-2026-10-23.1.zip)
 
 ### Verify this edition
 
 ```sh
-gh release verify 2026-10-21.3 --repo Tensorgami/tensorgami-archive
-gh release verify-asset 2026-10-21.3 tensorgami-source-2026-10-21.3.zip --repo Tensorgami/tensorgami-archive
+gh release verify 2026-10-23.1 --repo Tensorgami/tensorgami-archive
+gh release verify-asset 2026-10-23.1 tensorgami-source-2026-10-23.1.zip --repo Tensorgami/tensorgami-archive
 ```
 
-The source ZIP named above is an explicit attached asset. It is distinct from
-GitHub's automatically generated source downloads. The signed record binds the
-commit and attached asset hashes. It does not establish originality or exclusive
-priority against earlier literature.
+The named source ZIP is an explicit release asset, separate from GitHub's automatic
+source downloads. The edition date uses UTC. The publication record documents the
+disclosure of these files; it does not certify mathematical correctness, originality,
+exclusive priority or earlier availability of these exact bytes.

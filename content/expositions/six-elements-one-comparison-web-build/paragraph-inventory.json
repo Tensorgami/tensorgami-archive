@@ -1,0 +1,734 @@
+[
+  {
+    "id": 1,
+    "section": 0,
+    "raw": "This booklet starts with addition modulo six and follows one example through\nthe comparison argument behind Jordan--Hölder. You need subgroups and cosets;\nthe categorical language is introduced only after its job becomes visible.\nRead §§1--8 as the main route. Section 9 is an optional spectral calculation,\n§§10--11 contain exercises and answers, and §12 is a guide to the higher chapters.\nReferences marked \\emph{main §} lead to the full exposition.",
+    "htmlSha256": "d2af3e0af2be13b3aac6223c3234426f337197b042b3d6acf1c6f4db75c966c0"
+  },
+  {
+    "id": 2,
+    "section": 1,
+    "raw": "Write \\(C_d=\\Z/d\\Z\\). Let",
+    "htmlSha256": "b6c4ef9a1ecc91f406f256eb7edb81ea7391cc9498d13120cac679b39a0db7bb"
+  },
+  {
+    "id": 3,
+    "section": 1,
+    "raw": "All arithmetic in \\(G\\) is modulo six. We write \\(0\\) for the subgroup\n\\(\\{0\\}\\), which has one element. Consider",
+    "htmlSha256": "2cdfcfa829cd11af86afe797ee6d73c7f40583b067900d65869ded2fbd8e2034"
+  },
+  {
+    "id": 4,
+    "section": 1,
+    "raw": "Every subgroup here is normal because \\(G\\) is abelian. The factors are",
+    "htmlSha256": "332b62b71d93de8c5433bf5672e1eb217c18082d70895bcebd1887f62f3a021c"
+  },
+  {
+    "id": 5,
+    "section": 1,
+    "raw": "These identifications are explicit: send \\(3\\in A\\) to \\(1\\in C_2\\),\nsend \\(2\\in B\\) to \\(1\\in C_3\\), and use reduction modulo three and modulo\ntwo for the two quotients of \\(G\\). Every nonzero element of \\(C_2\\) or\n\\(C_3\\) generates its group, so these factors are simple.",
+    "htmlSha256": "35a878cd7c19f9d8251b008a7e62eeb6644b09c3a4b22fca93408b0223806ff2"
+  },
+  {
+    "id": 6,
+    "section": 1,
+    "raw": "We can already see the same factors in a different order. Our task is to\nconstruct the comparison that makes this inevitable, without assuming that\nthe number of factors is invariant.",
+    "htmlSha256": "078331040ed5b99f3af22ace346edaa18d920ab4ce8f50d2774efa3397eb5c19"
+  },
+  {
+    "id": 7,
+    "section": 1,
+    "raw": "Two elementary observations will do much of the work:",
+    "htmlSha256": "07fc46a3d99bc267f48d8596bd9b743c0209bbdb98b55f8ff570b3f1e8b18ee8"
+  },
+  {
+    "id": 8,
+    "section": 1,
+    "raw": "The first follows from the displayed lists. For the second, adding \\(0\\) to\nthe elements of \\(B\\) gives \\(0,2,4\\), and adding \\(3\\) gives \\(3,5,1\\).\nThus every element has an expression \\(a+b\\). This expression is unique:\nif \\(a+b=a'+b'\\), then \\(a-a'=b'-b\\in A\\cap B=0\\).",
+    "htmlSha256": "8e529e45554324f3eeb43a2f5cae594581c3d8f694d7b72ea737ea5f55e04dca"
+  },
+  {
+    "id": 9,
+    "section": 2,
+    "raw": "Start with \\(a=b+c\\). To recover \\(b\\), translate by \\(-c\\).\nThe translation \\(\\tau_c(x)=x+c\\) is a bijection of the underlying set, with\ninverse \\(\\tau_{-c}\\), because associativity gives",
+    "htmlSha256": "fe9c65152f7a0f62da3114aff346bce0cc497b035a17d19a0e14a48597b498d8"
+  },
+  {
+    "id": 10,
+    "section": 2,
+    "raw": "Thus subtraction is the application of an inverse map. A translation is\nusually not a group homomorphism: it need not preserve zero.",
+    "htmlSha256": "0d42da89da7013d135ad6616fcdf2f0030a96d92c6026fe284d3e1450b42e4aa"
+  },
+  {
+    "id": 11,
+    "section": 2,
+    "raw": "Distributivity says something different. The homomorphism \\(h(x)=2x\\)\nsatisfies",
+    "htmlSha256": "c0b2da06c3e5de519877e758640b6100c102544a3bce90c37187d42ba895815c"
+  },
+  {
+    "id": 12,
+    "section": 2,
+    "raw": "The square says \\(h\\circ\\tau_c=\\tau_{h(c)}\\circ h\\): applying \\(h\\) before\nor after the appropriate translation gives the same result.\nFor a vector space the same statement holds for multiplication by a scalar;\nfor a nonzero scalar that linear map is also invertible.",
+    "htmlSha256": "2841b7e119983ec7a357ee274745dd19d4ae8167cd6f07ac8eb93394262fd3a0"
+  },
+  {
+    "id": 13,
+    "section": 2,
+    "raw": "Now consider the quotient map \\(q_A:G\\to G/A\\), \\(x\\mapsto x+A\\).\nIts fibers are",
+    "htmlSha256": "c3b4c9b8643441765c9dd4419582e482bad97e92a5c0b5ff0d7703315ff1ad20"
+  },
+  {
+    "id": 14,
+    "section": 2,
+    "raw": "Addition of cosets is well defined: replacing \\(x,y\\) by \\(x+a,y+a'\\),\nwith \\(a,a'\\in A\\), changes \\(x+y\\) by the element \\(a+a'\\) of \\(A\\).",
+    "htmlSha256": "accdc334e588dc469e1cafa9bf1465bd20adcfb2c9e19876da0d6278aedddebd"
+  },
+  {
+    "id": 15,
+    "section": 2,
+    "raw": "Suppose \\(h:G\\to H\\) is a group homomorphism constant on these fibers.\nThen there is a unique homomorphism \\(\\bar h:G/A\\to H\\) such that",
+    "htmlSha256": "6deaf73634ce63a3e0343adff2577a1312ae0d56f792f434ab064aa6094557ca"
+  },
+  {
+    "id": 16,
+    "section": 2,
+    "raw": "The fiber condition proves independence of the representative; the\nhomomorphism law follows from that of \\(h\\); surjectivity of \\(q_A\\) proves\nuniqueness. This is \\emph{descent through a quotient}.",
+    "htmlSha256": "5609994f0e2aed29ceb1ee49852d0e1626476db163513fa16018a03c6187bf1b"
+  },
+  {
+    "id": 17,
+    "section": 2,
+    "raw": "For a concrete instance, \\(h(x)=4x\\) lands in \\(B\\) and kills \\(3\\).\nConsequently",
+    "htmlSha256": "b993b943566a7c2dd00fd055385e3eafcbc3c11f44bb3594f244e7ede951840e"
+  },
+  {
+    "id": 18,
+    "section": 2,
+    "raw": "are inverse homomorphisms. Indeed, \\(4b=b\\) for \\(b\\in B\\), and\n\\(4x-x=3x\\in A\\) for every \\(x\\in G\\).",
+    "htmlSha256": "3a81f86560ea659b04cfe5b512a2bf79ceef1ed6a48dea3e0ad258bbd88595e3"
+  },
+  {
+    "id": 19,
+    "section": 2,
+    "raw": "The structural viewpoint records which map is invertible, which equation\nexpresses compatibility, and which quotient allows a map to descend.\nAssociativity and distributivity supply the checks; they have not disappeared.",
+    "htmlSha256": "38b427b4c0647dfce6f7dc47d01a313d8eaceef0b09d70e85e3a253c3db84f51"
+  },
+  {
+    "id": 20,
+    "section": 3,
+    "raw": "A relation \\(R\\) from \\(X\\) to \\(Y\\) is a set of pairs \\((x,y)\\).\nWrite \\(xRy\\) for membership. Its \\emph{input support} consists of the\n\\(x\\)'s occurring in a pair; its \\emph{output support} consists of the\n\\(y\\)'s occurring in a pair. A relation may have several outputs or none.",
+    "htmlSha256": "1330efe3f66a5d980e43b72919261315a1ffbc83971efb2c0c6d881394de8484"
+  },
+  {
+    "id": 21,
+    "section": 3,
+    "raw": "For a subgroup \\(D\\leq G\\), write\n\\(\\Delta_D=\\{(d,d):d\\in D\\}\\). Encode our four quotient steps by",
+    "htmlSha256": "93e3e78f7753e0d1b158ba3b3aad17925e56064d0ddecc8a56de264ed3949a7c"
+  },
+  {
+    "id": 22,
+    "section": 3,
+    "raw": "Thus \\(r_1=\\Delta_A\\) records \\(A\\to A/0\\), whereas \\(r_2\\) records\n\\(G\\to G/A\\): two elements are related exactly when their quotient images\nagree. Each is an equivalence relation on its support. Viewed on all of\n\\(G\\), it is a \\emph{partial equivalence relation}. For instance,\n\\(1\\) is not related to itself by \\(r_1\\).",
+    "htmlSha256": "78d9d63a0a27dc90a69a20dbfe4993e78c2a2f081142ddc4ca9806d92e15af13"
+  },
+  {
+    "id": 23,
+    "section": 3,
+    "raw": "Let \\(Q(r)\\) mean the support modulo this equivalence relation. Then\n\\(Q(r_1)=A\\) and \\(Q(r_2)=G/A\\). In groups, a congruence is determined\nby its identity class. The more general argument retains the whole relation,\nso it need not assume this group-specific fact.",
+    "htmlSha256": "8de6cdab050c58c5b9ee91e3d04e9b4496510d11f68357768edef58d77583677"
+  },
+  {
+    "id": 24,
+    "section": 3,
+    "raw": "Our convention is that \\(SR\\) means \\emph{first \\(R\\), then \\(S\\)}:",
+    "htmlSha256": "3df886914f5fd7e1002c0cb5be21ef824fa9b44aa51fc4d2dc55b9ac76d21f9d"
+  },
+  {
+    "id": 25,
+    "section": 3,
+    "raw": "The opposite relation \\(R^\\op\\) reverses every pair. Associativity of\ncomposition is now a statement about witnesses: both \\(T(SR)\\) and\n\\((TS)R\\) relate \\(x\\) to \\(w\\) precisely when there are \\(y,z\\) with\n\\(xRy,\\ ySz,\\ zTw\\). Regrouping changes the parentheses, not the data.",
+    "htmlSha256": "f7fd0be1123c4c7b3bcd3dcc0813e6c37d2f65584e33c1bb6dd40b104ff5b6cd"
+  },
+  {
+    "id": 26,
+    "section": 3,
+    "raw": "For the group argument we use \\emph{internal relations}: subgroups\n\\(R\\leq X\\times Y\\), not arbitrary subsets. Such a relation has the\nthree-corner property",
+    "htmlSha256": "688a32767ac43c8b99fac650d4a761975029d9ecc06bb4ffe5d2f64a3730608e"
+  },
+  {
+    "id": 27,
+    "section": 3,
+    "raw": "Indeed, closure under multiplication and inversion gives",
+    "htmlSha256": "46a84b4e822c4231b1ccfd69e58aa2c2071ed015ca982cb1d3bc9aee4fbe739f"
+  },
+  {
+    "id": 28,
+    "section": 3,
+    "raw": "The order displayed works even in noncommutative groups. This property is\ncalled \\emph{difunctionality}; it is the key relation identity supplied by\nthe Mal'cev framework.",
+    "htmlSha256": "df8d1c36a6afb98ca5b8b7a8750be472e676a9a8b29db3e0cbd7566be241ec09"
+  },
+  {
+    "id": 29,
+    "section": 4,
+    "raw": "Before filling a whole comparison table, examine the relation",
+    "htmlSha256": "981e7437d9de866c9a3877c50251ff14fe181e22313f8e49d2b995b5bc53dd10"
+  },
+  {
+    "id": 30,
+    "section": 4,
+    "raw": "First \\(s_1\\) requires the input to be an element of \\(B\\) and leaves it\nfixed. Then \\(r_2\\) allows movement by an element of \\(A\\). Its six pairs are\ndisplayed by",
+    "htmlSha256": "8223a8c8468c048669c0e6dfba76f67fc288f1e755a122e5ebc589b373d8060c"
+  },
+  {
+    "id": 31,
+    "section": 4,
+    "raw": "The input support is \\(B\\); the output support is all of \\(G\\).\nThere is no single output in the definition.",
+    "htmlSha256": "50eced864f7348a79e277ca6c9be5e9c4b55e1f47b855a80afd51062d0573c10"
+  },
+  {
+    "id": 32,
+    "section": 4,
+    "raw": "There are two kinds of ambiguity to remove. Define",
+    "htmlSha256": "eae83797328c4b1abe2212cdc68080b196f53adf90ce44c43d7f620cede26219"
+  },
+  {
+    "id": 33,
+    "section": 4,
+    "raw": "Two inputs are \\(E\\)-related when they share an output. The three rows of\nthe table are disjoint, so \\(E=\\Delta_B\\). Two outputs are \\(F\\)-related\nwhen they share an input. Hence \\(F=r_2\\), with classes\n\\(\\{0,3\\},\\{2,5\\},\\{4,1\\}\\).",
+    "htmlSha256": "fb11de09ea2d4244ad2dd3666953f85917c2951ce67420b1deb4303ac7c1d40c"
+  },
+  {
+    "id": 34,
+    "section": 4,
+    "raw": "After quotienting, the two possible outputs in each row become one:",
+    "htmlSha256": "cb206b4ea1790783e89252d56c0d44490c17438e38bde32a8caa9c0ec650b509"
+  },
+  {
+    "id": 35,
+    "section": 4,
+    "raw": "We proved the inverse formula \\(x+A\\mapsto4x\\) in §\\ref{c:maps}.\nThe relation therefore produces an actual isomorphism, with no choice\nof representatives in its definition.",
+    "htmlSha256": "be6f141b5784a79b9c12abe5407b4416474852af86706f8a2a3b8de317c59f93"
+  },
+  {
+    "id": 36,
+    "section": 4,
+    "raw": "Here is the same construction as a diagram. Let \\(M=R\\), regarded as a\nsubgroup of \\(B\\times G\\), and take its coordinate projections\n\\(a(b,y)=b\\) and \\(b'(b,y)=y\\):",
+    "htmlSha256": "11abbf3a3e804d8d3b58347ad95838a54fbc08382584ed5150462cbe6c1e2db1"
+  },
+  {
+    "id": 37,
+    "section": 4,
+    "raw": "Both projections are onto their supports. The equation\n\\(\\beta a=q_A b'\\) says that related elements receive matching quotient\nimages. It characterizes \\(\\beta\\) uniquely because \\(a\\) is surjective.",
+    "htmlSha256": "0e2e5e1d4fc80630aafddc2e6a8bcfe835f17e82ba42899c2e78cd04d0d84f4c"
+  },
+  {
+    "id": 38,
+    "section": 5,
+    "raw": "Let \\(R\\leq X\\times Y\\) be any subgroup relation. Restrict to its input\nand output supports \\(X'\\leq X\\), \\(Y'\\leq Y\\). Set\n\\(E=R^\\op R\\) and \\(F=RR^\\op\\).\nThey are reflexive on these supports and symmetric by definition.",
+    "htmlSha256": "eaea75d660d87a2ba6a7613ca8077f2784ae0a563f06529b9c037c174a85de32"
+  },
+  {
+    "id": 39,
+    "section": 5,
+    "raw": "For transitivity of \\(E\\), suppose \\(x,x'\\) share output \\(y\\), and\n\\(x',x''\\) share output \\(z\\). The three corners\n\\(xRy,\\ x'Ry,\\ x'Rz\\) give \\(xRz\\), so \\(x,x''\\) share \\(z\\).\nInterchanging input and output proves transitivity of \\(F\\).\nThus \\(E,F\\) are equivalence relations on their supports.",
+    "htmlSha256": "6c4f36e997d327edf0f13adfaa9b350d27bb5289e644bc295eb7b941927b53f3"
+  },
+  {
+    "id": 40,
+    "section": 5,
+    "raw": "They respect the group operations. For example, witnesses \\(y,v\\) for\n\\(xEx'\\) and \\(uEu'\\) give witness \\(yv\\) for\n\\((xu)E(x'u')\\); inversion of a witness gives the corresponding inverse\nrelation. The same holds for \\(F\\). Their classes therefore carry\nwell-defined quotient group structures.",
+    "htmlSha256": "dce143049e7a78d32c6d1888aad099d44fb139ca87c8ce0c1bb1dde1df6b66bb"
+  },
+  {
+    "id": 41,
+    "section": 5,
+    "raw": "Define",
+    "htmlSha256": "73a5f5b59101cf3d49582418ad82779698e2cb27781172f99cc3750011089d41"
+  },
+  {
+    "id": 42,
+    "section": 5,
+    "raw": "An output exists by the definition of support. Different outputs for the\nsame \\(x\\) are \\(F\\)-related. If \\(xEx'\\), choose a common output \\(y_0\\);\nany outputs for \\(x\\) and \\(x'\\) are each \\(F\\)-related to \\(y_0\\).\nHence the formula is independent of both choices. Reversing \\(R\\)\nconstructs its inverse. Finally, \\(xRy\\) and \\(uRv\\) imply\n\\((xu)R(yv)\\), so \\(\\theta\\) is a homomorphism.",
+    "htmlSha256": "9d52f44980052c81c12f99867db2c02553175a4410e4a3ce5101b52ca25a2545"
+  },
+  {
+    "id": 43,
+    "section": 5,
+    "raw": "This proof is the small mechanism inside the comparison theorem:",
+    "htmlSha256": "73cc7a105574d53141828d25c26535a77781349ef889652fd137e126a22cc401"
+  },
+  {
+    "id": 44,
+    "section": 5,
+    "raw": "The abstract framework packages precisely the operations just used:",
+    "htmlSha256": "76f33f0d2466e0a631dba7d48b05d243cceaa36ae8c10eb8b44cb8d2a87d9b93"
+  },
+  {
+    "id": 45,
+    "section": 5,
+    "raw": "Pointedness is needed for that formulation of normal series, not for\nthe common-quotient construction itself. Groups and modules provide these\nstructures; the full exposition establishes the categorical relation\ncalculus before using it.",
+    "htmlSha256": "cad834715eb2c02085a4d36ff4b01bab80e7ddf1f78ca68474277a619eddb660"
+  },
+  {
+    "id": 46,
+    "section": 6,
+    "raw": "Write \\(A_0=B_0=0,\\ A_1=A,\\ B_1=B,\\ A_2=B_2=G\\).\nFor every pair of quotient steps form",
+    "htmlSha256": "ac400045e70fb4b4e5bace22310dcecb37cf8686a729376036a0fa8da448c12b"
+  },
+  {
+    "id": 47,
+    "section": 6,
+    "raw": "Inputs come from the column side; outputs come from the row side.\nBecause partial equivalence relations are symmetric and idempotent,",
+    "htmlSha256": "d7983ce40f8bd494756c727df3040cedc3a58ae7edc39caf7ee0b804550215a3"
+  },
+  {
+    "id": 48,
+    "section": 6,
+    "raw": "The previous page supplies the canonical map from the input ambiguity\nquotient to the output ambiguity quotient. Here every cell is explicit:",
+    "htmlSha256": "31d626ac240900d7734b4ec1ad5b3de9dfb7ae5c7d4d60f323eb1f31cd5349f1"
+  },
+  {
+    "id": 49,
+    "section": 6,
+    "raw": "The two nontrivial isomorphisms are",
+    "htmlSha256": "811fca7d93fe43bd01d67b1ec6c55459e7bb9223c2249fe28314ee0819e8697d"
+  },
+  {
+    "id": 50,
+    "section": 6,
+    "raw": "For \\(P_{12}\\), the intermediate point must lie in \\(A\\) and in the\n\\(B\\)-coset of the input. It is \\(0\\) for even inputs and \\(3\\) for odd\ninputs, exactly \\(3x\\). The formula descends because \\(3B=0\\).\nIts inverse is \\(a\\mapsto a+B\\): \\(3a=a\\) on \\(A\\), and\n\\(3x-x=2x\\in B\\).",
+    "htmlSha256": "69d310529214ff4f7e06e4f84de3da2912afe7e9403d738388d60faf3325a210"
+  },
+  {
+    "id": 51,
+    "section": 6,
+    "raw": "For \\(P_{22}\\), any input \\(x\\) and output \\(y\\) have an intermediate\npoint \\(z\\) with \\(z-x\\in B\\) and \\(y-z\\in A\\), since \\(A+B=G\\).\nThus every pair is related. Both ambiguity quotients are trivial.\nThis cell has support \\(G\\), whereas the first cell has support \\(0\\).",
+    "htmlSha256": "6752bf87207c35a1b77bf5ffdf217af78a5e60c7f3c6114fc6df87796ff38708"
+  },
+  {
+    "id": 52,
+    "section": 6,
+    "raw": "Arrange the resulting factors by their original steps:",
+    "htmlSha256": "f6389ded760bff0e234b71092a7da52ee6cc539a59e4a5e0dd4a3fb11d1f6be3"
+  },
+  {
+    "id": 53,
+    "section": 6,
+    "raw": "The \\(C_2\\) cell compares the first \\(A\\)-step to the second \\(B\\)-step;\nthe \\(C_3\\) cell compares the other two steps.",
+    "htmlSha256": "0cbed9d945af6e7809dcaaa97abf8f60c07adde36479344d9a19e42001ab4235"
+  },
+  {
+    "id": 54,
+    "section": 6,
+    "raw": "There is still a logical obligation: the cells must assemble into\n\\emph{genuine refinements} of the original chains. A table of isomorphic\nquotients by itself would not establish a refinement theorem.",
+    "htmlSha256": "3357a27d6c71b9737b43d1eaec7d351461e6768a5a2f2bed0458ecbb32e86852"
+  },
+  {
+    "id": 55,
+    "section": 7,
+    "raw": "In this abelian example the refined subgroups have familiar formulas:",
+    "htmlSha256": "7f2afbb0dc6fefde19de454ae76b3c74a1b6b368eca319353b2fc07fa5a4d83d"
+  },
+  {
+    "id": 56,
+    "section": 7,
+    "raw": "For each fixed row or column, let the other index run from \\(0\\) to \\(2\\):",
+    "htmlSha256": "afba3e0272090665206783058c5556974ad12bc83b77f13eef6e6fca102c88e6"
+  },
+  {
+    "id": 57,
+    "section": 7,
+    "raw": "The output quotient in cell \\((i,j)\\) is\n\\(U_{ij}/U_{i,j-1}\\); the input quotient is\n\\(V_{ji}/V_{j,i-1}\\). Checking these against the previous table gives\nthe two refinements",
+    "htmlSha256": "acb641af79ebc336dfc289ebb25636d83cafbc72cfe85f9f63e340cf061885e1"
+  },
+  {
+    "id": 58,
+    "section": 7,
+    "raw": "Repeated terms contribute trivial factors and can later be deleted.",
+    "htmlSha256": "6435038d7e0524943e9729988de9498ca0ebab15bdf02ccd351c9a8cd77fc807"
+  },
+  {
+    "id": 59,
+    "section": 7,
+    "raw": "Why these intermediate subgroups? Let\n\\(q_i:A_i\\to A_i/A_{i-1}\\). Take the image of \\(A_i\\cap B_j\\)\ndownstairs and pull it back:",
+    "htmlSha256": "7242145062afaaddc6699313729bb901b2346f5bdda2a0b063661e935caa010c"
+  },
+  {
+    "id": 60,
+    "section": 7,
+    "raw": "Indeed \\(q_i(x)=q_i(c)\\) says exactly \\(x-c\\in A_{i-1}\\).\nThe pullback includes \\emph{every} representative of each chosen coset.\nFor example, in the second row the downstairs chain\n\\(0\\subseteq G/A\\subseteq G/A\\) pulls back to\n\\(A\\subseteq G\\subseteq G\\).",
+    "htmlSha256": "810650446685e9fd1be51dc1b0521985b80f75aaec6feb9add329e99516e31f0"
+  },
+  {
+    "id": 61,
+    "section": 7,
+    "raw": "This explains \\emph{saturation}: a relation downstairs must lift to all\nrepresentatives upstairs. For our \\(R\\subseteq B\\times G\\), changing an\noutput by \\(3\\) keeps the pair in \\(R\\); in formulas \\(r_2R=R\\).\nCompare the smaller subgroup relation",
+    "htmlSha256": "c5d29d6135c7cf7e062df0d0c350aee11d56d3fc3947f54847b427cfe6236201"
+  },
+  {
+    "id": 62,
+    "section": 7,
+    "raw": "Under \\(\\id_B\\times q_A\\), both \\(T\\) and \\(R\\) have image\n\\(\\{(b,b+A):b\\in B\\}\\). But the inverse image of this graph is \\(R\\),\nnot \\(T\\): it includes \\((b,b+3)\\) too. Thus \\(r_2T=R\\ne T\\).\nTaking an image and pulling it back need not recover unsaturated data.",
+    "htmlSha256": "7c0c6238e3ce5bae153f1655720e1f1e364bea670170dd59842cf22b28917cc7"
+  },
+  {
+    "id": 63,
+    "section": 7,
+    "raw": "In the general relation proof, the row objects have the form\n\\(t=r_i s_jr_i\\), and",
+    "htmlSha256": "4f464456b33c5f2bb3aca92c45a2b53bcabc78e182c8c0b91b11874f4c22131a"
+  },
+  {
+    "id": 64,
+    "section": 7,
+    "raw": "follows from \\(r_i^2=r_i\\). Saturation gives descent and pullback;\nthe boundary identities then make adjacent cells meet. The full proof\nchecks both requirements. Our two tables exhibit their result explicitly.",
+    "htmlSha256": "63d017874e5098859970fbd2bb8fdf5d596852fd9731bc85eec163d9098ea36f"
+  },
+  {
+    "id": 65,
+    "section": 8,
+    "raw": "Read the rectangle rowwise to get\n\\(0,C_2,C_3,0\\); read it columnwise to get\n\\(0,C_3,C_2,0\\). Delete the trivial factors. The matching is given by\nactual maps:",
+    "htmlSha256": "97b25310e80972b49a41bfdcd3f6ab9ddb04571f6484fb5cecc98798a5231ff5"
+  },
+  {
+    "id": 66,
+    "section": 8,
+    "raw": "No equality of lengths was needed to build these maps.",
+    "htmlSha256": "b57f336b7373146afcf67bac2232e4bd9d560fd7f56eac51d5347d2c7fd12256"
+  },
+  {
+    "id": 67,
+    "section": 8,
+    "raw": "Here is the general final step for groups. A finite normal series in a\nnontrivial simple group \\(S\\) has exactly one nontrivial factor.\nLook at the first term equal to \\(S\\). Its preceding term is a proper\nnormal subgroup of \\(S\\), hence is trivial. Every earlier term is\ntherefore trivial, and every later term is \\(S\\). Notice that this argument\nneeds only normality in the \\emph{next} term.",
+    "htmlSha256": "c4b4774eec7c6201d485ba266be209f3365392f228dd2fee728dcdaeecab8d0b"
+  },
+  {
+    "id": 68,
+    "section": 8,
+    "raw": "The general refinement theorem, proved in main §3, constructs a rectangle\nof paired factors for two finite normal series. If the original series\nare composition series, each row is a refinement of a simple quotient,\nso exactly one nontrivial cell survives in that row. The same holds in\neach column. Those surviving cells give a bijection between the original\nfactors, with an isomorphism for each matched pair. Equality of the numbers\nof factors is a consequence of this bijection.",
+    "htmlSha256": "311557105f611f94b801f5d1da354defe5280c9ee0c4b811e5596511a59d8b9d"
+  },
+  {
+    "id": 69,
+    "section": 8,
+    "raw": "This booklet has computed that construction for \\(C_6\\) and proved its\ncommon-quotient mechanism for groups. The full categorical refinement\ntheorem is supplied by the main exposition; a successful six-element\ncalculation is not a substitute for that theorem.",
+    "htmlSha256": "d03929fd8d570e5bd878b3c011f9764307ffd78bd474b8b873b15945d9664485"
+  },
+  {
+    "id": 70,
+    "section": 8,
+    "raw": "\\textbf{Dimension now follows.}\nFor a finite basis \\(v_1,\\ldots,v_n\\) of a vector space \\(V\\) over \\(k\\), put\n\\(F_i=\\operatorname{span}(v_1,\\ldots,v_i)\\).\nThe map",
+    "htmlSha256": "2811ed70e58fb40f8824eb7a16935e96c425f082bc5ac177b1263ea560071a9f"
+  },
+  {
+    "id": 71,
+    "section": 8,
+    "raw": "is onto by the definition of span and injective by linear independence.\nThe \\(k\\)-module \\(k\\) is simple: a submodule containing a nonzero \\(a\\)\ncontains \\(a^{-1}a=1\\), hence every scalar. A second finite basis therefore\ngives another composition series, and Jordan--Hölder gives the same\nnumber of steps. For \\(V=0\\), every basis is empty, directly by independence.",
+    "htmlSha256": "75deee1b41d801260aa81f1baf25903ed51ff1ce414e9873ae255035ef95c9e3"
+  },
+  {
+    "id": 72,
+    "section": 8,
+    "raw": "\\textbf{What this example does not test.}\n\\(C_6\\) is abelian, and the map \\(A\\times B\\to G\\), \\((a,b)\\mapsto a+b\\),\nis an isomorphism by §\\ref{c:chains}. Thus all our subgroups are\nambient-normal and this extension splits. Exercise 6 tests adjacent\nnormality in \\(A_4\\). Exercise 7 shows that the same simple factors can\nassemble into different groups.",
+    "htmlSha256": "41dd384f2b00b2b9510f0751ff91439d0ba58e7bfb8f0ee5e4c62c2bd186c334"
+  },
+  {
+    "id": 73,
+    "section": 9,
+    "raw": "In the module setting, the two filtrations can instead be compared by\nthe spectral calculation developed in \\mainref{7}{main §7}.\nHere \\(G\\) is a \\(\\Z\\)-module, and we use the two-term map\n\\(f:X=G\\xrightarrow{\\id}Y=G\\).\nExtend \\(A_i,B_i\\) by zero below \\(0\\) and by \\(G\\) above \\(2\\), and set",
+    "htmlSha256": "84e32f681696ac8e377102c54202fcc503153d2ee5c0053a31492cb3cfafe16c"
+  },
+  {
+    "id": 74,
+    "section": 9,
+    "raw": "The shift makes \\(f\\) filtration-preserving. On the initial associated\ngraded page, the only nonzero terms are",
+    "htmlSha256": "17a2df084c92a923d76f2e382e5153bc80a04e7f10f259b3f174c7d601bf24c9"
+  },
+  {
+    "id": 75,
+    "section": 9,
+    "raw": "The differential \\(d_r\\) goes from source column \\(p\\) to target column\n\\(p-r\\). There is no same-column map, so \\(d_0=0\\).",
+    "htmlSha256": "00a24924bef8f0fabbab02d93e41b3a9ef246c7f05ff95854deda92ff26f8d48"
+  },
+  {
+    "id": 76,
+    "section": 9,
+    "raw": "\\textbf{Page 1.}\nThe only nonzero differential is",
+    "htmlSha256": "f4e052d3e4c8653200d604ab91b6ff19d02df2e23cf2a85c8ee14d50a78ebcd1"
+  },
+  {
+    "id": 77,
+    "section": 9,
+    "raw": "It is the \\(C_2\\) comparison already proved to be an isomorphism.\nTaking its kernel and cokernel removes both of these entries.",
+    "htmlSha256": "a5db3d96efd08d504c91954e8f28a53a412f89955212ff527a186b9f390bd855"
+  },
+  {
+    "id": 78,
+    "section": 9,
+    "raw": "\\textbf{Page 2.}\nThe remaining source is \\(G/A\\) in column \\(4\\), and the remaining\ntarget is \\(B\\) in column \\(1\\). A page-2 differential moves two columns,\nso \\(d_2=0\\). One zero differential does not imply stabilization.",
+    "htmlSha256": "561238136bee258445fd2ea6f27807dd935178e9e7dff902832d80dca4655bd1"
+  },
+  {
+    "id": 79,
+    "section": 9,
+    "raw": "\\textbf{Page 3.}\nThe representative subgroup for the surviving source is now \\(B\\):\nto land three filtration steps lower, an element of \\(G\\) must lie in\n\\(B\\). Its identification with the preceding source term is precisely",
+    "htmlSha256": "08457fb0051817b94cf9e2b398ea64ae72d47cd1477d76c7575e7ddf82ecea94"
+  },
+  {
+    "id": 80,
+    "section": 9,
+    "raw": "On these representatives \\(f\\) is the identity \\(B\\to B\\), so\n\\(d_{3,4}\\) is an isomorphism. If we keep the old \\(G/A\\) coordinate,\nthe same map is \\(x+A\\mapsto4x\\). These are two coordinate descriptions\nof one differential, not two different maps. Page 4 is zero.",
+    "htmlSha256": "03282e6ad4c71a366d41cd58592ecc29485f997e03a18d48249ce1c805b48e50"
+  },
+  {
+    "id": 81,
+    "section": 9,
+    "raw": "The calculation pairs the \\(C_2\\)'s first and the \\(C_3\\)'s later.\nIt uses the same quotient maps as the rectangle; their page locations\ndepend on the chosen filtrations and shift. The filtration machinery\nand its convergence are proved in the main exposition, not assumed from\nJordan--Hölder. Here we have computed the pages explicitly.",
+    "htmlSha256": "5bff5b9bbf282adebf61226f9f96177e81e1c54d756a7c63d8a25cc323f5e224"
+  },
+  {
+    "id": 82,
+    "section": 10,
+    "raw": "The first five exercises stay with \\(G=\\Z/6\\Z\\),\n\\(A=\\{0,3\\}\\), \\(B=\\{0,2,4\\}\\). They test the maps, not just the final\nfactor list. Worked answers follow on the next two pages.",
+    "htmlSha256": "01e5009ff7ebdb8a91244405d10595084e9ceee60aaf649ca368512a8e771519"
+  },
+  {
+    "id": 83,
+    "section": 10,
+    "raw": "\\textbf{Direction and witnesses.}\nFor \\(R=r_2s_1\\), give an intermediate witness showing \\(2R5\\).\nDoes \\(5R2\\)? Describe \\(R^\\op=s_1r_2\\).\nExplain why associativity of relation composition does not allow us\nto interchange \\(r_2\\) and \\(s_1\\).",
+    "htmlSha256": "9909961ddc5113a161fff133edaac9021d9ec478fa904808fec54199c39189af"
+  },
+  {
+    "id": 84,
+    "section": 10,
+    "raw": "\\textbf{The two ambiguities.}\nCompute \\(R^\\op R\\) and \\(RR^\\op\\), including their supports.\nWhy is the first not an equivalence relation on all of \\(G\\)?\nWrite the induced quotient isomorphism and its inverse.",
+    "htmlSha256": "8159e7d16a84cb5eeae03b262a646c4b3595b5192a19af349f8ee0fd0a9644ec"
+  },
+  {
+    "id": 85,
+    "section": 10,
+    "raw": "\\textbf{Three corners.}\nLet \\(T\\leq X\\times Y\\) be a subgroup, with \\(X,Y\\) possibly\nnoncommutative. Verify the ordered product that completes\n\\((x,y),(x',y),(x',y')\\) to \\((x,y')\\).\nFor the congruence modulo \\(B\\), apply it to\n\\((0,2),(4,2),(4,4)\\).\nGive an arbitrary subset of \\(C_2\\times C_2\\) for which the\nthree-corner property fails.",
+    "htmlSha256": "ceb5ea99d20ffc3bc8db315510168c95ed721a63e7fdcb5cb7356ea0414ac51d"
+  },
+  {
+    "id": 86,
+    "section": 10,
+    "raw": "\\textbf{What saturation repairs.}\nLet \\(T=\\{(b,b):b\\in B\\}\\subseteq B\\times G\\), and let\n\\(p=\\id_B\\times q_A\\).\nShow \\(p(T)=p(R)\\), but \\(p^{-1}(p(T))=R\\ne T\\).\nCompute \\(r_2T\\) and \\(r_2R\\). Which relation includes every representative\nof each output coset?",
+    "htmlSha256": "515aee9ecb475ce78028627f869049d9630db6dc103f790d63ea4ac3df9dcc8a"
+  },
+  {
+    "id": 87,
+    "section": 10,
+    "raw": "\\textbf{Reconstruct the rectangle.}\nWithout looking at §\\ref{c:rectangle}, compute all four output quotients\nand all four input quotients. Recover the two refined chains.\nVerify that \\(x+B\\mapsto3x\\) is inverse to \\(a\\mapsto a+B\\).\nExplain the different supports of the two trivial cells.",
+    "htmlSha256": "1f23c60a5b0519b6017aca0789c324f4093759ab3fa278830e250c09b2f862fc"
+  },
+  {
+    "id": 88,
+    "section": 10,
+    "raw": "\\textbf{Normal in the next term.}\nLet \\(A_4\\) be the group of even permutations of four symbols, composed\nfrom right to left. Inside \\(A_4\\), let",
+    "htmlSha256": "3193344535edf1547be84f175f9a4315fa0d04aad74cd35923b6d9f503806928"
+  },
+  {
+    "id": 89,
+    "section": 10,
+    "raw": "Show that \\(1<H<V_4<A_4\\) is a composition series, but\n\\(H\\) is not normal in \\(A_4\\).\nFor the last assertion, conjugate \\((12)(34)\\) by \\((123)\\).\nWhy would a proof considering only ambient-normal subgroups miss this\nseries?",
+    "htmlSha256": "af49248a7a914b2b3b51c6119db7957f10e9e4826e9664ced4fdf11735990baf"
+  },
+  {
+    "id": 90,
+    "section": 10,
+    "raw": "\\textbf{What the factors forget.}\nGive composition series for \\(C_4\\) and \\(C_2\\times C_2\\) with the same\nsimple factors. Prove the groups are not isomorphic.\nThen count the homomorphisms \\(C_2\\to C_4\\) and\n\\(C_2\\to C_2\\times C_2\\). What information does this small probe detect\nthat the factor list does not?",
+    "htmlSha256": "5f1366c3dac9c8753a37e4c172dd24c9398b78257b8997bde896dd24f4be7a39"
+  },
+  {
+    "id": 91,
+    "section": 11,
+    "raw": "\\textbf{1. Direction and witnesses.}\nThe intermediate point is \\(2\\): \\(2s_12\\) and \\(2r_25\\), since\n\\(5-2=3\\in A\\). But \\(5\\) is outside the input support \\(B\\), so \\(5R2\\)\nis false. The opposite relation has pairs",
+    "htmlSha256": "fdff6b7f5fde4c5f83a7f04a3facec5aff2ac974072c63c763f4e8416a30be63"
+  },
+  {
+    "id": 92,
+    "section": 11,
+    "raw": "It has input support \\(G\\) and output support \\(B\\). First move by \\(A\\),\nthen require the endpoint to lie in \\(B\\).\nAssociativity permits regrouping three successive operations; it does\nnot reverse their order. Here \\(r_2s_1\\ne s_1r_2\\), as the supports\nalready show.",
+    "htmlSha256": "be2cdf4428dfebbd84b7595e964dd563893108aecf430e21a1dff74abae42529"
+  },
+  {
+    "id": 93,
+    "section": 11,
+    "raw": "\\textbf{2. The two ambiguities.}\nDistinct rows in the relation table have disjoint outputs, so",
+    "htmlSha256": "d1b1b26b596755f4194de9f0a79a163af0887c8b83d479919d7ea8096e33bf6a"
+  },
+  {
+    "id": 94,
+    "section": 11,
+    "raw": "It is reflexive on \\(B\\), but not on \\(G\\): for example \\((1,1)\\) is\nmissing. The other composite is",
+    "htmlSha256": "a08c2a9351e189263139006a61e129d170be69e86a4f5205e28f400adbf22453"
+  },
+  {
+    "id": 95,
+    "section": 11,
+    "raw": "Its support is \\(G\\), and its three classes are the \\(A\\)-cosets.\nThe quotient map is \\(B\\to G/A,\\ b\\mapsto b+A\\).\nIts inverse \\(x+A\\mapsto4x\\) is well defined because \\(4A=0\\).\nThe two identities \\(4b=b\\) on \\(B\\) and \\(4x-x\\in A\\) verify both\ncomposites directly.",
+    "htmlSha256": "d3a274410cdcdd49ad3972f2fa19b3ab31b5ccabe8ae39ae7aecbe7016b4ae48"
+  },
+  {
+    "id": 96,
+    "section": 11,
+    "raw": "\\textbf{3. Three corners.}\nIn the direct product group,",
+    "htmlSha256": "92428704376b84548970ab8824d0e71035f683657c47378c8af2f4e4515b5869"
+  },
+  {
+    "id": 97,
+    "section": 11,
+    "raw": "The subgroup contains this product. Nothing is commuted, so the argument\nworks for arbitrary groups. In the additive \\(C_6\\) example the same\noperation reads",
+    "htmlSha256": "ae9c120e2bd0b17f942d534dde59481419b683437a33ac9bdaf016bc1de30fcf"
+  },
+  {
+    "id": 98,
+    "section": 11,
+    "raw": "which indeed belongs to the congruence modulo \\(B\\).",
+    "htmlSha256": "5ff4badc8e4b26ab90d316541f855ce193e229e877ba29396c0ee846a5223fee"
+  },
+  {
+    "id": 99,
+    "section": 11,
+    "raw": "The subset\n\\(\\{(0,0),(1,0),(1,1)\\}\\subseteq C_2\\times C_2\\)\ncontains three corners but omits \\((0,1)\\).\nIt is not a subgroup. Merely having a subset of a product supplies no\nthree-corner property.",
+    "htmlSha256": "e641e38bc02cedaf1cfef2a59fda0f3b03cdcf572f453aae207e65fe637e8f45"
+  },
+  {
+    "id": 100,
+    "section": 11,
+    "raw": "\\textbf{4. What saturation repairs.}\nBoth images are the graph",
+    "htmlSha256": "0125827bfbd3290b7606dcf8a2dd807f86e9a46796455f6c1175b5523363429e"
+  },
+  {
+    "id": 101,
+    "section": 11,
+    "raw": "A pair \\((b,y)\\) lies in \\(p^{-1}(L)\\) exactly when \\(y+A=b+A\\),\nor \\(y-b\\in A\\). This is precisely \\(R\\). Therefore\n\\(r_2T=R\\) and \\(r_2R=R\\). Only \\(R\\) includes all representatives\nof each output coset; \\(T\\) includes just one.",
+    "htmlSha256": "27e4ba7e259ce44ed4afed290b73f1e2574b3145be180a0dc0257cd7a70657fd"
+  },
+  {
+    "id": 102,
+    "section": 11,
+    "raw": "\\textbf{5. Reconstruct the rectangle.}\nThe output and input quotient tables, respectively, are",
+    "htmlSha256": "2d51e2fad77fe390734a39e9c4a91dbc52f428c3d07e5907cf060157de1fc665"
+  },
+  {
+    "id": 103,
+    "section": 11,
+    "raw": "Their row and column chains are",
+    "htmlSha256": "557d2fe1f138bd53cf10e949e9a630823f51d9477d6b78bc8b5ce871c05e5126"
+  },
+  {
+    "id": 104,
+    "section": 11,
+    "raw": "The formula \\(x+B\\mapsto3x\\) is well defined since \\(3B=0\\).\nFor \\(a\\in A\\), \\(3a=a\\); for \\(x\\in G\\), \\(3x-x=2x\\in B\\).\nThese prove both inverse identities. The first trivial cell has support\n\\(\\{0\\}\\), and the last has support \\(G\\). Each quotient has one element,\nalthough their supports and relations differ.",
+    "htmlSha256": "9d1cd78f4adf5faab8529e45c78c12d5ba50f1ae4af31b8c7aeaa4e276635d41"
+  },
+  {
+    "id": 105,
+    "section": 11,
+    "raw": "\\textbf{6. Normal in the next term.}\n\\(V_4\\) is abelian, so \\(H\\nml V_4\\). Conjugation by an element of\n\\(A_4\\) permutes the three double transpositions, so \\(V_4\\nml A_4\\).\nThe successive factors have orders \\(2,2,3\\), and every group of prime\norder is cyclic and simple. These steps give a composition series.\nHowever,",
+    "htmlSha256": "82cc6293b31294008dde39549b64735b2b13bcff5cfead24628f36b468dc6c4c"
+  },
+  {
+    "id": 106,
+    "section": 11,
+    "raw": "Thus \\(H\\) is not normal in \\(A_4\\). The theorem concerns subnormal\nseries, where each term is normal in the next; it cannot be reduced to\nchains in the lattice of subgroups normal in the whole ambient group.",
+    "htmlSha256": "c36e36068ed17c4a70d6edfe62c8abf9600dfc50fd6ad51aab39866da8e37015"
+  },
+  {
+    "id": 107,
+    "section": 11,
+    "raw": "\\textbf{7. What the factors forget.}\nUse",
+    "htmlSha256": "99bb85438c203cf070d2c71f02844ccd2ca37c6cade9a1c0ae6aeecf1afd1ade"
+  },
+  {
+    "id": 108,
+    "section": 11,
+    "raw": "Both factor lists are \\(C_2,C_2\\). The first group has an element of order\nfour, while the second does not, so they are not isomorphic.\nA homomorphism out of \\(C_2\\) is determined by the image of its generator,\nwhich must be killed by two. There are two possibilities in \\(C_4\\)\nand four in \\(C_2\\times C_2\\). The probe detects their different\ntwo-torsion subgroups. The simple factors alone do not recover how those\nfactors are assembled.",
+    "htmlSha256": "5b6a69fb8c445b8cba7f373189f781dc0557218f03b47d2a8ebdeef1f86a8bdb"
+  },
+  {
+    "id": 109,
+    "section": 12,
+    "raw": "The comparison theorem is already complete before the higher chapters.\nThose chapters pursue a new question: what additional structure is retained\nby richer quotients and more informative probes? The following routes use\nthe \\emph{main exposition's} section numbers.",
+    "htmlSha256": "8683863111452ccf210b3f8dba8a6d60c1b0e4ec302f684dda0e9a718070399e"
+  },
+  {
+    "id": 110,
+    "section": 12,
+    "raw": "\\textbf{First bridge: stay with ordinary algebra.}\n\\mainref{9}{Main §9} studies attachment data and marked extensions:\nbesides the two end objects, retain how one sits inside the total object\nand how the total object maps onto the other. It also explains why data\nfrom adjacent layers can miss information across a skipped layer.\n\\mainref{10}{Main §10} studies probes for nilpotent operators and\nreconstructs their chains. Modules and linear algebra suffice for this\nroute. Exercise 7 gives the simplest reason to want it: a factor list\ndoes not determine the assembled object.",
+    "htmlSha256": "1c5a84df52c99e342cc14a1da07db46c52c5462044f9775fdeb2316d5319e203"
+  },
+  {
+    "id": 111,
+    "section": 12,
+    "raw": "\\textbf{First higher bridge: an orbit can hide a stabilizer.}\nStart with \\mainref{12-2}{main §12.2}. A groupoid is a category in which\nevery arrow is invertible. For a group action, its action groupoid has\nthe acted-on points as objects and the group elements carrying one point\nto another as arrows.",
+    "htmlSha256": "88987fc6a461b64bacaa1363fd2b6dad78b7a31967c0a6ba4ab4f74d033fff12"
+  },
+  {
+    "id": 112,
+    "section": 12,
+    "raw": "Let \\(G=C_6\\) act by addition on the two-element set \\(G/B\\).\nThe action is transitive, so its ordinary orbit set is a single point.\nBut the stabilizer of either point is \\(B=C_3\\). The action groupoid\nretains these automorphisms. Its full subgroupoid on the object \\(B\\)\nhas one object and automorphism group \\(B\\); it is equivalent to the\nwhole groupoid because every other object is isomorphic to \\(B\\).\nWriting \\(BK\\) for the classifying space of a group \\(K\\), we get",
+    "htmlSha256": "bc9b4fde2ae0a03deed069ed38b1ddb31ea89ee460481768e20ae9c706e6bd0a"
+  },
+  {
+    "id": 113,
+    "section": 12,
+    "raw": "The double slash denotes the homotopy quotient, obtained by realizing\nthe action groupoid. It remembers something the orbit set discarded.",
+    "htmlSha256": "00f25a3eca5abb447540b212eea73759d4e517326f179ce0d693300b7228b93f"
+  },
+  {
+    "id": 114,
+    "section": 12,
+    "raw": "\\textbf{Next bridge: intersections acquire components and loops.}\nRead \\mainref{12-3}{main §12.3} for the homotopy-pullback construction.\nThe double-coset formula proved in \\mainref{12-6}{main §12.6} gives,\nfor subgroups \\(H,K\\leq G\\),",
+    "htmlSha256": "55a6d0f9cd0e1a6289957080a1c15e3bc488751fdefab3145064a224ee068cc2"
+  },
+  {
+    "id": 115,
+    "section": 12,
+    "raw": "Here the superscript \\(h\\) denotes a homotopy pullback. In our abelian\nexample, \\(A+B=G\\) and \\(A\\cap B=0\\), so",
+    "htmlSha256": "234f3d30d7916d9982d8a051f9d32178ece9958d26256f8bca770f1c4e227978"
+  },
+  {
+    "id": 116,
+    "section": 12,
+    "raw": "With \\(A\\) on both sides there are three double cosets and each\nintersection is \\(A\\), giving",
+    "htmlSha256": "1ff7837670f1b8cb842f6433d30f6e3744fb822e15498de6249b3f2fa521823d"
+  },
+  {
+    "id": 117,
+    "section": 12,
+    "raw": "An ordinary subgroup intersection sees the group in the identity\ncomponent. The homotopy pullback records the other components too.",
+    "htmlSha256": "88ef0e76ccee274fdfd83be4c689c00fa9b5aa85cded539f87a9853d5949fc02"
+  },
+  {
+    "id": 118,
+    "section": 12,
+    "raw": "\\textbf{Choose a route by the question you want to answer.}\nThe higher chapters need not be read in numerical order.",
+    "htmlSha256": "adf24b172c1143246a07af1cecc77332578f0d698b6893161ba82ebee4f84eb0"
+  },
+  {
+    "id": 119,
+    "section": 12,
+    "raw": "For an algebraic entry to this table, read \\mainref{13-1}{§13.1} and\n\\mainref{13-2}{§13.2} before\nattempting spectra. An abelian group object over \\(G\\) is equivalent to a\n\\(\\Z[G]\\)-module:",
+    "htmlSha256": "b32f78e798fad5157a5e20e785fa256426fe53f75ee26e553c659bc2212a4b5f"
+  },
+  {
+    "id": 120,
+    "section": 12,
+    "raw": "The zero section splits the map to \\(G\\); its kernel is abelian, and\nconjugation by that section gives the \\(G\\)-action. Conversely a\n\\(G\\)-module produces its semidirect product over \\(G\\).\nThus linearizing \\emph{over a base} retains more than forgetting the base\nand taking an ordinary abelian group.",
+    "htmlSha256": "f017348d169366d6b9418393b87c78b5eddd398688044a6dff50cd9d767f30d4"
+  },
+  {
+    "id": 121,
+    "section": 12,
+    "raw": "\\textbf{Three questions keep the higher route precise.}\nFirst, what is the ambient category? A descent result for an\n\\(\\infty\\)-topos does not automatically hold in every category of\nalgebraic models. Second, what extra data are retained---a base, marked\nendpoints, automorphisms, or coherent homotopies? Third, what is actually\nconcluded? An obstruction group names possible obstructions; a particular\nlifting problem has a particular obstruction class whose vanishing must\nbe checked.",
+    "htmlSha256": "56ef755e51689f51f6f8cb332696ef11cd44523566bc85b73cd312ecf1321354"
+  },
+  {
+    "id": 122,
+    "section": 12,
+    "raw": "The main exposition identifies the higher foundations it imports.\nThese chapters enrich quotient and reconstruction questions; they do\nnot claim a Jordan--Hölder theorem for arbitrary higher objects.\nThe ordinary refinement proof does not depend on them.",
+    "htmlSha256": "d44472f02778e95a4c353b2945924875b869e7e342560bae43a4fa22b21986a7"
+  }
+]

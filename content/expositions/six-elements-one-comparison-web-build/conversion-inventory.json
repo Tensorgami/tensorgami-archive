@@ -1,0 +1,798 @@
+{
+  "sourceSha256": "50d0d88e000f8d82857948b659b4ceebe567ec38a469e545a5f082b4ea7ef31b",
+  "sourceFiles": [
+    {
+      "file": "main.tex",
+      "sha256": "3a0e5b4c7a46905377e47ef769bf18ed8757cc43caadb348582aa89c081e8bde"
+    },
+    {
+      "file": "01-concrete-route.tex",
+      "sha256": "139698d5d3b6ad47150bb0998f79b5da05bbc0655fc27fa83fc3145126b14e42"
+    },
+    {
+      "file": "02-exercises.tex",
+      "sha256": "31551d105a7fd557f2eae56de8a62460a670688bdea77e33596e46738937655a"
+    },
+    {
+      "file": "03-higher-guide.tex",
+      "sha256": "a876d88d709cbc9506bb848facb092f81d0721f62d5a87afa428d660c872cc96"
+    }
+  ],
+  "headerMetadata": {
+    "title": "Six Elements, One Comparison",
+    "subtitle": "A teaching companion to Quotients, Refinement and Reconstruction",
+    "edition": "October 2026",
+    "raw": "{\\LARGE\\bfseries Six Elements, One Comparison}\\par\n{\\large A teaching companion to \\emph{Quotients, Refinement and Reconstruction}}\\par\n{\\small October 2026}",
+    "disposition": {
+      "title": "page shell h1",
+      "subtitle": "page shell subtitle",
+      "edition": "page shell byline"
+    }
+  },
+  "mathjaxVersion": "3.2.2",
+  "headings": [
+    {
+      "kind": "section",
+      "number": "1",
+      "id": "section-1",
+      "titleTex": "Two chains through the same six elements",
+      "titleHTML": "Two chains through the same six elements"
+    },
+    {
+      "kind": "section",
+      "number": "2",
+      "id": "section-2",
+      "titleTex": "An algebraic maneuver is a map",
+      "titleHTML": "An algebraic maneuver is a map"
+    },
+    {
+      "kind": "section",
+      "number": "3",
+      "id": "section-3",
+      "titleTex": "Keep the identifications, including where they live",
+      "titleHTML": "Keep the identifications, including where they live"
+    },
+    {
+      "kind": "section",
+      "number": "4",
+      "id": "section-4",
+      "titleTex": "A comparison with two outputs per input",
+      "titleHTML": "A comparison with two outputs per input"
+    },
+    {
+      "kind": "section",
+      "number": "5",
+      "id": "section-5",
+      "titleTex": "Why the construction works beyond six elements",
+      "titleHTML": "Why the construction works beyond six elements"
+    },
+    {
+      "kind": "section",
+      "number": "6",
+      "id": "section-6",
+      "titleTex": "Fill all four crossings",
+      "titleHTML": "Fill all four crossings"
+    },
+    {
+      "kind": "section",
+      "number": "7",
+      "id": "section-7",
+      "titleTex": "How cells become genuine refinements",
+      "titleHTML": "How cells become genuine refinements"
+    },
+    {
+      "kind": "section",
+      "number": "8",
+      "id": "section-8",
+      "titleTex": "Why simplicity turns comparison into a matching",
+      "titleHTML": "Why simplicity turns comparison into a matching"
+    },
+    {
+      "kind": "section",
+      "number": "9",
+      "id": "section-9",
+      "titleTex": "Optional: the same comparison on successive pages",
+      "titleHTML": "Optional: the same comparison on successive pages"
+    },
+    {
+      "kind": "section",
+      "number": "10",
+      "id": "section-10",
+      "titleTex": "Seven short exercises",
+      "titleHTML": "Seven short exercises"
+    },
+    {
+      "kind": "section",
+      "number": "11",
+      "id": "section-11",
+      "titleTex": "Worked answers",
+      "titleHTML": "Worked answers"
+    },
+    {
+      "kind": "section",
+      "number": "12",
+      "id": "section-12",
+      "titleTex": "A guide to the higher chapters",
+      "titleHTML": "A guide to the higher chapters"
+    }
+  ],
+  "equationCount": 504,
+  "displayCount": 44,
+  "paragraphs": 122,
+  "callouts": [
+    {
+      "id": 1,
+      "section": 1,
+      "kind": "pausehere",
+      "raw": "Neither \\(A\\subseteq B\\) nor \\(B\\subseteq A\\). A single subgroup\nchain cannot contain both. We will construct two refinements and match their\nfactors.",
+      "htmlSha256": "44b88d003f337fbeb9f312ceec90543a52b53aaeec7b331fd0192c0f127d9d4f"
+    },
+    {
+      "id": 2,
+      "section": 1,
+      "kind": "route",
+      "raw": "Main route: \\mainref{3}{main §3}, the general refinement theorem,\nand \\mainref{4-4}{main §4.4}, the \\(C_6\\) comparison.",
+      "htmlSha256": "0bccaf2df4d6ae17b88080b236e85c446f98458147177cb00e4939922ce603b7"
+    },
+    {
+      "id": 3,
+      "section": 2,
+      "kind": "pausehere",
+      "raw": "Why does \\(x+A\\mapsto x\\) fail to define a map \\(G/A\\to G\\)?\nCompare the representatives \\(0\\) and \\(3\\).",
+      "htmlSha256": "ea43989b0453fd993c257ead9d1affa0144a98d8be1f5e4c2978048197b83313"
+    },
+    {
+      "id": 4,
+      "section": 2,
+      "kind": "route",
+      "raw": "Further development: \\mainref{1}{main §1}, relations, images and quotients.",
+      "htmlSha256": "2edf9277217e5e7c1e76cb9bb9ef31880aea4e1b43f698e9e7b8cb82abcbaf94"
+    },
+    {
+      "id": 5,
+      "section": 3,
+      "kind": "pausehere",
+      "raw": "The three-corner property does not require a unique output.\nIt says that three corners of a related rectangle force the fourth.",
+      "htmlSha256": "a521fb611493e221d76d385f810b57a8bda8012700e2bffc85524140e56f90d4"
+    },
+    {
+      "id": 6,
+      "section": 3,
+      "kind": "route",
+      "raw": "Main §§1--2 develop the same operations using pullbacks, regular\nimages and effective quotients, so that they apply beyond groups.",
+      "htmlSha256": "fbaa59134ee596cf3adea3dac92af0a908feeb9d42dada897d7c83e93c5bda43"
+    },
+    {
+      "id": 7,
+      "section": 4,
+      "kind": "pausehere",
+      "raw": "The pair \\((2,5)\\) belongs to \\(R\\). Does \\((5,2)\\)?\nKeep input support and output support separate.",
+      "htmlSha256": "548a89fb00d1cc5f1a8a7d097c266a68761df90ef459dfb4176fcd1c723972e2"
+    },
+    {
+      "id": 8,
+      "section": 4,
+      "kind": "route",
+      "raw": "This is the concrete instance of the common-quotient construction\nin \\mainref{2}{main §2}.",
+      "htmlSha256": "afe531ee2bba7ab5ca1d088366bb805481a478da42ac23e23dc8a05872f15421"
+    },
+    {
+      "id": 9,
+      "section": 5,
+      "kind": "pausehere",
+      "raw": "The conclusion is an isomorphism characterized by a commuting\ndiagram, not merely equality of the numbers of classes.",
+      "htmlSha256": "c0967b67fdf04cf1aba5d035197b1bc122f743ac88ddd4fb47ec1e892bf01bd7"
+    },
+    {
+      "id": 10,
+      "section": 5,
+      "kind": "route",
+      "raw": "This page proves the group mechanism. The proof for every exact\nMal'cev category, with its image and quotient dependencies, is in\n\\mainref{1}{main §1} and \\mainref{2}{main §2}.",
+      "htmlSha256": "bdbd51628da4abb85e35a43fd181a16476789d64717b1e9e056449a7c9fad931"
+    },
+    {
+      "id": 11,
+      "section": 6,
+      "kind": "pausehere",
+      "raw": "A zero entry is the one-element group. It does not mean that\nthe relation is empty, or even that its support is small.",
+      "htmlSha256": "e1ce5851f8d9b9e0549159b33b3506ce323ee88923f30b2863a0397b522567d4"
+    },
+    {
+      "id": 12,
+      "section": 7,
+      "kind": "route",
+      "raw": "For the categorical descent and boundary checks, see\n\\mainref{2}{main §2} and \\mainref{3}{main §3}.",
+      "htmlSha256": "7afbac60242774f8454894e6cf964ce796f864e1765050c4ef748577328ddfc8"
+    },
+    {
+      "id": 13,
+      "section": 8,
+      "kind": "pausehere",
+      "raw": "This is a complete stopping point for the teaching route.\nThe higher chapters ask what the list of factors forgets, and what extra\nstructure can retain or recover that information.",
+      "htmlSha256": "a647674598ce72e97cbd43d8cf22dd34e1d2a285ed93db21378b10c38d2c032a"
+    },
+    {
+      "id": 14,
+      "section": 9,
+      "kind": "route",
+      "raw": "Read this after the concrete rectangle. It is an abelian\n\\(\\Z\\)-module calculation; it does not assert that ordinary abelian\nspectral sequences apply directly to arbitrary groups.",
+      "htmlSha256": "ad3b4dc35669b7e1631c4f2ba3daf45bad42bbfc4ac6ed83a20d99e23f75d790"
+    },
+    {
+      "id": 15,
+      "section": 10,
+      "kind": "route",
+      "raw": "Exercises 1--5 check the comparison mechanism. Exercises 6--7\nexpose two features deliberately invisible in the easy \\(C_6\\) example:\nnon-ambient normality and different ways to assemble the same factors.",
+      "htmlSha256": "c498c9be30ba09e146db2126875b8b0807a56e655efc2d81e8eebb14aa3f466c"
+    },
+    {
+      "id": 16,
+      "section": 11,
+      "kind": "pausehere",
+      "raw": "The ternary expression \\(uv^{-1}w\\) need not be a group\nhomomorphism in its three variables. The proof uses closure of the\nsubgroup under the displayed operations, not such a homomorphism claim.",
+      "htmlSha256": "f8358781be11d761b3ab37492e34007645c2eae65dc4db9fbe6caa864fbd51c4"
+    },
+    {
+      "id": 17,
+      "section": 12,
+      "kind": "pausehere",
+      "raw": "At each stage ask which object is being used. The orbit set\nforgets stabilizers; the action groupoid and its classifying homotopy\n\\(1\\)-type retain equivalent information.",
+      "htmlSha256": "4a972f972ff2f37da1d01c7dd9526f17ef870ffc414509a822340e103485595f"
+    },
+    {
+      "id": 18,
+      "section": 12,
+      "kind": "route",
+      "raw": "Further reading: \\href{https://tensorgami.com/notes/quotients-and-reconstruction.html}\n{Quotients, Refinement and Reconstruction};\n\\href{https://tensorgami.com/notes/quotients-and-reconstruction-audit.html}\n{notes on proofs, dependencies, and revisions}.",
+      "htmlSha256": "70bd32ac2c3728b2c638f83ac55fe4f3cf1fb6dcf4a19e12ef12e448c2a379b6"
+    }
+  ],
+  "tables": [
+    {
+      "id": 1,
+      "section": 1,
+      "mode": "array",
+      "columns": "c|cc",
+      "raw": "\n &\\text{first step}&\\text{second step}\\\\ \\hline\n A\\text{-chain}&A/0\\cong C_2&G/A\\cong C_3\\\\\n B\\text{-chain}&B/0\\cong C_3&G/B\\cong C_2 .\n",
+      "rows": 3,
+      "columnCount": 3,
+      "cells": [
+        [
+          "",
+          "\\text{first step}",
+          "\\text{second step}"
+        ],
+        [
+          "A\\text{-chain}",
+          "A/0\\cong C_2",
+          "G/A\\cong C_3"
+        ],
+        [
+          "B\\text{-chain}",
+          "B/0\\cong C_3",
+          "G/B\\cong C_2 ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "883dd45120b86b5702764dd47ebfdfa1f1d62ee48b54c0f59773fdd898a9d694"
+    },
+    {
+      "id": 2,
+      "section": 3,
+      "mode": "array",
+      "columns": "c|l|c|c",
+      "raw": "\n \\text{relation}&\\text{rule}&\\text{support}&\\text{class of }0\\\\ \\hline\n r_1&x=y\\in A&A&0\\\\\n r_2&y-x\\in A&G&A\\\\\n s_1&x=y\\in B&B&0\\\\\n s_2&y-x\\in B&G&B .\n",
+      "rows": 5,
+      "columnCount": 4,
+      "cells": [
+        [
+          "\\text{relation}",
+          "\\text{rule}",
+          "\\text{support}",
+          "\\text{class of }0"
+        ],
+        [
+          "r_1",
+          "x=y\\in A",
+          "A",
+          "0"
+        ],
+        [
+          "r_2",
+          "y-x\\in A",
+          "G",
+          "A"
+        ],
+        [
+          "s_1",
+          "x=y\\in B",
+          "B",
+          "0"
+        ],
+        [
+          "s_2",
+          "y-x\\in B",
+          "G",
+          "B ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "d6a6308557046490d9539b29aca31c9b6a1998ff90e76a623ac96603d9f9aa3e"
+    },
+    {
+      "id": 3,
+      "section": 4,
+      "mode": "array",
+      "columns": "c|c",
+      "raw": "\n \\text{input}&\\text{possible outputs}\\\\ \\hline\n 0&0,\\ 3\\\\\n 2&2,\\ 5\\\\\n 4&4,\\ 1 .\n",
+      "rows": 4,
+      "columnCount": 2,
+      "cells": [
+        [
+          "\\text{input}",
+          "\\text{possible outputs}"
+        ],
+        [
+          "0",
+          "0,\\ 3"
+        ],
+        [
+          "2",
+          "2,\\ 5"
+        ],
+        [
+          "4",
+          "4,\\ 1 ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "82693f3685fff97dd0b7167f4bc7555a727466ae29d7f4c87fec4c2d27d663e1"
+    },
+    {
+      "id": 4,
+      "section": 5,
+      "mode": "array",
+      "columns": "p{0.23\\linewidth}|p{0.66\\linewidth}",
+      "raw": "\n \\textbf{Structure}&\\textbf{Work it performs}\\\\ \\hline\n Finite limits&Form pairs satisfying equations and the spaces of witnesses.\\\\\n Regular images&Form supports and compose relations.\\\\\n Barr exactness&Make equivalence relations into effective quotients.\\\\\n Mal'cev property&Supply the three-corner property for internal relations.\\\\\n Pointedness&Supply a zero object and zero classes for the later series argument.\n",
+      "rows": 6,
+      "columnCount": 2,
+      "cells": [
+        [
+          "\\textbf{Structure}",
+          "\\textbf{Work it performs}"
+        ],
+        [
+          "Finite limits",
+          "Form pairs satisfying equations and the spaces of witnesses."
+        ],
+        [
+          "Regular images",
+          "Form supports and compose relations."
+        ],
+        [
+          "Barr exactness",
+          "Make equivalence relations into effective quotients."
+        ],
+        [
+          "Mal'cev property",
+          "Supply the three-corner property for internal relations."
+        ],
+        [
+          "Pointedness",
+          "Supply a zero object and zero classes for the later series argument."
+        ]
+      ],
+      "textMode": true,
+      "htmlSha256": "857e81357249600d1358c69afcb5defc6d3f59a31bfaebb1cdaae8130f4b91a6"
+    },
+    {
+      "id": 5,
+      "section": 6,
+      "mode": "array",
+      "columns": "c|l|c|c",
+      "raw": "\n (i,j)&P_{ij}&\\text{input quotient}&\\text{output quotient}\\\\ \\hline\n (1,1)&\\{(0,0)\\}&0/0&0/0\\\\\n (1,2)&\\{(x,3x):x\\in G\\}&G/B&A/0\\\\\n (2,1)&\\{(b,b),(b,b+3):b\\in B\\}&B/0&G/A\\\\\n (2,2)&G\\times G&G/G&G/G .\n",
+      "rows": 5,
+      "columnCount": 4,
+      "cells": [
+        [
+          "(i,j)",
+          "P_{ij}",
+          "\\text{input quotient}",
+          "\\text{output quotient}"
+        ],
+        [
+          "(1,1)",
+          "\\{(0,0)\\}",
+          "0/0",
+          "0/0"
+        ],
+        [
+          "(1,2)",
+          "\\{(x,3x):x\\in G\\}",
+          "G/B",
+          "A/0"
+        ],
+        [
+          "(2,1)",
+          "\\{(b,b),(b,b+3):b\\in B\\}",
+          "B/0",
+          "G/A"
+        ],
+        [
+          "(2,2)",
+          "G\\times G",
+          "G/G",
+          "G/G ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "2d3587051ac49e7a5805c056f9420e41bda32e609aaac22d0622aa7123619667"
+    },
+    {
+      "id": 6,
+      "section": 6,
+      "mode": "array",
+      "columns": "c|cc",
+      "raw": "\n &B/0&G/B\\\\ \\hline\n A/0&0&C_2\\\\\n G/A&C_3&0 .\n",
+      "rows": 3,
+      "columnCount": 3,
+      "cells": [
+        [
+          "",
+          "B/0",
+          "G/B"
+        ],
+        [
+          "A/0",
+          "0",
+          "C_2"
+        ],
+        [
+          "G/A",
+          "C_3",
+          "0 ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "52e5867c50a58d1c1834237ede1f4f255bbd7664fc76b2a1977b91334591640b"
+    },
+    {
+      "id": 7,
+      "section": 7,
+      "mode": "array",
+      "columns": "c|ccc",
+      "raw": "\n &j=0&j=1&j=2\\\\ \\hline\n U_{1j}&0&0&A\\\\\n U_{2j}&A&G&G\n",
+      "rows": 3,
+      "columnCount": 4,
+      "cells": [
+        [
+          "",
+          "j=0",
+          "j=1",
+          "j=2"
+        ],
+        [
+          "U_{1j}",
+          "0",
+          "0",
+          "A"
+        ],
+        [
+          "U_{2j}",
+          "A",
+          "G",
+          "G"
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "88c34f3bf84b75e552a4661f8d97ba246333b2ad38ca91ca21b6d4d483cf42b0"
+    },
+    {
+      "id": 8,
+      "section": 7,
+      "mode": "array",
+      "columns": "c|ccc",
+      "raw": "\n &i=0&i=1&i=2\\\\ \\hline\n V_{1i}&0&0&B\\\\\n V_{2i}&B&G&G .\n",
+      "rows": 3,
+      "columnCount": 4,
+      "cells": [
+        [
+          "",
+          "i=0",
+          "i=1",
+          "i=2"
+        ],
+        [
+          "V_{1i}",
+          "0",
+          "0",
+          "B"
+        ],
+        [
+          "V_{2i}",
+          "B",
+          "G",
+          "G ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "5049dca9441dc867d37b5f542b0ac698b51b1fa934b77711ec064b4d5b5ef232"
+    },
+    {
+      "id": 9,
+      "section": 9,
+      "mode": "array",
+      "columns": "c|cccc",
+      "raw": "\n \\text{filtration column}&1&2&3&4\\\\ \\hline\n X&0&0&A&G/A\\\\\n Y&B&G/B&0&0 .\n",
+      "rows": 3,
+      "columnCount": 5,
+      "cells": [
+        [
+          "\\text{filtration column}",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        [
+          "X",
+          "0",
+          "0",
+          "A",
+          "G/A"
+        ],
+        [
+          "Y",
+          "B",
+          "G/B",
+          "0",
+          "0 ."
+        ]
+      ],
+      "textMode": false,
+      "htmlSha256": "6ac88cf1bfd71e8fcf3cb0d11df02cdcd895496b1a54a328e3934768435f1f91"
+    },
+    {
+      "id": 10,
+      "section": 12,
+      "mode": "tabular",
+      "columns": "@{}>{\\raggedright\\arraybackslash}p{0.17\\linewidth}>{\\raggedright\\arraybackslash}p{0.31\\linewidth}>{\\raggedright\\arraybackslash}p{0.43\\linewidth}@{}",
+      "raw": "\n\\toprule\n\\textbf{Main sections}&\\textbf{Preparation}&\\textbf{Question and payoff}\\\\\n\\midrule\n\\mainref{12-1}{§12.1},\n\\mainref{12-4}{§§12.4--5},\n\\mainref{12-7}{§12.7}\n&Spaces, homotopy pullbacks and universal properties\n&How do coherent algebraic models, base change and descent organize\nquotients? What extra structure replaces ordinary normality?\\\\[5pt]\n\\mainref{13-1}{§§13.1--2}\n&Groups, semidirect products and modules\n&What does linearization retain when performed over a fixed group?\nThe base retains the group action on coefficients.\\\\[5pt]\n\\mainref{13-3}{§13.3}\n&Spectra, truncations and descent\n&How do spectra over \\(BG\\) extend these coefficients across degrees?\nThe heart recovers ordinary \\(G\\)-modules.\\\\[5pt]\n\\mainref{13-4}{§§13.4--5}\n&Complexes, cohomology, projective resolutions and derived categories\n&How are marked extensions and their automorphisms recorded?\nWhy can derived tensor products have additional homology?\\\\[5pt]\n\\mainref{13-6}{§13.6}\n&Derivations and commutative algebra, followed by cotangent complexes\n&How does cotangent transitivity identify the obstruction to extending\na derivation?\\\\\n\\bottomrule\n",
+      "rows": 6,
+      "columnCount": 3,
+      "cells": [
+        [
+          "\\textbf{Main sections}",
+          "\\textbf{Preparation}",
+          "\\textbf{Question and payoff}"
+        ],
+        [
+          "\\mainref{12-1}{§12.1},\n\\mainref{12-4}{§§12.4--5},\n\\mainref{12-7}{§12.7}",
+          "Spaces, homotopy pullbacks and universal properties",
+          "How do coherent algebraic models, base change and descent organize\nquotients? What extra structure replaces ordinary normality?"
+        ],
+        [
+          "\\mainref{13-1}{§§13.1--2}",
+          "Groups, semidirect products and modules",
+          "What does linearization retain when performed over a fixed group?\nThe base retains the group action on coefficients."
+        ],
+        [
+          "\\mainref{13-3}{§13.3}",
+          "Spectra, truncations and descent",
+          "How do spectra over \\(BG\\) extend these coefficients across degrees?\nThe heart recovers ordinary \\(G\\)-modules."
+        ],
+        [
+          "\\mainref{13-4}{§§13.4--5}",
+          "Complexes, cohomology, projective resolutions and derived categories",
+          "How are marked extensions and their automorphisms recorded?\nWhy can derived tensor products have additional homology?"
+        ],
+        [
+          "\\mainref{13-6}{§13.6}",
+          "Derivations and commutative algebra, followed by cotangent complexes",
+          "How does cotangent transitivity identify the obstruction to extending\na derivation?"
+        ]
+      ],
+      "textMode": true,
+      "htmlSha256": "ed64761dce91381c5510b589ce568d9174473fb7d658bf3c686616420aa1ec59"
+    }
+  ],
+  "labels": {
+    "c:chains": "1",
+    "c:maps": "2",
+    "c:relations": "3",
+    "c:one-cell": "4",
+    "c:general": "5",
+    "c:rectangle": "6",
+    "c:refinement": "7",
+    "c:simplicity": "8",
+    "c:spectral": "9",
+    "c:exercises": "10",
+    "c:answers": "11",
+    "c:higher": "12"
+  },
+  "seenLabels": [
+    "c:chains",
+    "c:maps",
+    "c:relations",
+    "c:one-cell",
+    "c:general",
+    "c:rectangle",
+    "c:refinement",
+    "c:simplicity",
+    "c:spectral",
+    "c:exercises",
+    "c:answers",
+    "c:higher"
+  ],
+  "references": [
+    "c:maps",
+    "c:chains",
+    "c:rectangle"
+  ],
+  "externalLinks": [
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-3",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-4-4",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-1",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-2",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-7",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-9",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-10",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-2",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-3",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-6",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-1",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-4",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-12-7",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-13-1",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-13-3",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-13-4",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-13-6",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html#section-13-2",
+    "https://tensorgami.com/notes/quotients-and-reconstruction.html",
+    "https://tensorgami.com/notes/quotients-and-reconstruction-audit.html"
+  ],
+  "externalLinkOccurrences": 25,
+  "exercises": [
+    {
+      "number": 1,
+      "section": 10,
+      "title": "Direction and witnesses."
+    },
+    {
+      "number": 2,
+      "section": 10,
+      "title": "The two ambiguities."
+    },
+    {
+      "number": 3,
+      "section": 10,
+      "title": "Three corners."
+    },
+    {
+      "number": 4,
+      "section": 10,
+      "title": "What saturation repairs."
+    },
+    {
+      "number": 5,
+      "section": 10,
+      "title": "Reconstruct the rectangle."
+    },
+    {
+      "number": 6,
+      "section": 10,
+      "title": "Normal in the next term."
+    },
+    {
+      "number": 7,
+      "section": 10,
+      "title": "What the factors forget."
+    }
+  ],
+  "answers": [
+    {
+      "number": 1,
+      "title": "Direction and witnesses.",
+      "paragraph": 91
+    },
+    {
+      "number": 2,
+      "title": "The two ambiguities.",
+      "paragraph": 93
+    },
+    {
+      "number": 3,
+      "title": "Three corners.",
+      "paragraph": 96
+    },
+    {
+      "number": 4,
+      "title": "What saturation repairs.",
+      "paragraph": 100
+    },
+    {
+      "number": 5,
+      "title": "Reconstruct the rectangle.",
+      "paragraph": 102
+    },
+    {
+      "number": 6,
+      "title": "Normal in the next term.",
+      "paragraph": 105
+    },
+    {
+      "number": 7,
+      "title": "What the factors forget.",
+      "paragraph": 107
+    }
+  ],
+  "diagrams": [
+    {
+      "id": 1,
+      "number": 1,
+      "section": 1,
+      "file": "diagram-01.svg",
+      "tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n0\\arrow[r,hook]&A\\arrow[r,hook]&G\\\\\n0\\arrow[r,hook]&B\\arrow[r,hook]&G.\n\\end{tikzcd}",
+      "texSha256": "a79678df2ec6b2b46b7b6a87ec4b3dac058d202187bfae41ebb417bd838ebbdd"
+    },
+    {
+      "id": 2,
+      "number": 2,
+      "section": 2,
+      "file": "diagram-02.svg",
+      "tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n G\\arrow[r,\"\\tau_c\"]\\arrow[d,\"h\"']&G\\arrow[d,\"h\"]\\\\\n G\\arrow[r,\"\\tau_{h(c)}\"']&G .\n \\end{tikzcd}",
+      "texSha256": "f970009542599bf98001e4331f84971737a43745b3852b418647b604d3d1e56a"
+    },
+    {
+      "id": 3,
+      "number": 3,
+      "section": 2,
+      "file": "diagram-03.svg",
+      "tex": "\\begin{tikzcd}[column sep=large,row sep=small]\n G\\arrow[r,\"h\"]\\arrow[d,\"q_A\"']&H\\\\\n G/A\\arrow[ur,dashed,\"\\bar h\"']&\n \\end{tikzcd}",
+      "texSha256": "15285468e03fe91e0c9dddd5d12a80d14c9c62b36a083563fd840bd569f50d64"
+    },
+    {
+      "id": 4,
+      "number": 4,
+      "section": 4,
+      "file": "diagram-04.svg",
+      "tex": "\\begin{tikzcd}[row sep=large,column sep=large]\n &M\\arrow[dl,two heads,\"a\"']\\arrow[dr,two heads,\"b'\"]&\\\\\n B\\arrow[d,\"\\id_B\"']&&G\\arrow[d,\"q_A\"]\\\\\n B\\arrow[rr,\"\\beta\"']&&G/A .\n\\end{tikzcd}",
+      "texSha256": "3714ca859b3b8dd605ad8a2f3f8dd921fcb6ec7d589e51b1016e03882a1c5e3b"
+    }
+  ],
+  "diagramAssets": [
+    {
+      "id": 1,
+      "svg": "diagram-01.svg",
+      "svgSha256": "0d9ca9154af7bf36f01aeae02b0013bff2b1eacd64c5899684b454f37f2e1a99",
+      "alt": "Two rows of subgroup inclusions: zero to A to G, and zero to B to G. Here G is the additive group Z/6Z, A is {0, 3}, B is {0, 2, 4}, and zero denotes the trivial subgroup.",
+      "width": 222,
+      "height": 75
+    },
+    {
+      "id": 2,
+      "svg": "diagram-02.svg",
+      "svgSha256": "62c99b68f47f9a3d548453f8895b58be38240eebbe5d37084ae8a62ed89d5400",
+      "alt": "A commutative square with G at all four corners. The top map is translation tau_c, both downward maps are h, and the bottom map is translation tau_{h(c)}. Thus h composed with tau_c equals tau_{h(c)} composed with h. In this example h(x) = 2x.",
+      "width": 137,
+      "height": 84
+    },
+    {
+      "id": 3,
+      "svg": "diagram-03.svg",
+      "svgSha256": "9be1001ff19f4d3cf73e5367e63c8b380507d17c2ab4f8a6e712ba9c36feb374",
+      "alt": "A triangle with h from G to H across the top and q_A from G down to G/A. The unique descended homomorphism bar h is the dashed arrow from G/A up to H. It satisfies bar h composed with q_A equals h, with bar h(x+A) = h(x).",
+      "width": 153,
+      "height": 83
+    },
+    {
+      "id": 4,
+      "svg": "diagram-04.svg",
+      "svgSha256": "779d19f53c298d8bb99da45b3da09c359a493450352b1eb1fc3b917173222b78",
+      "alt": "The relation carrier M maps surjectively to B by a and to G by b-prime. B maps down to B by its identity, G maps down to G/A by q_A, and beta maps B to G/A across the bottom. The diagram commutes: beta composed with a equals q_A composed with b-prime. Here a(b,y) = b, b-prime(b,y) = y, and beta(b) = b+A.",
+      "width": 268,
+      "height": 188
+    }
+  ],
+  "unresolvedDiagramAssets": false
+}

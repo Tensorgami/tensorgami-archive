@@ -1,0 +1,429 @@
+\section{Higher quotients: keeping the identifications}
+\label{h:chapter}
+
+The exact Mal'cev argument has answered a specific question: which simple
+quotient objects survive every choice of finite normal series?  We now ask
+what was omitted when we retained only those quotient objects.  A quotient
+can remember not only which points have been identified, but also the ways
+of identifying them and the compatibility between successive identifications.
+This is where the higher framework becomes useful.
+
+The change of foundations in this section is explicit.  We use spaces,
+homotopy limits, and a small number of stated theorems about
+$\infty$-categories.  Their foundations are not proved here.  A result marked
+\emph{Framework theorem, quoted} is an external input; the propositions
+following it are deductions with their own proofs.  None of these inputs
+is used in the earlier proof of Jordan--H\"older.  Conversely, invoking the
+word ``higher'' will not be used to justify an unproved quotient law.
+
+\subsection{One construction of homotopical algebraic objects}
+
+Write $\mathcal S$ for the $\infty$-category of spaces, or homotopy types.
+A set is a discrete space.  A space can also have paths, homotopies between
+paths, and further coherences.  The mapping object
+$\operatorname{Map}(X,Y)$ is consequently a space: its points are maps,
+its paths are homotopies, and so on.  An equivalence is the appropriate
+replacement for an isomorphism.  Limits and colimits in this setting mean
+homotopy-coherent limits and colimits.
+
+An ordinary one-sorted algebraic theory $\mathbb T$ is a small category
+with finite products, generated under products by an object $t$.
+The objects $t^n$ stand for $n$ inputs.  An arrow $t^n\to t$ stands for
+an $n$-ary operation, and composition records substitution.  Equations
+between arrows record equations between operations.  A model in a category
+with finite products is a finite-product-preserving functor out of
+$\mathbb T$.
+
+For groups, multiplication is an arrow $t^2\to t$, inverse is $t\to t$,
+and identity is $t^0\to t$.  Associativity is equality of the two arrows
+$t^3\to t$ obtained by substitution.  For left $R$-modules we include
+addition, zero, inverse, and one unary operation for each $r\in R$.
+The equation for multiplication of scalars is an equation between
+composites of these unary operations.  Thus the presentation does not
+discard the ring when it passes to a common language.
+
+Define
+\begin{equation}\label{h:theory-models}
+ \mathcal C_{\mathbb T}
+   =\operatorname{Fun}^{\times}(\mathbb T,\mathcal S).
+\end{equation}
+Preservation of products now means preservation up to the specified coherent
+equivalences.  This is the promised single construction: change the target
+of the theory from sets to spaces, retaining the operations and their
+compatibilities.
+
+\begin{proposition}[Recovering the ordinary algebra]\label{h:discrete}
+The full subcategory of $0$-truncated objects of $\mathcal C_{\mathbb T}$
+is equivalent to the nerve of the ordinary category
+$\operatorname{Fun}^{\times}(\mathbb T,\mathbf{Set})$.
+\end{proposition}
+\begin{proof}
+An object $M$ is $0$-truncated when $\operatorname{Map}(P,M)$ is discrete
+for every $P$.  If all $M(t^n)$ are discrete, the space of natural
+transformations into $M$ is a limit of discrete mapping spaces and is
+therefore discrete.  Thus such $M$ is $0$-truncated.
+
+Conversely, the covariant representable
+$F=\operatorname{Hom}_{\mathbb T}(t,-)$ preserves products, so belongs to
+$\mathcal C_{\mathbb T}$.  Yoneda identifies
+$\operatorname{Map}(F,M)$ with $M(t)$: a natural transformation is
+determined by its value on $\id_t$, and the value on an arrow
+$a:t\to t^n$ is then $M(a)$ applied to that value. This is the
+space-valued Yoneda lemma, including its coherent mapping-space statement.
+If $M$ is $0$-truncated, $M(t)$
+is discrete; product preservation gives $M(t^n)\simeq M(t)^n$, so all its
+values are discrete.  Functors between ordinary discrete values have
+ordinary natural transformations and the ordinary product-preservation
+condition.  This identifies both objects and maps of the displayed
+subcategory.
+\end{proof}
+
+\begin{theorem}[Framework theorem, quoted: rigidification]
+\label{h:rigidification}
+For a small ordinary finite-product theory $\mathbb T$, the homotopy theory
+of strict simplicial $\mathbb T$-models, with objectwise weak equivalences,
+presents $\mathcal C_{\mathbb T}$.
+\end{theorem}
+This is Lurie's Corollary 5.5.9.3, using Proposition 5.5.9.2, in
+\cite{HTT}; see also \cite{Badzioch}.  This theorem is what permits us
+to compute with familiar simplicial algebra while interpreting the answer
+in \eqref{h:theory-models}.  It is not a claim that all coherences can
+simply be omitted.
+
+For group theory, the result is the homotopy theory of simplicial groups.
+Two further foundational inputs describe it. The Kan loop-group and
+classifying-space adjunction identifies this homotopy theory with pointed
+connected spaces \cite[Chapter V, Proposition 6.3 and Corollary 6.4]{GoerssJardine}.
+The loop--delooping recognition theorem identifies pointed connected spaces
+with grouplike $E_1$-spaces \cite[Theorem 5.2.6.10]{HA}.
+An $E_1$ multiplication is associative with its coherent homotopies;
+``grouplike'' says that its components form a group. The two quoted
+equivalences together supply the asserted identification; rigidification
+alone does not supply either comparison.
+
+For module theory, the Dold--Kan theorem identifies simplicial $R$-modules
+with nonnegative chain complexes of $R$-modules; weak equivalences become
+quasi-isomorphisms \cite[Tag 019G]{Stacks}.  Localizing therefore gives
+connective derived $R$-modules.  For a commutative ring $R$, this agrees
+with connective modules over its Eilenberg--Mac Lane ring spectrum $HR$
+\cite[Theorem 7.1.2.13]{HA}.  The $HR$-module structure is essential:
+an arbitrary spectrum, even a connective one, is not thereby an
+$R$-module.
+
+The earlier theorem applies to the ordinary models recovered by
+Proposition~\ref{h:discrete}, whenever their category satisfies its pointed
+exact Mal'cev hypotheses.  Groups and modules are therefore instances
+inside a common homotopical construction.  The exactness hypotheses do
+real work; product-preserving models in spaces alone do not imply a
+composition theorem for every higher object.
+
+\subsection{The action groupoid and the role of associativity}
+
+Let an ordinary group $G$ act on the right on a set $X$.  Form a groupoid
+whose objects are elements $x\in X$, and whose arrows are
+\[
+ (x,g):x\longrightarrow xg.
+\]
+Composition is
+\[
+ (x,g)\text{ followed by }(xg,h)=(x,gh).
+\]
+It is defined because $(xg)h=x(gh)$; it is associative because multiplication
+in $G$ is associative; identities and inverses follow from the corresponding
+group laws.  This construction retains the actual witness $g$ of an
+identification, not only the fact that two points lie in the same orbit.
+
+Its nerve is the simplicial set
+\begin{equation}\label{h:action-nerve}
+ X_n=X\times G^n.
+\end{equation}
+In degree $n$, the tuple $(x,g_1,\ldots,g_n)$ means the composable chain
+\[
+ x\longrightarrow xg_1\longrightarrow xg_1g_2
+   \longrightarrow\cdots\longrightarrow xg_1\cdots g_n.
+\]
+The first face removes $x$ by replacing it with $xg_1$; an interior face
+replaces $g_i,g_{i+1}$ by their product; the last face removes $g_n$.
+A degeneracy inserts an identity element.  For three consecutive arrows,
+the equality of the two ways to take interior faces is precisely
+$(g_1g_2)g_3=g_1(g_2g_3)$.  The unit identities similarly supply the
+face--degeneracy identities.  The nerve is thus a way to organize, in
+one object, the algebraic compatibility behind the elementary maneuvers.
+
+\begin{definition}\label{h:homotopy-quotient}
+The homotopy quotient $X/\!/G$ is the space obtained by realizing the
+nerve \eqref{h:action-nerve}.  For a point with the trivial action, write
+$BG=*/\!/G$.
+\end{definition}
+
+\begin{proposition}[What an action quotient retains]\label{h:stabilizers}
+The connected components of $X/\!/G$ are the orbits of $X$.  The component
+of $x$ is equivalent to $BG_x$, where
+$G_x=\{g\in G:xg=x\}$.  In particular a free action has homotopy quotient
+equivalent to its discrete orbit set.
+\end{proposition}
+\begin{proof}
+There is an arrow from $x$ to $y$ exactly when $y=xg$ for some $g$.
+Thus components are orbits.  In a fixed orbit, the full subgroupoid on
+one representative $x$ has automorphism group $G_x$.  Its inclusion is
+fully faithful by construction and essentially surjective because every
+object in the orbit is isomorphic to $x$.  It is therefore an equivalence
+of groupoids.  Realization preserves such equivalences, giving $BG_x$.
+For a free action all stabilizers are trivial, so each component is
+contractible.
+\end{proof}
+
+For the trivial action on a point, the ordinary orbit set is a point,
+whereas the homotopy quotient is $BG$ and retains every automorphism in
+$G$.  For a subgroup $N\leq G$ acting on $G$ by right translation, the
+action is free, so $G/\!/N\simeq G/N$ as spaces.  If $N$ is normal,
+multiplication also descends to these cosets.  The two assertions are
+different: freeness determines the homotopy type of the quotient;
+normality determines its induced group multiplication.
+
+\subsection{Extensions become fiber diagrams}
+
+An ordinary pullback asks for equal images. A homotopy pullback
+$X\times^h_ZY$ retains a path between the images: a point is a pair
+$(x,y)$ together with a path between $f(x)$ and $g(y)$.
+Paths between such data must respect the specified comparison, with the
+corresponding higher coherences. In particular, a homotopy fiber over
+$z$ remembers both a point $x$ and a path between $f(x)$ and $z$.
+The next calculation is a case where this extra datum is a group element.
+
+\begin{proposition}\label{h:extension-fiber}
+A short exact sequence of ordinary groups
+\[
+ 1\longrightarrow N\longrightarrow G\xrightarrow{p}Q\longrightarrow1
+\]
+determines a homotopy pullback square
+\[
+\begin{tikzcd}
+ BN \arrow[r] \arrow[d] & BG \arrow[d,"Bp"]\\
+ * \arrow[r] & BQ.
+\end{tikzcd}
+\]
+\end{proposition}
+\begin{proof}
+The homotopy fiber of the functor between one-object groupoids induced by
+$p$ can be modeled by the groupoid with objects $q\in Q$ and arrows
+$g:q\to q p(g)$.  Indeed its objects are an object of $BG$ together with
+an isomorphism from the chosen object of $BQ$ to its image, and its arrows
+are the compatible isomorphisms.  This is the groupoid model of the
+homotopy pullback, retaining the isomorphism in the pullback datum.
+Surjectivity of $p$ makes it transitive, and the automorphisms of $1\in Q$
+are exactly $\ker p=N$.  The argument of
+Proposition~\ref{h:stabilizers} identifies this fiber with $BN$.
+The inclusion of its representative object gives the usual map $BN\to BG$.
+\end{proof}
+
+This square is a fiber description, not a claim about an ordinary
+set-theoretic fiber of the map of realizations.  It also is not automatically
+a cofiber square.  The distinctions matter because the homotopy theory
+of spaces is unstable.
+
+\subsection{Quotients that survive change of base}
+
+An $\infty$-topos is a setting for spaces varying over a site; formally it
+is an accessible left exact localization of a presheaf $\infty$-category
+of spaces.  The theory-model category $\mathcal C_{\mathbb T}$ need not
+be an $\infty$-topos.  The effective-quotient results below apply in spaces
+or another specified $\infty$-topos; the subsequent descent equivalence
+is stated for spaces.  We need the following two consequences of the
+foundational theory of an $\infty$-topos.
+
+\begin{theorem}[Framework theorem, quoted: effective quotients]
+\label{h:topos-foundation}
+In an $\infty$-topos, colimits are preserved by pullback.  Every groupoid
+object is the \v{C}ech nerve of the map from its object of objects to its
+realization.
+\end{theorem}
+These are the universality and effectivity assertions in
+\cite[Theorem 6.1.0.6]{HTT}.  A \v{C}ech nerve of $U\to Y$ has degree
+$n$ term $U\times_Y\cdots\times_Y U$ with $n+1$ factors.  Effectivity
+says that the identification data in a groupoid object are precisely the
+data recovered by pulling back its quotient map against itself.
+
+\begin{proposition}[A quotient can be computed after base change]
+\label{h:quotient-basechange}
+In an $\infty$-topos, let $U_\bullet$ be a groupoid object with realization $Y$, and let
+$f:Y'\to Y$.  Then
+\[
+ \left|Y'\times_Y U_\bullet\right|\simeq Y'.
+\]
+Moreover $Y'\times_Y U_\bullet$ is the \v{C}ech nerve of
+$Y'\times_Y U_0\to Y'$.
+\end{proposition}
+\begin{proof}
+Pullback commutes with the realization colimit by
+Theorem~\ref{h:topos-foundation}, so its realization is
+$Y'\times_Y|U_\bullet|\simeq Y'\times_Y Y\simeq Y'$.
+Effectivity identifies $U_n$ with the $(n+1)$-fold fiber product of $U_0$
+over $Y$.  Pulling back this description gives the corresponding
+$(n+1)$-fold fiber product of $Y'\times_Y U_0$ over $Y'$, including its
+face and degeneracy maps.  These identifications prove the nerve assertion.
+\end{proof}
+
+The usefulness is concrete.  A quotient description can be transported to
+a new parameter space without recomputing its coherence relations.  If we
+make two successive base changes, the two answers agree by the canonical
+associativity equivalence of fiber products.  That equivalence is itself
+compatible with a third base change: both descriptions are limits of the
+same diagram.  Universal properties account for the compatibility that
+would otherwise have to be checked separately in each example.
+
+\subsection{Descent: a family over \texorpdfstring{$BG$}{BG} is an action}
+
+\begin{theorem}[Framework theorem, quoted: straightening for spaces]
+\label{h:straightening}
+For a space $B$, taking homotopy fibers with transport gives an equivalence
+\[
+ \mathcal S_{/B}\simeq\operatorname{Fun}(B,\mathcal S).
+\]
+\end{theorem}
+This is the groupoid case of straightening and unstraightening
+\cite[\S\S2.2,3.2]{HTT}.  The symbol $B$ on the right is regarded as
+an $\infty$-groupoid.  Transport along an invertible path is an equivalence;
+transport along composable paths includes coherent composition data.
+
+For $B=BG$, a functor $BG\to\mathcal S$ is a space with coherent
+$G$-action.  A map $E\to BG$ determines the fiber $X$ over the basepoint,
+and loops in $BG$ transport $X$ around the base.  Conversely, the
+Grothendieck construction assembles the action into its total space
+$X/\!/G\to BG$.  These are the actual forward and inverse constructions
+in this instance of the theorem.  In identifying this functor notation
+with the usual left-action convention, we use the canonically equivalent
+opposite one-object model via inversion: the earlier right action becomes
+$g\cdot x=xg^{-1}$.  Our concrete groupoid calculations continue to use
+the right-multiplication convention, with first $g$, then $h$, composed
+as $gh$.  No change of coefficient structure is involved.
+
+\begin{corollary}[Equivariant information is descent information]
+\label{h:action-descent}
+The equivalence
+\[
+ \mathcal S_{/BG}\simeq\operatorname{Fun}(BG,\mathcal S)
+\]
+identifies maps over $BG$ with coherent equivariant maps.  Its restriction
+along $BH\to BG$ for a subgroup $H$ identifies homotopy pullback of families
+with restriction of their actions.  Sections of $X/\!/G\to BG$ form the
+space of coherent fixed points of $X$.
+\end{corollary}
+\begin{proof}
+The first assertion is the assertion about mapping spaces in the
+equivalence.  Taking the fiber of a pulled-back family at a point of $BH$
+gives the same fiber as before, and its path transport is the original
+transport along the image path in $BG$.  This is precisely restriction
+along the functor $BH\to BG$.  Finally a section is a map over $BG$ from
+the identity family $BG\to BG$.  That family corresponds to the constant
+one-point functor.  Maps from it to the action functor are compatible
+choices of a point, with the homotopies and coherences making it fixed.
+\end{proof}
+
+For a discrete $G$-set these are ordinary fixed points.  For a general
+space the coherences are part of the answer.  We have gained a theory of
+families, transport, and descent, not merely another notation for a set
+of orbits.
+
+\subsection{Intersections acquire additional components}
+
+Here is a useful calculation that prevents a misleading translation of
+the earlier subgroup diagrams.
+
+\begin{proposition}[Double cosets in a homotopy pullback]
+\label{h:double-coset}
+For subgroups $A,B\leq G$, there is an equivalence of spaces
+\[
+ BA\times^h_{BG}BB
+ \simeq
+ \coprod_{[g]\in A\backslash G/B}
+ B(A\cap gBg^{-1}).
+\]
+The component selected by the identity element is $B(A\cap B)$.
+\end{proposition}
+\begin{proof}
+A groupoid model for the homotopy pullback has one object for each
+$g\in G$.  An arrow from $g$ to $g'$ is a pair $(a,b)\in A\times B$
+such that $g'=a^{-1}gb$.  First $(a,b)$ and then $(a',b')$ compose to
+$(aa',bb')$, since $a'^{-1}(a^{-1}gb)b'=(aa')^{-1}g(bb')$.
+This is the weak pullback: $g$ records the comparison isomorphism in
+$BG$ between the images of the two chosen objects.
+
+Its orbits are the double cosets $AgB$.  The stabilizer of $g$ consists
+of pairs with $a=gbg^{-1}$ and is identified with $A\cap gBg^{-1}$ by
+projection to $a$.  Apply the transitive-groupoid argument of
+Proposition~\ref{h:stabilizers} on each orbit.  For $g=1$ the stabilizer
+is $A\cap B$, as claimed.
+\end{proof}
+
+The classical intersection is present, but it is one component of a richer
+comparison object.  Discarding the other components before doing base
+change would discard genuine information.  This is one reason to keep
+pointings and transport explicit when moving a subgroup argument into
+homotopy theory.
+
+In particular, a proper subgroup inclusion $H\hookrightarrow G$ does not
+give a monomorphism $BH\to BG$ in $\mathcal S$.  Its homotopy fiber is the
+coset space, which has more than one point.  A monomorphism of spaces has
+every fiber either empty or contractible, so this map is not one.
+The subgroup inclusion is monic in the category of discrete groups;
+its delooping has a different categorical type.
+
+\subsection{Higher normality requires quotient data}
+
+For a higher group map $H\to G$, a normality datum can be specified by a
+pointed connected space $Q$ and a homotopy fiber square in the ambient
+$\infty$-category of spaces
+\[
+\begin{tikzcd}
+ BH \arrow[r] \arrow[d] & BG \arrow[d]\\
+ * \arrow[r] & Q.
+\end{tikzcd}
+\]
+All displayed maps preserve the specified points. Requiring a pullback
+in spaces retains the entire homotopy fiber; taking a limit only inside
+the subcategory of pointed connected spaces could discard other components.
+The loop space $\Omega Q$ then plays the role of the quotient higher
+group.  For an ordinary normal inclusion, $Q=B(G/H)$ supplies this datum.
+For general higher maps, the datum is additional structure and need not
+be unique.
+
+The appropriate isomorphism laws consequently include this structure.
+Beardsley and Fox develop normality data for group objects in
+$\infty$-topoi.  Their current formulation proves the first and second
+Noether theorems, exhibits failures of an unrestricted third theorem,
+and proves an iterated-quotient theorem with compatible data
+\cite[\S5, especially Theorem 5.14]{BeardsleyFox}.  We import no general
+higher Jordan--H\"older theorem from that work.
+
+One can already see why the ordinary definition of a filtration cannot
+be transferred without a decision about admissible arrows.
+
+\begin{proposition}[Literal subobject chains force discreteness]
+\label{h:monos-discrete}
+Suppose a group object in spaces admits a finite chain of categorical
+monomorphisms beginning at the trivial group and ending at $G$.  Then
+the underlying space of $G$ is discrete up to equivalence.
+\end{proposition}
+\begin{proof}
+Limits of product-preserving theory models are computed pointwise,
+because limits commute with products; evaluation on the generator
+detects equivalences because its powers give every object of the theory.
+Thus limits of group objects are computed on their underlying spaces,
+and equivalences are detected there.  A map is monic precisely when its
+diagonal is an equivalence.  Hence the forgetful functor detects these
+monomorphisms.  Their composite gives a monomorphism $*\to G$ of spaces.
+Its fiber over the identity is $\Omega G$, so that loop space is
+contractible.  The identity component of $G$ is therefore contractible.
+Translation by a point of a group object identifies its component with
+the identity component.  All components are contractible, which is
+exactly the assertion that $G$ is $0$-truncated.
+\end{proof}
+
+Thus a theory of genuinely higher composition objects must specify more
+than the old finite chain of monomorphisms.  Our common ordinary theorem
+is complete in its stated exact framework.  The higher enlargement gives
+coherent quotients, families, and descent; any additional composition
+theorem must state and verify the admissible quotient and refinement
+conditions it uses.  This is a precise boundary of the proved result,
+not a reason to discard the enlargement.

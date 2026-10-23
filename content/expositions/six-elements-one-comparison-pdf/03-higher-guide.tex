@@ -1,0 +1,128 @@
+\clearpage
+\section{A guide to the higher chapters}\label{c:higher}
+The comparison theorem is already complete before the higher chapters.
+Those chapters pursue a new question: what additional structure is retained
+by richer quotients and more informative probes? The following routes use
+the \emph{main exposition's} section numbers.
+
+\textbf{First bridge: stay with ordinary algebra.}
+\mainref{9}{Main §9} studies attachment data and marked extensions:
+besides the two end objects, retain how one sits inside the total object
+and how the total object maps onto the other. It also explains why data
+from adjacent layers can miss information across a skipped layer.
+\mainref{10}{Main §10} studies probes for nilpotent operators and
+reconstructs their chains. Modules and linear algebra suffice for this
+route. Exercise 7 gives the simplest reason to want it: a factor list
+does not determine the assembled object.
+
+\textbf{First higher bridge: an orbit can hide a stabilizer.}
+Start with \mainref{12-2}{main §12.2}. A groupoid is a category in which
+every arrow is invertible. For a group action, its action groupoid has
+the acted-on points as objects and the group elements carrying one point
+to another as arrows.
+
+Let \(G=C_6\) act by addition on the two-element set \(G/B\).
+The action is transitive, so its ordinary orbit set is a single point.
+But the stabilizer of either point is \(B=C_3\). The action groupoid
+retains these automorphisms. Its full subgroupoid on the object \(B\)
+has one object and automorphism group \(B\); it is equivalent to the
+whole groupoid because every other object is isomorphic to \(B\).
+Writing \(BK\) for the classifying space of a group \(K\), we get
+\[
+ (G/B)/G=*,\qquad (G/B)//G\simeq BB.
+\]
+The double slash denotes the homotopy quotient, obtained by realizing
+the action groupoid. It remembers something the orbit set discarded.
+
+\textbf{Next bridge: intersections acquire components and loops.}
+Read \mainref{12-3}{main §12.3} for the homotopy-pullback construction.
+The double-coset formula proved in \mainref{12-6}{main §12.6} gives,
+for subgroups \(H,K\leq G\),
+\[
+ BH\times^h_{BG}BK
+ \simeq\coprod_{[g]\in H\backslash G/K} B(H\cap gKg^{-1}).
+\]
+Here the superscript \(h\) denotes a homotopy pullback. In our abelian
+example, \(A+B=G\) and \(A\cap B=0\), so
+\[
+ BA\times^h_{BG}BB\simeq *.
+\]
+With \(A\) on both sides there are three double cosets and each
+intersection is \(A\), giving
+\[
+ BA\times^h_{BG}BA\simeq BA\sqcup BA\sqcup BA.
+\]
+An ordinary subgroup intersection sees the group in the identity
+component. The homotopy pullback records the other components too.
+
+\pausehere{At each stage ask which object is being used. The orbit set
+forgets stabilizers; the action groupoid and its classifying homotopy
+\(1\)-type retain equivalent information.}
+
+\clearpage
+\textbf{Choose a route by the question you want to answer.}
+The higher chapters need not be read in numerical order.
+
+\begin{center}
+\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.43\linewidth}@{}}
+\toprule
+\textbf{Main sections}&\textbf{Preparation}&\textbf{Question and payoff}\\
+\midrule
+\mainref{12-1}{§12.1},
+\mainref{12-4}{§§12.4--5},
+\mainref{12-7}{§12.7}
+&Spaces, homotopy pullbacks and universal properties
+&How do coherent algebraic models, base change and descent organize
+quotients? What extra structure replaces ordinary normality?\\[5pt]
+\mainref{13-1}{§§13.1--2}
+&Groups, semidirect products and modules
+&What does linearization retain when performed over a fixed group?
+The base retains the group action on coefficients.\\[5pt]
+\mainref{13-3}{§13.3}
+&Spectra, truncations and descent
+&How do spectra over \(BG\) extend these coefficients across degrees?
+The heart recovers ordinary \(G\)-modules.\\[5pt]
+\mainref{13-4}{§§13.4--5}
+&Complexes, cohomology, projective resolutions and derived categories
+&How are marked extensions and their automorphisms recorded?
+Why can derived tensor products have additional homology?\\[5pt]
+\mainref{13-6}{§13.6}
+&Derivations and commutative algebra, followed by cotangent complexes
+&How does cotangent transitivity identify the obstruction to extending
+a derivation?\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For an algebraic entry to this table, read \mainref{13-1}{§13.1} and
+\mainref{13-2}{§13.2} before
+attempting spectra. An abelian group object over \(G\) is equivalent to a
+\(\Z[G]\)-module:
+\[
+ \operatorname{Ab}(\operatorname{Grp}/G)\simeq\Z[G]\text{-}\operatorname{Mod}.
+\]
+The zero section splits the map to \(G\); its kernel is abelian, and
+conjugation by that section gives the \(G\)-action. Conversely a
+\(G\)-module produces its semidirect product over \(G\).
+Thus linearizing \emph{over a base} retains more than forgetting the base
+and taking an ordinary abelian group.
+
+\textbf{Three questions keep the higher route precise.}
+First, what is the ambient category? A descent result for an
+\(\infty\)-topos does not automatically hold in every category of
+algebraic models. Second, what extra data are retained---a base, marked
+endpoints, automorphisms, or coherent homotopies? Third, what is actually
+concluded? An obstruction group names possible obstructions; a particular
+lifting problem has a particular obstruction class whose vanishing must
+be checked.
+
+The main exposition identifies the higher foundations it imports.
+These chapters enrich quotient and reconstruction questions; they do
+not claim a Jordan--Hölder theorem for arbitrary higher objects.
+The ordinary refinement proof does not depend on them.
+
+\route{Further reading: \href{https://tensorgami.com/notes/quotients-and-reconstruction.html}
+{Quotients, Refinement and Reconstruction};
+\href{https://tensorgami.com/notes/quotients-and-reconstruction-audit.html}
+{notes on proofs, dependencies, and revisions}.}

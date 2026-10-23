@@ -1,0 +1,3530 @@
+[
+  {
+    "id": 1,
+    "raw": "C_d=\\Z/d\\Z",
+    "tex": "C_d=\\Z/d\\Z",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 2,
+    "raw": "\n G=\\Z/6\\Z,\\qquad A=\\{0,3\\},\\qquad B=\\{0,2,4\\}.\n",
+    "tex": "G=\\Z/6\\Z,\\qquad A=\\{0,3\\},\\qquad B=\\{0,2,4\\}.",
+    "display": true,
+    "section": 1
+  },
+  {
+    "id": 3,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 4,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 5,
+    "raw": "\\{0\\}",
+    "tex": "\\{0\\}",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 6,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 7,
+    "raw": "\\text{first step}",
+    "tex": "\\text{first step}",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 8,
+    "raw": "\\text{second step}",
+    "tex": "\\text{second step}",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 9,
+    "raw": "A\\text{-chain}",
+    "tex": "A\\text{-chain}",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 10,
+    "raw": "A/0\\cong C_2",
+    "tex": "A/0\\cong C_2",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 11,
+    "raw": "G/A\\cong C_3",
+    "tex": "G/A\\cong C_3",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 12,
+    "raw": "B\\text{-chain}",
+    "tex": "B\\text{-chain}",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 13,
+    "raw": "B/0\\cong C_3",
+    "tex": "B/0\\cong C_3",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 14,
+    "raw": "G/B\\cong C_2 .",
+    "tex": "G/B\\cong C_2 .",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 15,
+    "raw": "3\\in A",
+    "tex": "3\\in A",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 16,
+    "raw": "1\\in C_2",
+    "tex": "1\\in C_2",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 17,
+    "raw": "2\\in B",
+    "tex": "2\\in B",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 18,
+    "raw": "1\\in C_3",
+    "tex": "1\\in C_3",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 19,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 20,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 21,
+    "raw": "C_3",
+    "tex": "C_3",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 22,
+    "raw": "\n A\\cap B=0,\\qquad A+B=G.\n",
+    "tex": "A\\cap B=0,\\qquad A+B=G.",
+    "display": true,
+    "section": 1
+  },
+  {
+    "id": 23,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 24,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 25,
+    "raw": "0,2,4",
+    "tex": "0,2,4",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 26,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 27,
+    "raw": "3,5,1",
+    "tex": "3,5,1",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 28,
+    "raw": "a+b",
+    "tex": "a+b",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 29,
+    "raw": "a+b=a'+b'",
+    "tex": "a+b=a'+b'",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 30,
+    "raw": "a-a'=b'-b\\in A\\cap B=0",
+    "tex": "a-a'=b'-b\\in A\\cap B=0",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 31,
+    "raw": "A\\subseteq B",
+    "tex": "A\\subseteq B",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 32,
+    "raw": "B\\subseteq A",
+    "tex": "B\\subseteq A",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 33,
+    "raw": "C_6",
+    "tex": "C_6",
+    "display": false,
+    "section": 1
+  },
+  {
+    "id": 34,
+    "raw": "a=b+c",
+    "tex": "a=b+c",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 35,
+    "raw": "b",
+    "tex": "b",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 36,
+    "raw": "-c",
+    "tex": "-c",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 37,
+    "raw": "\\tau_c(x)=x+c",
+    "tex": "\\tau_c(x)=x+c",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 38,
+    "raw": "\\tau_{-c}",
+    "tex": "\\tau_{-c}",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 39,
+    "raw": "\n (x+c)+(-c)=x+(c-c)=x.\n",
+    "tex": "(x+c)+(-c)=x+(c-c)=x.",
+    "display": true,
+    "section": 2
+  },
+  {
+    "id": 40,
+    "raw": "h(x)=2x",
+    "tex": "h(x)=2x",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 41,
+    "raw": "h(x+c)=h(x)+h(c),",
+    "tex": "h(x+c)=h(x)+h(c),",
+    "display": true,
+    "section": 2
+  },
+  {
+    "id": 42,
+    "raw": "h\\circ\\tau_c=\\tau_{h(c)}\\circ h",
+    "tex": "h\\circ\\tau_c=\\tau_{h(c)}\\circ h",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 43,
+    "raw": "h",
+    "tex": "h",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 44,
+    "raw": "q_A:G\\to G/A",
+    "tex": "q_A:G\\to G/A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 45,
+    "raw": "x\\mapsto x+A",
+    "tex": "x\\mapsto x+A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 46,
+    "raw": "\n \\{0,3\\},\\qquad\\{1,4\\},\\qquad\\{2,5\\}.\n",
+    "tex": "\\{0,3\\},\\qquad\\{1,4\\},\\qquad\\{2,5\\}.",
+    "display": true,
+    "section": 2
+  },
+  {
+    "id": 47,
+    "raw": "x,y",
+    "tex": "x,y",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 48,
+    "raw": "x+a,y+a'",
+    "tex": "x+a,y+a'",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 49,
+    "raw": "a,a'\\in A",
+    "tex": "a,a'\\in A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 50,
+    "raw": "x+y",
+    "tex": "x+y",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 51,
+    "raw": "a+a'",
+    "tex": "a+a'",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 52,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 53,
+    "raw": "h:G\\to H",
+    "tex": "h:G\\to H",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 54,
+    "raw": "\\bar h:G/A\\to H",
+    "tex": "\\bar h:G/A\\to H",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 55,
+    "raw": "\\bar h(x+A)=h(x),",
+    "tex": "\\bar h(x+A)=h(x),",
+    "display": true,
+    "section": 2
+  },
+  {
+    "id": 56,
+    "raw": "h",
+    "tex": "h",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 57,
+    "raw": "q_A",
+    "tex": "q_A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 58,
+    "raw": "h(x)=4x",
+    "tex": "h(x)=4x",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 59,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 60,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 61,
+    "raw": "\n \\beta:B\\longrightarrow G/A,\\quad b\\longmapsto b+A,\n \\qquad\n \\gamma:G/A\\longrightarrow B,\\quad x+A\\longmapsto4x\n",
+    "tex": "\\beta:B\\longrightarrow G/A,\\quad b\\longmapsto b+A,\n \\qquad\n \\gamma:G/A\\longrightarrow B,\\quad x+A\\longmapsto4x",
+    "display": true,
+    "section": 2
+  },
+  {
+    "id": 62,
+    "raw": "4b=b",
+    "tex": "4b=b",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 63,
+    "raw": "b\\in B",
+    "tex": "b\\in B",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 64,
+    "raw": "4x-x=3x\\in A",
+    "tex": "4x-x=3x\\in A",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 65,
+    "raw": "x\\in G",
+    "tex": "x\\in G",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 66,
+    "raw": "x+A\\mapsto x",
+    "tex": "x+A\\mapsto x",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 67,
+    "raw": "G/A\\to G",
+    "tex": "G/A\\to G",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 68,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 69,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 2
+  },
+  {
+    "id": 70,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 71,
+    "raw": "X",
+    "tex": "X",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 72,
+    "raw": "Y",
+    "tex": "Y",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 73,
+    "raw": "(x,y)",
+    "tex": "(x,y)",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 74,
+    "raw": "xRy",
+    "tex": "xRy",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 75,
+    "raw": "x",
+    "tex": "x",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 76,
+    "raw": "y",
+    "tex": "y",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 77,
+    "raw": "D\\leq G",
+    "tex": "D\\leq G",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 78,
+    "raw": "\\Delta_D=\\{(d,d):d\\in D\\}",
+    "tex": "\\Delta_D=\\{(d,d):d\\in D\\}",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 79,
+    "raw": "\\text{relation}",
+    "tex": "\\text{relation}",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 80,
+    "raw": "\\text{rule}",
+    "tex": "\\text{rule}",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 81,
+    "raw": "\\text{support}",
+    "tex": "\\text{support}",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 82,
+    "raw": "\\text{class of }0",
+    "tex": "\\text{class of }0",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 83,
+    "raw": "r_1",
+    "tex": "r_1",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 84,
+    "raw": "x=y\\in A",
+    "tex": "x=y\\in A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 85,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 86,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 87,
+    "raw": "r_2",
+    "tex": "r_2",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 88,
+    "raw": "y-x\\in A",
+    "tex": "y-x\\in A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 89,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 90,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 91,
+    "raw": "s_1",
+    "tex": "s_1",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 92,
+    "raw": "x=y\\in B",
+    "tex": "x=y\\in B",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 93,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 94,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 95,
+    "raw": "s_2",
+    "tex": "s_2",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 96,
+    "raw": "y-x\\in B",
+    "tex": "y-x\\in B",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 97,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 98,
+    "raw": "B .",
+    "tex": "B .",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 99,
+    "raw": "r_1=\\Delta_A",
+    "tex": "r_1=\\Delta_A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 100,
+    "raw": "A\\to A/0",
+    "tex": "A\\to A/0",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 101,
+    "raw": "r_2",
+    "tex": "r_2",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 102,
+    "raw": "G\\to G/A",
+    "tex": "G\\to G/A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 103,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 104,
+    "raw": "1",
+    "tex": "1",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 105,
+    "raw": "r_1",
+    "tex": "r_1",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 106,
+    "raw": "Q(r)",
+    "tex": "Q(r)",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 107,
+    "raw": "Q(r_1)=A",
+    "tex": "Q(r_1)=A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 108,
+    "raw": "Q(r_2)=G/A",
+    "tex": "Q(r_2)=G/A",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 109,
+    "raw": "SR",
+    "tex": "SR",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 110,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 111,
+    "raw": "S",
+    "tex": "S",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 112,
+    "raw": "\n x(SR)z\\quad\\Longleftrightarrow\\quad\n \\text{there is }y\\text{ with }xRy\\text{ and }ySz.\n",
+    "tex": "x(SR)z\\quad\\Longleftrightarrow\\quad\n \\text{there is }y\\text{ with }xRy\\text{ and }ySz.",
+    "display": true,
+    "section": 3
+  },
+  {
+    "id": 113,
+    "raw": "R^\\op",
+    "tex": "R^\\op",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 114,
+    "raw": "T(SR)",
+    "tex": "T(SR)",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 115,
+    "raw": "(TS)R",
+    "tex": "(TS)R",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 116,
+    "raw": "x",
+    "tex": "x",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 117,
+    "raw": "w",
+    "tex": "w",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 118,
+    "raw": "y,z",
+    "tex": "y,z",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 119,
+    "raw": "xRy,\\ ySz,\\ zTw",
+    "tex": "xRy,\\ ySz,\\ zTw",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 120,
+    "raw": "R\\leq X\\times Y",
+    "tex": "R\\leq X\\times Y",
+    "display": false,
+    "section": 3
+  },
+  {
+    "id": 121,
+    "raw": "\n xRy,\\quad x'Ry,\\quad x'Ry'\n \\quad\\Longrightarrow\\quad xRy'.\n",
+    "tex": "xRy,\\quad x'Ry,\\quad x'Ry'\n \\quad\\Longrightarrow\\quad xRy'.",
+    "display": true,
+    "section": 3
+  },
+  {
+    "id": 122,
+    "raw": "\n (x,y)(x',y)^{-1}(x',y')=(x,y').\n",
+    "tex": "(x,y)(x',y)^{-1}(x',y')=(x,y').",
+    "display": true,
+    "section": 3
+  },
+  {
+    "id": 123,
+    "raw": "\n R=r_2s_1,\\qquad bRy\\quad\\Longleftrightarrow\\quad\n b\\in B\\ \\text{and}\\ y-b\\in A.\n",
+    "tex": "R=r_2s_1,\\qquad bRy\\quad\\Longleftrightarrow\\quad\n b\\in B\\ \\text{and}\\ y-b\\in A.",
+    "display": true,
+    "section": 4
+  },
+  {
+    "id": 124,
+    "raw": "s_1",
+    "tex": "s_1",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 125,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 126,
+    "raw": "r_2",
+    "tex": "r_2",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 127,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 128,
+    "raw": "\\text{input}",
+    "tex": "\\text{input}",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 129,
+    "raw": "\\text{possible outputs}",
+    "tex": "\\text{possible outputs}",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 130,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 131,
+    "raw": "0,\\ 3",
+    "tex": "0,\\ 3",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 132,
+    "raw": "2",
+    "tex": "2",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 133,
+    "raw": "2,\\ 5",
+    "tex": "2,\\ 5",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 134,
+    "raw": "4",
+    "tex": "4",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 135,
+    "raw": "4,\\ 1 .",
+    "tex": "4,\\ 1 .",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 136,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 137,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 138,
+    "raw": "\n E=R^\\op R,\\qquad F=RR^\\op.\n",
+    "tex": "E=R^\\op R,\\qquad F=RR^\\op.",
+    "display": true,
+    "section": 4
+  },
+  {
+    "id": 139,
+    "raw": "E",
+    "tex": "E",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 140,
+    "raw": "E=\\Delta_B",
+    "tex": "E=\\Delta_B",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 141,
+    "raw": "F",
+    "tex": "F",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 142,
+    "raw": "F=r_2",
+    "tex": "F=r_2",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 143,
+    "raw": "\\{0,3\\},\\{2,5\\},\\{4,1\\}",
+    "tex": "\\{0,3\\},\\{2,5\\},\\{4,1\\}",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 144,
+    "raw": "\n B/E=B\\xrightarrow[\\cong]{\\ \\beta\\ }G/F=G/A,\\qquad b\\longmapsto b+A.\n",
+    "tex": "B/E=B\\xrightarrow[\\cong]{\\ \\beta\\ }G/F=G/A,\\qquad b\\longmapsto b+A.",
+    "display": true,
+    "section": 4
+  },
+  {
+    "id": 145,
+    "raw": "x+A\\mapsto4x",
+    "tex": "x+A\\mapsto4x",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 146,
+    "raw": "M=R",
+    "tex": "M=R",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 147,
+    "raw": "B\\times G",
+    "tex": "B\\times G",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 148,
+    "raw": "a(b,y)=b",
+    "tex": "a(b,y)=b",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 149,
+    "raw": "b'(b,y)=y",
+    "tex": "b'(b,y)=y",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 150,
+    "raw": "\\beta a=q_A b'",
+    "tex": "\\beta a=q_A b'",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 151,
+    "raw": "\\beta",
+    "tex": "\\beta",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 152,
+    "raw": "a",
+    "tex": "a",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 153,
+    "raw": "(2,5)",
+    "tex": "(2,5)",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 154,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 155,
+    "raw": "(5,2)",
+    "tex": "(5,2)",
+    "display": false,
+    "section": 4
+  },
+  {
+    "id": 156,
+    "raw": "R\\leq X\\times Y",
+    "tex": "R\\leq X\\times Y",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 157,
+    "raw": "X'\\leq X",
+    "tex": "X'\\leq X",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 158,
+    "raw": "Y'\\leq Y",
+    "tex": "Y'\\leq Y",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 159,
+    "raw": "E=R^\\op R",
+    "tex": "E=R^\\op R",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 160,
+    "raw": "F=RR^\\op",
+    "tex": "F=RR^\\op",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 161,
+    "raw": "E",
+    "tex": "E",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 162,
+    "raw": "x,x'",
+    "tex": "x,x'",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 163,
+    "raw": "y",
+    "tex": "y",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 164,
+    "raw": "x',x''",
+    "tex": "x',x''",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 165,
+    "raw": "z",
+    "tex": "z",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 166,
+    "raw": "xRy,\\ x'Ry,\\ x'Rz",
+    "tex": "xRy,\\ x'Ry,\\ x'Rz",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 167,
+    "raw": "xRz",
+    "tex": "xRz",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 168,
+    "raw": "x,x''",
+    "tex": "x,x''",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 169,
+    "raw": "z",
+    "tex": "z",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 170,
+    "raw": "F",
+    "tex": "F",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 171,
+    "raw": "E,F",
+    "tex": "E,F",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 172,
+    "raw": "y,v",
+    "tex": "y,v",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 173,
+    "raw": "xEx'",
+    "tex": "xEx'",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 174,
+    "raw": "uEu'",
+    "tex": "uEu'",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 175,
+    "raw": "yv",
+    "tex": "yv",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 176,
+    "raw": "(xu)E(x'u')",
+    "tex": "(xu)E(x'u')",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 177,
+    "raw": "F",
+    "tex": "F",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 178,
+    "raw": "\n \\theta:X'/E\\longrightarrow Y'/F,\\qquad [x]_E\\longmapsto[y]_F\n \\quad\\text{whenever }xRy.\n",
+    "tex": "\\theta:X'/E\\longrightarrow Y'/F,\\qquad [x]_E\\longmapsto[y]_F\n \\quad\\text{whenever }xRy.",
+    "display": true,
+    "section": 5
+  },
+  {
+    "id": 179,
+    "raw": "x",
+    "tex": "x",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 180,
+    "raw": "F",
+    "tex": "F",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 181,
+    "raw": "xEx'",
+    "tex": "xEx'",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 182,
+    "raw": "y_0",
+    "tex": "y_0",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 183,
+    "raw": "x",
+    "tex": "x",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 184,
+    "raw": "x'",
+    "tex": "x'",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 185,
+    "raw": "F",
+    "tex": "F",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 186,
+    "raw": "y_0",
+    "tex": "y_0",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 187,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 188,
+    "raw": "xRy",
+    "tex": "xRy",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 189,
+    "raw": "uRv",
+    "tex": "uRv",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 190,
+    "raw": "(xu)R(yv)",
+    "tex": "(xu)R(yv)",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 191,
+    "raw": "\\theta",
+    "tex": "\\theta",
+    "display": false,
+    "section": 5
+  },
+  {
+    "id": 192,
+    "raw": "\n \\boxed{\\text{a compatible relation}\n \\ \\longrightarrow\\ \\text{two ambiguity quotients}\n \\ \\longrightarrow\\ \\text{one canonical isomorphism}.}\n",
+    "tex": "\\boxed{\\text{a compatible relation}\n \\ \\longrightarrow\\ \\text{two ambiguity quotients}\n \\ \\longrightarrow\\ \\text{one canonical isomorphism}.}",
+    "display": true,
+    "section": 5
+  },
+  {
+    "id": 193,
+    "raw": "A_0=B_0=0,\\ A_1=A,\\ B_1=B,\\ A_2=B_2=G",
+    "tex": "A_0=B_0=0,\\ A_1=A,\\ B_1=B,\\ A_2=B_2=G",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 194,
+    "raw": "\n P_{ij}=r_i s_j.\n",
+    "tex": "P_{ij}=r_i s_j.",
+    "display": true,
+    "section": 6
+  },
+  {
+    "id": 195,
+    "raw": "\n P_{ij}^{\\op}P_{ij}=s_jr_i s_j,\\qquad\n P_{ij}P_{ij}^{\\op}=r_i s_jr_i.\n",
+    "tex": "P_{ij}^{\\op}P_{ij}=s_jr_i s_j,\\qquad\n P_{ij}P_{ij}^{\\op}=r_i s_jr_i.",
+    "display": true,
+    "section": 6
+  },
+  {
+    "id": 196,
+    "raw": "(i,j)",
+    "tex": "(i,j)",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 197,
+    "raw": "P_{ij}",
+    "tex": "P_{ij}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 198,
+    "raw": "\\text{input quotient}",
+    "tex": "\\text{input quotient}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 199,
+    "raw": "\\text{output quotient}",
+    "tex": "\\text{output quotient}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 200,
+    "raw": "(1,1)",
+    "tex": "(1,1)",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 201,
+    "raw": "\\{(0,0)\\}",
+    "tex": "\\{(0,0)\\}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 202,
+    "raw": "0/0",
+    "tex": "0/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 203,
+    "raw": "0/0",
+    "tex": "0/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 204,
+    "raw": "(1,2)",
+    "tex": "(1,2)",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 205,
+    "raw": "\\{(x,3x):x\\in G\\}",
+    "tex": "\\{(x,3x):x\\in G\\}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 206,
+    "raw": "G/B",
+    "tex": "G/B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 207,
+    "raw": "A/0",
+    "tex": "A/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 208,
+    "raw": "(2,1)",
+    "tex": "(2,1)",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 209,
+    "raw": "\\{(b,b),(b,b+3):b\\in B\\}",
+    "tex": "\\{(b,b),(b,b+3):b\\in B\\}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 210,
+    "raw": "B/0",
+    "tex": "B/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 211,
+    "raw": "G/A",
+    "tex": "G/A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 212,
+    "raw": "(2,2)",
+    "tex": "(2,2)",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 213,
+    "raw": "G\\times G",
+    "tex": "G\\times G",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 214,
+    "raw": "G/G",
+    "tex": "G/G",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 215,
+    "raw": "G/G .",
+    "tex": "G/G .",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 216,
+    "raw": "\n \\theta_{12}:G/B\\xrightarrow{\\sim}A,\\quad x+B\\longmapsto3x,\n \\qquad\n \\theta_{21}:B\\xrightarrow{\\sim}G/A,\\quad b\\longmapsto b+A.\n",
+    "tex": "\\theta_{12}:G/B\\xrightarrow{\\sim}A,\\quad x+B\\longmapsto3x,\n \\qquad\n \\theta_{21}:B\\xrightarrow{\\sim}G/A,\\quad b\\longmapsto b+A.",
+    "display": true,
+    "section": 6
+  },
+  {
+    "id": 217,
+    "raw": "P_{12}",
+    "tex": "P_{12}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 218,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 219,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 220,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 221,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 222,
+    "raw": "3x",
+    "tex": "3x",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 223,
+    "raw": "3B=0",
+    "tex": "3B=0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 224,
+    "raw": "a\\mapsto a+B",
+    "tex": "a\\mapsto a+B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 225,
+    "raw": "3a=a",
+    "tex": "3a=a",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 226,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 227,
+    "raw": "3x-x=2x\\in B",
+    "tex": "3x-x=2x\\in B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 228,
+    "raw": "P_{22}",
+    "tex": "P_{22}",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 229,
+    "raw": "x",
+    "tex": "x",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 230,
+    "raw": "y",
+    "tex": "y",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 231,
+    "raw": "z",
+    "tex": "z",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 232,
+    "raw": "z-x\\in B",
+    "tex": "z-x\\in B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 233,
+    "raw": "y-z\\in A",
+    "tex": "y-z\\in A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 234,
+    "raw": "A+B=G",
+    "tex": "A+B=G",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 235,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 236,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 237,
+    "raw": "B/0",
+    "tex": "B/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 238,
+    "raw": "G/B",
+    "tex": "G/B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 239,
+    "raw": "A/0",
+    "tex": "A/0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 240,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 241,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 242,
+    "raw": "G/A",
+    "tex": "G/A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 243,
+    "raw": "C_3",
+    "tex": "C_3",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 244,
+    "raw": "0 .",
+    "tex": "0 .",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 245,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 246,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 247,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 248,
+    "raw": "C_3",
+    "tex": "C_3",
+    "display": false,
+    "section": 6
+  },
+  {
+    "id": 249,
+    "raw": "\n U_{ij}=A_{i-1}+(A_i\\cap B_j),\\qquad\n V_{ji}=B_{j-1}+(B_j\\cap A_i).\n",
+    "tex": "U_{ij}=A_{i-1}+(A_i\\cap B_j),\\qquad\n V_{ji}=B_{j-1}+(B_j\\cap A_i).",
+    "display": true,
+    "section": 7
+  },
+  {
+    "id": 250,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 251,
+    "raw": "2",
+    "tex": "2",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 252,
+    "raw": "j=0",
+    "tex": "j=0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 253,
+    "raw": "j=1",
+    "tex": "j=1",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 254,
+    "raw": "j=2",
+    "tex": "j=2",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 255,
+    "raw": "U_{1j}",
+    "tex": "U_{1j}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 256,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 257,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 258,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 259,
+    "raw": "U_{2j}",
+    "tex": "U_{2j}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 260,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 261,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 262,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 263,
+    "raw": "i=0",
+    "tex": "i=0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 264,
+    "raw": "i=1",
+    "tex": "i=1",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 265,
+    "raw": "i=2",
+    "tex": "i=2",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 266,
+    "raw": "V_{1i}",
+    "tex": "V_{1i}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 267,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 268,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 269,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 270,
+    "raw": "V_{2i}",
+    "tex": "V_{2i}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 271,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 272,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 273,
+    "raw": "G .",
+    "tex": "G .",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 274,
+    "raw": "(i,j)",
+    "tex": "(i,j)",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 275,
+    "raw": "U_{ij}/U_{i,j-1}",
+    "tex": "U_{ij}/U_{i,j-1}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 276,
+    "raw": "V_{ji}/V_{j,i-1}",
+    "tex": "V_{ji}/V_{j,i-1}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 277,
+    "raw": "\n 0\\subseteq0\\subseteq A\\subseteq G\\subseteq G,\\qquad\n 0\\subseteq0\\subseteq B\\subseteq G\\subseteq G.\n",
+    "tex": "0\\subseteq0\\subseteq A\\subseteq G\\subseteq G,\\qquad\n 0\\subseteq0\\subseteq B\\subseteq G\\subseteq G.",
+    "display": true,
+    "section": 7
+  },
+  {
+    "id": 278,
+    "raw": "q_i:A_i\\to A_i/A_{i-1}",
+    "tex": "q_i:A_i\\to A_i/A_{i-1}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 279,
+    "raw": "A_i\\cap B_j",
+    "tex": "A_i\\cap B_j",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 280,
+    "raw": "\n q_i^{-1}\\bigl(q_i(A_i\\cap B_j)\\bigr)\n       =A_{i-1}+(A_i\\cap B_j)=U_{ij}.\n",
+    "tex": "q_i^{-1}\\bigl(q_i(A_i\\cap B_j)\\bigr)\n       =A_{i-1}+(A_i\\cap B_j)=U_{ij}.",
+    "display": true,
+    "section": 7
+  },
+  {
+    "id": 281,
+    "raw": "q_i(x)=q_i(c)",
+    "tex": "q_i(x)=q_i(c)",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 282,
+    "raw": "x-c\\in A_{i-1}",
+    "tex": "x-c\\in A_{i-1}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 283,
+    "raw": "0\\subseteq G/A\\subseteq G/A",
+    "tex": "0\\subseteq G/A\\subseteq G/A",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 284,
+    "raw": "A\\subseteq G\\subseteq G",
+    "tex": "A\\subseteq G\\subseteq G",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 285,
+    "raw": "R\\subseteq B\\times G",
+    "tex": "R\\subseteq B\\times G",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 286,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 287,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 288,
+    "raw": "r_2R=R",
+    "tex": "r_2R=R",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 289,
+    "raw": "\n T=\\{(b,b):b\\in B\\}\\subseteq B\\times G.\n",
+    "tex": "T=\\{(b,b):b\\in B\\}\\subseteq B\\times G.",
+    "display": true,
+    "section": 7
+  },
+  {
+    "id": 290,
+    "raw": "\\id_B\\times q_A",
+    "tex": "\\id_B\\times q_A",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 291,
+    "raw": "T",
+    "tex": "T",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 292,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 293,
+    "raw": "\\{(b,b+A):b\\in B\\}",
+    "tex": "\\{(b,b+A):b\\in B\\}",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 294,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 295,
+    "raw": "T",
+    "tex": "T",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 296,
+    "raw": "(b,b+3)",
+    "tex": "(b,b+3)",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 297,
+    "raw": "r_2T=R\\ne T",
+    "tex": "r_2T=R\\ne T",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 298,
+    "raw": "t=r_i s_jr_i",
+    "tex": "t=r_i s_jr_i",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 299,
+    "raw": "\n r_i t r_i=t\n",
+    "tex": "r_i t r_i=t",
+    "display": true,
+    "section": 7
+  },
+  {
+    "id": 300,
+    "raw": "r_i^2=r_i",
+    "tex": "r_i^2=r_i",
+    "display": false,
+    "section": 7
+  },
+  {
+    "id": 301,
+    "raw": "0,C_2,C_3,0",
+    "tex": "0,C_2,C_3,0",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 302,
+    "raw": "0,C_3,C_2,0",
+    "tex": "0,C_3,C_2,0",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 303,
+    "raw": "\n A\\xrightarrow{\\sim}G/B,\\quad a\\longmapsto a+B,\n \\qquad\n B\\xrightarrow{\\sim}G/A,\\quad b\\longmapsto b+A.\n",
+    "tex": "A\\xrightarrow{\\sim}G/B,\\quad a\\longmapsto a+B,\n \\qquad\n B\\xrightarrow{\\sim}G/A,\\quad b\\longmapsto b+A.",
+    "display": true,
+    "section": 8
+  },
+  {
+    "id": 304,
+    "raw": "S",
+    "tex": "S",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 305,
+    "raw": "S",
+    "tex": "S",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 306,
+    "raw": "S",
+    "tex": "S",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 307,
+    "raw": "S",
+    "tex": "S",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 308,
+    "raw": "C_6",
+    "tex": "C_6",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 309,
+    "raw": "v_1,\\ldots,v_n",
+    "tex": "v_1,\\ldots,v_n",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 310,
+    "raw": "V",
+    "tex": "V",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 311,
+    "raw": "k",
+    "tex": "k",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 312,
+    "raw": "F_i=\\operatorname{span}(v_1,\\ldots,v_i)",
+    "tex": "F_i=\\operatorname{span}(v_1,\\ldots,v_i)",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 313,
+    "raw": "\n k\\longrightarrow F_i/F_{i-1},\\qquad a\\longmapsto av_i+F_{i-1}\n",
+    "tex": "k\\longrightarrow F_i/F_{i-1},\\qquad a\\longmapsto av_i+F_{i-1}",
+    "display": true,
+    "section": 8
+  },
+  {
+    "id": 314,
+    "raw": "k",
+    "tex": "k",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 315,
+    "raw": "k",
+    "tex": "k",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 316,
+    "raw": "a",
+    "tex": "a",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 317,
+    "raw": "a^{-1}a=1",
+    "tex": "a^{-1}a=1",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 318,
+    "raw": "V=0",
+    "tex": "V=0",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 319,
+    "raw": "C_6",
+    "tex": "C_6",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 320,
+    "raw": "A\\times B\\to G",
+    "tex": "A\\times B\\to G",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 321,
+    "raw": "(a,b)\\mapsto a+b",
+    "tex": "(a,b)\\mapsto a+b",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 322,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 8
+  },
+  {
+    "id": 323,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 324,
+    "raw": "\\Z",
+    "tex": "\\Z",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 325,
+    "raw": "f:X=G\\xrightarrow{\\id}Y=G",
+    "tex": "f:X=G\\xrightarrow{\\id}Y=G",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 326,
+    "raw": "A_i,B_i",
+    "tex": "A_i,B_i",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 327,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 328,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 329,
+    "raw": "2",
+    "tex": "2",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 330,
+    "raw": "\n F_pX=A_{p-2},\\qquad F_pY=B_p.\n",
+    "tex": "F_pX=A_{p-2},\\qquad F_pY=B_p.",
+    "display": true,
+    "section": 9
+  },
+  {
+    "id": 331,
+    "raw": "f",
+    "tex": "f",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 332,
+    "raw": "\\text{filtration column}",
+    "tex": "\\text{filtration column}",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 333,
+    "raw": "1",
+    "tex": "1",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 334,
+    "raw": "2",
+    "tex": "2",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 335,
+    "raw": "3",
+    "tex": "3",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 336,
+    "raw": "4",
+    "tex": "4",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 337,
+    "raw": "X",
+    "tex": "X",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 338,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 339,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 340,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 341,
+    "raw": "G/A",
+    "tex": "G/A",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 342,
+    "raw": "Y",
+    "tex": "Y",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 343,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 344,
+    "raw": "G/B",
+    "tex": "G/B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 345,
+    "raw": "0",
+    "tex": "0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 346,
+    "raw": "0 .",
+    "tex": "0 .",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 347,
+    "raw": "d_r",
+    "tex": "d_r",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 348,
+    "raw": "p",
+    "tex": "p",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 349,
+    "raw": "p-r",
+    "tex": "p-r",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 350,
+    "raw": "d_0=0",
+    "tex": "d_0=0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 351,
+    "raw": "\n d_{1,3}:A\\longrightarrow G/B,\\qquad a\\longmapsto a+B.\n",
+    "tex": "d_{1,3}:A\\longrightarrow G/B,\\qquad a\\longmapsto a+B.",
+    "display": true,
+    "section": 9
+  },
+  {
+    "id": 352,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 353,
+    "raw": "G/A",
+    "tex": "G/A",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 354,
+    "raw": "4",
+    "tex": "4",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 355,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 356,
+    "raw": "1",
+    "tex": "1",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 357,
+    "raw": "d_2=0",
+    "tex": "d_2=0",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 358,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 359,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 360,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 361,
+    "raw": "\n B\\xrightarrow{\\sim}G/A,\\qquad b\\longmapsto b+A.\n",
+    "tex": "B\\xrightarrow{\\sim}G/A,\\qquad b\\longmapsto b+A.",
+    "display": true,
+    "section": 9
+  },
+  {
+    "id": 362,
+    "raw": "f",
+    "tex": "f",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 363,
+    "raw": "B\\to B",
+    "tex": "B\\to B",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 364,
+    "raw": "d_{3,4}",
+    "tex": "d_{3,4}",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 365,
+    "raw": "G/A",
+    "tex": "G/A",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 366,
+    "raw": "x+A\\mapsto4x",
+    "tex": "x+A\\mapsto4x",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 367,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 368,
+    "raw": "C_3",
+    "tex": "C_3",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 369,
+    "raw": "\\Z",
+    "tex": "\\Z",
+    "display": false,
+    "section": 9
+  },
+  {
+    "id": 370,
+    "raw": "G=\\Z/6\\Z",
+    "tex": "G=\\Z/6\\Z",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 371,
+    "raw": "A=\\{0,3\\}",
+    "tex": "A=\\{0,3\\}",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 372,
+    "raw": "B=\\{0,2,4\\}",
+    "tex": "B=\\{0,2,4\\}",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 373,
+    "raw": "R=r_2s_1",
+    "tex": "R=r_2s_1",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 374,
+    "raw": "2R5",
+    "tex": "2R5",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 375,
+    "raw": "5R2",
+    "tex": "5R2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 376,
+    "raw": "R^\\op=s_1r_2",
+    "tex": "R^\\op=s_1r_2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 377,
+    "raw": "r_2",
+    "tex": "r_2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 378,
+    "raw": "s_1",
+    "tex": "s_1",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 379,
+    "raw": "R^\\op R",
+    "tex": "R^\\op R",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 380,
+    "raw": "RR^\\op",
+    "tex": "RR^\\op",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 381,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 382,
+    "raw": "T\\leq X\\times Y",
+    "tex": "T\\leq X\\times Y",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 383,
+    "raw": "X,Y",
+    "tex": "X,Y",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 384,
+    "raw": "(x,y),(x',y),(x',y')",
+    "tex": "(x,y),(x',y),(x',y')",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 385,
+    "raw": "(x,y')",
+    "tex": "(x,y')",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 386,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 387,
+    "raw": "(0,2),(4,2),(4,4)",
+    "tex": "(0,2),(4,2),(4,4)",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 388,
+    "raw": "C_2\\times C_2",
+    "tex": "C_2\\times C_2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 389,
+    "raw": "T=\\{(b,b):b\\in B\\}\\subseteq B\\times G",
+    "tex": "T=\\{(b,b):b\\in B\\}\\subseteq B\\times G",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 390,
+    "raw": "p=\\id_B\\times q_A",
+    "tex": "p=\\id_B\\times q_A",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 391,
+    "raw": "p(T)=p(R)",
+    "tex": "p(T)=p(R)",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 392,
+    "raw": "p^{-1}(p(T))=R\\ne T",
+    "tex": "p^{-1}(p(T))=R\\ne T",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 393,
+    "raw": "r_2T",
+    "tex": "r_2T",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 394,
+    "raw": "r_2R",
+    "tex": "r_2R",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 395,
+    "raw": "x+B\\mapsto3x",
+    "tex": "x+B\\mapsto3x",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 396,
+    "raw": "a\\mapsto a+B",
+    "tex": "a\\mapsto a+B",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 397,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 398,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 399,
+    "raw": "\n H=\\{1,(12)(34)\\},\\qquad\n V_4=\\{1,(12)(34),(13)(24),(14)(23)\\}.\n",
+    "tex": "H=\\{1,(12)(34)\\},\\qquad\n V_4=\\{1,(12)(34),(13)(24),(14)(23)\\}.",
+    "display": true,
+    "section": 10
+  },
+  {
+    "id": 400,
+    "raw": "1<H<V_4<A_4",
+    "tex": "1<H<V_4<A_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 401,
+    "raw": "H",
+    "tex": "H",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 402,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 403,
+    "raw": "(12)(34)",
+    "tex": "(12)(34)",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 404,
+    "raw": "(123)",
+    "tex": "(123)",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 405,
+    "raw": "C_4",
+    "tex": "C_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 406,
+    "raw": "C_2\\times C_2",
+    "tex": "C_2\\times C_2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 407,
+    "raw": "C_2\\to C_4",
+    "tex": "C_2\\to C_4",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 408,
+    "raw": "C_2\\to C_2\\times C_2",
+    "tex": "C_2\\to C_2\\times C_2",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 409,
+    "raw": "C_6",
+    "tex": "C_6",
+    "display": false,
+    "section": 10
+  },
+  {
+    "id": 410,
+    "raw": "2",
+    "tex": "2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 411,
+    "raw": "2s_12",
+    "tex": "2s_12",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 412,
+    "raw": "2r_25",
+    "tex": "2r_25",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 413,
+    "raw": "5-2=3\\in A",
+    "tex": "5-2=3\\in A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 414,
+    "raw": "5",
+    "tex": "5",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 415,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 416,
+    "raw": "5R2",
+    "tex": "5R2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 417,
+    "raw": "\n R^\\op=\\{(b,b),(b+3,b):b\\in B\\}.\n",
+    "tex": "R^\\op=\\{(b,b),(b+3,b):b\\in B\\}.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 418,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 419,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 420,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 421,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 422,
+    "raw": "r_2s_1\\ne s_1r_2",
+    "tex": "r_2s_1\\ne s_1r_2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 423,
+    "raw": "\n R^\\op R=\\Delta_B.\n",
+    "tex": "R^\\op R=\\Delta_B.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 424,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 425,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 426,
+    "raw": "(1,1)",
+    "tex": "(1,1)",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 427,
+    "raw": "\n RR^\\op=\n \\{0,3\\}^2\\ \\cup\\ \\{2,5\\}^2\\ \\cup\\ \\{4,1\\}^2=r_2.\n",
+    "tex": "RR^\\op=\n \\{0,3\\}^2\\ \\cup\\ \\{2,5\\}^2\\ \\cup\\ \\{4,1\\}^2=r_2.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 428,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 429,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 430,
+    "raw": "B\\to G/A,\\ b\\mapsto b+A",
+    "tex": "B\\to G/A,\\ b\\mapsto b+A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 431,
+    "raw": "x+A\\mapsto4x",
+    "tex": "x+A\\mapsto4x",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 432,
+    "raw": "4A=0",
+    "tex": "4A=0",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 433,
+    "raw": "4b=b",
+    "tex": "4b=b",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 434,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 435,
+    "raw": "4x-x\\in A",
+    "tex": "4x-x\\in A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 436,
+    "raw": "\n\\begin{split}\n (x,y)(x',y)^{-1}(x',y')\n &=\\bigl(xx'^{-1}x',\\,yy^{-1}y'\\bigr)\\\\\n &=(x,y').\n\\end{split}\n",
+    "tex": "\\begin{split}\n (x,y)(x',y)^{-1}(x',y')\n &=\\bigl(xx'^{-1}x',\\,yy^{-1}y'\\bigr)\\\\\n &=(x,y').\n\\end{split}",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 437,
+    "raw": "C_6",
+    "tex": "C_6",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 438,
+    "raw": "\n (0,2)-(4,2)+(4,4)=(0,4),\n",
+    "tex": "(0,2)-(4,2)+(4,4)=(0,4),",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 439,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 440,
+    "raw": "\\{(0,0),(1,0),(1,1)\\}\\subseteq C_2\\times C_2",
+    "tex": "\\{(0,0),(1,0),(1,1)\\}\\subseteq C_2\\times C_2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 441,
+    "raw": "(0,1)",
+    "tex": "(0,1)",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 442,
+    "raw": "uv^{-1}w",
+    "tex": "uv^{-1}w",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 443,
+    "raw": "\n L=\\{(0,A),(2,2+A),(4,4+A)\\}\\subseteq B\\times G/A.\n",
+    "tex": "L=\\{(0,A),(2,2+A),(4,4+A)\\}\\subseteq B\\times G/A.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 444,
+    "raw": "(b,y)",
+    "tex": "(b,y)",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 445,
+    "raw": "p^{-1}(L)",
+    "tex": "p^{-1}(L)",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 446,
+    "raw": "y+A=b+A",
+    "tex": "y+A=b+A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 447,
+    "raw": "y-b\\in A",
+    "tex": "y-b\\in A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 448,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 449,
+    "raw": "r_2T=R",
+    "tex": "r_2T=R",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 450,
+    "raw": "r_2R=R",
+    "tex": "r_2R=R",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 451,
+    "raw": "R",
+    "tex": "R",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 452,
+    "raw": "T",
+    "tex": "T",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 453,
+    "raw": "\n \\begin{pmatrix}0/0&A/0\\\\G/A&G/G\\end{pmatrix},\n \\qquad\n \\begin{pmatrix}0/0&G/B\\\\B/0&G/G\\end{pmatrix}.\n",
+    "tex": "\\begin{pmatrix}0/0&A/0\\\\G/A&G/G\\end{pmatrix},\n \\qquad\n \\begin{pmatrix}0/0&G/B\\\\B/0&G/G\\end{pmatrix}.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 454,
+    "raw": "\n 0\\subseteq0\\subseteq A\\subseteq G\\subseteq G,\\qquad\n 0\\subseteq0\\subseteq B\\subseteq G\\subseteq G.\n",
+    "tex": "0\\subseteq0\\subseteq A\\subseteq G\\subseteq G,\\qquad\n 0\\subseteq0\\subseteq B\\subseteq G\\subseteq G.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 455,
+    "raw": "x+B\\mapsto3x",
+    "tex": "x+B\\mapsto3x",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 456,
+    "raw": "3B=0",
+    "tex": "3B=0",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 457,
+    "raw": "a\\in A",
+    "tex": "a\\in A",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 458,
+    "raw": "3a=a",
+    "tex": "3a=a",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 459,
+    "raw": "x\\in G",
+    "tex": "x\\in G",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 460,
+    "raw": "3x-x=2x\\in B",
+    "tex": "3x-x=2x\\in B",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 461,
+    "raw": "\\{0\\}",
+    "tex": "\\{0\\}",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 462,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 463,
+    "raw": "V_4",
+    "tex": "V_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 464,
+    "raw": "H\\nml V_4",
+    "tex": "H\\nml V_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 465,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 466,
+    "raw": "V_4\\nml A_4",
+    "tex": "V_4\\nml A_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 467,
+    "raw": "2,2,3",
+    "tex": "2,2,3",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 468,
+    "raw": "\n (123)(12)(34)(123)^{-1}=(23)(14)\\notin H.\n",
+    "tex": "(123)(12)(34)(123)^{-1}=(23)(14)\\notin H.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 469,
+    "raw": "H",
+    "tex": "H",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 470,
+    "raw": "A_4",
+    "tex": "A_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 471,
+    "raw": "\n 0<\\{0,2\\}<\\Z/4\\Z,\\qquad\n 0<C_2\\times0<C_2\\times C_2.\n",
+    "tex": "0<\\{0,2\\}<\\Z/4\\Z,\\qquad\n 0<C_2\\times0<C_2\\times C_2.",
+    "display": true,
+    "section": 11
+  },
+  {
+    "id": 472,
+    "raw": "C_2,C_2",
+    "tex": "C_2,C_2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 473,
+    "raw": "C_2",
+    "tex": "C_2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 474,
+    "raw": "C_4",
+    "tex": "C_4",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 475,
+    "raw": "C_2\\times C_2",
+    "tex": "C_2\\times C_2",
+    "display": false,
+    "section": 11
+  },
+  {
+    "id": 476,
+    "raw": "G=C_6",
+    "tex": "G=C_6",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 477,
+    "raw": "G/B",
+    "tex": "G/B",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 478,
+    "raw": "B=C_3",
+    "tex": "B=C_3",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 479,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 480,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 481,
+    "raw": "B",
+    "tex": "B",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 482,
+    "raw": "BK",
+    "tex": "BK",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 483,
+    "raw": "K",
+    "tex": "K",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 484,
+    "raw": "\n (G/B)/G=*,\\qquad (G/B)//G\\simeq BB.\n",
+    "tex": "(G/B)/G=*,\\qquad (G/B)//G\\simeq BB.",
+    "display": true,
+    "section": 12
+  },
+  {
+    "id": 485,
+    "raw": "H,K\\leq G",
+    "tex": "H,K\\leq G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 486,
+    "raw": "\n BH\\times^h_{BG}BK\n \\simeq\\coprod_{[g]\\in H\\backslash G/K} B(H\\cap gKg^{-1}).\n",
+    "tex": "BH\\times^h_{BG}BK\n \\simeq\\coprod_{[g]\\in H\\backslash G/K} B(H\\cap gKg^{-1}).",
+    "display": true,
+    "section": 12
+  },
+  {
+    "id": 487,
+    "raw": "h",
+    "tex": "h",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 488,
+    "raw": "A+B=G",
+    "tex": "A+B=G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 489,
+    "raw": "A\\cap B=0",
+    "tex": "A\\cap B=0",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 490,
+    "raw": "\n BA\\times^h_{BG}BB\\simeq *.\n",
+    "tex": "BA\\times^h_{BG}BB\\simeq *.",
+    "display": true,
+    "section": 12
+  },
+  {
+    "id": 491,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 492,
+    "raw": "A",
+    "tex": "A",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 493,
+    "raw": "\n BA\\times^h_{BG}BA\\simeq BA\\sqcup BA\\sqcup BA.\n",
+    "tex": "BA\\times^h_{BG}BA\\simeq BA\\sqcup BA\\sqcup BA.",
+    "display": true,
+    "section": 12
+  },
+  {
+    "id": 494,
+    "raw": "1",
+    "tex": "1",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 495,
+    "raw": "BG",
+    "tex": "BG",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 496,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 497,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 498,
+    "raw": "\\Z[G]",
+    "tex": "\\Z[G]",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 499,
+    "raw": "\n \\operatorname{Ab}(\\operatorname{Grp}/G)\\simeq\\Z[G]\\text{-}\\operatorname{Mod}.\n",
+    "tex": "\\operatorname{Ab}(\\operatorname{Grp}/G)\\simeq\\Z[G]\\text{-}\\operatorname{Mod}.",
+    "display": true,
+    "section": 12
+  },
+  {
+    "id": 500,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 501,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 502,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 503,
+    "raw": "G",
+    "tex": "G",
+    "display": false,
+    "section": 12
+  },
+  {
+    "id": 504,
+    "raw": "\\infty",
+    "tex": "\\infty",
+    "display": false,
+    "section": 12
+  }
+]

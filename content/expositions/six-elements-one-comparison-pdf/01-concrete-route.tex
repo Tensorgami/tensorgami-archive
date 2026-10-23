@@ -1,0 +1,534 @@
+{\LARGE\bfseries Six Elements, One Comparison}\par
+{\large A teaching companion to \emph{Quotients, Refinement and Reconstruction}}\par
+{\small October 2026}
+
+This booklet starts with addition modulo six and follows one example through
+the comparison argument behind Jordan--Hölder. You need subgroups and cosets;
+the categorical language is introduced only after its job becomes visible.
+Read §§1--8 as the main route. Section 9 is an optional spectral calculation,
+§§10--11 contain exercises and answers, and §12 is a guide to the higher chapters.
+References marked \emph{main §} lead to the full exposition.
+
+\section{Two chains through the same six elements}\label{c:chains}
+Write \(C_d=\Z/d\Z\). Let
+\[
+ G=\Z/6\Z,\qquad A=\{0,3\},\qquad B=\{0,2,4\}.
+\]
+All arithmetic in \(G\) is modulo six. We write \(0\) for the subgroup
+\(\{0\}\), which has one element. Consider
+\[
+\begin{tikzcd}[column sep=large,row sep=small]
+0\arrow[r,hook]&A\arrow[r,hook]&G\\
+0\arrow[r,hook]&B\arrow[r,hook]&G.
+\end{tikzcd}
+\]
+Every subgroup here is normal because \(G\) is abelian. The factors are
+\[
+\begin{array}{c|cc}
+ &\text{first step}&\text{second step}\\ \hline
+ A\text{-chain}&A/0\cong C_2&G/A\cong C_3\\
+ B\text{-chain}&B/0\cong C_3&G/B\cong C_2 .
+\end{array}
+\]
+These identifications are explicit: send \(3\in A\) to \(1\in C_2\),
+send \(2\in B\) to \(1\in C_3\), and use reduction modulo three and modulo
+two for the two quotients of \(G\). Every nonzero element of \(C_2\) or
+\(C_3\) generates its group, so these factors are simple.
+
+We can already see the same factors in a different order. Our task is to
+construct the comparison that makes this inevitable, without assuming that
+the number of factors is invariant.
+
+Two elementary observations will do much of the work:
+\[
+ A\cap B=0,\qquad A+B=G.
+\]
+The first follows from the displayed lists. For the second, adding \(0\) to
+the elements of \(B\) gives \(0,2,4\), and adding \(3\) gives \(3,5,1\).
+Thus every element has an expression \(a+b\). This expression is unique:
+if \(a+b=a'+b'\), then \(a-a'=b'-b\in A\cap B=0\).
+
+\pausehere{Neither \(A\subseteq B\) nor \(B\subseteq A\). A single subgroup
+chain cannot contain both. We will construct two refinements and match their
+factors.}
+\route{Main route: \mainref{3}{main §3}, the general refinement theorem,
+and \mainref{4-4}{main §4.4}, the \(C_6\) comparison.}
+
+\clearpage
+\section{An algebraic maneuver is a map}\label{c:maps}
+Start with \(a=b+c\). To recover \(b\), translate by \(-c\).
+The translation \(\tau_c(x)=x+c\) is a bijection of the underlying set, with
+inverse \(\tau_{-c}\), because associativity gives
+\[
+ (x+c)+(-c)=x+(c-c)=x.
+\]
+Thus subtraction is the application of an inverse map. A translation is
+usually not a group homomorphism: it need not preserve zero.
+
+Distributivity says something different. The homomorphism \(h(x)=2x\)
+satisfies
+\[
+ h(x+c)=h(x)+h(c),\qquad
+ \begin{tikzcd}[column sep=large,row sep=small]
+ G\arrow[r,"\tau_c"]\arrow[d,"h"']&G\arrow[d,"h"]\\
+ G\arrow[r,"\tau_{h(c)}"']&G .
+ \end{tikzcd}
+\]
+The square says \(h\circ\tau_c=\tau_{h(c)}\circ h\): applying \(h\) before
+or after the appropriate translation gives the same result.
+For a vector space the same statement holds for multiplication by a scalar;
+for a nonzero scalar that linear map is also invertible.
+
+Now consider the quotient map \(q_A:G\to G/A\), \(x\mapsto x+A\).
+Its fibers are
+\[
+ \{0,3\},\qquad\{1,4\},\qquad\{2,5\}.
+\]
+Addition of cosets is well defined: replacing \(x,y\) by \(x+a,y+a'\),
+with \(a,a'\in A\), changes \(x+y\) by the element \(a+a'\) of \(A\).
+
+Suppose \(h:G\to H\) is a group homomorphism constant on these fibers.
+Then there is a unique homomorphism \(\bar h:G/A\to H\) such that
+\[
+ \bar h(x+A)=h(x),\qquad
+ \begin{tikzcd}[column sep=large,row sep=small]
+ G\arrow[r,"h"]\arrow[d,"q_A"']&H\\
+ G/A\arrow[ur,dashed,"\bar h"']&
+ \end{tikzcd}
+\]
+The fiber condition proves independence of the representative; the
+homomorphism law follows from that of \(h\); surjectivity of \(q_A\) proves
+uniqueness. This is \emph{descent through a quotient}.
+
+For a concrete instance, \(h(x)=4x\) lands in \(B\) and kills \(3\).
+Consequently
+\[
+ \beta:B\longrightarrow G/A,\quad b\longmapsto b+A,
+ \qquad
+ \gamma:G/A\longrightarrow B,\quad x+A\longmapsto4x
+\]
+are inverse homomorphisms. Indeed, \(4b=b\) for \(b\in B\), and
+\(4x-x=3x\in A\) for every \(x\in G\).
+
+The structural viewpoint records which map is invertible, which equation
+expresses compatibility, and which quotient allows a map to descend.
+Associativity and distributivity supply the checks; they have not disappeared.
+\pausehere{Why does \(x+A\mapsto x\) fail to define a map \(G/A\to G\)?
+Compare the representatives \(0\) and \(3\).}
+\route{Further development: \mainref{1}{main §1}, relations, images and quotients.}
+
+\clearpage
+\section{Keep the identifications, including where they live}\label{c:relations}
+A relation \(R\) from \(X\) to \(Y\) is a set of pairs \((x,y)\).
+Write \(xRy\) for membership. Its \emph{input support} consists of the
+\(x\)'s occurring in a pair; its \emph{output support} consists of the
+\(y\)'s occurring in a pair. A relation may have several outputs or none.
+
+For a subgroup \(D\leq G\), write
+\(\Delta_D=\{(d,d):d\in D\}\). Encode our four quotient steps by
+\[
+\begin{array}{c|l|c|c}
+ \text{relation}&\text{rule}&\text{support}&\text{class of }0\\ \hline
+ r_1&x=y\in A&A&0\\
+ r_2&y-x\in A&G&A\\
+ s_1&x=y\in B&B&0\\
+ s_2&y-x\in B&G&B .
+\end{array}
+\]
+Thus \(r_1=\Delta_A\) records \(A\to A/0\), whereas \(r_2\) records
+\(G\to G/A\): two elements are related exactly when their quotient images
+agree. Each is an equivalence relation on its support. Viewed on all of
+\(G\), it is a \emph{partial equivalence relation}. For instance,
+\(1\) is not related to itself by \(r_1\).
+
+Let \(Q(r)\) mean the support modulo this equivalence relation. Then
+\(Q(r_1)=A\) and \(Q(r_2)=G/A\). In groups, a congruence is determined
+by its identity class. The more general argument retains the whole relation,
+so it need not assume this group-specific fact.
+
+Our convention is that \(SR\) means \emph{first \(R\), then \(S\)}:
+\[
+ x(SR)z\quad\Longleftrightarrow\quad
+ \text{there is }y\text{ with }xRy\text{ and }ySz.
+\]
+The opposite relation \(R^\op\) reverses every pair. Associativity of
+composition is now a statement about witnesses: both \(T(SR)\) and
+\((TS)R\) relate \(x\) to \(w\) precisely when there are \(y,z\) with
+\(xRy,\ ySz,\ zTw\). Regrouping changes the parentheses, not the data.
+
+For the group argument we use \emph{internal relations}: subgroups
+\(R\leq X\times Y\), not arbitrary subsets. Such a relation has the
+three-corner property
+\[
+ xRy,\quad x'Ry,\quad x'Ry'
+ \quad\Longrightarrow\quad xRy'.
+\]
+Indeed, closure under multiplication and inversion gives
+\[
+ (x,y)(x',y)^{-1}(x',y')=(x,y').
+\]
+The order displayed works even in noncommutative groups. This property is
+called \emph{difunctionality}; it is the key relation identity supplied by
+the Mal'cev framework.
+
+\pausehere{The three-corner property does not require a unique output.
+It says that three corners of a related rectangle force the fourth.}
+\route{Main §§1--2 develop the same operations using pullbacks, regular
+images and effective quotients, so that they apply beyond groups.}
+
+\clearpage
+\section{A comparison with two outputs per input}\label{c:one-cell}
+Before filling a whole comparison table, examine the relation
+\[
+ R=r_2s_1,\qquad bRy\quad\Longleftrightarrow\quad
+ b\in B\ \text{and}\ y-b\in A.
+\]
+First \(s_1\) requires the input to be an element of \(B\) and leaves it
+fixed. Then \(r_2\) allows movement by an element of \(A\). Its six pairs are
+displayed by
+\[
+\begin{array}{c|c}
+ \text{input}&\text{possible outputs}\\ \hline
+ 0&0,\ 3\\
+ 2&2,\ 5\\
+ 4&4,\ 1 .
+\end{array}
+\]
+The input support is \(B\); the output support is all of \(G\).
+There is no single output in the definition.
+
+There are two kinds of ambiguity to remove. Define
+\[
+ E=R^\op R,\qquad F=RR^\op.
+\]
+Two inputs are \(E\)-related when they share an output. The three rows of
+the table are disjoint, so \(E=\Delta_B\). Two outputs are \(F\)-related
+when they share an input. Hence \(F=r_2\), with classes
+\(\{0,3\},\{2,5\},\{4,1\}\).
+
+After quotienting, the two possible outputs in each row become one:
+\[
+ B/E=B\xrightarrow[\cong]{\ \beta\ }G/F=G/A,\qquad b\longmapsto b+A.
+\]
+We proved the inverse formula \(x+A\mapsto4x\) in §\ref{c:maps}.
+The relation therefore produces an actual isomorphism, with no choice
+of representatives in its definition.
+
+Here is the same construction as a diagram. Let \(M=R\), regarded as a
+subgroup of \(B\times G\), and take its coordinate projections
+\(a(b,y)=b\) and \(b'(b,y)=y\):
+\[
+\begin{tikzcd}[row sep=large,column sep=large]
+ &M\arrow[dl,two heads,"a"']\arrow[dr,two heads,"b'"]&\\
+ B\arrow[d,"\id_B"']&&G\arrow[d,"q_A"]\\
+ B\arrow[rr,"\beta"']&&G/A .
+\end{tikzcd}
+\]
+Both projections are onto their supports. The equation
+\(\beta a=q_A b'\) says that related elements receive matching quotient
+images. It characterizes \(\beta\) uniquely because \(a\) is surjective.
+
+\pausehere{The pair \((2,5)\) belongs to \(R\). Does \((5,2)\)?
+Keep input support and output support separate.}
+\route{This is the concrete instance of the common-quotient construction
+in \mainref{2}{main §2}.}
+
+\clearpage
+\section{Why the construction works beyond six elements}\label{c:general}
+Let \(R\leq X\times Y\) be any subgroup relation. Restrict to its input
+and output supports \(X'\leq X\), \(Y'\leq Y\). Set
+\(E=R^\op R\) and \(F=RR^\op\).
+They are reflexive on these supports and symmetric by definition.
+
+For transitivity of \(E\), suppose \(x,x'\) share output \(y\), and
+\(x',x''\) share output \(z\). The three corners
+\(xRy,\ x'Ry,\ x'Rz\) give \(xRz\), so \(x,x''\) share \(z\).
+Interchanging input and output proves transitivity of \(F\).
+Thus \(E,F\) are equivalence relations on their supports.
+
+They respect the group operations. For example, witnesses \(y,v\) for
+\(xEx'\) and \(uEu'\) give witness \(yv\) for
+\((xu)E(x'u')\); inversion of a witness gives the corresponding inverse
+relation. The same holds for \(F\). Their classes therefore carry
+well-defined quotient group structures.
+
+Define
+\[
+ \theta:X'/E\longrightarrow Y'/F,\qquad [x]_E\longmapsto[y]_F
+ \quad\text{whenever }xRy.
+\]
+An output exists by the definition of support. Different outputs for the
+same \(x\) are \(F\)-related. If \(xEx'\), choose a common output \(y_0\);
+any outputs for \(x\) and \(x'\) are each \(F\)-related to \(y_0\).
+Hence the formula is independent of both choices. Reversing \(R\)
+constructs its inverse. Finally, \(xRy\) and \(uRv\) imply
+\((xu)R(yv)\), so \(\theta\) is a homomorphism.
+
+This proof is the small mechanism inside the comparison theorem:
+\[
+ \boxed{\text{a compatible relation}
+ \ \longrightarrow\ \text{two ambiguity quotients}
+ \ \longrightarrow\ \text{one canonical isomorphism}.}
+\]
+The abstract framework packages precisely the operations just used:
+\[
+\begin{array}{p{0.23\linewidth}|p{0.66\linewidth}}
+ \textbf{Structure}&\textbf{Work it performs}\\ \hline
+ Finite limits&Form pairs satisfying equations and the spaces of witnesses.\\
+ Regular images&Form supports and compose relations.\\
+ Barr exactness&Make equivalence relations into effective quotients.\\
+ Mal'cev property&Supply the three-corner property for internal relations.\\
+ Pointedness&Supply a zero object and zero classes for the later series argument.
+\end{array}
+\]
+Pointedness is needed for that formulation of normal series, not for
+the common-quotient construction itself. Groups and modules provide these
+structures; the full exposition establishes the categorical relation
+calculus before using it.
+
+\pausehere{The conclusion is an isomorphism characterized by a commuting
+diagram, not merely equality of the numbers of classes.}
+\route{This page proves the group mechanism. The proof for every exact
+Mal'cev category, with its image and quotient dependencies, is in
+\mainref{1}{main §1} and \mainref{2}{main §2}.}
+
+\clearpage
+\section{Fill all four crossings}\label{c:rectangle}
+Write \(A_0=B_0=0,\ A_1=A,\ B_1=B,\ A_2=B_2=G\).
+For every pair of quotient steps form
+\[
+ P_{ij}=r_i s_j.
+\]
+Inputs come from the column side; outputs come from the row side.
+Because partial equivalence relations are symmetric and idempotent,
+\[
+ P_{ij}^{\op}P_{ij}=s_jr_i s_j,\qquad
+ P_{ij}P_{ij}^{\op}=r_i s_jr_i.
+\]
+The previous page supplies the canonical map from the input ambiguity
+quotient to the output ambiguity quotient. Here every cell is explicit:
+\[
+\begin{array}{c|l|c|c}
+ (i,j)&P_{ij}&\text{input quotient}&\text{output quotient}\\ \hline
+ (1,1)&\{(0,0)\}&0/0&0/0\\
+ (1,2)&\{(x,3x):x\in G\}&G/B&A/0\\
+ (2,1)&\{(b,b),(b,b+3):b\in B\}&B/0&G/A\\
+ (2,2)&G\times G&G/G&G/G .
+\end{array}
+\]
+The two nontrivial isomorphisms are
+\[
+ \theta_{12}:G/B\xrightarrow{\sim}A,\quad x+B\longmapsto3x,
+ \qquad
+ \theta_{21}:B\xrightarrow{\sim}G/A,\quad b\longmapsto b+A.
+\]
+For \(P_{12}\), the intermediate point must lie in \(A\) and in the
+\(B\)-coset of the input. It is \(0\) for even inputs and \(3\) for odd
+inputs, exactly \(3x\). The formula descends because \(3B=0\).
+Its inverse is \(a\mapsto a+B\): \(3a=a\) on \(A\), and
+\(3x-x=2x\in B\).
+
+For \(P_{22}\), any input \(x\) and output \(y\) have an intermediate
+point \(z\) with \(z-x\in B\) and \(y-z\in A\), since \(A+B=G\).
+Thus every pair is related. Both ambiguity quotients are trivial.
+This cell has support \(G\), whereas the first cell has support \(0\).
+
+Arrange the resulting factors by their original steps:
+\[
+\begin{array}{c|cc}
+ &B/0&G/B\\ \hline
+ A/0&0&C_2\\
+ G/A&C_3&0 .
+\end{array}
+\]
+The \(C_2\) cell compares the first \(A\)-step to the second \(B\)-step;
+the \(C_3\) cell compares the other two steps.
+
+\pausehere{A zero entry is the one-element group. It does not mean that
+the relation is empty, or even that its support is small.}
+
+There is still a logical obligation: the cells must assemble into
+\emph{genuine refinements} of the original chains. A table of isomorphic
+quotients by itself would not establish a refinement theorem.
+
+\clearpage
+\section{How cells become genuine refinements}\label{c:refinement}
+In this abelian example the refined subgroups have familiar formulas:
+\[
+ U_{ij}=A_{i-1}+(A_i\cap B_j),\qquad
+ V_{ji}=B_{j-1}+(B_j\cap A_i).
+\]
+For each fixed row or column, let the other index run from \(0\) to \(2\):
+\[
+\begin{array}{c|ccc}
+ &j=0&j=1&j=2\\ \hline
+ U_{1j}&0&0&A\\
+ U_{2j}&A&G&G
+\end{array}
+\qquad
+\begin{array}{c|ccc}
+ &i=0&i=1&i=2\\ \hline
+ V_{1i}&0&0&B\\
+ V_{2i}&B&G&G .
+\end{array}
+\]
+The output quotient in cell \((i,j)\) is
+\(U_{ij}/U_{i,j-1}\); the input quotient is
+\(V_{ji}/V_{j,i-1}\). Checking these against the previous table gives
+the two refinements
+\[
+ 0\subseteq0\subseteq A\subseteq G\subseteq G,\qquad
+ 0\subseteq0\subseteq B\subseteq G\subseteq G.
+\]
+Repeated terms contribute trivial factors and can later be deleted.
+
+Why these intermediate subgroups? Let
+\(q_i:A_i\to A_i/A_{i-1}\). Take the image of \(A_i\cap B_j\)
+downstairs and pull it back:
+\[
+ q_i^{-1}\bigl(q_i(A_i\cap B_j)\bigr)
+       =A_{i-1}+(A_i\cap B_j)=U_{ij}.
+\]
+Indeed \(q_i(x)=q_i(c)\) says exactly \(x-c\in A_{i-1}\).
+The pullback includes \emph{every} representative of each chosen coset.
+For example, in the second row the downstairs chain
+\(0\subseteq G/A\subseteq G/A\) pulls back to
+\(A\subseteq G\subseteq G\).
+
+This explains \emph{saturation}: a relation downstairs must lift to all
+representatives upstairs. For our \(R\subseteq B\times G\), changing an
+output by \(3\) keeps the pair in \(R\); in formulas \(r_2R=R\).
+Compare the smaller subgroup relation
+\[
+ T=\{(b,b):b\in B\}\subseteq B\times G.
+\]
+Under \(\id_B\times q_A\), both \(T\) and \(R\) have image
+\(\{(b,b+A):b\in B\}\). But the inverse image of this graph is \(R\),
+not \(T\): it includes \((b,b+3)\) too. Thus \(r_2T=R\ne T\).
+Taking an image and pulling it back need not recover unsaturated data.
+
+In the general relation proof, the row objects have the form
+\(t=r_i s_jr_i\), and
+\[
+ r_i t r_i=t
+\]
+follows from \(r_i^2=r_i\). Saturation gives descent and pullback;
+the boundary identities then make adjacent cells meet. The full proof
+checks both requirements. Our two tables exhibit their result explicitly.
+
+\route{For the categorical descent and boundary checks, see
+\mainref{2}{main §2} and \mainref{3}{main §3}.}
+
+\clearpage
+\section{Why simplicity turns comparison into a matching}\label{c:simplicity}
+Read the rectangle rowwise to get
+\(0,C_2,C_3,0\); read it columnwise to get
+\(0,C_3,C_2,0\). Delete the trivial factors. The matching is given by
+actual maps:
+\[
+ A\xrightarrow{\sim}G/B,\quad a\longmapsto a+B,
+ \qquad
+ B\xrightarrow{\sim}G/A,\quad b\longmapsto b+A.
+\]
+No equality of lengths was needed to build these maps.
+
+Here is the general final step for groups. A finite normal series in a
+nontrivial simple group \(S\) has exactly one nontrivial factor.
+Look at the first term equal to \(S\). Its preceding term is a proper
+normal subgroup of \(S\), hence is trivial. Every earlier term is
+therefore trivial, and every later term is \(S\). Notice that this argument
+needs only normality in the \emph{next} term.
+
+The general refinement theorem, proved in main §3, constructs a rectangle
+of paired factors for two finite normal series. If the original series
+are composition series, each row is a refinement of a simple quotient,
+so exactly one nontrivial cell survives in that row. The same holds in
+each column. Those surviving cells give a bijection between the original
+factors, with an isomorphism for each matched pair. Equality of the numbers
+of factors is a consequence of this bijection.
+
+This booklet has computed that construction for \(C_6\) and proved its
+common-quotient mechanism for groups. The full categorical refinement
+theorem is supplied by the main exposition; a successful six-element
+calculation is not a substitute for that theorem.
+
+\textbf{Dimension now follows.}
+For a finite basis \(v_1,\ldots,v_n\) of a vector space \(V\) over \(k\), put
+\(F_i=\operatorname{span}(v_1,\ldots,v_i)\).
+The map
+\[
+ k\longrightarrow F_i/F_{i-1},\qquad a\longmapsto av_i+F_{i-1}
+\]
+is onto by the definition of span and injective by linear independence.
+The \(k\)-module \(k\) is simple: a submodule containing a nonzero \(a\)
+contains \(a^{-1}a=1\), hence every scalar. A second finite basis therefore
+gives another composition series, and Jordan--Hölder gives the same
+number of steps. For \(V=0\), every basis is empty, directly by independence.
+
+\textbf{What this example does not test.}
+\(C_6\) is abelian, and the map \(A\times B\to G\), \((a,b)\mapsto a+b\),
+is an isomorphism by §\ref{c:chains}. Thus all our subgroups are
+ambient-normal and this extension splits. Exercise 6 tests adjacent
+normality in \(A_4\). Exercise 7 shows that the same simple factors can
+assemble into different groups.
+
+\pausehere{This is a complete stopping point for the teaching route.
+The higher chapters ask what the list of factors forgets, and what extra
+structure can retain or recover that information.}
+
+\clearpage
+\section{Optional: the same comparison on successive pages}\label{c:spectral}
+In the module setting, the two filtrations can instead be compared by
+the spectral calculation developed in \mainref{7}{main §7}.
+Here \(G\) is a \(\Z\)-module, and we use the two-term map
+\(f:X=G\xrightarrow{\id}Y=G\).
+Extend \(A_i,B_i\) by zero below \(0\) and by \(G\) above \(2\), and set
+\[
+ F_pX=A_{p-2},\qquad F_pY=B_p.
+\]
+The shift makes \(f\) filtration-preserving. On the initial associated
+graded page, the only nonzero terms are
+\[
+\begin{array}{c|cccc}
+ \text{filtration column}&1&2&3&4\\ \hline
+ X&0&0&A&G/A\\
+ Y&B&G/B&0&0 .
+\end{array}
+\]
+The differential \(d_r\) goes from source column \(p\) to target column
+\(p-r\). There is no same-column map, so \(d_0=0\).
+
+\textbf{Page 1.}
+The only nonzero differential is
+\[
+ d_{1,3}:A\longrightarrow G/B,\qquad a\longmapsto a+B.
+\]
+It is the \(C_2\) comparison already proved to be an isomorphism.
+Taking its kernel and cokernel removes both of these entries.
+
+\textbf{Page 2.}
+The remaining source is \(G/A\) in column \(4\), and the remaining
+target is \(B\) in column \(1\). A page-2 differential moves two columns,
+so \(d_2=0\). One zero differential does not imply stabilization.
+
+\textbf{Page 3.}
+The representative subgroup for the surviving source is now \(B\):
+to land three filtration steps lower, an element of \(G\) must lie in
+\(B\). Its identification with the preceding source term is precisely
+\[
+ B\xrightarrow{\sim}G/A,\qquad b\longmapsto b+A.
+\]
+On these representatives \(f\) is the identity \(B\to B\), so
+\(d_{3,4}\) is an isomorphism. If we keep the old \(G/A\) coordinate,
+the same map is \(x+A\mapsto4x\). These are two coordinate descriptions
+of one differential, not two different maps. Page 4 is zero.
+
+The calculation pairs the \(C_2\)'s first and the \(C_3\)'s later.
+It uses the same quotient maps as the rectangle; their page locations
+depend on the chosen filtrations and shift. The filtration machinery
+and its convergence are proved in the main exposition, not assumed from
+Jordan--Hölder. Here we have computed the pages explicitly.
+
+\route{Read this after the concrete rectangle. It is an abelian
+\(\Z\)-module calculation; it does not assert that ordinary abelian
+spectral sequences apply directly to arbitrary groups.}
