@@ -1,7 +1,7 @@
 {
-  "edition": "2026-10-29.1",
-  "source_site_version": 128,
-  "source_snapshot_commit": "dfa938e69d60fe26b2dc830734b2c8ff1678f85e",
+  "edition": "2026-10-29.2",
+  "source_site_version": 130,
+  "source_snapshot_commit": "f775b16fc918682975bab2380922219d491612ed",
   "published_files_changed": false,
   "source_only_changes": [
     {
@@ -60,8 +60,8 @@
     }
   ],
   "reader_source_addition": {
-    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
-    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.1/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
+    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.2.zip",
+    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.2.zip",
     "source_directory": "archive/reader-sources/quotients-and-reconstruction",
     "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
     "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",

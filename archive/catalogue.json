@@ -1638,7 +1638,7 @@
       "description": "Geometry at infinity of polynomial fiber products, rational lifts, and their arithmetic counting behavior."
     }
   ],
-  "edition": "2026-10-29.1",
+  "edition": "2026-10-29.2",
   "historical_expositions": [
     {
       "slug": "a-tree-is-a-discrete-poincare-lemma",
@@ -1676,8 +1676,8 @@
   ],
   "archival_reader_sources": [
     {
-      "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
-      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.1/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
+      "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.2.zip",
+      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.2.zip",
       "source_directory": "archive/reader-sources/quotients-and-reconstruction",
       "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
       "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
