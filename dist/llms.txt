@@ -1,6 +1,6 @@
 # Tensorgami — Henry Shin
 
-A developing inquiry into motivic mathematics through study, explicit calculation, and exposition. Current interests include Tannakian and motivic Galois theory, cohomology, periods, transport, descent, and reconstruction. The site also contains a wider library of expositions in algebra, geometry, number theory, and analysis, and essays on understanding, independent inquiry, and the scope of authority. Papers from earlier lines of research are collected in the research archive, with dates, publication status, and corrections stated individually.
+A developing inquiry into motivic mathematics through study, explicit calculation, and exposition. Current interests include Tannakian and motivic Galois theory, cohomology, periods, transport, descent, and reconstruction. The site also contains a wider library of expositions in algebra, geometry, number theory, and analysis, and essays on understanding, independent inquiry, and the scope of authority. Current research includes finite generation of permutation twisted cohomology and the tensor-triangular geometry of permutation complexes. Research papers collect this work and earlier papers, with versions, publication status, and corrections stated individually.
 
 ## Selected expositions
 
@@ -12,6 +12,10 @@ A developing inquiry into motivic mathematics through study, explicit calculatio
 - [A Weighting Argument for Pointwise Convergence to Convergence in Measure](https://tensorgami.com/notes/pointwise-weighting-convergence-in-measure.html) — How a positive measurable weight turns almost-everywhere convergence into convergence in measure, with an Egorov construction and a shorter dominated-convergence proof.
 - [Normality, Coherent Extension, Tensor Operations, and Affineness](https://tensorgami.com/notes/hartshorne-ii-5-14-18.html) — Solutions to Hartshorne II.5.14–18 connecting projective normality, coherent sheaves, affine morphisms, and vector bundles.
 
+## Current research
+
+- [Finite generation of permutation twisted cohomology](https://tensorgami.com/papers/finite-generation-permutation-twisted-cohomology.html) — Representation spheres give multigraded section rings for permutation modules. This paper proves a finite-module theorem over arbitrary commutative Noetherian bases and uses the doubled regular representation to construct an explicit Noetherian model for the tensor-triangular geometry of permutation complexes.
+
 ## Explore
 
 - [Current inquiry](https://tensorgami.com/)
@@ -21,5 +25,5 @@ A developing inquiry into motivic mathematics through study, explicit calculatio
 - [Mathematical Life in the Age of AI](https://tensorgami.com/essays/mathematical-life-in-the-age-of-ai.html)
 - [About Henry Shin](https://tensorgami.com/about.html)
 - [Interests](https://tensorgami.com/interests.html)
-- [Research archive](https://tensorgami.com/papers.html)
+- [Research papers](https://tensorgami.com/papers.html)
 - [Supplementary sources](https://tensorgami.com/verification.html)

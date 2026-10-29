@@ -58,8 +58,6 @@ Grothendieck described the motive as the common reason underlying different coho
 
 Such a direction still has to earn its explanations. Different motivic settings have different constructions and hypotheses. The structure retained by a motive need not determine the variety itself. A vocabulary of depth becomes informative through the maps, preserved structures, and examples it specifies. Generality is useful when it exposes a relationship; it can also conceal a mechanism beneath unnecessary apparatus.
 
-The comparison therefore gives the reader more than a conclusion to remember. It supplies questions that can be pursued through definitions, examples, calculations, and criticism. Following one of them takes the inquiry beyond the page on which it began.
-
 ### 3 Becoming capable
 
 An insight often arrives before the machinery required to explain it. Someone suspects that two descriptions should be compared, that an invariant has forgotten something important, or that a small example defeats a sweeping claim. The initial thought may be brief. Developing it requires enough background to find out what the suggestion amounts to.
@@ -134,7 +132,9 @@ Leadership can help organize that work. A strong mathematician may identify frui
 
 Institutions concentrate resources that are often difficult to assemble separately: instruction, criticism, collaborators, funding, and an audience. When those resources come as a bundle, the standards for entering or advancing within an institution can govern the direction of the work. A judgment about one contribution can become entangled with the power to determine whether its author has the means to continue at all.
 
-For a particular inquiry, however, the threshold can be local. Someone may need enough help to enter a literature, develop a reduction, test an example, or understand an objection. AI changes both what institutions can provide and what people can assemble outside them. Its effect on dependence turns on that comparison. When the available help suffices for the question at hand, access to a particular department or network becomes less decisive. A university can become more productive while becoming less necessary to that person. No individual needs to match the strongest laboratory across all of mathematics for many such thresholds to be crossed. [^42]
+Fifteenth-century European monasteries bought printed books and commissioned editions from secular workshops; some operated presses themselves. Johannes Trithemius, abbot of Sponheim, kept manuscripts and printed books in his library and praised printing for making learning more widely available. His defence of copying by hand, written in 1492, appeared in print in 1494. He valued copying as religious discipline, as a means of transmitting works that remained unprinted, and for the scribe’s freedom to choose and correct a text independently of a printer’s program. [^73]
+
+For a particular inquiry, the threshold can be local. Someone may need enough help to enter a literature, develop a reduction, test an example, or understand an objection. AI changes both what institutions can provide and what people can assemble outside them. Its effect on dependence turns on that comparison. When the available help suffices for the question at hand, access to a particular department or network becomes less decisive. A university can become more productive while becoming less necessary to that person. No individual needs to match the strongest laboratory across all of mathematics for many such thresholds to be crossed. [^42]
 
 An alternative source of help becomes useful through gains the reader can examine. A difficult argument may be reduced, through checkable steps, to a particular unresolved lemma; a cited theorem can be checked in its original text and its hypotheses compared; a calculation can be reproduced by another method, with the assumptions varied. The remaining need for expert help becomes more definite and easier to take to another reader. Progress consists in a clearer account of what has been established and where uncertainty remains. A person can acquire greater command of an inquiry before becoming able to settle every question within it.
 
@@ -164,7 +164,7 @@ The Equational Theories Project demonstrates a concrete participation arrangemen
 
 A contributor can find a task, produce an inspectable result, receive review, and enter a shared project. Experts remain responsible for specifications, onboarding, and maintenance. Personal acquaintance need not bear the entire burden of establishing reliability. The project creates a route through which an unfamiliar participant’s work can become useful under demanding standards.
 
-A barrier defended by the cost of examining unfamiliar work requires a renewed justification when that cost falls. If the remaining cost no longer warrants the barrier, retaining it requires another reason that can be examined. A claim may still be wrong, unoriginal, poorly explained, or irrelevant to the project. Those grounds require their own assessment.
+A barrier defended by the cost of examining unfamiliar work needs renewed justification when that cost falls; if the remaining cost no longer warrants it, another reason is needed. A claim may still be wrong, unoriginal, poorly explained, or irrelevant to the project. Those grounds require their own assessment.
 
 The obligation works in both directions. Cheaper candidate arguments can make interpretation and review relatively scarcer, increasing reliance on familiar names. New requirements and additional resources may be justified when the burden rises. Reader assistance may make an initial examination easier without making complete verification cheap. Procedures should track the actual work required, rather than treating either technological enthusiasm or an inherited practice as sufficient justification.
 
@@ -220,7 +220,7 @@ Several forms of inspection should remain available. Fields with mature formal l
 
 Developing more evaluators is also an educational task. Tao’s account of AI-era mathematics connects understanding with responsibility, attribution, and education. The Leiden Declaration, endorsed by the IMU, joins these commitments with accessible participation and shared infrastructure. Their practical meaning lies in the work people become able to undertake: formulating questions, challenging claims, revising arguments, and helping others enter a subject. Funding, appointments, and project standards determine how far those commitments can be exercised. [^66] [^67]
 
-Entry materials develop competence; review makes claims examinable; accurate attribution preserves contributions; resources sustain the people doing this work. Each supplies something the others need. An invitation without reviewers can overwhelm a project. Checking without explanation can leave its results difficult to use. Praising maintenance without supporting it can erode the capacity on which the rest depends. The arrangements should be considered together because the mathematical activity depends on their cooperation.
+Entry materials develop competence; review makes claims examinable; accurate attribution preserves contributions; resources sustain the people doing this work. Each supplies something the others need. An invitation without reviewers can overwhelm a project. Checking without explanation can leave its results difficult to use. Praising maintenance without supporting it can erode the capacity on which the rest depends.
 
 ### 10 An inquiry with somewhere to go
 
@@ -397,6 +397,8 @@ A reader returns to a familiar integral and sees, this time, why a comparison co
 [^71]: [Voevodsky, *Motivic Cohomology Groups Are Isomorphic to Higher Chow Groups in Any Characteristic*](https://www.math.ias.edu/vladimir/sites/math.ias.edu.vladimir/files/motivic_cohomology_groups_are_isomorphic_published.pdf).
 
 [^72]: [Doran and collaborators, *Hypergeometric Decomposition of Symmetric K3 Quartic Pencils*, §§1.2–1.6](https://arxiv.org/html/1810.06254). The specified K3 families have a common hypergeometric factor with other factors that can differ; this does not identify their entire motives.
+
+[^73]: Falk Eisermann, [“A Golden Age? Monastic Printing Houses in the Fifteenth Century”](https://histoire.ens.psl.eu/IMG/pdf/print_culture_and_peripheries_in_early_modern_europe_print_culture_and_peripheries_in_early_modern_europe.pdf), in Benito Rial Costas (ed.), *Print Culture and Peripheries in Early Modern Europe* (Brill, 2013), pp. 37–67, especially pp. 65–67. Noel L. Brann, [“A Monastic Dilemma Posed by the Invention of Printing”](https://journals.uc.edu/index.php/vl/article/download/5268/4132/6945), *Visible Language* 13.2 (1979), pp. 150–167, especially pp. 151–157, on Trithemius’s copying argument, mixed library, 1494 edition, and advocacy of printing.
 
 ## Publication history
 

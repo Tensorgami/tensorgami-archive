@@ -14,12 +14,15 @@
       "Motivic mathematics",
       "Transport",
       "Descent",
-      "Reconstruction"
+      "Reconstruction",
+      "Permutation twisted cohomology",
+      "Tensor-triangular geometry"
     ],
     "mathematicalPractice": [
       "Study",
       "Explicit calculation",
-      "Exposition"
+      "Exposition",
+      "Research"
     ],
     "researchBackground": [
       "Group theory",
@@ -27,9 +30,13 @@
       "Additive combinatorics",
       "Geometric analysis"
     ],
+    "researchPapers": "https://tensorgami.com/papers.html",
     "researchArchive": "https://tensorgami.com/papers.html"
   },
   "selection": {
+    "currentResearch": [
+      "finite-generation-permutation-twisted-cohomology"
+    ],
     "papers": [
       "2607.01716",
       "2609.01690"
@@ -526,6 +533,26 @@
   ],
   "papers": [
     {
+      "id": "finite-generation-permutation-twisted-cohomology",
+      "year": 2026,
+      "status": "Preprint",
+      "title": "Finite generation of permutation twisted cohomology",
+      "authors": "Henry Shin",
+      "topic": "Representation theory · Tensor-triangular geometry",
+      "description": "Representation spheres give multigraded section rings for permutation modules. This paper proves a finite-module theorem over arbitrary commutative Noetherian bases and uses the doubled regular representation to construct an explicit Noetherian model for the tensor-triangular geometry of permutation complexes.",
+      "page": "/papers/finite-generation-permutation-twisted-cohomology.html",
+      "anchor": "paper-finite-generation-permutation-twisted-cohomology",
+      "repositoryUrl": "https://doi.org/10.5281/zenodo.23749631",
+      "repositoryLabel": "Zenodo v2",
+      "doi": "10.5281/zenodo.23749631",
+      "allVersionsUrl": "https://doi.org/10.5281/zenodo.23697585",
+      "pdf": "/pdfs/finite-generation-permutation-twisted-cohomology-v2.pdf",
+      "pageCount": 47,
+      "version": "2",
+      "versionDate": "2026-10-28",
+      "body": "content/research/finite-generation-permutation-twisted-cohomology.html"
+    },
+    {
       "id": "1903.09181",
       "year": 2020,
       "status": "Published",
@@ -716,6 +743,10 @@
       ],
       "related": [
         {
+          "slug": "what-sustains-mathematical-expertise",
+          "description": "What the value of mathematical understanding establishes about paid expertise, and how institutions can sustain independent capability."
+        },
+        {
           "slug": "when-a-description-becomes-a-verdict",
           "description": "A test for what a description determines, and a worked distinction between recovering groups and recovering their induced maps."
         },
@@ -752,7 +783,7 @@
       "subtitle": "Moral authority and the permanent defendant",
       "subject": "Institutions and intellectual life",
       "group": "mathematics-and-intellectual-life",
-      "order": 4,
+      "order": 5,
       "summary": "How accusations acquire institutional force, why scrutiny can become costly, and what makes consequential judgments open to challenge and correction.",
       "date": "2026-10-19",
       "manuscript": "content/essays/when-accountability-stops-being-reciprocal.md",
@@ -809,7 +840,7 @@
       "subtitle": "Prestige, incentives, and the reproduction of intellectual conformity",
       "subject": "Institutions and intellectual life",
       "group": "mathematics-and-intellectual-life",
-      "order": 5,
+      "order": 6,
       "summary": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment.",
       "date": "2026-10-19",
       "manuscript": "content/essays/the-performance-of-depth.md",
@@ -853,6 +884,10 @@
           "description": "How understanding and the means to pursue it develop through assistance, recognition, credit, and shared work."
         },
         {
+          "slug": "what-sustains-mathematical-expertise",
+          "description": "What the value of mathematical understanding establishes about paid expertise, and how institutions can sustain independent capability."
+        },
+        {
           "slug": "when-accountability-stops-being-reciprocal",
           "description": "How consequential institutional judgments remain open to challenge, review, and correction."
         },
@@ -860,7 +895,8 @@
           "slug": "when-a-description-becomes-a-verdict",
           "description": "What an abbreviated description establishes, and where a further judgment needs substantive comparison."
         }
-      ]
+      ],
+      "pdf": "/assets/essays/the-performance-of-depth.pdf"
     },
     {
       "slug": "what-a-new-proof-makes-possible",
@@ -1052,6 +1088,63 @@
       ],
       "group": "film-and-interpretation",
       "order": 1
+    },
+    {
+      "slug": "what-sustains-mathematical-expertise",
+      "published": true,
+      "title": "What Sustains Mathematical Expertise",
+      "subtitle": "Understanding, employment, and independent capability",
+      "subject": "Institutions and intellectual life",
+      "summary": "How the value of mathematical understanding connects to paid expertise, and what arrangements can sustain the independent capabilities on which mathematical life depends.",
+      "date": "2026-10-28",
+      "manuscript": "content/essays/what-sustains-mathematical-expertise.md",
+      "body": "content/essays/what-sustains-mathematical-expertise.html",
+      "page": "/essays/what-sustains-mathematical-expertise.html",
+      "pdf": "/assets/essays/what-sustains-mathematical-expertise.pdf",
+      "source": "/assets/essays/what-sustains-mathematical-expertise.md",
+      "sourceLabel": "Markdown source",
+      "group": "mathematics-and-intellectual-life",
+      "order": 4,
+      "sections": [
+        {
+          "id": "the-occupation-is-a-bundle",
+          "title": "The occupation is a bundle"
+        },
+        {
+          "id": "changing-technical-contributions",
+          "title": "Changing technical contributions"
+        },
+        {
+          "id": "what-human-participation-adds",
+          "title": "What human participation adds"
+        },
+        {
+          "id": "from-demand-to-a-livelihood",
+          "title": "From demand to a livelihood"
+        },
+        {
+          "id": "sustaining-independent-capability",
+          "title": "Sustaining independent capability"
+        },
+        {
+          "id": "a-larger-mathematical-life",
+          "title": "A larger mathematical life"
+        },
+        {
+          "id": "notes-and-sources",
+          "title": "Notes and sources"
+        }
+      ],
+      "related": [
+        {
+          "slug": "mathematical-life-in-the-age-of-ai",
+          "description": "How understanding develops through assistance, shared work, and the institutional means to continue an inquiry."
+        },
+        {
+          "slug": "the-performance-of-depth",
+          "description": "How credentials, performance measures, prestige, and research incentives can reproduce academic authority while weakening independent judgment."
+        }
+      ]
     }
   ],
   "gaming": [],

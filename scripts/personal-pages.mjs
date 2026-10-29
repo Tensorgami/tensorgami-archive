@@ -1,9 +1,10 @@
 import {readFileSync} from 'node:fs';
 import {reconstructionExample} from './reading-guides.mjs';
 import {currentExpositions} from './current-expositions.mjs';
+import {currentResearchFeature} from './research-pages.mjs';
 import {groupCurrentEssays} from './essay-groups.mjs';
 
-export function renderPersonalPages({save,heading,esc,notes,selectedNotes,featuredNotes,selectedPapers,papers,essays,gaming,noteLinks,interests={}}) {
+export function renderPersonalPages({save,heading,esc,notes,selectedNotes,featuredNotes,selectedPapers,papers,currentResearch,essays,gaming,noteLinks,interests={}}) {
   const published = papers.filter(p=>p.status==='Published');
   const compactOverwatch = interests.overwatch?.published===true;
   const broodWar = interests.broodWar?.published===true;
@@ -49,15 +50,16 @@ export function renderPersonalPages({save,heading,esc,notes,selectedNotes,featur
     </section>
     <div class="home-reconstruction-example">${reconstructionExample}</div>
     ${currentExpositions({featuredNotes,esc,showCatalogueLink:true,homepage:true})}
-${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays on understanding and judgment"><div class="feature-label"><p class="eyebrow">Understanding<br>and judgment</p><a class="inline-link" href="/essays.html">Essays</a></div><div class="home-essay-copy"><p class="home-essay-orientation">Begin with a comparison of familiar proofs. The companion essays turn to the scope of judgment, intellectual life in the age of AI, institutional accountability, the historical conditions of research, and film interpretation.</p><p class="collection-reading-guide"><a href="/mechanisms.html#essays-and-expositions">Reading between the expositions and essays</a></p><p class="eyebrow essay-feature-label">Featured essay</p>${essayCard(featuredEssay)}<div class="essay-companions" aria-label="Companion essays"><p class="eyebrow">Companion essays</p>${orderedEssays.filter(e=>e!==featuredEssay).map(essayCompanion).join('')}</div></div></section>`:''}
+    ${currentResearchFeature(currentResearch,esc)}
+${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays on understanding and judgment"><div class="feature-label"><p class="eyebrow">Understanding<br>and judgment</p><a class="inline-link" href="/essays.html">Essays</a></div><div class="home-essay-copy"><p class="home-essay-orientation">Begin with a comparison of familiar proofs, then choose a companion essay on understanding, judgment, or intellectual life.</p><p class="collection-reading-guide"><a href="/mechanisms.html#essays-and-expositions">Reading between the expositions and essays</a></p><p class="eyebrow essay-feature-label">Featured essay</p>${essayCard(featuredEssay)}<div class="essay-companions" aria-label="Companion essays"><p class="eyebrow">Companion essays</p>${orderedEssays.filter(e=>e!==featuredEssay).map(essayCompanion).join('')}</div></div></section>`:''}
     <section class="expositions-preview" aria-labelledby="selected-writing"><div class="section-head"><h2 id="selected-writing">The wider mathematical library</h2><a href="/expositions.html">All expositions</a></div>
       <p class="collection-description home-library-intro">Proofs, constructions, and worked examples across algebra, geometry, number theory, and analysis.</p>
       <div class="home-writing home-expositions">${widerNotes.map(n=>`<article class="writing"><p class="meta">${esc(n.topic)}</p><h3><a href="${n.page}">${esc(n.title)}</a></h3><p>${esc(n.summary)}</p>${noteLinks(n)}</article>`).join('')}</div>
     </section>
     <section class="reading-invitation"><div><h2>Find a route through the writing.</h2><p>Follow the shared examples between expositions and essays, or choose a shorter path through polynomial composition, exact arithmetic and analysis. The four main exposition routes state their background and useful stopping points.</p></div><a href="/mechanisms.html">Explore the reading paths</a></section>
-    <section class="home-secondary" aria-label="About, archive, and interests">
+    <section class="home-secondary" aria-label="About, research, and interests">
       <div><h2><a href="/about.html">About Henry Shin</a></h2><p>Current studies, mathematical practice, and correspondence.</p></div>
-      <div><h2><a href="/papers.html">Research archive</a></h2><p>Papers and preprints from earlier work in algebra, combinatorics, and geometric analysis.</p></div>
+      <div><h2><a href="/papers.html">Research papers</a></h2><p>Current research and earlier papers, with versions, publication details, and corrections.</p></div>
       <div><h2><a href="/interests.html">Other interests</a></h2><p>${broodWar?`Patterns on large twisty cubes and notes on playing ${esc(gameList)}.`:compactOverwatch?'Patterns on large twisty cubes and a few notes on playing Overwatch.':'Patterns on large twisty cubes, built from commutators and move sequences.'}</p></div>
     </section>
   `);
@@ -73,8 +75,9 @@ ${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays
       <p><a href="/notes/what-a-boundary-map-can-prove.html"><em>What a Boundary Map Can Prove</em></a> follows another, from a graph’s boundary map to derived gluing, Hodge inequalities, and the motivic Galois symmetries of an elliptic attachment.</p>
       <p><a href="/notes/what-a-derivative-retains.html"><em>What a Derivative Retains</em></a> begins with rectangle strips and oriented boundaries, then asks what infinitesimal geometry and homotopical calculus retain.</p>
       <p><a href="/notes/quotients-and-reconstruction.html"><em>Quotients, Refinement, and Reconstruction</em></a> begins with elementary algebraic maneuvers, derives composition-factor invariance from a common comparison construction, and asks what extension data a list of factors forgets. The <a href="/mechanisms.html#connected-expositions">shared reading guide</a> connects the four studies through specific calculations and their prerequisites.</p>
+      <p><a href="/papers/finite-generation-permutation-twisted-cohomology.html"><em>Finite generation of permutation twisted cohomology</em></a> proves a finite-module theorem for representation-sphere section rings and applies it to the geometry of permutation complexes.</p>
       <h2>Earlier research</h2>
-      <p>The <a href="/papers.html">research archive</a> collects earlier work in group theory, algebra, additive combinatorics, and geometric analysis, with papers, preprints, publication details, and corrections.</p>
+      <p>The <a href="/papers.html#earlier-research">research collection</a> also includes earlier work in group theory, algebra, additive combinatorics, and geometric analysis, with papers, preprints, publication details, and corrections.</p>
       ${essays.length?'<h2 id="writing-and-intellectual-life">Writing and intellectual life</h2>':''}
       ${proofEssay?`<p><a href="${essayPath(proofEssay)}"><em>${esc(proofEssay.title)}</em></a> compares what different arguments make available: constructions, quantitative bounds, and routes to further questions.</p>`:''}
       ${verdictEssay?`<p><a href="${essayPath(verdictEssay)}"><em>${esc(verdictEssay.title)}</em></a> asks what a comparison must preserve to support a judgment about a contribution.</p>`:''}
@@ -88,12 +91,12 @@ ${essays.length?`<section class="home-essay" id="home-essays" aria-label="Essays
       ${visionEssay?`<p>The <a href="/essays.html">essays</a> also include film interpretation. <a href="${essayPath(visionEssay)}"><em>${esc(visionEssay.title)}</em></a> examines the relationship between knowledge, belief, and political allegiance in Villeneuve’s <em>Dune</em>.</p>`:''}
       <h2>Other pursuits</h2>
       <p>I make <a href="/play/cube-patterns.html">patterns on large twisty cubes</a>, working out move sequences with commutators. ${broodWar?`I also play StarCraft: ${esc(gameList)}. My <a href="/interests.html">Interests page</a> brings together photographs, game recordings, and a few notes on what I enjoy about these pursuits.`:compactOverwatch?'My <a href="/interests.html">Interests page</a> also includes a few notes on playing Overwatch.':'Photographs are collected in the <a href="/play/cube-patterns.html">cube gallery</a>.'}</p>
-      <h2>Correspondence</h2><p>If something here connects with your work—or if you spot a point that could be clearer—I’d be glad to hear from you.</p><p><a href="mailto:hkshin@alumni.harvard.edu">hkshin@alumni.harvard.edu</a></p>
+      <h2>Correspondence</h2><p>If something here connects with your work—or if you spot a point that could be clearer—I’d be glad to hear from you.</p><p><a href="mailto:hkshin@gmail.com">hkshin@gmail.com</a></p>
     </div><aside class="about-links"><h2>Elsewhere</h2><ul><li><a href="https://orcid.org/0009-0000-6453-6865">ORCID</a></li><li><a href="https://math.stackexchange.com/users/268083/henry-shin">Mathematics Stack Exchange</a></li>${interests.youtube?`<li><a href="${esc(interests.youtube.url)}">YouTube · cube patterns and games</a></li>`:''}</ul></aside></div>`);
 
   if(essays.length)save('/essays.html','Essays','Essays by Henry Shin on understanding, independent inquiry, and the scope of authority, from mathematics in the age of AI to Villeneuve’s Dune.','Essays',
     heading('Understanding and judgment','Essays','What knowledge makes possible, what authority it warrants, and how people remain free to choose their purposes.')+
-    `<p class="landing-orientation">Each essay can be read independently. The first group moves from comparing proofs to the scope of judgment, the conditions of inquiry, institutional accountability, and the historical reproduction of academic authority. Film interpretation offers a separate route.</p><nav class="text-links landing-reading-choices" aria-label="Ways into the essays"><a href="#mathematics-essays">Mathematics and intellectual life</a><a href="#interpretation-essays">Film and interpretation</a><a href="/mechanisms.html#essays-and-expositions">Reading paths through essays and expositions</a></nav>`+
+    `<p class="landing-orientation">Each essay can be read independently. The sequence begins with mathematical arguments and moves toward the conditions and institutions of inquiry. Film interpretation offers a separate route.</p><nav class="text-links landing-reading-choices" aria-label="Ways into the essays"><a href="#mathematics-essays">Mathematics and intellectual life</a><a href="#interpretation-essays">Film and interpretation</a><a href="/mechanisms.html#essays-and-expositions">Reading paths through essays and expositions</a></nav>`+
     `<div class="essay-library">${essayGroups.filter(group=>group.essays.length).map(group=>`<section class="essay-group" aria-labelledby="${group.headingId}"><h2 id="${group.headingId}" class="essay-group-label">${esc(group.label)}</h2>${group.essays.map(e=>essayCard(e,'h3')).join('')}</section>`).join('')}</div>`);
   for (const e of essays) {
     const body = essayText(e);

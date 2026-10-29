@@ -1,62 +1,62 @@
 {
-  "edition": "Tensorgami version 121",
-  "source_commit": "cf0756927115020b5b28e1d0e48db7deacd21f5c",
-  "verified_at": "2026-10-23T16:32:17.388387+00:00",
-  "origin": "https://tensorgami.com",
-  "files_checked": 183,
-  "html_files_checked": 42,
-  "non_html_files_checked": 141,
-  "all_files_match_source": true,
-  "html_comparison": "Exact UTF-8 bytes after removing only script elements containing both window.__CF$cv$params= and /cdn-cgi/challenge-platform/. No other normalization. Non-HTML files compared without normalization.",
-  "raw_equal_count": 141,
-  "hosting_injection_count": 42,
-  "excluded_nonpublic_placeholders": [
-    "pdfs/analysis/.gitkeep",
-    "pdfs/combinatorics/.gitkeep"
-  ],
-  "pdfs_checked": 20,
-  "zip_archives_checked": 8,
-  "zip_integrity_passed": true,
-  "stable_exposition": {
-    "protected_files_checked": 75,
-    "unchanged_against_pre_cleanup_baseline": true,
-    "downloads": [
-      {
-        "path": "pdfs/algebra/Quotients_Refinement_and_Reconstruction.pdf",
-        "sha256": "dcc9120795b78e227b0711f5b72139e326e6c3b8d75595d6c14c5ec5922a50bb",
-        "matches_source": true
-      },
-      {
-        "path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
-        "sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
-        "matches_source": true
-      }
-    ]
-  },
-  "canonical_source_unchanged": true,
-  "canonical_files_checked": 448,
-  "scope": "Publication identity and archive-integrity verification. No theorem certification, new proof audit, external-link audit, or browser visual review.",
+  "schema_version": 2,
   "passed": true,
-  "archival_documentation": {
-    "native_readme_corrected": true,
-    "archival_source": {
-      "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
-      "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
-      "source_directory": "archive/reader-sources/quotients-and-reconstruction",
-      "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
-      "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
-      "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
-      "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
-      "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
-      "bytes": 97091,
-      "readme_only_change": true,
-      "changed_members": [
-        "quotients-and-reconstruction/README.md"
-      ],
-      "unchanged_tex_inputs": 16,
-      "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
-    },
-    "all_original_website_files_unchanged": true,
-    "scope": "Live-file comparisons and canonical stable-file counts above refer to unchanged website bytes. In the archival source copy, one native README is intentionally corrected; mathematical source files are unchanged."
+  "verified_at_utc": "2026-10-29T00:39:07.193122+00:00",
+  "edition": "2026-10-29.1",
+  "site_version": 128,
+  "source_commit": "dfa938e69d60fe26b2dc830734b2c8ff1678f85e",
+  "files_checked": 189,
+  "classification_counts": {
+    "historical_redirect_stub_and_destination_verified": 4,
+    "hosting_html_matches_after_removing_known_cloudflare_injection": 40,
+    "canonical_bytes_exact": 145
+  },
+  "canonical_file_bytes_exact_response_count": 145,
+  "hosting_html_after_documented_injection_removal_count": 40,
+  "historical_redirect_stub_and_destination_verified_count": 4,
+  "raw_response_byte_identity_count": 145,
+  "documented_cloudflare_injection_count": 44,
+  "all_live_response_bytes_identical_to_requested_canonical_file": false,
+  "all_canonical_file_bytes_recovered_after_documented_injection_removal": true,
+  "all_responses_match_canonical_or_verified_redirect_destination": true,
+  "html_pages": 44,
+  "pdfs": 23,
+  "zips": 8,
+  "known_hosting_body_transformations": [
+    {
+      "name": "cloudflare_challenge_platform_script_injection",
+      "scope": "HTML responses only",
+      "rule": "Remove exactly one script containing /cdn-cgi/challenge-platform/scripts/jsd/main.js only when its entire template matches the recorded SHA-256 after replacing the ray-id and base64 timestamp fields.",
+      "fixed_template_sha256": "2b8d84cf00c02519bc9b368f185ec1b7c46ae1ec9d01dedf7004cdca28ef5fed",
+      "does_not_assert_raw_html_byte_identity": true
+    }
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "scope": "Website preservation and source correspondence. No new theorem certification, PDF regeneration, or Lean compilation.",
+  "source_rebuild": {
+    "verdict": "PASS",
+    "dist_files": 191,
+    "served_files": 189,
+    "dist_byte_identical": true,
+    "source_only_adaptations": 9
+  },
+  "original_website_source_zip_unchanged": true,
+  "archival_reader_variant": {
+    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
+    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.1/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
+    "source_directory": "archive/reader-sources/quotients-and-reconstruction",
+    "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
+    "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "original_live_url": "https://tensorgami.com/tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
+    "published_original_sha256": "e4a0a7ebf641186ccf286f16ccf1c31dda25ec5df096aeadf14dbb494557c502",
+    "sha256": "5e7ce0a871f546372ab55cd2ed43024e7fac96cbb969b9fe2a5a127a3de08507",
+    "bytes": 97091,
+    "readme_only_change": true,
+    "changed_members": [
+      "quotients-and-reconstruction/README.md"
+    ],
+    "unchanged_tex_inputs": 16,
+    "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
   }
 }

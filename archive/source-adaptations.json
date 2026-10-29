@@ -1,11 +1,13 @@
 {
-  "edition": "2026-10-23.2",
+  "edition": "2026-10-29.1",
+  "source_site_version": 128,
+  "source_snapshot_commit": "dfa938e69d60fe26b2dc830734b2c8ff1678f85e",
   "published_files_changed": false,
   "source_only_changes": [
     {
       "path": "content/essays.json",
-      "canonical_sha256": "7678a7643383ab4f12209deb7414b7e53ecb0deb9d25f1b0a7bd602695136000",
-      "archived_sha256": "0311d5276658af684f5b988ba3b570c8c7accb75bfbafb10f7f63df950a8addf",
+      "canonical_sha256": "c0193e6c9a692d00690dd0ef59f9a2c752ee941f06cff8e6cc05468c9f06caac",
+      "archived_sha256": "c753ea271b25a37c28e593b303de571f00fa5b1515ee701accff24c949dbac66",
       "reason": "Remove unpublished essay record."
     },
     {
@@ -28,14 +30,14 @@
     },
     {
       "path": "scripts/render.mjs",
-      "canonical_sha256": "71395f6a6be7634f0564b3329b2cc92449de216a0fdd4d389250e35b91415725",
-      "archived_sha256": "01a2fac9ab06a51f131dfc8bf9c25b4604dfa2e47ea0f861e5a1abef5e6233e8",
+      "canonical_sha256": "16324778da786fd4c42af4aa99fc92942130f7a48e98d24893ba838853f1ca7c",
+      "archived_sha256": "0400f6dccd5d6cb6d5f1fe311c2241c0a42fc7ef1fb10723e25297dc93459cc9",
       "reason": "Treat absent private collections as unpublished in sanitized metadata."
     },
     {
       "path": "scripts/check.mjs",
-      "canonical_sha256": "a1ae94e09b5b5b881269ea59b229f2ecdc4ea2505823751b7a6b15aae1113c20",
-      "archived_sha256": "247eaea2e2d5459755b1b49c1b64f7e9c4be18a22bf104d0d9fa4bbcbb1d1879",
+      "canonical_sha256": "5e077f6682f27addb4b62ed1f7aa4639a48c55399e37b955f5ae2f1f3c5ab9aa",
+      "archived_sha256": "18156399014d3d0e6b7d3b134d4d1f3e413b8dc591881f99199023b6c1bcd8f6",
       "reason": "Check compact public screenshot metadata without retaining hidden detailed game records; treat absent car as unpublished."
     },
     {
@@ -54,13 +56,12 @@
       "path": "content/expositions/quotients-and-reconstruction-pdf/README.md",
       "canonical_sha256": "ee29bd41bf9424d3d9b7839c795e86a9996c495050ea6c569ac338bb96cebea5",
       "archived_sha256": "8f3f41f7d446f8a03a73365443de9d4e01e571f80ed0e5020d3482cd45560c80",
-      "reason": "Authorized archival README correction: full web reading edition, current published PDF hash, current proof-notes link title; mathematical inputs and canonical website source untouched."
+      "reason": "Carry forward the reviewed 2026-10-23.2 archival README correction; the canonical README and all mathematical inputs remain unchanged."
     }
   ],
-  "scope": "Public-only metadata and two converter dependency-path adaptations are retained. This edition adds two archival README corrections and a separately named reader-source variant; every served website file remains exact.",
   "reader_source_addition": {
-    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
-    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-23.2/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-23.2.zip",
+    "release_file": "Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
+    "release_url": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.1/Quotients_Refinement_and_Reconstruction-archival-source-2026-10-29.1.zip",
     "source_directory": "archive/reader-sources/quotients-and-reconstruction",
     "mainpackage_source_directory": "reader-source/quotients-and-reconstruction",
     "original_site_path": "tex/algebra/Quotients_Refinement_and_Reconstruction.zip",
@@ -74,5 +75,6 @@
     ],
     "unchanged_tex_inputs": 16,
     "scope": "Separately named archival native-source ZIP with corrected README; original website ZIP and mathematical inputs are unchanged."
-  }
+  },
+  "scope": "Public-only metadata filters and portable converter dependency lookups preserve every current generated website byte. The reviewed archival native README and separate reader-source documentation from the preceding immutable public edition are carried forward; the original live source ZIP remains exact."
 }

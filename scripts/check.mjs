@@ -286,6 +286,6 @@ for(const sourceAsset of publicAssets){
 for(const note of notes)for(const url of [note.pdf,note.tex,note.source,note.sourceArchive].filter(Boolean)){
   if(/^\/(pdfs|tex|formalizations)\//.test(url)&&!existsSync(path.join('public',url)))errors.push(`${note.slug}: retained asset has no public source: ${url}`);
 }
-if(notes.length!==16||papers.filter(p=>p.status==='Preprint').length!==9||papers.filter(p=>p.status==='Published').length!==1)errors.push('Unexpected content counts');
+if(notes.length!==16||papers.filter(p=>p.status==='Preprint').length!==10||papers.filter(p=>p.status==='Published').length!==1)errors.push('Unexpected content counts');
 const banned=files.filter(p=>/(?:\.lake|node_modules|deploy-state|\.env|\.git)(?:[\\/]|$)/.test(p));if(banned.length)errors.push('Non-public paths in dist');
 console.log(JSON.stringify({origin,indexable,htmlPages:html.length,sitemapPages:sitemapUrls.length,localReferences:checked,pdfFiles:pdfs.length,papers:papers.length,essays:essays.length,gaming:gaming.length,puzzles:puzzles.length,publicPhotoFiles:publicPhotos.length,retainedPublicAssets:publicAssets.length,errors},null,2));if(errors.length)process.exit(1);

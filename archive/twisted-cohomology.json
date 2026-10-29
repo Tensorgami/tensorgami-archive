@@ -1,0 +1,22 @@
+{
+  "title": "Finite generation of permutation twisted cohomology",
+  "author": "Henry Shin",
+  "version": "v2",
+  "version_doi": "https://doi.org/10.5281/zenodo.23749631",
+  "concept_doi": "https://doi.org/10.5281/zenodo.23697585",
+  "zenodo_publication_date": "2026-10-28",
+  "pages": 47,
+  "bytes": 606692,
+  "sha256": "21f2e427c9ae38320d6f4c0c4d385dfe58c601931f8fa5dc022583e6a8346caf",
+  "site_pdf": "pdfs/finite-generation-permutation-twisted-cohomology-v2.pdf",
+  "release_pdf": "https://github.com/Tensorgami/tensorgami-archive/releases/download/2026-10-29.1/finite-generation-permutation-twisted-cohomology-v2.pdf",
+  "live_and_zenodo_pdf_byte_identity_verified_at_utc": "2026-10-29T00:36:14.904249+00:00",
+  "prior_version": {
+    "version": "v1.0.0",
+    "version_doi": "https://doi.org/10.5281/zenodo.23697586",
+    "github_release": "https://github.com/Tensorgami/finite-generation-permutation-twisted-cohomology/releases/tag/v1.0.0",
+    "github_published_at": "2026-10-27T16:52:54Z",
+    "sha256": "4eb4f812a39b9f4a4bc4aebe5e03155ac536bd926701f8a8120135be53a0e282"
+  },
+  "scope": "This archive preserves the exact public v2 PDF. No editable manuscript is claimed for this PDF. Prior version records remain separate; this new release does not replace their earlier disclosure evidence."
+}

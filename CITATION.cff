@@ -6,8 +6,8 @@ authors:
   - family-names: Shin
     given-names: Henry
     orcid: "https://orcid.org/0009-0000-6453-6865"
-version: "2026-10-23.2"
-date-released: 2026-10-23
-url: "https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-23.2"
+version: "2026-10-29.1"
+date-released: 2026-10-29
+url: "https://github.com/Tensorgami/tensorgami-archive/releases/tag/2026-10-29.1"
 repository-code: "https://github.com/Tensorgami/tensorgami-archive"
 license: "LicenseRef-All-Rights-Reserved"

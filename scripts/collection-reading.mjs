@@ -4,6 +4,7 @@ const notePage=slug=>`/notes/${slug}.html`;
 const proof='what-a-new-proof-makes-possible';
 const verdict='when-a-description-becomes-a-verdict';
 const life='mathematical-life-in-the-age-of-ai';
+const expertise='what-sustains-mathematical-expertise';
 const accountability='when-accountability-stops-being-reciprocal';
 const performance='the-performance-of-depth';
 const dune='the-authority-of-a-vision';
@@ -11,7 +12,7 @@ const fourier='fourier-symmetry-and-reconstruction';
 const boundary='what-a-boundary-map-can-prove';
 const derivative='what-a-derivative-retains';
 
-export const readingGuideIndex=`<nav class="reading-guide-index text-links" aria-label="Reading guide sections"><a href="#connected-expositions">Start with mathematics</a><a href="#essays-and-expositions">Expositions and essays</a><a href="#fourier-routes-title">Fourier routes</a><a href="#boundary-map-routes-title">Boundary Map routes</a><a href="#derivative-routes-title">Derivative routes</a><a href="#quotients-and-reconstruction">Quotients and factors</a><a href="#wider-reading">Other routes</a></nav>`;
+export const readingGuideIndex=`<nav class="reading-guide-index text-links" aria-label="Reading guide sections"><a href="#connected-expositions">Start with mathematics</a><a href="#essays-and-expositions">Expositions and essays</a><a href="#fourier-routes-title">Fourier routes</a><a href="#boundary-map-routes-title">Boundary Map routes</a><a href="#derivative-routes-title">Derivative routes</a><a href="#quotients-and-reconstruction">Quotients and factors</a><a href="#current-research">Current research</a><a href="#wider-reading">Other routes</a></nav>`;
 
 export function essayExpositionPaths(essays,notes,esc) {
   const essayLink=(slug,anchor='',label='')=>{
@@ -21,11 +22,12 @@ export function essayExpositionPaths(essays,notes,esc) {
   };
   for(const slug of [fourier,boundary,derivative])if(!notes.some(n=>n.slug===slug))throw Error(`Missing reading-guide exposition: ${slug}`);
   return `<section class="reading-path collection-connections" aria-labelledby="essays-and-expositions"><h2 id="essays-and-expositions">From mathematical examples to understanding and judgment</h2>
-    <p>The expositions make calculations and their retained structure explicit. The essays ask what an argument makes available, what a description warrants, how people acquire the means to continue an inquiry, how judgments remain open to correction, and how professional authority reproduces itself. Each essay can be read independently; together they develop these different questions.</p>
+    <p>The expositions develop the calculations. This route moves from mathematical comparisons to the conditions of inquiry and its institutions. Each essay can be read independently.</p>
     <ol class="essay-reading-sequence">
       <li>${essayLink(proof)} asks what another proof makes possible when its conclusion is already known: a procedure, an estimate, a generalization, or a reusable mechanism.</li>
       <li>${essayLink(verdict)} asks whether a description retains enough information for the particular conclusion drawn from it. Its mathematical comparisons prepare a discussion of explanation, expertise, and the scope of judgment.</li>
       <li>${essayLink(life)} asks how understanding is cultivated and sustained, and how assistance, institutions, credit, and shared work affect the freedom to inquire. Its account of intellectual life develops its own evidence and arguments.</li>
+      <li>${essayLink(expertise)} asks what continuing human understanding can support in paid roles and institutions, and how independent expertise is renewed when fewer experts are needed in individual encounters.</li>
       <li>${essayLink(accountability)} asks what happens when challenging a moral judgment becomes evidence against the challenger, and what permits scrutiny and correction. It draws on institutional cases, organizing testimony, and research on accountability.</li>
       <li>${essayLink(performance)} traces how credentials, performance measures, prestige, and research incentives acquire institutional force, and how they can reproduce intellectual conformity over time. Its historical argument distinguishes the movement of research resources from the movement of independent judgment.</li>
     </ol>
@@ -53,7 +55,9 @@ export function expositionEssayLinks(slug,essays,esc) {
 
 export const widerReading=`<section class="reading-path" aria-labelledby="wider-reading"><h2 id="wider-reading">Other routes through the site</h2><ul>
   <li><a href="/expositions.html">Browse the full mathematical library</a>, or follow the shorter paths through <a href="#polynomial-structure">polynomial composition</a>, <a href="#exact-arithmetic">exact arithmetic</a>, and <a href="#controlling-exceptional-sets">analysis</a>.</li>
-  <li><a href="/verification.html">Supplementary sources</a> collect formalization files and their scope notes. The <a href="/papers.html">research archive</a> records earlier papers and preprints with their publication details and corrections.</li>
+  <li><a href="/verification.html">Supplementary sources</a> collect formalization files and their scope notes. The <a href="/papers.html">research papers</a> include current work in permutation twisted cohomology and earlier papers, with versions, publication details, and corrections.</li>
   <li><a href="/interests.html">Interests</a> offers personal pursuits, with its own entries and photographs. These can be explored independently of the mathematical and essay routes.</li>
   <li><a href="/about.html">About</a> introduces the current inquiry, writing, background, and correspondence.</li>
   </ul></section>`;
+
+export const currentResearchPath=`<section class="reading-path" id="current-research"><p class="eyebrow">Current research</p><h2>A cyclic entry point</h2><p>Begin with the cyclic example in <a href="/papers/finite-generation-permutation-twisted-cohomology.html#reading-the-paper"><em>Finite generation of permutation twisted cohomology</em></a> and <a href="/pdfs/finite-generation-permutation-twisted-cohomology-v2.pdf#page=19">Example 6.4</a>. <a href="/notes/quotients-and-reconstruction.html#section-10">Quotients §10</a> studies nilpotent operators; <a href="/notes/what-a-derivative-retains.html#arithmetic-derivative">Derivative §6</a> gives a companion calculation with a derived fiber. The full paper uses modular representation theory and tensor-triangular geometry.</p></section>`;

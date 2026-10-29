@@ -12,8 +12,6 @@ This possibility explains a recognizable discrepancy. Someone possesses formidab
 
 The discrepancy becomes historically significant when institutions reward and reproduce it. A profession can develop increasingly effective ways of recognizing the public signs of intellectual achievement while making advancement less dependent on the understanding those signs are supposed to indicate.
 
-The resulting academic may be intelligent, hardworking, and technically accomplished. The limitation lies in the relationship between their abilities and the judgments directing them. They can execute difficult operations without being comparably capable of examining their purpose, scope, assumptions, or possible failure.
-
 Call this **academic shallowness: the possession of intellectual equipment without a corresponding capacity to examine and defend the judgments governing its use**.
 
 Serious inquiry depends on questions, methods, and standards received from others. Depth appears in the ability to understand why those inheritances deserve allegiance, recognize their limits, and revise them when the subject requires it. It can be expressed through a new theory, a careful replication, an improved instrument, or the discovery that an impressive claim rests on a mistake.
@@ -80,9 +78,9 @@ John Meyer and Brian Rowan described a general organizational mechanism behind t
 
 An author’s standing can influence assessment of the work itself.
 
-In a preregistered experiment, reviewers assessed the same finance manuscript under different author identities: a Nobel laureate, a relatively unknown researcher, or no named author. Among the conditions using anonymous invitations, approximately 23 percent recommended rejection when the prominent author was shown, compared with 48 percent for the anonymous manuscript and 65 percent when the less-known author was shown. The text remained the same; its reception changed markedly with the name attached to it.<sup id="citation-11-1"><a href="#note-11" role="doc-noteref" aria-label="Note 11">[11]</a></sup>
+In a preregistered finance-journal experiment, reviewers recruited through anonymous invitations assessed the same manuscript under a Nobel laureate’s name, a relatively unknown researcher’s name, or no name. The text remained the same; reviewers were less likely to recommend rejection when it carried the prominent name.<sup id="citation-11-1"><a href="#note-11" role="doc-noteref" aria-label="Note 11">[11]</a></sup>
 
-Reputation can carry useful information. The experiment establishes that author identity can influence the assessment of identical work. It exposes the danger of allowing a favorable expectation about an author to perform the work of examining the present argument.
+Reputation can carry useful information. The danger is allowing a favorable expectation about an author to perform the work of examining the present argument.
 
 Funding can make an early difference cumulative. In a study of Dutch early-career grants, applicants just above the funding threshold accumulated more than twice as much subsequent research funding over eight years as applicants just below it, excluding the initial award. Their initial evaluations had been nearly identical. Early success nevertheless opened a growing institutional gap, through both subsequent evaluation and differences in willingness to enter further competitions.<sup id="citation-12-1"><a href="#note-12" role="doc-noteref" aria-label="Note 12">[12]</a></sup>
 
@@ -152,11 +150,7 @@ The historical conclusion concerns how the documented changes alter that distrib
 
 My judgment is that their interaction has probably increased the influence of intellectually dependent habits and of people especially successful at accommodating them.
 
-A research culture can become more hospitable to the accomplished academic who knows how to succeed within prevailing standards than to the investigator prepared to examine whether those standards are directing attention well. Success at satisfying the profession then helps confer the power to decide what the profession should reward.
-
 This can transform capable people as well as favor compatible ones. A researcher begins with independent ambitions, then acquires students, obligations, a laboratory, and a public identity. An unfamiliar direction threatens the machinery supporting both the researcher and others. Responsibilities produced by success narrow the freedom through which the success originally arose.
-
-A culture need not replace talented people with untalented ones to become less intellectually independent. It can make independent judgment increasingly difficult to exercise, while granting authority to those most successful at operating within the resulting constraints.
 
 <a id="where-inquiry-can-continue"></a>
 ## Where inquiry can continue
@@ -198,8 +192,6 @@ What gives the institutional problem its force is the capacity of recognition to
 
 Several mechanisms strengthening this sequence have become more consequential across important parts of modern academia. Their effects need not appear as declining intelligence or technical ability. They can appear in questions left unasked, risks made professionally unaffordable, and judgments that advancement teaches people to leave alone.
 
-That is how the performance of depth acquires power. The profession continues to produce sophisticated work while becoming more capable of rewarding people whose authority exceeds their independence of judgment. The forms of intellectual life remain impressive; the willingness and freedom to examine their purposes become less securely connected to success.
-
 **Modern academia’s deepest danger is that it can reproduce the signs of intellectual achievement more reliably than it reproduces the judgment that makes those achievements worth having.** Its records deserve examination as records of real work. They cannot perform the further act of judgment on which their authority ultimately depends.
 
 <a id="notes-and-sources"></a>
@@ -227,7 +219,7 @@ The historical argument distinguishes dated institutional changes, studies of me
 
 10. <a id="note-10"></a>John W. Meyer and Brian Rowan. [Institutionalized Organizations: Formal Structure as Myth and Ceremony](https://doi.org/10.1086/226550). *American Journal of Sociology* 83(2): 340–363 (1977). Organizational theory explaining how recognized formal structures secure legitimacy and resources while becoming decoupled from ongoing activity. Its application to the relationship between academic performance and understanding is the essay’s interpretation. <span class="citation-backlinks"><a href="#citation-10-1" role="doc-backlink" aria-label="Return to citation 10, occurrence 1">↩</a></span>
 
-11. <a id="note-11"></a>Jürgen Huber, Sabiou Inoua, Rudolf Kerschbamer, Christian König-Kersting, Stefan Palan, and Vernon L. Smith. [Nobel and novice: Author prominence affects peer review](https://www.pnas.org/doi/10.1073/pnas.2205779119). *Proceedings of the National Academy of Sciences* 119(41): e2205779119 (2022). Preregistered field experiment presenting an identical finance manuscript under different author identities. The rejection percentages quoted in the essay refer to the conditions with anonymous review invitations. <span class="citation-backlinks"><a href="#citation-11-1" role="doc-backlink" aria-label="Return to citation 11, occurrence 1">↩</a></span>
+11. <a id="note-11"></a>Jürgen Huber, Sabiou Inoua, Rudolf Kerschbamer, Christian König-Kersting, Stefan Palan, and Vernon L. Smith. [Nobel and novice: Author prominence affects peer review](https://www.pnas.org/doi/10.1073/pnas.2205779119). *Proceedings of the National Academy of Sciences* 119(41): e2205779119 (2022). Preregistered field experiment presenting an identical finance manuscript under different author identities. The comparison discussed here uses the conditions with anonymous review invitations. <span class="citation-backlinks"><a href="#citation-11-1" role="doc-backlink" aria-label="Return to citation 11, occurrence 1">↩</a></span>
 
 12. <a id="note-12"></a>Thijs Bol, Mathijs de Vaan, and Arnout van de Rijt. [The Matthew effect in science funding](https://doi.org/10.1073/pnas.1719557115). *Proceedings of the National Academy of Sciences* 115(19): 4887–4890 (2018). Comparison near a Dutch early-career funding threshold. Over eight years, initial winners accumulated more than twice the subsequent research funding of near-winners, excluding the initial award; later application behavior also contributed to the gap. <span class="citation-backlinks"><a href="#citation-12-1" role="doc-backlink" aria-label="Return to citation 12, occurrence 1">↩</a></span>
 
